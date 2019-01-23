@@ -28,7 +28,7 @@
 * Desenvolver HTML semântico;
 * Utilizar boas práticas de SEO;
 * Componentizar seu css;
-* Adaptar o layout proposto para ser reponsivo;
+* Adaptar o layout proposto para ser responsivo;
 * Utilizar React;
 * Utilizar Webpack;
 
