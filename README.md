@@ -18,7 +18,6 @@
 
 * Minifique seu css e deixe-o na pasta "css";
 * Minifique seu javascript e deixe-o na pasta "js";
-* Respeite os breakpoints definidos pelo design;
 * Faça commit também dos arquivos não minificados;
 * Dê suporte a IE10+, Chrome, Safari e Firefox.
 
