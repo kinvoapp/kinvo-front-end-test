@@ -1,3 +1,5 @@
+> [![Logo Kinvo]()]
+
 # Teste para candidatos à vaga do programa de desenvolvimento de talentos de Front-end
 
 ## Instruções:
@@ -35,7 +37,7 @@
 ## Material:
 
 * O layout em formato Adobe XD consta no repositório em [/material/layout](/material/layout);
-* Fonte de ícones em [/material/fonts](/material/fonts)
+* Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
 
 
 ## Submissão
