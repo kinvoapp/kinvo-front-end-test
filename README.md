@@ -1,4 +1,4 @@
-> [![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.png)]
+> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.png)
 
 # Teste para candidatos à vaga do programa de desenvolvimento de talentos de Front-end
 
