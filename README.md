@@ -1,4 +1,4 @@
-# Teste para candidatos à vaga de desenvolvedor Front-end
+# Teste para candidatos à vaga do programa de desenvolvimento de talentos de Front-end
 
 ## Instruções:
 
