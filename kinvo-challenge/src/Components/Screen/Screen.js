@@ -5,6 +5,7 @@ import './Screen.scss'
 
 // COMPONENTS
 import Topbar from '../Topbar/Topbar'
+import BottomArea from '../BottomArea/BottomArea';
 
 class Screen extends Component {
 
@@ -13,6 +14,7 @@ class Screen extends Component {
 			<div className="main">
 				<section className="jumbotron" id="jumbotron">
 					<Topbar></Topbar>
+					<BottomArea></BottomArea>
 				</section>
 
 				<section className="first-section" id="about"></section>

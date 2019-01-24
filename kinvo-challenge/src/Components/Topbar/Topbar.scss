@@ -3,6 +3,7 @@
 // VARIABLES
 $topbar--width: 100%;
 $topbar--height: 100px;
+$topbar--index: 10;
 
 $button--width: 105px;
 $button--height: 35px;
@@ -36,6 +37,7 @@ $button--login-background: #fff;
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: $topbar--index;
 
 	display: flex;
 	align-items: center;

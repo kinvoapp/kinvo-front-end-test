@@ -1,0 +1,38 @@
+
+// VARIABLES
+$bottom-area--width: 100%;
+$bottom-area--height: 501px;
+
+$background-top: rgba(255, 255, 255, 0);
+$background-bot: rgba(0,0,0,0.6);
+
+.bottom-area {
+	width: $bottom-area--width;
+	height: $bottom-area--height;
+	background: linear-gradient(to bottom, $background-top, $background-bot);
+	position: absolute;
+	bottom: 0;
+
+	.bottom-area-text {
+		width: 371px;
+		height: 110px;
+		font-size: 40px;
+		color: #fff;
+		font-weight: bold;
+		position: absolute;
+		left: 6%;
+
+		> span {
+			color: #0DD1E3;
+		}
+	}
+
+	.stores-link {
+		width: 210px;
+		height: 35px;
+		background: url("../../Images/stores.png");
+		position: absolute;
+		bottom: 100px;
+		left: 6%;
+	}
+}
