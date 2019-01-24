@@ -1,0 +1,33 @@
+
+// VARIABLES
+$column--gap: 10px;
+
+.team {
+	width: 90%;
+
+	> h2 {
+		font-size: 35px;
+		color: #9E51BA;
+		font-weight: bold;
+		margin: 0 ($column--gap/2);
+	}
+
+	.team-area {
+		width: 100%;
+		height: 408px;
+		display: grid;
+		grid-template-rows: 100%;
+
+		> ul {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			justify-content: space-around;
+
+			> li {
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}

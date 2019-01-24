@@ -7,6 +7,7 @@ import './Screen.scss'
 import Topbar from '../Topbar/Topbar'
 import BottomArea from '../BottomArea/BottomArea';
 import Footer from '../Footer/Footer';
+import Team from '../Team/Team';
 
 class Screen extends Component {
 
@@ -26,7 +27,9 @@ class Screen extends Component {
 
 				<section className="fourth-section" id="plans"></section>
 
-				<section className="fifth-section" id="team"></section>
+				<section className="fifth-section" id="team">
+					<Team></Team>
+				</section>
 
 				<section className="footer" id="footer">
 					<Footer></Footer>
