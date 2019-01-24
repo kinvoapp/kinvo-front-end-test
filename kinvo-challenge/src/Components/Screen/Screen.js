@@ -6,6 +6,7 @@ import './Screen.scss'
 // COMPONENTS
 import Topbar from '../Topbar/Topbar'
 import BottomArea from '../BottomArea/BottomArea';
+import Footer from '../Footer/Footer';
 
 class Screen extends Component {
 
@@ -27,7 +28,9 @@ class Screen extends Component {
 
 				<section className="fifth-section" id="team"></section>
 
-				<section className="footer" id="footer"></section>
+				<section className="footer" id="footer">
+					<Footer></Footer>
+				</section>
 			</div>
 		)
 	}

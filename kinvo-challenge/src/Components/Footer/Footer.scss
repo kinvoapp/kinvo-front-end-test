@@ -1,0 +1,52 @@
+
+
+.footer-content {
+	width: 80%;
+	height: 14vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	.stores {
+		color: #fff;
+		font-size: 12px;
+		display: flex;
+
+		> p {
+			margin-right: 10px;
+		}
+
+		> div {
+			width: 207px;
+			height: 35px;
+			background: url("../../Images/stores.png");
+		}
+	}
+
+	.trademark {
+		color: #fff;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+
+		> p {
+			margin-right: 10px;
+			display: flex;
+			align-items: center;
+
+			i {
+				margin: 5px;
+			}
+
+			.fa-circle {
+				font-size: 3px;
+			}
+		}
+
+		> div {
+			width: 73px;
+			height: 24px;
+			background: url("../../Images/minilogo.png");
+		}
+	}
+}

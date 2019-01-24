@@ -33,7 +33,7 @@ $first-screen-background: url('../../Images/jumbotron.png');
 
 	.third-section {
 		width: 100%;
-		height: 90vh;
+		height: 93vh;
 		background: #FF8052;
 	}
 
@@ -45,13 +45,15 @@ $first-screen-background: url('../../Images/jumbotron.png');
 
 	.fifth-section {
 		width: 100%;
-		height: 65vh;
+		height: 69vh;
 		background: #DAE0E3;
 	}
 
 	.footer {
 		width: 100%;
-		height: 30vh;
+		height: 28vh;
 		background: #4E5B61;
+		display: flex;
+		justify-content: center;
 	}
 }
