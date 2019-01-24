@@ -1,0 +1,75 @@
+
+
+// VARIABLES
+$topbar--width: 100%;
+$topbar--height: 100px;
+
+$button--width: 105px;
+$button--height: 35px;
+$button--border-radius: ($button--width)/2;
+
+$button--register-background: #0DD1E3;
+$button--login-background: #fff;
+
+%button {
+	min-width: $button--width;
+	height: $button--height;
+	border-radius: $button--border-radius;
+	outline: none;
+	opacity: 0.8;
+	border: none;
+	margin: 0 10px;
+
+	&:active {
+		position: relative;
+		top: 2px;
+	}
+}
+
+.topbar {
+	width: $topbar--width;
+	height: $topbar--height;
+	// padding: 0 2%;
+	// background: blue;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	#header {
+		margin-left: 2%;
+	}
+
+	.logo {
+		width: 116px;
+		height: 37px;
+		// margin-left: 2%;
+		background: url("../../Images/logo.svg");
+		background-size: cover;
+		opacity: 0.8;
+	}
+
+	.buttons {
+		height: 100%;
+		margin-right: 2%;
+		display: flex;
+		align-items: center;
+
+		.register-btn {
+			@extend %button;
+			background: $button--register-background;
+			color: #fff;
+		}
+
+		.login-btn {
+			@extend %button;
+			background: $button--login-background;
+			color: #707B81;
+		}
+	}
+}

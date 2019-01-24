@@ -1,0 +1,57 @@
+
+// VARIABLES
+$first-screen-background: url('../../Images/jumbotron.png');
+
+// STANDARD CLASSES
+%section-major {
+	width: 100%;
+	height: 100vh;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+	// background: red;
+	
+	.jumbotron {
+		@extend %section-major;
+		background: $first-screen-background;
+		background-position: center;
+	}
+
+	.first-section {
+		width: 100%;
+		height: 200vh;
+		background: #EFF0F2;
+	}
+
+	.second-section {
+		width: 100%;
+		height: 90vh;
+		background: #5D41AC;
+	}
+
+	.third-section {
+		width: 100%;
+		height: 90vh;
+		background: #FF8052;
+	}
+
+	.fourth-section {
+		width: 100%;
+		height: 70vh;
+		background: #EFF0F2;
+	}
+
+	.fifth-section {
+		width: 100%;
+		height: 65vh;
+		background: #DAE0E3;
+	}
+
+	.footer {
+		width: 100%;
+		height: 30vh;
+		background: #4E5B61;
+	}
+}

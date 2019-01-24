@@ -1,0 +1,40 @@
+
+
+// VARIABLES
+$button--width: 105px;
+$button--height: 35px;
+$button--border-radius: ($button--width)/2;
+
+$button--background-normal: none;
+$button--background-hover: #89E3F4;
+$button--font-color: #fff;
+$button--font-size: 13px;
+$button--font-weight: 550;
+
+.topbar-btn {
+	min-width: $button--width;
+	height: $button--height;
+	border-radius: $button--border-radius;
+	background: $button--background-normal;
+	color: $button--font-color;
+	font-size: $button--font-size;
+	font-weight: $button--font-weight;
+	padding: 0;
+	border: none;
+	outline: none;
+
+	.label {
+		padding: 0 ($button--width * 0.1);
+	}
+
+	&:hover {
+		background: $button--background-hover;
+		// filter: blur(0.5px);
+		
+	}
+
+	&:active {
+		position: relative;
+		top: 2px;
+	}
+}
