@@ -24,6 +24,10 @@ $second-screen--image: url('../../Images/hands.png');
 		width: 100%;
 		height: 200vh;
 		background: #EFF0F2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.second-section {
