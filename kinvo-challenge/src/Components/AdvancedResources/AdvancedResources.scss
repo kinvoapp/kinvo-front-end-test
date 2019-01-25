@@ -1,0 +1,55 @@
+
+$webtext--width: 40%;
+
+.advanced-resources {
+	width: 80%;
+	height: 80%;
+	display: flex;
+	// justify-content: space-between;
+	align-items: flex-start;
+
+	section {
+		width: $webtext--width;
+		height: 80%;
+		text-align: justify;
+		color: #fff;
+
+		> h6, h2, p {
+			margin: 0;
+		}
+
+		h6 {
+			font-size: 20px;
+			font-weight: normal;
+		}
+
+		h2 {
+			width: 100%;
+			font-size: 40px;
+			margin-bottom: 20px;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 2.0;
+			margin-bottom: 20px;
+		}
+
+		h2 > span {
+			color: #E679C0;
+		}
+	}
+
+	.cards-list {
+		width: 55%;
+		// height: 456px;
+		height: 100%;
+		list-style: none;
+		margin-right: 50px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-row-gap: 10px;
+		grid-column-gap: 1px;
+	}
+}

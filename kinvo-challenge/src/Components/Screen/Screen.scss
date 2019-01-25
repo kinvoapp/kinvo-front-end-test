@@ -28,8 +28,11 @@ $second-screen--image: url('../../Images/hands.png');
 
 	.second-section {
 		width: 100%;
-		height: 690px;
+		height: 710px;
 		background: #5D41AC;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.third-section {

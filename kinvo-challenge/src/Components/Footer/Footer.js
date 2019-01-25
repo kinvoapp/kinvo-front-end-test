@@ -12,7 +12,7 @@ class Footer extends Component {
 					<div></div>
 				</section>
 				<section className="trademark">
-					<p><i class="far fa-copyright"></i>2018 <i class="fas fa-circle"></i> Todos os direitos reservados</p>
+					<p><i className="far fa-copyright"></i>2018 <i className="fas fa-circle"></i> Todos os direitos reservados</p>
 					<div></div>
 				</section>
 			</section>

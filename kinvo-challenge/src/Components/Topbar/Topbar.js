@@ -7,9 +7,10 @@ import './Topbar.scss'
 import TopbarButton from '../TopbarButton/TopbarButton'
 
 class Topbar extends Component {
+
 	render() {
 		return (
-			<nav className="topbar">
+			<nav className="topbar" style={{ background: this.props.display }}>
 				<a id="header" href="#jumbotron"><div className="logo"></div></a>
 				<nav className="buttons">
 					<TopbarButton label="Sobre o Kinvo" link="about"></TopbarButton>

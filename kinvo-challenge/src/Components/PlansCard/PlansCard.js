@@ -15,7 +15,7 @@ class PlansCard extends Component {
 				<div className="description-area">
 					<ul>
 						{ this.props.description.map((item) => (
-							<li>{item}</li>
+							<li key={this.props.description.indexOf(item)}>{item}</li>
 						))}
 					</ul>
 				</div>
