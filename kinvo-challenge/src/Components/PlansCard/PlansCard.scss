@@ -1,0 +1,71 @@
+
+
+$cards--width: 100%;
+
+$left--width: 20%;
+$right--width: 20%;
+$mid--width: 100% - $left--width - $right--width;
+
+.plans-card {
+	width: $cards--width;
+	height: 132px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	margin: 10px 0;
+	box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.75);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.type-area {
+		width: $left--width;
+		height: 80%;
+		border-right: 1px solid #D6D9DD;
+		border-radius: 10px 0 0 10px;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		p {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.description-area {
+		width: $mid--width;
+		height: 80%;
+		display: flex;
+		align-items: center;
+
+		ul {
+			width: 100%;
+			list-style-type: disc;
+			margin-left: 30px;
+			color: #707B81;
+	
+			li {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.price-area {
+		width: $right--width;
+		height: 100%;
+		border-radius: 0 10px 10px 0;
+		color: #fff;
+		font-size: 21px;
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			width: 70%;
+			text-align: justify;
+			margin: 0;
+		}
+	}
+}

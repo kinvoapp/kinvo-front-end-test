@@ -1,0 +1,49 @@
+
+$plansText--width: 38%;
+$plansCards--width: (95% - $plansText--width);
+
+
+.plans-area {
+	width: 80%;
+	// height: 100px;
+	// border: 1px solid #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	section {
+		width: $plansText--width;
+		text-align: justify;
+		color: #707B81;
+		height: 456px;
+
+		> h6, h2, p {
+			margin: 0;
+		}
+
+		h6 {
+			font-size: 20px;
+			font-weight: normal;
+		}
+
+		h2 {
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 2.0;
+		}
+
+		h2 > span {
+			color: #9E51BA;
+		}
+	}
+
+	ul {
+		width: $plansCards--width;
+		list-style: none;
+		padding: 0;
+	}
+}

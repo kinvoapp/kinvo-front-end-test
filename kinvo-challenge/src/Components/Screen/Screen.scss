@@ -1,6 +1,7 @@
 
 // VARIABLES
-$first-screen-background: url('../../Images/jumbotron.png');
+$first-screen--background: url('../../Images/jumbotron.png');
+$second-screen--image: url('../../Images/hands.png');
 
 // STANDARD CLASSES
 %section-major {
@@ -15,7 +16,7 @@ $first-screen-background: url('../../Images/jumbotron.png');
 	
 	.jumbotron {
 		@extend %section-major;
-		background: $first-screen-background;
+		background: $first-screen--background;
 		background-position: center;
 	}
 
@@ -39,8 +40,11 @@ $first-screen-background: url('../../Images/jumbotron.png');
 
 	.fourth-section {
 		width: 100%;
-		height: 70vh;
+		height: 540px;
 		background: #EFF0F2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.fifth-section {
