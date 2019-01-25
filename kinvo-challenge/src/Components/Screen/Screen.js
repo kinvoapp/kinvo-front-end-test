@@ -9,6 +9,7 @@ import BottomArea from '../BottomArea/BottomArea';
 import Footer from '../Footer/Footer';
 import Team from '../Team/Team';
 import PlansArea from '../PlansArea/PlansArea';
+import WebPart from '../WebPart/WebPart';
 
 class Screen extends Component {
 
@@ -24,7 +25,9 @@ class Screen extends Component {
 
 				<section className="second-section" id="advanced_resources"></section>
 
-				<section className="third-section" id="web"></section>
+				<section className="third-section" id="web">
+					<WebPart></WebPart>
+				</section>
 
 				<section className="fourth-section" id="plans">
 					<PlansArea></PlansArea>
