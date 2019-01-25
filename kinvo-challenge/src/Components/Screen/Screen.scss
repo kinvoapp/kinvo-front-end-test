@@ -13,6 +13,8 @@ $second-screen--image: url('../../Images/hands.png');
 	width: 100%;
 	height: 100vh;
 	// background: red;
+	// overflow-y: scroll;
+	// scroll-behavior: smooth;
 	
 	.jumbotron {
 		@extend %section-major;
