@@ -1,0 +1,7 @@
+@include font-face("sf-ui-display", "fonts/sf-ui-display-medium", 400, normal, eot woff2 woff, "SF UI Display");
+@include font-face("sf-ui-display", "fonts/sf-ui-display-bold", 700, normal, eot woff2 woff, "SF UI Display");
+
+html, 
+body {
+    font-family: "sf-ui-display", sans-serif;
+}

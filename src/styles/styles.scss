@@ -1,0 +1,41 @@
+/*!
+ * Landing Kinvo v1.0.0
+ * Copyright 2019 Kinvo (https://github.com/kinvoapp)
+ */
+
+// -----------------------------------------------------------
+// Bootstrap required
+// -----------------------------------------------------------
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// -----------------------------------------------------------
+// Bootstrap theme
+// -----------------------------------------------------------
+@import "colors";
+@import "custom-bootstrap";
+
+// -----------------------------------------------------------
+// Bootstrap optional
+// -----------------------------------------------------------
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// -----------------------------------------------------------
+// Custom
+// -----------------------------------------------------------
+@import "mixins";
+@import "base";
