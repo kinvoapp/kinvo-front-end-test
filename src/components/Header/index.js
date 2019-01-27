@@ -49,7 +49,7 @@ class Header extends Component {
                                             role='button'
                                             className='nav-link'
                                             activeClass='nav-link--active'
-                                            to='hero'
+                                            to='about'
                                             spy={true}
                                             smooth={'easeInOutCubic'}
                                             offset={0}
