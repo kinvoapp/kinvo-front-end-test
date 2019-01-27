@@ -4,4 +4,9 @@
 html, 
 body {
     font-family: "sf-ui-display", sans-serif;
+    height: 100%;
+}
+
+[role='button'] {
+    cursor: pointer;
 }
