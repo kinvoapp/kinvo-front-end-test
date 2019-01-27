@@ -53,7 +53,7 @@ module.exports = {
                                     } 
                                 })
                             ],
-                            minimize: true
+                            minimize: this.mode === 'production'
                         }
                     },
                     'resolve-url-loader',
