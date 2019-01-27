@@ -43,7 +43,7 @@ class Hero extends Component {
                         role='button'
                         className='about__hero__scroll__link'
                         activeClass='about__hero__scroll__link--active'
-                        to='about'
+                        to='about__explanation'
                         spy={true}
                         smooth={'easeInOutCubic'}
                         offset={0}
