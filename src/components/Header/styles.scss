@@ -1,0 +1,68 @@
+@import '../../styles/colors';
+
+#top-header {
+    position: fixed;
+    z-index: 99;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: map-get($palette-colors, "1"); // ie8 fallback
+        background: -moz-linear-gradient(45deg, map-get($palette-colors, "1") 0%, map-get($palette-colors, "2") 100%);
+        background: -webkit-linear-gradient(45deg, map-get($palette-colors, "1") 0%,map-get($palette-colors, "2") 100%);
+        background: linear-gradient(45deg, map-get($palette-colors, "1") 0%,map-get($palette-colors, "2") 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=quote(map-get($palette-colors, "1")), endColorstr=quote(map-get($palette-colors, "2")),GradientType=1 );
+        box-shadow: 0 3px 0 3px rgba(255,255,255,0.15);
+        -khtml-opacity: 0;
+	      -moz-opacity: 0;
+	           opacity: 0;
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        transition: all ease 0.5s;
+        transition-delay: 0.25s;
+    }
+
+    .nav-link {
+        transition: all ease 0.5s;
+        transition-delay: 0.25s;
+        font-size: 0.9rem;
+        border-radius: 35px;
+        padding: 12px 15px;
+    }
+    
+    &.top-header--fixed {
+        .nav-link {
+            color: white;
+        }
+        .nav-link--active {
+            background-color: map-get($palette-colors, "1-1");
+        }    
+    }
+
+    &.top-header--rolling {
+        &:before {
+            -khtml-opacity: 1;
+              -moz-opacity: 1;
+                   opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        } 
+        .nav-link {
+            color: rgba(255,255,255,0.9);
+            transition-delay: 0;
+        }
+        .nav-link--active {
+            background-color: rgba(0,0,0,0.075);
+            box-shadow: 0 0 0 5px rgba(255, 255, 255,0.075);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.025);
+        }
+        .user-session-nav {
+            .nav-link {
+                box-shadow: 1px 2px 5px rgba(0,0,0,0.025);
+            }   
+        }
+    }
+}
