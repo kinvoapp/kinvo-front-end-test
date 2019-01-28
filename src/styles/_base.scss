@@ -1,9 +1,12 @@
-@include font-face("sf-ui-display", "fonts/sf-ui-display-medium", 400, normal, eot woff2 woff, "SF UI Display");
-@include font-face("sf-ui-display", "fonts/sf-ui-display-bold", 700, normal, eot woff2 woff, "SF UI Display");
+@include font-face("Nunito", "fonts/nunito-light", 300, normal, woff, "Nunito");
+@include font-face("Nunito", "fonts/nunito-light-italic", 300, italic, woff, "Nunito");
+@include font-face("Nunito", "fonts/nunito-regular", 400, normal, woff, "Nunito");
+@include font-face("Nunito", "fonts/nunito-regular-italic", 400, italic, woff, "Nunito");
+@include font-face("Nunito", "fonts/nunito-black", 700, normal, woff, "Nunito");
 
 html, 
 body {
-    font-family: "sf-ui-display", sans-serif;
+    font-family: 'Nunito', sans-serif;
     height: 100%;
 }
 

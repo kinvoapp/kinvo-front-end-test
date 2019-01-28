@@ -34,7 +34,7 @@ class Header extends Component {
     render() {
         return (
             <header id='top-header' className={'w-100 ' + this.state.modifier}>
-                <div className='top-header__container container-fluid p-4 rounded font-weight-bold'>
+                <div className='top-header__container container-fluid p-4 rounded'>
                     <nav role='navigation' className='navbar navbar-expand-md row m-0 justify-content-center'>
                         <div className='col-12 col-lg-auto col-xl-3 text-center text-lg-left'>
                             <a role='button' href='#!' className='navbar-brand mx-auto ml-md-0 mr-md-3'>
