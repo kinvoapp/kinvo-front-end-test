@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import Sidenav from './components/Sidenav';
 import './styles.scss';
 import logo from '../../images/kinvo-white-logo.svg';
 
@@ -130,6 +131,7 @@ class Header extends Component {
                         </div>
                     </nav>
                 </div>
+                <Sidenav></Sidenav>
             </header>
         );
     }

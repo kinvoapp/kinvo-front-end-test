@@ -1,0 +1,81 @@
+@import '../../../../styles/colors';
+
+#sidenav {
+    left: 0;
+    top: 0;
+
+     > .sidenav__wrap {
+        min-height: 100vh;
+        top: 0;
+        width: 250px;
+        box-shadow: 5px 0 0 5px rgba(255,255,255,0.1);
+        background: rgba(93,65,172,0.975);
+        -webkit-transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+           -moz-transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+                transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+    }
+}
+.sidenav--opened {
+    > .sidenav__wrap {
+        left: 0;
+    }
+}
+.sidenav--closed {
+    > .sidenav__wrap {
+        left: -250px;
+    }
+}
+.sidenav__link {
+    border-left: 10px solid transparent;
+    
+    &:hover,
+    &.sidenav__link--active {
+        border-left: 10px solid map-get($palette-colors, "2-2");
+    }
+    &:not(.sidenav__link--active):hover,
+    &:active {
+        border-left: 10px solid map-get($palette-colors, "1");    
+    }
+    &.sidenav__link--active {
+        background-color: rgba(255,255,255,0.15);
+    }
+}
+.sidenav__toggle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    border-radius: 10px;
+    -webkit-transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+       -moz-transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+            transition: all cubic-bezier(.17,.67,.83,.67) 0.5s;
+    -webkit-transition-delay: 0.25s;
+       -moz-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+}
+.sidenav__toggle__btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all ease 0.25s;
+}
+.sidenav--closed {
+    > .sidenav__toggle {
+        left: 10%;
+
+        > .sidenav__toggle__btn--opened {
+            opacity: 0;    
+        }
+    }
+}
+.sidenav--opened {
+    > .sidenav__toggle {
+        left: 270px;
+        background: rgba(93,65,172,0.975);
+
+        > .sidenav__toggle__btn--closed {
+            opacity: 0;    
+        }
+    }
+}
