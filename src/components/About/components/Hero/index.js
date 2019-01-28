@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll'
 import './styles.scss';
-import heroBg from './images/hero-bg.png';
+import heroBg from './images/hero-bg.jpg';
 import appStore from './images/appstore-btn.svg';
 import playStore from './images/playstore-btn.svg';
 import caret from './images/caret-down-icon.svg';
@@ -23,12 +23,12 @@ class Hero extends Component {
                                     <div className='row justify-content-center justify-content-lg-start'>
                                         <div className='col-auto pr-0'>
                                             <a role='button' href='#!'>
-                                                <img src={appStore} className='mw-100'></img>
+                                                <img src={appStore} className='mw-100' alt='Botão AppStore'></img>
                                             </a>
                                         </div>
                                         <div className='col-auto'>
                                             <a role='button' href='#!'>
-                                                <img src={playStore} className='mw-100'></img>
+                                                <img src={playStore} className='mw-100' alt='Botão PlayStore'></img>
                                             </a>
                                         </div>
                                     </div>
