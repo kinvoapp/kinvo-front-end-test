@@ -44,3 +44,13 @@
 		src: $src;
 	}
 }
+
+// -----------------------------------------------------------
+// Background
+// -----------------------------------------------------------
+@mixin bg-cover($repeat: null) {
+	background-size: cover;
+	@if($repeat) {
+		background-repeat: $repeat;
+	}
+}
