@@ -6,6 +6,7 @@ import Resources from './components/Resources';
 import Web from './components/Web';
 import Plans from './components/Plans';
 import Members from './components/Members';
+import Footer from './components/Footer';
 
 class Landing extends Component {
     render() {
@@ -17,6 +18,7 @@ class Landing extends Component {
                 <Web></Web>
                 <Plans></Plans>
                 <Members></Members>
+                <Footer></Footer>
             </React.Fragment>
         );
     }
