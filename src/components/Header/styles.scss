@@ -28,15 +28,23 @@
 
     .nav-link {
         transition: all ease 0.5s;
-        transition-delay: 0.25s;
+        transition-delay: 0.05s;
         font-size: 0.9rem;
         border-radius: 35px;
         padding: 12px 15px;
+
+        &.nav-link--active {
+            cursor: default;
+        }
     }
     
     &.top-header--fixed {
         .nav-link {
             color: white;
+
+            &:hover:not(.nav-link--active) {
+                background-color: map-get($palette-colors, "2");    
+            }
         }
         .nav-link--active {
             background-color: map-get($palette-colors, "1-1");
@@ -53,9 +61,13 @@
         .nav-link {
             color: rgba(255,255,255,0.9);
             transition-delay: 0;
+
+            &:hover,
+            &.nav-link--active {
+                background-color: rgba(0,0,0,0.075);    
+            }
         }
         .nav-link--active {
-            background-color: rgba(0,0,0,0.075);
             box-shadow: 0 0 0 5px rgba(255, 255, 255,0.075);
             text-shadow: 1px 1px 1px rgba(0,0,0,0.025);
         }
