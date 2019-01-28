@@ -13,14 +13,14 @@ class About extends Component {
                 <section id='about__explanation'>
                     <div className='container pt-5'>
                         <div className='row text-center text-lg-left py-5'>
-                            <div className="col-12 col-md-6 col-lg-5">
-                                <article data-aos="fade">
+                            <div className="col-12 col-lg-5">
+                                <article className="mb-5" data-aos="fade">
                                     <div className="h6 font-weight-normal text-muted">Sobre o Kinvo</div>
                                     <h2 className="text-muted font-weight-bold"><span className='text-pal-1'>Kinvo</span>. Agora ficou simple controla seus investimentos.</h2>
                                     <p className="text-muted mt-5">Investir não é fácil. E, quanto mais você investe, mais difícil fica. Acompanhar todos os rendimentos, variações, alto e baixos do mercado dá uma dor de cabeça e muitas vezes é necessária a ajuda de um consultor. O Kinvo é uma plataforma que te ajuda a controlar, analisar e acompanhar todos os seus investimentos. Mesmo que você tenha diversas aplicações em diversos lugares não tem problema. Com o Kinvo você reúne tudo em um só lugar, de um jeito muito simples e intuitivo.</p>
                                 </article>
                             </div>
-                            <div className="col-12 col-md-6 col-lg-7">
+                            <div className="col-12 col-lg-7">
                                 <img src={introVideo} className='w-100 rounded' alt='Miniatura do vídeo de introdução' data-aos="fade"></img>
                             </div>
                         </div>

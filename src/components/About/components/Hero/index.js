@@ -13,7 +13,7 @@ class Hero extends Component {
                 <div className='container'>
                     <div className='row justify-content-center justify-content-lg-start'>
                         <div className='about__hero__layer align-self-center col-10 col-lg-5 h-100'>
-                            <div className='row h-100 text-center text-lg-left'>
+                            <div className='row h-100 text-center text-lg-left mt-4 mt-lg-0'>
                                 <div className='col-12 align-self-stretch align-self-lg-end mt-5'>
                                     <div className='h1 text-white font-weight-bold mt-2' data-aos="fade-right" data-aos-delay="300" data-aos-offset="0">
                                         <span className='text-pal-1'>O controle</span> dos seus <span className='text-pal-1'>investimentos</span> na palma da mão.

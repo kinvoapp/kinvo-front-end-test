@@ -60,8 +60,8 @@ class Plans extends Component {
                         </div>
                         <div className="col-12 col-xl-7">
                             { this.state.plans.map((plan, i) => (
-                                <div className="row mx-0 mb-4" key={i} data-aos={"flip-" + (i % 2 === 0 ? "left" : "right")} data-aos-delay={i * 300} data-aos-duration="800">
-                                    <div className="col-12 p-0">
+                                <div className="row mx-0 mb-4 justify-content-center" key={i} data-aos={"flip-" + (i % 2 === 0 ? "left" : "right")} data-aos-delay={i * 300} data-aos-duration="800">
+                                    <div className="col-10 col-md-12 p-0">
                                         <Card
                                             paletteSuffix={plan.paletteSuffix}
                                             title={plan.title}
