@@ -1,0 +1,35 @@
+.plans__card {
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.05);
+}
+.plans__card__title {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    @media only screen and (max-width: 767px) {
+        &:after {
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            border-bottom: 1px solid #D6D9DD;
+        }    
+    }
+    @media only screen and (min-width: 768px) {
+        &:after {
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            border-left: 1px solid #D6D9DD;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .plans__card__resources {
+        font-size: 0.95rem;
+    }
+}
