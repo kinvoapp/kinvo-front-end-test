@@ -7,7 +7,7 @@ import kinvoLogo from '../../images/kinvo-white-logo.svg';
 class Footer extends Component {
     render() {
         return (
-            <footer id="main-footer" className="bg-pal-6">
+            <footer id="main-footer" className="bg-pal-6 small">
                 <div className="container">
                     <div className="row justify-content-center text-center text-lg-left py-5">
                         <div className="col-12 col-lg-6 mb-5 mb-lg-0">
@@ -29,7 +29,7 @@ class Footer extends Component {
                         </div>
                         <div className="col-12 col-lg-6">
                             <div className="row justify-content-center justify-content-lg-end">
-                                <div className="col-12 col-lg-auto align-self-center pr-0 small mb-2 mb-lg-0">
+                                <div className="col-12 col-lg-auto align-self-center pr-0 mb-2 mb-lg-0">
                                     <span>© 2018 • Todos os direitos reservados</span>
                                 </div>
                                 <div className="col-12 col-lg-auto align-self-center">
