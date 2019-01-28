@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Hero from './components/Hero';
+import CountUp from 'react-countup';
 import './styles.scss';
 import introVideo from './images/intro-video.png';
 import appShowcase from './images/app-showcase.png';
@@ -31,20 +32,65 @@ class About extends Component {
                             <hr className="col-12" data-aos="fade-right"></hr>
                         </div>
                         <div className="row text-center py-3">
-                            <div className="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up">
-                                <div className="h1 text-pal-1 font-weight-bold">5.4 Bilhões</div>
+                            <div className="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0 countup-wrap" data-aos="fade-up">
+                                <div className="h1 text-pal-1 font-weight-bold">
+                                    <CountUp
+                                        start={0}
+                                        end={5.4}
+                                        duration={5}
+                                        separator=" "
+                                        decimals={1}
+                                        decimal=","
+                                        suffix=" Bilhões"
+                                        redraw={true}
+                                        >
+                                    </CountUp>
+                                 </div>
                                 <span className="text-black-50 d-block">Em investimentos</span>
                             </div>
                             <div className="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-down">
-                                <div className="h1 text-pal-2 font-weight-bold">45mil</div>
+                                <div className="h1 text-pal-2 font-weight-bold">
+                                    <CountUp
+                                        start={0}
+                                        end={45}
+                                        duration={3}
+                                        separator=" "
+                                        decimals={0}
+                                        decimal=","
+                                        suffix=" mil"
+                                        >
+                                    </CountUp>
+                                </div>
                                 <span className="text-black-50 d-block">Carteiras criadas</span>
                             </div>
                             <div className="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up">
-                                <div className="h1 text-pal-3 font-weight-bold">500mil</div>
+                                <div className="h1 text-pal-3 font-weight-bold">
+                                    <CountUp
+                                        start={0}
+                                        end={500}
+                                        duration={2.75}
+                                        separator=" "
+                                        decimals={0}
+                                        decimal=","
+                                        suffix=" mil"
+                                        >
+                                    </CountUp>
+                                </div>
                                 <span className="text-black-50 d-block">Produtos cadastrados</span>
                             </div>
                             <div className="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-down">
-                                <div className="h1 text-pal-4 font-weight-bold">1.2mi</div>
+                                <div className="h1 text-pal-4 font-weight-bold">
+                                    <CountUp
+                                        start={0}
+                                        end={1.4}
+                                        duration={7}
+                                        separator=" "
+                                        decimals={1}
+                                        decimal=","
+                                        suffix=" mi"
+                                        >
+                                    </CountUp>
+                                </div>
                                 <span className="text-black-50 d-block">Minutos de uso mensal</span>
                             </div>
                         </div>

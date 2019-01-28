@@ -41,6 +41,7 @@
         "aos": "^2.3.4",
         "bootstrap": "^4.2.1",
         "react": "^16.7.0",
+        "react-countup": "^4.0.0",
         "react-dom": "^16.7.0",
         "react-scroll": "^1.7.10"
     }
