@@ -20,7 +20,7 @@ class About extends Component {
                                 </article>
                             </div>
                             <div className="col-12 col-md-6 col-lg-7">
-                                <img src={introVideo} className='w-100' alt='Miniatura do vídeo de introdução'></img>
+                                <img src={introVideo} className='w-100 rounded' alt='Miniatura do vídeo de introdução'></img>
                             </div>
                         </div>
                     </div>
