@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-import { Link } from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import './styles.scss';
 import logo from '../../images/kinvo-white-logo.svg';
 
@@ -37,9 +37,18 @@ class Header extends Component {
                 <div className='top-header__container container-fluid p-4'>
                     <nav role='navigation' className='navbar navbar-expand-md row m-0 justify-content-center'>
                         <div className='col-12 col-lg-auto col-xl-3 text-center text-lg-left'>
-                            <a role='button' href='#!' className='navbar-brand mx-auto ml-md-0 mr-md-3'>
+                            <Link
+                                role='button'
+                                className='navbar-brand mx-auto ml-md-0 mr-md-3'
+                                activeClass='nav-brand--active'
+                                to='kinvo-landing'
+                                spy={true}
+                                smooth={'easeInOutCubic'}
+                                offset={0}
+                                duration={1500}
+                            >
                                 <img src={logo} className='d-inline-block align-middle' alt='Logotipo Kinvo'></img>
-                            </a>
+                            </Link>
                         </div>
                         <div className='col-lg-auto col-xl-6 d-none d-lg-flex'>
                             <div className='collapse navbar-collapse'>
@@ -52,7 +61,7 @@ class Header extends Component {
                                             to='about'
                                             spy={true}
                                             smooth={'easeInOutCubic'}
-                                            offset={0}
+                                            offset={-105}
                                             duration={1500}
                                         >
                                             Sobre a Kinvo
@@ -63,10 +72,10 @@ class Header extends Component {
                                             role='button'
                                             className='nav-link'
                                             activeClass='nav-link--active'
-                                            to='advanced-resources'
+                                            to='resources'
                                             spy={true} 
                                             smooth={'easeInOutCubic'}
-                                            offset={0}
+                                            offset={-105}
                                             duration={1500}
                                         >
                                             Recursos Avançados
@@ -77,10 +86,10 @@ class Header extends Component {
                                             role='button'
                                             className='nav-link'
                                             activeClass='nav-link--active'
-                                            to='kinvo-web'
+                                            to='web'
                                             spy={true}
                                             smooth={'easeInOutCubic'}
-                                            offset={0}
+                                            offset={-105}
                                             duration={1500}
                                         >
                                             Kinvo Web
@@ -94,7 +103,7 @@ class Header extends Component {
                                             to='plans'
                                             spy={true}
                                             smooth={'easeInOutCubic'}
-                                            offset={0}
+                                            offset={-105}
                                             duration={1500}
                                         >
                                             Planos
