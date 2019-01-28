@@ -28,7 +28,7 @@ class Members extends Component {
                     </header>
                     <div className="row justify-content-center pb-5">
                         { this.state.members.map((member, i) => (
-                            <div className="col-12 col-sm-6 col-md-4 col-xl-2 mb-4" key={i} data-aos={"fade-" + (i % 2 === 0 ? "up" : "down")} data-aos-offset="600" data-aos-delay={i * 300}>
+                            <div className="col-12 col-sm-6 col-md-4 col-xl-2 mb-4" key={i} data-aos={"fade-" + (i % 2 === 0 ? "up" : "down")} data-aos-delay={i * 300}>
                                 <Member
                                     image={member.image}
                                     name={member.name}

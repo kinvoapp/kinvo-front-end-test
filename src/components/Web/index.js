@@ -11,14 +11,14 @@ class Web extends Component {
                 <div className="container">
                     <div className="row pt-5">
                         <div className="col-12 col-xl-5 pb-5">
-                            <article className="web__explanation mt-4 text-center text-xl-left" data-aos="fade" data-aos-offset="600">
+                            <article className="web__explanation mt-4 text-center text-xl-left" data-aos="fade">
                                 <div className="h6 font-weight-normal text-white">KinvoWeb</div>
                                 <h2 className="text-white font-weight-bold"><span className="text-pal-2">Kinvo.</span> Na palma da mão e na tela do computador.</h2>
                                 <p className="mt-5 text-white">Além do aplicativo para smartphone, o Kinvo também conta com uma versão para computador. Você terá acesso a todos os Recursos Avançados disponíveis na versão mobile, com todo o conforto de uma visualização ampla, fácil de usar e com total segurança dos seus dados. Os recursos da versão para computador são exclusivos para assinantes e serão ativados junto com a escolha de um plano. Para acessar a ferramenta, é necessário antes baixar o aplicativo no seu celular.</p>
                             </article>
                         </div>
                         <div className="col-12 col-xl-7 align-self-end">
-                            <div className="row h-100" data-aos="fade-left" data-aos-offset="600">
+                            <div className="row h-100" data-aos="fade-left">
                                 <div className="col-12">
                                     <div className="web__notebook-screen h-100" style={{'backgroundImage': `url(${notebookScreen})`}}>
                                         <div className="row justify-content-center h-100">
