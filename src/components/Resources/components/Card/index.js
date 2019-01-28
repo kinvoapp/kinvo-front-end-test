@@ -14,7 +14,7 @@ class Card extends Component {
                         </div>
                     </div>
                     <div className="col-8 py-4">
-                        <h5>{this.props.title}</h5>
+                        <h5 className="font-weight-bold">{this.props.title}</h5>
                         <p className="mb-0 small">{this.props.desc}</p>
                     </div>
                 </div>

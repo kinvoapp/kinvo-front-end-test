@@ -82,7 +82,7 @@ class Resources extends Component {
                         <div className="col-12 col-lg-5 px-5">
                             <article className="resources__explanation mt-4 text-center text-lg-left">
                                 <div className="h6 font-weight-normal text-white">Recursos Avançados</div>
-                                <h2 className="text-white"><span className="text-pal-2-6">Análises do Kinvo.</span><br></br>Controle total do seu dinheiro.</h2>
+                                <h2 className="text-white font-weight-bold"><span className="text-pal-2-6">Análises do Kinvo.</span><br></br>Controle total do seu dinheiro.</h2>
                                 <p className="mt-5">O Kinvo agora conta com diversos Recursos Avançados que te ajudam a ver como os seus investimentos estão divididos, qual o risco/retorno e qual a sensibilidade dos produtos. O Kinvo também organiza seus investimentos da melhor forma possível. Você pode criar uma carteira para as aplicações de sua empresa e outra carteira para seus filhos ou netos.</p>
                                 <p>Com os Recursos Avançados, todas as tomadas de decisão ficam mais fáceis. Você pode investir em um produto que está rendendo mais ou cancelar aquele que não vai bem. Você ainda pode criar projeções simulando o melhor tipo de investimento futuro para o seu dinheiro.</p>
                             </article>
