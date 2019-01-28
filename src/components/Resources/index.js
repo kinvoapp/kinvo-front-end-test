@@ -63,7 +63,7 @@ class Resources extends Component {
         return (
             <section id="resources" className='bg-pal-2-5'>
                 <div className="container">
-                    <div className="row pt-5 pb-3">
+                    <div className="row py-5">
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 { this.state.resources.map((resource, i) => (
