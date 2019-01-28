@@ -23,8 +23,8 @@ class Members extends Component {
         return (
             <section id="members">
                 <div className="container">
-                    <header className="row pt-5 mb-2">
-                        <div className="h2 text-pal-2 font-weight-bold">Quem faz o Kinvo</div>
+                    <header className="row pt-5 mb-2 text-center text-lg-left">
+                        <div className="h2 col-12 text-pal-2 font-weight-bold">Quem faz o Kinvo</div>
                     </header>
                     <div className="row justify-content-center pb-5">
                         { this.state.members.map((member, i) => (
