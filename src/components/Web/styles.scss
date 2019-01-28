@@ -1,0 +1,16 @@
+.web__notebook-screen,
+.web__notebook-keyboard {
+    background-repeat: no-repeat;
+}
+.web__notebook-screen {
+    background-size: 60% auto;
+    background-position: bottom center;
+}
+.web__notebook-screen__img {
+    border-radius: 14px 14px 0 0;
+}
+.web__notebook-keyboard {
+    background-size: 100% auto;
+    background-position: top center;
+    margin-top: -17.5px;
+}
