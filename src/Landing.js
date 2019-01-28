@@ -14,7 +14,7 @@ class Landing extends Component {
         super(props);
         AOS.init({
             once: true,
-            offset: 400,
+            delay: 25,
             duration: 500
         });
     }
