@@ -52,7 +52,7 @@ class Plans extends Component {
                 <div className="container">
                     <div className="row py-5">
                         <div className="col-12 col-xl-5">
-                            <article className="web__explanation mt-4 text-center text-xl-left mb-5">
+                            <article className="web__explanation mt-4 text-center text-xl-left mb-5" data-aos="fade-right" data-aos-offset="600">
                                 <div className="h6 font-weight-normal text-pal-5">Planos e assinaturas</div>
                                 <h2 className="text-pal-5 font-weight-bold"><span className="text-pal-2">Conheça os planos e</span> use todos os recursos do Kinvo.</h2>
                                 <p className="mt-5 text-pal-5">O Kinvo já é completo desde a versão gratuita. Com ele você pode cadastrar diversos tipos de produtos. Assinando o Kinvo, você terá acesso aos Recursos Avançados de Análises e às Múltiplas Carteiras, que são recursos complementares e indispensáveis que te ajudam a ter uma visão completa do seu dinheiro, auxiliam nas tomadas de decisão e organizam seus investimentos. Conheça os nossos planos. Você poderá cancelar a assinatura a qualquer momento.</p>
@@ -60,7 +60,7 @@ class Plans extends Component {
                         </div>
                         <div className="col-12 col-xl-7">
                             { this.state.plans.map((plan, i) => (
-                                <div className="row mx-0 mb-4" key={i}>
+                                <div className="row mx-0 mb-4" key={i} data-aos={"flip-" + (i % 2 === 0 ? "left" : "right")} data-aos-offset="600" data-aos-delay={i * 300} data-aos-duration="800">
                                     <div className="col-12 p-0">
                                         <Card
                                             paletteSuffix={plan.paletteSuffix}
