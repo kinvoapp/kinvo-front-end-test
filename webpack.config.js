@@ -12,7 +12,10 @@ const path = require('path');
  * Module config
  */
 module.exports = {
-    mode: 'development',
+    mode: 'production',
+    devServer: {
+        port: 3000
+    },
     entry: {
         index: './src/index.js'
     },
@@ -65,7 +68,8 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'file-loader',
                 options: {
-                    name: 'css/fonts/[name].[ext]'
+                    outputPath: './css/fonts',
+                    name: '[name].[ext]'
                 }
             },
             {
@@ -73,7 +77,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name].[ext]'
+                    name: './images/[name].[ext]'
                 }
             }
         ]
@@ -84,8 +88,8 @@ module.exports = {
     plugins: this.mode === 'production'
     ? [ // production mode
         new MiniCssExtractPlugin({
-            filename: "css/[name].css",
-            chunkFilename: "css/[id].css"
+            filename: "./css/[name].css",
+            chunkFilename: "./css/[id].css"
         }),
         new Webpack.optimize.UglifyJsPlugin({ 
             compress: { 
@@ -119,8 +123,8 @@ module.exports = {
     ]
     : [ // dev mode
         new MiniCssExtractPlugin({
-            filename: "css/[name].css",
-            chunkFilename: "css/[id].css"
+            filename: "./css/[name].css",
+            chunkFilename: "./css/[id].css"
         }),
         new HtmlWebpackPlugin(
             {
