@@ -6,7 +6,7 @@
 
 1. Faça um fork deste repositório;
 2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Utilize a api [](https://bd3caa0a-e3e1-4c3c-a2fa-494ed9bed72a.mock.pstmn.io/getPortfolios) para obter o estado inicial da tela;
+3. Utilize a api https://bd3caa0a-e3e1-4c3c-a2fa-494ed9bed72a.mock.pstmn.io/getPortfolios para obter o estado inicial da tela;
 4. A partir desse ponto utilizar o `localStorage` para persistir localmente as informações;
 5. Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
