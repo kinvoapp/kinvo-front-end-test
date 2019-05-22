@@ -1,12 +1,14 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
 
-# Teste para candidatos à vaga do programa de desenvolvimento de talentos de Front-end
+# Teste para candidatos à vaga de Fron-End
 
 ## Instruções:
 
 1. Faça um fork deste repositório;
-2. Implemente o HTML/CSS da tela com base no layout disponível;
-3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
+3. Utilize a api http://dasdasdd para obter o estado inicial da tela;
+4. A partir desse ponto utilizar o `localStorage` para persistir localmente as informações;
+5. Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 
 ### Você pode:
@@ -14,20 +16,21 @@
 * Utilizar qualquer linguagem de preprocessador css ou css puro;
 * Utilizar um task runner ou bundler de sua preferência;
 
-### Esperamos que você:
+### Pré-requisitos:
 
-* Minifique seu css e deixe-o na pasta "css";
-* Minifique seu javascript e deixe-o na pasta "js";
-* Faça commit também dos arquivos não minificados;
-* Dê suporte a IE10+, Chrome, Safari e Firefox.
+* Deve ser possível criar, listar e excluir os dados cadastrados pelo formulário;
+* Testes unitários;
+* Criar um passo a passo de como rodar sua aplicação [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
+* Utilizar ECMAScript 6+;
+
 
 * **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
 
 ### Ganhe pontos extras por:
 
+* Permitir edição dos dados;
 * Desenvolver HTML semântico;
-* Utilizar boas práticas de SEO;
-* Componentizar seu css;
+* Componentizar sua interface;
 * Adaptar o layout proposto para ser responsivo;
 * Utilizar React;
 * Utilizar Webpack;
@@ -44,4 +47,4 @@
 Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e depois envie-nos o pull request.
 Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
 
-**Boa sorte!**
+**Sucesso!**
