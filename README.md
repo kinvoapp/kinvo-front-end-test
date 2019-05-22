@@ -20,7 +20,7 @@
 
 * Deve ser possível criar, listar e excluir os dados cadastrados pelo formulário;
 * Testes unitários;
-* Criar um passo a passo de como rodar sua aplicação [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
+* Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
 * Utilizar ECMAScript 6+;
 
 
@@ -32,8 +32,9 @@
 * Desenvolver HTML semântico;
 * Componentizar sua interface;
 * Adaptar o layout proposto para ser responsivo;
-* Utilizar React;
-* Utilizar Webpack;
+* Utilizar `React`;
+* Utilizar `Webpack`;
+* Utilizar `styled-components`;
 
 
 ## Material:
