@@ -11,11 +11,6 @@
 5. Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 
-### Você pode:
-
-* Utilizar qualquer linguagem de preprocessador css ou css puro;
-* Utilizar um task runner ou bundler de sua preferência;
-
 ### Pré-requisitos:
 
 * Deve ser possível criar, listar e excluir os dados cadastrados pelo formulário;
