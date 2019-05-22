@@ -38,7 +38,7 @@
 
 ## Material:
 
-* O layout em formato Adobe XD consta no repositório em [/material/layout](/material/layout);
+* O layout em formato Adobe XD consta no repositório em [/material](/material);
 * Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
 
 
