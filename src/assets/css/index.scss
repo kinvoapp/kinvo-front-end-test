@@ -1,0 +1,86 @@
+html, body {
+	main[data-js="app"] {
+		background-color: #ebeced;
+		max-width: 60%;
+		margin: 0 auto;
+    border-radius: 1em;
+    margin-top: 2%;
+    font-family: 'sans-serif';
+    color: #686868;
+	}
+
+  header {
+    max-width: 100%;
+    border-bottom:0.1em solid grey;
+    h1 {
+      padding: 1em 0 1em 1em;
+    }
+    
+  }
+
+  .section {
+    max-width: 100%;
+    display: flex;
+    flex-direction: flex-start;
+
+    span>button {
+      padding: 0.5em;
+      border-radius: 0.5em;
+      margin-top: 5%;
+      border: none;
+    }
+    
+    &-left {
+      width: 40%;
+      border-right:0.1em solid grey;
+    }
+
+    &-right {
+      width: 100%;
+      padding-bottom: 2.5em;
+
+      h2 {
+        padding: 1em 0 1em 5em;
+      }
+
+      &-box_input {
+        width: 80%;
+        background-color: white;
+        margin: 0 auto;
+        padding: 0.5em;
+        border-radius: 0.4em;
+
+        form {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;;
+
+        }
+        
+        input {
+          border-radius: 0.4em;
+          padding: 0.5em;
+          outline: none;
+        }
+      }
+
+      &-box_output {
+        width: 80%;
+        background-color: white;
+        margin: 0 auto;
+        padding: 0.5em;
+        border-radius: 0.4em;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        table > tr > td  {
+          padding-right: 2.5em;
+          padding-bottom: 0.5em;
+        }
+
+      }
+    }
+  }
+}
