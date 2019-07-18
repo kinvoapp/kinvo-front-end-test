@@ -1,18 +1,29 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const mode = process.env.NODE_ENV || 'development'
+const isDev = mode === 'development'
+
+let SERVICE_URL = JSON.stringify('http://localhost:8080')
+
+if (process.env.NODE_ENV === 'production') {
+	SERVICE_URL = JSON.stringify('http://enderecoproducao.com.br')
+}
 
 module.exports = {
+	devtool: 'source-map',
 
-	entry: path.join(__dirname,'src','index.js'),
+	entry: path.resolve(__dirname, 'src', 'index.jsx'),
 
 	output: {
-		path: path.join(__dirname,'build'),
-		filename: 'index.bundle.js'
+		path: path.resolve(__dirname, 'build'),
+		filename: '[name].[contentHash].bundle.js'
 	},
 
-	mode: process.env.NODE_ENV || 'development',
-
-	resolve: {
+	/*resolve: {
 		modules: [
 			path.resolve(__dirname, 'src'),
 			'node_modules'
@@ -20,22 +31,32 @@ module.exports = {
 	},
 
 	devServer: {
-		contentBase: path.join(__dirname,'src')
-	},
+		contentBase: path.join(__dirname, 'src'),
+		historyApiFallback: true
+	},*/
 
 	module: {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				use: ['babel-loader']
+				use: 'babel-loader'
 			},
 			{
 				test: /\.(css|scss)$/,
 				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader"
+					isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader'
+				]
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: 'html-loader',
+						options: { minimize: true }
+					}
 				]
 			},
 			{
@@ -45,10 +66,21 @@ module.exports = {
 		]
 	},
 
-		plugins: [
-			new HtmlWebpackPlugin({
-				template: path.join(__dirname,'src','index.html')
-			})
-		]
-
-	};
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: path.join(__dirname, 'src', 'template.html'),
+			filename: 'index.html',
+	        minify: {
+		        removeAttributeQuotes: true,
+		        collapseWhitespace: true,
+		        removeComments: true
+	        }
+		}),
+		new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
+		new OptimizeCssAssetsPlugin(),
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new webpack.DefinePlugin({
+			SERVICE_URL
+		})
+	]
+}
