@@ -1,4 +1,7 @@
-html,
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+    html,
 body,
 div,
 span,
@@ -140,7 +143,10 @@ html body {
 
 a {
   color: inherit;
+  :link {
+    text-decoration: none;
+  }
 }
-a:link {
-  text-decoration: none;
-}
+`;
+
+export default GlobalStyle;

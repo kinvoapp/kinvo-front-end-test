@@ -1,14 +1,26 @@
 import React from "react";
-import logo from "./assets/logo.svg";
-import "./App.css";
+
+import { Main, Container } from "./styles";
+
+import Header from "./layout/header/header";
+import Sidebar from "./layout/sidebar/sidebar";
+import Content from "./layout/content/content";
+import Footer from "./layout/footer/footer";
+
+import GlobalStyled from "./styles/index";
 
 function App() {
   return (
     <div>
-      <header>
-        <img src={logo} alt="kinvo logo" />
-        <span className="title">premium</span>
-      </header>
+      <Container>
+        <Header />
+        <Main>
+          <Sidebar key="navigation" />
+          <Content />
+        </Main>
+        <Footer />
+      </Container>
+      <GlobalStyled />
     </div>
   );
 }
