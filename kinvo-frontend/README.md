@@ -1,8 +1,8 @@
 ![Logo of the project](./src/assets/logo.svg)
 
-# Challenge Kinvo Front-End ReactJs &middot; [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)]
+# Challenge Kinvo Front-End ReactJs &middot; ![npm version](https://img.shields.io/npm/v/react.svg?style=flat)
 
-> [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)]
+> ![npm version](https://img.shields.io/npm/v/react.svg?style=flat)
 
 Front-end challenge for job vacancy at kinvo company using reactjs
 
