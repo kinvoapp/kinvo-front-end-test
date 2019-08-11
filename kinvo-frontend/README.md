@@ -1,68 +1,113 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo of the project](./src/assets/logo.svg)
 
-## Available Scripts
+# Challenge Kinvo Front-End ReactJs &middot; [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)]
 
-In the project directory, you can run:
+> [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)]
 
-### `npm start`
+Front-end challenge for job vacancy at kinvo company using reactjs
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing / Getting started
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
 
-### `npm test`
+```shell
+commands here
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here you should say what actually happens when you execute the code above.
 
-### `npm run build`
+## Developing
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+List main libraries, frameworks used including versions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React: "^16.8.6"
+- Axios: "^0.19.0"
+- React-router-dom: "^5.0.1",
+- Styled-components: "^4.3.2"
+- React-icons: "^3.7.0",
+- Classnames: "^2.2.6",
+- Prop-types: "^15.7.2",
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+What is needed to set up the dev environment.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+- [VS Code](https://code.visualstudio.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Setting up Dev
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Clone the project and direct an application folder into ReactJS, then install the dependencies:
 
-## Learn More
+```shell
+git clone https://github.com/gabrieljony/kinvo-front-end-test.git
+cd kinvo-front-end-test/
+cd kinvo-frontend/
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In this project no database and no services are consumed locally. The project consumes an external [API](https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation), in which it needs no configuration.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Building
 
-### Code Splitting
+If your project needs some additional steps for the developer to build the
+project after some code changes, state them here. for example:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```shell
+./configure
+make
+make install
+```
 
-### Analyzing the Bundle Size
+Here again you should state what actually happens when the code above gets
+executed.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Deploying / Publishing
 
-### Making a Progressive Web App
+give instructions on how to build and release a new version
+In case there's some step you have to take that publishes this project to a
+server, this is the right time to state it.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```shell
+packagemanager deploy your-project -s server.com -u username -p password
+```
 
-### Advanced Configuration
+And again you'd need to tell what the previous code actually does.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Versioning
 
-### Deployment
+We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Configuration
 
-### `npm run build` fails to minify
+Here you should write what are all of the configurations a user can enter when
+using the project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Tests
+
+Describe and show how to run the tests with code examples.
+Explain what these tests test and why.
+
+```shell
+Give an example
+```
+
+## Style guide
+
+Explain your code style and show how to check it.
+
+## Api Reference
+
+If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
+
+## Database
+
+Explaining what database (and version) has been used. Provide download links.
+Documents your database design and schemas, relations etc...
+
+## Licensing
+
+State what the license is and how to find the text version of the license.
