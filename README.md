@@ -6,8 +6,7 @@
 
 1. Faça um fork deste repositório;
 2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
-4. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
 ### Pré-requisitos:
 
@@ -20,6 +19,7 @@
 ### Ganhe pontos extras por:
 
 - Utilizar `React`;
+- Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
 - Testes unitários;
 - Desenvolver HTML semântico;
 - Componentizar sua interface;
