@@ -6,34 +6,30 @@
 
 1. Faça um fork deste repositório;
 2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Utilize a api ``https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation`` para obter o estado inicial da tela;
+3. Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
 4. Após terminar seu teste submeta um pull request e aguarde seu feedback.
 
-
 ### Pré-requisitos:
-* Utilizar `React`;
-* Utilizar um Bundler de JS
-* Filtrar a listagem de produtos pelo nome do produto;
-* Testes unitários;
-* Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
-* Utilizar ECMAScript 6+;
 
+- Filtrar a listagem de produtos pelo nome do produto;
+- Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
+- Utilizar ECMAScript 6+;
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+- **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
 
 ### Ganhe pontos extras por:
-* Desenvolver HTML semântico;
-* Componentizar sua interface;
-* Adaptar o layout proposto para ser responsivo;
-* Utilizar `Webpack`;
-* Utilizar `styled-components`;
 
+- Utilizar `React`;
+- Testes unitários;
+- Desenvolver HTML semântico;
+- Componentizar sua interface;
+- Utilizar `Webpack`;
+- Utilizar `styled-components`;
 
 ## Material:
 
-* O layout em formato Adobe XD consta no repositório em [/material](/material);
-* Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
-
+- O layout em formato Adobe XD consta no repositório em [/material](/material);
+- Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
 
 ## Submissão
 
