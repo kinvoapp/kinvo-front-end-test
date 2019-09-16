@@ -76,5 +76,9 @@ hr {
 }
 
 .tab-container {
-
+  width: 500px;
+  height: 500px;
+  float: left;
+  margin-top: -890px;
+  margin-left:180px;
 }
