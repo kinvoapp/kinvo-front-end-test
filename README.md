@@ -5,7 +5,7 @@
 
 ## Instalação / Installing:
 
-Após baixar os arquivos do gihub, entre na pasta e procure pelo arquivo "index.html", pressione duas vezes neste arquivo e você será redirecionado para o navegador padrão. Feito isso é só testar a aplicação que já está rodando! =)
+Após baixar os arquivos do github, entre na pasta e procure pelo arquivo "index.html", pressione duas vezes neste arquivo e você será redirecionado para o navegador padrão. Feito isso é só testar a aplicação que já está rodando! =)
 
 
 
