@@ -76,9 +76,25 @@ hr {
 }
 
 .tab-container {
-  width: 500px;
+  width: 85%;
   height: 500px;
   float: left;
   margin-top: -890px;
   margin-left:180px;
+  background-color: green;
+}
+
+.tab-container .button-container{
+  height: 25px;
+  width:100%;
+  background-color: pink;
+  z-index: 10;
+
+}
+
+.tab-container .button-container button{
+  width: 25%;
+  height: 25px;
+  background-color: yellow;
+  float: left;
 }
