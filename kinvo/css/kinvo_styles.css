@@ -10,14 +10,15 @@ body{
   margin-top: 80px:
   padding:20px;
   background-color:lightgray;
-  color: black;
+  color: darkgray;
 }
 
-.gray-title {
+.gray-area-title {
   margin-top: -920px;
   margin-left:180px;
   width: 200px;
   float: left;
+  color: black;
 }
 
 .top-nav{
@@ -30,6 +31,15 @@ body{
   z-index: 10;
 }
 
+.logo {
+    color: purple;
+    font-size: 1.5rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+}
+
 hr {
   opacity: 0.2;
 }
@@ -39,12 +49,12 @@ hr {
   overflow-wrap: break-word;
   word-wrap: break-word;
   height: 1000px;
-  width: 160px;
+  width: 170px;
   white-space: nowrap;
   background-color: white;
 }
 
-nav ul {
+.side-nav ul {
 	list-style: none;
   margin-top: 60px;
   padding:0px;
@@ -52,7 +62,7 @@ nav ul {
   position: sticky;
 }
 
-nav ul li a {
+.side-nav ul li a {
 	display: block;
 	padding: 0.5rem 1rem;
 	color:gray;
@@ -60,20 +70,11 @@ nav ul li a {
   position: sticky;
 }
 
-nav ul li a:hover {
+.side-nav ul li a:hover {
 	background: lightgray;
   color: blue;
 }
 
-.tables {
+.tab-container {
 
-}
-
-.logo {
-    color: purple;
-    font-size: 1.5rem;
-    line-height: 60px;
-    position: absolute;
-    top: 0;
-    left: 2%;
 }
