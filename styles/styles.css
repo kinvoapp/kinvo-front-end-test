@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+  background: gainsboro;
+}
+/* Header */
+#header {
+  width: 1366px;
+  height: 90px;
+  background: white;
+}
+
+#header img {
+  margin-left: 28px;
+  transform: translateY(31px); 
+}
+
+/* Conteudo princial */
+main {
+  display: flex;
+}
+
+
+/* NAVBAR */
+main#navbar {
+  width: 225.71px;
+  height: 1202px;
+  background-color: #ffff;
+}
+main #navbar li {
+  padding: 20px 34px 20px 30px;
+  border-bottom: 1px solid #CCCFD1;
+}
+main #navbar li a{    
+  color: #707B81;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* Seta na barra de navegação */
+main #navbar li .arrow {
+  float: right;
+  transform: translateX(20px);
+}
+
+/* Posicionando e editando a logo de opções na navbar */
+main #navbar li div.align-img {
+  width: 35px;
+  height: 35px;
+  background: #CCCFD1;
+  float: left;
+  margin-right: 10px;
+  transform: translateY(2px);
+  text-align: center;
+  border-radius: 50%;
+} 
+
+/* Posicionando logo no eixo y(vertical) */
+main #navbar li div .navLogo {
+  transform: translateY(50%);
+}
+
+/* Opão ativa */
+main #navbar li div.align-img-active {
+  width: 35px;
+  height: 35px;
+  background: #5D41AC;
+  float: left;
+  margin-right: 10px;
+  transform: translateY(2px);
+  text-align: center;
+  border-radius: 50%;
+} 
+
+
+/* Conteúdo ativo */
+li.active {
+  background-color: #EEF2F4;
+}
+
+
+
+/* CONTEUDO */
+section {
+  width: 1064px;
+  height: 950px;
+  padding: 20px;
+  background-color: #CCCFD1;
+}
+
+section h3 {
+  color: #707B81;
+}
+
+/* Abas de navegação de dados */
+section ul#navWindow {
+  margin-top: 30px;
+  display: flex;
+}
+/* editando abas em geral */
+section ul li.window {
+  margin-right: 5px;
+  list-style: none;
+  float: left;
+  background: url(../img/windowactive.png);
+  opacity: 0.5;
+  width: 290px;
+  height: 65.31px;
+  background-repeat: no-repeat;
+} 
+/* editando aba ativa */
+section ul li.windowfirst {
+  margin-right: 5px;
+  list-style: none;
+  float: left;
+  background: url(../img/windowactive.png);
+  width: 290px;
+  height: 65.31px;
+  background-repeat: no-repeat;
+} 
+/* Editando abas dos dados */
+section ul li.window a, .windowfirst a {
+  display: block;
+  transform: translateY(25px);
+  margin-left: 40px;
+  color: #707B81;
+  text-decoration: none;
+}
+
+/* Sessão estatisticas */
+
+section div.statistics {
+  width: 1059px;
+  height: 853px;;
+  background: #F8FAFB;
+}
+
+/* Alinhando lista UL*/
+section ul.data{
+  display: flex;
+  list-style: none;
+  transform: translateX(10px);
+}
+
+/* Alinhando lista LI */
+section ul.data li{
+  width: 210px;
+  height: 75px;;
+  margin: 10px;
+  background-color: #ffff;
+  border-radius: 10px;
+  transform: translateX(-10px);
+  text-align: center;
+}
+/* Editando P secundario */
+section ul.data li p{
+  font-size: 12px;
+  color: #707B81;
+  transform: translateY(20px);
+}
+/* Editando P primario */
+section ul.data li p.dados{
+  font-size: 18px;
+  color: #707B81;
+}
+
+
+/* FUNDOS */
+div.searchBar{
+  display: flex;
+}
+div.searchBar h4{
+  font-size: 18px;
+  margin-left: 30px;
+  margin-right: 650px;
+  color: #707B81;
+  display: block;
+  transform: translateY(40px);
+}
+
+/* Search Bar  */
+div.searchBar input {
+  width: 250px;
+  transform: translateY(25px);
+  background-color: #CCCFD1;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+
+/* Tabela */
+table {
+  color: #5D41AC;
+  margin: 60px 30px 0 30px;
+  border-collapse: collapse;
+}
+tr {
+  background-image: url(../img/tablebg.png);
+  background-repeat: no-repeat;
+  background-size: 7px;
+  background-position-y: 17px;
+}
+.table-data td {
+  width: 995.5px;
+  padding: 20px 20px;
+  border-bottom: 1px solid #CCCFD1;
+}
+.table-data td p {
+  font-size: 8px;
+}

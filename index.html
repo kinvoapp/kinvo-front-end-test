@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS -->
+  <link type="text/css" href="styles/styles.css" rel="stylesheet">
+  <title>Contador</title>
+</head>
+<body>
+ 
+  <header id="header">
+    <img src="./img/Logo.png" alt="Kinvopremium">
+  </header>
+  <main>
+    <!-- Menu Lateral -->
+    <nav id="navbar">
+      <ul class="navbar-item">
+        <li><div class="align-img"><img class="navLogo" src="./img/Carteira.png"></div><a href="#">Resumo<br> Da Carteira</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/Produto.png"></div><a href="#">Meus<br> Produtos</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/Proventos.png"></div><a href="#">Meus<br> Proventos</a><img class="arrow" src="./img/arrow.png"></li>
+        <li class="active"><div class="align-img-active"><img class="navLogo" src="./img/ClasseProduto.png"></div><a href="#">Análise por Classe de Produto</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/diamond.png"></div><a href="#">Rentabilidade<br> Real</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/tvicon.png"></div><a href="#">Projeção de<br> Carreira</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/circleicon.png"></div><a href="#">Risco<br> x Retorno</a><img class="arrow" src="./img/arrow.png"></li>
+        <li><div class="align-img"><img class="navLogo" src="./img/padlock.png"></div><a href="#">Cobertura<br> do FGC</a><img class="arrow" src="./img/arrow.png"></li>
+      </ul>
+    </nav>
+    <!-- Conteúdo Principal -->
+    <section>
+      <h3>Análise por Classe de Ativos</h3>
+      <!-- Navegando entre janelas internas -->
+      <ul id="navWindow">
+        <li class="windowfirst"><a href="#">Ações</a></li>
+        <li class="window"><a href="#">Nome da Classe</a></li>
+        <li class="window"><a href="#">Nome da Classe</a></li>
+        <li class="window"><a href="#">Nome da Classe</a></li> 
+      </ul>
+      <!-- Estatisticas geradas pela API -->
+      <div class="statistics">
+        <ul class="data">
+          <li><p>SALDO BRUTO</p><p class="dados"></p></li>
+          <li><p>VALOR APLICADO</p><p class="dados"></p></li>
+          <li><p>GANHO DE CAPITAL</p><p class="dados"></p></li>
+          <li><p>TOTAL DISTRIBUIDOS</p><p class="dados"></p></li>
+          <li><p>YIELD</p><p class="dados"></p></li>
+        </ul>
+        <!-- Barra de pesquisa -->
+        <div class="searchBar">
+          <h4>Fundos</h4>
+          <input type="text" id="searchInput" title="Pesquisar Dados" onkeyup="myFunction()">
+        </div>
+        <!-- Tabela que também recebe os dados da API -->
+          <table style="clear: both" class="table-data">
+          
+            <tbody>
+          
+            </tbody>
+          </table>
+      </div>
+    </section>
+  </main>
+  <!-- Javascript -->
+  <script src="js/index.js"></script>
+</body>
+</html>

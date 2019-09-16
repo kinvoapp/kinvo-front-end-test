@@ -1,39 +1,19 @@
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+![Logo of the project](./img/logo/logo.svg)
 
-# Teste para candidatos à vaga de Front-End
+# KinvoPremium &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
-## Instruções:
 
-1. Faça um fork deste repositório;
-2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+## Instalação / Installing:
 
-### Pré-requisitos:
+Após baixar os arquivos do gihub, entre na pasta e procure pelo arquivo "index.html", pressione duas vezes neste arquivo e você será redirecionado para o navegador padrão. Feito isso é só testar a aplicação que já está rodando! =)
 
-- Filtrar a listagem de produtos pelo nome do produto;
-- Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
-- Utilizar ECMAScript 6+;
 
-- **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
 
-### Ganhe pontos extras por:
+### Built With
 
-- Utilizar `React`;
-- Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
-- Testes unitários;
-- Desenvolver HTML semântico;
-- Componentizar sua interface;
-- Utilizar `Webpack`;
-- Utilizar `styled-components`;
+EC6 / JavaScript
 
-## Material:
+## Style guide
 
-- O layout em formato Adobe XD consta no repositório em [/material](/material);
-- Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
+O código foi dividido em 3 partes, 1 contém os arquivos de imagem, a 2 contém todo o contepudo JavaScript,a 3 contém o arquivo CSS. Todos os arquivos estão comentados para facilitar a leitura do código.
 
-## Submissão
-
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e depois envie-nos o pull request.
-Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
-
-**Sucesso!**
