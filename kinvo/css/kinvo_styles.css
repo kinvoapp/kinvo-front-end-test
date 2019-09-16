@@ -1,27 +1,22 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-}
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
-html{
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-body{
+  body{
   margin-top: 80px:
   padding:20px;
   background-color:lightgray;
   color: darkgray;
-}
+  }
 
-.gray-area-title {
+  .gray-area-title {
   margin-top: -920px;
   margin-left:180px;
-  width: 200px;
+  width: 230px;
   float: left;
   color: black;
-}
+  font-family: sans-serif;
+  }
 
-.top-nav{
+  .top-nav{
   position: fixed;
   top: 0px;
   width: 100%;
@@ -29,22 +24,22 @@ body{
   text-decoration: none;
   background-color: white;
   z-index: 10;
-}
+  }
 
-.logo {
-    color: purple;
-    font-size: 1.5rem;
-    line-height: 60px;
-    position: absolute;
-    top: 0;
-    left: 2%;
-}
+  .logo {
+  color: purple;
+  font-size: 1.5rem;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  }
 
-hr {
+  hr {
   opacity: 0.2;
-}
+  }
 
-.side-nav {
+  .side-nav {
   overflow: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -52,49 +47,69 @@ hr {
   width: 170px;
   white-space: nowrap;
   background-color: white;
-}
+  font-family: sans-serif;
+  }
 
-.side-nav ul {
-	list-style: none;
+  .side-nav ul {
+  list-style: none;
   margin-top: 60px;
   padding:0px;
   position: -webkit-sticky;
   position: sticky;
-}
+  }
 
-.side-nav ul li a {
-	display: block;
-	padding: 0.5rem 1rem;
-	color:gray;
-	text-decoration: none;
+  .side-nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color:gray;
+  text-decoration: none;
   position: sticky;
-}
+  }
 
-.side-nav ul li a:hover {
-	background: lightgray;
+  .side-nav ul li a:hover {
+  background: lightgray;
   color: blue;
-}
+  }
 
-.tab-container {
+  .tab-container {
   width: 85%;
   height: 500px;
   float: left;
   margin-top: -890px;
   margin-left:180px;
   background-color: green;
-}
+  }
 
-.tab-container .button-container{
+  .tab-container .button-container{
   height: 25px;
   width:100%;
   background-color: pink;
-  z-index: 10;
+  }
 
-}
-
-.tab-container .button-container button{
+  .tab-container .button-container button{
   width: 25%;
-  height: 25px;
-  background-color: yellow;
+  height: 30px;
+  background-color: lightblue;
   float: left;
-}
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: sans-serif;
+  }
+
+  .tab-container .button-container button:hover{
+    background-color: purple;
+  }
+
+  .tab-container .tab-panel {
+  height: 115px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding-top: 105px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 22px;
+  display: none;
+  }
