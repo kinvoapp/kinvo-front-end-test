@@ -1,0 +1,9 @@
+header#main-header {
+    height: 90px;
+    background: #fff;
+}
+
+header #logo{
+    margin-top: 31px;
+    margin-left: 28px;
+}
