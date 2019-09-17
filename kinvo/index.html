@@ -9,7 +9,7 @@
   </head>
   <header class="topNav">
   <a class="" href="#">
-    <img src="img/logo.png" width="60" height="60" alt="logo">
+    <img src="img/kinvopremium.png" width="170" height="30" alt="logo">
   </a>
 </header>
   <sidebar>
@@ -38,25 +38,82 @@
   <h1 class= "grayAreaTitle"><p><strong>Análise por Classe de Ativos</strong></p></h1>
   <div class="tabContainer">
     <div class="buttonContainer">
-      <button onclick="showPanel(0,'#f44336')">Tab 1</button>
-      <button onclick="showPanel(1,'#4caf50')">Tab 2</button>
-      <button onclick="showPanel(2,'#2196f3')">Tab 3</button>
-      <button onclick="showPanel(3,'#ff5722')">Tab 4</button>
+      <button onclick="showPanel(0,'#ffffff')">Ações</button>
+      <button onclick="showPanel(1,'#ffffff')">Nome</button>
+      <button onclick="showPanel(2,'#ffffff')">Nome</button>
+      <button onclick="showPanel(3,'#ffffff')">Nome</button>
     </div>
     <div>
     <ul class= "dataButtons">
-      <li> <a id="dataButtonOne" href="#">SALDO BRUTO <p>R$12.000</p></a></li>
+      <li> <a id="dataButton" href="#">SALDO BRUTO <p>R$12.000</p></a></li>
 
-      <li> <a id="dataButtonTwo" href="#">VALOR APLICADO<p>R$12.000</p></a></li>
+      <li> <a id="dataButton" href="#">VALOR APLICADO<p>R$12.000</p></a></li>
 
-      <li> <a id="dataButtonThree" href="#">GANHO DE CAPITAL<p>R$12.000</p></a></li>
+      <li> <a id="dataButton" href="#">GANHO DE CAPITAL<p>R$12.000</p></a></li>
 
-      <li> <a id="dataButtonFour" href="#">TOTAL DISTRIBUIDO<p>R$12.000</p></a></li>
+      <li> <a id="dataButton" href="#">TOTAL DISTRIBUÍDO<p>R$12.000</p></a></li>
 
-      <li> <a id="dataButtonFive" href="#">YIELD<p>20%</p></a></li>
+      <li> <a id="dataButton" href="#">YIELD<p>20%</p></a></li>
     </ul>
     </div>
-    <div class="tabPanel">  </div>
+    <div class="tabPanel">
+      <div id="acoes">
+        <h1>Fundos</h1>
+      </div>
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:15%;"></th>
+      <th style="width:10%;">Saldo atual</th>
+      <th style="width:10%;">Quant</th>
+      <th style="width:10%;">Preço médio</th>
+      <th style="width:10%;">Última cotação</th>
+      <th style="width:10%;">Yeald</th>
+      <th style="width:10%;">Yield</th>
+      <th style="width:10%;">% Carteira</th>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Produto">
+    </tr>
+    <tr>
+      <td>ABEV3-AMBEV</td>
+      <td>1980,00</td>
+      <td>100</td>
+      <td>19,80</td>
+      <td>20,06</td>
+      <td>2,31%</td>
+      <td>12,31%</td>
+      <td>12,31%</td>
+    </tr>
+    <tr>
+      <td>LAXZ</td>
+      <td>1980,00</td>
+      <td>100</td>
+      <td>19,80</td>
+      <td>20,06</td>
+      <td>2,31%</td>
+      <td>12,31%</td>
+      <td>12,31%</td>
+    </tr>
+    <tr>
+      <td>NUBK</td>
+      <td>1980,00</td>
+      <td>100</td>
+      <td>19,80</td>
+      <td>20,06</td>
+      <td>2,31%</td>
+      <td>12,31%</td>
+      <td>12,31%</td>
+    </tr>
+    <tr>
+      <td>PTBR</td>
+      <td>1980,00</td>
+      <td>100</td>
+      <td>19,80</td>
+      <td>20,06</td>
+      <td>2,31%</td>
+      <td>12,31%</td>
+      <td>12,31%</td>
+    </tr>
+  </table>
+    </div>
     <div class="tabPanel">Dashboard two</div>
     <div class="tabPanel">Dashboard three</div>
     <div class="tabPanel">Dashboard four</div>
