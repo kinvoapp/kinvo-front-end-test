@@ -9,11 +9,11 @@ Após baixar os arquivos do github, entre na pasta e procure pelo arquivo "index
 
 
 
-### Built With
+### Tecnologias utilizadas
 
 EC6 / JavaScript
 
-## Style guide
+## Estilo do Código
 
-O código foi dividido em 3 partes, 1 contém os arquivos de imagem, a 2 contém todo o contepudo JavaScript,a 3 contém o arquivo CSS. Todos os arquivos estão comentados para facilitar a leitura do código.
+O código foi dividido em 3 partes, 1 contém os arquivos de imagem, a 2 contém todo o conteúdo JavaScript,a 3 contém o arquivo CSS. Todos os arquivos estão comentados para facilitar a leitura do código.
 
