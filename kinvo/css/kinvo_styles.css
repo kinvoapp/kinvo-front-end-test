@@ -7,7 +7,7 @@
   color: darkgray;
   }
 
-  .gray-area-title {
+  .grayAreaTitle {
   margin-top: -920px;
   margin-left:180px;
   width: 230px;
@@ -16,7 +16,7 @@
   font-family: sans-serif;
   }
 
-  .top-nav{
+  .topNav{
   position: fixed;
   top: 0px;
   width: 100%;
@@ -39,7 +39,7 @@
   opacity: 0.2;
   }
 
-  .side-nav {
+  .sideNav {
   overflow: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -50,7 +50,7 @@
   font-family: sans-serif;
   }
 
-  .side-nav ul {
+  .sideNav ul {
   list-style: none;
   margin-top: 60px;
   padding:0px;
@@ -58,7 +58,7 @@
   position: sticky;
   }
 
-  .side-nav ul li a {
+  .sideNav ul li a {
   display: block;
   padding: 0.5rem 1rem;
   color:gray;
@@ -66,12 +66,12 @@
   position: sticky;
   }
 
-  .side-nav ul li a:hover {
+  .sideNav ul li a:hover {
   background: lightgray;
   color: blue;
   }
 
-  .tab-container {
+  .tabContainer {
   width: 85%;
   height: 500px;
   float: left;
@@ -80,13 +80,13 @@
   background-color: green;
   }
 
-  .tab-container .button-container{
+  .tabContainer .buttonContainer{
   height: 25px;
   width:100%;
   background-color: pink;
   }
 
-  .tab-container .button-container button{
+  .tabContainer .buttonContainer button{
   width: 25%;
   height: 30px;
   background-color: lightblue;
@@ -94,15 +94,15 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px;
+  padding-right: 25px;
   font-family: sans-serif;
   }
 
-  .tab-container .button-container button:hover{
+  .tabContainer .buttonContainer button:hover{
     background-color: purple;
   }
 
-  .tab-container .tab-panel {
+  .tabContainer .tabPanel {
   height: 115px;
   background-color: gray;
   color: white;
