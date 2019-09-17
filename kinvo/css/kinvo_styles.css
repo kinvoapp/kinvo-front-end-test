@@ -1,5 +1,4 @@
 
-
   body{
   margin-top: 80px:
   padding:20px;
@@ -113,72 +112,76 @@
   display: none;
   }
 
+.dataButtons {
+
+}
+
 #dataButtonOne{
   margin: 10px;
   float: left;
   background-color: #4CAF50;
-  border: 25px;
+  border: 5px;
   color: white;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 15px;
   border-radius: 8px;
-  position: relative;
+  position: static;
 }
 
 #dataButtonTwo{
   margin: 10px;
   float: left;
   background-color: #4CAF50;
-  border: 25px;
+  border: 5px;
   color: white;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 15px;
   border-radius: 8px;
-  position: relative;
+  position: static;
 }
 
 #dataButtonThree{
   margin: 10px;
   float: left;
   background-color: #4CAF50;
-  border: 25px;
+  border: 5px;
   color: white;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 15px;
   border-radius: 8px;
-  position: relative;
+  position: static;
 }
 
 #dataButtonFour{
   margin: 10px;
   float: left;
   background-color: #4CAF50;
-  border: 25px;
+  border: 5px;
   color: white;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 15px;
   border-radius: 8px;
-  position: relative;
+  position: static;
 }
 
 #dataButtonFive{
   margin: 10px;
   float: left;
   background-color: #4CAF50;
-  border: 25px;
+  border: 5px;
   color: white;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 15px;
   border-radius: 8px;
-  position: relative;
+  position: static;
 }
