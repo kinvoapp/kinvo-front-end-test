@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
 import NavigationTab from './components/navigationTab'
-import ProductAcess from './components/productAcess';
 import './styles.css';
+import ProductClassAnalysisPage from './components/productClassAnalysisPage';
 
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
     <div className="App">
       <Header/>
       <div className="contentBody">
-      <NavigationTab/>
-      <ProductAcess/>
+        <NavigationTab/>
+        <ProductClassAnalysisPage/>
       </div>
     </div>
   )

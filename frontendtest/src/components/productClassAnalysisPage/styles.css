@@ -172,6 +172,22 @@
     flex-flow: column;
 }
 
+.textBoxLoading{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 0 350px;
+    height: 100px;
+    width: 300px;
+    background: #4C309B;
+    color: white;
+    font-family: 'Helvetica Neue';
+    font-size: 25px;
+    border: 2px solid #CCCFD1;
+    border-radius: 25px;
+}
+
 @font-face{
     font-family: 'Helvetica Neue';
     font-style: normal;

@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import './styles.css';
 import '../../styles.css';
 import api from '../../services/api';
-import { thisTypeAnnotation } from '@babel/types';
 
 
-export default class ProductAcess extends Component {
+export default class ProductClassAnalysisPage extends Component {
 
     state = {
         products : [],
         filterText: [],
         search: '',
+        loading: true,
     }
 
     componentDidMount(){
@@ -19,16 +19,15 @@ export default class ProductAcess extends Component {
 
     loadProducts = async () => {
         const response = await api.get();
-        this.setState({products: response.data.data.products, filterText: response.data.data.products});
+        this.setState({products: response.data.data.products, loading: false});
     }
 
     updateSearch = (event) => {
         this.setState({search: event.target.value.substr(0,20)});
     }
 
-
     renderLoading = () => (
-        <p>Carregando...</p>
+        <div className="textBoxLoading">Carregando...</div>
     )
 
     renderChooseInputs = () => (
