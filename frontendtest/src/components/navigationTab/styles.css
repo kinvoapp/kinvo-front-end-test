@@ -1,0 +1,56 @@
+#navigationTab{
+    max-width: 20%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    position: relative;
+}
+
+#navigationTab a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.navigationTabItems{
+    height: 65px;
+    background: white;
+    border-top: 1px solid #DAE0E3;
+    display: flex;
+    font-family: 'Helvetica Neue';
+    font-size: 15px;
+    color: #707B81;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.navigationTabItems:hover{
+    background: rgb(243, 245, 247);
+    color: #5D41AC;
+    transition: all 0.3s;
+}
+
+.active{
+    background-color: #EEF2F4;
+}
+
+.navigationTabText{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.navigationTabText h5,img{
+    padding-left: 15px;
+}
+
+@font-face{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    src: url('../../fonts/helvetica-neue.ttf');
+}

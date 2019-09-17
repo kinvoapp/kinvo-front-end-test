@@ -1,0 +1,179 @@
+#productAcess{
+    position: relative;
+    background-color: #DAE0E3;
+    display: flex;
+    flex-grow: 1;
+    height: 1000px;
+    font-family: 'Helvetica Neue';
+}
+
+.productAcessPrincipal{
+    padding: 25px;
+}
+
+.productAcessPrincipal p{
+    color: #707B81;
+}
+
+.productSearch{
+    display: flex;
+    flex-flow: column;
+}
+
+.chooseInputs{
+    display: flex;
+    flex-flow: row;
+    background: #DAE0E3;
+    width: 100%;
+}
+
+.chooseClass{
+    display: flex;
+    height: 65px;
+    width: 250px;
+    background: #EEF2F4;
+    border-radius: 15px 15px 0 0;
+    margin: 20px 10px 0 0;
+    text-decoration: none;
+}
+
+.chooseClassButton{
+    text-decoration: none;
+}
+
+.chooseClass p{
+    padding: 30px 0 0 10%;
+}
+
+.chooseClass:hover{
+    background: #F8FAFB;
+}
+
+.activeInput{
+    background: #F8FAFB;
+}
+
+.productsContainer{
+    width: 100%;
+    height: 700px;
+    background: #F8FAFB;
+    
+}
+
+.classAnalysis{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.values{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    height: 65px;
+    width: 190px;
+    margin: 20px 10px 0 0px;
+    color: #707B81;   
+}
+
+.funds{
+    height: 500px;
+    background: #FFF;
+    margin: 20px 30px 0 20px;
+    border-radius: 15px;
+}
+
+.searchProductInput{
+    background: #EEF2F4;
+    border: none;
+    border-radius: 10px;
+    height: 33px;
+    width: 250px;
+}
+
+.searchTab{
+    padding: 20px 10px 0 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.searchTab p{
+    margin-top:5px;
+}
+
+.searchTool{
+    background: #EEF2F4;
+    border-radius: 10px;
+}
+
+.searchIcon{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.searchList{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.listProducts{
+    margin: 0 10px 10px 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCCFD1;
+}
+
+.productName{
+    display: flex;
+    justify-content: center;
+}
+
+.productPurple{
+    height: 35px;
+    width: 5px;
+    background: #4C309B;
+    display: flex;
+    border-radius: 10px;
+}
+
+.currentBalance{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.currentBalance p{
+    font-size: 10px;
+}
+
+.searchList p{
+    font-size: 10px;
+    color:#4C309B;
+}
+
+.searchList h3{
+    font-size: 17px;
+    color: #4C309B;
+}
+
+.text-box{
+    width: 110px;
+    display: flex;
+    flex-flow: column;
+}
+
+@font-face{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    src: url('../../fonts/helvetica-neue.ttf');
+}
