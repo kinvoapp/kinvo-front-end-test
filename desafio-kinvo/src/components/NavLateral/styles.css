@@ -1,0 +1,30 @@
+nav#main-nav{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14pt;
+    width: 225.71px;
+    background: #FFF;
+    color: #707B81;
+    min-height: 100%;
+    margin-right: 23pt;
+    float: left;
+}
+.itemLateral{
+    border-bottom: 1px solid #CCCFD1;
+    padding-right: 1em;
+    height: 50pt;
+    padding-bottom: 0.7em;
+    padding-top: 0.7em;
+}
+
+.navIcon{
+    margin: 0 12px 0 12px;
+}
+.itemLateral span{
+    text-align: left;
+    width:auto;
+    flex:2;
+}
+
+.selecionado{
+    background: #EEF2F4;   
+}
