@@ -42,19 +42,19 @@ export default class ProductClassAnalysisPage extends Component {
     
             <a href="#" className="chooseClassButton">
                 <div className="chooseClass">
-                    <p>Nome da Classe</p>
+                    <p>Bitcoins</p>
                 </div>
             </a>
             
             <a href="#" className="chooseClassButton">
             <div className="chooseClass">
-                <p>Nome da Classe</p>
+                <p>Debêntures</p>
             </div>
             </a>
     
             <a href="#" className="chooseClassButton">           
             <div className="chooseClass">
-                <p>Nome da Classe</p>
+                <p>Fundos</p>
             </div>
             </a>
     
