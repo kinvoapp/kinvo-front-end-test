@@ -100,7 +100,7 @@
   }
 
   .tabContainer .tabPanel {
-  margin-top: 80px;
+  margin-top: 280px;
   height: 470px;
   background-color: gray;
   color: white;
@@ -113,7 +113,7 @@
   }
 
 .dataButtons {
-
+  margin-top: -200px;
 }
 
 #dataButtonOne{
