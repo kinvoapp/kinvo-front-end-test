@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#dae0e3;
+    height: 100%; 
+}
+
+.box{
+    display:flex;
+}
+
+.item{
+    flex:1;
+}
+
+.row{
+    flex-direction: row !important;
+}
+
+.column{
+    flex-direction: column !important;
+}
