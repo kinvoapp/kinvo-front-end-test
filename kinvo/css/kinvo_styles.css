@@ -2,8 +2,9 @@
   body{
   margin-top: 80px:
   padding:20px;
-  background-color:lightgray;
-  color: darkgray;
+  background-color: #d8dee1;
+  color: #717b81;
+  font-weight: bold;
   }
 
   .grayAreaTitle {
@@ -11,7 +12,8 @@
   margin-left:185px;
   width: 230px;
   float: left;
-  color: black;
+  color: #717b81;
+  font-weight: bold;
   font-family: sans-serif;
   }
 
@@ -21,7 +23,8 @@
   width: 100%;
   height: 60px;
   text-decoration: none;
-  background-color: white;
+  background-color: #ffffff;
+  font-weight: bold;
   z-index: 10;
   }
 
@@ -32,8 +35,10 @@
   position: absolute;
   top: 0;
   left: 2%;
+  font-weight: bold;
   }
 
+/*sidebar*/
   hr {
   opacity: 0.2;
   }
@@ -45,7 +50,8 @@
   height: 1000px;
   width: 170px;
   white-space: nowrap;
-  background-color: white;
+  background-color: #ffffff;
+  font-weight: bold;
   font-family: sans-serif;
   }
 
@@ -60,15 +66,18 @@
   .sideNav ul li a {
   display: block;
   padding: 0.5rem 1rem;
-  color:gray;
+  color:#717b81;
   text-decoration: none;
   position: sticky;
   }
 
   .sideNav ul li a:hover {
-  background: lightgray;
-  color: blue;
+  background: #eef2f4;
+  color: #5e48ac;
+  font-weight: bold;
   }
+
+  /*tabs and containers*/
 
   .tabContainer {
   width: 85%;
@@ -76,20 +85,23 @@
   float: left;
   margin-top: -890px;
   margin-left:180px;
-  background-color: green;
+  background-color: #f8fafb;
+  border-radius: 8px;
   }
 
   .tabContainer .buttonContainer{
   height: 25px;
   width:100%;
-  background-color: pink;
+  background-color: #dae0e3;
+  font-weight: bold;
   }
 
   .tabContainer .buttonContainer button{
   margin-top: 0px;
   width: 25%;
   height: 30px;
-  background-color: lightblue;
+  background-color: #eef2f4;
+  font-weight: bold;
   float: left;
   border: none;
   outline: none;
@@ -102,26 +114,33 @@
   .tabContainer .tabPanel {
   margin-top: 280px;
   height: 470px;
-  background-color: gray;
-  color: white;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #5e48ac;
+  font-weight: bold;
   text-align: center;
   padding-top: 105px;
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: 10px;
   display: none;
+  border-radius: 8px;
   }
+
+/*Buttons*/
 
 .dataButtons {
   margin-top: -200px;
 }
 
-#dataButtonOne{
+#dataButton{
   margin: 10px;
   float: left;
-  background-color: #4CAF50;
+  background-color: #ffffff;
   border: 5px;
-  color: white;
+  color: #717b81;
+  font-weight: bold;
+  font-family: sans-serif;
   padding: 5px 20px 20px 20px;
   text-align: center;
   text-decoration: none;
@@ -130,58 +149,52 @@
   position: static;
 }
 
-#dataButtonTwo{
-  margin: 10px;
-  float: left;
-  background-color: #4CAF50;
-  border: 5px;
-  color: white;
-  padding: 5px 20px 20px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 8px;
-  position: static;
+/*Table*/
+
+#acoes {
+  font-size: 18px;
+  float:left;
+  padding: 10px 10px 10px 10px;
+  margin-top: -70px;
+  color: #717b81;
+  font-weight: bold;
 }
 
-#dataButtonThree{
-  margin: 10px;
-  float: left;
-  background-color: #4CAF50;
-  border: 5px;
-  color: white;
-  padding: 5px 20px 20px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 8px;
-  position: static;
+#myInput {
+  margin-top: -60px;
+  margin-right: 20px;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 150px;
+  font-size: 16px;
+  padding: 6px 10px 6px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 0px;
+  float: right;
+  border-radius: 15px;
+  background-color: #f8fafb;
 }
 
-#dataButtonFour{
-  margin: 10px;
-  float: left;
-  background-color: #4CAF50;
-  border: 5px;
-  color: white;
-  padding: 5px 20px 20px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 8px;
-  position: static;
+#myTable {
+  margin-top:0px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
-#dataButtonFive{
-  margin: 10px;
-  float: left;
-  background-color: #4CAF50;
-  border: 5px;
-  color: white;
-  padding: 5px 20px 20px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 8px;
-  position: static;
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background: #f8fafb;
+  color: #5e48ac;
+  font-weight: bold;
 }
