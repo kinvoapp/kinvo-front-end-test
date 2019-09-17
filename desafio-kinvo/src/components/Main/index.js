@@ -22,7 +22,16 @@ export default class Main extends Component{
         this.setState({products: data.products,filteredProducts:data.products, summary:data.summary});
     }
 
-   
+    handleChange = event => {
+        
+        const input = event.currentTarget.value;
+        let filteredProducts = this.state.filteredProducts;
+        let products = this.state.products;
+        this.setState({filteredProducts: products.filter(product=>{
+            return product['productName'].substring(0,input.length) == input.toUpperCase()
+        }
+        )});        
+    }
     render(){
         return (
             <section className="box container column">
