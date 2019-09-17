@@ -1,4 +1,4 @@
-![Logo of the project](./components/Header/images/logo.svg)
+
 
 # Teste Front-end Kinvo. 
 > Análise por Classe de Ativos
