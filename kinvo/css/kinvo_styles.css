@@ -9,7 +9,7 @@
 
   .grayAreaTitle {
   margin-top: -920px;
-  margin-left:180px;
+  margin-left:185px;
   width: 230px;
   float: left;
   color: black;
@@ -73,7 +73,7 @@
 
   .tabContainer {
   width: 85%;
-  height: 500px;
+  height: 580px;
   float: left;
   margin-top: -890px;
   margin-left:180px;
@@ -87,6 +87,7 @@
   }
 
   .tabContainer .buttonContainer button{
+  margin-top: 0px;
   width: 25%;
   height: 30px;
   background-color: lightblue;
@@ -96,20 +97,88 @@
   cursor: pointer;
   padding-right: 25px;
   font-family: sans-serif;
-  }
-
-  .tabContainer .buttonContainer button:hover{
-    background-color: purple;
+  border-radius: 8px;
   }
 
   .tabContainer .tabPanel {
-  height: 115px;
+  margin-top: 80px;
+  height: 470px;
   background-color: gray;
   color: white;
   text-align: center;
   padding-top: 105px;
   box-sizing: border-box;
   font-family: sans-serif;
-  font-size: 22px;
+  font-size: 10px;
   display: none;
   }
+
+#dataButtonOne{
+  margin: 10px;
+  float: left;
+  background-color: #4CAF50;
+  border: 25px;
+  color: white;
+  padding: 5px 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+#dataButtonTwo{
+  margin: 10px;
+  float: left;
+  background-color: #4CAF50;
+  border: 25px;
+  color: white;
+  padding: 5px 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+#dataButtonThree{
+  margin: 10px;
+  float: left;
+  background-color: #4CAF50;
+  border: 25px;
+  color: white;
+  padding: 5px 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+#dataButtonFour{
+  margin: 10px;
+  float: left;
+  background-color: #4CAF50;
+  border: 25px;
+  color: white;
+  padding: 5px 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+#dataButtonFive{
+  margin: 10px;
+  float: left;
+  background-color: #4CAF50;
+  border: 25px;
+  color: white;
+  padding: 5px 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
