@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Produto = styled.div`
   display: grid;
   font-family: "helvetica-neue, arial";
-  width: 80%;
   height: 45px;
   grid-template-columns: repeat(8, 1fr);
   color: #4c309b;
@@ -18,4 +17,5 @@ export const PequenaInfo = styled.div``;
 
 export const P = styled.p`
   font-size: ${props => `${props.fontSize}px`};
+  font-weight: ${props => (props.fontSize === 14 ? 900 : 0)};
 `;
