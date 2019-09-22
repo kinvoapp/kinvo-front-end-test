@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 //import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import AssetClassButton from "./components/AssetClassButton";
+import AssetClassSetOfButtons from "./components/AssetClassSetOfButtons";
 
-ReactDOM.render(<AssetClassButton />, document.getElementById("root"));
+ReactDOM.render(<AssetClassSetOfButtons />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
