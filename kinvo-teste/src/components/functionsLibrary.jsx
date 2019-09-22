@@ -1,4 +1,4 @@
-// Função para importar os dados da API
+// Function to import data from the API
 export function getDataFromUrl() {
   const httpreq = new XMLHttpRequest();
   const externUrl =
@@ -8,21 +8,21 @@ export function getDataFromUrl() {
   return httpreq.responseText;
 }
 
-// Transforma os nomes em maíusculos e os ordena crescentemente
+// Converts names into Upper Case and sorts them increasingly
 export function sortedUpperProducts() {
   const data = JSON.parse(getDataFromUrl());
   const finalArray = [];
 
   data.data.products.forEach(product => {
-    const nomeMaiusculo = product.productName.toUpperCase();
-    const splitNomeMaiusculo = nomeMaiusculo.split(" ");
+    const upperCaseName = product.productName.toUpperCase();
+    const splitUpperCaseName = upperCaseName.split(" ");
     product.productName = "";
 
-    for (let i = 2; i < splitNomeMaiusculo.length; i++) {
+    for (let i = 2; i < splitUpperCaseName.length; i++) {
       if (i > 2) {
-        product.productName += " " + splitNomeMaiusculo[i];
+        product.productName += " " + splitUpperCaseName[i];
       } else {
-        product.productName += splitNomeMaiusculo[i];
+        product.productName += splitUpperCaseName[i];
       }
     }
 
@@ -32,9 +32,9 @@ export function sortedUpperProducts() {
   for (let i = 0; i < finalArray.length; i++) {
     for (let j = 0; j < finalArray.length; j++) {
       if (finalArray[i].productName < finalArray[j].productName) {
-        const nomeTemporario = finalArray[j].productName;
+        const temporaryName = finalArray[j].productName;
         finalArray[j].productName = finalArray[i].productName;
-        finalArray[i].productName = nomeTemporario;
+        finalArray[i].productName = temporaryName;
       }
     }
   }
@@ -42,7 +42,7 @@ export function sortedUpperProducts() {
   return finalArray;
 }
 
-// Reverte uma string
+// Reverses a string
 export function reverseString(strg) {
   let newString = "";
 
@@ -53,7 +53,7 @@ export function reverseString(strg) {
   return newString;
 }
 
-// Coloca um número no padrão brasileiro de dinheiro
+// Puts a number into brazilian money pattern
 export function styleMoney(money) {
   const moneyString = money.toString();
   let countNumbers = 0;
