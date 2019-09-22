@@ -1,5 +1,28 @@
 import React, { Component } from "react";
-import { Produto, P, PequenaInfo, Line } from "./styles";
+import styled from "styled-components";
+
+// styled-components code
+const P = styled.p`
+  font-size: ${props => `${props.fontSize}px`};
+  font-weight: ${props => (props.fontSize === 14 ? 900 : 0)};
+`;
+
+const Produto = styled.div`
+  display: grid;
+  font-family: "helvetica-neue, arial";
+  height: 45px;
+  grid-template-columns: repeat(8, 1fr);
+  color: #4c309b;
+`;
+
+const Line = styled.hr`
+  color: rgba(0, 0, 0, 0.2);
+  margin-left: -100px;
+`;
+
+const PequenaInfo = styled.div``;
+
+//------------------------------------------------------------------------------------------
 
 class Asset extends Component {
   render() {
