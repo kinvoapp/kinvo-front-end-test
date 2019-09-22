@@ -1,17 +1,16 @@
-const externUrl =
-  "https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation";
-
 // Função para importar os dados da API
-export function getDataFromUrl(dataurl) {
+export function getDataFromUrl() {
   const httpreq = new XMLHttpRequest();
-  httpreq.open("GET", dataurl, false);
+  const externUrl =
+    "https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation";
+  httpreq.open("GET", externUrl, false);
   httpreq.send(null);
   return httpreq.responseText;
 }
 
 // Transforma os nomes em maíusculos e os ordena crescentemente
 export function sortedUpperProducts() {
-  const data = JSON.parse(getDataFromUrl(externUrl));
+  const data = JSON.parse(getDataFromUrl());
   const finalArray = [];
 
   data.data.products.forEach(product => {

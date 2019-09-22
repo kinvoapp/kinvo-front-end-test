@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { styleMoney } from "./functionsLibrary.jsx";
 
 // styled-components code
 const H4 = styled.h4`
@@ -25,15 +24,11 @@ const DIV = styled.div`
 // -------------------------------------------------------
 
 class BotaoAcoes extends Component {
-  state = {
-    nomeButton: "SALDO BRUTO",
-    saldoBruto: 12709.14
-  };
   render() {
     return (
       <DIV>
-        <P>{this.state.nomeButton}</P>
-        <H4>R$ {styleMoney(this.state.saldoBruto)}</H4>
+        <P>{this.props.nomeButton}</P>
+        <H4>{this.props.valor}</H4>
       </DIV>
     );
   }
