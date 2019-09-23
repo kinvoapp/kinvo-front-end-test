@@ -1,0 +1,398 @@
+body{
+
+    width: 100%;
+    height: 100%;  
+}
+.header-logo {      
+
+    height: 90px;
+    width: 1366px;
+}
+.logo{
+    padding: 15px;
+    
+}
+.menu{
+    height: 100px;  
+    width: 300px;
+
+}
+.menu ul li {
+    width: 225px;
+    height: 50px;
+    list-style: none;
+    border-bottom: 1px solid rgb(206, 205, 205);
+}
+.menu ul li a {
+   text-decoration: none;
+}
+.resumo-da-carteira {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    background-color: rgb(206, 205, 205);
+}
+
+.resumo-da-carteira img {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+.meus-produtos {
+    position: absolute;
+    top: 175px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.meus-produtos img {
+    position: absolute;
+    top: 6px;
+    left: 6.5px;
+}
+.meus-proventos {
+    position: absolute;
+    top: 223px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.meus-proventos img {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    
+}
+.analise-por-classe-do-produto {
+    position: absolute;
+    top: 275px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.analise-por-classe-do-produto img {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    
+}
+.rentabilidade-real {
+    position: absolute;
+    top: 324px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.rentabilidade-real img {
+    
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+.projecao-da-carteira {
+    position: absolute;
+    top: 375px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.projecao-da-carteira img {
+    
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+.risco-x-retorno {
+    position: absolute;
+    top: 427px;
+    left: 10px;
+    background-color: rgb(206, 205, 205);
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+.risco-x-retorno img {
+    
+    position: absolute;
+    top:  6px;
+    left: 6px;
+}
+.cobertura-do-fgc {
+    position: absolute;
+    top: 478px;
+    left: 10px;
+    background-color:  #5D41AC;
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    float: left;
+}
+
+.cobertura-txt{
+    background-color: #EEF2F4;
+}
+.cobertura-do-fgc img {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
+.resumo-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90)
+}
+.produtos-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90)
+}
+.proventos-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90)
+}
+.analise-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90)
+}
+.rentabilidade-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90);
+}
+.projecao-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90);
+}
+
+.risco-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90);
+}
+.cobertura-txt {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color:  rgb(90, 90, 90);
+}
+.informacoes {
+    position: absolute;
+    float: left;
+    left: 300px;
+    top: 100px;
+    width: 1130px;
+    height: 1202px;
+    background-color:#DAE0E3
+}
+.txt {
+    position: relative;
+    padding: 27px;
+    color:  rgb(90, 90, 90);
+}
+.acoes ul li {
+    position: relative;
+    top: -24px;
+    left: -15px;
+    display: inline-block;
+    width: 260px;
+    height: 80px;
+    background-color: #EEF2F4;  
+    border-radius: 10px;
+    margin-right: 2px;
+    
+}
+.acoes ul li a {
+    position: relative;
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+    top: 30%;
+    left: 30px;
+    font-size: 20px;
+}
+.tabela-informacoes{
+    position: relative;
+    top: -50px;
+    width: 1058px;
+    height: 90%;
+    background-color: #EEF2F4; 
+    left: 25px;
+}
+.valores ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    height: 60px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    top: 30px;
+
+}
+.saldo-bruto-txt {
+    position: relative;
+    left: 50px;
+    top: 5px;
+    font-size: 13px;    
+}
+.saldo-bruto {
+    position: relative;
+    left: 38px;
+    top: -10px;
+    font-size: 23px;
+}
+.valor-aplicado-txt {
+    position: relative;
+    left: 40px;
+    top: 5px;
+    font-size: 13px;
+}
+.valor-aplicado {
+    position: relative;
+    left: 36px;
+    top: -10px;
+    font-size: 23px;
+}
+.ganho-capital-txt {
+    position: relative;
+    left: 30px;
+    top: 5px;
+    font-size: 13px;
+
+}
+.ganho-capital {
+    position: relative;
+    left: 35px;
+    top: -10px;
+    font-size: 23px;
+}
+.total-distribuido-txt {
+    position: relative;
+    left: 28px;
+    top: 5px;
+    font-size: 13px;
+
+}
+.total-distribuido {
+    position: relative;
+    left: 47px;
+    top: -10px;
+    font-size: 23px;
+}
+.yield-txt {
+    position: relative;
+    left: 70px;
+    top: 5px;
+    font-size: 13px;
+}
+.yield {
+    position: relative;
+    left: 70px;
+    top: -10px;
+    font-size: 23px;
+}
+.header-2 {
+    position: relative;
+    top: 40px;
+    left: 35px;
+    height: 930px;
+    width: 1000px;
+    background-color: #ffffff
+    
+
+}
+.header-2 t  {
+    font-size: 23px;
+    float: left;
+    width: 700px;
+    padding: 20px;
+    
+}
+.procurar-txt {
+    position: relative;
+    border-radius: 40px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(235, 235, 235);
+    top: 17px;
+    padding-left: 30px;
+    border: none;
+
+}  
+.procurar img {
+
+    position: relative;
+    top: 20px;
+    right: 220px;
+    
+
+}
+.tabela{
+    position: relative;
+    height: 850px;
+    width: 1000px;
+    text-align: center;
+    color: #5D41AC;
+}
+
+.tabela th {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.border {
+    position: relative;
+    border-left: 3px solid #5D41AC;
+    text-align: left;
+    padding: 10px;
+    font-size: 17px;    
+}
+
+.tabela td {
+    position: relative;
+    bottom: 10px;
+    border-bottom: 1px solid #CCCFD1;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.alinhar {
+    text-align: left;
+}
+
+
+
+
+
