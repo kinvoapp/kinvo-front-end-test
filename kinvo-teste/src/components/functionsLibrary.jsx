@@ -42,7 +42,7 @@ export function sortedUpperProducts() {
   return finalArray;
 }
 
-// Reverses a string
+// Reverses a string.
 export function reverseString(strg) {
   let newString = "";
 
