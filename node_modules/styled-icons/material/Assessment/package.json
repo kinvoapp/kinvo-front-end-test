@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Assessment.js",
+  "module": "./Assessment.esm.js",
+  "types": "./Assessment.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Satellite.js",
+  "module": "./Satellite.esm.js",
+  "types": "./Satellite.d.ts"
+}

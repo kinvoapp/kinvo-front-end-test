@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChildCare.js",
+  "module": "./ChildCare.esm.js",
+  "types": "./ChildCare.d.ts"
+}

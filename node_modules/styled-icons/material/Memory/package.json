@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Memory.js",
+  "module": "./Memory.esm.js",
+  "types": "./Memory.d.ts"
+}

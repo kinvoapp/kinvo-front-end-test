@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Spellcheck.js",
+  "module": "./Spellcheck.esm.js",
+  "types": "./Spellcheck.d.ts"
+}

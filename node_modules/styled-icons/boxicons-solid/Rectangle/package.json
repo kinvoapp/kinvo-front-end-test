@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Rectangle.js",
+  "module": "./Rectangle.esm.js",
+  "types": "./Rectangle.d.ts"
+}

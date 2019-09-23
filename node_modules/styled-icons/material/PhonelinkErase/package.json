@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhonelinkErase.js",
+  "module": "./PhonelinkErase.esm.js",
+  "types": "./PhonelinkErase.d.ts"
+}

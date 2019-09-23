@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FiberNew.js",
+  "module": "./FiberNew.esm.js",
+  "types": "./FiberNew.d.ts"
+}

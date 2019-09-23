@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ErrorOutline.js",
+  "module": "./ErrorOutline.esm.js",
+  "types": "./ErrorOutline.d.ts"
+}

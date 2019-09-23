@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Poll.js",
+  "module": "./Poll.esm.js",
+  "types": "./Poll.d.ts"
+}

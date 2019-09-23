@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoreVert.js",
+  "module": "./MoreVert.esm.js",
+  "types": "./MoreVert.d.ts"
+}

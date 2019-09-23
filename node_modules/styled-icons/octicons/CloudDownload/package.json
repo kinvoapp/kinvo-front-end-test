@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudDownload.js",
+  "module": "./CloudDownload.esm.js",
+  "types": "./CloudDownload.d.ts"
+}

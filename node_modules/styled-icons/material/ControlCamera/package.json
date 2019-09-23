@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ControlCamera.js",
+  "module": "./ControlCamera.esm.js",
+  "types": "./ControlCamera.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Favorite.js",
+  "module": "./Favorite.esm.js",
+  "types": "./Favorite.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Minimize.js",
+  "module": "./Minimize.esm.js",
+  "types": "./Minimize.d.ts"
+}

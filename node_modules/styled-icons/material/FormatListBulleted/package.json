@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatListBulleted.js",
+  "module": "./FormatListBulleted.esm.js",
+  "types": "./FormatListBulleted.d.ts"
+}

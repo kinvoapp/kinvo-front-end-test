@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Audiotrack.js",
+  "module": "./Audiotrack.esm.js",
+  "types": "./Audiotrack.d.ts"
+}

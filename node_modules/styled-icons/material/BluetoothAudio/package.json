@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BluetoothAudio.js",
+  "module": "./BluetoothAudio.esm.js",
+  "types": "./BluetoothAudio.d.ts"
+}

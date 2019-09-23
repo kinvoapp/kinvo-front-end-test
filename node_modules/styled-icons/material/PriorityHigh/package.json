@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PriorityHigh.js",
+  "module": "./PriorityHigh.esm.js",
+  "types": "./PriorityHigh.d.ts"
+}

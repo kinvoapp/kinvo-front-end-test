@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TabletMac.js",
+  "module": "./TabletMac.esm.js",
+  "types": "./TabletMac.d.ts"
+}

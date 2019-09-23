@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Hexagon.js",
+  "module": "./Hexagon.esm.js",
+  "types": "./Hexagon.d.ts"
+}

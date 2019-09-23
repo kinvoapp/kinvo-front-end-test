@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ScatterPlot.js",
+  "module": "./ScatterPlot.esm.js",
+  "types": "./ScatterPlot.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EvStation.js",
+  "module": "./EvStation.esm.js",
+  "types": "./EvStation.d.ts"
+}

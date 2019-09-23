@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ScreenLockRotation.js",
+  "module": "./ScreenLockRotation.esm.js",
+  "types": "./ScreenLockRotation.d.ts"
+}

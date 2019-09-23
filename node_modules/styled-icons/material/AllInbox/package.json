@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AllInbox.js",
+  "module": "./AllInbox.esm.js",
+  "types": "./AllInbox.d.ts"
+}

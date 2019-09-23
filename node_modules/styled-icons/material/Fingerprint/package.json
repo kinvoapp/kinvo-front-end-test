@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Fingerprint.js",
+  "module": "./Fingerprint.esm.js",
+  "types": "./Fingerprint.d.ts"
+}

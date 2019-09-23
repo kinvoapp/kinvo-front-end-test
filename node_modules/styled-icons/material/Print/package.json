@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Print.js",
+  "module": "./Print.esm.js",
+  "types": "./Print.d.ts"
+}

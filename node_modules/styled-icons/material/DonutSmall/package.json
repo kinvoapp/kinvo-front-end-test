@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DonutSmall.js",
+  "module": "./DonutSmall.esm.js",
+  "types": "./DonutSmall.d.ts"
+}

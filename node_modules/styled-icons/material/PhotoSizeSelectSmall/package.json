@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhotoSizeSelectSmall.js",
+  "module": "./PhotoSizeSelectSmall.esm.js",
+  "types": "./PhotoSizeSelectSmall.d.ts"
+}

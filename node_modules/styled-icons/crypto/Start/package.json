@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Start.js",
+  "module": "./Start.esm.js",
+  "types": "./Start.d.ts"
+}

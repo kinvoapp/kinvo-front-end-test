@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Https.js",
+  "module": "./Https.esm.js",
+  "types": "./Https.d.ts"
+}

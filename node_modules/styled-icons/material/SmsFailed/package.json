@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SmsFailed.js",
+  "module": "./SmsFailed.esm.js",
+  "types": "./SmsFailed.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CropLandscape.js",
+  "module": "./CropLandscape.esm.js",
+  "types": "./CropLandscape.d.ts"
+}

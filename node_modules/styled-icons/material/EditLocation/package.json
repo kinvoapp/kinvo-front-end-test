@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EditLocation.js",
+  "module": "./EditLocation.esm.js",
+  "types": "./EditLocation.d.ts"
+}

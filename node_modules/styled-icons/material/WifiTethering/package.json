@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WifiTethering.js",
+  "module": "./WifiTethering.esm.js",
+  "types": "./WifiTethering.d.ts"
+}

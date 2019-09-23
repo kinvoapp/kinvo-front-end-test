@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Notifications.js",
+  "module": "./Notifications.esm.js",
+  "types": "./Notifications.d.ts"
+}

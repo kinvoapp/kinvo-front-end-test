@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AvTimer.js",
+  "module": "./AvTimer.esm.js",
+  "types": "./AvTimer.d.ts"
+}

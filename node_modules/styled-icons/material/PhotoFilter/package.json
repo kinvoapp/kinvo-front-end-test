@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhotoFilter.js",
+  "module": "./PhotoFilter.esm.js",
+  "types": "./PhotoFilter.d.ts"
+}

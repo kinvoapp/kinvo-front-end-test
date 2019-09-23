@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalLaundryService.js",
+  "module": "./LocalLaundryService.esm.js",
+  "types": "./LocalLaundryService.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BugReport.js",
+  "module": "./BugReport.esm.js",
+  "types": "./BugReport.d.ts"
+}

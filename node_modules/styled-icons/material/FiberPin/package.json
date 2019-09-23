@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FiberPin.js",
+  "module": "./FiberPin.esm.js",
+  "types": "./FiberPin.d.ts"
+}

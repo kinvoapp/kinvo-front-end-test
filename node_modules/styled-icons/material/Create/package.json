@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Create.js",
+  "module": "./Create.esm.js",
+  "types": "./Create.d.ts"
+}

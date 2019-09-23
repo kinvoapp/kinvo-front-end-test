@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterTiltShift.js",
+  "module": "./FilterTiltShift.esm.js",
+  "types": "./FilterTiltShift.d.ts"
+}

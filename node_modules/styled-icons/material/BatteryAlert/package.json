@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BatteryAlert.js",
+  "module": "./BatteryAlert.esm.js",
+  "types": "./BatteryAlert.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Textsms.js",
+  "module": "./Textsms.esm.js",
+  "types": "./Textsms.d.ts"
+}

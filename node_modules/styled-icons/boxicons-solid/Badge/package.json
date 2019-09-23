@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Badge.js",
+  "module": "./Badge.esm.js",
+  "types": "./Badge.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Voicemail.js",
+  "module": "./Voicemail.esm.js",
+  "types": "./Voicemail.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatIndividualSuite.js",
+  "module": "./AirlineSeatIndividualSuite.esm.js",
+  "types": "./AirlineSeatIndividualSuite.d.ts"
+}

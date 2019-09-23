@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Umbrella.js",
+  "module": "./Umbrella.esm.js",
+  "types": "./Umbrella.d.ts"
+}

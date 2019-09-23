@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StayPrimaryPortrait.js",
+  "module": "./StayPrimaryPortrait.esm.js",
+  "types": "./StayPrimaryPortrait.d.ts"
+}

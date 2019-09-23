@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardReturn.js",
+  "module": "./KeyboardReturn.esm.js",
+  "types": "./KeyboardReturn.d.ts"
+}

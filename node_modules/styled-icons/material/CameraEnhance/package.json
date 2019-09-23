@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CameraEnhance.js",
+  "module": "./CameraEnhance.esm.js",
+  "types": "./CameraEnhance.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowBackIos.js",
+  "module": "./ArrowBackIos.esm.js",
+  "types": "./ArrowBackIos.d.ts"
+}

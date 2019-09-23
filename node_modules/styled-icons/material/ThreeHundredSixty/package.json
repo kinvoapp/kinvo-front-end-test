@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ThreeHundredSixty.js",
+  "module": "./ThreeHundredSixty.esm.js",
+  "types": "./ThreeHundredSixty.d.ts"
+}

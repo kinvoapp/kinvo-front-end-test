@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BlurOff.js",
+  "module": "./BlurOff.esm.js",
+  "types": "./BlurOff.d.ts"
+}

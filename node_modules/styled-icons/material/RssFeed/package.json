@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RssFeed.js",
+  "module": "./RssFeed.esm.js",
+  "types": "./RssFeed.d.ts"
+}

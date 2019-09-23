@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewDay.js",
+  "module": "./ViewDay.esm.js",
+  "types": "./ViewDay.d.ts"
+}

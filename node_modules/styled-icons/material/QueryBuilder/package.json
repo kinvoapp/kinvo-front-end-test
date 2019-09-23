@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./QueryBuilder.js",
+  "module": "./QueryBuilder.esm.js",
+  "types": "./QueryBuilder.d.ts"
+}

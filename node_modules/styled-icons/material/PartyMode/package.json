@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PartyMode.js",
+  "module": "./PartyMode.esm.js",
+  "types": "./PartyMode.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneIphone.js",
+  "module": "./PhoneIphone.esm.js",
+  "types": "./PhoneIphone.d.ts"
+}

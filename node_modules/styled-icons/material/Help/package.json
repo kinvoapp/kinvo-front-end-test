@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Help.js",
+  "module": "./Help.esm.js",
+  "types": "./Help.d.ts"
+}

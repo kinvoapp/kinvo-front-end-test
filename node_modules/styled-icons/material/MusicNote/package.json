@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MusicNote.js",
+  "module": "./MusicNote.esm.js",
+  "types": "./MusicNote.d.ts"
+}

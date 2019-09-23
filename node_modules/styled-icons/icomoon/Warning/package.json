@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Warning.js",
+  "module": "./Warning.esm.js",
+  "types": "./Warning.d.ts"
+}

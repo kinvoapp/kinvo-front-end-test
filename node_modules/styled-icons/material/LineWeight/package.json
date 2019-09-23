@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LineWeight.js",
+  "module": "./LineWeight.esm.js",
+  "types": "./LineWeight.d.ts"
+}

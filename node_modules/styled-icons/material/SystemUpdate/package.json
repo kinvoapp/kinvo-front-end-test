@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SystemUpdate.js",
+  "module": "./SystemUpdate.esm.js",
+  "types": "./SystemUpdate.d.ts"
+}

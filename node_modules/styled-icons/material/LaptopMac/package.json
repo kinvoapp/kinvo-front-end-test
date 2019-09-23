@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LaptopMac.js",
+  "module": "./LaptopMac.esm.js",
+  "types": "./LaptopMac.d.ts"
+}

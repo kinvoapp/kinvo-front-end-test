@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Looks3.js",
+  "module": "./Looks3.esm.js",
+  "types": "./Looks3.d.ts"
+}

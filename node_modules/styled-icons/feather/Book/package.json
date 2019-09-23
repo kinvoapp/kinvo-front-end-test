@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Book.js",
+  "module": "./Book.esm.js",
+  "types": "./Book.d.ts"
+}

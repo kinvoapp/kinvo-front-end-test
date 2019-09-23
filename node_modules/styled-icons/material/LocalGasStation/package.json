@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalGasStation.js",
+  "module": "./LocalGasStation.esm.js",
+  "types": "./LocalGasStation.d.ts"
+}

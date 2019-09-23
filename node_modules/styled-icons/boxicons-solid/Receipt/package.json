@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Receipt.js",
+  "module": "./Receipt.esm.js",
+  "types": "./Receipt.d.ts"
+}

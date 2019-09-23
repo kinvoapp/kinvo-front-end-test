@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Stop.js",
+  "module": "./Stop.esm.js",
+  "types": "./Stop.d.ts"
+}

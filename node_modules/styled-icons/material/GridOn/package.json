@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GridOn.js",
+  "module": "./GridOn.esm.js",
+  "types": "./GridOn.d.ts"
+}

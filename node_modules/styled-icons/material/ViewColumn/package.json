@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewColumn.js",
+  "module": "./ViewColumn.esm.js",
+  "types": "./ViewColumn.d.ts"
+}

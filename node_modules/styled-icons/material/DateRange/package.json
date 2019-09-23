@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DateRange.js",
+  "module": "./DateRange.esm.js",
+  "types": "./DateRange.d.ts"
+}

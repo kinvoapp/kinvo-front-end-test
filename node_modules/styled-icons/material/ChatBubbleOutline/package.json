@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChatBubbleOutline.js",
+  "module": "./ChatBubbleOutline.esm.js",
+  "types": "./ChatBubbleOutline.d.ts"
+}

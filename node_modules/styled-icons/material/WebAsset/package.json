@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WebAsset.js",
+  "module": "./WebAsset.esm.js",
+  "types": "./WebAsset.d.ts"
+}

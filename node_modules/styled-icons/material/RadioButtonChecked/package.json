@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RadioButtonChecked.js",
+  "module": "./RadioButtonChecked.esm.js",
+  "types": "./RadioButtonChecked.d.ts"
+}

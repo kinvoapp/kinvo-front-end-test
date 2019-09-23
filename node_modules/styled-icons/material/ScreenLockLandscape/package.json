@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ScreenLockLandscape.js",
+  "module": "./ScreenLockLandscape.esm.js",
+  "types": "./ScreenLockLandscape.d.ts"
+}

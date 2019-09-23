@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ContactSupport.js",
+  "module": "./ContactSupport.esm.js",
+  "types": "./ContactSupport.d.ts"
+}

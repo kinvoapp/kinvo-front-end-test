@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermMedia.js",
+  "module": "./PermMedia.esm.js",
+  "types": "./PermMedia.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DirectionsCar.js",
+  "module": "./DirectionsCar.esm.js",
+  "types": "./DirectionsCar.d.ts"
+}

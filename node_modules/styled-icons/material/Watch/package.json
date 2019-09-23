@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Watch.js",
+  "module": "./Watch.esm.js",
+  "types": "./Watch.d.ts"
+}

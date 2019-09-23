@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TabUnselected.js",
+  "module": "./TabUnselected.esm.js",
+  "types": "./TabUnselected.d.ts"
+}

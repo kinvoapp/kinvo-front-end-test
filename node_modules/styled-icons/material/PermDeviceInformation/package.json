@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermDeviceInformation.js",
+  "module": "./PermDeviceInformation.esm.js",
+  "types": "./PermDeviceInformation.d.ts"
+}

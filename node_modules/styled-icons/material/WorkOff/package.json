@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WorkOff.js",
+  "module": "./WorkOff.esm.js",
+  "types": "./WorkOff.d.ts"
+}

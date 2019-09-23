@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsInputAntenna.js",
+  "module": "./SettingsInputAntenna.esm.js",
+  "types": "./SettingsInputAntenna.d.ts"
+}

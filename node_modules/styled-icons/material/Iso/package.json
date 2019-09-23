@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Iso.js",
+  "module": "./Iso.esm.js",
+  "types": "./Iso.d.ts"
+}

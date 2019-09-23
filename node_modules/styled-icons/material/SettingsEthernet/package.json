@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsEthernet.js",
+  "module": "./SettingsEthernet.esm.js",
+  "types": "./SettingsEthernet.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewComfy.js",
+  "module": "./ViewComfy.esm.js",
+  "types": "./ViewComfy.d.ts"
+}

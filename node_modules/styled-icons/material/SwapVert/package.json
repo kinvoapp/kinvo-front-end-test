@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwapVert.js",
+  "module": "./SwapVert.esm.js",
+  "types": "./SwapVert.d.ts"
+}

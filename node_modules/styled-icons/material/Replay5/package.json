@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Replay5.js",
+  "module": "./Replay5.esm.js",
+  "types": "./Replay5.d.ts"
+}

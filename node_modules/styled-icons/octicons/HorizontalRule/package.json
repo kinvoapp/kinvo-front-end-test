@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HorizontalRule.js",
+  "module": "./HorizontalRule.esm.js",
+  "types": "./HorizontalRule.d.ts"
+}

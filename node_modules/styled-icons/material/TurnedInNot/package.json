@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TurnedInNot.js",
+  "module": "./TurnedInNot.esm.js",
+  "types": "./TurnedInNot.d.ts"
+}

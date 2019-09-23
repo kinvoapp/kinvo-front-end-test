@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TransitEnterexit.js",
+  "module": "./TransitEnterexit.esm.js",
+  "types": "./TransitEnterexit.d.ts"
+}

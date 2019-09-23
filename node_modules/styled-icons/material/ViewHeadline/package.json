@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewHeadline.js",
+  "module": "./ViewHeadline.esm.js",
+  "types": "./ViewHeadline.d.ts"
+}

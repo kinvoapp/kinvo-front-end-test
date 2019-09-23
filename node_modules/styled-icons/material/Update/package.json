@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Update.js",
+  "module": "./Update.esm.js",
+  "types": "./Update.d.ts"
+}

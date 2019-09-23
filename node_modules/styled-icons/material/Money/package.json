@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Money.js",
+  "module": "./Money.esm.js",
+  "types": "./Money.d.ts"
+}

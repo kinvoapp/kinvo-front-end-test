@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FitnessCenter.js",
+  "module": "./FitnessCenter.esm.js",
+  "types": "./FitnessCenter.d.ts"
+}

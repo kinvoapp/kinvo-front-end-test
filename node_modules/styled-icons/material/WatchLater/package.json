@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WatchLater.js",
+  "module": "./WatchLater.esm.js",
+  "types": "./WatchLater.d.ts"
+}

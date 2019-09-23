@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlayForWork.js",
+  "module": "./PlayForWork.esm.js",
+  "types": "./PlayForWork.d.ts"
+}

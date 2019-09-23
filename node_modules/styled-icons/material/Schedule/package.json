@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Schedule.js",
+  "module": "./Schedule.esm.js",
+  "types": "./Schedule.d.ts"
+}

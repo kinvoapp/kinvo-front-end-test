@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatQuote.js",
+  "module": "./FormatQuote.esm.js",
+  "types": "./FormatQuote.d.ts"
+}

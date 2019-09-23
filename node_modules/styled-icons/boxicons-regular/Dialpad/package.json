@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Dialpad.js",
+  "module": "./Dialpad.esm.js",
+  "types": "./Dialpad.d.ts"
+}

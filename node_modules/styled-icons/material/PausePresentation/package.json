@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PausePresentation.js",
+  "module": "./PausePresentation.esm.js",
+  "types": "./PausePresentation.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Equalizer.js",
+  "module": "./Equalizer.esm.js",
+  "types": "./Equalizer.d.ts"
+}

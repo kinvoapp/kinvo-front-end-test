@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EditAttributes.js",
+  "module": "./EditAttributes.esm.js",
+  "types": "./EditAttributes.d.ts"
+}

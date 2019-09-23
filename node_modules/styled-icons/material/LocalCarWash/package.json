@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalCarWash.js",
+  "module": "./LocalCarWash.esm.js",
+  "types": "./LocalCarWash.d.ts"
+}

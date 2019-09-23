@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HdrWeak.js",
+  "module": "./HdrWeak.esm.js",
+  "types": "./HdrWeak.d.ts"
+}

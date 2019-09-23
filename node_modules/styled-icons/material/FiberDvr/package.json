@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FiberDvr.js",
+  "module": "./FiberDvr.esm.js",
+  "types": "./FiberDvr.d.ts"
+}

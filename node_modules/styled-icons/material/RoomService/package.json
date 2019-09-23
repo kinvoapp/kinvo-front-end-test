@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RoomService.js",
+  "module": "./RoomService.esm.js",
+  "types": "./RoomService.d.ts"
+}

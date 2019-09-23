@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirplanemodeInactive.js",
+  "module": "./AirplanemodeInactive.esm.js",
+  "types": "./AirplanemodeInactive.d.ts"
+}

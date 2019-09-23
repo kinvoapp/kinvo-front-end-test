@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalParking.js",
+  "module": "./LocalParking.esm.js",
+  "types": "./LocalParking.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Home.js",
+  "module": "./Home.esm.js",
+  "types": "./Home.d.ts"
+}

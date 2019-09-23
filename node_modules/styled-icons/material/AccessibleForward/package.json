@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccessibleForward.js",
+  "module": "./AccessibleForward.esm.js",
+  "types": "./AccessibleForward.d.ts"
+}

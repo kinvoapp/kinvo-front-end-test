@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CameraRear.js",
+  "module": "./CameraRear.esm.js",
+  "types": "./CameraRear.d.ts"
+}

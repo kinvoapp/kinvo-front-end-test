@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Vignette.js",
+  "module": "./Vignette.esm.js",
+  "types": "./Vignette.d.ts"
+}

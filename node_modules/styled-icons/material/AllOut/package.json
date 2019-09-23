@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AllOut.js",
+  "module": "./AllOut.esm.js",
+  "types": "./AllOut.d.ts"
+}

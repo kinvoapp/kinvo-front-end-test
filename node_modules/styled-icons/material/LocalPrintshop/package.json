@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPrintshop.js",
+  "module": "./LocalPrintshop.esm.js",
+  "types": "./LocalPrintshop.d.ts"
+}

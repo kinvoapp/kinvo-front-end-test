@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Toll.js",
+  "module": "./Toll.esm.js",
+  "types": "./Toll.d.ts"
+}

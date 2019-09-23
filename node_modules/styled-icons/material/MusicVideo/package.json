@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MusicVideo.js",
+  "module": "./MusicVideo.esm.js",
+  "types": "./MusicVideo.d.ts"
+}

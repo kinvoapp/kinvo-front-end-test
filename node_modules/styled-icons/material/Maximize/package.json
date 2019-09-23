@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Maximize.js",
+  "module": "./Maximize.esm.js",
+  "types": "./Maximize.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MissedVideoCall.js",
+  "module": "./MissedVideoCall.esm.js",
+  "types": "./MissedVideoCall.d.ts"
+}

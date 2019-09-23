@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RecentActors.js",
+  "module": "./RecentActors.esm.js",
+  "types": "./RecentActors.d.ts"
+}

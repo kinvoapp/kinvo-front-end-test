@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RingVolume.js",
+  "module": "./RingVolume.esm.js",
+  "types": "./RingVolume.d.ts"
+}

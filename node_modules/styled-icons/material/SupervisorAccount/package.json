@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SupervisorAccount.js",
+  "module": "./SupervisorAccount.esm.js",
+  "types": "./SupervisorAccount.d.ts"
+}

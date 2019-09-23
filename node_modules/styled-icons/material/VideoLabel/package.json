@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VideoLabel.js",
+  "module": "./VideoLabel.esm.js",
+  "types": "./VideoLabel.d.ts"
+}

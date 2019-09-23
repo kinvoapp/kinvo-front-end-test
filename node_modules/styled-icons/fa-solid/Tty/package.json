@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tty.js",
+  "module": "./Tty.esm.js",
+  "types": "./Tty.d.ts"
+}

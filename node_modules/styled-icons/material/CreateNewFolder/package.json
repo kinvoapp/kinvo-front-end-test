@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CreateNewFolder.js",
+  "module": "./CreateNewFolder.esm.js",
+  "types": "./CreateNewFolder.d.ts"
+}

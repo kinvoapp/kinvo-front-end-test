@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Filter5.js",
+  "module": "./Filter5.esm.js",
+  "types": "./Filter5.d.ts"
+}

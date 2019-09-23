@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Cloud.js",
+  "module": "./Cloud.esm.js",
+  "types": "./Cloud.d.ts"
+}

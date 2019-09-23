@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalOffer.js",
+  "module": "./LocalOffer.esm.js",
+  "types": "./LocalOffer.d.ts"
+}

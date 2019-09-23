@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Report.js",
+  "module": "./Report.esm.js",
+  "types": "./Report.d.ts"
+}

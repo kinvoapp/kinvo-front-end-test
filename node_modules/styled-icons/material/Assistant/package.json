@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Assistant.js",
+  "module": "./Assistant.esm.js",
+  "types": "./Assistant.d.ts"
+}

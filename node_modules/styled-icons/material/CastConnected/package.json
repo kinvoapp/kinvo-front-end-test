@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CastConnected.js",
+  "module": "./CastConnected.esm.js",
+  "types": "./CastConnected.d.ts"
+}

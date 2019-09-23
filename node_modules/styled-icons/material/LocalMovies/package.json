@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalMovies.js",
+  "module": "./LocalMovies.esm.js",
+  "types": "./LocalMovies.d.ts"
+}

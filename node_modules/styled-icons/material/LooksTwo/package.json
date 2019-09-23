@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LooksTwo.js",
+  "module": "./LooksTwo.esm.js",
+  "types": "./LooksTwo.d.ts"
+}

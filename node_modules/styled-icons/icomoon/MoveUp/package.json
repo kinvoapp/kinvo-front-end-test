@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoveUp.js",
+  "module": "./MoveUp.esm.js",
+  "types": "./MoveUp.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Kitchen.js",
+  "module": "./Kitchen.esm.js",
+  "types": "./Kitchen.d.ts"
+}

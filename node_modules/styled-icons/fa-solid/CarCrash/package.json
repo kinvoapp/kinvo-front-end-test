@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CarCrash.js",
+  "module": "./CarCrash.esm.js",
+  "types": "./CarCrash.d.ts"
+}

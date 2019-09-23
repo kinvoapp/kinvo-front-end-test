@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CropRotate.js",
+  "module": "./CropRotate.esm.js",
+  "types": "./CropRotate.d.ts"
+}

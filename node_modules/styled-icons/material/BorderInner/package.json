@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderInner.js",
+  "module": "./BorderInner.esm.js",
+  "types": "./BorderInner.d.ts"
+}

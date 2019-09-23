@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhotoLibrary.js",
+  "module": "./PhotoLibrary.esm.js",
+  "types": "./PhotoLibrary.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwapVerticalCircle.js",
+  "module": "./SwapVerticalCircle.esm.js",
+  "types": "./SwapVerticalCircle.d.ts"
+}

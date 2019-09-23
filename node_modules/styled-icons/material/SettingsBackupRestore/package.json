@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsBackupRestore.js",
+  "module": "./SettingsBackupRestore.esm.js",
+  "types": "./SettingsBackupRestore.d.ts"
+}

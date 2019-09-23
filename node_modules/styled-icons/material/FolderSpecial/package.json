@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FolderSpecial.js",
+  "module": "./FolderSpecial.esm.js",
+  "types": "./FolderSpecial.d.ts"
+}

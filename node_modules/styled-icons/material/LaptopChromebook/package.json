@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LaptopChromebook.js",
+  "module": "./LaptopChromebook.esm.js",
+  "types": "./LaptopChromebook.d.ts"
+}

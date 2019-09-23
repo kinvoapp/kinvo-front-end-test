@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Label.js",
+  "module": "./Label.esm.js",
+  "types": "./Label.d.ts"
+}

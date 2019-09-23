@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Egg.js",
+  "module": "./Egg.esm.js",
+  "types": "./Egg.d.ts"
+}

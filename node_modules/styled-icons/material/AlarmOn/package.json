@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AlarmOn.js",
+  "module": "./AlarmOn.esm.js",
+  "types": "./AlarmOn.d.ts"
+}

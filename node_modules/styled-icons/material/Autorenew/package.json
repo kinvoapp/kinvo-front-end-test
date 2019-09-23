@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Autorenew.js",
+  "module": "./Autorenew.esm.js",
+  "types": "./Autorenew.d.ts"
+}

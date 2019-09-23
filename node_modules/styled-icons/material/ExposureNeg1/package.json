@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExposureNeg1.js",
+  "module": "./ExposureNeg1.esm.js",
+  "types": "./ExposureNeg1.d.ts"
+}

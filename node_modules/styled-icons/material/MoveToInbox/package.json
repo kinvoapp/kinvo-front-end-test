@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoveToInbox.js",
+  "module": "./MoveToInbox.esm.js",
+  "types": "./MoveToInbox.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NoMeetingRoom.js",
+  "module": "./NoMeetingRoom.esm.js",
+  "types": "./NoMeetingRoom.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatFlatAngled.js",
+  "module": "./AirlineSeatFlatAngled.esm.js",
+  "types": "./AirlineSeatFlatAngled.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhotoCamera.js",
+  "module": "./PhotoCamera.esm.js",
+  "types": "./PhotoCamera.d.ts"
+}

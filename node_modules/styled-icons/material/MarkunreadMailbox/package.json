@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MarkunreadMailbox.js",
+  "module": "./MarkunreadMailbox.esm.js",
+  "types": "./MarkunreadMailbox.d.ts"
+}

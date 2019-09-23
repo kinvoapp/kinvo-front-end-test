@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertLink.js",
+  "module": "./InsertLink.esm.js",
+  "types": "./InsertLink.d.ts"
+}

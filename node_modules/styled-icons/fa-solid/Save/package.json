@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Save.js",
+  "module": "./Save.esm.js",
+  "types": "./Save.d.ts"
+}

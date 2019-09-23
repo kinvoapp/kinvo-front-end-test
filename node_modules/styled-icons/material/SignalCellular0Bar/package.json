@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignalCellular0Bar.js",
+  "module": "./SignalCellular0Bar.esm.js",
+  "types": "./SignalCellular0Bar.d.ts"
+}

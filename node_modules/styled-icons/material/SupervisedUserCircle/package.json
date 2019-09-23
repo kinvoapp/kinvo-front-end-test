@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SupervisedUserCircle.js",
+  "module": "./SupervisedUserCircle.esm.js",
+  "types": "./SupervisedUserCircle.d.ts"
+}

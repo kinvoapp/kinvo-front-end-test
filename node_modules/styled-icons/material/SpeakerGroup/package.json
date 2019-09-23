@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SpeakerGroup.js",
+  "module": "./SpeakerGroup.esm.js",
+  "types": "./SpeakerGroup.d.ts"
+}

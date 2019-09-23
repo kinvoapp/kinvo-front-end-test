@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Title.js",
+  "module": "./Title.esm.js",
+  "types": "./Title.d.ts"
+}

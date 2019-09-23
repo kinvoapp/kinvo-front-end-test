@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DoneOutline.js",
+  "module": "./DoneOutline.esm.js",
+  "types": "./DoneOutline.d.ts"
+}

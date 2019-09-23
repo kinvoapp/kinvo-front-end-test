@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Gavel.js",
+  "module": "./Gavel.esm.js",
+  "types": "./Gavel.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FontDownload.js",
+  "module": "./FontDownload.esm.js",
+  "types": "./FontDownload.d.ts"
+}

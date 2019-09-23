@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Dehaze.js",
+  "module": "./Dehaze.esm.js",
+  "types": "./Dehaze.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TvOff.js",
+  "module": "./TvOff.esm.js",
+  "types": "./TvOff.d.ts"
+}

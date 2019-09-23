@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tag.js",
+  "module": "./Tag.esm.js",
+  "types": "./Tag.d.ts"
+}

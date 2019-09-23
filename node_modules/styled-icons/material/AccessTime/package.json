@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccessTime.js",
+  "module": "./AccessTime.esm.js",
+  "types": "./AccessTime.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MobileOff.js",
+  "module": "./MobileOff.esm.js",
+  "types": "./MobileOff.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewModule.js",
+  "module": "./ViewModule.esm.js",
+  "types": "./ViewModule.d.ts"
+}

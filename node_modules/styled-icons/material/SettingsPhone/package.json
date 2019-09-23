@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsPhone.js",
+  "module": "./SettingsPhone.esm.js",
+  "types": "./SettingsPhone.d.ts"
+}

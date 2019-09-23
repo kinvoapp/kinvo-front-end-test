@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPostOffice.js",
+  "module": "./LocalPostOffice.esm.js",
+  "types": "./LocalPostOffice.d.ts"
+}

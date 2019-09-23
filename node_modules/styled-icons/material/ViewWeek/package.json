@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewWeek.js",
+  "module": "./ViewWeek.esm.js",
+  "types": "./ViewWeek.d.ts"
+}

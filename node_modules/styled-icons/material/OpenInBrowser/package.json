@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./OpenInBrowser.js",
+  "module": "./OpenInBrowser.esm.js",
+  "types": "./OpenInBrowser.d.ts"
+}

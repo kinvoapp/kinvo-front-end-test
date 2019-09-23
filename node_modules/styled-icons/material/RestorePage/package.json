@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RestorePage.js",
+  "module": "./RestorePage.esm.js",
+  "types": "./RestorePage.d.ts"
+}

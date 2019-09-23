@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DirectionsBike.js",
+  "module": "./DirectionsBike.esm.js",
+  "types": "./DirectionsBike.d.ts"
+}

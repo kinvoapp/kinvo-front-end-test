@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalHotel.js",
+  "module": "./LocalHotel.esm.js",
+  "types": "./LocalHotel.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CreditCard.js",
+  "module": "./CreditCard.esm.js",
+  "types": "./CreditCard.d.ts"
+}

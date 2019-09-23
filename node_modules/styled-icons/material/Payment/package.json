@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Payment.js",
+  "module": "./Payment.esm.js",
+  "types": "./Payment.d.ts"
+}

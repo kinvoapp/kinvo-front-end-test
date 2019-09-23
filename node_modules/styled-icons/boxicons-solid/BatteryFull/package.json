@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BatteryFull.js",
+  "module": "./BatteryFull.esm.js",
+  "types": "./BatteryFull.d.ts"
+}

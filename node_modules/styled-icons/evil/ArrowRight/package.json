@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowRight.js",
+  "module": "./ArrowRight.esm.js",
+  "types": "./ArrowRight.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EnhancedEncryption.js",
+  "module": "./EnhancedEncryption.esm.js",
+  "types": "./EnhancedEncryption.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChevronRight.js",
+  "module": "./ChevronRight.esm.js",
+  "types": "./ChevronRight.d.ts"
+}

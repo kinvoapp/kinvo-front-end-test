@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AssistantPhoto.js",
+  "module": "./AssistantPhoto.esm.js",
+  "types": "./AssistantPhoto.d.ts"
+}

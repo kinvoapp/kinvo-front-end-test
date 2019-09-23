@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MusicOff.js",
+  "module": "./MusicOff.esm.js",
+  "types": "./MusicOff.d.ts"
+}

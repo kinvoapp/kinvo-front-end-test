@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Loyalty.js",
+  "module": "./Loyalty.esm.js",
+  "types": "./Loyalty.d.ts"
+}

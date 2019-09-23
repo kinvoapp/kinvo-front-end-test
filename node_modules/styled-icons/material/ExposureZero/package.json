@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExposureZero.js",
+  "module": "./ExposureZero.esm.js",
+  "types": "./ExposureZero.d.ts"
+}

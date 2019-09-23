@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Polymer.js",
+  "module": "./Polymer.esm.js",
+  "types": "./Polymer.d.ts"
+}

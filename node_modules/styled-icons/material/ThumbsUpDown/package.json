@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ThumbsUpDown.js",
+  "module": "./ThumbsUpDown.esm.js",
+  "types": "./ThumbsUpDown.d.ts"
+}

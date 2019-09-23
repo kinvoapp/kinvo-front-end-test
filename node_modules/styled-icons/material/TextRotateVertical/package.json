@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TextRotateVertical.js",
+  "module": "./TextRotateVertical.esm.js",
+  "types": "./TextRotateVertical.d.ts"
+}

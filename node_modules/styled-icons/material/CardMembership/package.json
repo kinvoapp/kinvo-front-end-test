@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CardMembership.js",
+  "module": "./CardMembership.esm.js",
+  "types": "./CardMembership.d.ts"
+}

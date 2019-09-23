@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatReclineExtra.js",
+  "module": "./AirlineSeatReclineExtra.esm.js",
+  "types": "./AirlineSeatReclineExtra.d.ts"
+}

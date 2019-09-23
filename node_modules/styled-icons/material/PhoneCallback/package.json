@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneCallback.js",
+  "module": "./PhoneCallback.esm.js",
+  "types": "./PhoneCallback.d.ts"
+}

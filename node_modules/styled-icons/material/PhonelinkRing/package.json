@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhonelinkRing.js",
+  "module": "./PhonelinkRing.esm.js",
+  "types": "./PhonelinkRing.d.ts"
+}

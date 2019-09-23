@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Block.js",
+  "module": "./Block.esm.js",
+  "types": "./Block.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PauseCircleFilled.js",
+  "module": "./PauseCircleFilled.esm.js",
+  "types": "./PauseCircleFilled.d.ts"
+}

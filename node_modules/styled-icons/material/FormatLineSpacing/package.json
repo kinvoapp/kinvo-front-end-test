@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatLineSpacing.js",
+  "module": "./FormatLineSpacing.esm.js",
+  "types": "./FormatLineSpacing.d.ts"
+}

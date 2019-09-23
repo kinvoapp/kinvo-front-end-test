@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TapAndPlay.js",
+  "module": "./TapAndPlay.esm.js",
+  "types": "./TapAndPlay.d.ts"
+}

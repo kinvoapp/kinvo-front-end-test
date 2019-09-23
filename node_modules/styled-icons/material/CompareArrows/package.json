@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CompareArrows.js",
+  "module": "./CompareArrows.esm.js",
+  "types": "./CompareArrows.d.ts"
+}

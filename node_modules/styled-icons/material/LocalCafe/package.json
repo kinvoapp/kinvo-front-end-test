@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalCafe.js",
+  "module": "./LocalCafe.esm.js",
+  "types": "./LocalCafe.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Clear.js",
+  "module": "./Clear.esm.js",
+  "types": "./Clear.d.ts"
+}

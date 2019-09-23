@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CameraRoll.js",
+  "module": "./CameraRoll.esm.js",
+  "types": "./CameraRoll.d.ts"
+}

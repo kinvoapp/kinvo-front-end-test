@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Wallet.js",
+  "module": "./Wallet.esm.js",
+  "types": "./Wallet.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Verified.js",
+  "module": "./Verified.esm.js",
+  "types": "./Verified.d.ts"
+}

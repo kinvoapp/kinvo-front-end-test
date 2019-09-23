@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Input.js",
+  "module": "./Input.esm.js",
+  "types": "./Input.d.ts"
+}

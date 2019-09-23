@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatShapes.js",
+  "module": "./FormatShapes.esm.js",
+  "types": "./FormatShapes.d.ts"
+}

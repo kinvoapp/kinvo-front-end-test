@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermIdentity.js",
+  "module": "./PermIdentity.esm.js",
+  "types": "./PermIdentity.d.ts"
+}

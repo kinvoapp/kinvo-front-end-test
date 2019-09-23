@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RateReview.js",
+  "module": "./RateReview.esm.js",
+  "types": "./RateReview.d.ts"
+}

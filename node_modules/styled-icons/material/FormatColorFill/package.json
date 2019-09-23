@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatColorFill.js",
+  "module": "./FormatColorFill.esm.js",
+  "types": "./FormatColorFill.d.ts"
+}

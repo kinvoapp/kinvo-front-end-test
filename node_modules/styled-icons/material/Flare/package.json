@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Flare.js",
+  "module": "./Flare.esm.js",
+  "types": "./Flare.d.ts"
+}

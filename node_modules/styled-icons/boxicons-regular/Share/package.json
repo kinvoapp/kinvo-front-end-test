@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Share.js",
+  "module": "./Share.esm.js",
+  "types": "./Share.d.ts"
+}

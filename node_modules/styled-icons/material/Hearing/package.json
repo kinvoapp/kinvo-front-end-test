@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Hearing.js",
+  "module": "./Hearing.esm.js",
+  "types": "./Hearing.d.ts"
+}

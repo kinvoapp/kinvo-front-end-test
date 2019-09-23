@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallMade.js",
+  "module": "./CallMade.esm.js",
+  "types": "./CallMade.d.ts"
+}

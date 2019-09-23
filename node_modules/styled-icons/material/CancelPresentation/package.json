@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CancelPresentation.js",
+  "module": "./CancelPresentation.esm.js",
+  "types": "./CancelPresentation.d.ts"
+}

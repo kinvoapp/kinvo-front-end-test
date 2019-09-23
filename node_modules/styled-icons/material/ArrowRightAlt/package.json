@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowRightAlt.js",
+  "module": "./ArrowRightAlt.esm.js",
+  "types": "./ArrowRightAlt.d.ts"
+}

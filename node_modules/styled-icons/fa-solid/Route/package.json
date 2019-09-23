@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Route.js",
+  "module": "./Route.esm.js",
+  "types": "./Route.d.ts"
+}

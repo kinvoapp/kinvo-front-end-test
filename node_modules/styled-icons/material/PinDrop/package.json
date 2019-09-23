@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PinDrop.js",
+  "module": "./PinDrop.esm.js",
+  "types": "./PinDrop.d.ts"
+}

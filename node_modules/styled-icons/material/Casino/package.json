@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Casino.js",
+  "module": "./Casino.esm.js",
+  "types": "./Casino.d.ts"
+}

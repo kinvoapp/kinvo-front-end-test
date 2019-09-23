@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ThumbUpAlt.js",
+  "module": "./ThumbUpAlt.esm.js",
+  "types": "./ThumbUpAlt.d.ts"
+}

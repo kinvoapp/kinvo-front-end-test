@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SpeakerPhone.js",
+  "module": "./SpeakerPhone.esm.js",
+  "types": "./SpeakerPhone.d.ts"
+}

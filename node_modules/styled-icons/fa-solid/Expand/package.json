@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Expand.js",
+  "module": "./Expand.esm.js",
+  "types": "./Expand.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermPhoneMsg.js",
+  "module": "./PermPhoneMsg.esm.js",
+  "types": "./PermPhoneMsg.d.ts"
+}

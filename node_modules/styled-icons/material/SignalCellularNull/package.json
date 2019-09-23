@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignalCellularNull.js",
+  "module": "./SignalCellularNull.esm.js",
+  "types": "./SignalCellularNull.d.ts"
+}

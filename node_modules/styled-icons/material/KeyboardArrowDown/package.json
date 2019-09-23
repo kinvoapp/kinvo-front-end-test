@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardArrowDown.js",
+  "module": "./KeyboardArrowDown.esm.js",
+  "types": "./KeyboardArrowDown.d.ts"
+}

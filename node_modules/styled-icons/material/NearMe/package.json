@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NearMe.js",
+  "module": "./NearMe.esm.js",
+  "types": "./NearMe.d.ts"
+}

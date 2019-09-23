@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderLeft.js",
+  "module": "./BorderLeft.esm.js",
+  "types": "./BorderLeft.d.ts"
+}

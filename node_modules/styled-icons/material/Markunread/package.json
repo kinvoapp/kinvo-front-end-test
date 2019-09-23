@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Markunread.js",
+  "module": "./Markunread.esm.js",
+  "types": "./Markunread.d.ts"
+}

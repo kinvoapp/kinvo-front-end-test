@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsOverscan.js",
+  "module": "./SettingsOverscan.esm.js",
+  "types": "./SettingsOverscan.d.ts"
+}

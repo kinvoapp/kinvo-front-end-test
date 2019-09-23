@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WrapText.js",
+  "module": "./WrapText.esm.js",
+  "types": "./WrapText.d.ts"
+}

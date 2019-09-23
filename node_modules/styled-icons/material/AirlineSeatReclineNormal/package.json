@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatReclineNormal.js",
+  "module": "./AirlineSeatReclineNormal.esm.js",
+  "types": "./AirlineSeatReclineNormal.d.ts"
+}

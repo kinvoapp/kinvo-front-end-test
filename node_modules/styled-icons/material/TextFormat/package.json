@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TextFormat.js",
+  "module": "./TextFormat.esm.js",
+  "types": "./TextFormat.d.ts"
+}

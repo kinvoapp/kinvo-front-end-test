@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Brightness2.js",
+  "module": "./Brightness2.esm.js",
+  "types": "./Brightness2.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalMall.js",
+  "module": "./LocalMall.esm.js",
+  "types": "./LocalMall.d.ts"
+}

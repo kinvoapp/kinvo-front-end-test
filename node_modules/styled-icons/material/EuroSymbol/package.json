@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EuroSymbol.js",
+  "module": "./EuroSymbol.esm.js",
+  "types": "./EuroSymbol.d.ts"
+}

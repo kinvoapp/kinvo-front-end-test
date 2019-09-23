@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudQueue.js",
+  "module": "./CloudQueue.esm.js",
+  "types": "./CloudQueue.d.ts"
+}

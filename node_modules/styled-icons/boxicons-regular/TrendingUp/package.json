@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TrendingUp.js",
+  "module": "./TrendingUp.esm.js",
+  "types": "./TrendingUp.d.ts"
+}

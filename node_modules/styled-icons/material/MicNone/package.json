@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MicNone.js",
+  "module": "./MicNone.esm.js",
+  "types": "./MicNone.d.ts"
+}

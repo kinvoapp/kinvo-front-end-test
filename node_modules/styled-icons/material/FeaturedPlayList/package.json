@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FeaturedPlayList.js",
+  "module": "./FeaturedPlayList.esm.js",
+  "types": "./FeaturedPlayList.d.ts"
+}

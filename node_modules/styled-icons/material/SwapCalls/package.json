@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwapCalls.js",
+  "module": "./SwapCalls.esm.js",
+  "types": "./SwapCalls.d.ts"
+}

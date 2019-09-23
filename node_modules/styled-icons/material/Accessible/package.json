@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Accessible.js",
+  "module": "./Accessible.esm.js",
+  "types": "./Accessible.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Theaters.js",
+  "module": "./Theaters.esm.js",
+  "types": "./Theaters.d.ts"
+}

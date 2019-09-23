@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Subscript.js",
+  "module": "./Subscript.esm.js",
+  "types": "./Subscript.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HorizontalSplit.js",
+  "module": "./HorizontalSplit.esm.js",
+  "types": "./HorizontalSplit.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Fullscreen.js",
+  "module": "./Fullscreen.esm.js",
+  "types": "./Fullscreen.d.ts"
+}

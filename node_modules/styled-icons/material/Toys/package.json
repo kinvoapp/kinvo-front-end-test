@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Toys.js",
+  "module": "./Toys.esm.js",
+  "types": "./Toys.d.ts"
+}

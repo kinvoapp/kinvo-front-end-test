@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlayCircleOutline.js",
+  "module": "./PlayCircleOutline.esm.js",
+  "types": "./PlayCircleOutline.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Key.js",
+  "module": "./Key.esm.js",
+  "types": "./Key.d.ts"
+}

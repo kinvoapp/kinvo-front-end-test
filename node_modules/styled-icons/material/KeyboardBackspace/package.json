@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardBackspace.js",
+  "module": "./KeyboardBackspace.esm.js",
+  "types": "./KeyboardBackspace.d.ts"
+}

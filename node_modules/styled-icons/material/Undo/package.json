@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Undo.js",
+  "module": "./Undo.esm.js",
+  "types": "./Undo.d.ts"
+}

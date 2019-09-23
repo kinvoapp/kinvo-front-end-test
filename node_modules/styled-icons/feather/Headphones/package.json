@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Headphones.js",
+  "module": "./Headphones.esm.js",
+  "types": "./Headphones.d.ts"
+}

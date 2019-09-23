@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsInputHdmi.js",
+  "module": "./SettingsInputHdmi.esm.js",
+  "types": "./SettingsInputHdmi.d.ts"
+}

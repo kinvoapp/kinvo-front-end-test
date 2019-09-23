@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Synagogue.js",
+  "module": "./Synagogue.esm.js",
+  "types": "./Synagogue.d.ts"
+}

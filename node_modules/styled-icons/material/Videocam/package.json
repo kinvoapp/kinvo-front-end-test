@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Videocam.js",
+  "module": "./Videocam.esm.js",
+  "types": "./Videocam.d.ts"
+}

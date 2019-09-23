@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ScreenLockPortrait.js",
+  "module": "./ScreenLockPortrait.esm.js",
+  "types": "./ScreenLockPortrait.d.ts"
+}

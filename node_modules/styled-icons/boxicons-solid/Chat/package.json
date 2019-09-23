@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Chat.js",
+  "module": "./Chat.esm.js",
+  "types": "./Chat.d.ts"
+}

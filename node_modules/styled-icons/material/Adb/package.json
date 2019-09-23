@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Adb.js",
+  "module": "./Adb.esm.js",
+  "types": "./Adb.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NoEncryption.js",
+  "module": "./NoEncryption.esm.js",
+  "types": "./NoEncryption.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocationOn.js",
+  "module": "./LocationOn.esm.js",
+  "types": "./LocationOn.d.ts"
+}

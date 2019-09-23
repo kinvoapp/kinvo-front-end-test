@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DeleteSweep.js",
+  "module": "./DeleteSweep.esm.js",
+  "types": "./DeleteSweep.d.ts"
+}

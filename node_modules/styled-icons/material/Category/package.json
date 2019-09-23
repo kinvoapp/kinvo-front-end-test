@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Category.js",
+  "module": "./Category.esm.js",
+  "types": "./Category.d.ts"
+}

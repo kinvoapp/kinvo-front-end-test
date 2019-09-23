@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderVertical.js",
+  "module": "./BorderVertical.esm.js",
+  "types": "./BorderVertical.d.ts"
+}

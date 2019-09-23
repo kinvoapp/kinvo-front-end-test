@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NaturePeople.js",
+  "module": "./NaturePeople.esm.js",
+  "types": "./NaturePeople.d.ts"
+}

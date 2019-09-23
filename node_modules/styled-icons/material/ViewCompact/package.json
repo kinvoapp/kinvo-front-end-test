@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewCompact.js",
+  "module": "./ViewCompact.esm.js",
+  "types": "./ViewCompact.d.ts"
+}

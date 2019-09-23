@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Photo.js",
+  "module": "./Photo.esm.js",
+  "types": "./Photo.d.ts"
+}

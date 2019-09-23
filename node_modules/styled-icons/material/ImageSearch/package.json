@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ImageSearch.js",
+  "module": "./ImageSearch.esm.js",
+  "types": "./ImageSearch.d.ts"
+}

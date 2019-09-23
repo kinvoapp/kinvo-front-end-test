@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TableChart.js",
+  "module": "./TableChart.esm.js",
+  "types": "./TableChart.d.ts"
+}

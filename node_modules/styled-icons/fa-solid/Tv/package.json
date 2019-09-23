@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tv.js",
+  "module": "./Tv.esm.js",
+  "types": "./Tv.d.ts"
+}

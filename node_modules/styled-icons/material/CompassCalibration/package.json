@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CompassCalibration.js",
+  "module": "./CompassCalibration.esm.js",
+  "types": "./CompassCalibration.d.ts"
+}

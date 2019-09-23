@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RemoveCircle.js",
+  "module": "./RemoveCircle.esm.js",
+  "types": "./RemoveCircle.d.ts"
+}

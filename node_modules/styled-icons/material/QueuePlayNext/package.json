@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./QueuePlayNext.js",
+  "module": "./QueuePlayNext.esm.js",
+  "types": "./QueuePlayNext.d.ts"
+}

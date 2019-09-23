@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterAlt.js",
+  "module": "./FilterAlt.esm.js",
+  "types": "./FilterAlt.d.ts"
+}

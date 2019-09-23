@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BrandingWatermark.js",
+  "module": "./BrandingWatermark.esm.js",
+  "types": "./BrandingWatermark.d.ts"
+}

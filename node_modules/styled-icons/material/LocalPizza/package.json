@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPizza.js",
+  "module": "./LocalPizza.esm.js",
+  "types": "./LocalPizza.d.ts"
+}

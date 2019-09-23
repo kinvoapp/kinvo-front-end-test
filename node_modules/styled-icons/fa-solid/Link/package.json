@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Link.js",
+  "module": "./Link.esm.js",
+  "types": "./Link.d.ts"
+}

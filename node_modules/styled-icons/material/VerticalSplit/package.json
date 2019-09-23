@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VerticalSplit.js",
+  "module": "./VerticalSplit.esm.js",
+  "types": "./VerticalSplit.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Language.js",
+  "module": "./Language.esm.js",
+  "types": "./Language.d.ts"
+}

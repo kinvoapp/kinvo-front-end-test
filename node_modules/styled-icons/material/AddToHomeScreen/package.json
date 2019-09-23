@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddToHomeScreen.js",
+  "module": "./AddToHomeScreen.esm.js",
+  "types": "./AddToHomeScreen.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Collections.js",
+  "module": "./Collections.esm.js",
+  "types": "./Collections.d.ts"
+}

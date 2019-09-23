@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PanoramaVertical.js",
+  "module": "./PanoramaVertical.esm.js",
+  "types": "./PanoramaVertical.d.ts"
+}

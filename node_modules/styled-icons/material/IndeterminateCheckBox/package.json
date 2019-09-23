@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./IndeterminateCheckBox.js",
+  "module": "./IndeterminateCheckBox.esm.js",
+  "types": "./IndeterminateCheckBox.d.ts"
+}

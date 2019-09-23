@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Download.js",
+  "module": "./Download.esm.js",
+  "types": "./Download.d.ts"
+}

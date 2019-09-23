@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CollectionsBookmark.js",
+  "module": "./CollectionsBookmark.esm.js",
+  "types": "./CollectionsBookmark.d.ts"
+}

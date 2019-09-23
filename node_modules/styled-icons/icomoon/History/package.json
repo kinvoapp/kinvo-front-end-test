@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./History.js",
+  "module": "./History.esm.js",
+  "types": "./History.d.ts"
+}

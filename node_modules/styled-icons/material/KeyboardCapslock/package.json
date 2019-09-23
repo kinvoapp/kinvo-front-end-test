@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardCapslock.js",
+  "module": "./KeyboardCapslock.esm.js",
+  "types": "./KeyboardCapslock.d.ts"
+}

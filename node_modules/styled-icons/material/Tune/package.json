@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tune.js",
+  "module": "./Tune.esm.js",
+  "types": "./Tune.d.ts"
+}

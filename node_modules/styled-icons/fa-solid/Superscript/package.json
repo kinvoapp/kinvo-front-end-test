@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Superscript.js",
+  "module": "./Superscript.esm.js",
+  "types": "./Superscript.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GraphicEq.js",
+  "module": "./GraphicEq.esm.js",
+  "types": "./GraphicEq.d.ts"
+}

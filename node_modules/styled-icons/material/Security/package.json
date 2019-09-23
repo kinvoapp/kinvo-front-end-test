@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Security.js",
+  "module": "./Security.esm.js",
+  "types": "./Security.d.ts"
+}

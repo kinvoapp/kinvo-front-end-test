@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FlashOn.js",
+  "module": "./FlashOn.esm.js",
+  "types": "./FlashOn.d.ts"
+}

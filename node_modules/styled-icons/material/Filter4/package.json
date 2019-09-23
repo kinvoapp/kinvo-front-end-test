@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Filter4.js",
+  "module": "./Filter4.esm.js",
+  "types": "./Filter4.d.ts"
+}

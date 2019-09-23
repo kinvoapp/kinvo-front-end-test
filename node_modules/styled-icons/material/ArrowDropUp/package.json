@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowDropUp.js",
+  "module": "./ArrowDropUp.esm.js",
+  "types": "./ArrowDropUp.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NotListedLocation.js",
+  "module": "./NotListedLocation.esm.js",
+  "types": "./NotListedLocation.d.ts"
+}

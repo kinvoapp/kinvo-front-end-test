@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WhereToVote.js",
+  "module": "./WhereToVote.esm.js",
+  "types": "./WhereToVote.d.ts"
+}

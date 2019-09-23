@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PersonPin.js",
+  "module": "./PersonPin.esm.js",
+  "types": "./PersonPin.d.ts"
+}

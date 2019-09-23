@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HdrOff.js",
+  "module": "./HdrOff.esm.js",
+  "types": "./HdrOff.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Public.js",
+  "module": "./Public.esm.js",
+  "types": "./Public.d.ts"
+}

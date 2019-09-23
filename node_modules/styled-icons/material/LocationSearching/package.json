@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocationSearching.js",
+  "module": "./LocationSearching.esm.js",
+  "types": "./LocationSearching.d.ts"
+}

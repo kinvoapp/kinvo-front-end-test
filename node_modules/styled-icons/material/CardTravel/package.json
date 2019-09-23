@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CardTravel.js",
+  "module": "./CardTravel.esm.js",
+  "types": "./CardTravel.d.ts"
+}

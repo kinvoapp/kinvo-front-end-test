@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoodBad.js",
+  "module": "./MoodBad.esm.js",
+  "types": "./MoodBad.d.ts"
+}

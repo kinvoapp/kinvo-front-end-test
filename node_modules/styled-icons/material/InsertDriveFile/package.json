@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertDriveFile.js",
+  "module": "./InsertDriveFile.esm.js",
+  "types": "./InsertDriveFile.d.ts"
+}

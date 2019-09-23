@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Games.js",
+  "module": "./Games.esm.js",
+  "types": "./Games.d.ts"
+}

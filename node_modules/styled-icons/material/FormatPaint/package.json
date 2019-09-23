@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatPaint.js",
+  "module": "./FormatPaint.esm.js",
+  "types": "./FormatPaint.d.ts"
+}

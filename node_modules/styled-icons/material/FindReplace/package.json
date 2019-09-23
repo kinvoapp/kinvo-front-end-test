@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FindReplace.js",
+  "module": "./FindReplace.esm.js",
+  "types": "./FindReplace.d.ts"
+}

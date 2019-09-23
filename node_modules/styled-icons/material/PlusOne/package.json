@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlusOne.js",
+  "module": "./PlusOne.esm.js",
+  "types": "./PlusOne.d.ts"
+}

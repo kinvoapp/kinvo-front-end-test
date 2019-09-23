@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Score.js",
+  "module": "./Score.esm.js",
+  "types": "./Score.d.ts"
+}

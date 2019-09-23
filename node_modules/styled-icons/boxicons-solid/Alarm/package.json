@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Alarm.js",
+  "module": "./Alarm.esm.js",
+  "types": "./Alarm.d.ts"
+}

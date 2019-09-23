@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Rowing.js",
+  "module": "./Rowing.esm.js",
+  "types": "./Rowing.d.ts"
+}

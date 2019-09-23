@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LineStyle.js",
+  "module": "./LineStyle.esm.js",
+  "types": "./LineStyle.d.ts"
+}

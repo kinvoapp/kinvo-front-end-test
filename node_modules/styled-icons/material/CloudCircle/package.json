@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudCircle.js",
+  "module": "./CloudCircle.esm.js",
+  "types": "./CloudCircle.d.ts"
+}

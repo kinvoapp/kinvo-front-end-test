@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccountBalanceWallet.js",
+  "module": "./AccountBalanceWallet.esm.js",
+  "types": "./AccountBalanceWallet.d.ts"
+}

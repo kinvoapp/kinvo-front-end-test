@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Camera.js",
+  "module": "./Camera.esm.js",
+  "types": "./Camera.d.ts"
+}

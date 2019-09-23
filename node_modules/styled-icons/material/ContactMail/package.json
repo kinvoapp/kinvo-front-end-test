@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ContactMail.js",
+  "module": "./ContactMail.esm.js",
+  "types": "./ContactMail.d.ts"
+}

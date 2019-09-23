@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignalWifi4BarLock.js",
+  "module": "./SignalWifi4BarLock.esm.js",
+  "types": "./SignalWifi4BarLock.d.ts"
+}

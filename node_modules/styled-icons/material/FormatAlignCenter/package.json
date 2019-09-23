@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatAlignCenter.js",
+  "module": "./FormatAlignCenter.esm.js",
+  "types": "./FormatAlignCenter.d.ts"
+}

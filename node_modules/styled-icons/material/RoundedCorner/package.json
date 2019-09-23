@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RoundedCorner.js",
+  "module": "./RoundedCorner.esm.js",
+  "types": "./RoundedCorner.d.ts"
+}

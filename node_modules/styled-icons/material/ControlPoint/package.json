@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ControlPoint.js",
+  "module": "./ControlPoint.esm.js",
+  "types": "./ControlPoint.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Filter6.js",
+  "module": "./Filter6.esm.js",
+  "types": "./Filter6.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CheckCircle.js",
+  "module": "./CheckCircle.esm.js",
+  "types": "./CheckCircle.d.ts"
+}

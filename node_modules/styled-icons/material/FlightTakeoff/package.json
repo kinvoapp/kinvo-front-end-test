@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FlightTakeoff.js",
+  "module": "./FlightTakeoff.esm.js",
+  "types": "./FlightTakeoff.d.ts"
+}

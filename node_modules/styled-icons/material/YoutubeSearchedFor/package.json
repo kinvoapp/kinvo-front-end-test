@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./YoutubeSearchedFor.js",
+  "module": "./YoutubeSearchedFor.esm.js",
+  "types": "./YoutubeSearchedFor.d.ts"
+}

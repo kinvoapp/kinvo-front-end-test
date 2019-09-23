@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Shower.js",
+  "module": "./Shower.esm.js",
+  "types": "./Shower.d.ts"
+}

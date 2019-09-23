@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Web.js",
+  "module": "./Web.esm.js",
+  "types": "./Web.d.ts"
+}

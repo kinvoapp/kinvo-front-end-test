@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DataUsage.js",
+  "module": "./DataUsage.esm.js",
+  "types": "./DataUsage.d.ts"
+}

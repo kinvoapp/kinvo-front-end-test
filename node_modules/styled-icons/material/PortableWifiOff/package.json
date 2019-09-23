@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PortableWifiOff.js",
+  "module": "./PortableWifiOff.esm.js",
+  "types": "./PortableWifiOff.d.ts"
+}

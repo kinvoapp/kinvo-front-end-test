@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Grade.js",
+  "module": "./Grade.esm.js",
+  "types": "./Grade.d.ts"
+}

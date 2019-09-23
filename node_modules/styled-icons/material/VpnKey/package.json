@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VpnKey.js",
+  "module": "./VpnKey.esm.js",
+  "types": "./VpnKey.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StrikethroughS.js",
+  "module": "./StrikethroughS.esm.js",
+  "types": "./StrikethroughS.d.ts"
+}

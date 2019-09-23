@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VolumeMute.js",
+  "module": "./VolumeMute.esm.js",
+  "types": "./VolumeMute.d.ts"
+}

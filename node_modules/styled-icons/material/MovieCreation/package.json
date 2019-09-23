@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MovieCreation.js",
+  "module": "./MovieCreation.esm.js",
+  "types": "./MovieCreation.d.ts"
+}

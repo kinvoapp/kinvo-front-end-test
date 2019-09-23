@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ShowChart.js",
+  "module": "./ShowChart.esm.js",
+  "types": "./ShowChart.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Announcement.js",
+  "module": "./Announcement.esm.js",
+  "types": "./Announcement.d.ts"
+}

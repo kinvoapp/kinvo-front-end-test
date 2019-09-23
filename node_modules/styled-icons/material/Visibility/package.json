@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Visibility.js",
+  "module": "./Visibility.esm.js",
+  "types": "./Visibility.d.ts"
+}

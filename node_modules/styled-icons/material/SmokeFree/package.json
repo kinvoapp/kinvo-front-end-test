@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SmokeFree.js",
+  "module": "./SmokeFree.esm.js",
+  "types": "./SmokeFree.d.ts"
+}

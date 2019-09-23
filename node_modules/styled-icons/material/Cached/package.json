@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Cached.js",
+  "module": "./Cached.esm.js",
+  "types": "./Cached.d.ts"
+}

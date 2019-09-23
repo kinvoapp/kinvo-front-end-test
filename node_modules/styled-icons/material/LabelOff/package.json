@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LabelOff.js",
+  "module": "./LabelOff.esm.js",
+  "types": "./LabelOff.d.ts"
+}

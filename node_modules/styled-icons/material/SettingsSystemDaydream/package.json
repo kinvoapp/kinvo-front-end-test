@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsSystemDaydream.js",
+  "module": "./SettingsSystemDaydream.esm.js",
+  "types": "./SettingsSystemDaydream.d.ts"
+}

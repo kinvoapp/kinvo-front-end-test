@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FlashAuto.js",
+  "module": "./FlashAuto.esm.js",
+  "types": "./FlashAuto.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LinkOff.js",
+  "module": "./LinkOff.esm.js",
+  "types": "./LinkOff.d.ts"
+}

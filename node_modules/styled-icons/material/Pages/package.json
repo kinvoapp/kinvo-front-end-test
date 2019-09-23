@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Pages.js",
+  "module": "./Pages.esm.js",
+  "types": "./Pages.d.ts"
+}

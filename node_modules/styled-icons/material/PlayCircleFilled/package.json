@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlayCircleFilled.js",
+  "module": "./PlayCircleFilled.esm.js",
+  "types": "./PlayCircleFilled.d.ts"
+}

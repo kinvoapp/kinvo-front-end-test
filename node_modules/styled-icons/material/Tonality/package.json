@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tonality.js",
+  "module": "./Tonality.esm.js",
+  "types": "./Tonality.d.ts"
+}

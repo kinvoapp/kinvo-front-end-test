@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Timeline.js",
+  "module": "./Timeline.esm.js",
+  "types": "./Timeline.d.ts"
+}

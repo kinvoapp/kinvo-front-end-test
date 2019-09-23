@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FiberSmartRecord.js",
+  "module": "./FiberSmartRecord.esm.js",
+  "types": "./FiberSmartRecord.d.ts"
+}

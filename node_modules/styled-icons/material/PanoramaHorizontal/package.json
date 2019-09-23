@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PanoramaHorizontal.js",
+  "module": "./PanoramaHorizontal.esm.js",
+  "types": "./PanoramaHorizontal.d.ts"
+}

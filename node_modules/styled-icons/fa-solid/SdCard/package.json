@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SdCard.js",
+  "module": "./SdCard.esm.js",
+  "types": "./SdCard.d.ts"
+}

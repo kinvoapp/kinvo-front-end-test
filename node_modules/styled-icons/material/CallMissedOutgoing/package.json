@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallMissedOutgoing.js",
+  "module": "./CallMissedOutgoing.esm.js",
+  "types": "./CallMissedOutgoing.d.ts"
+}

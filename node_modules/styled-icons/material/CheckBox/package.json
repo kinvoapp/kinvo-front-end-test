@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CheckBox.js",
+  "module": "./CheckBox.esm.js",
+  "types": "./CheckBox.d.ts"
+}

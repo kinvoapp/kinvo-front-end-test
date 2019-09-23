@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Filter9.js",
+  "module": "./Filter9.esm.js",
+  "types": "./Filter9.d.ts"
+}

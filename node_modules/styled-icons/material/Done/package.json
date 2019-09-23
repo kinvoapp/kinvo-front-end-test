@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Done.js",
+  "module": "./Done.esm.js",
+  "types": "./Done.d.ts"
+}

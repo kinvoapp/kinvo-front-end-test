@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Stream.js",
+  "module": "./Stream.esm.js",
+  "types": "./Stream.d.ts"
+}

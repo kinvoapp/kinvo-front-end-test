@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ImageAspectRatio.js",
+  "module": "./ImageAspectRatio.esm.js",
+  "types": "./ImageAspectRatio.d.ts"
+}

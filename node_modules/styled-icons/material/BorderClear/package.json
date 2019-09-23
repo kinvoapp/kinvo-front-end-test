@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderClear.js",
+  "module": "./BorderClear.esm.js",
+  "types": "./BorderClear.d.ts"
+}

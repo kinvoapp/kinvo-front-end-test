@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MovieFilter.js",
+  "module": "./MovieFilter.esm.js",
+  "types": "./MovieFilter.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NetworkLocked.js",
+  "module": "./NetworkLocked.esm.js",
+  "types": "./NetworkLocked.d.ts"
+}

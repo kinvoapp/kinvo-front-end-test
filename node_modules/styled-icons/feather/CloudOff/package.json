@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudOff.js",
+  "module": "./CloudOff.esm.js",
+  "types": "./CloudOff.d.ts"
+}

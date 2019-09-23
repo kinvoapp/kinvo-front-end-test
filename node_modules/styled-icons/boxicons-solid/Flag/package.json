@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Flag.js",
+  "module": "./Flag.esm.js",
+  "types": "./Flag.d.ts"
+}

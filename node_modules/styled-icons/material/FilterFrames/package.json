@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterFrames.js",
+  "module": "./FilterFrames.esm.js",
+  "types": "./FilterFrames.d.ts"
+}

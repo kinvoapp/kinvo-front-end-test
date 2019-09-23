@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./List.js",
+  "module": "./List.esm.js",
+  "types": "./List.d.ts"
+}

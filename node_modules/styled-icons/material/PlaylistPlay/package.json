@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlaylistPlay.js",
+  "module": "./PlaylistPlay.esm.js",
+  "types": "./PlaylistPlay.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderAll.js",
+  "module": "./BorderAll.esm.js",
+  "types": "./BorderAll.d.ts"
+}

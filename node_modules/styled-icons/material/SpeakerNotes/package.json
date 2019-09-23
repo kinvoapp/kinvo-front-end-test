@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SpeakerNotes.js",
+  "module": "./SpeakerNotes.esm.js",
+  "types": "./SpeakerNotes.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PowerInput.js",
+  "module": "./PowerInput.esm.js",
+  "types": "./PowerInput.d.ts"
+}

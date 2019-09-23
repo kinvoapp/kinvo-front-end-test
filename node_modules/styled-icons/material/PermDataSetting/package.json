@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermDataSetting.js",
+  "module": "./PermDataSetting.esm.js",
+  "types": "./PermDataSetting.d.ts"
+}

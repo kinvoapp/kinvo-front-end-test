@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatStrikethrough.js",
+  "module": "./FormatStrikethrough.esm.js",
+  "types": "./FormatStrikethrough.d.ts"
+}

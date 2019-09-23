@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ImportExport.js",
+  "module": "./ImportExport.esm.js",
+  "types": "./ImportExport.d.ts"
+}

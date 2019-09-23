@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Map.js",
+  "module": "./Map.esm.js",
+  "types": "./Map.d.ts"
+}

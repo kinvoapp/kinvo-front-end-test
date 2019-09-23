@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Waves.js",
+  "module": "./Waves.esm.js",
+  "types": "./Waves.d.ts"
+}

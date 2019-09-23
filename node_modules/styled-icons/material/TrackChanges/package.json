@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TrackChanges.js",
+  "module": "./TrackChanges.esm.js",
+  "types": "./TrackChanges.d.ts"
+}

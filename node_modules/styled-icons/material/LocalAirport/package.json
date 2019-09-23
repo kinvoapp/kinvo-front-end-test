@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalAirport.js",
+  "module": "./LocalAirport.esm.js",
+  "types": "./LocalAirport.d.ts"
+}

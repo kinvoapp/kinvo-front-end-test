@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GroupWork.js",
+  "module": "./GroupWork.esm.js",
+  "types": "./GroupWork.d.ts"
+}

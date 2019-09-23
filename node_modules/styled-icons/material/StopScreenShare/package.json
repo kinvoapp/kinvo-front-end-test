@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StopScreenShare.js",
+  "module": "./StopScreenShare.esm.js",
+  "types": "./StopScreenShare.d.ts"
+}

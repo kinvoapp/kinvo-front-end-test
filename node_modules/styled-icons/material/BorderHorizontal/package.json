@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderHorizontal.js",
+  "module": "./BorderHorizontal.esm.js",
+  "types": "./BorderHorizontal.d.ts"
+}

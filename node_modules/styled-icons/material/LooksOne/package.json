@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LooksOne.js",
+  "module": "./LooksOne.esm.js",
+  "types": "./LooksOne.d.ts"
+}

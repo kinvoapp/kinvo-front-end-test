@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Warehouse.js",
+  "module": "./Warehouse.esm.js",
+  "types": "./Warehouse.d.ts"
+}

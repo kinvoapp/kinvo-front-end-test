@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NotInterested.js",
+  "module": "./NotInterested.esm.js",
+  "types": "./NotInterested.d.ts"
+}

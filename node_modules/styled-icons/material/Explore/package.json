@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Explore.js",
+  "module": "./Explore.esm.js",
+  "types": "./Explore.d.ts"
+}

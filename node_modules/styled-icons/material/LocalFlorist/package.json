@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalFlorist.js",
+  "module": "./LocalFlorist.esm.js",
+  "types": "./LocalFlorist.d.ts"
+}

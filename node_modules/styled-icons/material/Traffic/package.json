@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Traffic.js",
+  "module": "./Traffic.esm.js",
+  "types": "./Traffic.d.ts"
+}

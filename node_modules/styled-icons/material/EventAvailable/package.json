@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EventAvailable.js",
+  "module": "./EventAvailable.esm.js",
+  "types": "./EventAvailable.d.ts"
+}

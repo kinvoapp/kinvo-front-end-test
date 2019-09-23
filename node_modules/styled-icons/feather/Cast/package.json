@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Cast.js",
+  "module": "./Cast.esm.js",
+  "types": "./Cast.d.ts"
+}

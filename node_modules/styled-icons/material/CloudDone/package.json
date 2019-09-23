@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudDone.js",
+  "module": "./CloudDone.esm.js",
+  "types": "./CloudDone.d.ts"
+}

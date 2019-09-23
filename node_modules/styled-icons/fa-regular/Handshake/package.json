@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Handshake.js",
+  "module": "./Handshake.esm.js",
+  "types": "./Handshake.d.ts"
+}

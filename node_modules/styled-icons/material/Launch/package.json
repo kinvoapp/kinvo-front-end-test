@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Launch.js",
+  "module": "./Launch.esm.js",
+  "types": "./Launch.d.ts"
+}

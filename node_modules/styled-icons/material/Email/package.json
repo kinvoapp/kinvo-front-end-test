@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Email.js",
+  "module": "./Email.esm.js",
+  "types": "./Email.d.ts"
+}

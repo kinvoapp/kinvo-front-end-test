@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PowerOff.js",
+  "module": "./PowerOff.esm.js",
+  "types": "./PowerOff.d.ts"
+}

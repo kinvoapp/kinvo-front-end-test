@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DepartureBoard.js",
+  "module": "./DepartureBoard.esm.js",
+  "types": "./DepartureBoard.d.ts"
+}

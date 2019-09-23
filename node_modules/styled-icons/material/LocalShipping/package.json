@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalShipping.js",
+  "module": "./LocalShipping.esm.js",
+  "types": "./LocalShipping.d.ts"
+}

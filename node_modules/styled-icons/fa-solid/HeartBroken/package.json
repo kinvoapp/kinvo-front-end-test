@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HeartBroken.js",
+  "module": "./HeartBroken.esm.js",
+  "types": "./HeartBroken.d.ts"
+}

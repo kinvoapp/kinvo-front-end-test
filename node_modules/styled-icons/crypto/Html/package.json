@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Html.js",
+  "module": "./Html.esm.js",
+  "types": "./Html.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NotificationsPaused.js",
+  "module": "./NotificationsPaused.esm.js",
+  "types": "./NotificationsPaused.d.ts"
+}

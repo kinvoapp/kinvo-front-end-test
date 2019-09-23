@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Palette.js",
+  "module": "./Palette.esm.js",
+  "types": "./Palette.d.ts"
+}

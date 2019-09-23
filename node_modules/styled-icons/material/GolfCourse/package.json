@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GolfCourse.js",
+  "module": "./GolfCourse.esm.js",
+  "types": "./GolfCourse.d.ts"
+}

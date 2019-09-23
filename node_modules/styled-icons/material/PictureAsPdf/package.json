@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PictureAsPdf.js",
+  "module": "./PictureAsPdf.esm.js",
+  "types": "./PictureAsPdf.d.ts"
+}

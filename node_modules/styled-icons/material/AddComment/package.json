@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddComment.js",
+  "module": "./AddComment.esm.js",
+  "types": "./AddComment.d.ts"
+}

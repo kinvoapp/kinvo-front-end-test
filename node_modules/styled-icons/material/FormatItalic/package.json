@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatItalic.js",
+  "module": "./FormatItalic.esm.js",
+  "types": "./FormatItalic.d.ts"
+}

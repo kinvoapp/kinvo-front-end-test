@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VideoLibrary.js",
+  "module": "./VideoLibrary.esm.js",
+  "types": "./VideoLibrary.d.ts"
+}

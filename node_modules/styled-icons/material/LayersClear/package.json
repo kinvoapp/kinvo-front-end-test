@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LayersClear.js",
+  "module": "./LayersClear.esm.js",
+  "types": "./LayersClear.d.ts"
+}

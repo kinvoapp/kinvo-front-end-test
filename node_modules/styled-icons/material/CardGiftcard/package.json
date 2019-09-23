@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CardGiftcard.js",
+  "module": "./CardGiftcard.esm.js",
+  "types": "./CardGiftcard.d.ts"
+}

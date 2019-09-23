@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SyncProblem.js",
+  "module": "./SyncProblem.esm.js",
+  "types": "./SyncProblem.d.ts"
+}

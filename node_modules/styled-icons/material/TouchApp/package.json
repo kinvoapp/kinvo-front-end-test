@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TouchApp.js",
+  "module": "./TouchApp.esm.js",
+  "types": "./TouchApp.d.ts"
+}

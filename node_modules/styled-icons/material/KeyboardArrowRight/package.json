@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardArrowRight.js",
+  "module": "./KeyboardArrowRight.esm.js",
+  "types": "./KeyboardArrowRight.d.ts"
+}

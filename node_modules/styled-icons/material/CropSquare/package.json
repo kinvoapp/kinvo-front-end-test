@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CropSquare.js",
+  "module": "./CropSquare.esm.js",
+  "types": "./CropSquare.d.ts"
+}

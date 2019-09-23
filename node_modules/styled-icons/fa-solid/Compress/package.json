@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Compress.js",
+  "module": "./Compress.esm.js",
+  "types": "./Compress.d.ts"
+}

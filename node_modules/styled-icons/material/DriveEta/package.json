@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DriveEta.js",
+  "module": "./DriveEta.esm.js",
+  "types": "./DriveEta.d.ts"
+}

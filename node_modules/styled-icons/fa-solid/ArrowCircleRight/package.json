@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowCircleRight.js",
+  "module": "./ArrowCircleRight.esm.js",
+  "types": "./ArrowCircleRight.d.ts"
+}

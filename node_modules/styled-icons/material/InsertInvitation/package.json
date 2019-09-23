@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertInvitation.js",
+  "module": "./InsertInvitation.esm.js",
+  "types": "./InsertInvitation.d.ts"
+}

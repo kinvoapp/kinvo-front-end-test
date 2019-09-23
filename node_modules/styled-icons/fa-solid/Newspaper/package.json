@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Newspaper.js",
+  "module": "./Newspaper.esm.js",
+  "types": "./Newspaper.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CropPortrait.js",
+  "module": "./CropPortrait.esm.js",
+  "types": "./CropPortrait.d.ts"
+}

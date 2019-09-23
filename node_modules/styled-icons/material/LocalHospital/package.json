@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalHospital.js",
+  "module": "./LocalHospital.esm.js",
+  "types": "./LocalHospital.d.ts"
+}

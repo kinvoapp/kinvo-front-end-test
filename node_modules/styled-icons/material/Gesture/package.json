@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Gesture.js",
+  "module": "./Gesture.esm.js",
+  "types": "./Gesture.d.ts"
+}

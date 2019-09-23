@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DirectionsRun.js",
+  "module": "./DirectionsRun.esm.js",
+  "types": "./DirectionsRun.d.ts"
+}

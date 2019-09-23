@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Loop.js",
+  "module": "./Loop.esm.js",
+  "types": "./Loop.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignLanguage.js",
+  "module": "./SignLanguage.esm.js",
+  "types": "./SignLanguage.d.ts"
+}

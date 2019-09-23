@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardTab.js",
+  "module": "./KeyboardTab.esm.js",
+  "types": "./KeyboardTab.d.ts"
+}

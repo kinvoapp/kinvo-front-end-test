@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Straighten.js",
+  "module": "./Straighten.esm.js",
+  "types": "./Straighten.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HeadsetMic.js",
+  "module": "./HeadsetMic.esm.js",
+  "types": "./HeadsetMic.d.ts"
+}

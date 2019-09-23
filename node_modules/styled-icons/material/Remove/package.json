@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Remove.js",
+  "module": "./Remove.esm.js",
+  "types": "./Remove.d.ts"
+}

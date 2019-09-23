@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PictureInPicture.js",
+  "module": "./PictureInPicture.esm.js",
+  "types": "./PictureInPicture.d.ts"
+}

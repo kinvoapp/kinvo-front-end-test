@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VolumeUp.js",
+  "module": "./VolumeUp.esm.js",
+  "types": "./VolumeUp.d.ts"
+}

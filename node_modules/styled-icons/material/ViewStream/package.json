@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewStream.js",
+  "module": "./ViewStream.esm.js",
+  "types": "./ViewStream.d.ts"
+}

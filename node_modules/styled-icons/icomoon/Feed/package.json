@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Feed.js",
+  "module": "./Feed.esm.js",
+  "types": "./Feed.d.ts"
+}

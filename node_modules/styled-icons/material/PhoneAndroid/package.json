@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneAndroid.js",
+  "module": "./PhoneAndroid.esm.js",
+  "types": "./PhoneAndroid.d.ts"
+}

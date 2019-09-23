@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SaveAlt.js",
+  "module": "./SaveAlt.esm.js",
+  "types": "./SaveAlt.d.ts"
+}

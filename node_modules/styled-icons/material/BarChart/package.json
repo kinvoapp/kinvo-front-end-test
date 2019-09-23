@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BarChart.js",
+  "module": "./BarChart.esm.js",
+  "types": "./BarChart.d.ts"
+}

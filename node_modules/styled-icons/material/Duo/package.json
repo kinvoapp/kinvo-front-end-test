@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Duo.js",
+  "module": "./Duo.esm.js",
+  "types": "./Duo.d.ts"
+}

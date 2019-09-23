@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LinearScale.js",
+  "module": "./LinearScale.esm.js",
+  "types": "./LinearScale.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallEnd.js",
+  "module": "./CallEnd.esm.js",
+  "types": "./CallEnd.d.ts"
+}

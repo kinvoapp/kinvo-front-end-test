@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ToggleOn.js",
+  "module": "./ToggleOn.esm.js",
+  "types": "./ToggleOn.d.ts"
+}

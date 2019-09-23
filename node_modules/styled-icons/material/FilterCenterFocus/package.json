@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterCenterFocus.js",
+  "module": "./FilterCenterFocus.esm.js",
+  "types": "./FilterCenterFocus.d.ts"
+}

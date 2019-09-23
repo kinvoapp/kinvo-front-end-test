@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Tab.js",
+  "module": "./Tab.esm.js",
+  "types": "./Tab.d.ts"
+}

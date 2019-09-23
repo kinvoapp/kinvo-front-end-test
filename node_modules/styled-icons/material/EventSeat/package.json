@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EventSeat.js",
+  "module": "./EventSeat.esm.js",
+  "types": "./EventSeat.d.ts"
+}

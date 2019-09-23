@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowDownward.js",
+  "module": "./ArrowDownward.esm.js",
+  "types": "./ArrowDownward.d.ts"
+}

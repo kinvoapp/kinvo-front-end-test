@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WbIridescent.js",
+  "module": "./WbIridescent.esm.js",
+  "types": "./WbIridescent.d.ts"
+}

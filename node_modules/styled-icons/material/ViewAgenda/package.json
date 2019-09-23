@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewAgenda.js",
+  "module": "./ViewAgenda.esm.js",
+  "types": "./ViewAgenda.d.ts"
+}

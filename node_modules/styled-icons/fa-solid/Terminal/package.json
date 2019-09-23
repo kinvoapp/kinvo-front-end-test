@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Terminal.js",
+  "module": "./Terminal.esm.js",
+  "types": "./Terminal.d.ts"
+}

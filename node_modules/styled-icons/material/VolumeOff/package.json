@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VolumeOff.js",
+  "module": "./VolumeOff.esm.js",
+  "types": "./VolumeOff.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Smartphone.js",
+  "module": "./Smartphone.esm.js",
+  "types": "./Smartphone.d.ts"
+}

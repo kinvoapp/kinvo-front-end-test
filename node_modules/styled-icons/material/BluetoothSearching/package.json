@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BluetoothSearching.js",
+  "module": "./BluetoothSearching.esm.js",
+  "types": "./BluetoothSearching.d.ts"
+}

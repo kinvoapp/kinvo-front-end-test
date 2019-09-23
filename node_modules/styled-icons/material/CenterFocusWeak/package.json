@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CenterFocusWeak.js",
+  "module": "./CenterFocusWeak.esm.js",
+  "types": "./CenterFocusWeak.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NetworkCell.js",
+  "module": "./NetworkCell.esm.js",
+  "types": "./NetworkCell.d.ts"
+}

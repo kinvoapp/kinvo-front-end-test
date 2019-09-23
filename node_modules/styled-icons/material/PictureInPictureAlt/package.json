@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PictureInPictureAlt.js",
+  "module": "./PictureInPictureAlt.esm.js",
+  "types": "./PictureInPictureAlt.d.ts"
+}

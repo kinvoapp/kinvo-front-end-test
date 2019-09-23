@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WorkOutline.js",
+  "module": "./WorkOutline.esm.js",
+  "types": "./WorkOutline.d.ts"
+}

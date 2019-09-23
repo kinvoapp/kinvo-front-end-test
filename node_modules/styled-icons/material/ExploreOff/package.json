@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExploreOff.js",
+  "module": "./ExploreOff.esm.js",
+  "types": "./ExploreOff.d.ts"
+}

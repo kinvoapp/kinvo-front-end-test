@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LiveHelp.js",
+  "module": "./LiveHelp.esm.js",
+  "types": "./LiveHelp.d.ts"
+}

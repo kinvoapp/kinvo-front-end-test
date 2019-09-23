@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterNone.js",
+  "module": "./FilterNone.esm.js",
+  "types": "./FilterNone.d.ts"
+}

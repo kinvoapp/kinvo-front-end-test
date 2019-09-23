@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Task.js",
+  "module": "./Task.esm.js",
+  "types": "./Task.d.ts"
+}

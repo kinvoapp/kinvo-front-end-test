@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FastRewind.js",
+  "module": "./FastRewind.esm.js",
+  "types": "./FastRewind.d.ts"
+}

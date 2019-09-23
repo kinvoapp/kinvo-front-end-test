@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LiveTv.js",
+  "module": "./LiveTv.esm.js",
+  "types": "./LiveTv.d.ts"
+}

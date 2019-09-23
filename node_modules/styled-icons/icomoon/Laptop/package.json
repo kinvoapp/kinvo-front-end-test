@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Laptop.js",
+  "module": "./Laptop.esm.js",
+  "types": "./Laptop.d.ts"
+}

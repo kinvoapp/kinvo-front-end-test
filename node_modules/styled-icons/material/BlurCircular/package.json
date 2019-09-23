@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BlurCircular.js",
+  "module": "./BlurCircular.esm.js",
+  "types": "./BlurCircular.d.ts"
+}

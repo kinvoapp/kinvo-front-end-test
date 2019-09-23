@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertEmoticon.js",
+  "module": "./InsertEmoticon.esm.js",
+  "types": "./InsertEmoticon.d.ts"
+}

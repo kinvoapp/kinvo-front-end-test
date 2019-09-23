@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Redo.js",
+  "module": "./Redo.esm.js",
+  "types": "./Redo.d.ts"
+}

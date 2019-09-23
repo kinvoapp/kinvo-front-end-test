@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SentimentVeryDissatisfied.js",
+  "module": "./SentimentVeryDissatisfied.esm.js",
+  "types": "./SentimentVeryDissatisfied.d.ts"
+}

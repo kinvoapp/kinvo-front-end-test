@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Power.js",
+  "module": "./Power.esm.js",
+  "types": "./Power.d.ts"
+}

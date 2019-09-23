@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BlurOn.js",
+  "module": "./BlurOn.esm.js",
+  "types": "./BlurOn.d.ts"
+}

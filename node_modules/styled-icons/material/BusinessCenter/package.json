@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BusinessCenter.js",
+  "module": "./BusinessCenter.esm.js",
+  "types": "./BusinessCenter.d.ts"
+}

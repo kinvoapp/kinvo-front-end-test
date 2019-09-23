@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StarBorder.js",
+  "module": "./StarBorder.esm.js",
+  "types": "./StarBorder.d.ts"
+}

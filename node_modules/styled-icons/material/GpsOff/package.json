@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GpsOff.js",
+  "module": "./GpsOff.esm.js",
+  "types": "./GpsOff.d.ts"
+}

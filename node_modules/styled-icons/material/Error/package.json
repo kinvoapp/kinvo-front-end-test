@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Error.js",
+  "module": "./Error.esm.js",
+  "types": "./Error.d.ts"
+}

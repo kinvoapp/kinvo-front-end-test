@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Dock.js",
+  "module": "./Dock.esm.js",
+  "types": "./Dock.d.ts"
+}

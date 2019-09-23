@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EventBusy.js",
+  "module": "./EventBusy.esm.js",
+  "types": "./EventBusy.d.ts"
+}

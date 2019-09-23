@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccessibilityNew.js",
+  "module": "./AccessibilityNew.esm.js",
+  "types": "./AccessibilityNew.d.ts"
+}

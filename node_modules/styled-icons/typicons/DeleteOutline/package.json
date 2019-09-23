@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DeleteOutline.js",
+  "module": "./DeleteOutline.esm.js",
+  "types": "./DeleteOutline.d.ts"
+}

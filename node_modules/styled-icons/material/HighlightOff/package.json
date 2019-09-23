@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HighlightOff.js",
+  "module": "./HighlightOff.esm.js",
+  "types": "./HighlightOff.d.ts"
+}

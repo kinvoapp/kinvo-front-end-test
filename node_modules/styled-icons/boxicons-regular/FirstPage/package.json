@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FirstPage.js",
+  "module": "./FirstPage.esm.js",
+  "types": "./FirstPage.d.ts"
+}

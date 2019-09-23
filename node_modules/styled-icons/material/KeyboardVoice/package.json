@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./KeyboardVoice.js",
+  "module": "./KeyboardVoice.esm.js",
+  "types": "./KeyboardVoice.d.ts"
+}

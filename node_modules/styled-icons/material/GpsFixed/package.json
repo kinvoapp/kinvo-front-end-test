@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GpsFixed.js",
+  "module": "./GpsFixed.esm.js",
+  "types": "./GpsFixed.d.ts"
+}

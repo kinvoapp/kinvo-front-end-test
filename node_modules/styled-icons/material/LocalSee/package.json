@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalSee.js",
+  "module": "./LocalSee.esm.js",
+  "types": "./LocalSee.d.ts"
+}

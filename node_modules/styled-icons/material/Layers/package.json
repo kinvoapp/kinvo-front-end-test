@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Layers.js",
+  "module": "./Layers.esm.js",
+  "types": "./Layers.d.ts"
+}

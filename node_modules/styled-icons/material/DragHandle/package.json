@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DragHandle.js",
+  "module": "./DragHandle.esm.js",
+  "types": "./DragHandle.d.ts"
+}

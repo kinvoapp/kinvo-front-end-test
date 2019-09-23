@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChildFriendly.js",
+  "module": "./ChildFriendly.esm.js",
+  "types": "./ChildFriendly.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterDrama.js",
+  "module": "./FilterDrama.esm.js",
+  "types": "./FilterDrama.d.ts"
+}

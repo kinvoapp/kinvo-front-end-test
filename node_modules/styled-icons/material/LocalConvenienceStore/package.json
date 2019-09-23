@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalConvenienceStore.js",
+  "module": "./LocalConvenienceStore.esm.js",
+  "types": "./LocalConvenienceStore.d.ts"
+}

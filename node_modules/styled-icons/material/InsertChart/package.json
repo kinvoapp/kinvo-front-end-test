@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertChart.js",
+  "module": "./InsertChart.esm.js",
+  "types": "./InsertChart.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Widgets.js",
+  "module": "./Widgets.esm.js",
+  "types": "./Widgets.d.ts"
+}

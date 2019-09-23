@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Functions.js",
+  "module": "./Functions.esm.js",
+  "types": "./Functions.d.ts"
+}

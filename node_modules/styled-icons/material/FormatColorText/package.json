@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatColorText.js",
+  "module": "./FormatColorText.esm.js",
+  "types": "./FormatColorText.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StarRate.js",
+  "module": "./StarRate.esm.js",
+  "types": "./StarRate.d.ts"
+}

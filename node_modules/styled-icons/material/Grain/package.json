@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Grain.js",
+  "module": "./Grain.esm.js",
+  "types": "./Grain.d.ts"
+}

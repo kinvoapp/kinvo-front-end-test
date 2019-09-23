@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NetworkCheck.js",
+  "module": "./NetworkCheck.esm.js",
+  "types": "./NetworkCheck.d.ts"
+}

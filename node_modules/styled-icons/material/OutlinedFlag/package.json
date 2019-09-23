@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./OutlinedFlag.js",
+  "module": "./OutlinedFlag.esm.js",
+  "types": "./OutlinedFlag.d.ts"
+}

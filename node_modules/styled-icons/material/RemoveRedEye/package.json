@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RemoveRedEye.js",
+  "module": "./RemoveRedEye.esm.js",
+  "types": "./RemoveRedEye.d.ts"
+}

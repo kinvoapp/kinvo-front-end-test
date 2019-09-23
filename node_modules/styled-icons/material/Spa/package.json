@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Spa.js",
+  "module": "./Spa.esm.js",
+  "types": "./Spa.d.ts"
+}

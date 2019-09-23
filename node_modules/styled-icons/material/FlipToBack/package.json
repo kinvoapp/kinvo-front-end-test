@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FlipToBack.js",
+  "module": "./FlipToBack.esm.js",
+  "types": "./FlipToBack.d.ts"
+}

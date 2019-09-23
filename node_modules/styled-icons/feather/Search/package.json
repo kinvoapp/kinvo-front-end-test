@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Search.js",
+  "module": "./Search.esm.js",
+  "types": "./Search.d.ts"
+}

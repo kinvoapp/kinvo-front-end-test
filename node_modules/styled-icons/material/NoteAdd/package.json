@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NoteAdd.js",
+  "module": "./NoteAdd.esm.js",
+  "types": "./NoteAdd.d.ts"
+}

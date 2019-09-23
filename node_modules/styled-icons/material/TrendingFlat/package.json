@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TrendingFlat.js",
+  "module": "./TrendingFlat.esm.js",
+  "types": "./TrendingFlat.d.ts"
+}

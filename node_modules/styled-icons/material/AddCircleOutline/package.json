@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddCircleOutline.js",
+  "module": "./AddCircleOutline.esm.js",
+  "types": "./AddCircleOutline.d.ts"
+}

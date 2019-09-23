@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CropDin.js",
+  "module": "./CropDin.esm.js",
+  "types": "./CropDin.d.ts"
+}

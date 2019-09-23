@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PeopleOutline.js",
+  "module": "./PeopleOutline.esm.js",
+  "types": "./PeopleOutline.d.ts"
+}

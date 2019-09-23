@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FavoriteBorder.js",
+  "module": "./FavoriteBorder.esm.js",
+  "types": "./FavoriteBorder.d.ts"
+}

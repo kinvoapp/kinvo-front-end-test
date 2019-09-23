@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwapHoriz.js",
+  "module": "./SwapHoriz.esm.js",
+  "types": "./SwapHoriz.d.ts"
+}

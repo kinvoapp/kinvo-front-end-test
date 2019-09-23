@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Restore.js",
+  "module": "./Restore.esm.js",
+  "types": "./Restore.d.ts"
+}

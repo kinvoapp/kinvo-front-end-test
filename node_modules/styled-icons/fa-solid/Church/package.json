@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Church.js",
+  "module": "./Church.esm.js",
+  "types": "./Church.d.ts"
+}

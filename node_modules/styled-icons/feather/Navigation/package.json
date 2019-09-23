@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Navigation.js",
+  "module": "./Navigation.esm.js",
+  "types": "./Navigation.d.ts"
+}

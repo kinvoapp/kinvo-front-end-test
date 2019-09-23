@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ReplyAll.js",
+  "module": "./ReplyAll.esm.js",
+  "types": "./ReplyAll.d.ts"
+}

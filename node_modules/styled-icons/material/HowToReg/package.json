@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HowToReg.js",
+  "module": "./HowToReg.esm.js",
+  "types": "./HowToReg.d.ts"
+}

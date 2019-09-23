@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccountCircle.js",
+  "module": "./AccountCircle.esm.js",
+  "types": "./AccountCircle.d.ts"
+}

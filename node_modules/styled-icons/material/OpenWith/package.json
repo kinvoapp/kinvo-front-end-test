@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./OpenWith.js",
+  "module": "./OpenWith.esm.js",
+  "types": "./OpenWith.d.ts"
+}

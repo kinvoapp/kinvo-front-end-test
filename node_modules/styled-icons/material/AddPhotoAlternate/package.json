@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddPhotoAlternate.js",
+  "module": "./AddPhotoAlternate.esm.js",
+  "types": "./AddPhotoAlternate.d.ts"
+}

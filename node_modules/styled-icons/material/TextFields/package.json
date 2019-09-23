@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TextFields.js",
+  "module": "./TextFields.esm.js",
+  "types": "./TextFields.d.ts"
+}

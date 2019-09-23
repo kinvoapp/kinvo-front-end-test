@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./School.js",
+  "module": "./School.esm.js",
+  "types": "./School.d.ts"
+}

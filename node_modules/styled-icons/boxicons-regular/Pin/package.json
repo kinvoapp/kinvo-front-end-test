@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Pin.js",
+  "module": "./Pin.esm.js",
+  "types": "./Pin.d.ts"
+}

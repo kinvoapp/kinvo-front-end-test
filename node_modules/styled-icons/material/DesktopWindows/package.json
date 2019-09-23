@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DesktopWindows.js",
+  "module": "./DesktopWindows.esm.js",
+  "types": "./DesktopWindows.d.ts"
+}

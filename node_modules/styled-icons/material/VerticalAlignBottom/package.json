@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VerticalAlignBottom.js",
+  "module": "./VerticalAlignBottom.esm.js",
+  "types": "./VerticalAlignBottom.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExpandLess.js",
+  "module": "./ExpandLess.esm.js",
+  "types": "./ExpandLess.d.ts"
+}

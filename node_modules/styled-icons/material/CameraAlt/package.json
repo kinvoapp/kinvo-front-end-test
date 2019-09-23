@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CameraAlt.js",
+  "module": "./CameraAlt.esm.js",
+  "types": "./CameraAlt.d.ts"
+}

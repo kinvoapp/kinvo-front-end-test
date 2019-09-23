@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ContactPhone.js",
+  "module": "./ContactPhone.esm.js",
+  "types": "./ContactPhone.d.ts"
+}

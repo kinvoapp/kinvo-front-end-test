@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccountBox.js",
+  "module": "./AccountBox.esm.js",
+  "types": "./AccountBox.d.ts"
+}

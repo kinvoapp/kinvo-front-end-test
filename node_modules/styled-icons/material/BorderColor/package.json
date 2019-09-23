@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BorderColor.js",
+  "module": "./BorderColor.esm.js",
+  "types": "./BorderColor.d.ts"
+}

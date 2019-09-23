@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewList.js",
+  "module": "./ViewList.esm.js",
+  "types": "./ViewList.d.ts"
+}

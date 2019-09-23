@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneMissed.js",
+  "module": "./PhoneMissed.esm.js",
+  "types": "./PhoneMissed.d.ts"
+}

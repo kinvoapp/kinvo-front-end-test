@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PregnantWoman.js",
+  "module": "./PregnantWoman.esm.js",
+  "types": "./PregnantWoman.d.ts"
+}

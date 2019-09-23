@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatColorReset.js",
+  "module": "./FormatColorReset.esm.js",
+  "types": "./FormatColorReset.d.ts"
+}

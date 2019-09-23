@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsInputComposite.js",
+  "module": "./SettingsInputComposite.esm.js",
+  "types": "./SettingsInputComposite.d.ts"
+}

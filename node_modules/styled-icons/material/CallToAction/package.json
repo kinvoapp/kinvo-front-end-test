@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallToAction.js",
+  "module": "./CallToAction.esm.js",
+  "types": "./CallToAction.d.ts"
+}

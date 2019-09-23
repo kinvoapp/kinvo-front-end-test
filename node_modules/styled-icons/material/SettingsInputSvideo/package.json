@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsInputSvideo.js",
+  "module": "./SettingsInputSvideo.esm.js",
+  "types": "./SettingsInputSvideo.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPlay.js",
+  "module": "./LocalPlay.esm.js",
+  "types": "./LocalPlay.d.ts"
+}

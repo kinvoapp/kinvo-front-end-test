@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SelectAll.js",
+  "module": "./SelectAll.esm.js",
+  "types": "./SelectAll.d.ts"
+}

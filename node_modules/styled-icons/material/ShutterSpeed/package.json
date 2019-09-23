@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ShutterSpeed.js",
+  "module": "./ShutterSpeed.esm.js",
+  "types": "./ShutterSpeed.d.ts"
+}

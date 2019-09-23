@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Compare.js",
+  "module": "./Compare.esm.js",
+  "types": "./Compare.d.ts"
+}

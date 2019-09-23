@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TripOrigin.js",
+  "module": "./TripOrigin.esm.js",
+  "types": "./TripOrigin.d.ts"
+}

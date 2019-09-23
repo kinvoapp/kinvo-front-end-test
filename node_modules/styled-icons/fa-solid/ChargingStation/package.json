@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChargingStation.js",
+  "module": "./ChargingStation.esm.js",
+  "types": "./ChargingStation.d.ts"
+}

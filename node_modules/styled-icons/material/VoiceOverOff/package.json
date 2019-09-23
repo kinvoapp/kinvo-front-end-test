@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VoiceOverOff.js",
+  "module": "./VoiceOverOff.esm.js",
+  "types": "./VoiceOverOff.d.ts"
+}

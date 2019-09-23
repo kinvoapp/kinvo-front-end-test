@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RotateRight.js",
+  "module": "./RotateRight.esm.js",
+  "types": "./RotateRight.d.ts"
+}

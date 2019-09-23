@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NoSim.js",
+  "module": "./NoSim.esm.js",
+  "types": "./NoSim.d.ts"
+}

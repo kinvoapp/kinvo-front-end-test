@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PanoramaFishEye.js",
+  "module": "./PanoramaFishEye.esm.js",
+  "types": "./PanoramaFishEye.d.ts"
+}

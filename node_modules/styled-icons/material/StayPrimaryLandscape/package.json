@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StayPrimaryLandscape.js",
+  "module": "./StayPrimaryLandscape.esm.js",
+  "types": "./StayPrimaryLandscape.d.ts"
+}

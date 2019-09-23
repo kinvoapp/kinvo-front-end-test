@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DesktopAccessDisabled.js",
+  "module": "./DesktopAccessDisabled.esm.js",
+  "types": "./DesktopAccessDisabled.d.ts"
+}

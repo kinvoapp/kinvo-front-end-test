@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhonelinkLock.js",
+  "module": "./PhonelinkLock.esm.js",
+  "types": "./PhonelinkLock.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CheckBoxOutlineBlank.js",
+  "module": "./CheckBoxOutlineBlank.esm.js",
+  "types": "./CheckBoxOutlineBlank.d.ts"
+}

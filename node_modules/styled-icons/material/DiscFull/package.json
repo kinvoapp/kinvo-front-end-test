@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DiscFull.js",
+  "module": "./DiscFull.esm.js",
+  "types": "./DiscFull.d.ts"
+}

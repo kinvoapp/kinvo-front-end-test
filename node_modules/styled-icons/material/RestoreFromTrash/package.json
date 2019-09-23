@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RestoreFromTrash.js",
+  "module": "./RestoreFromTrash.esm.js",
+  "types": "./RestoreFromTrash.d.ts"
+}

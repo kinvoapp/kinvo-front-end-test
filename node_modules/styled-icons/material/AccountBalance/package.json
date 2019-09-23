@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccountBalance.js",
+  "module": "./AccountBalance.esm.js",
+  "types": "./AccountBalance.d.ts"
+}

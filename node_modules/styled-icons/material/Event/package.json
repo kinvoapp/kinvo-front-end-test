@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Event.js",
+  "module": "./Event.esm.js",
+  "types": "./Event.d.ts"
+}

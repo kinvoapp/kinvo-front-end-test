@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ScreenRotation.js",
+  "module": "./ScreenRotation.esm.js",
+  "types": "./ScreenRotation.d.ts"
+}

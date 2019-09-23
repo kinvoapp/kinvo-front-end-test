@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BurstMode.js",
+  "module": "./BurstMode.esm.js",
+  "types": "./BurstMode.d.ts"
+}

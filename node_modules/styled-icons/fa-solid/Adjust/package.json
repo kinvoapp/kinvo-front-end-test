@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Adjust.js",
+  "module": "./Adjust.esm.js",
+  "types": "./Adjust.d.ts"
+}

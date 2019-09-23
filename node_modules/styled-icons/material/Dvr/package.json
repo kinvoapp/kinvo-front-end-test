@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Dvr.js",
+  "module": "./Dvr.esm.js",
+  "types": "./Dvr.d.ts"
+}

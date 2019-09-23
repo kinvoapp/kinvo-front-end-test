@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Person.js",
+  "module": "./Person.esm.js",
+  "types": "./Person.d.ts"
+}

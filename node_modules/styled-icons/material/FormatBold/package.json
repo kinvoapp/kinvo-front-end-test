@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatBold.js",
+  "module": "./FormatBold.esm.js",
+  "types": "./FormatBold.d.ts"
+}

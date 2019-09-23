@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Flip.js",
+  "module": "./Flip.esm.js",
+  "types": "./Flip.d.ts"
+}

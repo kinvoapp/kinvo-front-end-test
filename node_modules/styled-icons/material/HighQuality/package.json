@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HighQuality.js",
+  "module": "./HighQuality.esm.js",
+  "types": "./HighQuality.d.ts"
+}

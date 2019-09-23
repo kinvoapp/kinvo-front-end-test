@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Storage.js",
+  "module": "./Storage.esm.js",
+  "types": "./Storage.d.ts"
+}

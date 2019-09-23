@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalTaxi.js",
+  "module": "./LocalTaxi.esm.js",
+  "types": "./LocalTaxi.d.ts"
+}

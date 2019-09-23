@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowCircleUp.js",
+  "module": "./ArrowCircleUp.esm.js",
+  "types": "./ArrowCircleUp.d.ts"
+}

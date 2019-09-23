@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatListNumberedRtl.js",
+  "module": "./FormatListNumberedRtl.esm.js",
+  "types": "./FormatListNumberedRtl.d.ts"
+}

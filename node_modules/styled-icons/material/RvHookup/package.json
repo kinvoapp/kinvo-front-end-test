@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RvHookup.js",
+  "module": "./RvHookup.esm.js",
+  "types": "./RvHookup.d.ts"
+}

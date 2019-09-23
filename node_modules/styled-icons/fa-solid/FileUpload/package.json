@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FileUpload.js",
+  "module": "./FileUpload.esm.js",
+  "types": "./FileUpload.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Transgender.js",
+  "module": "./Transgender.esm.js",
+  "types": "./Transgender.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwitchVideo.js",
+  "module": "./SwitchVideo.esm.js",
+  "types": "./SwitchVideo.d.ts"
+}

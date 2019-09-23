@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TimeToLeave.js",
+  "module": "./TimeToLeave.esm.js",
+  "types": "./TimeToLeave.d.ts"
+}

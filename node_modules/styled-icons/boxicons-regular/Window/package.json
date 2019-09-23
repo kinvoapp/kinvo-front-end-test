@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Window.js",
+  "module": "./Window.esm.js",
+  "types": "./Window.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VoiceChat.js",
+  "module": "./VoiceChat.esm.js",
+  "types": "./VoiceChat.d.ts"
+}

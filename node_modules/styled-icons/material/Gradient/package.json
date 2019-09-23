@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Gradient.js",
+  "module": "./Gradient.esm.js",
+  "types": "./Gradient.d.ts"
+}

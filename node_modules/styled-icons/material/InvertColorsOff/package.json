@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InvertColorsOff.js",
+  "module": "./InvertColorsOff.esm.js",
+  "types": "./InvertColorsOff.d.ts"
+}

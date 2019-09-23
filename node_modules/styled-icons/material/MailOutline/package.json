@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MailOutline.js",
+  "module": "./MailOutline.esm.js",
+  "types": "./MailOutline.d.ts"
+}

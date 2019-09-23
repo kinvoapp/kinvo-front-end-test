@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddShoppingCart.js",
+  "module": "./AddShoppingCart.esm.js",
+  "types": "./AddShoppingCart.d.ts"
+}

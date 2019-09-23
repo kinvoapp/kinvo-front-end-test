@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermScanWifi.js",
+  "module": "./PermScanWifi.esm.js",
+  "types": "./PermScanWifi.d.ts"
+}

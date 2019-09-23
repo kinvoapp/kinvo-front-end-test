@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WbSunny.js",
+  "module": "./WbSunny.esm.js",
+  "types": "./WbSunny.d.ts"
+}

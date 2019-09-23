@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DoneAll.js",
+  "module": "./DoneAll.esm.js",
+  "types": "./DoneAll.d.ts"
+}

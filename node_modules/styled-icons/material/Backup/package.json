@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Backup.js",
+  "module": "./Backup.esm.js",
+  "types": "./Backup.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Sync.js",
+  "module": "./Sync.esm.js",
+  "types": "./Sync.d.ts"
+}

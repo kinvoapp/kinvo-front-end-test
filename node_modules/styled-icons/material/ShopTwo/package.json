@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ShopTwo.js",
+  "module": "./ShopTwo.esm.js",
+  "types": "./ShopTwo.d.ts"
+}

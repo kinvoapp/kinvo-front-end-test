@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BubbleChart.js",
+  "module": "./BubbleChart.esm.js",
+  "types": "./BubbleChart.d.ts"
+}

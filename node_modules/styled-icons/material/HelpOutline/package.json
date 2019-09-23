@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HelpOutline.js",
+  "module": "./HelpOutline.esm.js",
+  "types": "./HelpOutline.d.ts"
+}

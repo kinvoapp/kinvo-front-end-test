@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GroupAdd.js",
+  "module": "./GroupAdd.esm.js",
+  "types": "./GroupAdd.d.ts"
+}

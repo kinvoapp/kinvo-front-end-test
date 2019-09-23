@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Colorize.js",
+  "module": "./Colorize.esm.js",
+  "types": "./Colorize.d.ts"
+}

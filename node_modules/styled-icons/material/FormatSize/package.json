@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatSize.js",
+  "module": "./FormatSize.esm.js",
+  "types": "./FormatSize.d.ts"
+}

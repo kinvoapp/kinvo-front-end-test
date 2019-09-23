@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowForward.js",
+  "module": "./ArrowForward.esm.js",
+  "types": "./ArrowForward.d.ts"
+}

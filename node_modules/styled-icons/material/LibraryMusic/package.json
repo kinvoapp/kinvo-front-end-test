@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LibraryMusic.js",
+  "module": "./LibraryMusic.esm.js",
+  "types": "./LibraryMusic.d.ts"
+}

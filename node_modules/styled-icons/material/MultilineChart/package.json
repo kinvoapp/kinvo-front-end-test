@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MultilineChart.js",
+  "module": "./MultilineChart.esm.js",
+  "types": "./MultilineChart.d.ts"
+}

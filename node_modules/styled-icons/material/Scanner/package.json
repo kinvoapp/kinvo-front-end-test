@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Scanner.js",
+  "module": "./Scanner.esm.js",
+  "types": "./Scanner.d.ts"
+}

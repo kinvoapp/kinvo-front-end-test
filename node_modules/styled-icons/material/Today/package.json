@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Today.js",
+  "module": "./Today.esm.js",
+  "types": "./Today.d.ts"
+}

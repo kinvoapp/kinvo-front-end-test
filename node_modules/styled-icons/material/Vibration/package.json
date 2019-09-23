@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Vibration.js",
+  "module": "./Vibration.esm.js",
+  "types": "./Vibration.d.ts"
+}

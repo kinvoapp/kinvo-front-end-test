@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Discount.js",
+  "module": "./Discount.esm.js",
+  "types": "./Discount.d.ts"
+}

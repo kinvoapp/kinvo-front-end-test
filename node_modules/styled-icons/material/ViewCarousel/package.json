@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ViewCarousel.js",
+  "module": "./ViewCarousel.esm.js",
+  "types": "./ViewCarousel.d.ts"
+}

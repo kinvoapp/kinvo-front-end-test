@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LeakAdd.js",
+  "module": "./LeakAdd.esm.js",
+  "types": "./LeakAdd.d.ts"
+}

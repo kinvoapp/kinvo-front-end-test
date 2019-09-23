@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Work.js",
+  "module": "./Work.esm.js",
+  "types": "./Work.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ModeComment.js",
+  "module": "./ModeComment.esm.js",
+  "types": "./ModeComment.d.ts"
+}

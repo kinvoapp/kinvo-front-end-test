@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DeveloperBoard.js",
+  "module": "./DeveloperBoard.esm.js",
+  "types": "./DeveloperBoard.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Timelapse.js",
+  "module": "./Timelapse.esm.js",
+  "types": "./Timelapse.d.ts"
+}

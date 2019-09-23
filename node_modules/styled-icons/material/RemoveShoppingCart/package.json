@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RemoveShoppingCart.js",
+  "module": "./RemoveShoppingCart.esm.js",
+  "types": "./RemoveShoppingCart.d.ts"
+}

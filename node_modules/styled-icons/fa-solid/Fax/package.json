@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Fax.js",
+  "module": "./Fax.esm.js",
+  "types": "./Fax.d.ts"
+}

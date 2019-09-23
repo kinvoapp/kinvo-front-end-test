@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocationCity.js",
+  "module": "./LocationCity.esm.js",
+  "types": "./LocationCity.d.ts"
+}

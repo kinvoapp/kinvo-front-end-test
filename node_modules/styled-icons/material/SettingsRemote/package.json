@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsRemote.js",
+  "module": "./SettingsRemote.esm.js",
+  "types": "./SettingsRemote.d.ts"
+}

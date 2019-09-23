@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Place.js",
+  "module": "./Place.esm.js",
+  "types": "./Place.d.ts"
+}

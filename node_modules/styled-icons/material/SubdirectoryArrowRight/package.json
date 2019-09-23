@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SubdirectoryArrowRight.js",
+  "module": "./SubdirectoryArrowRight.esm.js",
+  "types": "./SubdirectoryArrowRight.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DragIndicator.js",
+  "module": "./DragIndicator.esm.js",
+  "types": "./DragIndicator.d.ts"
+}

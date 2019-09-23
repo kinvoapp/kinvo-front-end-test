@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Beenhere.js",
+  "module": "./Beenhere.esm.js",
+  "types": "./Beenhere.d.ts"
+}

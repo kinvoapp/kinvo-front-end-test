@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PrintDisabled.js",
+  "module": "./PrintDisabled.esm.js",
+  "types": "./PrintDisabled.d.ts"
+}

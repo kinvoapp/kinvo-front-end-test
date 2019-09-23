@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Explicit.js",
+  "module": "./Explicit.esm.js",
+  "types": "./Explicit.d.ts"
+}

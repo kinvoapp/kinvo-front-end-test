@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DeviceHub.js",
+  "module": "./DeviceHub.esm.js",
+  "types": "./DeviceHub.d.ts"
+}

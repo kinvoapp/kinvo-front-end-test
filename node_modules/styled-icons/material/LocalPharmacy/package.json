@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPharmacy.js",
+  "module": "./LocalPharmacy.esm.js",
+  "types": "./LocalPharmacy.d.ts"
+}

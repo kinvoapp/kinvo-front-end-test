@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PersonPinCircle.js",
+  "module": "./PersonPinCircle.esm.js",
+  "types": "./PersonPinCircle.d.ts"
+}

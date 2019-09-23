@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VideogameAsset.js",
+  "module": "./VideogameAsset.esm.js",
+  "types": "./VideogameAsset.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallSplit.js",
+  "module": "./CallSplit.esm.js",
+  "types": "./CallSplit.d.ts"
+}

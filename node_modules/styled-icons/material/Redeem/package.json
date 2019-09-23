@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Redeem.js",
+  "module": "./Redeem.esm.js",
+  "types": "./Redeem.d.ts"
+}

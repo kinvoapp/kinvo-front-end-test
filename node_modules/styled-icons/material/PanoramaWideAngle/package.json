@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PanoramaWideAngle.js",
+  "module": "./PanoramaWideAngle.esm.js",
+  "types": "./PanoramaWideAngle.d.ts"
+}

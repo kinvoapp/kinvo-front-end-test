@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Attachment.js",
+  "module": "./Attachment.esm.js",
+  "types": "./Attachment.d.ts"
+}

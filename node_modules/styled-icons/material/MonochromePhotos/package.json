@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MonochromePhotos.js",
+  "module": "./MonochromePhotos.esm.js",
+  "types": "./MonochromePhotos.d.ts"
+}

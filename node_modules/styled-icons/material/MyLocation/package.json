@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MyLocation.js",
+  "module": "./MyLocation.esm.js",
+  "types": "./MyLocation.d.ts"
+}

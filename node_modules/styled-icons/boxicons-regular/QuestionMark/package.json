@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./QuestionMark.js",
+  "module": "./QuestionMark.esm.js",
+  "types": "./QuestionMark.d.ts"
+}

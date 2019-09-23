@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Snooze.js",
+  "module": "./Snooze.esm.js",
+  "types": "./Snooze.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NextWeek.js",
+  "module": "./NextWeek.esm.js",
+  "types": "./NextWeek.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Mic.js",
+  "module": "./Mic.esm.js",
+  "types": "./Mic.d.ts"
+}

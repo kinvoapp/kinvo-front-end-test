@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MonetizationOn.js",
+  "module": "./MonetizationOn.esm.js",
+  "types": "./MonetizationOn.d.ts"
+}

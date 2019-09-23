@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LockOpen.js",
+  "module": "./LockOpen.esm.js",
+  "types": "./LockOpen.d.ts"
+}

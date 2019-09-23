@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddAlert.js",
+  "module": "./AddAlert.esm.js",
+  "types": "./AddAlert.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LibraryAdd.js",
+  "module": "./LibraryAdd.esm.js",
+  "types": "./LibraryAdd.d.ts"
+}

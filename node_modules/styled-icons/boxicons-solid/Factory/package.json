@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Factory.js",
+  "module": "./Factory.esm.js",
+  "types": "./Factory.d.ts"
+}

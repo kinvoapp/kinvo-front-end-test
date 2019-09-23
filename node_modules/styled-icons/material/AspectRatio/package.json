@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AspectRatio.js",
+  "module": "./AspectRatio.esm.js",
+  "types": "./AspectRatio.d.ts"
+}

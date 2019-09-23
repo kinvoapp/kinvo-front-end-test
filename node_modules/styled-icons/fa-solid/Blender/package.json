@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Blender.js",
+  "module": "./Blender.esm.js",
+  "types": "./Blender.d.ts"
+}

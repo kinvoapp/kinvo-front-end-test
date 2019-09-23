@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Forward.js",
+  "module": "./Forward.esm.js",
+  "types": "./Forward.d.ts"
+}

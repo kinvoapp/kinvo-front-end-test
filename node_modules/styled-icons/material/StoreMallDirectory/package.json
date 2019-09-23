@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StoreMallDirectory.js",
+  "module": "./StoreMallDirectory.esm.js",
+  "types": "./StoreMallDirectory.d.ts"
+}

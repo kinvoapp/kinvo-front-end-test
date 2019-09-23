@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterBAndW.js",
+  "module": "./FilterBAndW.esm.js",
+  "types": "./FilterBAndW.d.ts"
+}

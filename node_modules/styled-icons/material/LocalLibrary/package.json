@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalLibrary.js",
+  "module": "./LocalLibrary.esm.js",
+  "types": "./LocalLibrary.d.ts"
+}

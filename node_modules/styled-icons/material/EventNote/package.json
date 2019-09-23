@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./EventNote.js",
+  "module": "./EventNote.esm.js",
+  "types": "./EventNote.d.ts"
+}

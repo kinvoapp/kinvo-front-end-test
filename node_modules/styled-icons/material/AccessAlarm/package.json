@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AccessAlarm.js",
+  "module": "./AccessAlarm.esm.js",
+  "types": "./AccessAlarm.d.ts"
+}

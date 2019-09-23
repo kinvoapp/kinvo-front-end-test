@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TagFaces.js",
+  "module": "./TagFaces.esm.js",
+  "types": "./TagFaces.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Whatshot.js",
+  "module": "./Whatshot.esm.js",
+  "types": "./Whatshot.d.ts"
+}

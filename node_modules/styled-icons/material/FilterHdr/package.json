@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterHdr.js",
+  "module": "./FilterHdr.esm.js",
+  "types": "./FilterHdr.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Checklist.js",
+  "module": "./Checklist.esm.js",
+  "types": "./Checklist.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Snowboarding.js",
+  "module": "./Snowboarding.esm.js",
+  "types": "./Snowboarding.d.ts"
+}

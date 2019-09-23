@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CastForEducation.js",
+  "module": "./CastForEducation.esm.js",
+  "types": "./CastForEducation.d.ts"
+}

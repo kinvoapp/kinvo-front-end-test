@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Portrait.js",
+  "module": "./Portrait.esm.js",
+  "types": "./Portrait.d.ts"
+}

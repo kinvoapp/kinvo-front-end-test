@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalBar.js",
+  "module": "./LocalBar.esm.js",
+  "types": "./LocalBar.d.ts"
+}

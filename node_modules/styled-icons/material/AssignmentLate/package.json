@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AssignmentLate.js",
+  "module": "./AssignmentLate.esm.js",
+  "types": "./AssignmentLate.d.ts"
+}

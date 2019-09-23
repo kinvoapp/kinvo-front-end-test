@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Unarchive.js",
+  "module": "./Unarchive.esm.js",
+  "types": "./Unarchive.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhonePaused.js",
+  "module": "./PhonePaused.esm.js",
+  "types": "./PhonePaused.d.ts"
+}

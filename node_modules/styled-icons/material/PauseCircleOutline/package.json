@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PauseCircleOutline.js",
+  "module": "./PauseCircleOutline.esm.js",
+  "types": "./PauseCircleOutline.d.ts"
+}

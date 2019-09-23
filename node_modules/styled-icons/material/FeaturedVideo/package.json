@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FeaturedVideo.js",
+  "module": "./FeaturedVideo.esm.js",
+  "types": "./FeaturedVideo.d.ts"
+}

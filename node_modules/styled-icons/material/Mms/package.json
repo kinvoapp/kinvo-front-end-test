@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Mms.js",
+  "module": "./Mms.esm.js",
+  "types": "./Mms.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PersonAddDisabled.js",
+  "module": "./PersonAddDisabled.esm.js",
+  "types": "./PersonAddDisabled.d.ts"
+}

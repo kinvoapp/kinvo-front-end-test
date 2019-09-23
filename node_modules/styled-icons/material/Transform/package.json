@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Transform.js",
+  "module": "./Transform.esm.js",
+  "types": "./Transform.d.ts"
+}

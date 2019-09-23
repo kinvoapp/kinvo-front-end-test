@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Coffee.js",
+  "module": "./Coffee.esm.js",
+  "types": "./Coffee.d.ts"
+}

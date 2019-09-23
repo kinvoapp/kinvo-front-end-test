@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Feedback.js",
+  "module": "./Feedback.esm.js",
+  "types": "./Feedback.d.ts"
+}

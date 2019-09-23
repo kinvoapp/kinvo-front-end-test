@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Backspace.js",
+  "module": "./Backspace.esm.js",
+  "types": "./Backspace.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FreeBreakfast.js",
+  "module": "./FreeBreakfast.esm.js",
+  "types": "./FreeBreakfast.d.ts"
+}

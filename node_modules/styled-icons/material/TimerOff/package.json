@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TimerOff.js",
+  "module": "./TimerOff.esm.js",
+  "types": "./TimerOff.d.ts"
+}

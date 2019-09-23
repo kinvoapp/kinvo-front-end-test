@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Inbox.js",
+  "module": "./Inbox.esm.js",
+  "types": "./Inbox.d.ts"
+}

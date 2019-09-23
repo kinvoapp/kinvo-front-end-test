@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Opacity.js",
+  "module": "./Opacity.esm.js",
+  "types": "./Opacity.d.ts"
+}

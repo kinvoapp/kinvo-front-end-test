@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Bed.js",
+  "module": "./Bed.esm.js",
+  "types": "./Bed.d.ts"
+}

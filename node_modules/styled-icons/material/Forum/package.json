@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Forum.js",
+  "module": "./Forum.esm.js",
+  "types": "./Forum.d.ts"
+}

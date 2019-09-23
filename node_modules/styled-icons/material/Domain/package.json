@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Domain.js",
+  "module": "./Domain.esm.js",
+  "types": "./Domain.d.ts"
+}

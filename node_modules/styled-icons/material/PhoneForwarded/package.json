@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneForwarded.js",
+  "module": "./PhoneForwarded.esm.js",
+  "types": "./PhoneForwarded.d.ts"
+}

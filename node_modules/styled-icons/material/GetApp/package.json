@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GetApp.js",
+  "module": "./GetApp.esm.js",
+  "types": "./GetApp.d.ts"
+}

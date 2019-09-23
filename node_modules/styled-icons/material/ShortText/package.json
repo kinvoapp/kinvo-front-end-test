@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ShortText.js",
+  "module": "./ShortText.esm.js",
+  "types": "./ShortText.d.ts"
+}

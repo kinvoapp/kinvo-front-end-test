@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FireExtinguisher.js",
+  "module": "./FireExtinguisher.esm.js",
+  "types": "./FireExtinguisher.d.ts"
+}

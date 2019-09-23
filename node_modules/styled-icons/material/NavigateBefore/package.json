@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NavigateBefore.js",
+  "module": "./NavigateBefore.esm.js",
+  "types": "./NavigateBefore.d.ts"
+}

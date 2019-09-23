@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WbAuto.js",
+  "module": "./WbAuto.esm.js",
+  "types": "./WbAuto.d.ts"
+}

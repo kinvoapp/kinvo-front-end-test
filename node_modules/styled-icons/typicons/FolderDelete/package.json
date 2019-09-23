@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FolderDelete.js",
+  "module": "./FolderDelete.esm.js",
+  "types": "./FolderDelete.d.ts"
+}

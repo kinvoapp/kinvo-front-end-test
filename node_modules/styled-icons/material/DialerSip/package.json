@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DialerSip.js",
+  "module": "./DialerSip.esm.js",
+  "types": "./DialerSip.d.ts"
+}

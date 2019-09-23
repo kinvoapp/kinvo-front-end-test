@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./DirectionsWalk.js",
+  "module": "./DirectionsWalk.esm.js",
+  "types": "./DirectionsWalk.d.ts"
+}

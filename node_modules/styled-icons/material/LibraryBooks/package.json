@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LibraryBooks.js",
+  "module": "./LibraryBooks.esm.js",
+  "types": "./LibraryBooks.d.ts"
+}

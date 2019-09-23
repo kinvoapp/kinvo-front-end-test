@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Terrain.js",
+  "module": "./Terrain.esm.js",
+  "types": "./Terrain.d.ts"
+}

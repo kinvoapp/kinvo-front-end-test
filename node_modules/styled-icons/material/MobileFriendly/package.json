@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MobileFriendly.js",
+  "module": "./MobileFriendly.esm.js",
+  "types": "./MobileFriendly.d.ts"
+}

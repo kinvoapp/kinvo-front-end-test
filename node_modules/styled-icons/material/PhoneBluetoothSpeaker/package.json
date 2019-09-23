@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhoneBluetoothSpeaker.js",
+  "module": "./PhoneBluetoothSpeaker.esm.js",
+  "types": "./PhoneBluetoothSpeaker.d.ts"
+}

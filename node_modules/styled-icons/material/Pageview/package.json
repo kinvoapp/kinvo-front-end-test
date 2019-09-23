@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Pageview.js",
+  "module": "./Pageview.esm.js",
+  "types": "./Pageview.d.ts"
+}

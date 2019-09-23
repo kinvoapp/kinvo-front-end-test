@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Hd.js",
+  "module": "./Hd.esm.js",
+  "types": "./Hd.d.ts"
+}

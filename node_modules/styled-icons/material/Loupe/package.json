@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Loupe.js",
+  "module": "./Loupe.esm.js",
+  "types": "./Loupe.d.ts"
+}

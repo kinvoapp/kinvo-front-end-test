@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PhonelinkOff.js",
+  "module": "./PhonelinkOff.esm.js",
+  "types": "./PhonelinkOff.d.ts"
+}

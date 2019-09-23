@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChromeReaderMode.js",
+  "module": "./ChromeReaderMode.esm.js",
+  "types": "./ChromeReaderMode.d.ts"
+}

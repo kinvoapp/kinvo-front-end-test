@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SortByAlpha.js",
+  "module": "./SortByAlpha.esm.js",
+  "types": "./SortByAlpha.d.ts"
+}

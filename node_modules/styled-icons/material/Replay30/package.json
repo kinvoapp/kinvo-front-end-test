@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Replay30.js",
+  "module": "./Replay30.esm.js",
+  "types": "./Replay30.d.ts"
+}

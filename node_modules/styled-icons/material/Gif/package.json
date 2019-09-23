@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Gif.js",
+  "module": "./Gif.esm.js",
+  "types": "./Gif.d.ts"
+}

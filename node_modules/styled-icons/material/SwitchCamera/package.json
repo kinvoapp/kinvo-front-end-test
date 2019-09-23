@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SwitchCamera.js",
+  "module": "./SwitchCamera.esm.js",
+  "types": "./SwitchCamera.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowDropDownCircle.js",
+  "module": "./ArrowDropDownCircle.esm.js",
+  "types": "./ArrowDropDownCircle.d.ts"
+}

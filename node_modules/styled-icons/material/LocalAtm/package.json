@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalAtm.js",
+  "module": "./LocalAtm.esm.js",
+  "types": "./LocalAtm.d.ts"
+}

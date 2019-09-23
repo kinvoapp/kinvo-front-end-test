@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallMerge.js",
+  "module": "./CallMerge.esm.js",
+  "types": "./CallMerge.d.ts"
+}

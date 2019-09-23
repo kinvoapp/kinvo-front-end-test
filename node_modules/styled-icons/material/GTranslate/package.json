@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./GTranslate.js",
+  "module": "./GTranslate.esm.js",
+  "types": "./GTranslate.d.ts"
+}

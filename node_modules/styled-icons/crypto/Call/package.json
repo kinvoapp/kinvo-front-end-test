@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Call.js",
+  "module": "./Call.esm.js",
+  "types": "./Call.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsApplications.js",
+  "module": "./SettingsApplications.esm.js",
+  "types": "./SettingsApplications.d.ts"
+}

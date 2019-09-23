@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CalendarViewDay.js",
+  "module": "./CalendarViewDay.esm.js",
+  "types": "./CalendarViewDay.d.ts"
+}

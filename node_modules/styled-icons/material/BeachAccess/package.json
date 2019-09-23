@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BeachAccess.js",
+  "module": "./BeachAccess.esm.js",
+  "types": "./BeachAccess.d.ts"
+}

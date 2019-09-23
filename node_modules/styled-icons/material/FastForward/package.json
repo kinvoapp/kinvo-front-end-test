@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FastForward.js",
+  "module": "./FastForward.esm.js",
+  "types": "./FastForward.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RepeatOne.js",
+  "module": "./RepeatOne.esm.js",
+  "types": "./RepeatOne.d.ts"
+}

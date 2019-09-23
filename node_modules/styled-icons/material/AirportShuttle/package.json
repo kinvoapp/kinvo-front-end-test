@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirportShuttle.js",
+  "module": "./AirportShuttle.esm.js",
+  "types": "./AirportShuttle.d.ts"
+}

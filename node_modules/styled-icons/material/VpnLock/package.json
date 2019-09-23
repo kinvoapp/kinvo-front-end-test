@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./VpnLock.js",
+  "module": "./VpnLock.esm.js",
+  "types": "./VpnLock.d.ts"
+}

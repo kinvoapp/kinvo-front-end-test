@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Timer.js",
+  "module": "./Timer.esm.js",
+  "types": "./Timer.d.ts"
+}

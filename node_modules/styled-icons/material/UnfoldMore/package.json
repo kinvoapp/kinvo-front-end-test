@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./UnfoldMore.js",
+  "module": "./UnfoldMore.esm.js",
+  "types": "./UnfoldMore.d.ts"
+}

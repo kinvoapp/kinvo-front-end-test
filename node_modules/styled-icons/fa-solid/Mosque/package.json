@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Mosque.js",
+  "module": "./Mosque.esm.js",
+  "types": "./Mosque.d.ts"
+}

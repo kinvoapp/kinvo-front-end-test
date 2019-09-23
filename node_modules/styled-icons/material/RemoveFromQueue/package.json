@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RemoveFromQueue.js",
+  "module": "./RemoveFromQueue.esm.js",
+  "types": "./RemoveFromQueue.d.ts"
+}

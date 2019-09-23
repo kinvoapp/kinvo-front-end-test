@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LinkedCamera.js",
+  "module": "./LinkedCamera.esm.js",
+  "types": "./LinkedCamera.d.ts"
+}

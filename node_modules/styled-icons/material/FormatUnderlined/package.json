@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatUnderlined.js",
+  "module": "./FormatUnderlined.esm.js",
+  "types": "./FormatUnderlined.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Commute.js",
+  "module": "./Commute.esm.js",
+  "types": "./Commute.d.ts"
+}

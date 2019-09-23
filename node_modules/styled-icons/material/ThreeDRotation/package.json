@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ThreeDRotation.js",
+  "module": "./ThreeDRotation.esm.js",
+  "types": "./ThreeDRotation.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BookmarkBorder.js",
+  "module": "./BookmarkBorder.esm.js",
+  "types": "./BookmarkBorder.d.ts"
+}

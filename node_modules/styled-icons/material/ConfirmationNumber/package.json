@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ConfirmationNumber.js",
+  "module": "./ConfirmationNumber.esm.js",
+  "types": "./ConfirmationNumber.d.ts"
+}

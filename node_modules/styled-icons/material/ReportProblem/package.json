@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ReportProblem.js",
+  "module": "./ReportProblem.esm.js",
+  "types": "./ReportProblem.d.ts"
+}

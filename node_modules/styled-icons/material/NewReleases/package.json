@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NewReleases.js",
+  "module": "./NewReleases.esm.js",
+  "types": "./NewReleases.d.ts"
+}

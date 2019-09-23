@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PlayArrow.js",
+  "module": "./PlayArrow.esm.js",
+  "types": "./PlayArrow.d.ts"
+}

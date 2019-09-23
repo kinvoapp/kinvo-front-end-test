@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ImportantDevices.js",
+  "module": "./ImportantDevices.esm.js",
+  "types": "./ImportantDevices.d.ts"
+}

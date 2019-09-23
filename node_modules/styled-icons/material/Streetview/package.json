@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Streetview.js",
+  "module": "./Streetview.esm.js",
+  "types": "./Streetview.d.ts"
+}

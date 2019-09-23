@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ZoomIn.js",
+  "module": "./ZoomIn.esm.js",
+  "types": "./ZoomIn.d.ts"
+}

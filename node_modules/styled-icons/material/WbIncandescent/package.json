@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WbIncandescent.js",
+  "module": "./WbIncandescent.esm.js",
+  "types": "./WbIncandescent.d.ts"
+}

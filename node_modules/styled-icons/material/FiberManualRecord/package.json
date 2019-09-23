@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FiberManualRecord.js",
+  "module": "./FiberManualRecord.esm.js",
+  "types": "./FiberManualRecord.d.ts"
+}

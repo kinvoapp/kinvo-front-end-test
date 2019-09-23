@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./QueueMusic.js",
+  "module": "./QueueMusic.esm.js",
+  "types": "./QueueMusic.d.ts"
+}

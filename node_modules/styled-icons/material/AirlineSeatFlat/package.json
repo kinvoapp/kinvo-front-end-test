@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatFlat.js",
+  "module": "./AirlineSeatFlat.esm.js",
+  "types": "./AirlineSeatFlat.d.ts"
+}

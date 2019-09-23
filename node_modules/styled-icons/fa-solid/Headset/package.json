@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Headset.js",
+  "module": "./Headset.esm.js",
+  "types": "./Headset.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Wallpaper.js",
+  "module": "./Wallpaper.esm.js",
+  "types": "./Wallpaper.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocationOff.js",
+  "module": "./LocationOff.esm.js",
+  "types": "./LocationOff.d.ts"
+}

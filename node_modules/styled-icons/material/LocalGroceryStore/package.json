@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalGroceryStore.js",
+  "module": "./LocalGroceryStore.esm.js",
+  "types": "./LocalGroceryStore.d.ts"
+}

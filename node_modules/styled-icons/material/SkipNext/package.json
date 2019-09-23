@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SkipNext.js",
+  "module": "./SkipNext.esm.js",
+  "types": "./SkipNext.d.ts"
+}

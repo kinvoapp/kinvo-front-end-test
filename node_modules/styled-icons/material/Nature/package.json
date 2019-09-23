@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Nature.js",
+  "module": "./Nature.esm.js",
+  "types": "./Nature.d.ts"
+}

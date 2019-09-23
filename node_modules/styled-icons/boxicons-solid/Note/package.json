@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Note.js",
+  "module": "./Note.esm.js",
+  "types": "./Note.d.ts"
+}

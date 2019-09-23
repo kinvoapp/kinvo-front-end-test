@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ControlPointDuplicate.js",
+  "module": "./ControlPointDuplicate.esm.js",
+  "types": "./ControlPointDuplicate.d.ts"
+}

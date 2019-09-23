@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MeetingRoom.js",
+  "module": "./MeetingRoom.esm.js",
+  "types": "./MeetingRoom.d.ts"
+}

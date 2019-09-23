@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArtTrack.js",
+  "module": "./ArtTrack.esm.js",
+  "types": "./ArtTrack.d.ts"
+}

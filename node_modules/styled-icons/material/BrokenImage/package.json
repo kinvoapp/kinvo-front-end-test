@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BrokenImage.js",
+  "module": "./BrokenImage.esm.js",
+  "types": "./BrokenImage.d.ts"
+}

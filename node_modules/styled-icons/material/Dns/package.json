@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Dns.js",
+  "module": "./Dns.esm.js",
+  "types": "./Dns.d.ts"
+}

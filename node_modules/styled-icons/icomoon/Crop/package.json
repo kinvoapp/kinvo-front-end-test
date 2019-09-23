@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Crop.js",
+  "module": "./Crop.esm.js",
+  "types": "./Crop.d.ts"
+}

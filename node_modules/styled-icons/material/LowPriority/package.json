@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LowPriority.js",
+  "module": "./LowPriority.esm.js",
+  "types": "./LowPriority.d.ts"
+}

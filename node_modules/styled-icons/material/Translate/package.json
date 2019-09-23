@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Translate.js",
+  "module": "./Translate.esm.js",
+  "types": "./Translate.d.ts"
+}

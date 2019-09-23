@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatIndentIncrease.js",
+  "module": "./FormatIndentIncrease.esm.js",
+  "types": "./FormatIndentIncrease.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatAlignLeft.js",
+  "module": "./FormatAlignLeft.esm.js",
+  "types": "./FormatAlignLeft.d.ts"
+}

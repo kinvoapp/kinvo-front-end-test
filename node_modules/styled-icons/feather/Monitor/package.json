@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Monitor.js",
+  "module": "./Monitor.esm.js",
+  "types": "./Monitor.d.ts"
+}

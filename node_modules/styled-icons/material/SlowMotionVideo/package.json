@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SlowMotionVideo.js",
+  "module": "./SlowMotionVideo.esm.js",
+  "types": "./SlowMotionVideo.d.ts"
+}

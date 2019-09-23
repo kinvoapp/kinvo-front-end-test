@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExposurePlus2.js",
+  "module": "./ExposurePlus2.esm.js",
+  "types": "./ExposurePlus2.d.ts"
+}

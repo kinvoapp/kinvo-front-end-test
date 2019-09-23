@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ListAlt.js",
+  "module": "./ListAlt.esm.js",
+  "types": "./ListAlt.d.ts"
+}

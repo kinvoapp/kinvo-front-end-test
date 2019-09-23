@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalDining.js",
+  "module": "./LocalDining.esm.js",
+  "types": "./LocalDining.d.ts"
+}

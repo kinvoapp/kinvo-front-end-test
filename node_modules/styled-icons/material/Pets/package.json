@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Pets.js",
+  "module": "./Pets.esm.js",
+  "types": "./Pets.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AddCircle.js",
+  "module": "./AddCircle.esm.js",
+  "types": "./AddCircle.d.ts"
+}

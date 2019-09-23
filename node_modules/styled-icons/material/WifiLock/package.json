@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./WifiLock.js",
+  "module": "./WifiLock.esm.js",
+  "types": "./WifiLock.d.ts"
+}

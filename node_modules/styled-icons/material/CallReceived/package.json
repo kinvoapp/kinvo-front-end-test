@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CallReceived.js",
+  "module": "./CallReceived.esm.js",
+  "types": "./CallReceived.d.ts"
+}

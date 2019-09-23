@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermCameraMic.js",
+  "module": "./PermCameraMic.esm.js",
+  "types": "./PermCameraMic.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Flight.js",
+  "module": "./Flight.esm.js",
+  "types": "./Flight.d.ts"
+}

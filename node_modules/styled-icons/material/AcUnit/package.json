@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AcUnit.js",
+  "module": "./AcUnit.esm.js",
+  "types": "./AcUnit.d.ts"
+}

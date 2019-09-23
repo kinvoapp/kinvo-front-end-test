@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Stars.js",
+  "module": "./Stars.esm.js",
+  "types": "./Stars.d.ts"
+}

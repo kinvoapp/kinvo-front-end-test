@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ZoomOutMap.js",
+  "module": "./ZoomOutMap.esm.js",
+  "types": "./ZoomOutMap.d.ts"
+}

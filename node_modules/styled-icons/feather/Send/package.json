@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Send.js",
+  "module": "./Send.esm.js",
+  "types": "./Send.d.ts"
+}

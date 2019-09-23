@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Pool.js",
+  "module": "./Pool.esm.js",
+  "types": "./Pool.d.ts"
+}

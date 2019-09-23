@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./QuestionAnswer.js",
+  "module": "./QuestionAnswer.esm.js",
+  "types": "./QuestionAnswer.d.ts"
+}

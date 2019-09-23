@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Weekend.js",
+  "module": "./Weekend.esm.js",
+  "types": "./Weekend.d.ts"
+}

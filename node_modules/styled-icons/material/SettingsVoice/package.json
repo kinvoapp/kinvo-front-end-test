@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsVoice.js",
+  "module": "./SettingsVoice.esm.js",
+  "types": "./SettingsVoice.d.ts"
+}

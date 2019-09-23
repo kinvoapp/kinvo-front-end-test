@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ChatBubble.js",
+  "module": "./ChatBubble.esm.js",
+  "types": "./ChatBubble.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StarOutline.js",
+  "module": "./StarOutline.esm.js",
+  "types": "./StarOutline.d.ts"
+}

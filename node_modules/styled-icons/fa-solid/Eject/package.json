@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Eject.js",
+  "module": "./Eject.esm.js",
+  "types": "./Eject.d.ts"
+}

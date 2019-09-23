@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CloudUpload.js",
+  "module": "./CloudUpload.esm.js",
+  "types": "./CloudUpload.d.ts"
+}

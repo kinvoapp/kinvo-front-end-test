@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ImportContacts.js",
+  "module": "./ImportContacts.esm.js",
+  "types": "./ImportContacts.d.ts"
+}

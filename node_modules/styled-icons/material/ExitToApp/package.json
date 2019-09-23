@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ExitToApp.js",
+  "module": "./ExitToApp.esm.js",
+  "types": "./ExitToApp.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsPower.js",
+  "module": "./SettingsPower.esm.js",
+  "types": "./SettingsPower.d.ts"
+}

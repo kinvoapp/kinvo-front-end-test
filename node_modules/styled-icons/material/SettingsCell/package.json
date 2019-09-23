@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SettingsCell.js",
+  "module": "./SettingsCell.esm.js",
+  "types": "./SettingsCell.d.ts"
+}

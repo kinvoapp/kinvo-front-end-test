@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./BlurLinear.js",
+  "module": "./BlurLinear.esm.js",
+  "types": "./BlurLinear.d.ts"
+}

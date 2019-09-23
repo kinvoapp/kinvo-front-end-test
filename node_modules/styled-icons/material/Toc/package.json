@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Toc.js",
+  "module": "./Toc.esm.js",
+  "types": "./Toc.d.ts"
+}

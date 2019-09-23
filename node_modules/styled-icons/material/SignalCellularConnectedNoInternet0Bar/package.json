@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignalCellularConnectedNoInternet0Bar.js",
+  "module": "./SignalCellularConnectedNoInternet0Bar.esm.js",
+  "types": "./SignalCellularConnectedNoInternet0Bar.d.ts"
+}

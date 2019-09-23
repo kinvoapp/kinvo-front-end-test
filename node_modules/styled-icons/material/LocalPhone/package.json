@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalPhone.js",
+  "module": "./LocalPhone.esm.js",
+  "types": "./LocalPhone.d.ts"
+}

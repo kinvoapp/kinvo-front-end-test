@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FilterVintage.js",
+  "module": "./FilterVintage.esm.js",
+  "types": "./FilterVintage.d.ts"
+}

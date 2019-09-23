@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CellWifi.js",
+  "module": "./CellWifi.esm.js",
+  "types": "./CellWifi.d.ts"
+}

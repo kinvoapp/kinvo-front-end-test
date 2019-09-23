@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./StayCurrentPortrait.js",
+  "module": "./StayCurrentPortrait.esm.js",
+  "types": "./StayCurrentPortrait.d.ts"
+}

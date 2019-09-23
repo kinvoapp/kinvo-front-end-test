@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Storm.js",
+  "module": "./Storm.esm.js",
+  "types": "./Storm.d.ts"
+}

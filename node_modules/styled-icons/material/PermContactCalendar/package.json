@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PermContactCalendar.js",
+  "module": "./PermContactCalendar.esm.js",
+  "types": "./PermContactCalendar.d.ts"
+}

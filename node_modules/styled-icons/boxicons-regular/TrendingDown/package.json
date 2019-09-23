@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TrendingDown.js",
+  "module": "./TrendingDown.esm.js",
+  "types": "./TrendingDown.d.ts"
+}

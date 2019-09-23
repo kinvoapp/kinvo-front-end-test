@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Atm.js",
+  "module": "./Atm.esm.js",
+  "types": "./Atm.d.ts"
+}

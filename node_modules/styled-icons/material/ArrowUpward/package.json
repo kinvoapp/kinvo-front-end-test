@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ArrowUpward.js",
+  "module": "./ArrowUpward.esm.js",
+  "types": "./ArrowUpward.d.ts"
+}

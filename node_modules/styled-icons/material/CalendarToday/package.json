@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./CalendarToday.js",
+  "module": "./CalendarToday.esm.js",
+  "types": "./CalendarToday.d.ts"
+}

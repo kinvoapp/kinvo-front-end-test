@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./RemoveCircleOutline.js",
+  "module": "./RemoveCircleOutline.esm.js",
+  "types": "./RemoveCircleOutline.d.ts"
+}

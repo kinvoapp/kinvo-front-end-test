@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TabletAndroid.js",
+  "module": "./TabletAndroid.esm.js",
+  "types": "./TabletAndroid.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Healing.js",
+  "module": "./Healing.esm.js",
+  "types": "./Healing.d.ts"
+}

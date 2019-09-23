@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Man.js",
+  "module": "./Man.esm.js",
+  "types": "./Man.d.ts"
+}

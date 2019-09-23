@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Filter8.js",
+  "module": "./Filter8.esm.js",
+  "types": "./Filter8.d.ts"
+}

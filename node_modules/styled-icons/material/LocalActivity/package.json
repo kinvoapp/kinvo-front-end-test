@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalActivity.js",
+  "module": "./LocalActivity.esm.js",
+  "types": "./LocalActivity.d.ts"
+}

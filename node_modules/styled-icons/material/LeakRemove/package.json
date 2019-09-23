@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LeakRemove.js",
+  "module": "./LeakRemove.esm.js",
+  "types": "./LeakRemove.d.ts"
+}

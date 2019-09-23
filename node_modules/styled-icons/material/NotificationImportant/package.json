@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NotificationImportant.js",
+  "module": "./NotificationImportant.esm.js",
+  "types": "./NotificationImportant.d.ts"
+}

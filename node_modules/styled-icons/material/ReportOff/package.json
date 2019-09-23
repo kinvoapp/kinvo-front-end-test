@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ReportOff.js",
+  "module": "./ReportOff.esm.js",
+  "types": "./ReportOff.d.ts"
+}

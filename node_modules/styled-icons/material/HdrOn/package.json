@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HdrOn.js",
+  "module": "./HdrOn.esm.js",
+  "types": "./HdrOn.d.ts"
+}

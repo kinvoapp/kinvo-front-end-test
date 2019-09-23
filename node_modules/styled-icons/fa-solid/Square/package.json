@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Square.js",
+  "module": "./Square.esm.js",
+  "types": "./Square.d.ts"
+}

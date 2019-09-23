@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./HotTub.js",
+  "module": "./HotTub.esm.js",
+  "types": "./HotTub.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./InsertChartOutlined.js",
+  "module": "./InsertChartOutlined.esm.js",
+  "types": "./InsertChartOutlined.d.ts"
+}

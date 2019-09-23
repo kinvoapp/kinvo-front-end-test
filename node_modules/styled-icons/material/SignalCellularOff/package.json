@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./SignalCellularOff.js",
+  "module": "./SignalCellularOff.esm.js",
+  "types": "./SignalCellularOff.d.ts"
+}

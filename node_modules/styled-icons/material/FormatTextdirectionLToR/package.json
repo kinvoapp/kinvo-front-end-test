@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./FormatTextdirectionLToR.js",
+  "module": "./FormatTextdirectionLToR.esm.js",
+  "types": "./FormatTextdirectionLToR.d.ts"
+}

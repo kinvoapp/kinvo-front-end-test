@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./NavigateNext.js",
+  "module": "./NavigateNext.esm.js",
+  "types": "./NavigateNext.d.ts"
+}

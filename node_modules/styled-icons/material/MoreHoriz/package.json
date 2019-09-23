@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoreHoriz.js",
+  "module": "./MoreHoriz.esm.js",
+  "types": "./MoreHoriz.d.ts"
+}

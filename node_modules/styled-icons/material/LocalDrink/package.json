@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./LocalDrink.js",
+  "module": "./LocalDrink.esm.js",
+  "types": "./LocalDrink.d.ts"
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./ColorLens.js",
+  "module": "./ColorLens.esm.js",
+  "types": "./ColorLens.d.ts"
+}

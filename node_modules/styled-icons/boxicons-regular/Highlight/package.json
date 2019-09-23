@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Highlight.js",
+  "module": "./Highlight.esm.js",
+  "types": "./Highlight.d.ts"
+}

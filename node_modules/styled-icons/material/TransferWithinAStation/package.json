@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./TransferWithinAStation.js",
+  "module": "./TransferWithinAStation.esm.js",
+  "types": "./TransferWithinAStation.d.ts"
+}

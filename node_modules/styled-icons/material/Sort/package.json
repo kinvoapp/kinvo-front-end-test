@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Sort.js",
+  "module": "./Sort.esm.js",
+  "types": "./Sort.d.ts"
+}

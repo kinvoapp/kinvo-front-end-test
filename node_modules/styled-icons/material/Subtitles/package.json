@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./Subtitles.js",
+  "module": "./Subtitles.esm.js",
+  "types": "./Subtitles.d.ts"
+}

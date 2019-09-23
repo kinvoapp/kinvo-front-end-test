@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./AirlineSeatLegroomNormal.js",
+  "module": "./AirlineSeatLegroomNormal.esm.js",
+  "types": "./AirlineSeatLegroomNormal.d.ts"
+}

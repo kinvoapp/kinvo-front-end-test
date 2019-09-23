@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./PresentToAll.js",
+  "module": "./PresentToAll.esm.js",
+  "types": "./PresentToAll.d.ts"
+}

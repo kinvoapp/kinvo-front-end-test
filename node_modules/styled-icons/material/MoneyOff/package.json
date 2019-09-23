@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "main": "./MoneyOff.js",
+  "module": "./MoneyOff.esm.js",
+  "types": "./MoneyOff.d.ts"
+}
