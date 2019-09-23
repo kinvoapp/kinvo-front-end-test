@@ -1,0 +1,203 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.header-1{
+    background: white;
+    height: 70px;
+}
+
+.logo{
+    padding: 30px;
+}
+hr{
+    color: #CCCFD1;
+    margin: 0px;
+}
+.barraesquerda{
+    background: white;
+    width: 225px;
+    height: 100%;
+    float: left;
+}
+
+.menu{
+    margin-left: 225px;
+    background: #DAE0E3;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+button{
+    align-content: center;
+    height: 72px;
+    width: 100%;
+    border: 0;
+    display: flex;
+}
+.botao{
+    background: white;
+}
+
+.botao2{
+    background: #EEF2F4;
+}
+
+.opcoes2{
+    background: yellow;
+    width: 100%;
+    height: 72px;
+}
+
+.circulo{
+    align-content: center;
+    margin: left;
+    background: #DAE0E3;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.circulo2{
+    align-content: center;
+    margin: left;
+    background: #5D41AC;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.circulo2 > .icone{
+    margin: 6px;
+    width: 55%;
+    height: 55%
+}
+.circulo > .icone{
+    margin: 6px;
+    width: 55%;
+    height: 55%
+}
+
+.texto{
+    margin-left: 30px;
+    margin-right: 25px;
+}
+
+.analise{
+    color: #707B81;
+    padding: 26px;
+
+}
+.cardAções2{
+    background: #F8FAFB;
+    width: 265px;
+    height: 66px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 22px;
+}
+.cardAções{
+    background: #EEF2F4;
+    width: 265px;
+    height: 66px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 8px;
+}
+
+.menu li{
+    display: inline-block;
+    list-style: none;
+}
+.textoCardAções2{
+    color:#707B81;
+    padding: 25px;
+}
+
+.textoCardAções{
+    color:#AAB5BB;
+    padding: 25px;
+}
+
+.boxDeProdutos{
+    width: 1096px;
+    height: 100%;
+    background: #F8FAFB;
+    margin-left: 22px;
+}
+
+.boxValores{
+    width: 185px;
+    height: 75px;
+    background: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+
+.valoresNome{
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.valoresNumero{
+    color: #707B81;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Fundos{
+    background: white;
+    width: 1055px;
+    height: 100%;
+    margin-left: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.textoFundos{
+    color: #707B81;
+    padding: 20px;
+    margin: 0;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.pesquisar{
+    border-radius: 15px;
+    margin-left: 600px;
+    background: #EEF2F4;
+    width: 250px;
+    height: 33px;
+}
+
+.pesquisar > .icone2{
+    margin: 6px;
+}
+
+.formato{
+    background: #5D41AC;
+    height: 50px;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.fonte{
+    color: #5D41AC;
+    font-size: 12px;
+
+}
+
+.fonte2{
+    color: #5D41AC ;
+    font-size: 25px;
+    
+}
+
+

@@ -1,0 +1,513 @@
+<html lang="pt-BR">
+
+<head>
+    <title>KinvoPremium</title>
+    <link rel="shortcut icon" href="./img/kinvo.jpg" type="image/x-png">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/bootstrap-4.3.1-dist/css/bootstrap.css">
+
+    <script type="text/javascript">
+        var texto = "Faça sua busca aqui!";
+        function preenche() {
+            var valor = document.getElementById("busca").value;
+            if (valor == "") {
+                document.getElementById("busca").value = texto;
+            }
+        }
+        function limpa() {
+            var valor = document.getElementById("busca").value;
+            if (valor == texto) {
+                valor = document.getElementById("busca").value = '';
+            }
+        }
+
+    </script>
+
+    <style type="text/css">
+        input[type="text"] {
+            background: transparent;
+            border: 0;
+        }
+    </style>
+
+</head>
+
+<body onload="preenche();">
+
+
+    <header>
+        <div class="header-1">
+            <div class="logo">
+                <img src="./img/kinvologo.png" alt="">
+
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+
+        <aside class="barraesquerda">
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/resumodacarteira.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Resumo<br> da Carteira</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/meusproventos.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Meus<br>Produtos</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/meusproventos.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Meus<br> Proventos</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao2">
+                <div class="circulo2">
+                    <img src="./img/analiseporclassedeproduto.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Análise por<br>Classe de Produto</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/rentabilidadereal.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Rentabilidade<br>Real</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/projecaodacarteira.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Projeção<br>da Carteira</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/riscoxretorno.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Risco<br>X Retorno</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+
+            <hr>
+
+            <button id="Resumo" type="button" class="botao">
+                <div class="circulo">
+                    <img src="./img/coberturafgc.png" class="icone">
+                </div>
+                <div align="justify" class="texto">Cobertura<br>do FGC</div>
+
+                <div class="arrow"> <img src="./img/arrow.png" alt=""></div>
+
+            </button>
+        </aside>
+
+        <div class="menu">
+            <h1 style="font-family: Helvetica Neue" class="analise">Análise por Classe de Ativos</h1>
+            <li class="cardAções2">
+                <div style="font-family: Helvetica Neue" class="textoCardAções2">Ações</div>
+            </li>
+
+            <li class="cardAções">
+                <div style="font-family: Helvetica Neue" class="textoCardAções">Nome da Classe</div>
+            </li>
+
+            <li class="cardAções">
+                <div style="font-family: Helvetica Neue" class="textoCardAções">Nome da Classe</div>
+            </li>
+
+            <li class="cardAções">
+                <div style="font-family: Helvetica Neue" class="textoCardAções">Nome da Classe</div>
+            </li>
+            <div class="boxDeProdutos">
+                <li class="boxValores">
+                    <center>
+                        <div style="font-family: Helvetica Neue" class="valoresNome">
+                            SALDO BRUTO
+                        </div>
+                        <div style="font-family: Helvetica Neue" class="valoresNumero">
+                            R$12.709,14
+                        </div>
+                    </center>
+
+                <li class="boxValores">
+                    <center>
+                        <div style="font-family: Helvetica Neue" class="valoresNome">
+                            VALOR APLICADO
+                        </div>
+                        <div style="font-family: Helvetica Neue" class="valoresNumero">
+                            R$10.023,12
+                        </div>
+                    </center>
+
+                </li>
+
+                <li class="boxValores">
+                    <center>
+                        <div style="font-family: Helvetica Neue" class="valoresNome">
+                            GANHO DE CAPITAL
+                        </div>
+                        <div style="font-family: Helvetica Neue" class="valoresNumero">
+                            R$2.686,01
+                        </div>
+                    </center>
+
+                </li>
+                <li class="boxValores">
+                    <center>
+                        <div style="font-family: Helvetica Neue" class="valoresNome">
+                            TOTAL DISTRIBUIDOS
+                        </div>
+                        <div style="font-family: Helvetica Neue" class="valoresNumero">
+                            R$800,00
+                        </div>
+                    </center>
+
+                </li>
+                <li class="boxValores">
+                    <center>
+                        <div style="font-family: Helvetica Neue" class="valoresNome">
+                            YIELD
+                        </div>
+                        <div style="font-family: Helvetica Neue" class="valoresNumero">
+                            15%
+                        </div>
+                    </center>
+
+                </li>
+
+                <div class="Fundos">
+                    <li>
+                        <h1 style="font-family: Helvetica Neue" class="textoFundos">Fundos</h1>
+                    </li>
+                    <li class="pesquisar">
+                        <div class="icone2">
+                            <img src="./img/pesquisa.png">
+                            <input type="text" onclick="limpa();" onblur="preenche();" name="palavra" id="busca"
+                                value="">
+                        </div>
+                    </li>
+                    <table class="table">
+
+                        <tbody>
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ABEV3 - AMBEV</td>
+                                <td>
+                                    <div class="fonte">SALDO ATUAL</div>
+                                    <div class="fonte2">R$ 1980,00</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">QUANT</div>
+                                    <div class="fonte2">100</div>
+                                </td>
+
+                                <td>
+                                    <div class="fonte">PREÇO MÉDIO</div>
+                                    <div class="fonte2">R$ 19,80</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">ÚLTIMA COTAÇÃO</div>
+                                    <div class="fonte2">R$ 20,06</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(1M)</div>
+                                    <div class="fonte2">2,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">YIELD(12M)</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                                <td>
+                                    <div class="fonte">% CARTEIRA</div>
+                                    <div class="fonte2">12,31%</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+</body>
+
+</html>
