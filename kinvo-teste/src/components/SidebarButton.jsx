@@ -13,8 +13,8 @@ const DIV = styled.div`
   p {
     padding: 0 10px;
   }
-  width: 200px;
-  height: 70px;
+  width: 160px;
+  height: 60px;
   background-color: ${props => (props.getState ? "#eef2f4" : "#ffffff")};
   border: 1px solid #eef2f4;
 `;
