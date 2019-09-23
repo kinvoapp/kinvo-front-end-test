@@ -2,13 +2,12 @@
 
 # Teste candidatos à vaga de Front-End **ainda em andamento** por Danilo Alves
 
-
 ## Instruções para rodar o aplicativo:
 Pode ser inicializado em modo desenvolver através do comando:<br>
-```npm start```
+```npm start``` <br>
 Com isso, ficará disponível para ser visto em [http://localhost:3000](http://localhost:3000). <br>
 Caso desejado, a versão final do aplicativo pode ser construído com: <br>
-```npm build```
+```npm build``` <br>
 Logo em seguida a build contará com otimizações e estará minificada.
 
 ### Ferramentas usadas:
