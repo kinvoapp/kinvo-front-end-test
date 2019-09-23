@@ -1,0 +1,632 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>
+        Kinvo
+    </title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+
+<body>
+    <!-- Icone da KinvoPremium e Barra superior -->
+    <header class="menuSuperior">
+        <div href="Logo do " class="logo">
+            <img src="./img/logo.svg" alt="Deu erro">
+        </div>
+    </header>
+    <!-- Coluna de Opções ao lado -->
+    <aside class="coluna-de-opcoes">
+        <hr>
+        <button id="Resumo" type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Icon1.svg" class="icone">
+            </div>
+            <div align="justify">
+                Resumo <br> da Carteira
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3773.svg" class="icone">
+            </div>
+            <div align="justify">
+                Meus <br> Produtos
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3775.svg" class="icone">
+            </div>
+            <div align="justify">
+                Meus <br> Proventos
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button autofocus type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3781.svg" class="icone">
+            </div>
+            <div align="justify">
+                Análise por <br> Classe de Produto
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/diamante.svg" class="icone">
+            </div>
+            <div align="justify">
+                Rentabilidade <br> Real
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3783.svg" class="icone">
+            </div>
+            <div align="justify">
+                Projeção <br> da Carteira
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3778.svg" class="icone">
+            </div>
+            <div align="justify">
+                Risco <br> X Retorno
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+            </div>
+        </button>
+        <hr>
+        <button type="button" class="buttom">
+            <div class="elipse">
+                <img src="./img/Caminho 3779.svg" class="icone">
+            </div>
+            <div align="justify">
+                Cobertura <br> de FGC
+            </div>
+            <div class="seta">
+                <img src="./img/path.svg" alt="">
+        </button>
+        <hr>
+    </aside>
+    <!-- Seção de Fundos -->
+    <section>
+        <!-- Titulo da seção de fundos -->
+        <H1 class="tituloEmUso">Análise por Classe de Ativos</H1>
+        <!-- Classe do layout -->
+        <div>
+            <button type="button" class="Classe">
+                <H1 class="tituloEmUso">Ações</H1>
+            </button>
+            <button type="button" class="Classe">
+                <p>Nome da Classe</p>
+            </button>
+            <button type="button" class="Classe">
+                <p>Nome da Classe</p>
+            </button>
+            <button type="button" class="Classe">
+                <p>Nome da Classe</p>
+            </button>
+            </button>
+        </div>
+        <div class="fundos">
+            <div>
+                <div>
+                    <div class="saldos">
+                        <h1 class="texto">SALDO BRUTO</h1>
+                        <p>R$ 12.709,14</p>
+                    </div>
+                    <div class="saldos2">
+                        <h1 class="texto">VALOR APLICADO</h1>
+                        <p>R$ 10.023,12</p>
+                    </div>
+                    <div class="saldos2">
+                        <h1 class="texto">GANHO DE CAPITAL</h1>
+                        <p>R$ 2.686,01</p>
+                    </div>
+                    <div class="saldos2">
+                        <h1 class="texto">TOTAL DISTRIBUIDOS</h1>
+                        <p>R$ 800,00</p>
+                    </div>
+                    <div class="saldos3">
+                        <h1 class="texto">YIELD</h1>
+                        <p>15%</p>
+                    </div>
+                    <div class="conteudoDaLista">
+                        <div id="divBusca">
+                            <img src="./img/Lupa.svg" alt="">
+                            <input type="search" id="txtBusca" name="pesquisa" />
+                        </div>
+                        <H1 class="tituloEmUso">Fundos</H1>
+
+                        <table class="table" id="tabelaDeAções">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1></h1>
+                                        <p></p>
+                                        <font color="#4C309B">AMBEV3-AMBEV</font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">SALDO ATUAL
+                                            <br> R$ 1980,00
+                                        </font>
+                                    </td>
+                                    <td align="center">
+                                        <font color="#4C309B">QUANT
+                                            <br> 100
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">ULTIMA COTAÇÃO
+                                            <br> R$ 20,06
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (1M)
+                                            <br> 2,31%
+                                        </font>
+                                    </td>
+                                    <td align="justify">
+                                        <font color="#4C309B">YIELD (12M)
+                                            <br> 12,31%
+                                        </font>
+                                    </td>
+                                    <td>% CARTEIRA <br> 12,31%</td>
+                                </tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+<script type="text/javascript" src="jquery.dataTables.js"></script>
+<script type="text/javascript" src="dataTables.filter.range.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var table = $('.search').DataTable();
+
+        /* Add event listeners to the two range filtering inputs */
+        $('1, 100').keyup(function () {
+            table.draw();
+        });
+    });
+</script>

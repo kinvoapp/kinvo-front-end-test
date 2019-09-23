@@ -1,0 +1,234 @@
+
+body{
+    margin: 0%;
+    width: 100%;
+    height: 1265px;
+    background-color: #DAE0E3;
+}
+button{
+    align-content: center;
+    width: 100%;
+    height: 71px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    border: 10px;
+    padding-left: 12px;
+    background-color: transparent;
+    color: #707B81;
+    display: flex
+}
+.menuSuperior{
+    background-color: #ffffff;
+    height: 90px;
+}
+.menuSuperior > .logo{
+    padding: 31px 28px;
+}
+.coluna-de-opcoes{
+    background-color: #ffffff;
+    float: left;
+    width: 225px;
+    height: 1202px;
+    margin-right: 23px
+}
+.buttom{
+    background-color: #ffffff;
+
+}
+.buttom:focus{
+    background-color: #EEF2F4;
+    content: counter(elispse);
+}
+.bloco-de-acoes{
+    background-color: #ffffff;
+    width: 1090px;
+    height: 1064px;
+}
+.titulo{
+    color: #707B81;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 18px ;
+}
+
+.elipse{
+    margin-right: 12px;
+    width: 30;
+    height: 30;
+    background-color: #DAE0E3;
+    border-radius: 100%;
+}
+.elipse:hover{
+    background-color: #5D41AC
+}
+.elipse > .icone{
+    margin: 6px;
+    width: 55%;
+    height: 55%;
+
+}
+.seta{
+    align-self: center;
+    position: absolute;
+    margin-inline-start: 190px
+}
+.seta2{
+    align-self: center;
+    position: absolute;
+    margin-inline-start: 80px
+}
+
+hr{
+    height: 0.2px;
+    margin: 0%;
+    border-style: solid;
+    border-color: #EEF2F4;
+    background-color: #EEF2F4;
+
+}
+
+.bloco-de-acoes{
+    background-color: #F8FAFB;
+    width: 80%;
+    float: left;
+    
+}
+.Classe{
+    float: left;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    background-color: #EEF2F4;
+    width: 315px;
+    height: 66px;
+    padding-left: 25px;
+    margin-right: 10px
+}
+.Classe:focus{
+    background-color: #F8FAFB;
+}
+.nomeDaClasse{
+    float: left;
+    border-radius: 9px;
+    background-color: #EEF2F4;
+    width: 265px;
+    height: 66px;
+    margin: 20px
+}
+.texto{
+    background-color: transparent;
+    color: #AAB5BB;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10 0 0 0;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 5px
+}
+h1{
+    background-color: transparent;
+    color: #AAB5BB;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10 0 0 0;
+    
+}
+p{  
+    font-size: 18px;
+    background-color: transparent;
+    color: #707B81;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0%;
+    margin-top: 2px
+}
+.fundos{
+    width: 1290px;
+    height: 1080px;
+    background-color: #F8FAFB;
+    margin-inline-start: 248px;
+    margin-top: 80px;
+    align-content: center
+}
+.saldos{
+    width: 191px;
+    height: 75px;
+    background-color: #ffffff;
+    float: left;
+    margin: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px
+}
+.saldos2{
+    width: 210px;
+    height: 75px;
+    background-color: #ffffff;
+    float: left;
+    margin: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px
+}
+.saldos3{
+    width: 180px;
+    height: 75px;
+    background-color: #ffffff;
+    float: left;
+    margin: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px
+}
+.sectionFundos{
+    margin: 100px;
+    background-color: #FFFFFF;
+    height: 1090px;
+}
+.conteudoDaLista{
+    margin: 10 15 19 15px;
+    width: 1264px;
+    height: 900px;
+    background-color: #FFFFFF;
+    float: left;
+    border-radius: 10px
+}
+.tituloEmUso{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 18px ;
+    color: #707B81
+}
+.lista{
+    margin: 13px;
+    width: 1237px;
+    height: 823;
+    background-color: transparent;
+}
+#divBusca{
+    margin: 15px;
+    background-color:#E0EEEE;
+    border-radius:20px;
+    width:250px;
+    height:33px;
+    float: right;
+}
+   
+ #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px; 
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+}
+   
+#divBusca img{
+      size: 15px;
+    margin: 7px;
+    float:left;
+}
