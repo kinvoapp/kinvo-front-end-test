@@ -1,6 +1,6 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
 
-# Teste candidatos à vaga de Front-End por Danilo Alves
+# Teste à vaga de Front-End realizado por Danilo Alves
 
 ## Instruções para rodar o aplicativo:
 Primeiro, é necessário estar dentro da pasta kinvo-teste, que fica em<br>
