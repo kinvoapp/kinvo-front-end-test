@@ -3,9 +3,6 @@ import styled from "styled-components";
 //
 // styled-components code
 const DIV = styled.div`
-  &:hover {
-    cursor: pointer;
-  }
   display: table-cell;
   background-color: ${props => (props.active ? "#F8FAFB" : "#EEF2F4")};
   font-family: "helvetica-neue, arial";
@@ -17,9 +14,13 @@ const DIV = styled.div`
     background-color: transparent;
   }
   color: #707b81;
-  width: 265px;
+  width: 230px;
   height: 65px;
   border-radius: 10px;
+  &:hover {
+    background-color: ${props => (props.active ? "#F8FAFB" : "#F8FAFB")};
+    cursor: pointer;
+  }
 `;
 
 class AssetClassButton extends Component {

@@ -16,7 +16,7 @@ const FundsNav = styled.div`
   padding: 0 5%;
 
   div {
-    padding: 0 85%;
+    padding: 0 80%;
   }
 `;
 
@@ -29,8 +29,8 @@ const Input = styled.input`
   color: palevioletred;
   background: #eef2f4;
   border: solid 1px #9da5ac;
-  border-radius: 12px;
   width: 150px;
+  border-radius: 10px;
   margin-bottom: 0.5em;
 `;
 

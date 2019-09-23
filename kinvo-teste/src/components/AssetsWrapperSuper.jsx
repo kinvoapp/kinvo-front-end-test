@@ -16,7 +16,7 @@ const DIV = styled.div`
   text-align: center;
   background-color: #b1bbc1;
   div {
-    margin: 0 0.5%;
+    margin: 0 1%;
   }
 `;
 

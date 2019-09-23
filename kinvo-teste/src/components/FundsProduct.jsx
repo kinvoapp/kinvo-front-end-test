@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { styleMoney } from "./FunctionsLibrary";
 
 // styled-components code
 const P = styled.p`
@@ -41,7 +42,7 @@ class FundsProduct extends Component {
           <SmallSetOfInfo>
             <P fontSize={8}>SALDO ATUAL</P>
             <P fontSize={14}>
-              R$ {this.props.amount * this.props.averagePrice}
+              R$ {styleMoney(this.props.amount * this.props.averagePrice)}
             </P>
           </SmallSetOfInfo>
 
@@ -52,12 +53,12 @@ class FundsProduct extends Component {
 
           <SmallSetOfInfo>
             <P fontSize={8}>PREÇO MÉDIO</P>
-            <P fontSize={14}>R$ {this.props.averagePrice}</P>
+            <P fontSize={14}>R$ {styleMoney(this.props.averagePrice)}</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>ÚLTIMA COTAÇÃO</P>
-            <P fontSize={14}>R$ {this.props.lastQuotation}</P>
+            <P fontSize={14}>R$ {styleMoney(this.props.lastQuotation)}</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
