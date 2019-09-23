@@ -89,7 +89,7 @@ Coleção de Sidebar Buttons. Barra lateral.
 ![Sidebar Set Of Buttons](./readme-images/SidebarSetOfButtons.png)
 
 ### ./components/Header.jsx
-É como o nome diz, o header da aplicação.
+Header da aplicação.
 
 ![Header](./readme-images/Header.png)
 
