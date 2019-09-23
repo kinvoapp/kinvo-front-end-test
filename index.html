@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #entradaPesquisa {
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #entradaTabela, #entradaSumario{
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            #entradaTabela th, #entradaTabela td, #entradaSumario th,
+            #entradaSumario td {
+                text-align: center;
+                padding: 12px;
+            }
+
+            #entradaTabela tr, #entradaSumario tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #entradaTabela tr.header, #entradaTabela tr,
+            #entradaSumario tr.header, #entradaSumario tr:relative {
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Pesquisa de Produtos</h2>
+
+        <input type="text" id="entradaPesquisa" onkeyup="funcaoExecutar()"
+               placeholder="Pesquise o produto do seu interesse"
+               title="Digite algo do seu interesse">
+
+        <table id="entradaTabela">
+            <tr class="header">
+                <th style="width:15%;">Nome do Produto</th>
+                <th style="width:2%;">Equity</th>
+                <th style="width:5%;">Quantidade</th>
+                <th style="width:5%;">Preço Médio</th>
+                <th style="width:5%;">Última Cotação</th>
+                <th style="width:5%;">Yield Mensal</th>
+                <th style="width:5%;">Yield Anual</th>
+            </tr>
+            <tr>
+                <td>ABEV3 - AMBEV</td>
+                <td headers="equity">1980.90</td>
+                <td headers="qtd1">100</td>
+                <td headers="valorm1">19.80</td>
+                <td headers="ultimovalor1">20.06</td>
+                <td headers="yieldM1">2.31</td>
+                <td headers="yieldA1">12.31</td>
+            </tr>
+            <tr>
+                <td>NEOE3 - NEOENERGIA</td>
+                <td headers="equity">3650.44</td>
+                <td headers="qtd2">200</td>
+                <td headers="valorm2">17.80</td>
+                <td headers="ultimovalor2">18.00</td>
+                <td headers="yieldM2">2.31</td>
+                <td headers="yieldA2">12.31</td>
+            </tr>
+            <tr>
+                <td>BIDI4 - Banco Inter</td>
+                <td headers="equity">9600.00</td>
+                <td headers="qtd3">600</td>
+                <td headers="valorm3">16.60</td>
+                <td headers="ultimovalor3">17.09</td>
+                <td headers="yieldM3">2.31</td>
+                <td headers="yieldA3">12.31</td>
+            </tr>
+            <tr>
+                <td>ITSA4 - ItaúSA</td>
+                <td headers="equity">2180.90</td>
+                <td headers="qtd4">200</td>
+                <td headers="valorm4">11.90</td>
+                <td headers="ultimovalor4">12.59</td>
+                <td headers="yieldM4">2.31</td>
+                <td headers="yieldA4">12.31</td>
+            </tr>
+            <tr>
+                <td>WEGE3 - WEG S.A.</td>
+                <td headers="equity">6540.00</td>
+                <td headers="qtd5">300</td>
+                <td headers="valorm5">21.80</td>
+                <td headers="ultimovalor5">23.92</td>
+                <td headers="yieldM5">2.31</td>
+                <td headers="yieldA5">12.31</td>
+            </tr>
+            <tr>
+                <td>GRND3 - Grendene</td>
+                <td headers="equity">1260.00</td>
+                <td headers="qtd6">200</td>
+                <td headers="valorm6">6.30</td>
+                <td headers="ultimovalor6">7.61</td>
+                <td headers="yieldM6">2.31</td>
+                <td headers="yieldA6">12.31</td>
+            </tr>
+            <tr>
+                <td>EGIE3 - Engie Brasil</td>
+                <td headers="equity">4835.00</td>
+                <td headers="qtd7">100</td>
+                <td headers="valorm7">19.80</td>
+                <td headers="ultimovalor7">48.35</td>
+                <td headers="yieldM7">2.31</td>
+                <td headers="yieldA7">12.31</td>
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <table id="entradaSumario">
+            <tr class="header">
+                <th style="width:10%;">Saldo Bruto<br>30047.24 </th>
+                <th style="width:10%;">Valor Aplicado<br>25540.15</th>
+                <th style="width:10%;">Ganho de Capital<br>4507.1</th>
+                <th style="width:10%;">Total Distribuido<br>3420.43 </th>
+                <th style="width:10%;">Yield<br>18.23</th>
+               
+            </tr>
+        <script>
+
+            function funcaoExecutar() {
+                var input, filtro, table, tr, td, i, texto;
+                input = document.getElementById("entradaPesquisa");
+                filtro = input.value.toUpperCase();
+                table = document.getElementById("entradaTabela");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        texto = td.textContent || td.innerText;
+                        if (texto.toUpperCase().indexOf(filtro) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+
+            }
+
+
+        </script>
+    </body>
+</html>
