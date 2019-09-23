@@ -6,8 +6,8 @@ import { styleMoney } from "./FunctionsLibrary.jsx";
 
 // styled-components code
 const DIV = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  display: inline-flex;
+  padding: 1.5%;
 `;
 
 function getButtonData() {

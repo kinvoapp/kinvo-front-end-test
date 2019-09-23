@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // styled-components code
 const DIV = styled.div`
-  padding: 0 20px;
+  display: inline-block;
 `;
 
 class AssetClassSetOfButtons extends Component {

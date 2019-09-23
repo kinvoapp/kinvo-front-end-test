@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import StockClassSetOfButtons from "./StockClassSetOfButtons";
 import styled from "styled-components";
-import { sortedUpperProducts } from "./functionsLibrary";
-import StockClassSetOfButtons from "./StockClassSetOfButtons";
+import { sortedUpperProducts } from "./FunctionsLibrary";
+import FundsSetOfProducts from "./FundsSetOfProducts";
 
 // styled-components code
 const H = styled.h3`
@@ -14,10 +13,25 @@ const H = styled.h3`
 const FundsNav = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 5%;
 
-  form {
-    justify-content: right;
+  div {
+    padding: 0 85%;
   }
+`;
+
+const DIV = styled.div`
+  background-color: #ffffff;
+`;
+
+const Input = styled.input`
+  padding: 0.3em;
+  color: palevioletred;
+  background: #eef2f4;
+  border: solid 1px #9da5ac;
+  border-radius: 12px;
+  width: 150px;
+  margin-bottom: 0.5em;
 `;
 
 // -----------------------------------------------------------------------------
@@ -35,25 +49,27 @@ class FundsNavBar extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <DIV>
         <FundsNav>
           <H>Fundos</H>
-          <form>
-            <input
-              type="text"
-              onChange={this.searchHandler}
-              value={this.state.searchTerm}
-            />
-          </form>
+          <div>
+            <form>
+              <Input
+                type="text"
+                onChange={this.searchHandler}
+                value={this.state.searchTerm}
+              />
+            </form>
+          </div>
         </FundsNav>
 
         <div>
-          <StockClassSetOfButtons
+          <FundsSetOfProducts
             product={this.state.products}
             searchFilter={this.state.searchTerm}
           />
         </div>
-      </React.Fragment>
+      </DIV>
     );
   }
 }

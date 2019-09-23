@@ -58,12 +58,14 @@ export function styleMoney(money) {
   const moneyString = money.toString();
   let countNumbers = 0;
   let moneyFinal = "";
+  let checkComma = 0;
 
   for (let i = moneyString.length - 1; i >= 0; i--) {
     countNumbers++;
 
     if (moneyString[i] === ".") {
       moneyFinal += ",";
+      checkComma = 1;
       countNumbers = 0;
     } else {
       moneyFinal += moneyString[i];
@@ -75,5 +77,6 @@ export function styleMoney(money) {
     }
   }
 
-  return reverseString(moneyFinal);
+  if (checkComma === 1) return reverseString(moneyFinal);
+  return `${reverseString(moneyFinal)},00`;
 }

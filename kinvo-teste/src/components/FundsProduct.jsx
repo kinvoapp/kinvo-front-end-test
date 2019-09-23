@@ -10,24 +10,31 @@ const P = styled.p`
 const Product = styled.div`
   display: grid;
   font-family: "helvetica-neue, arial";
-  height: 45px;
   grid-template-columns: repeat(8, 1fr);
   color: #4c309b;
+  height: 40px;
 `;
 
 const Line = styled.hr`
   color: rgba(0, 0, 0, 0.2);
-  margin-left: -100px;
 `;
 
-const SmallSetOfInfo = styled.div``;
+const SmallSetOfInfo = styled.div`
+  align-items: center;
+`;
+
+const DIV = styled.div`
+  margin: 0 2%;
+  border-left: 4px solid #4c309b;
+  border-radius: 3px;
+`;
 
 //------------------------------------------------------------------------------------------
 
 class FundsProduct extends Component {
   render() {
     return (
-      <React.Fragment>
+      <DIV>
         <Product>
           <P fontSize={12}>{this.props.productName}</P>
 
@@ -73,7 +80,7 @@ class FundsProduct extends Component {
           </SmallSetOfInfo>
         </Product>
         <Line />
-      </React.Fragment>
+      </DIV>
     );
   }
 }

@@ -1,5 +1,13 @@
 import React, { Component } from "react";
 import FundsProduct from "./FundsProduct";
+import styled from "styled-components";
+
+// styled-components code
+const DIV = styled.div`
+  margin: 0 2%;
+`;
+
+// ----------------------------------------------
 
 class FundsSetOfProducts extends Component {
   // Searchs for the products which contains the search term
@@ -11,7 +19,7 @@ class FundsSetOfProducts extends Component {
 
   render() {
     return (
-      <div>
+      <DIV>
         {this.props.product
           .filter(this.searchingFor(this.props.searchFilter))
           .map(asset => (
@@ -26,7 +34,7 @@ class FundsSetOfProducts extends Component {
               lastTwelveMonthYeld={asset.lastTwelveMonthsYeld}
             />
           ))}
-      </div>
+      </DIV>
     );
   }
 }
