@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Speaker.js",
-  "module": "./Speaker.esm.js",
-  "types": "./Speaker.d.ts"
-}

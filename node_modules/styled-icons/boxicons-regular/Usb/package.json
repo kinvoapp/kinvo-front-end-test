@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Usb.js",
-  "module": "./Usb.esm.js",
-  "types": "./Usb.d.ts"
-}

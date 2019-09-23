@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Reorder.js",
-  "module": "./Reorder.esm.js",
-  "types": "./Reorder.d.ts"
-}

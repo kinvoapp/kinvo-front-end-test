@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./GridOff.js",
-  "module": "./GridOff.esm.js",
-  "types": "./GridOff.d.ts"
-}

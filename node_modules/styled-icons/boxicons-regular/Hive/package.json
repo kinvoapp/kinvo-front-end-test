@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Hive.js",
-  "module": "./Hive.esm.js",
-  "types": "./Hive.d.ts"
-}

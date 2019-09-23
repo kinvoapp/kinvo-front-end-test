@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Edit.js",
-  "module": "./Edit.esm.js",
-  "types": "./Edit.d.ts"
-}

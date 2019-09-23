@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Bookmark.js",
-  "module": "./Bookmark.esm.js",
-  "types": "./Bookmark.d.ts"
-}

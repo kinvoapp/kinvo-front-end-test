@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./StopCircle.js",
-  "module": "./StopCircle.esm.js",
-  "types": "./StopCircle.d.ts"
-}

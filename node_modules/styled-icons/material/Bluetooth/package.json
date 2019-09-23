@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Bluetooth.js",
-  "module": "./Bluetooth.esm.js",
-  "types": "./Bluetooth.d.ts"
-}

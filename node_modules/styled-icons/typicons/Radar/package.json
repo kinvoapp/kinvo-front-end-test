@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Radar.js",
-  "module": "./Radar.esm.js",
-  "types": "./Radar.d.ts"
-}

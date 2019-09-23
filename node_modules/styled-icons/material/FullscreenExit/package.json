@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FullscreenExit.js",
-  "module": "./FullscreenExit.esm.js",
-  "types": "./FullscreenExit.d.ts"
-}

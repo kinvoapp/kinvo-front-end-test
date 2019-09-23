@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./SimCard.js",
-  "module": "./SimCard.esm.js",
-  "types": "./SimCard.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Album.js",
-  "module": "./Album.esm.js",
-  "types": "./Album.d.ts"
-}

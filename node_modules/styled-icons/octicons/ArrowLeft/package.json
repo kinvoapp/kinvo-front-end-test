@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./ArrowLeft.js",
-  "module": "./ArrowLeft.esm.js",
-  "types": "./ArrowLeft.d.ts"
-}

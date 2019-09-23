@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Menu.js",
-  "module": "./Menu.esm.js",
-  "types": "./Menu.d.ts"
-}

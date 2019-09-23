@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Keyboard.js",
-  "module": "./Keyboard.esm.js",
-  "types": "./Keyboard.d.ts"
-}

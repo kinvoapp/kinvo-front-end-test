@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Airplay.js",
-  "module": "./Airplay.esm.js",
-  "types": "./Airplay.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Filter2.js",
-  "module": "./Filter2.esm.js",
-  "types": "./Filter2.d.ts"
-}

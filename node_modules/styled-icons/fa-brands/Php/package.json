@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Php.js",
-  "module": "./Php.esm.js",
-  "types": "./Php.d.ts"
-}

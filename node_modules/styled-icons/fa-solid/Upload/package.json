@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Upload.js",
-  "module": "./Upload.esm.js",
-  "types": "./Upload.d.ts"
-}

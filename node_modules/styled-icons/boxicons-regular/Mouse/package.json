@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Mouse.js",
-  "module": "./Mouse.esm.js",
-  "types": "./Mouse.d.ts"
-}

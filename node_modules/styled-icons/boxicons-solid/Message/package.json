@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Message.js",
-  "module": "./Message.esm.js",
-  "types": "./Message.d.ts"
-}

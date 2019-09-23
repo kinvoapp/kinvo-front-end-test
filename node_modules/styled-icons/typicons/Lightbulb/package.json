@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Lightbulb.js",
-  "module": "./Lightbulb.esm.js",
-  "types": "./Lightbulb.d.ts"
-}

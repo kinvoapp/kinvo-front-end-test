@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Rocket.js",
-  "module": "./Rocket.esm.js",
-  "types": "./Rocket.d.ts"
-}

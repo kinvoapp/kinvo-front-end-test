@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./DeveloperMode.js",
-  "module": "./DeveloperMode.esm.js",
-  "types": "./DeveloperMode.d.ts"
-}

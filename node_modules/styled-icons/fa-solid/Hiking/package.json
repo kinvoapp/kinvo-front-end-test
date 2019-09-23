@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Hiking.js",
-  "module": "./Hiking.esm.js",
-  "types": "./Hiking.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./MicOff.js",
-  "module": "./MicOff.esm.js",
-  "types": "./MicOff.d.ts"
-}

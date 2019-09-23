@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Store.js",
-  "module": "./Store.esm.js",
-  "types": "./Store.d.ts"
-}

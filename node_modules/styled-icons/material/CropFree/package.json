@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./CropFree.js",
-  "module": "./CropFree.esm.js",
-  "types": "./CropFree.d.ts"
-}

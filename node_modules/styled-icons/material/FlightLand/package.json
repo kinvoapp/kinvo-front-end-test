@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FlightLand.js",
-  "module": "./FlightLand.esm.js",
-  "types": "./FlightLand.d.ts"
-}

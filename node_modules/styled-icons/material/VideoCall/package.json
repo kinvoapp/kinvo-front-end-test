@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./VideoCall.js",
-  "module": "./VideoCall.esm.js",
-  "types": "./VideoCall.d.ts"
-}

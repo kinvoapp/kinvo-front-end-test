@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./AddBox.js",
-  "module": "./AddBox.esm.js",
-  "types": "./AddBox.d.ts"
-}

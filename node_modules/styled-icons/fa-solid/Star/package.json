@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Star.js",
-  "module": "./Star.esm.js",
-  "types": "./Star.d.ts"
-}

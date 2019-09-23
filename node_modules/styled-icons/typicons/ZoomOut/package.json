@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./ZoomOut.js",
-  "module": "./ZoomOut.esm.js",
-  "types": "./ZoomOut.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Cake.js",
-  "module": "./Cake.esm.js",
-  "types": "./Cake.d.ts"
-}

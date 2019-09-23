@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Tablet.js",
-  "module": "./Tablet.esm.js",
-  "types": "./Tablet.d.ts"
-}

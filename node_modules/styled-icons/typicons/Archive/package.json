@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Archive.js",
-  "module": "./Archive.esm.js",
-  "types": "./Archive.d.ts"
-}

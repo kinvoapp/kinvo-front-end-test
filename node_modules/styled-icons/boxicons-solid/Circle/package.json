@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Circle.js",
-  "module": "./Circle.esm.js",
-  "types": "./Circle.d.ts"
-}

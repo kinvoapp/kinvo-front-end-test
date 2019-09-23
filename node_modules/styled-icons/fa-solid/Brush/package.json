@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Brush.js",
-  "module": "./Brush.esm.js",
-  "types": "./Brush.d.ts"
-}

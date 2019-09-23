@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Subway.js",
-  "module": "./Subway.esm.js",
-  "types": "./Subway.d.ts"
-}

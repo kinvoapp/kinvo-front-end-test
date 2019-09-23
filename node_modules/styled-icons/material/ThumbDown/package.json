@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./ThumbDown.js",
-  "module": "./ThumbDown.esm.js",
-  "types": "./ThumbDown.d.ts"
-}

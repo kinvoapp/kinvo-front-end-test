@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Refresh.js",
-  "module": "./Refresh.esm.js",
-  "types": "./Refresh.d.ts"
-}

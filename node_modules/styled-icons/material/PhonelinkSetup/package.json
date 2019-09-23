@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./PhonelinkSetup.js",
-  "module": "./PhonelinkSetup.esm.js",
-  "types": "./PhonelinkSetup.d.ts"
-}

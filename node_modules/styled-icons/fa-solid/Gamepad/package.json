@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Gamepad.js",
-  "module": "./Gamepad.esm.js",
-  "types": "./Gamepad.d.ts"
-}

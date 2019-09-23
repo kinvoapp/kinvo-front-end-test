@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FileCopy.js",
-  "module": "./FileCopy.esm.js",
-  "types": "./FileCopy.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./WbCloudy.js",
-  "module": "./WbCloudy.esm.js",
-  "types": "./WbCloudy.d.ts"
-}

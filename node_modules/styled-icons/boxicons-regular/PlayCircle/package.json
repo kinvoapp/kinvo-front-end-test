@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./PlayCircle.js",
-  "module": "./PlayCircle.esm.js",
-  "types": "./PlayCircle.d.ts"
-}

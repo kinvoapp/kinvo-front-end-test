@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Contrast.js",
-  "module": "./Contrast.esm.js",
-  "types": "./Contrast.d.ts"
-}

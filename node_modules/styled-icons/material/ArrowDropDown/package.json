@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./ArrowDropDown.js",
-  "module": "./ArrowDropDown.esm.js",
-  "types": "./ArrowDropDown.d.ts"
-}

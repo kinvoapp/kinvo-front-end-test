@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FolderOpen.js",
-  "module": "./FolderOpen.esm.js",
-  "types": "./FolderOpen.d.ts"
-}

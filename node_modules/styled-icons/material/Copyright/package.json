@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Copyright.js",
-  "module": "./Copyright.esm.js",
-  "types": "./Copyright.d.ts"
-}

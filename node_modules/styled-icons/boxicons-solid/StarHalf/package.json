@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./StarHalf.js",
-  "module": "./StarHalf.esm.js",
-  "types": "./StarHalf.d.ts"
-}

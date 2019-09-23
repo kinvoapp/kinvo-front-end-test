@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Folder.js",
-  "module": "./Folder.esm.js",
-  "types": "./Folder.d.ts"
-}

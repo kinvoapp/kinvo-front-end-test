@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Close.js",
-  "module": "./Close.esm.js",
-  "types": "./Close.d.ts"
-}

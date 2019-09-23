@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./PauseCircle.js",
-  "module": "./PauseCircle.esm.js",
-  "types": "./PauseCircle.d.ts"
-}

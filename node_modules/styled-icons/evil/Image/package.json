@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Image.js",
-  "module": "./Image.esm.js",
-  "types": "./Image.d.ts"
-}

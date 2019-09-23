@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Pause.js",
-  "module": "./Pause.esm.js",
-  "types": "./Pause.d.ts"
-}

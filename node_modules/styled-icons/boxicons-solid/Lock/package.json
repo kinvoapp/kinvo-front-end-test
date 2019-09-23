@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Lock.js",
-  "module": "./Lock.esm.js",
-  "types": "./Lock.d.ts"
-}

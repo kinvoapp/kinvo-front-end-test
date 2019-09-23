@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Shield.js",
-  "module": "./Shield.esm.js",
-  "types": "./Shield.d.ts"
-}

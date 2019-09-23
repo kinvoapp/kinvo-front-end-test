@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FolderShared.js",
-  "module": "./FolderShared.esm.js",
-  "types": "./FolderShared.d.ts"
-}

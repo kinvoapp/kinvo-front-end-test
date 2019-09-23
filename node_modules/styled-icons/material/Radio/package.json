@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Radio.js",
-  "module": "./Radio.esm.js",
-  "types": "./Radio.d.ts"
-}

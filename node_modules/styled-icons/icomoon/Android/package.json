@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Android.js",
-  "module": "./Android.esm.js",
-  "types": "./Android.d.ts"
-}

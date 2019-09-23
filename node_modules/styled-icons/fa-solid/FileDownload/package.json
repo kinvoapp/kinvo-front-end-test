@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./FileDownload.js",
-  "module": "./FileDownload.esm.js",
-  "types": "./FileDownload.d.ts"
-}

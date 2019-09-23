@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Nfc.js",
-  "module": "./Nfc.esm.js",
-  "types": "./Nfc.d.ts"
-}

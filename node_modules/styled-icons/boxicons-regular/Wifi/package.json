@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Wifi.js",
-  "module": "./Wifi.esm.js",
-  "types": "./Wifi.d.ts"
-}

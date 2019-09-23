@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Check.js",
-  "module": "./Check.esm.js",
-  "types": "./Check.d.ts"
-}

@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Reply.js",
-  "module": "./Reply.esm.js",
-  "types": "./Reply.d.ts"
-}

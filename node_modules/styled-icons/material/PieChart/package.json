@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./PieChart.js",
-  "module": "./PieChart.esm.js",
-  "types": "./PieChart.d.ts"
-}

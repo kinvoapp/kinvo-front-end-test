@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Javascript.js",
-  "module": "./Javascript.esm.js",
-  "types": "./Javascript.d.ts"
-}

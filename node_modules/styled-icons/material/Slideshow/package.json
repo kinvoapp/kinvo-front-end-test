@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Slideshow.js",
-  "module": "./Slideshow.esm.js",
-  "types": "./Slideshow.d.ts"
-}

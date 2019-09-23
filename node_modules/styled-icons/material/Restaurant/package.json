@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Restaurant.js",
-  "module": "./Restaurant.esm.js",
-  "types": "./Restaurant.d.ts"
-}

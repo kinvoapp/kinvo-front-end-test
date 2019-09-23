@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./ShoppingBasket.js",
-  "module": "./ShoppingBasket.esm.js",
-  "types": "./ShoppingBasket.d.ts"
-}

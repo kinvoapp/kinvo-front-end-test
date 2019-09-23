@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Ballot.js",
-  "module": "./Ballot.esm.js",
-  "types": "./Ballot.d.ts"
-}

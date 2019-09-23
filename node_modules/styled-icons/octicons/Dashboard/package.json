@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Dashboard.js",
-  "module": "./Dashboard.esm.js",
-  "types": "./Dashboard.d.ts"
-}

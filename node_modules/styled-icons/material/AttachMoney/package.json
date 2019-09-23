@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./AttachMoney.js",
-  "module": "./AttachMoney.esm.js",
-  "types": "./AttachMoney.d.ts"
-}

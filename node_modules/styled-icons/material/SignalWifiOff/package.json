@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./SignalWifiOff.js",
-  "module": "./SignalWifiOff.esm.js",
-  "types": "./SignalWifiOff.d.ts"
-}

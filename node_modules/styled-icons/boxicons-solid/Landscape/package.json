@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Landscape.js",
-  "module": "./Landscape.esm.js",
-  "types": "./Landscape.d.ts"
-}

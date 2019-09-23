@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./SurroundSound.js",
-  "module": "./SurroundSound.esm.js",
-  "types": "./SurroundSound.d.ts"
-}

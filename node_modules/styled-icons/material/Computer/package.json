@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Computer.js",
-  "module": "./Computer.esm.js",
-  "types": "./Computer.d.ts"
-}

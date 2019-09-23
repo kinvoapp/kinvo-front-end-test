@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Movie.js",
-  "module": "./Movie.esm.js",
-  "types": "./Movie.d.ts"
-}

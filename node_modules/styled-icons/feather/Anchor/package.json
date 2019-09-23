@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "sideEffects": false,
-  "main": "./Anchor.js",
-  "module": "./Anchor.esm.js",
-  "types": "./Anchor.d.ts"
-}
