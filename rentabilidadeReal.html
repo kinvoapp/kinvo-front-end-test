@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ProjetoKinvo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/rentabilidadeReal.css">
+</head>
+
+<body>
+    <header class="logo-principal">
+        <div class="header-logo">
+            <div class="logo">
+                <img src="./img/logo-kinvo.png">
+                <img src="./img/logo-premium.png">
+    </header>
+    </div>
+    <div class="menu">
+        <ul>
+            <li id="resumo">
+                <a href="resumoDaCarteira.html">
+                    <div class="resumo-da-carteira" id="resumoDaCarteira"><img src="./img/resumo-da-carteira.png"></div>
+                    <div class="resumo-txt">Resumo <br>da Carteira</div>
+                </a>
+            </li>
+            <li id="produto">
+                <a href="meusProdutos.html">
+                    <div class="meus-produtos" id="meusProdutos"><img src="./img/meus-produtos.png"></div>
+                    <div class="produtos-txt" onclick="mudarBackgroundDaImagem('meusProdutos', 'produto')">Meus
+                        <br>Produtos
+                    </div>
+                </a>
+            </li>
+            <li id="proventos">
+                <a href="meusProventos.html">
+                    <div class="meus-proventos"><img src="./img/meus-proventos.png"></div>
+                    <div class="proventos-txt"> Meus <br>Proventos </div>
+                </a>
+            </li>
+            <li id="analise">
+                <a href="analiseDeClassePorProduto.html">
+                    <div class="analise-por-classe-do-produto"><img src="./img/analise-da-classe-por-produto.png"></div>
+                    <div class="analise-txt"> Analise por<br> Classe de produto </div>
+                </a>
+            </li>
+            <li>
+                <a href="rentabilidadeReal.html">
+                    <div class="rentabilidade-real"><img src="./img/rentabilidade-real.png"></div>
+                    <div class="rentabilidade-txt">Rentabilidade<br>Real</div>
+                </a>
+            </li id="projecao">
+            <li>
+                <a href="projecaoDaCarteira.html">
+                    <div class="projecao-da-carteira"><img src="./img/projecao-da-carteira.png"></div>
+                    <div class="projecao-txt">Projeção<br> da Carteira</div>
+                </a>
+            </li id="risco">
+            <li>
+                <a href="riscoXRetorno.html">
+                    <div class="risco-x-retorno"><img src="./img/risco-x-retorno.png"></div>
+                    <div class="risco-txt">Risco<br> x Retorno</div>
+                </a>
+            </li id="cobertura">
+            <li>
+                <a href="coberturaDoFgc.html">
+                    <div class="cobertura-do-fgc"><img src="./img/cobertura-fgc.png"></div>
+                    <div class="cobertura-txt">Cobertura<br> do FGC</div>
+                </a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+    <div class="informacoes">
+        <div class="txt"><b>Analise por Classes de Ativos</b></div>
+        <div class="acoes">
+            <ul>
+                <li>
+                    <a href=""><b>Ações</b></a>
+                </li>
+
+                <li>
+                    <a href=""><b>Nome da classe</b></a>
+                </li>
+                <li>
+                    <a href=""><b>Nome da classe</b></a>
+                </li>
+                <li>
+                    <a href=""><b>Nome da classe</b></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="tabela-informacoes">
+            <div class="valores">
+                <ul>
+                    <li>
+                        <div class="saldo-bruto-txt">SALDO BRUTO</div><br>
+                        <div class="saldo-bruto"><b>R$12.709,14</b></div>
+                    </li>
+                    <li>
+                        <div class="valor-aplicado-txt">VALOR APLICADO</div><br>
+                        <div class="valor-aplicado"><b>R$10.023,12</b></div>
+                    </li>
+                    <li>
+                        <div class="ganho-capital-txt">GANHO DE CAPITAL</div><br>
+                        <div class="ganho-capital"><b>R$2.686,01</b></div>
+                    </li>
+                    <li>
+                        <div class="total-distribuido-txt">TOTAL DISTRIBUIDO</div><br>
+                        <div class="total-distribuido"><b>R$800,00</b></div>
+                    </li>
+                    <li>
+                        <div class="yield-txt">YIELD</div><br>
+                        <div class="yield"><b>15%</b></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-2">
+                <t>Fundos</t>
+                <div class="procurar">
+                    <input type="text" class="procurar-txt"><img src="./img/lupa.png">
+                    <div class="table">
+                        <table border="0" class="tabela">
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <th></th>
+                                <th>SALDO ATUAL</th>
+                                <th>QUANT</th>
+                                <th>PREÇO MÉDIO</th>
+                                <th>ULTIMA COTACÃO</th>
+                                <th>YIEL(1M)</th>
+                                <th>YIELD(12M)</th>
+                                <th>%CARTEIRA</th>
+                            </tr>
+                            <tr>
+                                <td class="border">ABE3V - AMBEV</td>
+                                <td class="bold">R$1980,00</td>
+                                <td class="bold">100</td>
+                                <td class="bold">R$19,80</td>
+                                <td class="bold">R$20,06</td>
+                                <td class="bold">2,31%</td>
+                                <td class="bold">12,31%</td>
+                                <td class="bold">12,31%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main1.js"></script>
+</body>
+
+
+</html>
