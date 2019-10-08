@@ -14,9 +14,10 @@ const DIV = styled.div`
     background-color: transparent;
   }
   color: #707b81;
-  width: 230px;
-  height: 65px;
-  border-radius: 10px;
+  width: 250px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   &:hover {
     background-color: ${props => (props.active ? "#F8FAFB" : "#F8FAFB")};
     cursor: pointer;

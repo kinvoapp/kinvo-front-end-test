@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./images/button-4-1.png";
 import styled from "styled-components";
 
 // styled-components code
@@ -13,7 +12,7 @@ const DIV = styled.div`
   p {
     padding: 0 10px;
   }
-  width: 160px;
+  width: 100%;
   height: 60px;
   background-color: ${props => (props.getState ? "#eef2f4" : "#ffffff")};
   border: 1px solid #eef2f4;

@@ -1,12 +1,16 @@
-import React, { Component } from "react";
-import Header from "./components/Header";
-import SidebarSetOfButtons from "./components/SidebarSetOfButtons";
-import AssetsWrapperSuper from "./components/AssetsWrapperSuper";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Header from './components/Header';
+import SidebarSetOfButtons from './components/SidebarSetOfButtons';
+import AssetsWrapperSuper from './components/AssetsWrapperSuper';
 
 // styled-components code
-const DIV2 = styled.div`
-  display: flex;
+const Page = styled.div`
+  display: grid;
+  grid-template:
+    "header header" auto
+    "sidebarSetOfButtons assetsWrapperSuper" auto
+    / 225px auto;
 `;
 
 // --------------------------
@@ -15,13 +19,11 @@ class ApplicationWrapper extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <Page>
         <Header />
-        <DIV2>
-          <SidebarSetOfButtons />
-          <AssetsWrapperSuper />
-        </DIV2>
-      </div>
+        <SidebarSetOfButtons />
+        <AssetsWrapperSuper />
+      </Page>
     );
   }
 }

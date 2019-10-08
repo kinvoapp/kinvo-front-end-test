@@ -6,6 +6,7 @@
 'use strict';
 
 const variableUtil = require('../util/variable');
+const jsxUtil = require('../util/jsx');
 const docsUrl = require('../util/docsUrl');
 
 // ------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ module.exports = {
      * @param {object} node - ObjectExpression node
      * @param {string} propName - name of the prop to look for
      * @param {string[]} seenProps
+     * @returns {object | boolean}
      */
     function findObjectProp(node, propName, seenProps) {
       if (!node.properties) {
@@ -57,6 +59,7 @@ module.exports = {
      * Takes a JSXElement and returns the value of the prop if it has it
      * @param {object} node - JSXElement node
      * @param {string} propName - name of the prop to look for
+     * @returns {object | boolean}
      */
     function findJsxProp(node, propName) {
       const attributes = node.openingElement.attributes;
@@ -79,7 +82,7 @@ module.exports = {
     function isLineBreak(node) {
       const isLiteral = node.type === 'Literal' || node.type === 'JSXText';
       const isMultiline = node.loc.start.line !== node.loc.end.line;
-      const isWhiteSpaces = /^\s*$/.test(node.value);
+      const isWhiteSpaces = jsxUtil.isWhiteSpaces(node.value);
 
       return isLiteral && isMultiline && isWhiteSpaces;
     }

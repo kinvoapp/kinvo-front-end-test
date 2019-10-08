@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import AssetClassSetOfButtons from "./AssetClassSetOfButtons";
-import StockClassSetOfButtons from "./StockClassSetOfButtons";
-import FundsNavBar from "./FundsNavBar";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import StockClassSetOfButtons from './StockClassSetOfButtons';
+import FundsNavBar from './FundsNavBar';
 
 // styled-components code
-const DIV = styled.div`
+const Article = styled.div`
+  display: grid;
   background-color: #f8fafb;
   text-shadow: 10px;
-  border-radius: 8px;
+  grid-template-rows: 1fr 8fr;
 `;
 
 const DIV2 = styled.div`
@@ -24,13 +24,12 @@ class AssetsWrapper extends Component {
   state = {};
   render() {
     return (
-      <DIV>
-        <AssetClassSetOfButtons />
+      <Article>
         <StockClassSetOfButtons />
         <DIV2>
           <FundsNavBar />
         </DIV2>
-      </DIV>
+      </Article>
     );
   }
 }

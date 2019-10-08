@@ -1,7 +1,12 @@
-import React, { Component } from "react";
-import SidebarButton from "./SidebarButton";
-import purpleButton from "./images/button-4-1.png";
-import emptyButton from "./images/empty-button-1.png";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import SidebarButton from './SidebarButton';
+import purpleButton from './images/button-4-1.png';
+import emptyButton from './images/empty-button-1.png';
+
+const SidebarSetOfButtonsContainer = styled.aside`
+  grid-area: sidebarSetOfButtons; /* @see components/App*/
+`;
 
 class SidebarSetOfButtons extends Component {
   state = {};
@@ -26,7 +31,7 @@ class SidebarSetOfButtons extends Component {
         <SidebarButton
           imgSrc={purpleButton}
           name="Análise por Classe de Produto"
-          active={true}
+          active
         />
         <SidebarButton
           imgSrc={emptyButton}

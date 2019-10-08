@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import logo from "./images/kinvo-logo-2.png";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import logo from './images/kinvo-logo-2.png';
 
 // styled-components code
 const DIV = styled.div`
+  grid-area: header;
   display: flex;
   height: 90px;
   width: 100%;

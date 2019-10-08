@@ -3,20 +3,23 @@ import AssetClassButton from "./AssetClassButton";
 import styled from "styled-components";
 
 // styled-components code
-const DIV = styled.div`
-  display: inline-block;
+const Buttons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
 `;
 
 class AssetClassSetOfButtons extends Component {
   state = {};
   render() {
     return (
-      <DIV>
+      <Buttons>
         <AssetClassButton className="Ações" getState={true} />
         <AssetClassButton className="Nome da Classe" getState={false} />
         <AssetClassButton className="Nome da Classe" getState={false} />
         <AssetClassButton className="Nome da Classe" getState={false} />
-      </DIV>
+      </Buttons>
     );
   }
 }

@@ -20,10 +20,6 @@ const FundsNav = styled.div`
   }
 `;
 
-const DIV = styled.div`
-  background-color: #ffffff;
-`;
-
 const Input = styled.input`
   padding: 0.3em;
   color: palevioletred;
@@ -49,7 +45,7 @@ class FundsNavBar extends Component {
 
   render() {
     return (
-      <DIV>
+      <React.Fragment>
         <FundsNav>
           <H>Fundos</H>
           <div>
@@ -69,7 +65,7 @@ class FundsNavBar extends Component {
             searchFilter={this.state.searchTerm}
           />
         </div>
-      </DIV>
+      </React.Fragment>
     );
   }
 }
