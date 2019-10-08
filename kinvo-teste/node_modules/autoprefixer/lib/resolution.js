@@ -82,7 +82,7 @@ function (_Prefixer) {
     rule.params = utils.editList(rule.params, function (queries) {
       return queries.filter(function (query) {
         return _this.bad.every(function (i) {
-          return query.indexOf(i) === -1;
+          return !query.includes(i);
         });
       });
     });
@@ -112,7 +112,7 @@ function (_Prefixer) {
 
         var query = _ref2;
 
-        if (query.indexOf('min-resolution') === -1 && query.indexOf('max-resolution') === -1) {
+        if (!query.includes('min-resolution') && !query.includes('max-resolution')) {
           prefixed.push(query);
           continue;
         }

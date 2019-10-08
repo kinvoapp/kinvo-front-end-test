@@ -1030,5 +1030,12 @@
     "date": "2019-09-04",
     "lts": false,
     "security": false
+  },
+  {
+    "name": "nodejs",
+    "version": "12.11.0",
+    "date": "2019-09-25",
+    "lts": false,
+    "security": false
   }
 ]

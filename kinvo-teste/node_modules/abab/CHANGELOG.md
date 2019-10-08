@@ -1,3 +1,7 @@
+## 2.0.2
+
+- Correct license in `package.json` (@Haegin)
+
 ## 2.0.1
 
 - Add TypeScript type definitions, thanks to @LinusU
