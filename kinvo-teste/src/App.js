@@ -8,7 +8,7 @@ import AssetsWrapperSuper from './components/AssetsWrapperSuper';
 const Page = styled.div`
   display: grid;
   grid-template:
-    "header header" auto
+    "header header" 90px 
     "sidebarSetOfButtons assetsWrapperSuper" auto
     / 225px auto;
 `;
@@ -16,7 +16,6 @@ const Page = styled.div`
 // --------------------------
 
 class ApplicationWrapper extends Component {
-  state = {};
   render() {
     return (
       <Page>

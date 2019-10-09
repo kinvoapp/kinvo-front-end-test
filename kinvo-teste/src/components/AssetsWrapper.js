@@ -8,20 +8,18 @@ const Article = styled.div`
   display: grid;
   background-color: #f8fafb;
   text-shadow: 10px;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 100px 8fr;
 `;
 
 const DIV2 = styled.div`
-  margin: 0 2%;
   padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 2px;
   border-radius: 8px;
 `;
 
 //------------------------------------------
 
 class AssetsWrapper extends Component {
-  state = {};
   render() {
     return (
       <Article>

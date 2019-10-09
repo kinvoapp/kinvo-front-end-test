@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import FundsProduct from "./FundsProduct";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import FundsProduct from './FundsProduct';
 
 // styled-components code
 const DIV = styled.div`
@@ -12,7 +12,7 @@ const DIV = styled.div`
 class FundsSetOfProducts extends Component {
   // Searchs for the products which contains the search term
   searchingFor(searchTerm) {
-    return function(x) {
+    return function (x) {
       return x.productName.includes(searchTerm.toUpperCase());
     };
   }
@@ -22,7 +22,7 @@ class FundsSetOfProducts extends Component {
       <DIV>
         {this.props.product
           .filter(this.searchingFor(this.props.searchFilter))
-          .map(asset => (
+          .map((asset) => (
             <FundsProduct
               key={asset.productName}
               productName={asset.productName}

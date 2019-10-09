@@ -1,19 +1,18 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { styleMoney } from "./FunctionsLibrary";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { styleMoney } from './FunctionsLibrary';
 
 // styled-components code
-const P = styled.p`
-  font-size: ${props => `${props.fontSize}px`};
-  font-weight: ${props => (props.fontSize === 14 ? 900 : 0)};
-`;
-
 const Product = styled.div`
   display: grid;
   font-family: "helvetica-neue, arial";
   grid-template-columns: repeat(8, 1fr);
   color: #4c309b;
   height: 40px;
+`;
+
+const ProductLabel = styled.div`
+  font-size: 12px;
 `;
 
 const Line = styled.hr`
@@ -23,6 +22,16 @@ const Line = styled.hr`
 const SmallSetOfInfo = styled.div`
   align-items: center;
 `;
+
+const SmallSetOfInfoLabel = styled.div`
+  font-size: 8px;
+`;
+
+const SmallSetOfInfoValue = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+`;
+
 
 const DIV = styled.div`
   margin: 0 2%;
@@ -40,10 +49,12 @@ class FundsProduct extends Component {
           <P fontSize={12}>{this.props.productName}</P>
 
           <SmallSetOfInfo>
-            <P fontSize={8}>SALDO ATUAL</P>
-            <P fontSize={14}>
-              R$ {styleMoney(this.props.amount * this.props.averagePrice)}
-            </P>
+            <SmallSetOfInfoLabel fontSize={8}>SALDO ATUAL</SmallSetOfInfoLabel>
+            <SmallSetOfInfoValue fontSize={14}>
+              R$ 
+{' '}
+{styleMoney(this.props.amount * this.props.averagePrice)}
+            </SmallSetOfInfoValue>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
@@ -53,31 +64,52 @@ class FundsProduct extends Component {
 
           <SmallSetOfInfo>
             <P fontSize={8}>PREÇO MÉDIO</P>
-            <P fontSize={14}>R$ {styleMoney(this.props.averagePrice)}</P>
+            <P fontSize={14}>
+R$
+{' '}
+{styleMoney(this.props.averagePrice)}
+</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>ÚLTIMA COTAÇÃO</P>
-            <P fontSize={14}>R$ {styleMoney(this.props.lastQuotation)}</P>
+            <P fontSize={14}>
+R$
+{' '}
+{styleMoney(this.props.lastQuotation)}
+</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>
-              YIELD <span>(1M)</span>
+              YIELD 
+{' '}
+<span>(1M)</span>
             </P>
-            <P fontSize={14}>{this.props.currentMonthYield}%</P>
+            <P fontSize={14}>
+{this.props.currentMonthYield}
+%
+</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>
-              YIELD <span>(12M)</span>
+              YIELD 
+{' '}
+<span>(12M)</span>
             </P>
-            <P fontSize={14}>{this.props.lastTwelveMonthYeld}%</P>
+            <P fontSize={14}>
+{this.props.lastTwelveMonthYeld}
+%
+</P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>% CARTEIRA</P>
-            <P fontSize={14}>{this.props.equity}%</P>
+            <P fontSize={14}>
+{this.props.equity}
+%
+</P>
           </SmallSetOfInfo>
         </Product>
         <Line />

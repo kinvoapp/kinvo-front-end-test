@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 // styled-components code
 
@@ -10,14 +10,16 @@ const DIV = styled.div`
   align-items: center;
   padding: 0 20px;
   p {
-    padding: 0 10px;
+    padding: 0 20px;
   }
-  width: 100%;
+  img p {
+    width: 72%;
+  }
   height: 60px;
-  background-color: ${props => (props.getState ? "#eef2f4" : "#ffffff")};
+  background-color: ${(props) => (props.getState ? '#eef2f4' : '#ffffff')};
   border: 1px solid #eef2f4;
   &:hover {
-    background-color: ${props => (props.getState ? "#5D41AC" : "#eef2f4")};
+    background-color: ${(props) => (props.getState ? '#5D41AC' : '#eef2f4')};
     cursor: pointer;
   }
 `;

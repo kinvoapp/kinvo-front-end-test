@@ -1,9 +1,10 @@
 // Function to import data from the API
 export function getDataFromUrl() {
   const httpreq = new XMLHttpRequest();
-  const externUrl =
-    "https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation";
-  httpreq.open("GET", externUrl, false);
+  // const externUrl =
+  //  'https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation';
+  const externUrl = 'https://e531b9e5-8ac4-4f50-b408-9f998e452bd1.mock.pstmn.io/getStockConsolidation';
+  httpreq.open('GET', externUrl, false);
   httpreq.send(null);
   return httpreq.responseText;
 }
@@ -13,14 +14,14 @@ export function sortedUpperProducts() {
   const data = JSON.parse(getDataFromUrl());
   const finalArray = [];
 
-  data.data.products.forEach(product => {
+  data.data.products.forEach((product) => {
     const upperCaseName = product.productName.toUpperCase();
-    const splitUpperCaseName = upperCaseName.split(" ");
-    product.productName = "";
+    const splitUpperCaseName = upperCaseName.split(' ');
+    product.productName = '';
 
     for (let i = 2; i < splitUpperCaseName.length; i++) {
       if (i > 2) {
-        product.productName += " " + splitUpperCaseName[i];
+        product.productName += ` ${splitUpperCaseName[i]}`;
       } else {
         product.productName += splitUpperCaseName[i];
       }
@@ -44,7 +45,7 @@ export function sortedUpperProducts() {
 
 // Reverses a string
 export function reverseString(strg) {
-  let newString = "";
+  let newString = '';
 
   for (let i = strg.length - 1; i >= 0; i--) {
     newString += strg[i];
@@ -57,14 +58,14 @@ export function reverseString(strg) {
 export function styleMoney(money) {
   const moneyString = money.toString();
   let countNumbers = 0;
-  let moneyFinal = "";
+  let moneyFinal = '';
   let checkComma = 0;
 
   for (let i = moneyString.length - 1; i >= 0; i--) {
-    countNumbers++;
+    countNumbers += 1;
 
-    if (moneyString[i] === ".") {
-      moneyFinal += ",";
+    if (moneyString[i] === '.') {
+      moneyFinal += ',';
       checkComma = 1;
       countNumbers = 0;
     } else {
@@ -72,7 +73,7 @@ export function styleMoney(money) {
     }
 
     if (countNumbers === 3) {
-      moneyFinal += ".";
+      moneyFinal += '.';
       countNumbers = 0;
     }
   }

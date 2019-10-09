@@ -1,3 +1,3 @@
-import SidebarButtonPresentational from './presentational';
+import SidebarSetOfButtons from './presentational';
 
-export default SidebarButtonPresentational;
+export default SidebarSetOfButtons;
