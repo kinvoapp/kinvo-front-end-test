@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["react", "jsx-a11y", "import"],
+  "extends": "airbnb",
+  "rules": {
+    "no-param-reassign":"off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "lines-between-class-members":"off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to", "hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+    "no-use-before-define": ["error", { "functions": false, "classes": false, "variables": false }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
+  }
+}

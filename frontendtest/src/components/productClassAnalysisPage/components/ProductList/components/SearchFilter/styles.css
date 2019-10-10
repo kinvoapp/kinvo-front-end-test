@@ -1,0 +1,28 @@
+.searchTab{
+    padding: 20px 10px 0 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.searchTab h4{
+    margin-top:5px;
+}
+
+.searchTool{
+    background: #EEF2F4;
+    border-radius: 30px;
+}
+
+.searchIcon{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.searchProductInput{
+    background: #EEF2F4;
+    border: none;
+    border-radius: 30px;
+    height: 33px;
+    width: 250px;
+}

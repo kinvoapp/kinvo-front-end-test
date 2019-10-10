@@ -7,13 +7,13 @@ import ProductClassAnalysisPage from './components/productClassAnalysisPage';
 
 const App = () => {
   return(
-    <div className="App">
+    <main className="App">
       <Header/>
       <div className="contentBody">
         <NavigationTab/>
         <ProductClassAnalysisPage/>
       </div>
-    </div>
+    </main>
   )
 }
 
