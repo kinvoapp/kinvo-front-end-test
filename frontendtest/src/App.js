@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
-import NavigationTab from './components/navigationTab'
+import NavigationTab from './components/NavigationTab'
 import './styles.css';
-import ProductClassAnalysisPage from './components/productClassAnalysisPage';
+import ProductClassAnalysisPage from './components/ProductClassAnalysisPage';
 
 
 const App = () => {
