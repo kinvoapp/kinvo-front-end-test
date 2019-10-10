@@ -9,9 +9,9 @@ import {
   SmallSetOfInfoLabel,
   Container,
 } from './styles';
-import { styleMoney } from '~/components/FunctionsLibrary';
+import { styleMoney } from '../../../../../FunctionsLibrary';
 
-function FundsProduct(props) {
+export function FundsProduct(props) {
   const {
     productName,
     amount,
