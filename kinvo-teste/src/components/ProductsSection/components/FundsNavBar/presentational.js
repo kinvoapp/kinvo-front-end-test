@@ -1,33 +1,21 @@
 import React from 'react';
 
-import FundsSetOfProducts from '../FundsSetOfProducts';
-
 import { FundsNavTitle, FundsNav, FundsNavInput } from './styles';
 
 function FundsNavBar(props) {
-  const { searchHandler, searchTerm, products } = props;
+  const { handleSearchInput } = props;
   return (
-    <section>
-      <FundsNav>
-        <FundsNavTitle>Fundos</FundsNavTitle>
-        <div>
-          <form>
-            <FundsNavInput
-              type="text"
-              onChange={searchHandler}
-              value={searchTerm}
-            />
-          </form>
-        </div>
-      </FundsNav>
-
+    <FundsNav>
+      <FundsNavTitle>Fundos</FundsNavTitle>
       <div>
-        <FundsSetOfProducts
-          product={products}
-          searchFilter={searchTerm}
-        />
+        <form>
+          <FundsNavInput
+            type="text"
+            onChange={handleSearchInput}
+          />
+        </form>
       </div>
-    </section>
+    </FundsNav>
   );
 }
 
