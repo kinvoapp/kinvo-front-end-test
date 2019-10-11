@@ -4,11 +4,11 @@ import '../../styles.css';
 import { Container, NavigationTabText } from './styles';
 
 function NavigationTabItems(props) {
-  const { iconSource, label } = props;
+  const { isActive, iconSource, label } = props;
 
   return (
     <a href="#">
-      <Container>
+      <Container isActive={isActive}>
         <NavigationTabText>
           <img alt="Logo - Resumo da carteira" src={iconSource} />
           <h5>

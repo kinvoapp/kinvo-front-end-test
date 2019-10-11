@@ -36,6 +36,7 @@ function NavigationTab() {
       />
 
       <NavigationTabItems
+        isActive="true"
         iconSource={productClassAnalysisIcon}
         label="Análise por Classe de Produto"
       />
