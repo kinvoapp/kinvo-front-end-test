@@ -3,7 +3,7 @@ import React from 'react';
 import { Container } from './styles';
 import FundsProduct from './components/FundsProduct';
 
-function FundsSetOfProducts(props) {
+function FundsSetOfProductsPresentational(props) {
   const { filteredProducts } = props;
 
   return (
@@ -11,7 +11,7 @@ function FundsSetOfProducts(props) {
       {filteredProducts
         .map((asset) => (
           <FundsProduct
-            key={asset.productName}
+            key={Math.random()}
             productName={asset.productName}
             equity={asset.equity}
             amount={asset.amount}
@@ -25,4 +25,4 @@ function FundsSetOfProducts(props) {
   );
 }
 
-export default FundsSetOfProducts;
+export default FundsSetOfProductsPresentational;
