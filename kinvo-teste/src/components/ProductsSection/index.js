@@ -20,13 +20,15 @@ class ProductsSection extends Component {
   // Searchs for the products which contains the search term
   itemSearch = (searchTerm) => {
     const { products } = this.state;
-    let filteredProducts = [];
+    const filteredProducts = products.filter((produto) => {
+      const { productName } = produto;
+      const parsedProductName = productName.toUpperCase();
+      const parsedSearchTerm = searchTerm.toUpperCase();
 
-    for (let index = 0; index < products.size(); index++) {
-      if (products[index].productName.includes(searchTerm)) { filteredProducts += products[index]; }
-    }
+      return parsedProductName.includes(parsedSearchTerm);
+    });
 
-    this.setState({ products, filteredProducts });
+    this.setState({ filteredProducts });
   }
 
   handleSearchInput = (event) => {
