@@ -4,7 +4,7 @@ import FundsNavBar from './components/FundsNavBar';
 import FundsSetOfProducts from './components/FundsSetOfProducts';
 
 function ProductsSectionPresentational(props) {
-  const { handleSearchInput, products, searchTerm } = props;
+  const { handleSearchInput, filteredProducts } = props;
   return (
     <section>
       <FundsNavBar
@@ -13,8 +13,7 @@ function ProductsSectionPresentational(props) {
 
       <div>
         <FundsSetOfProducts
-          products={products}
-          searchFilter={searchTerm}
+          filteredProducts={filteredProducts}
         />
       </div>
     </section>
