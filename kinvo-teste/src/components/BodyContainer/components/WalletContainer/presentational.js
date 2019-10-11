@@ -5,15 +5,16 @@ import ProductsSection from './components/ProductsSection';
 
 import { Article, ProductsSectionContainer } from './styles';
 
-function WalletContainer() {
+function WalletContainerPresentational(props) {
+  const { apiData } = props;
   return (
     <Article>
-      <WalletInfoButtons />
+      <WalletInfoButtons apiData={apiData} />
       <ProductsSectionContainer>
-        <ProductsSection />
+        <ProductsSection apiData={apiData} />
       </ProductsSectionContainer>
     </Article>
   );
 }
 
-export default WalletContainer;
+export default WalletContainerPresentational;

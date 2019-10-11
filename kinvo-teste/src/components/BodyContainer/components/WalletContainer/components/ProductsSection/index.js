@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 
-import { sortedUpperProducts } from '../../../../../../shared/FunctionsLibrary';
 import ProductsSectionPresentational from './presentational';
-import api from '../../../../../../shared/api';
+import { sortedUpperProducts } from '../../../../../../shared/FunctionsLibrary';
 
 class ProductsSection extends Component {
   constructor(props) {
     super(props);
+    const { apiData } = props;
     this.state = {
+      apiData,
       products: [],
       filteredProducts: [],
     };
   }
 
   componentDidMount() {
-    const products = this.loadProducts();
+    const { apiData: { data: { products } } } = this.props;
+    console.log('asdadsa', this.props.apiData);
     const parsedProducts = sortedUpperProducts(products);
     this.setState({ products: parsedProducts, filteredProducts: products });
-  }
-
-  loadProducts = () => {
-    const response = api.get();
-
-    return response.products;
   }
 
   // Searchs for the products which contains the search term

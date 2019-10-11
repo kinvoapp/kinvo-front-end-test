@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
-import SidebarSetOfButtons from './components/SidebarSetOfButtons';
-import AssetsWrapperSuper from './components/AssetsWrapperSuper';
+import SideBar from './components/SideBar';
+import BodyContainer from './components/BodyContainer';
 
 // styled-components code
-const Page = styled.div`
+const Container = styled.div`
   display: grid;
   grid-template:
     "header header" 90px 
@@ -18,11 +18,11 @@ const Page = styled.div`
 class ApplicationWrapper extends Component {
   render() {
     return (
-      <Page>
+      <Container>
         <Header />
-        <SidebarSetOfButtons />
-        <AssetsWrapperSuper />
-      </Page>
+        <SideBar />
+        <BodyContainer />
+      </Container>
     );
   }
 }

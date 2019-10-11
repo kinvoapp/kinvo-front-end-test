@@ -4,14 +4,16 @@ import { Container } from './styles';
 import InfoButton from './components/InfoButton';
 
 function InfoSetOfButtonsPresentational(props) {
+  console.log(props);
   const {
-    infoItems:
-    {
-      grossBalance,
-      appliedValue,
-      capitalGains,
-      earnings,
-      yield: yieldOnCost,
+    apiData: {
+      summary: {
+        grossBalance,
+        appliedValue,
+        capitalGains,
+        earnings,
+        yield: yieldOnCost,
+      },
     },
   } = props;
 
@@ -40,16 +42,18 @@ function InfoSetOfButtonsPresentational(props) {
 
   return (
     <Container>
-      {parsedInfoItems.map((data) => {
-        const { name, value } = data;
-        return (
-          <InfoButton
-            key={name}
-            buttonName={name}
-            value={value}
-          />
-        );
-      })}
+      {
+        parsedInfoItems.map((data) => {
+          const { name, value } = data;
+          return (
+            <InfoButton
+              key={name}
+              buttonName={name}
+              value={value}
+            />
+          );
+        })
+      }
     </Container>
   );
 }
