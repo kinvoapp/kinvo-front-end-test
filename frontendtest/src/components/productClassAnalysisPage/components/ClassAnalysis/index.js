@@ -6,22 +6,18 @@ import GanhoDeCapital from './components/GanhoDeCapital';
 import TotalDistribuidos from './components/TotalDistribuidos';
 import Yield from './components/Yield';
 
-const ClassAnalysis = () =>{
+const ClassAnalysis = () => (
 
-    return(
+  <nav className="classAnalysis">
 
-        <nav className="classAnalysis">
-    
-            <SaldoBruto/>   
-            <ValorAplicado/>   
-            <GanhoDeCapital/>    
-            <TotalDistribuidos/>    
-            <Yield/>
-    
-        </nav>
+    <SaldoBruto />
+    <ValorAplicado />
+    <GanhoDeCapital />
+    <TotalDistribuidos />
+    <Yield />
 
-    )
+  </nav>
 
-}
+);
 
 export default ClassAnalysis;
