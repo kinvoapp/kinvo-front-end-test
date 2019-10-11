@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import { sortedUpperProducts } from '../FunctionsLibrary';
+import { sortedUpperProducts } from '../../../../../../shared/FunctionsLibrary';
 import ProductsSectionPresentational from './presentational';
+import api from '../../../../../../shared/api';
 
 class ProductsSection extends Component {
   constructor(props) {
@@ -13,8 +14,15 @@ class ProductsSection extends Component {
   }
 
   componentDidMount() {
-    const products = sortedUpperProducts();
-    this.setState({ products, filteredProducts: products });
+    const products = this.loadProducts();
+    const parsedProducts = sortedUpperProducts(products);
+    this.setState({ products: parsedProducts, filteredProducts: products });
+  }
+
+  loadProducts = () => {
+    const response = api.get();
+
+    return response.products;
   }
 
   // Searchs for the products which contains the search term

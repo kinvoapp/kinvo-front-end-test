@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "create-react-app": "^3.2.0",
     "customize-cra": "^0.8.0",
     "react": "^16.9.0",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "babel-plugin-root-import": "^6.4.1",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
     "eslint-plugin-import": "^2.18.2",

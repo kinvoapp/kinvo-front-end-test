@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.defaultLanguage": "javascriptreact",
+    "files.associations": {
+      "*.js": "javascriptreact"
+    },
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "files.eol": "\n"
+  },
+  "extensions": {
+    "recommendations": [
+      "formulahendry.auto-close-tag",
+      "naumovs.color-highlight",
+      "EditorConfig.EditorConfig",
+      "dbaeumer.vscode-eslint",
+      "file-icons.file-icons",
+      "eamodio.gitlens",
+      "oderwat.indent-rainbow",
+      "christian-kohler.path-intellisense",
+      "ms-vscode.sublime-keybindings"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AssetsWrapper from './AssetsWrapper';
+import AssetsWrapper from './.oldCode/AssetsWrapper';
 import AssetClassSetOfButtons from './AssetClassSetOfButtons';
 
 // styled-components code

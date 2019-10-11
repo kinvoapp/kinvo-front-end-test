@@ -1,20 +1,8 @@
-// Function to import data from the API
-export function getDataFromUrl() {
-  const httpreq = new XMLHttpRequest();
-  // const externUrl =
-  //  'https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation';
-  const externUrl = 'https://e531b9e5-8ac4-4f50-b408-9f998e452bd1.mock.pstmn.io/getStockConsolidation';
-  httpreq.open('GET', externUrl, false);
-  httpreq.send(null);
-  return httpreq.responseText;
-}
-
 // Converts names into Upper Case and sorts them increasingly
-export function sortedUpperProducts() {
-  const data = JSON.parse(getDataFromUrl());
+export function sortedUpperProducts(productsArray) {
   const finalArray = [];
 
-  data.data.products.forEach((product) => {
+  productsArray.forEach((product) => {
     const upperCaseName = product.productName.toUpperCase();
     const splitUpperCaseName = upperCaseName.split(' ');
     product.productName = '';

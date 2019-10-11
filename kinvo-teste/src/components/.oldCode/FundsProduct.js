@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { styleMoney } from './FunctionsLibrary';
+import { styleMoney } from '../FunctionsLibrary';
 
 // styled-components code
 const Product = styled.div`
@@ -51,9 +51,9 @@ class FundsProduct extends Component {
           <SmallSetOfInfo>
             <SmallSetOfInfoLabel fontSize={8}>SALDO ATUAL</SmallSetOfInfoLabel>
             <SmallSetOfInfoValue fontSize={14}>
-              R$ 
-{' '}
-{styleMoney(this.props.amount * this.props.averagePrice)}
+              R$
+              {' '}
+              {styleMoney(this.props.amount * this.props.averagePrice)}
             </SmallSetOfInfoValue>
           </SmallSetOfInfo>
 
@@ -65,51 +65,51 @@ class FundsProduct extends Component {
           <SmallSetOfInfo>
             <P fontSize={8}>PREÇO MÉDIO</P>
             <P fontSize={14}>
-R$
-{' '}
-{styleMoney(this.props.averagePrice)}
-</P>
+              R$
+              {' '}
+              {styleMoney(this.props.averagePrice)}
+            </P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>ÚLTIMA COTAÇÃO</P>
             <P fontSize={14}>
-R$
-{' '}
-{styleMoney(this.props.lastQuotation)}
-</P>
+              R$
+              {' '}
+              {styleMoney(this.props.lastQuotation)}
+            </P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>
-              YIELD 
-{' '}
-<span>(1M)</span>
+              YIELD
+              {' '}
+              <span>(1M)</span>
             </P>
             <P fontSize={14}>
-{this.props.currentMonthYield}
-%
-</P>
+              {this.props.currentMonthYield}
+              %
+                        </P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>
-              YIELD 
-{' '}
-<span>(12M)</span>
+              YIELD
+              {' '}
+              <span>(12M)</span>
             </P>
             <P fontSize={14}>
-{this.props.lastTwelveMonthYeld}
-%
-</P>
+              {this.props.lastTwelveMonthYeld}
+              %
+                        </P>
           </SmallSetOfInfo>
 
           <SmallSetOfInfo>
             <P fontSize={8}>% CARTEIRA</P>
             <P fontSize={14}>
-{this.props.equity}
-%
-</P>
+              {this.props.equity}
+              %
+                        </P>
           </SmallSetOfInfo>
         </Product>
         <Line />

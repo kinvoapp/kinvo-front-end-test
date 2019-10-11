@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { sortedUpperProducts } from "./FunctionsLibrary";
-import FundsSetOfProducts from "./FundsSetOfProducts";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { sortedUpperProducts } from '../FunctionsLibrary';
+import FundsSetOfProducts from './FundsSetOfProducts';
 
 // styled-components code
 const H = styled.h3`
@@ -36,16 +36,16 @@ class FundsNavBar extends Component {
   state = {
     // Importing data inside an object through the API
     products: sortedUpperProducts(),
-    searchTerm: ""
+    searchTerm: '',
   };
 
-  searchHandler = event => {
+  searchHandler = (event) => {
     this.setState({ searchTerm: event.target.value });
   };
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <FundsNav>
           <H>Fundos</H>
           <div>
@@ -65,7 +65,7 @@ class FundsNavBar extends Component {
             searchFilter={this.state.searchTerm}
           />
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
