@@ -1,3 +1,3 @@
-import FundsSetOfProducts from './presentational';
+import FundsSetOfProductsPresentational from './presentational';
 
-export default FundsSetOfProducts;
+export default FundsSetOfProductsPresentational;
