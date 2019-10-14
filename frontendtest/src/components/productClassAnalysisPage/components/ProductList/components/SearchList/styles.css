@@ -1,45 +1,4 @@
-.searchList{
-  padding-top: 20px;
-  display: flex;
-  flex-flow: column;
-}
 
-.searchList p{
-  font-size: 10px;
-  color:#4C309B;
-}
-
-.searchList h3{
-  font-size: 17px;
-  color: #4C309B;
-}
-
-.listProducts{
-  margin: 0 15px 20px 15px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-bottom: 1px solid #CCCFD1;
-}
-
-.productPurple{
-  height: 35px;
-  width: 5px;
-  background: #4C309B;
-  display: flex;
-  border-radius: 10px;
-}
-
-.productName {
-  display: flex;
-  justify-content: center;
-}
-
-.productName p{
-  font-size: 12px;
-}
 
 .text-box{
   width: 110px;
@@ -47,11 +6,7 @@
   flex-flow: column;
 }
 
-.currentBalance{
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-}
+
 
 .currentBalance p{
   font-size: 10px;

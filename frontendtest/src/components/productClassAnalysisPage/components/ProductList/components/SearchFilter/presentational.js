@@ -12,12 +12,15 @@ function Presentational(props) {
       <h4>Fundos</h4>
 
       <SearchTool>
+
         <a href="#">
           <SearchIcon />
         </a>
+
         <SearchProductInput
           onChange={searchProductInputHandleChange}
         />
+
       </SearchTool>
 
     </Container>

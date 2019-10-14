@@ -8,18 +8,18 @@ function ChooseInputs() {
     <Container>
 
       <ProductClassAnalysisInput
-      label="Ações"
-      isInputActive="true"
-    />
+        label="Ações"
+        isInputActive="true"
+      />
       <ProductClassAnalysisInput
-      label="Bitcoins"
-    />
+        label="Bitcoins"
+      />
       <ProductClassAnalysisInput
-      label="Debêntures"
-    />
+        label="Debêntures"
+      />
       <ProductClassAnalysisInput
-      label="Fundos"
-    />
+        label="Fundos"
+      />
 
     </Container>
 
