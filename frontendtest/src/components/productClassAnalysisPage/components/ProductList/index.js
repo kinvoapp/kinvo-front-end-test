@@ -39,6 +39,13 @@ export default class ProductList extends Component {
   }
 
   render() {
+    // return React.createElement(
+    //   Presentational, {
+    //     productIsLoading,
+    //     filteredProducts,
+    //     searchInputHandleChange: this.updateSearch,
+    //   }
+    // );
     const { filteredProducts, productIsLoading } = this.state;
     if (productIsLoading) {
       return (
