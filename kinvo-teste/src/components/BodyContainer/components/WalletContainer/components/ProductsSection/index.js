@@ -15,8 +15,7 @@ class ProductsSection extends Component {
   }
 
   componentDidMount() {
-    const { apiData: { data: { products } } } = this.props;
-    console.log('asdadsa', this.props.apiData);
+    const { apiData: { products } } = this.props;
     const parsedProducts = sortedUpperProducts(products);
     this.setState({ products: parsedProducts, filteredProducts: products });
   }

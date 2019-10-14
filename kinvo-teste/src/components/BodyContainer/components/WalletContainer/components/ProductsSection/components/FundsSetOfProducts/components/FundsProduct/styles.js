@@ -30,7 +30,15 @@ export const SmallSetOfInfoValue = styled.div`
 `;
 
 export const Container = styled.section`
-  margin: 0 2%;
-  border-left: 4px solid #4c309b;
-  border-radius: 3px;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 70%;
+    border-radius: 15px;
+    background-color: #4C309B;
+  }
 `;

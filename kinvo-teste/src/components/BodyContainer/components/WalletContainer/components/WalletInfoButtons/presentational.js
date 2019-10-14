@@ -2,12 +2,14 @@ import React from 'react';
 
 import { Container } from './styles';
 import InfoButton from './components/InfoButton';
+import { styleMoney } from '../../../../../../shared/FunctionsLibrary';
 
 function InfoSetOfButtonsPresentational(props) {
-  console.log(props);
+  console.log('InfoSetOfButtonsPresentational', props);
   const {
     apiData: {
-      summary: {
+      summary:
+      {
         grossBalance,
         appliedValue,
         capitalGains,
@@ -20,23 +22,23 @@ function InfoSetOfButtonsPresentational(props) {
   const parsedInfoItems = [
     {
       name: 'SALDO BRUTO',
-      value: { grossBalance },
+      value: `R$ ${styleMoney(grossBalance)}`,
     },
     {
       name: 'VALOR APLICADO',
-      value: { appliedValue },
+      value: `R$ ${styleMoney(appliedValue)}`,
     },
     {
       name: 'GANHO DE CAPITAL',
-      value: { capitalGains },
+      value: `R$ ${styleMoney(capitalGains)}`,
     },
     {
       name: 'TOTAL DISTRIBUÍDOS',
-      value: { earnings },
+      value: `R$ ${styleMoney(earnings)}`,
     },
     {
       name: 'YIELD',
-      value: { yieldOnCost },
+      value: `${yieldOnCost}%`,
     },
   ];
 

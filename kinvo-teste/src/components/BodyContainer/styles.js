@@ -6,15 +6,19 @@ export const BodyContainerLabel = styled.div`
   color: #707b81;
   font-weight: 300;
   text-align: left;
-  margin: 10px 40px;
 `;
 
-export const Container = styled.body`
+export const PortfolioContainer = styled.div`
+  display: grid;
+  grid-auto-flow: row;
+`;
+
+export const Container = styled.section`
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 30px;
   grid-area: assetsWrapperSuper;
   text-align: center;
   background-color: #b1bbc1;
-  width: 100%;
-  div {
-    margin: 0 1%;
-  }
+  padding: 15px;
 `;

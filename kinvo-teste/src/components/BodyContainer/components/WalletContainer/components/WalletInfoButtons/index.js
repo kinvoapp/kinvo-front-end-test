@@ -1,3 +1,3 @@
-import WalletInfoButtons from './presentational';
+import InfoSetOfButtonsPresentational from './presentational';
 
-export default WalletInfoButtons;
+export default InfoSetOfButtonsPresentational;

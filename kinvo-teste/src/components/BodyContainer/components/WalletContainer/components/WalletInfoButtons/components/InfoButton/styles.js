@@ -21,6 +21,5 @@ export const Container = styled.div`
   height: 75px;
   width: 191px;
   text-align: center;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #FFFFFF;
 `;

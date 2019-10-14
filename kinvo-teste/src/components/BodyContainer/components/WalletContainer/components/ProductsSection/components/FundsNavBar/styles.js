@@ -7,13 +7,10 @@ export const FundsNavTitle = styled.h3`
 `;
 
 export const FundsNav = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(65px, auto));
+  justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
-
-  div {
-    padding: 0 80%;
-  }
 `;
 
 export const FundsNavInput = styled.input`

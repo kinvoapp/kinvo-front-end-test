@@ -2,21 +2,20 @@ import React from 'react';
 
 import FundsNavBar from './components/FundsNavBar';
 import FundsSetOfProducts from './components/FundsSetOfProducts';
+import { Container } from './styles';
 
 function ProductsSectionPresentational(props) {
   const { handleSearchInput, filteredProducts } = props;
   return (
-    <section>
+    <Container>
       <FundsNavBar
         handleSearchInput={handleSearchInput}
       />
 
-      <div>
-        <FundsSetOfProducts
-          filteredProducts={filteredProducts}
-        />
-      </div>
-    </section>
+      <FundsSetOfProducts
+        filteredProducts={filteredProducts}
+      />
+    </Container>
   );
 }
 

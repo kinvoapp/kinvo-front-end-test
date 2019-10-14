@@ -3,27 +3,21 @@ import React, { Component } from 'react';
 import WalletContainerPresentational from './presentational';
 import api from '../../../../shared/api';
 
+// portfolio
 class WalletContainer extends Component {
   constructor(props) {
     super(props);
-    console.log('construindo');
     this.state = {
       apiData: {
-        summary: {},
       },
+      loading: true,
     };
   }
 
-  // async componentDidMount() {
-  //   console.log('sadjasdiuagwduw');
-  //   const apiData = await this.loadDataFromApi();
-  //   const { data } = apiData;
-  //   console.log('dsdas', data);
-  //   this.setState({ apiData: data });
-  // };
-
-  componentDidMount() {
-    console.log('did mount');
+  async componentDidMount() {
+    const apiData = await this.loadDataFromApi();
+    const { data } = apiData;
+    this.setState({ apiData: data, loading: false });
   }
 
   loadDataFromApi = async () => {
@@ -33,16 +27,21 @@ class WalletContainer extends Component {
   }
 
   render() {
-    const { apiData } = this.state;
+    const { apiData, loading } = this.state;
 
-    console.log('apiData', apiData);
+    if (loading) {
+      return (
+        <div>
+          LOADING...
+        </div>
+      );
+    }
+
     return React.createElement(
       WalletContainerPresentational, {
         apiData,
       },
     );
-    // return <div />;
   }
 }
-
 export default WalletContainer;

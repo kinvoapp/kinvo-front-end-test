@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  align-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-between;
+  grid-gap: 15px;
 `;
