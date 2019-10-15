@@ -18,7 +18,6 @@ export const Container = styled.section`
   grid-auto-flow: row;
   grid-gap: 30px;
   grid-area: assetsWrapperSuper;
-  text-align: center;
-  background-color: #b1bbc1;
+  background-color: #DAE0E3;
   padding: 15px;
 `;

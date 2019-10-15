@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: grid;
   background-color: ${(props) => (props.active ? '#F8FAFB' : '#EEF2F4')};
   font-family: "Helvetica";
-  vertical-align: middle;
+  align-items: center;
   h1 {
     font-size: 16px;
     text-align: left;
