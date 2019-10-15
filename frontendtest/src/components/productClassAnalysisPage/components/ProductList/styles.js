@@ -11,7 +11,6 @@ export const TextBoxLoading = styled.div`
   width: 300px;
   background: #4C309B;
   color: white;
-  font-family: 'Helvetica Neue';
   font-size: 25px;
   border: 2px solid #CCCFD1;
   border-radius: 25px;

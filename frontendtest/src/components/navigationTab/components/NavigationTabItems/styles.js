@@ -8,7 +8,6 @@ export const Container = styled.nav`
 };
   border-top: 1px solid #DAE0E3;
   display: flex;
-  font-family: 'Helvetica Neue';
   font-size: 15px;
   color: #707B81;
   position: relative;

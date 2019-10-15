@@ -1,6 +1,5 @@
 import React from 'react';
 import arrowIcon from '../../images/arrow.svg';
-import '../../styles.css';
 import { Container, NavigationTabText } from './styles';
 
 function NavigationTabItems(props) {

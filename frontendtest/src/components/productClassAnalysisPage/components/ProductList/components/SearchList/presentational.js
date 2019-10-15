@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Scrollbars } from 'react-custom-scrollbars';
 import {
   Container,
 } from './styles';
@@ -8,15 +10,15 @@ function Presentational(props) {
   const { filteredProducts } = props;
 
   return (
-
-    <Container>
-      {filteredProducts.map((product) => (
-        <Product
-          {...product}
-        />
-      ))}
-    </Container>
-
+    <Scrollbars autoHide style={{ height: 400 }}>
+      <Container>
+        {filteredProducts.map((product) => (
+          <Product
+            {...product}
+          />
+        ))}
+      </Container>
+    </Scrollbars>
   );
 }
 

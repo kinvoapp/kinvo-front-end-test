@@ -7,7 +7,6 @@ export const Container = styled.main`
   display: flex;
   flex-grow: 1;
   height: 1000px;
-  font-family: 'Helvetica Neue';
 
 `;
 

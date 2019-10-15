@@ -8,8 +8,12 @@
   box-sizing: border-box;
   }
 
+html,
 body{
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Neue';
+}
+
+body{
     background: #fafafa;
     color: #333;
 }

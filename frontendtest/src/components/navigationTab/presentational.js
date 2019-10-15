@@ -1,8 +1,5 @@
 import React from 'react';
 
-import './styles.css';
-import '../../styles.css';
-
 import walletOverviewIcon from './images/walletOverviewIcon.svg';
 import fgcCoveredIcon from './images/fgcCoveredIcon.svg';
 import myProceedsIcon from './images/myProceedsIcon.svg';
@@ -26,7 +23,7 @@ const navigationItems = [
   },
   {
     iconSource: myProceedsIcon,
-    label: 'Meus<br />Proventos',
+    label: 'Meus <br/> Proventos',
   },
   {
     iconSource: productClassAnalysisIcon,
@@ -51,6 +48,7 @@ const navigationItems = [
   },
 ];
 
+function NavigationTab() {
   return (
 
     <Container>
@@ -65,5 +63,6 @@ const navigationItems = [
 
   );
 }
+
 
 export default NavigationTab;
