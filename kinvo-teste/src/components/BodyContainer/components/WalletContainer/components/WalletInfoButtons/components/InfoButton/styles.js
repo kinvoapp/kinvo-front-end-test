@@ -12,14 +12,11 @@ export const InfoButtonLabel = styled.p`
 
 export const Container = styled.div`
   display: grid;
-  grid-auto-flow: row;
-  justify-content: center;
-  align-items: center;
+  align-content: center;
   font-family: "Helvetica";
   color: #707b81;
   border-radius: 8px;
   height: 75px;
   width: 191px;
-  text-align: center;
   background-color: #FFFFFF;
 `;
