@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import './styles.css';
+
 import api from '../../../../services/api';
-import SearchFilter from './components/SearchFilter';
-import SearchList from './components/SearchList';
+import Presentational from './presentational';
 
 export default class ProductList extends Component {
-  state = {
-    products: [],
-    filteredProducts: [],
-    filterText: [],
-    productIsLoading: true,
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      products: [],
+      filteredProducts: [],
+      productIsLoading: true,
+    };
   }
 
   componentDidMount() {
@@ -18,7 +20,6 @@ export default class ProductList extends Component {
 
   loadProducts = async () => {
     const response = await api.get();
-    console.log(response);
     const { data: { data: { products } } } = response;
     this.setState({ products, filteredProducts: products, productIsLoading: false });
   }
@@ -39,24 +40,14 @@ export default class ProductList extends Component {
   }
 
   render() {
-    // return React.createElement(
-    //   Presentational, {
-    //     productIsLoading,
-    //     filteredProducts,
-    //     searchInputHandleChange: this.updateSearch,
-    //   }
-    // );
     const { filteredProducts, productIsLoading } = this.state;
-    if (productIsLoading) {
-      return (
-        <div className="textBoxLoading">Carregando...</div>
-      );
-    }
-    return (
-      <div className="funds">
-        <SearchFilter searchProductInputHandleChange={this.updateSearch} />
-        <SearchList filteredProducts={filteredProducts} />
-      </div>
+    const { updateSearch } = this;
+    return React.createElement(
+      Presentational, {
+        productIsLoading,
+        filteredProducts,
+        searchProductInputHandleChange: updateSearch,
+      },
     );
   }
 }

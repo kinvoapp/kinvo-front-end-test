@@ -33,7 +33,6 @@ const textBoxStyle = css`
 export const ProductName = styled.div`
 
   ${textBoxStyle};
-  display: flex;
   justify-content: center;
 
   p{

@@ -1,4 +1,7 @@
-.textBoxLoading{
+import styled from 'styled-components';
+
+export const TextBoxLoading = styled.div`
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -12,11 +15,14 @@
   font-size: 25px;
   border: 2px solid #CCCFD1;
   border-radius: 25px;
-}
 
-.funds{
+`;
+
+export const Container = styled.div`
+
   height: 550px;
   background: #FFF;
   margin: 20px 30px 0 20px;
   border-radius: 15px;
-}
+
+`;
