@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import searchIcon from './images/search-icon-2.png';
 
 export const FundsNavTitle = styled.h3`
   font-size: 18px;
@@ -13,12 +14,29 @@ export const FundsNav = styled.div`
   align-items: center;
 `;
 
+export const FundsNavInputContainer = styled.div`
+  position: relative;
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    left: 0;
+    margin-left: 10px;
+    background-image: url(${searchIcon});
+    background-size: 15px;
+  }
+`;
+
 export const FundsNavInput = styled.input`
-  padding: 0.3em;
   color: palevioletred;
   background: #eef2f4;
   border: solid 1px #9da5ac;
-  width: 150px;
-  border-radius: 10px;
+  width: 250px;
+  height: 33px;
+  border-radius: 29px;
   margin-bottom: 0.5em;
+  padding-left: 30px;
 `;

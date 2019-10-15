@@ -1,20 +1,25 @@
 import React from 'react';
 
-import { FundsNavTitle, FundsNav, FundsNavInput } from './styles';
+import {
+  FundsNavTitle,
+  FundsNav,
+  FundsNavInput,
+  FundsNavInputContainer,
+} from './styles';
 
 function FundsNavBar(props) {
   const { handleSearchInput } = props;
   return (
     <FundsNav>
       <FundsNavTitle>Fundos</FundsNavTitle>
-      <div>
-        <form>
+      <form>
+        <FundsNavInputContainer>
           <FundsNavInput
             type="text"
             onChange={handleSearchInput}
           />
-        </form>
-      </div>
+        </FundsNavInputContainer>
+      </form>
     </FundsNav>
   );
 }
