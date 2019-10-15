@@ -11,9 +11,8 @@ body{
     color: #333;
 }
 
-.contentBody{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+@font-face{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  src: url('./fonts/helvetica-neue.ttf');
 }
-

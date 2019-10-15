@@ -1,20 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
-import NavigationTab from './components/NavigationTab'
+
 import './styles.css';
+import { ContentBody } from './styles';
+
 import ProductClassAnalysisPage from './components/ProductClassAnalysisPage';
+import Header from './components/Header';
+import NavigationTab from './components/NavigationTab';
 
-
-const App = () => {
-  return(
-    <main className="App">
-      <Header/>
-      <div className="contentBody">
-        <NavigationTab/>
-        <ProductClassAnalysisPage/>
-      </div>
-    </main>
-  )
-}
+const App = () => (
+  <main>
+    <Header />
+    <ContentBody>
+      <NavigationTab />
+      <ProductClassAnalysisPage />
+    </ContentBody>
+  </main>
+);
 
 export default App;
