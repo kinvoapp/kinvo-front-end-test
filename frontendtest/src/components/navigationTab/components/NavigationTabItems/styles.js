@@ -6,7 +6,7 @@ export const Container = styled.nav`
   background: ${
   (props) => (props.isActive && '#EEF2F4') || 'white'
 };
-  border-top: 1px solid #DAE0E3;
+  border-bottom: 1px solid #DAE0E3;
   display: flex;
   font-size: 15px;
   color: #707B81;
