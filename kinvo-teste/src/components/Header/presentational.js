@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from './images/kinvo-logo-2.png';
+import logo from './images/kinvo-logo.svg';
 import { Container } from './styles';
 
 function Header() {
