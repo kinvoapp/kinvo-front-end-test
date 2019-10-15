@@ -11,9 +11,7 @@ function NavigationTabItems(props) {
       <Container isActive={isActive}>
         <NavigationTabText>
           <img alt="Logo - Resumo da carteira" src={iconSource} />
-          <h5>
-            { label }
-          </h5>
+          <h5 dangerouslySetInnerHTML={{ __html: label }} />
         </NavigationTabText>
         <a href="#"><img alt="Ícone da seta" src={arrowIcon} /></a>
       </Container>

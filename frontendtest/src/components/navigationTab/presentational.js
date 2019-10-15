@@ -15,51 +15,51 @@ import walletProjectionIcon from './images/walletProjectionIcon.svg';
 import NavigationTabItems from './components/NavigationTabItems';
 import { Container } from './styles';
 
-function NavigationTab() {
+const navigationItems = [
+  {
+    iconSource: walletOverviewIcon,
+    label: 'Resumo <br/> da Carteira',
+  },
+  {
+    iconSource: myProductsIcon,
+    label: 'Meus <br/> Produtos',
+  },
+  {
+    iconSource: myProceedsIcon,
+    label: 'Meus<br />Proventos',
+  },
+  {
+    iconSource: productClassAnalysisIcon,
+    isActive: true,
+    label: 'Análise por <br/> Classe de Produto',
+  },
+  {
+    iconSource: realProftabilityIcon,
+    label: 'Rentabilidade <br/> Real',
+  },
+  {
+    iconSource: walletProjectionIcon,
+    label: 'Projeção <br/> da Carteira',
+  },
+  {
+    iconSource: riskReturnIcon,
+    label: 'Risco <br/> x Retorno',
+  },
+  {
+    iconSource: fgcCoveredIcon,
+    label: 'Cobertura <br/> do FGC',
+  },
+];
+
   return (
 
     <Container>
 
-      <NavigationTabItems
-        iconSource={walletOverviewIcon}
-        label="Resumo da Carteira"
-      />
-
-      <NavigationTabItems
-        iconSource={myProductsIcon}
-        label="Meus Produtos"
-      />
-
-      <NavigationTabItems
-        iconSource={myProceedsIcon}
-        label="Meus Proventos"
-      />
-
-      <NavigationTabItems
-        isActive="true"
-        iconSource={productClassAnalysisIcon}
-        label="Análise por Classe de Produto"
-      />
-
-      <NavigationTabItems
-        iconSource={realProftabilityIcon}
-        label="Rentabilidade Real"
-      />
-
-      <NavigationTabItems
-        iconSource={walletProjectionIcon}
-        label="Projeção da Carteira"
-      />
-
-      <NavigationTabItems
-        iconSource={riskReturnIcon}
-        label="Risco x Retorno"
-      />
-
-      <NavigationTabItems
-        iconSource={fgcCoveredIcon}
-        label="Cobertura do FGC"
-      />
+      {navigationItems.map(
+        (itemInfo) => (
+          <NavigationTabItems {...itemInfo} />
+        ),
+      )}
 
     </Container>
 
