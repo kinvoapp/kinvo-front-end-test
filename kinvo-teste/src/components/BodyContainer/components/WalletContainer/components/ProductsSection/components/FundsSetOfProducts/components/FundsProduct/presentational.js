@@ -1,12 +1,13 @@
 import React from 'react';
 
 import {
-  Product,
   ProductLabel,
   SmallSetOfInfo,
   SmallSetOfInfoValue,
   SmallSetOfInfoLabel,
   Container,
+  MiddleContainer,
+  EndContainer,
 } from './styles';
 import { styleMoney } from '../../../../../../../../../../shared/FunctionsLibrary';
 
@@ -23,18 +24,18 @@ function FundsProduct(props) {
 
   return (
     <Container>
-      <Product>
-        <ProductLabel>{productName}</ProductLabel>
+      <ProductLabel>{productName}</ProductLabel>
 
-        <SmallSetOfInfo>
-          <SmallSetOfInfoLabel>SALDO ATUAL</SmallSetOfInfoLabel>
-          <SmallSetOfInfoValue>
-            R$
-            {' '}
-            {styleMoney(amount * averagePrice)}
-          </SmallSetOfInfoValue>
-        </SmallSetOfInfo>
+      <SmallSetOfInfo>
+        <SmallSetOfInfoLabel>SALDO ATUAL</SmallSetOfInfoLabel>
+        <SmallSetOfInfoValue>
+          R$
+          {' '}
+          {styleMoney(amount * averagePrice)}
+        </SmallSetOfInfoValue>
+      </SmallSetOfInfo>
 
+      <MiddleContainer>
         <SmallSetOfInfo>
           <SmallSetOfInfoLabel>QUANT.</SmallSetOfInfoLabel>
           <SmallSetOfInfoValue>{amount}</SmallSetOfInfoValue>
@@ -57,7 +58,9 @@ function FundsProduct(props) {
             {styleMoney(lastQuotation)}
           </SmallSetOfInfoValue>
         </SmallSetOfInfo>
+      </MiddleContainer>
 
+      <EndContainer>
         <SmallSetOfInfo>
           <SmallSetOfInfoLabel>
             YIELD
@@ -89,7 +92,7 @@ function FundsProduct(props) {
             %
           </SmallSetOfInfoValue>
         </SmallSetOfInfo>
-      </Product>
+      </EndContainer>
     </Container>
   );
 }

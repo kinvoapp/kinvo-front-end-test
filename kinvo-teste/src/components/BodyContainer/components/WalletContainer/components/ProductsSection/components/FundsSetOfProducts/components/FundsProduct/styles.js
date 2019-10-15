@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const Product = styled.div`
-  display: grid;
-  font-family: "Helvetica";
-  grid-template-columns: repeat(8, 1fr);
-  color: #4c309b;
-  height: 40px;
-`;
-
 export const ProductLabel = styled.div`
   font-size: 12px;
 `;
@@ -26,7 +18,14 @@ export const SmallSetOfInfoValue = styled.div`
 `;
 
 export const Container = styled.section`
+  display: grid;
+  font-family: "Helvetica";
+  grid-template-columns: 1fr 1fr 3fr 3fr;
+  align-items: center;
+  color: #4c309b;
+  height: 40px;
   position: relative;
+  grid-gap: 50px;
   &:before{
     content: "";
     position: absolute;
@@ -38,4 +37,17 @@ export const Container = styled.section`
     background-color: #4C309B;
   }
   border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  padding: 0 15px;
+`;
+
+export const MiddleContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+`;
+
+export const EndContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 `;
