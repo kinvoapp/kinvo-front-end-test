@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FundsNavTitle = styled.h3`
   font-size: 18px;
   color: #707b81;
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
 `;
 
 export const FundsNav = styled.div`

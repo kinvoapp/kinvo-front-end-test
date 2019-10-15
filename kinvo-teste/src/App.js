@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
 import BodyContainer from './components/BodyContainer';
+import './styles.css';
 
 // styled-components code
 const Container = styled.div`

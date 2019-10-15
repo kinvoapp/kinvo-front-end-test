@@ -15,7 +15,7 @@ export const Container = styled.div`
   grid-auto-flow: row;
   justify-content: center;
   align-items: center;
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   color: #707b81;
   border-radius: 8px;
   height: 75px;

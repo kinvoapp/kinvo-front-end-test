@@ -5,7 +5,7 @@ import { styleMoney } from '../FunctionsLibrary';
 // styled-components code
 const Product = styled.div`
   display: grid;
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   grid-template-columns: repeat(8, 1fr);
   color: #4c309b;
   height: 40px;

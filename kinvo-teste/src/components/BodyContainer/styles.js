@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BodyContainerLabel = styled.div`
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   font-size: 20px;
   color: #707b81;
   font-weight: 300;

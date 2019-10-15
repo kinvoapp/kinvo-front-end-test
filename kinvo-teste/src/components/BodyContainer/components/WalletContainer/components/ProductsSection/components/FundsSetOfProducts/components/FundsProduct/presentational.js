@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Product,
   ProductLabel,
-  Line,
   SmallSetOfInfo,
   SmallSetOfInfoValue,
   SmallSetOfInfoLabel,
@@ -91,7 +90,6 @@ function FundsProduct(props) {
           </SmallSetOfInfoValue>
         </SmallSetOfInfo>
       </Product>
-      <Line />
     </Container>
   );
 }

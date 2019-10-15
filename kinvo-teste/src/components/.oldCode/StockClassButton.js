@@ -13,7 +13,7 @@ const P = styled.p`
 `;
 
 const DIV = styled.div`
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   color: #707b81;
   border-radius: 8px;
   height: 75px;

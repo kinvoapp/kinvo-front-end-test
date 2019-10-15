@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // styled-components code
 
 const DIV = styled.div`
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   font-size: 14px;
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Product = styled.div`
   display: grid;
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   grid-template-columns: repeat(8, 1fr);
   color: #4c309b;
   height: 40px;
@@ -10,10 +10,6 @@ export const Product = styled.div`
 
 export const ProductLabel = styled.div`
   font-size: 12px;
-`;
-
-export const Line = styled.hr`
-  color: rgba(0, 0, 0, 0.2);
 `;
 
 export const SmallSetOfInfo = styled.div`
@@ -41,4 +37,5 @@ export const Container = styled.section`
     border-radius: 15px;
     background-color: #4C309B;
   }
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
 `;

@@ -5,7 +5,7 @@ import AssetClassSetOfButtons from './AssetClassSetOfButtons';
 
 // styled-components code
 const P = styled.p`
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   font-size: 20px;
   color: #707b81;
   font-weight: 300;

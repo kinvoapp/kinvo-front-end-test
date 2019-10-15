@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: ${(props) => (props.active ? '#F8FAFB' : '#EEF2F4')};
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
   vertical-align: middle;
   h1 {
     font-size: 16px;

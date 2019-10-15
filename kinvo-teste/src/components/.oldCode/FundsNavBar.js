@@ -7,7 +7,7 @@ import FundsSetOfProducts from './FundsSetOfProducts';
 const H = styled.h3`
   font-size: 18px;
   color: #707b81;
-  font-family: "helvetica-neue, arial";
+  font-family: "Helvetica";
 `;
 
 const FundsNav = styled.div`
