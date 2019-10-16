@@ -13,6 +13,9 @@ export const Container = styled.div`
   &:hover {
     background-color: ${(props) => (props.getState ? '#5D41AC' : '#DAE0E3')};
     cursor: pointer;
+    p {
+      color: ${(props) => (props.getState ? 'white' : '#707B81')};
+    }
   }
 
 `;
