@@ -5,16 +5,18 @@ import WalletContainer from './components/WalletContainer';
 
 import { Container, BodyContainerLabel, PortfolioContainer } from './styles';
 
-function BodyContainer() {
+function BodyContainerPresentational(props) {
+  const { apiData } = props;
+
   return (
     <Container>
       <BodyContainerLabel>Análise por Classe de Ativos</BodyContainerLabel>
       <PortfolioContainer>
         <AssetButtonsSection />
-        <WalletContainer />
+        <WalletContainer apiData={apiData} />
       </PortfolioContainer>
     </Container>
   );
 }
 
-export default BodyContainer;
+export default BodyContainerPresentational;

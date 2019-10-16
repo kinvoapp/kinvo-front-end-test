@@ -5,7 +5,6 @@ import InfoButton from './components/InfoButton';
 import { styleMoney } from '../../../../../../shared/FunctionsLibrary';
 
 function InfoSetOfButtonsPresentational(props) {
-  console.log('InfoSetOfButtonsPresentational', props);
   const {
     apiData: {
       summary:

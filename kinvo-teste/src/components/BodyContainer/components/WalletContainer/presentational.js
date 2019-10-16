@@ -3,10 +3,11 @@ import React from 'react';
 import WalletInfoButtons from './components/WalletInfoButtons';
 import ProductsSection from './components/ProductsSection';
 
-import { Container, ProductsSectionContainer } from './styles';
+import { Container } from './styles';
 
 function WalletContainerPresentational(props) {
   const { apiData } = props;
+
   return (
     <Container>
       <WalletInfoButtons apiData={apiData} />

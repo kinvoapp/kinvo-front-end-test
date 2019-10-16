@@ -21,3 +21,9 @@ export const Container = styled.section`
   background-color: #DAE0E3;
   padding: 15px;
 `;
+
+export const LoadingContainer = styled.section`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+`;
