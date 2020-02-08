@@ -1,0 +1,44 @@
+{
+  "name": "teste-kinvo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelo-oliveira-agamenon/kinvo-front-end-test.git"
+  },
+  "author": "Marcelo Ferreira Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelo-oliveira-agamenon/kinvo-front-end-test/issues"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://github.com/marcelo-oliveira-agamenon/kinvo-front-end-test#readme"
+}
