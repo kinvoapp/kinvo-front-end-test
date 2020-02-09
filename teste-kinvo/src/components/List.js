@@ -10,21 +10,23 @@ const List = props => (
         height: "6vh",
         width: "100%",
         marginTop: "3vh",
-        justifyContent: "space-between"
+        borderBottom: "1.6px solid #EEF2F4"
       }}
     >
-      <h4
-        style={{
-          marginLeft: "1vw",
-          fontSize: "12px",
-          fontFamily: "Helvetica",
-          color: "#4C309B",
-          textTransform: "uppercase"
-        }}
-      >
-        {props.data.productName}
-      </h4>
-      <div>
+      <div style={{ width: "20%" }}>
+        <h4
+          style={{
+            marginLeft: "1vw",
+            fontSize: "12px",
+            fontFamily: "Helvetica",
+            color: "#4C309B",
+            textTransform: "uppercase"
+          }}
+        >
+          {props.data.productName}
+        </h4>
+      </div>
+      <div style={{ marginRight: "8vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -46,13 +48,13 @@ const List = props => (
             color: "#4C309B"
           }}
         >
-          R$
+          R${" "}
           {parseFloat(props.data.equity)
             .toFixed(2)
             .replace(".", ",")}
         </h5>
       </div>
-      <div>
+      <div style={{ marginRight: "2.5vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -77,7 +79,7 @@ const List = props => (
           {props.data.amount}
         </h5>
       </div>
-      <div>
+      <div style={{ marginRight: "2.5vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -99,13 +101,13 @@ const List = props => (
             color: "#4C309B"
           }}
         >
-          R$
+          R${" "}
           {parseFloat(props.data.averagePrice)
             .toFixed(2)
             .replace(".", ",")}
         </h5>
       </div>
-      <div>
+      <div style={{ marginRight: "10.5vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -127,13 +129,13 @@ const List = props => (
             color: "#4C309B"
           }}
         >
-          R$
+          R${" "}
           {parseFloat(props.data.lastQuotation)
             .toFixed(2)
             .replace(".", ",")}
         </h5>
       </div>
-      <div>
+      <div style={{ marginRight: "5.5vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -161,7 +163,7 @@ const List = props => (
           %
         </h5>
       </div>
-      <div>
+      <div style={{ marginRight: "5.5vw", alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",
@@ -189,7 +191,7 @@ const List = props => (
           %
         </h5>
       </div>
-      <div>
+      <div style={{ alignSelf: "center" }}>
         <h5
           style={{
             padding: "0",

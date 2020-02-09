@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Container from "../components/Container";
 import SideMenu from "../components/sideMenu";
 
@@ -33,7 +33,7 @@ export default class Dashboard extends React.Component {
             style={{
               position: "initial",
               backgroundColor: "#DAE0E3",
-              marginLeft: "14vw",
+              marginLeft: "11.74vw",
               marginTop: "10.5vh",
               width: "100%",
               padding: "20px"
