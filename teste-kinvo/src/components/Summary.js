@@ -2,7 +2,6 @@ import React from "react";
 
 const Summary = props => (
   <>
-    {console.log(props.data)}
     <div
       style={{
         display: "block",
