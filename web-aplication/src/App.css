@@ -26,9 +26,10 @@ header{
 }
 
 
-/*btões*/
+/*botões*/
 .sideBtts {
-    margin-top: 25px;
+    margin-top: auto;
+    margin-left: -10px;
     display: grid;
     gap: 10px;
     grid-template-columns: 2fr 3fr;
@@ -46,6 +47,7 @@ header{
 	padding: 12px 12px;
     text-decoration:none;
 }
+
 .sideBtts:hover {
     opacity: 1;
 }
