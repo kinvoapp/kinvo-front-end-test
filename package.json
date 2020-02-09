@@ -1,0 +1,25 @@
+{
+  "name": "kinvo-front-end-test",
+  "version": "1.0.0",
+  "description": "> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trev0ux/kinvo-front-end-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trev0ux/kinvo-front-end-test/issues"
+  },
+  "homepage": "https://github.com/trev0ux/kinvo-front-end-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}

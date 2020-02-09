@@ -1,0 +1,131 @@
+body {
+  background-color: #dae0e3 !important; }
+
+ul,
+ol,
+li {
+  list-style: none; }
+
+.navbar {
+  height: 90px; }
+
+.databuttons {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px; }
+
+#container__tab {
+  padding: 0px !important; }
+
+.main__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555c5f;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.nav-link {
+  display: block;
+  padding: 25px !important; }
+
+.nav-link.active {
+  background: #f8fafb !important;
+  color: #555c5f !important; }
+
+#tab {
+  font-size: 16px;
+  font-weight: 601;
+  width: 267px;
+  height: 65px;
+  margin-right: 10px;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+  padding-top: 25px;
+  color: #aab5bb;
+  background-color: #eef2f4; }
+
+.end {
+  margin-right: 0px !important;
+  width: 279px !important; }
+
+#item {
+  border-bottom: 1px solid #f3f3f3; }
+
+.icon-search {
+  position: relative;
+  right: 280px;
+  opacity: 60%;
+  cursor: pointer; }
+
+th {
+  color: #5a41a3;
+  font-size: 9px;
+  font-weight: 500;
+  padding: 0px 0px 0px 62px;
+  text-transform: uppercase;
+  position: relative;
+  top: 12px; }
+
+#item {
+  border-bottom: 1px solid  #f3f3f3;
+  height: 50px; }
+
+.radius {
+  border-radius: 15px; }
+
+.item_name {
+  padding: 20px !important; }
+
+td {
+  font-size: 14px;
+  color: #4c309b;
+  font-weight: 600;
+  padding: 0px 0px 0px 62px; }
+
+.head-fundo {
+  height: 63px;
+  padding-top: 25px;
+  margin-bottom: 24px; }
+
+#item--tag {
+  width: 6px;
+  height: 32px;
+  background-color: #4c309b;
+  display: inline-block;
+  position: relative;
+  top: -50px;
+  border-radius: 15%; }
+
+#search {
+  border-radius: 50px;
+  background: #eef2f4;
+  border: 0px; }
+
+.form-control {
+  padding-top: 0.375rem;
+  padding-right: 2.75rem !important;
+  padding-bottom: 0.375rem;
+  padding-left: 2.75rem !important; }
+
+.fundos {
+  font-size: 16px;
+  font-weight: 601;
+  color: #707b81 !important; }
+
+.databuttons__button {
+  background: #fff;
+  text-transform: uppercase;
+  font-size: 9px;
+  display: inline-block;
+  height: 75px;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 5px;
+  width: 207px;
+  padding-top: 20px;
+  color: #707b81;
+  margin-top: 15px; }
+
+.databuttons__button span {
+  font-size: 18px;
+  font-weight: 700; }
