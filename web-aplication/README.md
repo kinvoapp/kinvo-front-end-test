@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Install the NPM and NODE.JS.
 
-In linux terminal type  "sudo su apt-get update install npm", 
+In linux terminal type  "sudo su apt-get install npm", 
 after install will type in your terminal "node -v" and "npm -v".
 If you see one answer of version, then go to next stape.
 
