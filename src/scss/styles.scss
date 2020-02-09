@@ -46,63 +46,62 @@ li {
 }
 
 #tab {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 601;
-    width: 267px;
-    height: 65px;
-    margin-right: 10px;
+    width: 204px;
+    height: 58px;
+    margin-right: 2px;
     border-radius: 15px 15px 0px 0px;
     position: relative;
-    padding-top: 25px;
+    padding-top: 20px;
     color: #aab5bb;
     background-color: #eef2f4;
 }
 
-.end{
-    margin-right: 0px !important;
-    width: 279px !important;
+
+#item {
+    border-bottom: 1px solid #f3f3f3;
 }
 
- #item{
-    border-bottom: 1px solid #f3f3f3;
- }
-
- .icon-search{
+.icon-search {
     position: relative;
-    right: 280px;
-    opacity: 60%;
+    right: 165px;
+    opacity: 50%;
     cursor: pointer;
- }
+}
 
 th {
-    color:#5a41a3;
-    font-size: 9px;
+    color:
+        #5a41a3;
+    font-size: 8px;
     font-weight: 500;
-    padding: 0px 0px 0px 62px;
     text-transform: uppercase;
     position: relative;
-    top: 12px;
+    text-align: center;
+    padding-left: 29px;
+    top: 21px;
 }
 
 #item {
-    border-bottom: 1px solid 
-    #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
     height: 50px;
 }
 
-.radius{
+.radius {
     border-radius: 15px;
 }
 
-.item_name{
+.item_name {
     padding: 20px !important;
 }
+
 td {
     font-size: 14px;
-    color: 
-    #4c309b;
+    color:
+        #4c309b;
     font-weight: 600;
-    padding: 0px 0px 0px 62px;
+    text-align: left;
+    padding-left: 29px;
 }
 
 .head-fundo {
@@ -111,37 +110,53 @@ td {
     margin-bottom: 24px;
 }
 
-#item--tag{
+#item--tag {
     width: 6px;
     height: 32px;
-    background-color:#4c309b;
+    background-color: #4c309b;
     display: inline-block;
     position: relative;
     top: -50px;
     border-radius: 15%;
 }
 
+.container {
+    margin: 0 !important;
+}
 
 
+.item_nav {
+    color: $font-color;
+    font-size: 14px;
+    padding: 20px;
+    background: white;
+    border-block-end: 0.2px solid #f3f3f3;
+    width: 100%;
+}
 
 #search {
     border-radius: 50px;
-    background:
-        #eef2f4;
+    background:#eef2f4;
     border: 0px;
+    width: 199px;
+    height: 28px;
+    position: relative;
+    left: 33px;
 }
 
-.form-control{
-padding-top: 0.375rem;
-padding-right: 2.75rem !important;
-padding-bottom: 0.375rem;
-padding-left: 2.75rem !important;
+.form-control {
+    padding-top: 0.375rem;
+    padding-right: 2.75rem !important;
+    padding-bottom: 0.375rem;
+    padding-left: 2.75rem !important;
 }
 
 .fundos {
     font-size: 16px;
     font-weight: 601;
     color: $font-color !important;
+    position: relative;
+    top: 2px;
 }
 
 .databuttons__button {
@@ -152,8 +167,7 @@ padding-left: 2.75rem !important;
     height: 75px;
     border-radius: 10px;
     text-align: center;
-    margin-right: 5px;
-    width: 207px;
+    width: 155px;
     padding-top: 20px;
     color: #707b81;
     margin-top: 15px;
