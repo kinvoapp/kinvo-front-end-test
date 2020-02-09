@@ -24,59 +24,83 @@
 
     <main class="container">
         <div class="row">
-            <div class="col-3 bg-white">
+            <div class="col-2 bg-white">
                 <div>
                     <li class="item_nav">
-                      <a class="link">Resumo da carteira</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/resumo-da-carteira.svg">
+                        </span>
+                      <a class="link">Resumo <br> Da Carteira</a>
                       <a class="float-right">
                         <i class="fa fa-angle-right"></i>
                       </a>
                     </li>
                     <li class="item_nav">
-                        <a>Meus Produtos</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/meus-produtos.svg">
+                        </span>
+                        <a>Meus<br> Produtos</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                     <li class="item_nav">
-                        <a>Meus Proventos</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/meus-proventos.svg">
+                        </span>
+                        <a>Meus<br> Proventos</a>
+                        <a class="float-right">
+                            <i class="fa fa-angle-right"></i>
+                          </a>
+                    </li>
+                    <li class="item_nav active">
+                        <span class="nav-icon active">
+                            <img class="icon" src="./icons/analise-produto.svg">
+                        </span>
+                        <a>Análise por<br> Classe de Produto</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                     <li class="item_nav">
-                        <a>Análise por Classe de Produto</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/rentabilidade-real.svg">
+                        </span>
+                        <a>Rentabilidade<br> Real</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                     <li class="item_nav">
-                        <a>Rentabilidade Real</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/projecao-carteira.svg">
+                        </span>
+                        <a>Projeção<br> da Carteira</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                     <li class="item_nav">
-                        <a>Projeção da Carteira</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/risco-retorno.svg">
+                        </span>
+                        <a>Risco<br> x Retorno</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                     <li class="item_nav">
-                        <a>Risco x Retorno</a>
-                        <a class="float-right">
-                            <i class="fa fa-angle-right"></i>
-                          </a>
-                    </li>
-                    <li class="item_nav">
-                        <a>Cobertura do FGC</a>
+                        <span class="nav-icon">
+                            <img class="icon" src="./icons/cobertura-fgc.svg">
+                        </span>
+                        <a>Cobertura<br> do FGC</a>
                         <a class="float-right">
                             <i class="fa fa-angle-right"></i>
                           </a>
                     </li>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-10">
                 <div class="row">
                     <div class="col-sm">
                         <h3 class="main__title">Análise por Classe de Ativos</h3>
@@ -101,13 +125,7 @@
                 <div class="container bg-light">
                     <div class="row">
                         <div class="col-sm">
-                            <ul class="databuttons">
-                                <li class="databuttons__button"><a>saldo bruto<br><span>R$12.000</span></a></li>
-                                <li class="databuttons__button"><a>valor aplicado<br><span>R$12.000</span></a></li>
-                                <li class="databuttons__button"><a>ganho de capital<br><span>R$12.000</span></a></li>
-                                <li class="databuttons__button"><a>total distribuído<br><span>R$12.000</span></a></li>
-                                <li class="databuttons__button"><a>yield<br><span>20%</span></a></li>
-                            </ul>
+                            <div id="summary"></div>
                         </div>
                     </div>
                     <div class="container radius bg-white justify-content-between">
@@ -120,9 +138,7 @@
                             </form>
                         </div>
                         <table id="cont">
-                            <tr>
-
-                            </tr>
+                            <tr></tr>
                         </table>
                     </div>
                 </div>

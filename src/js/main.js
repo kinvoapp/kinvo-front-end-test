@@ -20,8 +20,9 @@ const url = 'https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStock
 
 fetch(url).then(response => response.json())
 .then(data => {
-        console.log(data.data.products[0])
+        console.log(data.data.summary)
         tabela(data)
+        summary(data)
     })
     .catch(err => console.log(err));
 
@@ -45,7 +46,7 @@ function tabela(data) {
         </tr>
         </thead> 
         <tr class="tr_table" id="item">
-        <div id="item--tag"> </div>
+        <div class="tag" id="item--tag"> </div>
         <td class="item_name">${data.data.products[i].productName}</td>
         <td>${data.data.products[i].amount}</td>
         <td>${data.data.products[i].averagePrice}</td>
@@ -61,14 +62,30 @@ function tabela(data) {
     }
 }
 
+function summary(data){
+  var item = document.getElementById("summary");
+  console.log(item);
+  item.innerHTML = ""
+  for (let summary in Object.keys(data)) {
+    item.innerHTML = `
+    <ul class="databuttons">
+    <li class="databuttons__button"><a>saldo bruto<br><span>${data.data.summary.grossBalance}</span></a></li>
+    <li class="databuttons__button"><a>valor aplicado<br><span>${data.data.summary.appliedValue}</span></a></li>
+    <li class="databuttons__button"><a>ganho de capital<br><span>${data.data.summary.capitalGains}</span></a></li>
+    <li class="databuttons__button"><a>total distribuído<br><span>${data.data.summary.earnings}</span></a></li>
+    <li class="databuttons__button"><a>yield<br><span>${data.data.summary.yield}</span></a></li>
+    <ul>
+    `
+  }
+}
 
   function searchByName() {
-    let input, filter, table, tr, td, i, txtValue;
+    let input, filter, tr, td, i, txtValue;
     input = document.getElementById("search");
     filter = input.value.toUpperCase();
     tr = document.getElementsByTagName("tbody");
     th = document.getElementsByTagName("thead");
-    span = document.getElementById("item--tag");
+    span = document.getElementsByClassName("tag");
     console.log(span)
     console.log(tr);
     for (i = 0; i < tr.length; i++) {
@@ -78,11 +95,11 @@ function tabela(data) {
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           tr[i].style.display = "";
           th[i].style.display = "";
-          span.style.display = "";
+          span[i].style.display = "";
         } else {
+          span[i].style.display = "none";
           tr[i].style.display = "none";
           th[i].style.display = "none";
-          span.style.display = "none";
         }
       }
     }

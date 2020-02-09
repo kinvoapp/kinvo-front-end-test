@@ -48,9 +48,9 @@ li {
 #tab {
     font-size: 14px;
     font-weight: 601;
-    width: 204px;
-    height: 58px;
-    margin-right: 2px;
+    width: 270px;
+    height: 65px;
+    margin-right: 4px;
     border-radius: 15px 15px 0px 0px;
     position: relative;
     padding-top: 20px;
@@ -65,20 +65,18 @@ li {
 
 .icon-search {
     position: relative;
-    right: 165px;
+    right: 210px;
     opacity: 50%;
     cursor: pointer;
 }
 
 th {
-    color:
-        #5a41a3;
-    font-size: 8px;
+    color:#5a41a3;
+    font-size: 9px;
     font-weight: 500;
     text-transform: uppercase;
     position: relative;
-    text-align: center;
-    padding-left: 29px;
+    padding-left: 62px;
     top: 21px;
 }
 
@@ -101,7 +99,7 @@ td {
         #4c309b;
     font-weight: 600;
     text-align: left;
-    padding-left: 29px;
+    padding-left: 62px;
 }
 
 .head-fundo {
@@ -124,11 +122,35 @@ td {
     margin: 0 !important;
 }
 
+.col-2{
+    padding: 0 !important;
+}
+
+.nav-icon.active{
+    background-color: #4c309b;
+}
+
+.item_nav.active{
+    background: #eef2f4;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+.nav-icon {
+    background: 
+    #dae0e3;
+    padding: 7px 10px 9px 10px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
 
 .item_nav {
     color: $font-color;
-    font-size: 14px;
-    padding: 20px;
+    font-size: 12px;
+    padding: 15px;
     background: white;
     border-block-end: 0.2px solid #f3f3f3;
     width: 100%;
@@ -138,8 +160,8 @@ td {
     border-radius: 50px;
     background:#eef2f4;
     border: 0px;
-    width: 199px;
-    height: 28px;
+    width: 250px;
+    height: 30px;
     position: relative;
     left: 33px;
 }
@@ -160,16 +182,17 @@ td {
 }
 
 .databuttons__button {
-    background: #fff;
+    background:#fff;
     text-transform: uppercase;
     font-size: 9px;
     display: inline-block;
     height: 75px;
     border-radius: 10px;
     text-align: center;
-    width: 155px;
+    width: 210px;
     padding-top: 20px;
-    color: #707b81;
+    color:
+    #707b81;
     margin-top: 15px;
 }
 
