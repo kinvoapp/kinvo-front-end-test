@@ -15,34 +15,42 @@ function App() {
 
         <form>
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Resumo Da Carteira</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Meus Produtos</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Análise por Classe de Produto</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Análise por Classe de Produto</h3>  
             </div> 
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Rentabilidade Real</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Projeção da Carteira</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Risco X Retorno</h3>
             </div>
 
             <div className="sideBtts">
+            <img class="iconsSlide" src="./img/pizzaGraph.png" alt="PizzaGraph"></img>
             <h3>Cobertura do FGC</h3>
             </div>
         </form>

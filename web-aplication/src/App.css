@@ -7,7 +7,7 @@ header{
     margin-left: -10px;
     display: -webkit-box;
     background-color: #ffffffff;
-    width: auto;
+    width: 100vw;
     height: 100px;
 }
 
@@ -32,8 +32,8 @@ header{
     margin-left: -10px;
     display: grid;
     gap: 10px;
-    grid-template-columns: 2fr 3fr;
-    width: 224px;
+    grid-template-columns: 1fr 1fr auto;
+    width: 220px;
     height: 68px;
 
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -55,4 +55,13 @@ header{
 .sideBtts:active {
 	position:relative;
     top:1px;
+}
+
+/*SlideIcons*/
+.iconsSlide{
+    margin-top: 23px;
+    margin-left: 20px;
+    display: grid;
+    width: 35px;
+    height: 33px;
 }
