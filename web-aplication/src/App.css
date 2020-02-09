@@ -1,0 +1,56 @@
+body{
+    background-color: #d8dee1ff;
+}
+
+header{
+    margin-top: -10px;
+    margin-left: -10px;
+    display: -webkit-box;
+    background-color: #ffffffff;
+    width: auto;
+    height: 100px;
+}
+
+.divHeader{
+    margin-top: 12px;
+    margin-left: 10px;
+    display: -webkit-inline-box;
+}
+
+#kinvoHeader{
+    color: #5d41acff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}#premiumHeader{
+    color: #6c7a82ff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*btões*/
+.sideBtts {
+    margin-top: 25px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 3fr;
+    width: 224px;
+    height: 68px;
+
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color: #ffffff;
+	border:1px solid #e7e8e9ff;
+	cursor:pointer;
+	color:#919191;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding: 12px 12px;
+    text-decoration:none;
+}
+.sideBtts:hover {
+    opacity: 1;
+}
+
+.sideBtts:active {
+	position:relative;
+    top:1px;
+}
