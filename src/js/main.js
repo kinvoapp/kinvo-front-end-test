@@ -16,6 +16,8 @@ xhr.send();
 */
 
 
+// Call API 
+
 const url = 'https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation';
 
 fetch(url).then(response => response.json())
@@ -26,6 +28,8 @@ fetch(url).then(response => response.json())
     })
     .catch(err => console.log(err));
 
+
+    //dados da API exibidos no HTML
 function tabela(data) {
     var cont = document.querySelector("#cont");
     cont.innerHTML = ""
@@ -62,6 +66,7 @@ function tabela(data) {
     }
 }
 
+//dados do sumário 
 function summary(data){
   var item = document.getElementById("summary");
   console.log(item);
@@ -79,20 +84,7 @@ function summary(data){
   }
 }
 
-function newTab(evt, tab) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
+//pesquisar por nome
   function searchByName() {
     let input, filter, tr, td, i, txtValue;
     input = document.getElementById("search");
