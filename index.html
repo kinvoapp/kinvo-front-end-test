@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinvo - APP</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+  </head>
+  <body>
+    <!--START HEADER-->
+    <header class="header">
+      <div class="logo">
+        <img src="assets/img/logo.svg" alt="Logo da Kinvo" title="Kinvo" /><span
+          >premium</span
+        >
+      </div>
+    </header>
+    <!--END HEADER-->
+
+    <!--START CONTAINER-->
+    <section class="container">
+      <!--START NAVBAR-->
+      <nav>
+        <ul>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone1.png" />
+              </div>
+              <div><span>Resumo</span><span>Da Carteira</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone2.png" />
+              </div>
+              <div><span>Meus</span><span>Produtos</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone3.png" />
+              </div>
+              <div><span>Meus</span><span>Proventos</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a class="a-ativo" href="#">
+            <li>
+              <div class="icone purple">
+                <img src="assets/img/icone4.png" />
+              </div>
+              <div><span>Análise por</span><span>Classe de Produto</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone5.png" />
+              </div>
+              <div><span>Rentabilidade</span><span>Real</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone6.png" />
+              </div>
+              <div><span>Projeção</span><span>da Carteira</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone7.png" />
+              </div>
+              <div><span>Risco</span><span>x Retorno</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="icone">
+                <img src="assets/img/icone8.png" />
+              </div>
+              <div><span>Cobertura</span><span>do FGC</span></div>
+              <img class="arrow" src="assets/img/arrow.png" />
+            </li>
+          </a>
+        </ul>
+      </nav>
+      <!--END NAVBAR-->
+
+      <!--START MAIN-->
+      <main>
+        <h1 class="classe">Análise por Classe de Ativos</h1>
+        <section class="container-abas">
+          <article class="aba ativa">Ações</article>
+          <article class="aba">Nome da Classe</article>
+          <article class="aba">Nome da Classe</article>
+          <article class="aba">Nome da Classe</article>
+        </section>
+        <section class="container-inner">
+          <section class="summary">
+            <article class="summary-item">
+              <div class="title-summary-item">Saldo Bruto</div>
+              <div class="value-summary-item" id="saldo-valor">0,00</div>
+            </article>
+            <article class="summary-item">
+              <div class="title-summary-item">Valor Aplicado</div>
+              <div class="value-summary-item" id="valor-aplicado">0,00</div>
+            </article>
+            <article class="summary-item">
+              <div class="title-summary-item">Ganho de Capital</div>
+              <div class="value-summary-item" id="ganho-capital">0,00</div>
+            </article>
+            <article class="summary-item">
+              <div class="title-summary-item">Total Distribuidos</div>
+              <div class="value-summary-item" id="total-distribuidos">0,00</div>
+            </article>
+            <article class="summary-item">
+              <div class="title-summary-item">Yield</div>
+              <div class="value-summary-item" id="percent-yield">0%</div>
+            </article>
+          </section>
+
+          <!--START TABLE-->
+          <section class="container-table">
+            <div class="top-table">
+              <h1>Fundos</h1>
+              <div class="search">
+                <img src="assets/img/search.png" />
+                <input type="search" />
+              </div>
+            </div>
+            <div class="content">
+              <table border="0" id="show-data"></table>
+            </div>
+          </section>
+          <!--END TABLE-->
+        </section>
+      </main>
+      <!--END MAIN-->
+    </section>
+    <!--END CONTAINER-->
+    <script src="assets/js/script.js"></script>
+  </body>
+  <!--
+
+    KKKK     KKKK   KKKK   KKKK        KK   KKKK            KKKK   KKKKKKKKKKKKKKKKK
+    KKKK    KKKK    KKKK   KKKKK     KKKK    KKKK          KKKK    KKKKKKKKKKKKKKKKK 
+    KKK KKKKKK      KKKK   KKKKKK   KKKKK     KKKK        KKKK     KKKK         KKKK
+    KKKKKKKKKK      KKKK   KKKKKKKKKKKKKK      KKKK      KKKK      KKKK         KKKK
+    KKKK  KKKKK     KKKK   KKKK    KKKKKK       KKKK    KKKK       KKKK         KKKK 
+    KKKK   KKKKKK   KKKK   KKKK     KKKKK         KKKK KKKK        KKKKKKKKKKKKKKKKK
+    KKKK    KKKKKK  KKKK   KKKK      KKKK           KKKKK          KKKKKKKKKKKKKKKKK 
+
+  -->
+</html>
