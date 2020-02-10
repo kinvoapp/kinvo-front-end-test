@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +12,17 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-light bg-white">
             <a class="navbar-brand"><img src="/img/logo.svg"></a>
         </nav>
     </header>
-
-
     <main class="container">
         <div class="row">
             <div class="col-2 bg-white">
                 <div>
+                <!--SIDENAV-->
                     <li class="item_nav">
                         <span class="nav-icon">
                             <img class="icon" src="./icons/resumo-da-carteira.svg">
@@ -106,37 +103,41 @@
                         <h3 class="main__title">Análise por Classe de Ativos</h3>
                     </div>
                 </div>
+                 <!--TABS-->
                 <div class="container d-flex" id="container__tab">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="tab">Ações</a>
+                            <a class="nav-link active" id="tab" onclick="openTab(e, 'actions')">Ações</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="tab" href="#">Nome da Classe</a>
+                            <a class="nav-link" id="tab" onclick="openTab(e, 'newDashboard')" href="#">Nome da Classe</a>
                         </li>
                         <li class="filter nav-item">
-                            <a class="nav-link" id="tab" href="#">Nome da Classe</a>
+                            <a class="nav-link" id="tab" onclick="openTab(e, 'newDashboard')" href="#">Nome da Classe</a>
                         </li>
                         <li class="filter nav-item">
-                            <a class="end nav-link" id="tab" href="#">Nome da Classe</a>
+                            <a class="end nav-link" onclick="openTab(e, 'newDashboard')" id="tab" href="#">Nome da Classe</a>
                         </li>
                     </ul>
                 </div>
-                <div class="container bg-light">
+                <div class="container bg-light" id="actions">
                     <div class="row">
                         <div class="col-sm">
+                            <!--SUMMARY-->
                             <div id="summary"></div>
                         </div>
                     </div>
                     <div class="container radius bg-white justify-content-between">
                         <div class="col-sm head-fundo">
                             <a class="fundos">Fundos</a>
+                                <!--SEARCH-->
                             <form class="form-inline float-right">
                                 <input class="form-control mr-sm-2" id="search" onkeyup="searchByName()" type="search"
                                     name="search" aria-label="Search">
                                 <a class="icon-search"> <i class="fa fa-search"></i></a>
                             </form>
                         </div>
+                        <!--DADOS DA API-->
                         <table id="cont">
                             <tr></tr>
                         </table>
@@ -145,6 +146,14 @@
             </div>
         </div>
     </main>
+    <div class="tab-content" id="newDashboard">
+        <div class="tab-pane fade show active">
+            <div class="container bg-white">
+                <br>
+                <h2>A definir</h2>
+                <br>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
