@@ -1,39 +1,16 @@
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+﻿Projeto: Estágio Kinvo-Front-End-Test
 
-# Teste para candidatos à vaga de Front-End
+![Kinvo](https://lh3.googleusercontent.com/proxy/dtQkYdLauvWx-mqFxSabKfD4aMAdpfEOUkn-rqFYOl_QWgjdya6iAY2inJls5rW31zF4_hgzmTSCBzHUkAWWHSRggHpDC5WsLIchjMyLRyhHhNu65_-xSaVxFczjMq9kbHcfnBW2wv0MYcME)
 
-## Instruções:
+> Teste frontend para oportunidade de Estágio na Kinvo.
+###
+> Projeto **responsivo**.
+###
+> Tecnologias utilizadas: **CSS**, **HTML** e **Javascript**.
 
-1. Faça um fork deste repositório;
-2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+######
+> API Utilizada: [https://fixer.io/](https://fixer.io/)
+> **Desenvolvedor**: Lúcio Nonato Silva de Oliveira
+> Fevereiro de 2020 - versão 1.0
+> **Contato** luciononato@hotmail.com
 
-### Pré-requisitos:
-
-- Filtrar a listagem de produtos pelo nome do produto;
-- Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
-- Utilizar ECMAScript 6+;
-
-- **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
-
-### Ganhe pontos extras por:
-
-- Utilizar `React`;
-- Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
-- Testes unitários;
-- Desenvolver HTML semântico;
-- Componentizar sua interface;
-- Utilizar `Webpack`;
-- Utilizar `styled-components`;
-
-## Material:
-
-- O layout em formato Adobe XD consta no repositório em [/material](/material);
-- Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
-
-## Submissão
-
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e depois envie-nos o pull request.
-Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
-
-**Sucesso!**

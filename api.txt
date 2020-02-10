@@ -1,0 +1,66 @@
+{ 
+    "success": true,
+    "data": { 
+        "summary": {
+            "grossBalance": 30047.24,
+            "appliedValue": 25540.15,
+            "capitalGains": 4507.1,
+            "earnings": 3420.43,
+            "yield": 18.23 },
+        "products": 
+        [ 
+            { 
+                "productName": "ABEV3 - AMBEV",
+                "equity": 1980.90,
+                "amount": 100,
+                "averagePrice": 19.80,
+                "lastQuotation": 20.06,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "NEOE3 - NEOENERGIA",
+                "equity": 3650.44,
+                "amount": 200,
+                "averagePrice": 17.80,
+                "lastQuotation": 18.00,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "BIDI4 - Banco Inter",
+                "equity": 9600.00,
+                "amount": 600,
+                "averagePrice": 16.60,
+                "lastQuotation": 17.09,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "ITSA4 - Itaúsa",
+                "equity": 2180.90,
+                "amount": 200,
+                "averagePrice": 11.80,
+                "lastQuotation": 12.59,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "WEGE3 - WEG S.A. ",
+                "equity": 6540.00,
+                "amount": 300, "averagePrice": 21.80,
+                "lastQuotation": 23.92, "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "GRND3 - Grendene",
+                "equity": 1260.00, "amount": 200,
+                "averagePrice": 6.30,
+                "lastQuotation": 7.61,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 },
+            { 
+                "productName": "EGIE3 - Engie Brasil",
+                "equity": 4835.00,
+                "amount": 100,
+                "averagePrice": 19.80,
+                "lastQuotation": 48.35,
+                "currentMonthYield": 2.31,
+                "lastTwelveMonthsYeld": 12.31 } 
+        ]
+}   }

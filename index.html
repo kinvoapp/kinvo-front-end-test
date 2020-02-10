@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kinvo Premium</title>
+
+    <link rel="stylesheet"  type="text/css" href="./css/style.css">  
+    <script type="text/javascript" src="./js/jquery.js"></script>  
+    <script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <img src="./logo.svg" alt="">
+                <img src="./imagens/premium.png" id="premium" alt="">               
+            </div>
+        </div>
+    </header>
+
+    <section id="body">
+        <div class="container">
+            <div class="menu-esquerdo">
+                <nav>
+                    <ul>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/relogio1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Resumo
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    Da Carteira
+                                </div> 
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/quadrados1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Meus
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    Produtos
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/dinheiro1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Meus
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    Proventos
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>    
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/projecao1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Análise por
+                                </div>
+                                <div class="menu-esquerdo2" id="espaco-tablet">
+                                    Classe de Produto
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/diamante1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Rentabilidade
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    Real
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/simbolo1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Projeção
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    da Carteira
+                                </div> 
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>        
+                        </li>
+                        <li id="cursor">
+                            <div id="circulo">
+                                <img src="./imagens/icones/circulo1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Risco
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    x Retorno
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>    
+                        </li>
+                        <li id="cursor" id="borda-ausente">
+                            <div id="circulo">
+                                <img src="./imagens/icones/cadeado1.png" alt="">
+                            </div>    
+                            <div class="menu-esquerdo-informacoes">
+                                <div class="menu-esquerdo1">
+                                    Cobertura
+                                </div>
+                                <div class="menu-esquerdo2">
+                                    do FGC
+                                </div>
+                            </div>
+                            <div class="flecha">
+                                <img src="./imagens/icones/flecha1.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="info-direita">
+                <div class="info-direita-titulo">
+                    Análise por Classe de Ativos
+                </div>
+                <div class="info-direita-menu">
+                    <div class="info-direita-menu1" id="espacamento-menu-direita">
+                        <div class="menu-direita-titulo">
+                            Ações
+                        </div>
+                    </div>
+                    <div class="info-direita-menu1" id="espacamento-menu-direita">
+                        <div class="menu-direita-titulo-nao-selecionado">
+                            Nome da Classe
+                        </div>
+                    </div>
+                    <div class="info-direita-menu1" id="espacamento-menu-direita">
+                        <div class="menu-direita-titulo-nao-selecionado">
+                            Nome da Classe
+                        </div>
+                    </div>
+                    <div class="info-direita-menu1">
+                        <div class="menu-direita-titulo-nao-selecionado">
+                            Nome da Classe
+                        </div>
+                    </div>
+                </div>
+                <div class="info-direita-categorias">
+                    <div class="info-direita-categorias1">
+                        <div class="info-direita-categorias2">
+                            <div class="info-direita-subcategoria">
+                                SALDO BRUTO
+                            </div>
+                            <div class="info-direita-subcategoria1" id="saldoBruto">
+                                <b>R$ 12.709,14</b>
+                            </div>
+                        </div>
+                        <div class="info-direita-categorias2">
+                            <div class="info-direita-subcategoria">
+                                VALOR APLICADO
+                            </div>
+                            <div class="info-direita-subcategoria1" id="valorAplicado">
+                                <b>R$ 10.023,12</b>
+                            </div>
+                        </div>
+                        <div class="info-direita-categorias2">
+                            <div class="info-direita-subcategoria">
+                                GANHO DE CAPITAL
+                            </div>
+                            <div class="info-direita-subcategoria1" id="ganhoDeCapital">
+                                <b>R$ 2.686,01</b>
+                            </div>
+                        </div>
+                        <div class="info-direita-categorias2">
+                            <div class="info-direita-subcategoria" >
+                                TOTAL DISTRIBUIDOS
+                            </div>
+                            <div class="info-direita-subcategoria1" id="totalDistribuidos">
+                                <b>R$ 800,00</b>
+                            </div>
+                        </div>
+                        <div class="info-direita-categorias2">
+                            <div class="info-direita-subcategoria">
+                                YIELD
+                            </div>
+                            <div class="info-direita-subcategoria1" id="yield">
+                                <b>15 %</b>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="info-direita-categorias3">
+                        <div class="info-direita-categorias4">
+                            <div class="categorias-titulo">
+                                <b>Fundos</b>
+                            </div>
+                            <div class="pesquisar">
+                                <div class="pesquisar-info">
+                                    <input type="text" name="pesquisar">
+                                </div>                            
+                            </div>
+                        </div>
+                        
+                        <div class="lista-web">
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>    
+                            
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>
+
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>
+
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>    
+                            
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>
+
+                            <div class="lista-web-info">
+                                <div class="lista-item" id="nome">
+                                    <img src="./imagens/icones/linha1.png" id="linha-vertical">
+                                    ABEV3 - AMBEV
+                                </div>
+                                <div class="lista-item" id="saldoAtual">
+                                    <div class="lista-item1">
+                                        SALDO ATUAL
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 1980,00
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="quant">
+                                    <div class="lista-item1">
+                                        QUANT.
+                                    </div>
+                                    <div class="lista-item2">
+                                        100
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="precoMedio">
+                                    <div class="lista-item1">
+                                        PREÇO MÉDIO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 19,80
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="ultimaCotacao">
+                                    <div class="lista-item1">
+                                        ULTIMA COTAÇÃO
+                                    </div>
+                                    <div class="lista-item2">
+                                        R$ 20,06
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="yield1">
+                                    <div class="lista-item1">
+                                        YIELD (1M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        2,31 %
+                                    </div>
+                                </div>
+                                <div class="lista-item" id="yield2">
+                                    <div class="lista-item1">
+                                        YIELD (12M)
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>  
+                                <div class="lista-item" id="carteira">
+                                    <div class="lista-item1">
+                                        % CARTEIRA
+                                    </div>
+                                    <div class="lista-item2">
+                                        12,31 %
+                                    </div>
+                                </div>                              
+                            </div> 
+                            <div class="linha"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

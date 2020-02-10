@@ -1,0 +1,487 @@
+.topo {
+    display: flex;
+    height: 90px;
+}
+
+.logo {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+
+#premium {
+    margin-top: 5px;
+    padding-left: 2px;
+}
+
+body {
+    margin: 0px;
+}
+
+/*Estilização do body*/
+.container {
+    display: flex;
+    height: 800px;
+}
+
+.menu-esquerdo {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    flex: 1;
+    height: 800px;
+    max-width: 225px;
+}
+
+
+.menu-esquerdo ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 225px;
+}
+
+.menu-esquerdo li {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgb(186, 195, 201);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#borda-ausente {
+    border: 0;
+}
+
+#circulo {
+    background-color: #DAE0E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.menu-esquerdo-informacoes {
+    display: flex;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #707B81;
+    padding-left: 13px;
+    width: 120px;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.menu-esquerdo1 {
+    display: flex;
+}
+
+.menu-esquerdo2 {
+    display: flex;
+}
+
+.flecha {
+    padding-left: 18px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-direita {
+    display: flex;
+    flex: 1;
+    background-color: #DAE0E3;
+    height: 800px;
+    flex-direction: column;
+}
+
+.info-direita-titulo{
+    margin-left: 20px;
+    height: 69px;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    color: #707B81;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.info-direita-menu{
+    display: flex;
+    height: 65px;
+    margin-right: 25px;
+    margin-left: 20px;
+    flex-direction: row;
+}
+
+.info-direita-menu1{
+    display: flex;
+    flex: 1;
+}
+
+#espacamento-menu-direita{
+    margin-right: 12px;
+}
+
+.menu-direita-titulo {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #707B81;
+    flex: 1;
+    padding-left: 20px;
+    background-color: #F5F5F5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu-direita-titulo-nao-selecionado {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #AAB5BB;
+    flex: 1;
+    padding-left: 20px;
+    background-color: #EEF2F4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.info-direita-categorias {
+    display: flex;
+    flex: 1;
+    background-color: #F5F5F5;
+    margin-right: 25px;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.info-direita-categorias1{
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 75px;
+    margin-top: 16px;
+}
+
+.info-direita-categorias2 {
+    display: flex;
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.info-direita-subcategoria {
+    display: flex;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.info-direita-subcategoria {
+    display: flex;
+    flex: 1;
+    color: gray;
+    font-size: 10px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.info-direita-subcategoria1{
+    display: flex;
+    flex: 1;
+    color: gray;
+    font-size: 18px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info-direita-categorias3 {
+    display: flex;
+    flex: 1;
+    margin-right: 16px;
+    margin-left: 16px;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.info-direita-categorias4 {
+    display: flex;
+    padding-top: 13px;
+    margin-bottom: 20px;
+}
+
+.categorias-titulo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #707B81;
+    padding-left: 20px;
+}
+
+.pesquisar {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.pesquisar-info {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisar-info input {
+    width: 215px;
+    background-image: url("../imagens/icones/lupa1.png");
+    background-position: 10px;
+    background-repeat: no-repeat;
+    background-color: #EEF2F4;
+    border: 0;
+    border-radius: 15px;
+    margin-right: 20px;
+    height: 25px;
+    padding-left: 35px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.lista-web {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-web-info {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.linha {
+    background-color: rgb(186, 195, 201);
+    margin-right: 26px;
+    height: 1px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#linha-vertical {
+    margin-right: 7px;
+}
+
+.lista-item {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.lista-item1{
+    flex: 1;
+    width: 100%;
+    font-size: 8px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4C309B;
+    text-align: center;
+}
+
+.lista-item2{
+    flex: 1;
+    width: 100%;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4C309B;
+    font-weight: bold;
+    text-align: center;
+}
+
+#nome {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4C309B;
+}
+
+#quant, #precoMedio, #yield1, #yield2, #carteira {
+    flex: 1;
+}
+
+#nome, #saldoAtual, #ultimaCotacao {
+    flex: 2;
+}
+
+#saldoAtual, #ultimaCotacao, #quant, #precoMedio, #yield1, #yield2, #carteira {
+    flex-direction: column;
+}
+
+button {
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    box-sizing: unset;
+    margin: 0;
+    font: 400 13.3333px Arial;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-image: initial;
+}
+
+#cursor {
+    cursor: pointer;
+}
+
+li:hover #circulo{
+    background-color: #5D41AC;
+}
+
+li:hover {
+    background-color: rgb(228, 236, 240);
+}
+
+
+/*Responsividade*/
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+
+    #nome, #saldoAtual, #ultimaCotacao {
+        flex: 1;
+    }
+
+    .info-direita-menu {
+        display: flex;
+        height: 50px;
+        margin-right: 25px;
+        margin-left: 20px;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .menu-esquerdo {
+        display: flex;
+        flex: unset;  
+        background-color: rgb(245, 245, 245);
+        height: 160px;
+        max-width: unset;
+    }
+
+    .menu-esquerdo-informacoes {
+        display: flex;
+        font-size: 12px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #707B81;
+        padding-left: 0px;
+        width: 69px;
+        flex-direction: column;
+        padding-top: 3px;
+        height: 50px;
+    }
+
+    .menu-esquerdo ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+    }
+
+    .menu-esquerdo li {
+        display: flex;
+        height: 130px;
+        align-items: center;
+        border-bottom: 1px solid rgb(186, 195, 201);
+        padding-left: 7px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 17px;
+    }
+
+    .flecha {
+        padding-left: 0px;
+        padding-top: 0px;
+        display: flex;
+        align-items: unset;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        height: 800px;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .info-direita {
+        display: flex;
+        flex: 1;
+        background-color: #DAE0E3;
+        height: 0px;
+        flex-direction: column;
+    }
+
+    .info-direita-menu {
+        display: flex;
+        height: 50px;
+        margin-right: 25px;
+        margin-left: 20px;
+        flex-direction: row;
+    }
+
+    .menu-esquerdo1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-esquerdo2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #espaco-tablet {
+        padding-left: 14px;
+    }
+
+    .lista-web-info {
+        display: flex;
+        flex: 1;
+        margin-left: 11px;
+    }
+
+    #nome, #saldoAtual, #ultimaCotacao {
+        flex: 1;
+    }
+
+    .info-direita-categorias1 {
+        display: flex;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        height: 55px;
+        margin-top: 16px;
+    }
+}
