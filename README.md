@@ -10,6 +10,7 @@
 
 2. Abra o terminal dentro do repositório e digite:
  > gulp watch
+ > ou http-server dentro de /src
 3. Caso tenha problemas na execução do projeto, subi o projeto em um servidor remoto do surge, para acessar é só clicar no link abaixo.
  > https://desafio-kinvo.surge.sh/
 
