@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Kinvo Premium</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="resources/imgs/Grupo 11770.png" alt="kinvo logo">
+        </div>
+        <nav id="sidenav">
+            <ul>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Grupo 11884@2x.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Resumo <br>da Carteira</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3773@2x.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Meus<br>Produtos</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3775@2x.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Meus<br>Proventos</a></li>
+                </div>
+                <div class="nav-element" id="destaque">
+                    <img src="resources/imgs/icons/Caminho 3781@2x.png"alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Análise por<br>Classe de Produto</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3776.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Rentabilidade<br>Real</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3783@2x.png"  alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Projeção<br> da Carteira</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3778@2x.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Risco<br> x Retorno</a></li>
+                </div>
+                <div class="nav-element">
+                    <img src="resources/imgs/icons/Caminho 3779@2x.png" alt="icon">
+                    <img class="seta" src="resources/imgs/icons/path@2x.png" alt="seta">
+                    <li><a href="#">Cobertura <br>do FGC</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Análise por Classe de Ativos</h2>
+        
+        <div id="botoes">
+            <div class='botao' id="primeiro-bto">
+                <a href="#">Ações</a>
+            </div>
+            <div class='botao'>
+                <a href="#">Nome da Classe</a>
+            </div>
+            <div class='botao'>
+                <a href="#">Nome da Classe</a>
+            </div>
+            <div class='botao'>
+                <a href="#">Nome da Classe</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="valores">
+                <p>SALDO BRUTO <br><span>12.709,14</span</p>
+            </div>
+            <div class="valores">
+                <p>VALOR APLICADO <br><span>10.023,12</span></p>
+            </div>
+            <div class="valores">
+                <p>GANHO DE CAPITAL <br><span>2.686,01</span></p>
+            </div>
+            <div class="valores">
+                <p>TOTAL DISTRIBUIDOS <br><span>800,00</span></p>
+            </div>
+            <div class="valores">
+                <p>YIELD <br><span>15%</span></p>
+            </div>
+            
+            <div class="table-container">
+                <h3>Fundos</h3>
+                <input type="text" id="searchInput">
+                <table id='searchTable'>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>SALDO ATUAL</th>
+                            <th>QUANT.</th>
+                            <th>PREÇO MÉDIO</th>
+                            <th>ULTIMA COTAÇÃO</th>
+                            <th>YIELD(1M)</th>
+                            <th>YIELD(12M)</th>
+                            <th>% NA CARTEIRA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>    
+    <script src="script/script.js"></script>
+</body>
+</html>
