@@ -1,0 +1,86 @@
+.App {
+  margin:0 auto;
+  height: 1265px;
+  background-color: #DAE0E3 ;
+}
+
+/* grid 1366px */
+
+#Complete{
+  width: 225.71px;
+  height:643px;
+  background-color:#ffffff;
+}
+
+.buttons{
+  width: 225.71px;
+  background-color: #FFFFFF;
+  margin-top: 1px;
+  border-style: none;
+  outline-style: none;
+  height: 65px;
+  display:inline-flex;
+
+}
+
+.ButtonsInside{
+    width: 265px;
+    margin-right: 10px;
+    height: 65.31px;
+    background-color: #EEF2F4;
+    border-color:#CACED5;
+    border-style: none;
+    outline-style: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-flex;
+}
+
+.TextInsideButton{
+    line-height: 16px;
+    font-style: Helvetica Neue;
+    color: #AAB5BB;
+    font-size: 14px;
+    text-align:left;
+    margin-top: 28px;
+    margin-left: 26px;
+}
+
+.imgButtons{
+  width: 35px;
+  height: 35px;
+  background-color: #DAE0E3;
+  border-radius: 17.5px;
+  margin-left: 12px;
+  margin-right: 17px;
+  margin-top: 13px;
+  text-align: center;
+}
+.logoButtons{
+  margin-top: 8px;
+}
+
+
+input:checked + label .buttons{
+  background-color: #EEF2F4;
+}
+input:checked + label .buttons .imgButtons{
+  background-color: #5D41AC;
+}
+.Hide{
+  display:none;
+}
+#Teste{
+  display: none;
+}
+
+#List{
+  display: none;
+}
+
+input:checked + label .ButtonsInside{
+  background-color: #F8FAFB;
+}
+input:checked + label .ButtonsInside .TextInsideButton{
+  color: #707B81;
+}
