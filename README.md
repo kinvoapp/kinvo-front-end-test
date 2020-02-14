@@ -11,7 +11,7 @@ Layout desenvolvido com a finalidade de passar no desafio técnico e conseguir u
 ### Desenvolvimento:
 Foram utilizados:
 
--HTML5
--CSS3
--Javascript
--JQuery(apenas para fazer a função de pesquisar os itens que foram gerados dinamicamente a partir da API)
+* HTML5
+* CSS3
+* Javascript
+* JQuery(apenas para fazer a função de pesquisar os itens que foram gerados dinamicamente a partir da API)
