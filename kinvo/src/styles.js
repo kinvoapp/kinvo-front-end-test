@@ -13,7 +13,6 @@ export const Line = styled.div `
 
 export const LeftSide = styled.div `
     width:225.71px;
-    height:528px;
     background-color: #DAE0E3;
     border-color:#D6D9DD;
      margin-right: 22px;
@@ -21,7 +20,7 @@ export const LeftSide = styled.div `
 `;
 
 export const IconBoxes = styled.div `
-    margin-bottom:3px;
+    margin-bottom:10px;
     margin-top: 21px;
     margin-left: 23px;
     width: 190px;
@@ -39,15 +38,18 @@ export const SummaryIcon = styled.div `
 
 export const SearchLine = styled.div `
     display:inline-flex;
+    margin-top: 23px;
 }
 `;
 export const SearchBar = styled.input `
-    border-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius:17px;
     width: 250.18px;
-    height: 20px;
+    height: 31px;
     border-style: none;
     outline-style: none;
     background-color: #EEF2F4;
+    padding-right: 60px;
 `;
 export const TextButton = styled.div `
     width: ${props =>`${props.width}px`};
@@ -66,7 +68,11 @@ export const Arrow = styled.div `
     margin-top: ${props => `${props.top}px`};
     margin-left: ${props => `${props.left}px`};
 `;
-
+export const TelaProducts = styled.div `
+    background-color : #FFFFFF;
+    width: 1053px;
+    margin-left: 19px;
+`;
 export const TextSubtitle = styled.div `
     font-style: Helvetica Neue;
     font-size: 20px;
@@ -83,8 +89,36 @@ export const TelaLista = styled.div `
 `;
 
 export const ProductInfos = styled.div `
-    display: inline-flex;
+    width: ${props => `${props.width}px`};
+    display: ${props => `${props.display}px`};
+    font-style: Helvetica Neue;
+    font-size: ${props => `${props.fontSize}px`};
+    color: #4C309B;
+    margin-top: ${props => `${props.top}px`};
+    margin-left: ${props => `${props.left}px`};
+    margin-right: ${props => `${props.right}px`};
+    text-align: ${props => `${props.align}`}
 `;
 
-export const ListLine = styled.div `
+export const Border = styled.div `
+    width: 0px;
+    height: 32.58px;
+    border-left-style: solid;
+    border-left-width: 2.5px;
+    border-right-width: 2.5px;
+    border-right-style: solid;
+    border-left-color: #4C309B;
+    border-right-color: #4C309B;
+    border-radius: 3px;
+`;
+
+export const BoxLine = styled.div `
+    border-bottom-color: #CCCFD1;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 33.61px;
+    width: 993px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    display: inline-flex;
 `;
