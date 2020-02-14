@@ -8,7 +8,7 @@ Layout desenvolvido com a finalidade de passar no desafio técnico e conseguir u
 1. Baixe a pasta kinvo-test
 2. Abra o arquivo index.html
 
-### Desenvolvimento:
+## Desenvolvimento:
 Foram utilizados:
 
 * HTML5
