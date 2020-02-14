@@ -1,11 +1,12 @@
 const tableElement = document.querySelector('tbody');
 
-$("#searchInput").keyup(function() {
-    let val = $(this).val();
+//unica maneira que consegui fazer o filtro funcionar com elementos gerados dinamicamente
+$("#input").keyup(function() {
+    let inputVal = $(this).val();
 
-    $("#searchTable tr .first").each(function(i) {
+    $("#myTable tr .first").each(function(i) {
     let content = $(this).html();
-        if (content.toLowerCase().indexOf(val.toLowerCase()) == -1) {
+        if (content.toLowerCase().indexOf(inputVal.toLowerCase()) == -1) {
             $(this.parentNode).hide();
         } else {
             $(this.parentNode).show();
@@ -13,15 +14,17 @@ $("#searchInput").keyup(function() {
     });
 });
 
+//Parte da API
 fetch('https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation')
     .then((resp) => resp.json())
     .then((data) => {
         let acoes = data.data.products;
-        console.log(acoes);
         acoes.forEach(acao => {
-            console.log(acao)
+            
+            //para cada elemento se cria uma nova row
             let tableRow = document.createElement('tr');
-
+            
+            //para cada dado dentro do objeto se cria uma nova td
             let nome = document.createElement('td');
             nome.textContent = acao.productName;
             nome.classList.add('first')
@@ -40,7 +43,7 @@ fetch('https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsol
             let carteira = document.createElement('td');
             carteira.textContent = acao.lastTwelveMonthsYeld + '%';;
 
-
+            //colocam-se todos os dados dentro da mesma row
             tableRow.appendChild(nome);  
             tableRow.appendChild(saldo);
             tableRow.appendChild(quantidade);
@@ -49,7 +52,8 @@ fetch('https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsol
             tableRow.appendChild(yield1m);
             tableRow.appendChild(yield12m);
             tableRow.appendChild(carteira);
-    
+            
+            //row entra na tabela
             tableElement.appendChild(tableRow);
         });
     });
