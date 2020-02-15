@@ -46,33 +46,18 @@ class ProductList extends Component {
     }
     render(){
         const {summary, filteredProducts} = this.state;
+        const infos = ["SALDO BRUTO", "VALOR APLICADO", "GANHO DE CAPITAL", "TOTAL DISTRIBUIDOS", "YIELD"];
+        let cont=0;
         return (
             <div>
                 <TelaLista display="inline-flex">
-                    <IconBoxes>
-                        <SummaryIcon fontSize={10} top={20}>SALDO BRUTO</SummaryIcon>
-                        <SummaryIcon fontSize={18}><strong>R${summary.grossBalance}</strong></SummaryIcon>
-                    </IconBoxes>
-
-                    <IconBoxes>
-                        <SummaryIcon fontSize={10} top={20}>VALOR APLICADO</SummaryIcon>
-                        <SummaryIcon fontSize={18}><strong>R${summary.appliedValue}</strong></SummaryIcon>
-                    </IconBoxes>
-
-                    <IconBoxes>
-                        <SummaryIcon fontSize={10} top={20}>GANHO DE CAPITAL</SummaryIcon>
-                        <SummaryIcon fontSize={18}><strong>R${summary.capitalGains}</strong></SummaryIcon>
-                    </IconBoxes>
-
-                    <IconBoxes>
-                        <SummaryIcon fontSize={10} top={20}>TOTAL DISTRIBUIDOS</SummaryIcon>
-                        <SummaryIcon fontSize={18}><strong>R${summary.earnings}</strong></SummaryIcon>
-                    </IconBoxes>
-
-                    <IconBoxes>
-                        <SummaryIcon fontSize={10} top={20}>YIELD</SummaryIcon>
-                        <SummaryIcon fontSize={18}><strong>R${summary.yield}</strong></SummaryIcon>
-                    </IconBoxes>
+                    {Object.keys(summary).map((key) => (
+                        <IconBoxes>
+                            <SummaryIcon fontSize={10} top={20}>{infos[cont++]}</SummaryIcon>
+                            <SummaryIcon fontSize={18}><strong>R$ {summary[key].toFixed(2).toString().replace(".",",")}</strong></SummaryIcon>
+                        </IconBoxes>
+                        )
+                    )}
                 </TelaLista>
 
                 <TelaLista>
@@ -88,7 +73,7 @@ class ProductList extends Component {
                         {filteredProducts.map((data) => (
                             <BoxLine>
                                 <Border />
-                                <ProductInfos top ={7} fontSize = {12} width = {315}>{data.productName}</ProductInfos>
+                                <ProductInfos left= {9} top ={7} fontSize = {12} width = {315}>{data.productName}</ProductInfos>
                                 
                                 <ProductInfos left = {30}>
                                     <ProductInfos align = {'left'} fontSize = {8}> Saldo Atual</ProductInfos>
