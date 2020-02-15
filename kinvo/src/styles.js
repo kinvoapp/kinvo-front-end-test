@@ -97,7 +97,7 @@ export const ProductInfos = styled.div `
     margin-top: ${props => `${props.top}px`};
     margin-left: ${props => `${props.left}px`};
     margin-right: ${props => `${props.right}px`};
-    text-align: ${props => `${props.align}`}
+    text-align: ${props => `${props.align}`};
 `;
 
 export const Border = styled.div `

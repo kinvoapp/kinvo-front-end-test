@@ -15,10 +15,11 @@ class PageList extends React.Component{
     render(){
         return (
             <div>
+            {/* PÁGINA QUE CONTÉM AS OPÇÕES + OPÇÃO QUE LIBERA A LISTA PARA FILTRAGEM */}
                 <TextSubtitle>
                     <strong>Análise por Classe de Ativos</strong>
                 </TextSubtitle>
-    
+            {/* OPÇÃO QUE LIBERA LISTA PARA FILTRAGEM */}
                 <Line width = {1090}>
                     <input type="radio" name="SecondOptions" id="Option1" onChange = {this.onChangeShow} class="Hide"/>
                     <label for="Option1">
@@ -28,7 +29,7 @@ class PageList extends React.Component{
                             </div>
                         </div>
                     </label>
-
+            {/* FIM DA OPÇÃO QUE LIBERA LISTA PARA FILTRAGEM */}
                     <input type="radio" name="SecondOptions" id="Option2" onChange = {this.onChangeHide} class="Hide"/>
                     <label for="Option2">
                         <div class="ButtonsInside">
@@ -56,6 +57,9 @@ class PageList extends React.Component{
                         </div>
                     </label>
                 </Line>
+            {/* FIM DAS OPÇÕES */}
+
+            {/* LISTA PARA FILTRAGEM */}
                 <Line width = {1090} id="List">
                     <ProductList />
                 </Line>

@@ -22,6 +22,8 @@ class ProductList extends Component {
 
         }
     }
+
+// PEGANDO INFORMAÇÕES DA API
     componentDidMount(){
         fetch('https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation')
             .then(res => res.json())
@@ -35,6 +37,7 @@ class ProductList extends Component {
             });
     }
 
+// FUNÇÃO QUE FILTRA A LISTA "products"
     onChangeFilter = (Term) => {
         let list = this.state.products;
         let filteredList = list.filter((element) => {
@@ -44,12 +47,14 @@ class ProductList extends Component {
             filteredProducts: filteredList
         })
     }
+
     render(){
         const {summary, filteredProducts} = this.state;
         const infos = ["SALDO BRUTO", "VALOR APLICADO", "GANHO DE CAPITAL", "TOTAL DISTRIBUIDOS", "YIELD"];
         let cont=0;
         return (
             <div>
+            {/* INFORMAÇÕES GERAIS NO TOPO DA LISTA */}
                 <TelaLista display="inline-flex">
                     {Object.keys(summary).map((key) => (
                         <IconBoxes>
@@ -59,9 +64,12 @@ class ProductList extends Component {
                         )
                     )}
                 </TelaLista>
+            {/* FIM DAS INFORMAÇÕES GERAIS */}
 
+            {/* TELA DA LISTA FILTRADA */}
                 <TelaLista>
                     <TelaProducts>
+                    {/* BARRA DE PESQUISA */}
                         <SearchLine>
                             <SummaryIcon top = {0} right = {702} left={21} fontSize={18}><strong>Fundos</strong></SummaryIcon>
                             <div id="Search">
@@ -69,6 +77,9 @@ class ProductList extends Component {
                                 <SearchBar id="SearchFilter"onChange = {this.onChangeFilter}/>
                             </div>
                         </SearchLine>
+                    {/* FIM DA BARRA DE PESQUISA */}
+
+                    {/* ÍNICIO DA LISTA FILTRADA + ESTILIZAÇÃO */}
 
                         {filteredProducts.map((data) => (
                             <BoxLine>
@@ -110,6 +121,7 @@ class ProductList extends Component {
                                     <ProductInfos align = {'left'} fontSize = {14}><strong>{data.lastTwelveMonthsYeld.toFixed(2).toString().replace(".",",")}%</strong></ProductInfos>
                                 </ProductInfos>
                             </BoxLine>
+                    // FIM DA LISTA FILTRADA
                         ))}
                     </TelaProducts>
                 </TelaLista>
