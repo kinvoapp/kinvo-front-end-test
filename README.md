@@ -1,39 +1,64 @@
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+## Name of the project
+    -kinvo
+    .É um site onde você tem controle da sua Carteira (Resumo, produtos, ações, valor aplicado, saldo etc.).
 
-# Teste para candidatos à vaga de Front-End
+## Installing / Getting started
+    Para rodar o projeto é necessário ter instalado o NodeJS + React + Terminal Git Bash.
+    Após aberto o terminal git Bash coloque os seguintes comandos.
 
-## Instruções:
+    git clone https://github.com/brenorosas/kinvo-front-end-test.git
+    git checkout brenorosas
+    cd kinvo
+    npm install
+    npm start
 
-1. Faça um fork deste repositório;
-2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+## Linguagens utilizadas
 
-### Pré-requisitos:
+    JavaScript
+    CSS
+    HTML
 
-- Filtrar a listagem de produtos pelo nome do produto;
-- Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
-- Utilizar ECMAScript 6+;
+## Testes
 
-- **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+    Após aberto o site siga os seguintes passos.
+    1- Selecione a opção "Análise por Classe de Produto (Isso irá liberar 4 outras opções no centro da tela).
 
-### Ganhe pontos extras por:
+    2- Tendo as novas opções, selecione a opção "Ações" (Isso irá fazer aparecer a listagem dos produtos/ações junto com uma barra de pesquisa).
 
-- Utilizar `React`;
-- Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
-- Testes unitários;
-- Desenvolver HTML semântico;
-- Componentizar sua interface;
-- Utilizar `Webpack`;
-- Utilizar `styled-components`;
+    3- Ao digitar qualquer coisa na barra de pesquisa irá acontecer uma filtragem da lista utilizando o que estiver escrito como parâmetro. (Pode escrever tanto letras maiúsculas quanto minúsculas).
 
-## Material:
+## Visualização do código
 
-- O layout em formato Adobe XD consta no repositório em [/material](/material);
-- Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
+    Ainda no Git bash no /kinvo (Caso utilize o visual studio code) digite o comando:
 
-## Submissão
+    code .
 
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e depois envie-nos o pull request.
-Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
+## Estilização
 
-**Sucesso!**
+    Foi utilizado styled-components, visível no arquivo styles.js.
+    CSS, visível no arquivo App.css
+
+    Obs: Quase toda a estilização obedeceu fielmente as medidas presentes no layout.
+
+## Código
+
+    No App.js tem a chamada para 2 self closes "LogoKinvo" e "ButtonsLeft"
+    Que tem os códigos visualizados nas pastas LogoKinvo e ButtonsLeft respectivamente (index.js).
+
+    O LogoKinvo é simplesmente a parte superior da tela com o logo KinvoPremium
+
+    ButtonsLeft são todos os 8 inputs selecionáveis presentes na lateral esquerda do site, qualquer um deles pode ser selecionado, porém apenas o intitulado "Análise por Classe de Produto" irá liberar a nova área do site.
+    Ao fim do ButtonsLeft podemos ver outro self close "PageList"
+
+    PageList é a área liberada ao selecionar "Análise por Classe de Produto" e o código é visualizável na pasta "PageList" (index.js).
+
+    Na PageList temos 4 novos inputs Selecionáveis. Qualquer um pode ser selecionado, porém apenas o intitulado "Ações" irá liberar a lista de produtos.
+
+    Ao fim do PageList temos outro self close "ProductList" que é onde está a lista dos produtos + filtragem da mesma.
+
+    Toda a parte inicial da lista é tirada da API:
+- `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation`
+
+    A filtragem da lista acontece na função "onChangeFilter", que filtra uma lista fixa "products" e coloca numa outra listra "filteredProducts", essa por sua vez é apresentada na tela.
+
+    A filtragem utiliza o que estiver escrito na barra de pesquisa como parâmetro utilizando o onChange próprio do JavaScript.
