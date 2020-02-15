@@ -1,9 +1,9 @@
-## Name of the project
+## Processo seletivo kinvo front-end brenorosas
     -kinvo
-    .É um site onde você tem controle da sua Carteira (Resumo, produtos, ações, valor aplicado, saldo etc.).
+    .É um site que te ajuda a ter controle, poder analisar seus investimentos além de ter uma visão geral de sua Carteira, como Resumo, produtos, ações, valor aplicado, risco x retorno etc.
 
 ## Installing / Getting started
-    Para rodar o projeto é necessário ter instalado o NodeJS + React + Terminal Git Bash.
+    Para rodar o projeto é necessário ter instalado o NodeJS + Terminal Git Bash.
     Após aberto o terminal git Bash coloque os seguintes comandos.
 
     git clone https://github.com/brenorosas/kinvo-front-end-test.git
@@ -12,11 +12,14 @@
     npm install
     npm start
 
-## Linguagens utilizadas
+## Ferramentas utilizadas
 
     JavaScript
     CSS
     HTML
+    ReactJS
+    Styled-Components
+    API: `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation`
 
 ## Testes
 
