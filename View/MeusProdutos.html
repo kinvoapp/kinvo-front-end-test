@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinvo</title>
+    <!--Link do icon da aba-->
+    <link rel="shortcut icon" href="../Img/kinvo-_1_.svg" type="image/x-icon" />
+    <!--Link do Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../Style/css/bootstrap.min.css">
+    <!--Link do css-->
+    <link rel="stylesheet" type="text/css" href="../Style/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../Style/css/main2.css">
+    <!--Link do Jquery-->
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    
+
+   
+</head>
+
+<body>
+   
+    <!-- Eu utilizei bootsrap e o Jquery para organizar os elementos na tela -->
+
+
+    <!--Essa "row" esta delimitando a logo do kinvo na parte superior,
+    com a class="header para a estilização"-->
+    <div class="row">
+        <div class="col-12">
+            <div class="header">
+                <img src="../Img/kinvo.png " >
+            </div>
+        </div>
+    </div>
+
+
+
+           
+            <div class="row">
+                        <div id="col" class="col-2">
+                    <!--Aqui está o menu lateral--> 
+                            <div class="menu">
+                                <ul>
+                                  <li><a ><img src="../Img/icons/1.png" ><p>Resumo <br>Da Carteira</p></a></li>
+                                  <li><a href="MeusProdutos.html"><img src="../Img/icons/2.png"> <p>Meus  <br>Produtos</p> </a></li>
+                                  <li><a ><img src="../Img/icons/3.png"> <p>Meus  <br>Proventos</p></a></li>
+                                  <li><a href="Analise.html"><img  id="roxo" src="../Img/icons/4.png"> <p>Análise por <br>Classe de Produto</p></a></li>
+                                  <li><a ><img src="../Img/icons/5.png"> <p>Rentabilidade  <br>Real</p></a></li>
+                                  <li><a ><img src="../Img/icons/6.png"> <p>Projeção  <br>da Carteira</p></a></li>
+                                  <li><a ><img src="../Img/icons/7.png"> <p>Risco <br>x Retorno</p></a></li>
+                                  <li><a ><img src="../Img/icons/9.png"> <p>Cobertura  <br>do FGC</p></a></li>
+                                </ul>
+                            </div>
+                        </div> 
+                    
+                    <!--titulo-->
+                        <div class="col-10">
+                            <div class="text-part">
+                                <div class="titulo">
+                                    <h5>Meus Produtos</h5>       
+                                    </div>
+                            </div>
+                        
+                                                <!--Utilizei a exportação do adobeXD para a grade e criei a class="Scroll1"
+                                                para pode estilizar o fundo da grade junto com as col's e row's.-->
+                                                    <div class="col-12">
+                                                            <div class="scroll1">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <h4>Produtos</h4>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="form-group pull-right">
+                                                                            <input type="text" class="search form-control" placeholder="O que você está procurando?">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <br><br><br>         
+                                                                <!--Estou delimitando cada topico e seu tamanho-->  
+                                                                    <span class="counter pull-right"></span>
+                                                                    <table class="table table-hover table-bordered results">
+                                                                      <thead>
+                                                                        <tr>
+                                                                          <th>#</th>
+                                                                          <th class="col-md-5 col-xs-5">Nome</th>
+                                                                          <th class="col-md-4 col-xs-4">Saldo</th>
+                                                                          <th class="col-md-3 col-xs-3">Quant.</th>
+                                                                          <th class="col-md-3 col-xs-3">Preço</th>
+                                                                          <th class="col-md-3 col-xs-3">Cidade</th>
+                                                                        </tr>
+                                                                        <tr class="warning no-result">
+                                                                          <td colspan="4"><i class="fa fa-warning"></i> Não Encontrado</td>
+                                                                        </tr>
+                                                                      </thead>
+                                                                      <!--A id="tabela" e tudo que esta inserido, é responsavel
+                                                                     por ajustar a exibição de dados à tela e define as informações predefinidas-->
+                                                                      <tbody id="tabela">
+                                                                        <tr>
+                                                                          <th scope="row">1</th>
+                                                                          <td>AMBEV 3 - AMBEV</td>
+                                                                          <td>1980,00</td>
+                                                                          <td>100</td>
+                                                                          <td>13,50</td>
+                                                                          <td>Salvador</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                          <th scope="row">2</th>
+                                                                          <td>BAMV 5 - BAMV</td>
+                                                                          <td>2780,00</td>
+                                                                          <td>200</td>
+                                                                          <td>13,80</td>
+                                                                          <td>Céara</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                          <th scope="row">3</th>
+                                                                          <td>BAMV 5 - BAMV</td>
+                                                                          <td>1580,00</td>
+                                                                          <td>275</td>
+                                                                          <td>20,00</td>
+                                                                          <td>Vancouver</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                          <th scope="row">4</th>
+                                                                          <td>BAMV 5 - BAMV</td>
+                                                                          <td>1080,00</td>
+                                                                          <td>275</td>
+                                                                          <td>20,00</td>
+                                                                          <td>Istanbul</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">5</th>
+                                                                            <td>AEVAB 3 - AEVAB</td>
+                                                                            <td>2980,00</td>
+                                                                            <td>200</td>
+                                                                            <td>25,00</td>
+                                                                            <td>New York</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">6</th>
+                                                                            <td>BEV 3 - BEV</td>
+                                                                            <td>3890,00</td>
+                                                                            <td>100</td>
+                                                                            <td>18,90</td>
+                                                                            <td>Paris</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">7</th>
+                                                                            <td>MABEV 3 - MABEV</td>
+                                                                            <td>100,00</td>
+                                                                            <td>100</td>
+                                                                            <td>11,00</td>
+                                                                            <td>Birigui</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">8</th>
+                                                                            <td>NABEV 3 - NABEV</td>
+                                                                            <td>7980,00</td>
+                                                                            <td>800</td>
+                                                                            <td>9,00</td>
+                                                                            <td>Istanbul</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">9</th>
+                                                                            <td>XCEV 3 - XCEV</td>
+                                                                            <td>7980,00</td>
+                                                                            <td>750</td>
+                                                                            <td>13,00</td>
+                                                                            <td>São Paulo</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">10</th>
+                                                                            <td>NABV 7 - NABV</td>
+                                                                            <td>7980,00</td>
+                                                                            <td>690</td>
+                                                                            <td>15,00</td>
+                                                                            <td>Santa Catarina</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">11</th>
+                                                                            <td>NOIA 1 - NOIA</td>
+                                                                            <td>659,00</td>
+                                                                            <td>450</td>
+                                                                            <td>17,00</td>
+                                                                            <td>Fortaleza</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">12</th>
+                                                                            <td>BEVNA 1 - BEVNA</td>
+                                                                            <td>8780,00</td>
+                                                                            <td>750</td>
+                                                                            <td>27,00</td>
+                                                                            <td>Espírito Santo</td>
+                                                                          </tr>
+                                                                      </tbody>
+                                                                      <!--Fim da tabela-->
+                                                                    </table>  
+                                                                </div>   
+                                                            </div>            
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>            
+</div>
+
+
+
+
+    <!--Link para o boostrap e o Jquery-->
+    <script src="../Style/js/jquery-3.4.1.min.js"></script>
+    <script src="../Style/js/main.js"></script>
+    <script src="../Style/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

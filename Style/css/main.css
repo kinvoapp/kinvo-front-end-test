@@ -1,0 +1,126 @@
+body{  
+        margin: 0;
+        padding: 0;  
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #dae0e3;
+}
+
+.header{
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.titulo h5{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.h5{
+    size: 10px;
+}
+
+.menu{
+    color: #4c309b;
+    border-left: 1px solid grey;
+    margin-left: -40px;
+    margin-right: -16px;
+    text-decoration: none;
+    text-align: left;
+    size: 30px;
+  
+}
+#col{
+    background-color: rgb(251, 251, 251);
+    padding-bottom: 100px;
+}
+.menu ul li {
+    border-bottom: 1px solid #CCC;
+    list-style-type: none;
+}
+.menu ul li a{
+    color: #4c309b;
+}
+ .menu ul p{
+    text-decoration: none;
+    padding-top: 5px;
+    margin-top: -35px;
+    margin-left: 60px;
+    font-size: 12px;
+    position: relative;
+ }
+
+#roxo{
+    width:30px ; height: 30px;
+    background-color: rgb(202, 200, 200);
+    padding: 8px;
+    border-radius: 50px;
+ }
+.menu a img{
+        width:30px ; height: 30px;
+        background-color: rgb(202, 200, 200);
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 50px;
+}
+
+menu a img{
+    background-color: #5d41ac;
+}
+.scroll1 {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 50px;
+}
+.scroll1 img{
+    margin-left: 20px;
+}
+.h4{
+    size: 5px;
+    color: #707b81;
+}
+
+
+.valores{
+    margin-left: 30px;
+    padding-bottom: 15px;
+}
+
+.valores #col1{
+    background-color: white;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.fundo{
+    background-color: #f8fafb;
+    padding: 10px;
+}
+
+.ajuste #col2{
+    background-color:  #f8fafb;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.ajuste #col3{
+    background-color:  #f8fafb;
+    padding-top: 10px;
+    padding-right: 60px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#search{
+    margin-left: 260px;
+}
