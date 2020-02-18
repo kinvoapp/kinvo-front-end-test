@@ -1,0 +1,10 @@
+header{
+  min-height: 90px;
+  box-shadow: 0 5px 20px 1px rgba(138, 138, 138, 0.15);
+}
+
+.branding {  
+   display:inline-block;
+   padding: 30px 0 30px 28px;
+}
+
