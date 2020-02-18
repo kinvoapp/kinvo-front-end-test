@@ -1,0 +1,227 @@
+[33mcommit 09c8994698c79bfd5ee861fe2170c0f9dc8279b4[m[33m ([m[1;36mHEAD -> [m[1;32madonis-lima[m[33m)[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 19:06:50 2020 -0300
+
+    src/images/aside renamed to src/images/sidebar
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 02ef59d8e37357a764b60a48ce42ebe22acf63e2[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 18:54:12 2020 -0300
+
+    Font adjusted
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 96ee2eafbc4e08f42b3e1f2878ef703514dbe883[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 14:41:28 2020 -0300
+
+    Switched App component from function to class
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 6733e1ccf61fbcc2a9c45c95786e86c280625612[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 14:39:52 2020 -0300
+
+    Header component done
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 55e6113b413c7bd9dcc82fb9c68a0aecd011edc7[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 14:29:29 2020 -0300
+
+    Added svg for header and aside
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 45bac33161e7424ae9263171f5cf607523460035[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 12:42:28 2020 -0300
+
+    Layout components files created
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 8f256885861c1f8635ba4c48c9c2928769513115[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 12:39:56 2020 -0300
+
+    css and jsx reseted
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit b70423ba9d5b300f01de58167e60dbc8ac593f52[m
+Author: Adonis Lima <adonis.lima@ufrpe.br>
+Date:   Tue Feb 18 12:08:49 2020 -0300
+
+    Project started
+    
+    Signed-off-by: Adonis Lima <adonis.lima@ufrpe.br>
+
+[33mcommit 1962232533906c94e536ad6169f8a997cc0ad1cf[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Thu Sep 5 08:53:41 2019 -0300
+
+    Update README.md
+
+[33mcommit 5c0e81f640e7938b27c553982bc7bde646801734[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Thu Sep 5 08:50:44 2019 -0300
+
+    update test requirements
+
+[33mcommit fb07867418858742b0a3b604d25f129b6099e644[m
+Merge: 959f555 efd11bd
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jul 31 15:21:40 2019 -0300
+
+    Resolução de conflitos
+
+[33mcommit 959f5555e50f29144280f82fa36da993c43f89e6[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jul 31 15:21:10 2019 -0300
+
+    Alterações nas instruções do teste
+
+[33mcommit efd11bd674d07ba8719640147ca97cd4b9907f58[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Tue Jul 30 08:49:24 2019 -0300
+
+    Update README.md
+
+[33mcommit 2b047b9f7b4f2e0de5c166291c7618811d31969a[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 10:49:08 2019 -0300
+
+    Ajustes nas instruções
+
+[33mcommit 89c0f33ee8a8d08f9f4c00214c970dedf3acd1f3[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 10:47:55 2019 -0300
+
+    Melhorias de formatação
+
+[33mcommit b03f6b7e459acd999c45b43ca9ebdf1bbfe00815[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 10:37:48 2019 -0300
+
+    Correção da url do layout
+
+[33mcommit ee97f0b4f35e208b07e1a2b3843d75866108e4de[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 10:06:18 2019 -0300
+
+    Correção na api mockada
+
+[33mcommit 3e1b9eb31aaabe310afda50213d621fdbbc2d1ed[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 10:05:47 2019 -0300
+
+    Atualização da api mockada
+
+[33mcommit ef9770679d7b2b19d0789dc0e06bfd28f2ae5250[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed May 22 09:49:40 2019 -0300
+
+    Alterações no teste
+
+[33mcommit 0dd909ea325b0c4a364537f39377ae949bfa8e5e[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 10:18:13 2019 -0300
+
+    Update README.md
+
+[33mcommit eb63606814cec8f357057ce8e55807b7725cd76b[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 10:14:05 2019 -0300
+
+    Update README.md
+
+[33mcommit 52b9ab262fb9f03a06529bdeaae382ba8249f21f[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:56:37 2019 -0300
+
+    Delete logo.png
+
+[33mcommit e304550edfdf43dc747a38193bc9e5d2ad3f57f6[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:56:23 2019 -0300
+
+    Update README.md
+
+[33mcommit 402dce70d5b1ebdd5468ddcb5d2641d1586a94d3[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:55:56 2019 -0300
+
+    Logo svg
+
+[33mcommit cbf2063e5764b340e8b8f319bd6114bb0554c262[m
+Merge: 3e67793 acf15af
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:54:18 2019 -0300
+
+    Merge branch 'master' of github.com:cbfranca/kinvo-front-end-test
+
+[33mcommit 3e677938e3af40beaaaf8e6e3974102c39229f66[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:54:04 2019 -0300
+
+    Update do logo
+
+[33mcommit acf15af8f4f15a6c179f655997a28df9de43b66b[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:52:24 2019 -0300
+
+    Update README.md
+
+[33mcommit 7d8b356b4e2f158ff1cc88823e891e38a82a5354[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:51:56 2019 -0300
+
+    Update README.md
+
+[33mcommit 2b5e4f142ef6b822df722e7d6c3121685812578c[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:48:51 2019 -0300
+
+    Uplod do logo do kinvo
+
+[33mcommit f389650c51c35fde31277ccac65cd3043a4c8829[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:46:31 2019 -0300
+
+    Update README.md
+
+[33mcommit 328f1c97e0d192bdde07430aca82fd7c6b2097c4[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:39:21 2019 -0300
+
+    Alteração no diretório do layout
+
+[33mcommit 5156f3122fa4cdd762d7202a249005ed4179fe87[m
+Author: cbfranca <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:28:24 2019 -0300
+
+    Upload do layout
+
+[33mcommit 20b856d5414d3410a3ee491ab6b819997fc27a82[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:21:51 2019 -0300
+
+    Update README.md
+
+[33mcommit 3d0c7515c30c96d3cf2ac01596e6ff20d40541b1[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:20:40 2019 -0300
+
+    Update README.md
+
+[33mcommit f8159bb0c92b47ae55a5b3296e90520248885d3c[m
+Author: Cleidson França <cleidsonbf@gmail.com>
+Date:   Wed Jan 23 09:08:32 2019 -0300
+
+    Initial commit

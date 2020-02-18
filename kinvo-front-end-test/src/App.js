@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/layout/Header';
-import Aside from './components/layout/Aside';
+import Sidebar from './components/layout/Sidebar';
 import Section from './components/layout/Section';
 
 
 class App extends Component {
-  render(){
+  render() {
     return (
       <div className="App">
-        <Header/>
-  
+        <Header />
+        <div className="flex-container">
+          <Sidebar />
+          <Section />
+        </div>
       </div>
     );
   }

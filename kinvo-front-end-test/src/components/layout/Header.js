@@ -8,7 +8,7 @@ export class Header extends Component {
     return (
       <header>
         <div className="branding">
-          <img src={logo}/>
+          <img src={logo} alt="Kinvo premium"/>
         </div>
       </header>
     )

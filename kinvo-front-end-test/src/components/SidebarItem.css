@@ -1,0 +1,38 @@
+.li-wrapper {
+  display: flex;
+  padding: 15px 12px;
+  align-items: center;
+  border-bottom: 1px solid #CCCFD1;
+}
+
+.list-icon {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #DAE0E3;
+  border-radius: 50%;
+  margin-right: 17px;
+  transition: .2s ease;
+}
+
+.list-icon img {
+  margin: auto;
+  width: 1.2rem;
+}
+
+.arrow-left{
+  width: 0.4rem;
+  margin-left: auto;
+  margin-right: 0.1rem;
+}
+
+.li-wrapper:hover {
+  background: #EEF2F4;
+} 
+
+.li-wrapper:hover .list-icon {
+  background: #5D41AC;
+}
+
+
+
