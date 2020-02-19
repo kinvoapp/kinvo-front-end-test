@@ -9,10 +9,10 @@
   display:block;
 }
 .content{
-  width: 1141px;
-  height: 1000px;
+  width: 1300px;
   float:left;
   background-color:#DAE0E3;
+  display: block;
 }
 .sideButton{
   padding: 50px, 0;
@@ -40,20 +40,21 @@
   width: 115px;
   margin-left:12px;
   font-size: 14px;
-  font-style: Helvetica;
+  font-family: Helvetica;
   height:32px;
   text-align: left;
   color:#707B81;
   margin:auto auto auto 0;
 }
 
-.hidden{
+input.hidden{
   display: none;
   visibility:hidden;
   display:block;
   height: 0;
   width:0;
-} 
+  margin:0;
+}
 
 .sideImg{
   margin-left:12px;
@@ -80,4 +81,37 @@
   width: 5px;
   margin: auto;
 }
+.headList{
+  width: 1141px;
+  float:left;
+  margin: 25px 0 0px 28px;
+  color:#707B81;
+  font-family: Helvetica;
+  font-size:20px;
+  font-weight: bold;
+}
+.topButtonDiv{
+  width: 1141px;
+  display:inline-flex;
 
+}
+
+.topButton{
+  width: 127px;
+  height: 32px;
+  background-color: #EEF2F4;
+  color: #AAB5BB;
+  border-top-left-radius:7px;
+  border-top-right-radius:7px;
+  margin-left: 25px;
+  display: inline-flex;
+  padding:  28px 113px 20px 26px;
+}
+.topButton.active{
+  color:#707B81;
+  background-color: #FFFFFF;
+}
+.buttonText{
+  font-family: Helvetica;
+  font-size: 16px;
+}
