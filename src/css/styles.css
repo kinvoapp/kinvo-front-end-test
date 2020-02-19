@@ -1,0 +1,171 @@
+.menu-icon {
+    background: var(--color-primary-tint);
+}
+
+.menu-icon--enabled {
+    background: var(--color-secondary);
+}
+
+.table-tab {
+    color: tal;
+    background: tal;
+    margin-right: 10px;
+}
+
+.table-tab:not(:last-child) {
+    margin-right: 0px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bodyFlex{
+    display: flex;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+}
+
+img{
+    margin-top: 28px;
+    margin-left: 10px;
+}
+
+.iconesMenu{
+    margin-top: 9px;
+    margin-left: 9px;
+}
+
+.containerMenu{
+    display: flex;
+}
+
+.setaMenu{
+    margin-top: 22px;
+    margin-right: 16px;
+}
+
+.menu-lateral{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    font-size: var(--font-size-small);
+    color: var(--color-primary);
+}
+
+#bordericon{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: var(--color-primary-light);
+}
+aside{
+    height: 100vh;
+}
+section{
+    width: 100%;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    padding-left: 16px;
+}
+
+h1{
+    font-size: var(--font-size-large);
+    font-weight: 100;
+}
+
+.flexMenuInterno{
+    display: flex;
+    width: 98%;
+}
+
+.menuInterno{
+    display: flex;
+    align-items: center;
+    width: 251px;
+    height: 65px;
+    text-align: center;
+    background-color: #F8FAFB;
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 14px;
+    margin-left: 10px;
+    font-size: var(--font-size-medium);
+    color: var(--color-primary);
+}
+
+.layoutInterno{
+    display: flex;
+    background-color: #F8FAFB;
+    margin-left: 10px;
+    width: 97.1%;
+    
+}
+
+.menuLayoutInterno{
+    width: 191px;
+    height: 90px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerInterno{    
+    background-color: #F8FAFB;
+    margin-left: 10px;
+    width: 97.1%;
+    padding-top: 10px;
+}
+.containerFundos{
+    padding-top: 10px;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    margin-left: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.containerValores{
+    background-color: #F8FAFB;
+    margin-left: 10px;
+    width: 97.1%;
+    height: 100vh;
+}
+
+.valoresKinvo{
+    padding-top: 10px;
+    width: 97%;
+    margin-left: 10px;
+    padding-left: 20px;
+    background-color: #ffffff;
+    height: 98vh;
+    border-radius: 0px 0px 10px 
+}
+
+.Pesquisa{
+    width: 250px;
+    height: 33px;
+    border-radius: 29px;
+    background-color: #EEF2F4;
+}
+
+.lupa{
+    margin-left: 9px;
+    margin-top: 9px;
+}

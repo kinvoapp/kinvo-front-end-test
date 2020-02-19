@@ -1,0 +1,16 @@
+:root{
+
+    /*Tamanhos das fontes*/
+    --font-size-large: 20px;
+    --font-size-medium: 16px;
+    --font-size-small: 14px;
+    --font-size-tiny: 12px;
+    
+    /*Cores predominantes*/
+    --color-light: #FFFFFF;
+    --color-primary: #707B81;
+    --color-secondary: #4C309B;
+    --color-tertiary: #5D41AC;
+    --color-primary-light: #DAE0E3;
+    --color-primary-shade: #EEF2F4;
+}
