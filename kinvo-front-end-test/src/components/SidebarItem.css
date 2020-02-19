@@ -34,5 +34,11 @@
   background: #5D41AC;
 }
 
+/* For the happy path */
+.enabled {
+  background: #EEF2F4;
+}
 
-
+.enabled .list-icon {
+  background: #5D41AC;
+}
