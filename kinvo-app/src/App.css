@@ -10,7 +10,9 @@
 }
 .content{
   width: 1141px;
+  height: 1000px;
   float:left;
+  background-color:#DAE0E3;
 }
 .sideButton{
   padding: 50px, 0;
@@ -26,9 +28,11 @@
   padding: 50px, 0;
   height:65px;
   width: 225px;
-  display:block;
+  display:inline-flex;
   background-color: #EEF2F4;
   border-color: #707070;
+  border-bottom-width: 1px;
+  border-color:#DAE0E3;
 }
 
 .sideText{
@@ -57,11 +61,15 @@
   margin-bottom:18px;
   margin-right:14px;
   padding: 7px;
-  background-color:#DAE0E3;
+  height: 17px;
+  width:18px;
   border-radius: 50%;
+  background-color:#DAE0E3;
 }
 
-
+.activeImg{
+  background-color:#5D41AC;
+}
 
 .logo{
   margin-top:30px;
