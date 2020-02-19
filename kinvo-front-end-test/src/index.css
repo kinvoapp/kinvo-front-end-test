@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue'), url(./fonts/helvetica-neue.ttf) format('truetype');
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
@@ -10,3 +15,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
