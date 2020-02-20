@@ -22,15 +22,16 @@
 	 - CSS;
 	 - JavaScript;
 
-####### Construindo a pagina:
+### Construindo a pagina:
 	-Instalando nodeJs e visual studio code para começar o projeto;
 	-Iniciei com o creat-react-app "nome do projeto";
 	-Após isso no powershell entrei na pasta e abri no visual code com "code ." e em seguida abri o terminal no visual studio code rodando com npm start;
 	-Tendo pronto o projeto, apaguei o codigo padrão do App.js e comecei;
 	-Para a pagina do desafio separei inicialmente o programa em 3 divisões:
-		A header para o logo e o topo da pagina, 
-		A navBar para a barra do lado esquerdo com os botões,
-		E a component para a parte da lista que é ativada pelo botão;
+		-A header para o logo e o topo da pagina, 
+		-A navBar para a barra do lado esquerdo com os botões,
+		-E a component para a parte da lista que é ativada pelo botão;
+### classes:
 
 	1.Header
 	-Comecei com o logo na header separando o espaço para ficar no topo como no layout e usando a imagem do adobe Xd para o logo;
