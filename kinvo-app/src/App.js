@@ -12,7 +12,6 @@ class App extends Component{
     list: [],
     isLoaded: false,
     search: ''
-    
   }; 
 
   updateSearch= (event) =>{
@@ -44,7 +43,7 @@ class App extends Component{
     this.setState({
         topButton: topButton
     });
-};
+  };
   
 
   render(){
