@@ -8,11 +8,11 @@ a {
   text-decoration: none;
 }
 
-a,p,span {
-  color: #707B81
+h1,h2,h3,h4,h5,h6, a,p,span, button {
+  color: #707B81;
 }
 
 .flex-container{
+  width: 100%;
   display: flex;
-  flex-direction: row;
 }

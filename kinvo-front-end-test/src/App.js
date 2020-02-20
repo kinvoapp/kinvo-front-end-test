@@ -4,7 +4,6 @@ import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import Section from './components/layout/Section';
 
-
 class App extends Component {
   render() {
     return (

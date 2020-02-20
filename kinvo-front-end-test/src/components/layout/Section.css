@@ -8,3 +8,7 @@ section{
   height: inherit;
   background: #DAE0E3;
 }
+
+#section-wrapper > h3  {
+  padding:  28px 0 23px 26px  ;
+}

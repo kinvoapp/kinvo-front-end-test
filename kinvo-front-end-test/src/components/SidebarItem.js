@@ -13,13 +13,13 @@ export class SidebarItem extends Component {
 
     return (
       <li>
-        <a href="" alt={this.props.title}>
+        <a href="#">
           <div className={`li-wrapper ${activeStyle()}`} >
             <div className="list-icon">
-              <img src={this.props.icon}></img>
+              <img src={this.props.icon} alt={this.props.title}></img>
             </div>
             <span>{this.props.title}</span>
-            <img class="arrow-left" src={arrowLeft} alt=""></img>
+            <img className="arrow-left" src={arrowLeft} alt=""></img>
           </div>
         </a>
       </li>

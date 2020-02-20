@@ -14,7 +14,7 @@ import wheel from '../../images/sidebar/wheel.svg';
 import lock from '../../images/sidebar/lock.svg';
 
 
-export class Aside extends Component {
+export class Sidebar extends Component {
   state = {
     options: [
       {
@@ -84,4 +84,4 @@ export class Aside extends Component {
   }
 }
 
-export default Aside
+export default Sidebar
