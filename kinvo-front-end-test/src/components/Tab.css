@@ -4,6 +4,7 @@
 }
 
 .tab-link {
+  color: #AAB5BB;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -25,6 +26,7 @@
 
 .active {
   background: #F8FAFB;
+  color: #707B81;
 }
 
 /* Content */
@@ -82,7 +84,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 22px 15px 28px 0;
-  
 }
 
 /* Input area */
@@ -98,6 +99,7 @@
 .filter-input-area, .search-button {
   border:none;
   height: 2rem;
+  background: #EEF2F4;
   color: #AAB5BB;
 }
 
@@ -108,7 +110,6 @@
 .filter-input-area{  
   border-bottom-right-radius: 16px;  
   border-top-right-radius: 16px;
-
 }
 
 .search-button {
@@ -116,14 +117,9 @@
   border-top-left-radius: 16px;
 }
 
-
-
-
 .filter-input-area, .magnifier{
   background: #EEF2F4; 
 }
-
-
 
 
 

@@ -11,10 +11,9 @@ export class Section extends Component {
 
           <h3>Análise por Classe de Ativos</h3>
           <div className="tab-container">
-            <Tab zIndex={1}/>
+            <Tab/>
           </div>
-
-
+          
         </div>
       </section>
     )
