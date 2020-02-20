@@ -15,7 +15,7 @@ class ItemList extends Component{
 
                 <div className="listInfoText saldo">
                     <div className="labelInfo">SALDO ATUAL</div>
-                    <CurrencyFormat value={this.props.product.equity} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                    <CurrencyFormat value={this.props.product.equity} decimalSeparator=',' displayType="text" prefix='R$ '/>
                     
                 </div>
 
@@ -26,27 +26,27 @@ class ItemList extends Component{
 
                 <div className="listInfoText preco">
                     <div className="labelInfo">PREÇO MÉDIO</div>
-                    <CurrencyFormat value={this.props.product.averagePrice} thousandSeparator={true} displayType="text" prefix='R$ '/>    
+                    <CurrencyFormat value={this.props.product.averagePrice} decimalSeparator=',' displayType="text" prefix='R$ '/>    
                 </div>
 
                 <div className="listInfoText ultima">
                     <div className="labelInfo">ULTIMA COTAÇÃO</div>
-                    <CurrencyFormat value={this.props.product.lastQuotation} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                    <CurrencyFormat value={this.props.product.lastQuotation} decimalSeparator=',' displayType="text" prefix='R$ '/>
                 </div>
 
                 <div className="listInfoText yield">
                     <div className="labelInfo">YIELD(1M)</div>
-                    {this.props.product.currentMonthYield}%
+                    {this.props.product.currentMonthYield.toString().replace('.',',')}%
                 </div>
 
                 <div className="listInfoText yield12m">
                     <div className="labelInfo">YIELD(12M)</div>
-                    {this.props.product.lastTwelveMonthsYeld}%
+                    {this.props.product.lastTwelveMonthsYeld.toString().replace('.',',')}%
                 </div>
 
                 <div className="listInfoText carteira">
                     <div className="labelInfo">% CARTEIRA</div>
-                            12,31%
+                            
                 </div>
             </div>
         );

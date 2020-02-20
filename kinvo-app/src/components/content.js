@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ItemList from './itemList';
-import CurrencyFormat from 'react-currency-format';
+import TopButton from './topButton';
+import Summary from './summary';
 
 class Content extends Component{
     
@@ -8,99 +9,42 @@ class Content extends Component{
         if(this.props.isLoaded){
             return(
                 <div>
-                    <div className={this.handleChoice}>
+                    <div>
                         <div className="headList">
                             Análise por Classe de Ativos
                         </div>
                         
-                        <div className="topButtonDiv">
-                            <input type="radio" value="0" className="hidden" checked={this.props.topButton[0] === 1} onChange={this.props.onEventTopButton} id="topButton1"/>
-                            <label for="topButton1">
-                                <div className={this.handleClassButton(0)}>
-                                    <div className="buttonText">Ações</div>
-                                </div>
-                            </label>
-    
-                            <input type="radio" value="1" className="hidden" checked={this.props.topButton[1] === 1} onChange={this.props.onEventTopButton} id="topButton2"/>
-                            <label for="topButton2">
-                                <div className={this.handleClassButton(1)}>
-                                    <div className="buttonText">Nome da Classe</div>
-                                </div>
-                            </label>
-    
-                            <input type="radio" value="2" className="hidden" checked={this.props.topButton[2] === 1} onChange={this.props.onEventTopButton} id="topButton3"/>
-                            <label for="topButton3">
-                                <div className={this.handleClassButton(2)}>
-                                    <div className="buttonText">Nome da Classe</div>
-                                </div>
-                            </label>
-    
-                            <input type="radio" value="3" className="hidden" checked={this.props.topButton[3] === 1} onChange={this.props.onEventTopButton} id="topButton4"/>
-                            <label for="topButton4">
-                                <div className={this.handleClassButton(3)}>
-                                    <div className="buttonText">Nome da Classe</div>
-                                </div>
-                            </label>
-                        </div>
+                        <TopButton topButton={this.props.topButton} onEventTopButton={this.props.onEventTopButton}/>
     
                         <div className="background-list">
-    
+
                             {this.props.topButton[0]===1 ?
-                                <div>
-                                    <div className="listInfo">
-                                        <div className="topInfo">
-                                            <div className="label">SALDO BRUTO</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.grossBalance} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
-                                        </div>
-    
-                                        <div className="topInfo">
-                                        <div className="label">VALOR APLICADO</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.appliedValue} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
-                                            
-                                        </div>
-    
-                                        <div className="topInfo">
-                                            <div className="label">GANHO DE CAPITAL</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.capitalGains} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
-                                            
-                                        </div>
-    
-                                        <div className="topInfo">
-                                            <div className="label">TOTAL DISTRIBUIDOS</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.earnings} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
-                                        </div>
-    
-                                        <div className="topInfo">
-                                            <div className="label">YIELD</div>
-                                            {this.props.list.data.summary.yield.toString().replace('.',',')}%
-                                        </div>
-                                    </div>
-                                </div>
+                                <Summary topButton={this.props.topButton} list={this.props.list}/>
                                 : null
                             }
                             
-                                <div className="listSpace">
-                                    {this.props.topButton[0]===1 ?
-                                        <div className="listSpace">
-                                            <div className="fundos">Fundos</div>
-                                            <input type="textArea" value={this.props.search} onChange={this.props.onUpdateSearch} className="searchBox"/>
-                                        </div>
-                                        : null
-                                    }
-                                </div>
-                            
-                                <div className="listSpace roll">
-                                    {this.props.topButton[0]===1 ?
-                                        <div>
-                                            {this.props.list.data.products.filter(product =>{
-                                                return product.productName.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
-                                            }).map(product =>{
-                                                return <ItemList product={product}/>
-                                            })}
-                                        </div>
-                                        :null
-                                    }
-                                </div>
+                            <div className="listSpace">
+                                {this.props.topButton[0]===1 ?
+                                    <div className="listSpace">
+                                        <div className="fundos">Fundos</div>
+                                        <input type="textArea" value={this.props.search} onChange={this.props.onUpdateSearch} className="searchBox"/>
+                                    </div>
+                                    : null
+                                }
+                            </div>
+                        
+                            <div className="listSpace roll">
+                                {this.props.topButton[0]===1 ?
+                                    <div>
+                                        {this.props.list.data.products.filter(product =>{
+                                            return product.productName.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
+                                        }).map(product =>{
+                                            return <ItemList product={product}/>
+                                        })}
+                                    </div>
+                                    :null
+                                }
+                            </div>
                         </div>
                     </div>
     
@@ -112,26 +56,10 @@ class Content extends Component{
         
     }
     
-    handleClassButton(num){
-        let classe="topButton";
-        if(this.props.topButton[num]===1){
-            classe+=" active";
-        }
-        if(num===0){
-            classe+=" first";
-        }
-        return classe;
-    }
+    
     
 
-    handleChoice(){
-        const radios=this.props.radios;
-        let classe="hidden";
-        if(radios[3]===1){
-          classe="analisePorClasse";
-        }
-        return classe;
-    };
+    
 }
 
 export default Content;

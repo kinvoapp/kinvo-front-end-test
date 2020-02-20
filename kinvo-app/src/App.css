@@ -9,7 +9,8 @@
   display:block;
 }
 .content{
-  width: 1300px;
+  width: 1200px;
+  height:1225px;
   float:left;
   background-color:#DAE0E3;
   display: block;
@@ -105,7 +106,7 @@ input.hidden{
   border-top-right-radius:7px;
   margin-left: 10px;
   display: inline-flex;
-  padding:  28px 120px 20px 26px;
+  padding:  28px 120px 5px 26px;
 }
 .topButton.first{
   margin-left:25px;
@@ -117,12 +118,14 @@ input.hidden{
 .buttonText{
   font-family: Helvetica;
   font-size: 16px;
+  font-weight:bold;
 }
 .listInfo{
   display:inline-flex;
   background-color:#F8FAFB;
   width:1094px;
   height: 95px;
+  margin-bottom:10px;
 }
 .topInfo{
   margin-left:19px;
@@ -140,7 +143,8 @@ input.hidden{
 }
 .topInfo .label{
   font-size:10px;
-  font-weight:normal;
+  font-weight:medium;
+  display:block;
 }
 .listSpace{
   display:inline-flex;
@@ -168,6 +172,12 @@ input.hidden{
   border-style:solid;
   border-color:#9DA5AC;
   background-color:#EEF2F4;
+  background-image: url('images/lupa.png');
+  background-size: 15px;
+  padding-left: 30px;
+  background-repeat:no-repeat;
+  background-position: 3% 50%;
+  
 }
 .background-list{
   background-color:#F8FAFB;
@@ -195,7 +205,6 @@ input.hidden{
   width:5px;
   border-radius: 5px;
   margin-right:0;
-  margin-right:19px;
 }
 .listRoll{
   display:inline-flex;
@@ -264,5 +273,25 @@ input.hidden{
 .sideText.CobFGS{
   width:63px;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #D6D9DD;
+  border-radius: 5px;
+  
+}
+.label .yi{
+  margin-left:30px;
+}
+
 
 
