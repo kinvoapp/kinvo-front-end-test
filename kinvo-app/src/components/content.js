@@ -3,14 +3,7 @@ import ItemList from './itemList';
 import CurrencyFormat from 'react-currency-format';
 
 class Content extends Component{
-    state={
-        search: ''
-    };
-    updateSearch= (event) =>{
-        this.setState({
-            search:  event.target.value
-        });
-    }
+    
     render(){
         if(this.props.isLoaded){
             return(
@@ -57,24 +50,24 @@ class Content extends Component{
                                     <div className="listInfo">
                                         <div className="topInfo">
                                             <div className="label">SALDO BRUTO</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.grossBalance} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                                            <CurrencyFormat value={this.props.list.data.summary.grossBalance} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                                         </div>
     
                                         <div className="topInfo">
                                         <div className="label">VALOR APLICADO</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.appliedValue} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                                            <CurrencyFormat value={this.props.list.data.summary.appliedValue} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                                             
                                         </div>
     
                                         <div className="topInfo">
                                             <div className="label">GANHO DE CAPITAL</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.capitalGains} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                                            <CurrencyFormat value={this.props.list.data.summary.capitalGains} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                                             
                                         </div>
     
                                         <div className="topInfo">
                                             <div className="label">TOTAL DISTRIBUIDOS</div>
-                                            <CurrencyFormat value={this.props.list.data.summary.earnings} thousandSeparator={true} displayType="text" prefix='R$ '/>
+                                            <CurrencyFormat value={this.props.list.data.summary.earnings} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                                         </div>
     
                                         <div className="topInfo">
@@ -90,7 +83,7 @@ class Content extends Component{
                                     {this.props.topButton[0]===1 ?
                                         <div className="listSpace">
                                             <div className="fundos">Fundos</div>
-                                            <input type="textArea" value={this.state.search} onChange={this.updateSearch} className="searchBox"/>
+                                            <input type="textArea" value={this.props.search} onChange={this.props.onUpdateSearch} className="searchBox"/>
                                         </div>
                                         : null
                                     }
@@ -99,7 +92,9 @@ class Content extends Component{
                                 <div className="listSpace roll">
                                     {this.props.topButton[0]===1 ?
                                         <div>
-                                            {this.props.list.data.products.map(product =>{
+                                            {this.props.list.data.products.filter(product =>{
+                                                return product.productName.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
+                                            }).map(product =>{
                                                 return <ItemList product={product}/>
                                             })}
                                         </div>
