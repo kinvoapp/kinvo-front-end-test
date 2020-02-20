@@ -39,7 +39,7 @@ class Content extends Component{
                                         {this.props.list.data.products.filter(product =>{
                                             return product.productName.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
                                         }).map(product =>{
-                                            return <ItemList product={product}/>
+                                            return <ItemList product={product} carteiraTotal={this.props.list.data.summary.grossBalance}/>
                                         })}
                                     </div>
                                     :null

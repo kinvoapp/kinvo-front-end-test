@@ -8,24 +8,24 @@ class Summary extends Component{
                     <div className="listInfo">
                         <div className="topInfo">
                             <div className="label">SALDO BRUTO</div>
-                            <CurrencyFormat value={this.props.list.data.summary.grossBalance} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
+                            <CurrencyFormat value={this.props.list.data.summary.grossBalance} thousandSeparator={true} fixedDecimalScale={true} decimalScale={2} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                         </div>
 
                         <div className="topInfo">
                         <div className="label">VALOR APLICADO</div>
-                            <CurrencyFormat value={this.props.list.data.summary.appliedValue} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
+                            <CurrencyFormat value={this.props.list.data.summary.appliedValue} thousandSeparator={true} fixedDecimalScale={true} decimalScale={2} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                             
                         </div>
 
                         <div className="topInfo">
                             <div className="label">GANHO DE CAPITAL</div>
-                            <CurrencyFormat value={this.props.list.data.summary.capitalGains} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
+                            <CurrencyFormat value={this.props.list.data.summary.capitalGains} thousandSeparator={true} fixedDecimalScale={true} decimalScale={2} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                             
                         </div>
 
                         <div className="topInfo">
                             <div className="label">TOTAL DISTRIBUIDOS</div>
-                            <CurrencyFormat value={this.props.list.data.summary.earnings} thousandSeparator={true} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
+                            <CurrencyFormat value={this.props.list.data.summary.earnings} thousandSeparator={true} fixedDecimalScale={true} decimalScale={2} decimalSeparator=',' thousandSeparator='.' displayType="text" prefix='R$ '/>
                         </div>
 
                         <div className="topInfo">

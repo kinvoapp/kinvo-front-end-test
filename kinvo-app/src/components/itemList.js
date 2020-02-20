@@ -15,7 +15,7 @@ class ItemList extends Component{
 
                 <div className="listInfoText saldo">
                     <div className="labelInfo">SALDO ATUAL</div>
-                    <CurrencyFormat value={this.props.product.equity} decimalSeparator=',' displayType="text" prefix='R$ '/>
+                    <CurrencyFormat value={this.props.product.equity}  fixedDecimalScale={true} decimalScale={2}  decimalSeparator=',' displayType="text" prefix='R$ '/>
                     
                 </div>
 
@@ -26,12 +26,12 @@ class ItemList extends Component{
 
                 <div className="listInfoText preco">
                     <div className="labelInfo">PREÇO MÉDIO</div>
-                    <CurrencyFormat value={this.props.product.averagePrice} decimalSeparator=',' displayType="text" prefix='R$ '/>    
+                    <CurrencyFormat value={this.props.product.averagePrice} fixedDecimalScale={true} decimalScale={2}  decimalSeparator=',' displayType="text" prefix='R$ '/>    
                 </div>
 
                 <div className="listInfoText ultima">
                     <div className="labelInfo">ULTIMA COTAÇÃO</div>
-                    <CurrencyFormat value={this.props.product.lastQuotation} decimalSeparator=',' displayType="text" prefix='R$ '/>
+                    <CurrencyFormat value={this.props.product.lastQuotation} fixedDecimalScale={true} decimalScale={2}  decimalSeparator=',' displayType="text" prefix='R$ '/>
                 </div>
 
                 <div className="listInfoText yield">
@@ -45,13 +45,16 @@ class ItemList extends Component{
                 </div>
 
                 <div className="listInfoText carteira">
-                    <div className="labelInfo">% CARTEIRA</div>
-                            
+                    <div className="labelInfo">% CARTEIRA</div> 
+                    {this.getCarteira().toFixed(2).toString().replace('.',',')}%                          
                 </div>
             </div>
         );
     }
-
+    getCarteira(){
+        const carteira=((this.props.product.equity / this.props.carteiraTotal) * 100);
+        return carteira;
+    }
 
 }
 
