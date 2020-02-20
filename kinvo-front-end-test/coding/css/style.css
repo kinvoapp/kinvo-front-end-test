@@ -1,0 +1,81 @@
+body{
+    font-family:Helvetica;
+    background-color: #DAE0E3;
+}
+.navbar{
+    background-color: #fff!important;
+    height: 90px!important;
+}
+.sidebar{
+    background-color: #fff!important;
+    margin-top: 90px;
+    height: 534px!important;
+    width: 225.71px!important;
+    font-size: 14px;
+    position: fixed;
+}
+.pag-title{
+    font-size: 20px;
+    color: #707B81;
+    margin-top: 118px;
+}
+.col-det{
+    margin: 3px;
+    margin-bottom: 0px;
+    height: 65px;
+    width: 265;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.col-n-act{
+    background-color: #EEF2F4
+}
+.col-n-act p{
+    color: #AAB5BB;
+}
+.col-act{
+    background-color: #F8FAFB;
+}
+.col-act p{
+    color: #707B81;
+}
+.main-container{
+    margin-top: 0px;
+    width: 50;
+    height: 1064px;
+    background-color: #F8FAFB;
+}
+.infos-field{
+    background-color: #fff;
+    margin: 3px;
+    height: 75px;
+    width: 191px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.infos-field p{
+    font-size: 10px;
+    color: #707B81;
+}
+.infos-field h2{
+    font-size: 18px;
+    color: #707B81;
+}
+.infos-container{
+    background-color: #fff;
+    height: 900px;
+}
+/*Scroll Bar*/
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
