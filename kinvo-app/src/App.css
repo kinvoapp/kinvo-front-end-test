@@ -91,7 +91,7 @@ input.hidden{
   font-weight: bold;
 }
 .topButtonDiv{
-  width: 1141px;
+  width: 1165px;
   display:inline-flex;
 
 }
@@ -103,15 +103,166 @@ input.hidden{
   color: #AAB5BB;
   border-top-left-radius:7px;
   border-top-right-radius:7px;
-  margin-left: 25px;
+  margin-left: 10px;
   display: inline-flex;
-  padding:  28px 113px 20px 26px;
+  padding:  28px 120px 20px 26px;
+}
+.topButton.first{
+  margin-left:25px;
 }
 .topButton.active{
   color:#707B81;
-  background-color: #FFFFFF;
+  background-color:#F8FAFB;
 }
 .buttonText{
   font-family: Helvetica;
   font-size: 16px;
 }
+.listInfo{
+  display:inline-flex;
+  background-color:#F8FAFB;
+  width:1094px;
+  height: 95px;
+}
+.topInfo{
+  margin-left:19px;
+  margin-top:18px; 
+  font-family:Helvetica;
+  font-size:18px;
+  font-weight:bold;
+  background-color: #FFFFFF;
+  color:#707B81;
+  display:block;
+  padding: 20px 42px;
+  width:130px;
+  height:34px;
+  border-radius:7px;
+}
+.topInfo .label{
+  font-size:10px;
+  font-weight:normal;
+}
+.listSpace{
+  display:inline-flex;
+  background-color:#FFFFFF;
+  width:1074px;
+  margin-left:20px;
+  border-radius: 7px;
+}
+.fundos{
+  font-family: Helvetica;
+  font-size: 18;
+  margin:22px 702px 28px 0px;
+  font-weight:bold;
+  color:#707B81;
+}
+.searchBox{
+  margin-top: 10px;
+  width:260px;
+  height:30px;
+  border-radius: 20px;
+  border-top-width: 0.4px;
+  border-bottom-width:0.4px;
+  border-left-width: 0;
+  border-right-width:0;
+  border-style:solid;
+  border-color:#9DA5AC;
+  background-color:#EEF2F4;
+}
+.background-list{
+  background-color:#F8FAFB;
+  margin-left: 25px;
+  width:1123px;
+}
+.listSpace.roll{
+  height: 900px;
+  overflow: auto;
+  display:block;
+}
+
+.nomeList{
+  font-family: Helvetica;
+  font-size: 12px;
+  color: #4C309B;
+  padding:9px;
+  height:14px;
+  width:91px;
+  
+}
+.purpleBar{
+  background-color:  #4C309B;
+  height:32px;
+  width:5px;
+  border-radius: 5px;
+  margin-right:0;
+  margin-right:19px;
+}
+.listRoll{
+  display:inline-flex;
+  margin-bottom:20px;
+  padding-bottom:10px;
+  margin-left:20px;
+  border-bottom-style:solid;
+  border-bottom-color:#DAE0E3;
+  border-bottom-width:0.5px;
+}
+.listInfoText{
+  font-family: Helvetica;
+  font-size:14px;
+  color:#4C309B;
+  font-weight:bold;
+}
+.labelInfo{
+  font-size:8px;
+  font-weight:medium;
+  width:75px;
+}
+.listInfoText.saldo{
+  margin-left:108px;
+  margin-right:100px;
+}
+.listInfoText.quant{
+  margin-right:10px;
+}
+.listInfoText.preco{
+  margin-right:20px;
+}
+.listInfoText.ultima{
+  margin-right:85px;
+}
+.listInfoText.yield{
+  margin-right:30px;
+}
+.listInfoText.yield12m{
+  margin-right:20px;
+}
+.listInfoText.carteira{
+  margin-right:0;
+}
+
+.sideText.Res{
+  width:73px;
+}
+.sideText.MProd{
+  width:57px;
+}
+.sideText.MProv{
+  width:64px;
+}
+.sideText.AnalClas{
+  width:116px;
+}
+.sideText.Rent{
+  width:87px;
+}
+.sideText.Proj{
+  width:70px;
+}
+.sideText.RxR{
+  width:62px;
+}
+.sideText.CobFGS{
+  width:63px;
+}
+
+

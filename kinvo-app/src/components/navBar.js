@@ -18,7 +18,7 @@ class NavBar extends Component{
                 <label for="radio1">
                     <div className={this.handleClassButton(0)}>
                         <img src={side1} alt="" className={this.handleClassImage(0)}/>
-                        <div className="sideText">Resumo Da Carteira</div>
+                        <div className="sideText Res">Resumo Da Carteira</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -27,7 +27,7 @@ class NavBar extends Component{
                 <label for="radio2">
                     <div className={this.handleClassButton(1)}>
                         <img src={side2} alt="" className={this.handleClassImage(1)}/>
-                        <div className="sideText">Meus Produtos</div>
+                        <div className="sideText MProd">Meus Produtos</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -38,7 +38,7 @@ class NavBar extends Component{
                 <label for="radio3">
                     <div className={this.handleClassButton(2)}>
                         <img src={side3} alt="" className={this.handleClassImage(2)}/>
-                        <div className="sideText">Meus Proventos</div>
+                        <div className="sideText MProv">Meus Proventos</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -47,7 +47,7 @@ class NavBar extends Component{
                 <label for="radio4">
                     <div className={this.handleClassButton(3)}>
                         <img src={side4} alt="" className={this.handleClassImage(3)}/>
-                        <div className="sideText">Análise por Classe de Produto</div>
+                        <div className="sideText AnalClas">Análise por Classe de Produto</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -56,7 +56,7 @@ class NavBar extends Component{
                 <label for="radio5">
                     <div className={this.handleClassButton(4)}>
                         <img src={side5} alt="" className={this.handleClassImage(4)}/>
-                        <div className="sideText">Rentabilidade Real</div>
+                        <div className="sideText Rent">Rentabilidade Real</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -65,7 +65,7 @@ class NavBar extends Component{
                 <label for="radio6">
                     <div className={this.handleClassButton(5)}>
                         <img src={side6} alt="" className={this.handleClassImage(5)}/>
-                        <div className="sideText">Projeção da Carteira</div>
+                        <div className="sideText Proj">Projeção da Carteira</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -74,7 +74,7 @@ class NavBar extends Component{
                 <label for="radio7">
                     <div className={this.handleClassButton(6)}>
                         <img src={side7} alt="" className={this.handleClassImage(6)}/>
-                        <div className="sideText">Risco x Retorno</div>
+                        <div className="sideText RxR">Risco x Retorno</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
@@ -83,14 +83,14 @@ class NavBar extends Component{
                 <label for="radio8">
                     <div className={this.handleClassButton(7)}>
                         <img src={side8} alt="" className={this.handleClassImage(7)}/>
-                        <div className="sideText">Cobertura do FGC</div>
+                        <div className="sideText CobFGC">Cobertura do FGC</div>
                         <img src={arrow} alt="" className="arrow"/>
                     </div>
                 </label>
             </div>
         );
     }
-
+    
     handleClassButton(num){
         let classe="sideButton";
         if(this.props.radios[num]===1){
