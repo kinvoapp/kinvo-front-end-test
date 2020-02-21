@@ -9,7 +9,10 @@
 1. Baixe o nodeJs;
 2. Abra o terminal powershell;
 3. Entre na pasta do projeto;
-4. Insira o comando npm start
+4. insira code .;
+5. abra terminal vscode com ctrl + "
+6. faça npm install no terminal
+7. Insira o comando npm start
 
 	isso abrirá uma pagina no navegador com o projeto
 
