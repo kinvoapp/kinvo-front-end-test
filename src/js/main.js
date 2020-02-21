@@ -10,9 +10,9 @@ const api = {
 
 api.getData().then(r => {
     const produtos = r.products;
+    console.log(produtos[0])
     popularTabs(r.summary);
     for(i = 0; i < produtos.length; i++){
-        console.log(produtos[i]);
         productTable(produtos[i]);
     };
 });
@@ -23,20 +23,26 @@ function popularTabs(sumario) {
         document.getElementById(s).innerHTML = sumario[s].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         
     });
-    document.getElementById('yield').innerHTML = sumario.yield+'%';
+    document.getElementById('yield').innerHTML = sumario.yield+' %';
 }
 
 function productTable(tablevalues){
     var tablevalues = tablevalues;
     var table = document.getElementById("tablepd");
-    table.innerHTML += (`<tr>
-    <td>${tablevalues.productName}</td>
-    <td>${tablevalues.equity.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-    <td>${tablevalues.amount}</td>
-    <td>${tablevalues.averagePrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-    <td>${tablevalues.lastQuotation.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-    <td>${tablevalues.currentMonthYield}</td>
-    <td>${tablevalues.lastTwelveMonthsYeld}</td>
-    <td>${tablevalues.lastTwelveMonthsYeld}</td>
-</tr>`);
+    table.innerHTML += (`
+    <table>
+        <tr>
+            <td>${tablevalues.productName}</td>
+            <td><div class="table-organiz">SALDO ATUAL</div><div>${tablevalues.equity.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div></td>
+            <td><div class="table-organiz">QUANT.</div><div>${tablevalues.amount}</div></td>
+            <td><div class="table-organiz">PREÇO MÉDIO</div>${tablevalues.averagePrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+            <td><div class="table-organiz">ULTIMA COTAÇÃO</div>${tablevalues.lastQuotation.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+            <td><div class="table-organiz">YIELD</div>${tablevalues.currentMonthYield} %</td>
+            <td><div class="table-organiz">YIELD</div>${tablevalues.lastTwelveMonthsYeld} %</td>
+            <td><div class="table-organiz">YIELD</div>${tablevalues.lastTwelveMonthsYeld} %</td>
+        </tr>
+    </table>
+    <div class="linha"></div>
+`);
 }
+

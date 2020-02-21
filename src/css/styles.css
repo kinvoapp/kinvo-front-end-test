@@ -1,21 +1,3 @@
-.menu-icon {
-    background: var(--color-primary-tint);
-}
-
-.menu-icon--enabled {
-    background: var(--color-secondary);
-}
-
-.table-tab {
-    color: tal;
-    background: tal;
-    margin-right: 10px;
-}
-
-.table-tab:not(:last-child) {
-    margin-right: 0px;
-}
-
 @font-face{
     font-family: 'Helvetica Neue';
     src: url('../assets/Fonts/helvetica-neue.ttf');
@@ -57,11 +39,13 @@ img{
     transition: 0.2s;
     cursor: pointer;
 }
+
+/* Animação simples do menu lateral
 .container-menu:hover{
     padding-top: 8px;
     box-shadow: 0px 0px 2px 0px aquamarine;   
 }
-
+*/
 .seta-menu{
     margin-top: 22px;
     margin-right: 16px;
@@ -222,10 +206,11 @@ h1{
     transition: 0.2s;
 }
 
+/* Animação simples do layout de pesquisa
 .search:hover{
     width: 260px;
 }
-
+*/
 .lupa{
     margin-left: 9px;
     margin-top: 9px;
@@ -241,6 +226,48 @@ input{
 table{
     width: 98%;
     color: var(--color-secondary);
-    border-left: 2px solid var(--color-secondary);
-    padding-left: 6px;
+    
+    padding-left: 6px;    
 }
+
+
+td{
+    height: 34px;  
+    padding-top: 10px;
+    padding-bottom: 10px;   
+    text-align: center; 
+}
+
+td:first-child::before{
+    content: '';
+    width: 4px;
+    height: 34px;
+    background: currentColor;
+    display: flex;
+    border-radius: 16px;
+    margin-left: -40px;
+    margin-right: 10px;
+}
+
+td:first-child{
+    display: flex;
+    text-align: left;
+    padding-left: 16px;
+    width: 150px;
+    align-items: center;
+    margin-left: 20px;    
+}
+
+.table-organiz{
+    font-size: 10px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.linha{
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 1.5%;
+    border-bottom: 1px solid var(--color-primary-light);
+}
+
