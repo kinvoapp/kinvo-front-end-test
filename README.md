@@ -1,39 +1,54 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
 
-# Teste para candidatos à vaga de Front-End
+# Desafio Front-end Web
+
+Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga.
 
 ## Instruções:
 
 1. Faça um fork deste repositório;
-2. Implemente o HTML, CSS e JS da tela com base no layout disponível;
-3. Após terminar seu teste submeta um pull request e aguarde seu feedback.
+2. Implemente o que é proposto no [protótipo](https://github.com/kinvoapp/kinvo-front-end-test/blob/master/material/layout.xd). **! Importante !** A implementação dos gráficos é opcional para candidatos a vagas de nível trainee/estágio, junior e pleno;
+3. O conjunto mínimo de tecnologias a ser utilizado é HTML, CSS e JS (ES6);
+4. Crie um passo a passo de como rodar sua aplicação ([sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md));
+5. Após terminar, submeta um pull request e aguarde a avaliação;
 
-### Pré-requisitos:
+## Requisitos mínimos:
 
-- Filtrar a listagem de produtos pelo nome do produto;
-- Criar um passo a passo de como rodar sua aplicação - [Sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md);
-- Utilizar ECMAScript 6+;
+### ○ Trainee/Estágio
 
-- **Importante:** Usamos o mesmo teste para todos os níveis de front: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto;
 
-### Ganhe pontos extras por:
+### ○ Junior
 
-- Utilizar `React`;
-- Utilize a api `https://ed87c2a9-bcc4-4e0c-8fd2-fefb9875b65b.mock.pstmn.io/getStockConsolidation` para obter o estado inicial da tela;
-- Testes unitários;
-- Desenvolver HTML semântico;
-- Componentizar sua interface;
-- Utilizar `Webpack`;
-- Utilizar `styled-components`;
+- Todos os requisitos exigidos para o nível Estágio/Trainee;
+- Exibir dados reais obtidos a partir da API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`;
+- Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
 
-## Material:
+### ○ Pleno
 
-- O layout em formato Adobe XD consta no repositório em [/material](/material);
-- Imagens e Ícones devem ser exportados do Adobe XD (Aalho: CTRL + E / CMD + E)
+- Todos os requisitos exigidos para o nível Junior;
+- Fazer uso da biblioteca [React](https://pt-br.reactjs.org/);
+- Fazer uso da biblioteca [Styled Components](https://styled-components.com/);
+- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
 
-## Submissão
+### ○ Sênior/Analista
 
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e depois envie-nos o pull request.
-Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
+- Todos os requisitos exigidos para o nível Pleno;
+- Projetar arquitetura minimamente escalável;
+- Cobertura de testes utilizando o framework de sua preferência. [Jest](https://jestjs.io/) e [Enzyme](https://enzymejs.github.io/enzyme/) são as nossas sugestões;
+- Gráficos funcionais utilizando a biblioteca de sua preferência. [Highcharts](https://www.highcharts.com/) é a nossa sugestão;
+
+## Notas:
+
+- Apesar da listagem de requisitos mínimos acima, caso não tenha tido tempo suficiente ou tenha se esbarrado em alguma dificuldade, entregue o desafio ainda que incompleto e conte-nos na descrição do pull request quais foram as suas maiores dificuldades.
+  Não se preocupe, avaliaremos ainda assim! :)
+- O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/adc938b2-4a7a-4837-a849-37d803b83d26-f89a/);
+- Caso não tenha familiaridade com o Adobe XD, os ativos do protótipo podem ser exportados utilizando o atalho **CTRL + E** ou **CMD + E**. Caso o seu sistema operacional não seja compatível com o software, você pode acessar o protótipo também através do link citado no item anterior;
+- As bibliotecas e demais recursos sugeridos por nós em todos os níveis de exigência são meras sugestões (com exceção do React). Sinta-se a vontade para fazer a escolha que te deixa mais confortável e inclusive para sugerir ;);
+- Lembre-se de fazer um _fork_ deste repositório! Apenas cloná-lo vai te impedir de criar o _pull request_ e dificultar a entrega;
+
+---
+
+Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Crie uma [issue](https://github.com/kinvoapp/kinvo-front-end-test/issues) e descreva o que achar necessário.
 
 **Sucesso!**
