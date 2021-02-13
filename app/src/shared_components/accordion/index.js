@@ -2,27 +2,34 @@ import React, { useState } from 'react'
 import { Container } from './styles'
 import OutlinedIcon from '../outlined_icon'
 
-function Accordion({ onChange, value, title, options }) {
+function Accordion({ onChange, options }) {
     const [selectedOption, setSelectedOption] = useState('')
-    const [setInnerOption, setSelectedInnerOption] = useState('')
+    const [innerOption, setInnerOption] = useState('')
 
-    const handleInnerOption = (val) => {
-        onChange(val)
-        setInnerOption(val)
+    const handleInnerOption = (o, i) => {
+        setInnerOption(i.name)
+        onChange && onChange(o.pathname, i.pathname) 
+    }
+
+    const handleSelectedOption = (val) => {
+        setSelectedOption(val)
+        setInnerOption('')
     }
 
     return (
         <Container>
             {options.map((o) =>
-                <div className='accordion'>
-                    <div className='accordion_title'>
-                        <OutlinedIcon icon={o.icon} text={o.option}/>
+                <div className={o.option === selectedOption.option ? 'accordion_active' :'accordion'}>
+                    <div onClick={() => handleSelectedOption(o)} 
+                         className={o.option === selectedOption.option ? 'accordion_title active' :'accordion_title'}>
+                        <OutlinedIcon active={o.option === selectedOption.option} icon={o.icon} text={o.option}/>
                     </div>
                     <div className='accordion_content'>
                         {o.innerOptions.map((i) =>
-                            <div>
-                                {i}
-                            </div>
+                            <li onClick={() => handleInnerOption(o, i)} 
+                                className={innerOption === i.name ? 'accordion_inner_option active' : 'accordion_inner_option'}>
+                                <span>{i.name}</span>
+                            </li>
                         )}
                     </div>
                 </div>

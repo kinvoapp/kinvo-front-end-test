@@ -29,13 +29,35 @@ export const Container = styled.div`
         }
     }
 
-    .accordion.active {
-        transition: 0.3s;
+    .accordion_active {
         max-height: 5000px;
+        width: 227px;
+        background: var(--color-light);
+        overflow: hidden;
+        transition: 2s;
+        cursor: pointer;
     }
 
     .accordion_title.active {
         background: var(--color-secondary-shaded);
     }
 
+    .accordion_inner_option {
+        padding: 16px;
+        background: var(--color-light);
+        border-bottom: 1.5px solid var(--color-secondary);
+        color: var(--color-accent);
+
+        &:hover {
+            filter: brightness(95%);
+        }
+
+        span {
+            color: var(--color-primary);
+        }
+    }
+
+    .accordion_inner_option.active {
+        background: var(--color-secondary-shaded);
+    }
 `

@@ -42,14 +42,14 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 34x;
+        width: 34px;
         height: 34px;
         padding: 4px;
         font-size: 10px;
         position: relative;
         color: var(--color-light);
         transition: 0.1s;
-        background: var(--color-primary);
+        background: var(--color-accent);
     }
  
 
