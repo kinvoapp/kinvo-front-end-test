@@ -10,7 +10,7 @@ function FixedIncome() {
     const [portfolioData, setPortfolioData] = useState()
     const [productData, setProductData] = useState()
     const [usableProductData, setUsableProductData] = useState()
-    const [activeProductPage, setActiveProductPage] = useState(1)
+    const [activeProductPage, setActiveProductPage] = useState('1')
     const [searchQuery, setSearchQuery] = useState('')
     const [sortingProducts, setSortingProducts] = useState('')
 
