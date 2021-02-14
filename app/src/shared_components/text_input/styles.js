@@ -16,7 +16,8 @@ export const CONTAINER = styled.div`
     .text_input_container {
         border: 1.5px solid var(--color-secondary);
         border-radius: var(--border-radius-large);
-        padding: 6px 8px;
+        padding: 0 8px;
+        height: 32px;
         background: white;
         display: flex;
         align-items: center;

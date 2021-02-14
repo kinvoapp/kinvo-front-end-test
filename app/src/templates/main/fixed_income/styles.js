@@ -78,6 +78,11 @@ export const IncomeTableContainer = styled.div`
             align-items: center;
             margin: 0 20px;
             justify-content: space-between;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
         }
 
         h2 {

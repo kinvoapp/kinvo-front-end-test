@@ -1,7 +1,7 @@
 import React from 'react'
 import { IncomeTableContainer } from './styles'
 import { grayIcons } from '../../../assets/icons'
-import { TextInput } from '../../../shared_components'
+import { Dropdown, TextInput } from '../../../shared_components'
 
 function IncomeTable({ productData }) {
     if (productData) {
@@ -10,6 +10,8 @@ function IncomeTable({ productData }) {
                 <div className='income_table_title'>
                     <h2>Minhas Rendas Fixas</h2>
                     <div>
+                        <Dropdown styles={{marginRight: 20}} 
+                                  placeholder={'Ordenar por'}/>
                         <TextInput icon={'search'}/>
                     </div>
                 </div>
