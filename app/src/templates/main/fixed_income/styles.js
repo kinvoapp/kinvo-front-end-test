@@ -4,6 +4,7 @@ const smallCard = `
     .small_card_container {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 8px;
 
         .small_card {
             width: 170px;
@@ -63,3 +64,60 @@ export const Container = styled.div`
     ${smallCard}
 `
 
+export const IncomeTableContainer = styled.div`
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        background: var(--color-light);
+        padding:  20px 0px;
+        border-radius: var(--border-radius-medium);
+        box-shadow: var(--box-shadow-medium);
+
+        .income_table_title {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+            justify-content: space-between;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-family: var(--font-family-primary);
+            font-size: 16px;
+        }
+
+        .income_row {
+            display: flex;
+            min-height: 120px;
+            justify-content: space-between;
+
+            &:nth-child(even) {
+                background: var(--color-light);
+            }
+
+            &:nth-child(odd) {
+                background: var(--color-secondary);
+            }
+        }
+
+        .income_row_content_container {
+            min-height: 77px;
+            border: 1px solid var(--color-secondary);
+            border-radius: var(--border-radius-large);
+            margin: 14px;
+
+            &:first-child {
+                flex: 2.5;
+            }
+
+            &:nth-child(2) {
+                flex: 3.5;
+            }
+
+            &:nth-child(3) {
+                flex:2;
+            }
+
+        }
+
+`
