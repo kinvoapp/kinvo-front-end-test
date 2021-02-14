@@ -9,7 +9,7 @@ function FixedIncome() {
 
     const [portfolioData, setPortfolioData] = useState()
     const [productData, setProductData] = useState()
-
+    const [activeProductPage, setActiveProductPage] = useState(1)
 
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
@@ -37,7 +37,10 @@ function FixedIncome() {
             <div className='content_container'>
                 <h1>Renda Fixa</h1>
                 <PortfolioDataContainer portfolioData={portfolioData}/>
-                <IncomeTable productData={getPaginatedProductData(1)}/>
+                <IncomeTable productData={getPaginatedProductData(activeProductPage)}
+                             activePage={activeProductPage}
+                             setActivePage={setActiveProductPage}
+                             productDataLength={productData ? productData.length : 0}/>
             </div>
         </Container>
     )

@@ -1,9 +1,10 @@
 import React from 'react'
 import { IncomeTableContainer } from './styles'
 import { grayIcons } from '../../../assets/icons'
-import { Dropdown, TextInput } from '../../../shared_components'
+import { Dropdown, TextInput, Pagination } from '../../../shared_components'
 
-function IncomeTable({ productData }) {
+function IncomeTable(props) {
+    const { productData, activePage, setActivePage, productDataLength } = props
     if (productData) {
         return (
             <IncomeTableContainer>
@@ -88,7 +89,10 @@ function IncomeTable({ productData }) {
                     </div>
                 )}
 
-
+                <Pagination activeNumber={activePage} 
+                            setActiveNumber={setActivePage}
+                            dataLength={productDataLength}/>
+                            
             </IncomeTableContainer>
 
         )
