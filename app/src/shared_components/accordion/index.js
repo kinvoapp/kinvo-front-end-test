@@ -18,15 +18,15 @@ function Accordion({ onChange, options }) {
 
     return (
         <Container>
-            {options.map((o) =>
-                <div className={o.option === selectedOption.option ? 'accordion_active' :'accordion'}>
+            {options.map((o, key) =>
+                <div key={key + 'option'} className={o.option === selectedOption.option ? 'accordion_active' :'accordion'}>
                     <div onClick={() => handleSelectedOption(o)} 
                          className={o.option === selectedOption.option ? 'accordion_title active' :'accordion_title'}>
                         <OutlinedIcon active={o.option === selectedOption.option} icon={o.icon} text={o.option}/>
                     </div>
                     <div className='accordion_content'>
-                        {o.innerOptions.map((i) =>
-                            <li onClick={() => handleInnerOption(o, i)} 
+                        {o.innerOptions.map((i, key) =>
+                            <li key={key + 'inner_option'} onClick={() => handleInnerOption(o, i)} 
                                 className={innerOption === i.name ? 'accordion_inner_option active' : 'accordion_inner_option'}>
                                 <span>{i.name}</span>
                             </li>

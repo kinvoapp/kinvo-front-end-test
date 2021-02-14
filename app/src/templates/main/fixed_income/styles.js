@@ -7,8 +7,9 @@ const smallCard = `
 
         .small_card {
             width: 170px;
+            max-width: 170px;
             height: 60px;
-            margin-right: 20px;
+            margin: 0 20px 8px 0;
             flex: 1;
             padding: 0 8px;
             border-radius: var(--border-radius-medium);

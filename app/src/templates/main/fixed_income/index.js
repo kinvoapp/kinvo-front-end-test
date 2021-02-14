@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { LateralNav, TopNav } from '../components'
 import { Container } from './styles'
+import fixedIncomeAPI from '../../../services/fixedIncome'
 
 function FixedIncome() {
+
+    useEffect(() => {
+        fixedIncomeAPI.getFixedIncomeData().then((res) => console.log(res))
+    }, [])
+
     return (
         <Container>
             <TopNav />
