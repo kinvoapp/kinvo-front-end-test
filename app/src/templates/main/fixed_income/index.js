@@ -9,7 +9,9 @@ function FixedIncome() {
 
     const [portfolioData, setPortfolioData] = useState()
     const [productData, setProductData] = useState()
+    const [usableProductData, setUsableProductData] = useState()
     const [activeProductPage, setActiveProductPage] = useState(1)
+    const [searchQuery, setSearchQuery] = useState('')
 
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
@@ -18,16 +20,27 @@ function FixedIncome() {
                 let auxProductData = res.data.data.snapshotByProduct
                 auxProductData[5].fixedIncome.name = 'CDD Teste de Produto'
                 setProductData(auxProductData)
-                console.log(res.data.data.snapshotByProduct)
+                setUsableProductData(auxProductData)
             }
         })
     }, [])
 
     const getPaginatedProductData = (page) => {
-        if(productData){
-            return productData.slice((page - 1) * 5 , (page * 5))
+        if(usableProductData){
+            return usableProductData.slice((page - 1) * 5 , (page * 5))
         }
         return null
+    }
+
+    const searchProductData = (query) => {
+        let auxProductData = [...usableProductData]
+        if(query.length > 2){
+            auxProductData = auxProductData.filter((d) => d.fixedIncome.name.toLowerCase().includes(query.toLowerCase()))
+            setUsableProductData(auxProductData)
+        } else  {
+            setUsableProductData(productData)
+        }
+        setSearchQuery(query)
     }
 
     return (
@@ -40,7 +53,9 @@ function FixedIncome() {
                 <IncomeTable productData={getPaginatedProductData(activeProductPage)}
                              activePage={activeProductPage}
                              setActivePage={setActiveProductPage}
-                             productDataLength={productData ? productData.length : 0}/>
+                             search={searchQuery}
+                             setSearch={searchProductData}
+                             productDataLength={usableProductData ? usableProductData.length : 0}/>
             </div>
         </Container>
     )

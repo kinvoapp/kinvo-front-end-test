@@ -4,7 +4,8 @@ import { grayIcons } from '../../../assets/icons'
 import { Dropdown, TextInput, Pagination } from '../../../shared_components'
 
 function IncomeTable(props) {
-    const { productData, activePage, setActivePage, productDataLength } = props
+    const { productData, activePage, setActivePage, productDataLength,
+            search, setSearch } = props
     if (productData) {
         return (
             <IncomeTableContainer>
@@ -13,7 +14,10 @@ function IncomeTable(props) {
                     <div>
                         <Dropdown styles={{marginRight: 20}} 
                                   placeholder={'Ordenar por'}/>
-                        <TextInput icon={'search'}/>
+                        
+                        <TextInput value={search} 
+                                   onChange={setSearch} 
+                                   icon={'search'}/>
                     </div>
                 </div>
                 {productData.map((p, key) =>
@@ -92,7 +96,7 @@ function IncomeTable(props) {
                 <Pagination activeNumber={activePage} 
                             setActiveNumber={setActivePage}
                             dataLength={productDataLength}/>
-                            
+
             </IncomeTableContainer>
 
         )
