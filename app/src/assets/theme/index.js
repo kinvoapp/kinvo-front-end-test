@@ -15,8 +15,8 @@ export default createGlobalStyle`
         --font-family-primary: Montserrat, sans-serif;
         --font-family-secondary: Helveltica Neue, sans-serif;
 
-        --box-shadow-large: 0x 3px 10px 20px rgba(112, 123, 129, 0.1);
-        --box-shadow-medium: 0x 2px 10px 20px rgba(0, 0, 0, 0.05);
+        --box-shadow-large: 0px 3px 10px 5px rgba(112, 123, 129, 0.1);
+        --box-shadow-medium: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
 
         --border-radius-large: 12px;
         --border-radius-medium: 10px;

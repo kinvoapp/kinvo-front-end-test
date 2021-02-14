@@ -1,0 +1,1 @@
+export {default as KinvoPremium} from './kinvo_premium.svg'

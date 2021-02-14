@@ -54,7 +54,7 @@ export const Container = styled.div`
  
 
     img {
-        height: 18px;
+       max-height: 18px;
     }
 
     &:hover {
