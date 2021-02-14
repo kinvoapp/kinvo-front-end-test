@@ -1,6 +1,7 @@
 import React from 'react'
 import { IncomeTableContainer } from './styles'
 import { grayIcons } from '../../../assets/icons'
+import { TextInput } from '../../../shared_components'
 
 function IncomeTable({ productData }) {
     if (productData) {
@@ -8,6 +9,9 @@ function IncomeTable({ productData }) {
             <IncomeTableContainer>
                 <div className='income_table_title'>
                     <h2>Minhas Rendas Fixas</h2>
+                    <div>
+                        <TextInput icon={'search'}/>
+                    </div>
                 </div>
                 {productData.map((p, key) =>
 
