@@ -11,6 +11,7 @@ export default createGlobalStyle`
         --color-light: #fff;
         --color-green: #38BFA0;
         --color-red: #AE1717;
+        --color-blue: #008DCB;
 
         --font-family-primary: Montserrat, sans-serif;
         --font-family-secondary: Helveltica Neue, sans-serif;

@@ -8,12 +8,15 @@ import IncomeTable from './income_table'
 function FixedIncome() {
 
     const [portfolioData, setPortfolioData] = useState()
+    const [productData, setProductData] = useState()
 
 
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
+
             if (res.data.success) {
                 setPortfolioData(res.data.data.snapshotByPortfolio)
+                setProductData(res.data.data.snapshotByProduct)
             }
         })
     }, [])
@@ -25,7 +28,7 @@ function FixedIncome() {
             <div className='content_container'>
                 <h1>Renda Fixa</h1>
                 <PortfolioDataContainer portfolioData={portfolioData}/>
-                <IncomeTable/>
+                <IncomeTable productData={productData}/>
             </div>
         </Container>
     )
