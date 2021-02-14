@@ -79,7 +79,7 @@ export const IncomeTableContainer = styled.div`
             margin: 0 20px;
             justify-content: space-between;
 
-            div {
+            .search_and_sorting {
                 display: flex;
                 align-items: center;
             }

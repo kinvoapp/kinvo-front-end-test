@@ -45,6 +45,7 @@ export const CONTAINER = styled.div`
     .dropdown_item_container {
         position: absolute;
         margin-top: 16px;
+        font-size: 12px;
         border: 1.5px solid var(--color-secondary);
         border-radius: var(--border-radius-medium);
         background: white;
@@ -90,18 +91,20 @@ export const CONTAINER = styled.div`
     }
 
     .dropdown_item {
-        min-height: 50px;
+        min-height: 40px;
         display: flex;
         align-items: center;
         padding-left: 18px;
-        font-size: 18px;
+        font-size: 14px;
         color: gray;
         cursor: pointer;
+
+        &:hover {
+            filter: brightness(50%);
+            transition: 0.3s;
+        }
     }
     
-    .dropdown_item:hover {
-        filter: brightness(90%);
-        transition: 0.3s;
-    }
+    
 
 `

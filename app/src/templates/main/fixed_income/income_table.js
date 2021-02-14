@@ -5,14 +5,30 @@ import { Dropdown, TextInput, Pagination } from '../../../shared_components'
 
 function IncomeTable(props) {
     const { productData, activePage, setActivePage, productDataLength,
-            search, setSearch } = props
+            search, setSearch, sortingProducts, setSortingProducts } = props
+    
+    const sortingOptions = [
+        {label: 'Titulo - Cres.', id: 'fixedIncome.name', order: 0, dataType: 'string'},
+        {label: 'Titulo - Decres.', id: 'fixedIncome.name', order: 1, dataType: 'string'},
+        {label: 'Data de Venc. - Cres.', id: 'due.daysUntilExpiration', order: 0, dataType: 'int'},
+        {label: 'Data de Venc. - Decres.', id: 'due.daysUntilExpiration', order: 1, dataType: 'int'},
+        {label: 'Valor Aplicado - Cres.', id: 'position.valueApplied', order: 0, dataType: 'int'},
+        {label: 'Valor Aplicado - Decres.', id: 'position.valueApplied', order: 1, dataType: 'int'},
+        {label: 'Rentabilidade - Cres.', id: 'position.profitability', order: 0, dataType: 'int'},
+        {label: 'Rentabilidade - Decres.', id: 'position.profitability', order: 1, dataType: 'int'},
+    ]
+    
     if (productData) {
         return (
             <IncomeTableContainer>
                 <div className='income_table_title'>
                     <h2>Minhas Rendas Fixas</h2>
-                    <div>
-                        <Dropdown styles={{marginRight: 20}} 
+                    <div className='search_and_sorting'>
+                        <Dropdown styles={{marginRight: 20}}
+                                  items={sortingOptions}
+                                  itemKey={'label'}
+                                  onChange={setSortingProducts}
+                                  value={sortingProducts} 
                                   placeholder={'Ordenar por'}/>
                         
                         <TextInput value={search} 
@@ -81,11 +97,11 @@ function IncomeTable(props) {
                             <div className='income_row_content'>
                                 <div className='income_row_colored'>
                                     <p>data venc.</p>
-                                    <p><span>15.05.2024</span></p>
+                                    <p><span>{p.due.date}</span></p>
                                 </div>
                                 <div className='income_row_colored'>
                                     <p>dias até venc.</p>
-                                    <p><span>5762</span></p>
+                                    <p><span>{p.due.daysUntilExpiration}</span></p>
                                 </div>
                             </div>
                         </div>
