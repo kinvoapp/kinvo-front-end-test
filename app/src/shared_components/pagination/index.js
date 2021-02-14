@@ -3,7 +3,7 @@ import {StyledPagination} from './styles'
 
 export default function PAGINATION(props) {
     
-    const { activeNumber, setActiveNumber, numberOfButtons = 4,
+    const { activeNumber, setActiveNumber, numberOfButtons = 2,
         dataLength = 1, itemsPerPage = 5 } = props
     const numberOfPages = Math.ceil(dataLength / itemsPerPage)
     const [buttonArray, setButtonArray] = useState([])

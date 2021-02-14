@@ -6,22 +6,28 @@ export const StyledPagination = styled.div`
     justify-content: center;
     margin: 20px 0;
     z-index: 1;
+    
+
+    ion-icon {
+        color: var(--color-icon-background);
+        font-size: 16px;
+    }
 
     button{
         display: flex;
         align-items: center;
         justify-content:center;
-        width: 30px;
-        height: 30px;
-        box-shadow: 0px 8px 16px 0px rgba(154,173,194,0.16);
-        border-radius: 8px;
+        width: 35px;
+        height: 35px;
+        box-shadow: var(--box-shadow-medium);
+        border-radius: 6px;
         margin: 1%;
         border: none;
         outline: none;
-
+        background: var(--color-light);
+        font-family: var(--font-family-primary);
         &:hover{
-            box-shadow: 0px 0px 16px 0px rgba(154,173,194,0.16);
-            -webkit-filter: brightness(95%);
+            box-shadow: 0px 0px 10px 0px var(--color-secondary);
             -webkit-transition: all 0.6s ease;
             -moz-transition: all 0.6s ease;
             -o-transition: all 0.6s ease;
@@ -30,8 +36,7 @@ export const StyledPagination = styled.div`
         }
     
         &:active {
-            box-shadow: 0px 0px 4px 0px rgba(154,173,194,0.16);
-            -webkit-filter: brightness(90%);
+            box-shadow: 0px 0px 4px 0px var(--color-secondary);
             -webkit-transition: all 0.4s ease;
             -moz-transition: all 0.4s ease;
             -o-transition: all 0.4s ease;
@@ -42,16 +47,15 @@ export const StyledPagination = styled.div`
 
     .pageNumber {
         background-color: white;
+        color: var(--color-icon-background);
+        border: 2px solid var(--color-secondary);
     }
 
     .pageNumberActive {
-        background-color: var(--color-primary-dark);
+        background-color: var(--color-icon-background);
         color: white;
+        font-weight: 600;
     }
 
-    .arrow{
-        background-color: #BE1144;
-        color: white;
-    }
 
 `
