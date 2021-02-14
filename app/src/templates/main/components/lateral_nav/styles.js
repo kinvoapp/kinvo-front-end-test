@@ -8,10 +8,19 @@ export const Container = styled.div`
     .lateral_nav {
         display: flex;
         flex-direction: column;
-        min-width: 227px;
+        width: 0px;
+        overflow: hidden;
         min-height: 100vh;
+        transition: 0.3s;
+        opacity: 0.3;
         background: var(--color-light);
 
+    }
+
+    .lateral_nav.active {
+        width: 227px;
+        opacity: 1;
+        transition: 0.3s;
     }
 
 

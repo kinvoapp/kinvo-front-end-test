@@ -4,6 +4,16 @@ import { KinvoPremium } from '../../../../assets/images'
 import { OutlinedIcon } from '../../../../shared_components'
 
 function TopNav() {
+
+    const toggleLateralNav = () => {
+        const lateralNav = document.getElementById('lateral_nav')
+        if(!lateralNav.classList.contains('active')){
+            lateralNav.classList.add('active')
+        } else {
+            lateralNav.classList.remove('active')
+        }
+    }
+
     return (
         <Container>
             <img src={KinvoPremium} alt='Kinvo Premium' />
@@ -40,8 +50,9 @@ function TopNav() {
                     </div>
                 </div>
                 <div className='valued_icon'>
-                    <OutlinedIcon className={'small_outlined_icon'}
+                    <OutlinedIcon  className={'small_outlined_icon'}
                         active={true}
+                        onClick={() => toggleLateralNav()}
                         icon='menu' />
                 </div>
             </div>

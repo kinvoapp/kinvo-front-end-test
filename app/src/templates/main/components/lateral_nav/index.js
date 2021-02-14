@@ -60,7 +60,7 @@ function LateralNav({history}){
     ]
     return (
         <Container>
-            <div className='lateral_nav'>
+            <div id='lateral_nav' className='lateral_nav active'>
                 <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items}/>
             </div>
         </Container>
