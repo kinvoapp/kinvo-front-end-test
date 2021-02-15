@@ -188,7 +188,7 @@ export const IncomeTableContainer = styled.div`
 export const RentabilityContainer = styled.div`
     display: flex;
     flex-direction: column;
-  
+    max-width: 100%;
     background: var(--color-light);
     padding:  20px;
     margin-bottom: 28px;

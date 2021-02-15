@@ -2,8 +2,10 @@ import React from 'react'
 import { Container } from './styles'
 import { Accordion } from '../../../../shared_components'
 import { withRouter } from 'react-router-dom'
+import {useWindowSize} from '../../../../hooks'
 
 function LateralNav({ history }) {
+    const windowSize = useWindowSize()
     const items = [
         {
             option: 'Resumo da Carreira',
@@ -70,7 +72,7 @@ function LateralNav({ history }) {
     return (
         <Container >
             <div onClick={() => closeNav()} id='lateral_nav_background'/>
-            <div id='lateral_nav' className='lateral_nav active'>
+            <div id='lateral_nav' className={windowSize.width > 650 ? 'lateral_nav active' : 'lateral_nav'}>
                 <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items} />
             </div>
         </Container>
