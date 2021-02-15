@@ -24,6 +24,7 @@ export default createGlobalStyle`
     width: 100%;
 
     background-color: #eef2f4;
+    font-family: 'Montserrat', sans-serif;
   }
 
   button {
