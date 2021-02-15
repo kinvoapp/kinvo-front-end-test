@@ -49,11 +49,13 @@ const smallCard = `
 export const Container = styled.div`
     display: flex;
     padding-top: 90px;
-    background: var(--color-secondary);
+
 
     .content_container {
         padding: 28px 20px 28px 28px;
         font-family: var(--font-family-primary);
+        background: var(--color-secondary);
+        flex: 1;
         h1 {
             font-size: 20px;
             color: var(--color-accent);
@@ -93,6 +95,7 @@ export const IncomeTableContainer = styled.div`
 
         .income_row {
             display: flex;
+            flex-wrap: wrap;
             min-height: 120px;
             justify-content: space-between;
             align-items: center;

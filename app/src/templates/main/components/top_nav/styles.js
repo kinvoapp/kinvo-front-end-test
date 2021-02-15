@@ -6,7 +6,13 @@ export const Container = styled.div`
     left: 0;
     z-index: 1000;
 
-    min-width: calc(100vw - 56px);
+    @media screen and (min-width: 421px){
+        min-width: calc(100vw - 56px);
+    }
+    @media screen and (max-width: 420px){
+        min-width: 100vw;
+    }
+ 
     min-height: 90px;
     padding: 0 28px;
 

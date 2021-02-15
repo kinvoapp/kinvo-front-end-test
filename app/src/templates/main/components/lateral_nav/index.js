@@ -1,16 +1,16 @@
 import React from 'react'
-import {Container} from './styles'
-import {Accordion} from '../../../../shared_components'
-import {withRouter} from 'react-router-dom'
+import { Container } from './styles'
+import { Accordion } from '../../../../shared_components'
+import { withRouter } from 'react-router-dom'
 
-function LateralNav({history}){
+function LateralNav({ history }) {
     const items = [
         {
             option: 'Resumo da Carreira',
             innerOptions: [],
             icon: 'gauge_graph',
             pathname: 'resumoDaCarreira',
-        }, 
+        },
         {
             option: 'Meus Produtos',
             innerOptions: [],
@@ -26,10 +26,10 @@ function LateralNav({history}){
         {
             option: 'Classes de Ativos',
             innerOptions: [
-                {name: 'Ação', pathname: 'acao'}, 
-                {name: 'Fundo', pathname: 'fundo'}, 
-                {name: 'Fundo Imobiliário', pathname: 'fundoImobiliario'},
-                {name: 'Fundo Renda Fixa', pathname: 'fundoRendaFixa'}],
+                { name: 'Ação', pathname: 'acao' },
+                { name: 'Fundo', pathname: 'fundo' },
+                { name: 'Fundo Imobiliário', pathname: 'fundoImobiliario' },
+                { name: 'Fundo Renda Fixa', pathname: 'fundoRendaFixa' }],
             icon: 'puzzle',
             pathname: 'classesDeAtivos',
         },
@@ -58,10 +58,20 @@ function LateralNav({history}){
             pathname: 'coberturaDoFGC',
         }
     ]
+
+    const closeNav = () => {
+        const lateralNav = document.getElementById('lateral_nav')
+        const lateralNavContainer = document.getElementById('lateral_nav_background')
+        lateralNav.classList.remove('active')
+        lateralNavContainer.classList.remove('active_lnav_background')
+        
+    }
+
     return (
-        <Container>
+        <Container >
+            <div onClick={() => closeNav()} id='lateral_nav_background'/>
             <div id='lateral_nav' className='lateral_nav active'>
-                <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items}/>
+                <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items} />
             </div>
         </Container>
     )
