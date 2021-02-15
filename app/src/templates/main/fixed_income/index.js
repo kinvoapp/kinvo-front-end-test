@@ -4,11 +4,15 @@ import { Container } from './styles'
 import fixedIncomeAPI from '../../../services/fixedIncome'
 import PortfolioDataContainer from './portfolio_data'
 import IncomeTable from './income_table'
+import RentabilityGraph from './rentability_graph'
+import moment from 'moment'
 
 function FixedIncome() {
 
     const [portfolioData, setPortfolioData] = useState()
     const [productData, setProductData] = useState()
+    const [rentabilityData, setRentabilityData] = useState()
+
     const [usableProductData, setUsableProductData] = useState()
     const [activeProductPage, setActiveProductPage] = useState('1')
     const [searchQuery, setSearchQuery] = useState('')
@@ -17,12 +21,25 @@ function FixedIncome() {
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
             if (res.data.success) {
+                console.log(res.data.data)
                 setPortfolioData(res.data.data.snapshotByPortfolio)
-                let auxProductData = res.data.data.snapshotByProduct
-                auxProductData[5].fixedIncome.name = 'CDD Teste de Produto'
-                auxProductData[5].due.daysUntilExpiration = 10
-                setProductData(auxProductData)
-                setUsableProductData(auxProductData)
+                setProductData(res.data.data.snapshotByProduct)
+                setUsableProductData(res.data.data.snapshotByProduct)
+
+
+                let auxRentabilityData = [...res.data.data.dailyEquityByPortfolioChartData]
+                let auxRentabilityDataX = auxRentabilityData.map((r) => {
+                    let date = new Date(r.dailyReferenceDate);
+                    date = moment(date).format('DD/MM/YYYY - hh:mm[h]')
+                    return date
+                })
+
+                let auxRentabilityDataY = auxRentabilityData.map((r) => {
+                    return r.correctedQuota
+                })
+
+                setRentabilityData({x: auxRentabilityDataX, y: auxRentabilityDataY})
+            
             }
         })
     }, [])
@@ -61,18 +78,18 @@ function FixedIncome() {
             }
             if (type.order === 0) {
                 if (type.dataType === 'int') { return auxA - auxB }
-                if (type.dataType === 'string') { 
+                if (type.dataType === 'string') {
                     auxB = auxB.toLowerCase()
                     auxA = auxA.toLowerCase()
-                    return (auxA < auxB) ? -1 : (auxA > auxB) ? 1 : 0; 
+                    return (auxA < auxB) ? -1 : (auxA > auxB) ? 1 : 0;
                 }
             } else {
-          
+
                 if (type.dataType === 'int') { return auxB - auxA }
-                if (type.dataType === 'string') { 
+                if (type.dataType === 'string') {
                     auxB = auxB.toLowerCase()
                     auxA = auxA.toLowerCase()
-                    return (auxA > auxB) ? -1 : (auxA < auxB) ? 1 : 0; 
+                    return (auxA > auxB) ? -1 : (auxA < auxB) ? 1 : 0;
                 }
             }
         })
@@ -87,6 +104,7 @@ function FixedIncome() {
             <div className='content_container'>
                 <h1>Renda Fixa</h1>
                 <PortfolioDataContainer portfolioData={portfolioData} />
+                <RentabilityGraph rentabilityData={rentabilityData}/>
                 <IncomeTable productData={getPaginatedProductData(activeProductPage)}
                     activePage={activeProductPage}
                     setActivePage={setActiveProductPage}
