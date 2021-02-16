@@ -17,11 +17,13 @@ export const Container = styled.div`
 
     .accordion_title {
         min-height: 65.5px;
-        min-width: 227px;
-        background: var(--color-light);
         padding: 0 15px;
+        min-width: calc(227px - 30px);
+        background: var(--color-light);
+     
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border-bottom: 1.5px solid var(--color-secondary);
 
         &:hover {
@@ -36,10 +38,17 @@ export const Container = styled.div`
         overflow: hidden;
         transition: 2s;
         cursor: pointer;
+
+
     }
 
     .accordion_title.active {
         background: var(--color-secondary-shaded);
+
+        .arrow_left {
+            transform: rotate(90deg);
+            transition: 0.3s;
+        }
     }
 
     .accordion_inner_option {
@@ -47,6 +56,13 @@ export const Container = styled.div`
         background: var(--color-light);
         border-bottom: 1.5px solid var(--color-secondary);
         color: var(--color-accent);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .arrow_left {
+            color: var(--color-primary);
+        }
 
         &:hover {
             filter: brightness(95%);
