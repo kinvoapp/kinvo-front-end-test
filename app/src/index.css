@@ -37,3 +37,28 @@ h1, h2, h3, h4, h5, h6, p {
     background: rgba(0,0,0, 0.16);
   }
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  background: #EDEDED;
+  border: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #F5F8F9;
+  
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
