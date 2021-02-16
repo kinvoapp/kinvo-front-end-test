@@ -15,7 +15,8 @@
 /* Pattern presentational properties */
 
 #gradient-0 stop {
-	stop-color: #7cb5ec;
+	stop-color: var(--color-orange);
+
 }
 #gradient-0 stop[offset="0"] {
 	stop-opacity: 1;
@@ -39,9 +40,13 @@
 }
 
 .highcharts-color-0 {
-    fill: var(--color-green);
-    stroke: var(--color-green);
+	fill: var(--color-purple);
+    stroke: var(--color-purple);
     stroke-width: 0px;
+}
+
+.highcharts-color-0 rect {
+	fill: var(--color-purple);
 }
 
 .highcharts-area {
@@ -51,7 +56,8 @@
 
 
 #gradient-2 stop {
-	stop-color: var(--color-accent);
+	stop-color: var(--color-torquoise);
+	
 }
 #gradient-2 stop[offset="0"] {
 	stop-opacity: 0.75;
@@ -64,8 +70,8 @@
 
 
 .highcharts-color-1 {
-    fill: transparent;
-    stroke: #7cb5ec;
+	fill: var(--color-orange);
+    stroke: var(--color-orange);
     stroke-width: 0px;
 }
 
@@ -73,6 +79,9 @@
     fill: url(#gradient-0);
 }
 
+.highcharts-color-1 rect {
+	fill: var(--color-orange);
+}
 
 .highcharts-data-table table {
     border-collapse: collapse;
@@ -80,7 +89,7 @@
 
 
 #gradient-3 stop {
-	stop-color: var(--color-green);
+	stop-color: var(--color-purple);
 }
 #gradient-3 stop[offset="0"] {
 	stop-opacity: 0.75;
@@ -90,11 +99,19 @@
 }
 
 .highcharts-color-2 {
-    fill: transparent;
-    stroke: var(--color-accent);
+	fill: var(--color-torquoise);
+    stroke: var(--color-tourquoise);
     stroke-width: 0px;
+}
+
+.highcharts-color-2 rect {
+	fill: var(--color-torquoise);
 }
 
 .highcharts-series-2 .highcharts-area {
     fill: url(#gradient-2);
+}
+
+text {
+	font-family: var(--font-family-primary);
 }

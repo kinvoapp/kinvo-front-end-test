@@ -1,7 +1,7 @@
 import React from 'react'
 import { IncomeTableContainer } from './styles'
-import { grayIcons } from '../../../assets/icons'
-import { Dropdown, TextInput, Pagination } from '../../../shared_components'
+import { grayIcons } from '../../../../assets/icons'
+import { Dropdown, TextInput, Pagination } from '../../../../shared_components'
 
 function IncomeTable(props) {
     const { productData, activePage, setActivePage, productDataLength,

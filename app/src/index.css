@@ -2,13 +2,18 @@
 
 body {
   margin: 0;
-
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, main {
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 0;
 }
 
 code {
@@ -27,7 +32,7 @@ h1, h2, h3, h4, h5, h6, p {
     top: 90px;
     left: 0;
     min-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     z-index: 2000;
     background: rgba(0,0,0, 0.16);
   }

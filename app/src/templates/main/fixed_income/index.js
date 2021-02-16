@@ -5,6 +5,7 @@ import fixedIncomeAPI from '../../../services/fixedIncome'
 import PortfolioDataContainer from './portfolio_data'
 import IncomeTable from './income_table'
 import RentabilityGraph from './rentability_graph'
+import WalletDivision from './wallet_division'
 import moment from 'moment'
 
 function FixedIncome() {
@@ -19,6 +20,7 @@ function FixedIncome() {
     const [sortingProducts, setSortingProducts] = useState('')
 
     const [walletDataByType, setWalletDataByType] = useState()
+    const [walletDataByTitle, setWalletDataByTitle] = useState()
 
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
@@ -28,6 +30,7 @@ function FixedIncome() {
                 setProductData(res.data.data.snapshotByProduct)
                 setUsableProductData(res.data.data.snapshotByProduct)
                 formatWalletDivisionByType([...res.data.data.snapshotByProduct])
+                formatWalletDivisionByTitle([...res.data.data.snapshotByProduct])
                 formatRentabilityData([...res.data.data.dailyEquityByPortfolioChartData])
             }
         })
@@ -40,6 +43,23 @@ function FixedIncome() {
     }
     const getWalletTypeColor = (type) => {
         return walletColors[type.toLowerCase()]
+    }
+
+    const formatWalletDivisionByTitle = (auxProductData) => {
+        let types = auxProductData.map((d) => d.fixedIncome.name)
+        types = new Set(types)
+
+        let series = {}
+        for(let type of types){
+            let sum = 0
+            auxProductData.map(d => {
+                if(d.fixedIncome.name === type) {
+                    sum += d.position.equity
+                }
+            })
+            series[type] = {name: type, y: sum, name: type} 
+        }
+        setWalletDataByTitle(Object.keys(series).map((s) => series[s])) 
     }
 
     const formatWalletDivisionByType = (auxProductData) => {
@@ -168,7 +188,7 @@ function FixedIncome() {
                     productDataLength={usableProductData ? usableProductData.length : 0}
                     sortingProducts={sortingProducts}
                     setSortingProducts={handleSortingProducts} />
-     
+                <WalletDivision walletDataByType={walletDataByType} walletDataByTitle={walletDataByTitle}/>
             </div>
         </Container>
     )
