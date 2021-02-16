@@ -39,14 +39,14 @@
 }
 
 .highcharts-color-0 {
-    fill: transparent;
-    stroke: var(--color-accent);
+    fill: var(--color-green);
+    stroke: var(--color-green);
     stroke-width: 0px;
 }
 
 .highcharts-area {
 	fill-opacity: 1;
-	fill: url(#gradient-2);
+	fill: url(#gradient-3);
 }
 
 
@@ -59,6 +59,8 @@
 #gradient-2 stop[offset="1"] {
 	stop-opacity: 0;
 }
+
+
 
 
 .highcharts-color-1 {
@@ -74,4 +76,25 @@
 
 .highcharts-data-table table {
     border-collapse: collapse;
+}
+
+
+#gradient-3 stop {
+	stop-color: var(--color-green);
+}
+#gradient-3 stop[offset="0"] {
+	stop-opacity: 0.75;
+}
+#gradient-3 stop[offset="1"] {
+	stop-opacity: 0;
+}
+
+.highcharts-color-2 {
+    fill: transparent;
+    stroke: var(--color-accent);
+    stroke-width: 0px;
+}
+
+.highcharts-series-2 .highcharts-area {
+    fill: url(#gradient-2);
 }

@@ -91,11 +91,18 @@ function RentabilityGraph({rentabilityData}) {
         },  
         series: [{
             data: [1, 4, 3, 5, 6, 12,4,6,3,7],
+            name: 'John'
         }, {
             data: [2, 4, 1, 4, 4,  4, 3, 5, 6,8],
         }],
   
     });
+
+    useEffect(() => {
+        if(rentabilityData){
+            setOptions((o) => {return {...o, ...rentabilityData}})
+        }
+    }, [rentabilityData])
 
     return (
         <RentabilityContainer>

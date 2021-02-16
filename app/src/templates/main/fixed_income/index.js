@@ -28,18 +28,44 @@ function FixedIncome() {
 
 
                 let auxRentabilityData = [...res.data.data.dailyEquityByPortfolioChartData]
-                let auxRentabilityDataX = auxRentabilityData.map((r) => {
-                    let date = new Date(r.dailyReferenceDate);
-                    date = moment(date).format('DD/MM/YYYY - hh:mm[h]')
-                    return date
+                let allXAxis = auxRentabilityData.map((a) => a.dailyReferenceDate)
+                let portfolioIds = auxRentabilityData.map((d) => d.portfolioProductId)
+                portfolioIds = new Set(portfolioIds)
+                let series = {}
+
+                for (let portfolio of portfolioIds) {
+                    let auxPortfolioData = auxRentabilityData.filter((d) => d.portfolioProductId === portfolio)
+                    let name = auxPortfolioData[0].productName
+                    let auxObj = {}
+                    auxPortfolioData.map((r) => {
+
+                        auxObj[r.dailyReferenceDate] = r.correctedQuota
+                    })
+                    allXAxis.map((p) => {
+                        if (!auxObj[p]) {
+                            auxObj[p] = null
+                        }
+                    })
+                    series[portfolio] = {
+                        data: Object.keys(auxObj).map((o) => auxObj[o]),
+                        name: name,
+                    }
+
+
+
+                }
+
+                setRentabilityData({
+                    series: Object.keys(series).map((s) => series[s]),
+                    xAxis: {
+                        categories: allXAxis.map((d) => {
+                            let date = new Date(d);
+                            date = moment(date).format('DD/MM  hh:mm[h]')
+                            return date
+                        })
+                    }
                 })
 
-                let auxRentabilityDataY = auxRentabilityData.map((r) => {
-                    return r.correctedQuota
-                })
-
-                setRentabilityData({x: auxRentabilityDataX, y: auxRentabilityDataY})
-            
             }
         })
     }, [])
@@ -104,7 +130,7 @@ function FixedIncome() {
             <div className='content_container'>
                 <h1>Renda Fixa</h1>
                 <PortfolioDataContainer portfolioData={portfolioData} />
-                <RentabilityGraph rentabilityData={rentabilityData}/>
+                <RentabilityGraph rentabilityData={rentabilityData} />
                 <IncomeTable productData={getPaginatedProductData(activeProductPage)}
                     activePage={activeProductPage}
                     setActivePage={setActiveProductPage}
