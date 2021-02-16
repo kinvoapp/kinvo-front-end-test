@@ -179,7 +179,7 @@ export const IncomeTableContainer = styled.div`
                 font-size: 12px;
             }
         }
-
+        
 `
 export const RentabilityContainer = styled.div`
     display: flex;

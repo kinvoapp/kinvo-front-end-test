@@ -18,6 +18,8 @@ function FixedIncome() {
     const [searchQuery, setSearchQuery] = useState('')
     const [sortingProducts, setSortingProducts] = useState('')
 
+    const [walletDataByType, setWalletDataByType] = useState()
+
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
             if (res.data.success) {
@@ -25,50 +27,77 @@ function FixedIncome() {
                 setPortfolioData(res.data.data.snapshotByPortfolio)
                 setProductData(res.data.data.snapshotByProduct)
                 setUsableProductData(res.data.data.snapshotByProduct)
-
-
-                let auxRentabilityData = [...res.data.data.dailyEquityByPortfolioChartData]
-                let allXAxis = auxRentabilityData.map((a) => a.dailyReferenceDate)
-                let portfolioIds = auxRentabilityData.map((d) => d.portfolioProductId)
-                portfolioIds = new Set(portfolioIds)
-                let series = {}
-
-                for (let portfolio of portfolioIds) {
-                    let auxPortfolioData = auxRentabilityData.filter((d) => d.portfolioProductId === portfolio)
-                    let name = auxPortfolioData[0].productName
-                    let auxObj = {}
-                    auxPortfolioData.map((r) => {
-
-                        auxObj[r.dailyReferenceDate] = r.correctedQuota
-                    })
-                    allXAxis.map((p) => {
-                        if (!auxObj[p]) {
-                            auxObj[p] = null
-                        }
-                    })
-                    series[portfolio] = {
-                        data: Object.keys(auxObj).map((o) => auxObj[o]),
-                        name: name,
-                    }
-
-
-
-                }
-
-                setRentabilityData({
-                    series: Object.keys(series).map((s) => series[s]),
-                    xAxis: {
-                        categories: allXAxis.map((d) => {
-                            let date = new Date(d);
-                            date = moment(date).format('DD/MM  hh:mm[h]')
-                            return date
-                        })
-                    }
-                })
-
+                formatWalletDivisionByType([...res.data.data.snapshotByProduct])
+                formatRentabilityData([...res.data.data.dailyEquityByPortfolioChartData])
             }
         })
     }, [])
+
+    const walletColors = {
+        'tesouro direto': 'var(--color-purple)',
+        'renda fixa pré': 'var(--color-orange)',
+        'renda fixa pós': 'var(--color-torquoise)' 
+    }
+    const getWalletTypeColor = (type) => {
+        return walletColors[type.toLowerCase()]
+    }
+
+    const formatWalletDivisionByType = (auxProductData) => {
+        let types = auxProductData.map((d) => d.fixedIncome.bondType)
+        types = new Set(types)
+
+        let series = {}
+        for(let type of types){
+            let sum = 0
+            auxProductData.map(d => {
+                if(d.fixedIncome.bondType === type) {
+                    sum += d.position.equity
+                }
+            })
+            series[type] = {y: sum, name: type, color: getWalletTypeColor(type.toLowerCase())} 
+        }
+        setWalletDataByType(Object.keys(series).map((s) => series[s]))
+    }
+
+    const formatRentabilityData = (auxRentabilityData) => {
+        let allXAxis = auxRentabilityData.map((a) => a.dailyReferenceDate)
+        let portfolioIds = auxRentabilityData.map((d) => d.portfolioProductId)
+        portfolioIds = new Set(portfolioIds)
+        let series = {}
+
+        for (let portfolio of portfolioIds) {
+            let auxPortfolioData = auxRentabilityData.filter((d) => d.portfolioProductId === portfolio)
+            let name = auxPortfolioData[0].productName
+            let auxObj = {}
+            auxPortfolioData.map((r) => {
+
+                auxObj[r.dailyReferenceDate] = r.correctedQuota
+            })
+            allXAxis.map((p) => {
+                if (!auxObj[p]) {
+                    auxObj[p] = null
+                }
+            })
+            series[portfolio] = {
+                data: Object.keys(auxObj).map((o) => auxObj[o]),
+                name: name,
+            }
+
+
+
+        }
+
+        setRentabilityData({
+            series: Object.keys(series).map((s) => series[s]),
+            xAxis: {
+                categories: allXAxis.map((d) => {
+                    let date = new Date(d);
+                    date = moment(date).format('DD/MM  hh:mm[h]')
+                    return date
+                })
+            }
+        })
+    }
 
     const getPaginatedProductData = (page) => {
         if (usableProductData) {
@@ -139,6 +168,7 @@ function FixedIncome() {
                     productDataLength={usableProductData ? usableProductData.length : 0}
                     sortingProducts={sortingProducts}
                     setSortingProducts={handleSortingProducts} />
+     
             </div>
         </Container>
     )
