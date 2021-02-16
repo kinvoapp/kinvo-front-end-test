@@ -71,7 +71,7 @@ function LateralNav({ history }) {
 
     return (
         <Container >
-            <div onClick={() => closeNav()} id='lateral_nav_background'/>
+            <div  className={windowSize.width > 650 && 'active'} onClick={() => closeNav()} id='lateral_nav_background'/>
             <div id='lateral_nav' className={windowSize.width > 650 ? 'lateral_nav active' : 'lateral_nav'}>
                 <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items} />
             </div>
