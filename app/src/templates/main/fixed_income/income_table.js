@@ -17,6 +17,14 @@ function IncomeTable(props) {
         {label: 'Rentabilidade - Cres.', id: 'position.profitability', order: 0, dataType: 'int'},
         {label: 'Rentabilidade - Decres.', id: 'position.profitability', order: 1, dataType: 'int'},
     ]
+    const walletColors = {
+        'tesouro direto': 'var(--color-purple)',
+        'renda fixa pré': 'var(--color-orange)',
+        'renda fixa pós': 'var(--color-torquoise)' 
+    }
+    const getWalletTypeColor = (type) => {
+        return walletColors[type.toLowerCase()]
+    }
     
     if (productData) {
         return (
@@ -51,7 +59,7 @@ function IncomeTable(props) {
                                 </div>
                                 <div className='income_row_colored'>
                                     <p>classe</p>
-                                    <p><span>{p.fixedIncome.bondType}</span></p>
+                                    <p><span style={{color: getWalletTypeColor(p.fixedIncome.bondType)}}>{p.fixedIncome.bondType}</span></p>
                                 </div>
                             </div>
                         </div>

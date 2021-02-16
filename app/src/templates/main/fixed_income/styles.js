@@ -120,10 +120,6 @@ export const IncomeTableContainer = styled.div`
 
             &:first-child {
                 flex: 2.5;
-
-                span {
-                    color: var(--color-accent);
-                }
             }
 
             &:nth-child(2) {
