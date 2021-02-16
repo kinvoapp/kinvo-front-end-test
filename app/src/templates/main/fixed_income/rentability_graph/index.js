@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { RentabilityContainer } from './styles'
 
-function RentabilityGraph({ rentabilityData }) {
-    const [options, setOptions] = useState({
+function RentabilityGraph({rentabilityData}) {
+    const options = {
         defs: {
             gradient0: {
                 tagName: 'linearGradient',
@@ -94,31 +94,27 @@ function RentabilityGraph({ rentabilityData }) {
             }
         },
         xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: []
         },
-        series: [{
-            data: [1, 4, 3, 5, 6, 12, 4, 6, 3, 7],
-            name: 'John'
-        }, {
-            data: [2, 4, 1, 4, 4, 4, 3, 5, 6, 8],
-        }],
+        series: [],
 
-    });
+    }
 
-    useEffect(() => {
-        if (rentabilityData) {
-            setOptions((o) => { return { ...o, ...rentabilityData } })
-        }
-    }, [rentabilityData])
+
 
     return (
         <RentabilityContainer>
             <div className='rentability_title'>
                 <h2>Rentabilidade dos Títulos</h2>
             </div>
-            <HighchartsReact highcharts={Highcharts} options={options} />
+            <HighchartsReact highcharts={Highcharts} options={{ ...options, ...rentabilityData }} />
         </RentabilityContainer>
     )
+
 }
+
+
+
+
 
 export default RentabilityGraph
