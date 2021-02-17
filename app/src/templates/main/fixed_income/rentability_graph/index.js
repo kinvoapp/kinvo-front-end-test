@@ -2,8 +2,10 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { RentabilityContainer } from './styles'
+import {useWindowSize} from '../../../../hooks'
 
 function RentabilityGraph({ rentabilityData }) {
+    const windowSize = useWindowSize()
     const options = {
         defs: {
             gradient0: {
@@ -76,7 +78,8 @@ function RentabilityGraph({ rentabilityData }) {
         },
         chart: {
             styledMode: true,
-            type: 'areaspline'
+            type: 'areaspline',
+            width: windowSize.width > 650 ? (windowSize.width * 0.9) - 247 :  windowSize.width * 0.8,
 
         },
         title: {

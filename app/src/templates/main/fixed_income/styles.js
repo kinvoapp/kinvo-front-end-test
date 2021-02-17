@@ -50,7 +50,6 @@ export const Container = styled.div`
     display: flex;
     padding-top: 90px;
 
-
     .content_container {
         padding: 28px 20px 28px 28px;
         max-width: calc(100% - 48px);
