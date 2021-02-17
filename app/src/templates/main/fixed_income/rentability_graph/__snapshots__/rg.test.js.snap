@@ -2217,6 +2217,7 @@ exports[`Rentability graph loads data properly 1`] = `
         "chart": Object {
           "styledMode": true,
           "type": "areaspline",
+          "width": 674.6,
         },
         "credits": Object {
           "enabled": false,
