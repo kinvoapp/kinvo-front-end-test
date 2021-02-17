@@ -6,11 +6,11 @@ export const HeaderContainer = styled.header`
   background-color: #ffffff;
   display: flex;
   padding: 30px 0;
+  justify-content: space-between;
 `;
 
 export const TitleImg = styled.img`
   margin-left: 30px;
-  margin-right: 360px;
   cursor: pointer;
 `;
 
@@ -46,4 +46,8 @@ export const ValueCardHeader = styled.span`
 export const MenuIconHeader = styled.img`
   margin-right: 50px;
   cursor: pointer;
+`;
+
+export const HeaderSubContainer = styled.div`
+  display: flex;
 `;

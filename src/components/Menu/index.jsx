@@ -1,66 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+import PurpleBulletIcon from '../../assets/side-menu/purple-bullet.svg';
 import ArrowRightIcon from '../../assets/side-menu/arrow-right.svg';
-import ResumoCarteiraIcon from '../../assets/side-menu/resumo-carteira.svg';
-import MeusProdutosIcon from '../../assets/side-menu/meus-produtos.svg';
-import MeusProventosIcon from '../../assets/side-menu/meus-proventos.svg';
-import ClasseDeAtivosIcon from '../../assets/side-menu/classe-ativos.svg';
-import RentabilidadeRealIcon from '../../assets/side-menu/rentabilidade-real.svg';
-import ProjecaoCarteiraIcon from '../../assets/side-menu/projecao-carteira.svg';
-import RiscoRetornoIcon from '../../assets/side-menu/risco-retorno.svg';
-import CoberturaFgcIcon from '../../assets/side-menu/cobertura-fgc.svg';
 
-import { MenuContainer, MenuUl, NavBar, MenuOption, MenuIcon, MenuOptionDescription, MenuDropdownIcon } from './styles';
+import OptionsList from '../../utils/data/MenuOptionsList';
 
-// TODO: Transformar MenuOption em um componente isolado.
-// TODO: Cada opção do menu pode ser uma posição de um array com as propriedades necessárias.
+import {
+  MenuContainer,
+  NavBar,
+  MenuLink,
+  MenuIcon,
+  MenuDescription,
+  MenuDropdownIcon,
+  MenuContent,
+  MenuSubContent,
+  SubMenuContent,
+  SubMenuSubContent,
+  SubMenuOption,
+  SubMenuOptionDescription,
+} from './styles';
 
 function Menu() {
+  const [menuOptions, setMenuOptions] = useState([]);
+
+  useEffect(() => {
+    setMenuOptions([...OptionsList]);
+  }, []);
+
   return (
     <MenuContainer>
       <NavBar>
-        <MenuUl>
-          <MenuOption>
-            <MenuIcon src={ResumoCarteiraIcon} alt="Resumo Carteira Icone" />
-            <MenuOptionDescription>Resumo Da Carteira</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={MeusProdutosIcon} alt="Meus Produtos Icone" />
-            <MenuOptionDescription>Meus Produtos</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={MeusProventosIcon} alt="Meus Proventos Icone" />
-            <MenuOptionDescription>Meus Proventos</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={ClasseDeAtivosIcon} alt="Classe De Ativos Icone" />
-            <MenuOptionDescription>Classe De Ativos</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={RentabilidadeRealIcon} alt="Rentabilidade Real Icone" />
-            <MenuOptionDescription>Rentabilidade Real</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={ProjecaoCarteiraIcon} alt="Projeção Da Carteira Icone" />
-            <MenuOptionDescription>Projeção Da Carteira</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={RiscoRetornoIcon} alt="Risco Retorno Icone" />
-            <MenuOptionDescription>Risco x Retorno</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-          <MenuOption>
-            <MenuIcon src={CoberturaFgcIcon} alt="Cobertura FGC Icone" />
-            <MenuOptionDescription>Cobertura Do FGC</MenuOptionDescription>
-            <MenuDropdownIcon src={ArrowRightIcon} alt="Lista Opções" />
-          </MenuOption>
-        </MenuUl>
+        {menuOptions.map(menuOption => (
+          <MenuLink key={menuOption.Id}>
+            <MenuContent>
+              <MenuSubContent>
+                <MenuIcon src={menuOption.Icon} alt={menuOption.Description} />
+                <MenuDescription>{menuOption.Description}</MenuDescription>
+              </MenuSubContent>
+              <MenuDropdownIcon src={ArrowRightIcon} alt="Listar Opções" />
+            </MenuContent>
+            {menuOption.SubMenu && (
+              <SubMenuContent>
+                {menuOption.SubMenu.map(submenu => (
+                  <SubMenuOption key={submenu.Description}>
+                    <SubMenuSubContent>
+                      <MenuIcon src={PurpleBulletIcon} alt={submenu.Description} />
+                      <SubMenuOptionDescription>{submenu.Description}</SubMenuOptionDescription>
+                    </SubMenuSubContent>
+                    <MenuDropdownIcon src={ArrowRightIcon} alt="Listar Opções" />
+                  </SubMenuOption>
+                ))}
+              </SubMenuContent>
+            )}
+          </MenuLink>
+        ))}
       </NavBar>
     </MenuContainer>
   );

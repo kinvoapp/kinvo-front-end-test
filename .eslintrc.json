@@ -38,6 +38,9 @@
     "react/prop-types": "off",
     "no-unused-expressions": "off",
     "react/no-array-index-key": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-plusplus": "off",
+    "no-restricted-globals": "off",
+    "no-unused-vars"
   }
 }

@@ -17,9 +17,6 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
-    max-height: 100vh;
-    max-width: 100vw;
-
     height: 100%;
     width: 100%;
 
@@ -29,5 +26,17 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  .dropdown-style {
+    width: 220px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #D6D9DD;
+    margin-right: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #707B81;
   }
 `;
