@@ -35,6 +35,16 @@ A aplicação renderiza as rotas (App.js -> config/routes), que por sua vez é r
 Cada componente que depende de uma estilização extensa possui o seu diretório, contendo seu conteúdo funcional no index.js e seus estilos em styles.js.
 
 
+## 1,2,3 Testando...
+
+Esta aplicação possui apenas dois testes simples utilizando as bibliotecas Jest e Enzyme.
+Para verificar os testes, assegure-se de instalar as seguintes dependências:
+
+- npm i --save-dev enzyme enzyme-to-json @wojtekmaj/enzyme-adapter-react-17
+- npm i --save-dev jest babel-jest
+
+Para testar:
+- npm test
 
 ## Licenças/Créditos
 - Ion-icons
