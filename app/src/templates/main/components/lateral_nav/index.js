@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from './styles'
 import { Accordion } from '../../../../shared_components'
 import { withRouter } from 'react-router-dom'
-import {useWindowSize} from '../../../../hooks'
+import { useWindowSize } from '../../../../hooks'
 
 function LateralNav({ history }) {
     const windowSize = useWindowSize()
@@ -66,12 +66,12 @@ function LateralNav({ history }) {
         const lateralNavContainer = document.getElementById('lateral_nav_background')
         lateralNav.classList.remove('active')
         lateralNavContainer.classList.remove('active_lnav_background')
-        
+
     }
 
     return (
         <Container >
-            <div  className={windowSize.width > 650 && 'active'} onClick={() => closeNav()} id='lateral_nav_background'/>
+            <div className={windowSize.width > 650 && 'active'} onClick={() => closeNav()} id='lateral_nav_background' />
             <div id='lateral_nav' className={windowSize.width > 650 ? 'lateral_nav active' : 'lateral_nav'}>
                 <Accordion onChange={(a, b) => history.push(`/${a}/${b}`)} options={items} />
             </div>

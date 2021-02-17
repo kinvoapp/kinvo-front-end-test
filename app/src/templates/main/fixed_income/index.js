@@ -7,7 +7,7 @@ import IncomeTable from './income_table'
 import RentabilityGraph from './rentability_graph'
 import WalletDivision from './wallet_division'
 import moment from 'moment'
-import {getWalletTypeColor} from '../../../utils/helpers'
+import { getWalletTypeColor } from '../../../utils/helpers'
 
 function FixedIncome() {
 

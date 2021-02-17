@@ -6,8 +6,6 @@ export const Container = styled.div`
     left: 0;
     z-index: 1000;
     min-width: calc(100vw - 56px);
-
- 
     min-height: 90px;
     padding: 0 28px;
 

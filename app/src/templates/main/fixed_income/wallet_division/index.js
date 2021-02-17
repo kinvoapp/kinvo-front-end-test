@@ -61,16 +61,16 @@ function WalletDivision({ walletDataByType, walletDataByTitle }) {
 
                 </div>
             }
-           {walletDataByTitle &&
-            <div className='graph_container'>
-                <div className='graph_title'>
-                    <h2>Divisão de Carteira por Título</h2>
-                </div>
-                <div className='graph_data'>
-                    <HighchartsReact highcharts={Highcharts} options={{ ...options, series: [{ ...options.series[0], data: [...walletDataByTitle] }] }} />
-                </div>
+            {walletDataByTitle &&
+                <div className='graph_container'>
+                    <div className='graph_title'>
+                        <h2>Divisão de Carteira por Título</h2>
+                    </div>
+                    <div className='graph_data'>
+                        <HighchartsReact highcharts={Highcharts} options={{ ...options, series: [{ ...options.series[0], data: [...walletDataByTitle] }] }} />
+                    </div>
 
-            </div>}
+                </div>}
         </Container >
     )
 }

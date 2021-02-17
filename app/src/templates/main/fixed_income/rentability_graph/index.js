@@ -3,7 +3,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { RentabilityContainer } from './styles'
 
-function RentabilityGraph({rentabilityData}) {
+function RentabilityGraph({ rentabilityData }) {
     const options = {
         defs: {
             gradient0: {
