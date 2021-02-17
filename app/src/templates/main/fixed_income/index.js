@@ -7,6 +7,7 @@ import IncomeTable from './income_table'
 import RentabilityGraph from './rentability_graph'
 import WalletDivision from './wallet_division'
 import moment from 'moment'
+import {getWalletTypeColor} from '../../../utils/helpers'
 
 function FixedIncome() {
 
@@ -25,7 +26,6 @@ function FixedIncome() {
     useEffect(() => {
         fixedIncomeAPI.getFixedIncomeData().then((res) => {
             if (res.data.success) {
-                console.log(res.data.data)
                 setPortfolioData(res.data.data.snapshotByPortfolio)
                 setProductData(res.data.data.snapshotByProduct)
                 setUsableProductData(res.data.data.snapshotByProduct)
@@ -36,30 +36,23 @@ function FixedIncome() {
         })
     }, [])
 
-    const walletColors = {
-        'tesouro direto': 'var(--color-purple)',
-        'renda fixa pré': 'var(--color-orange)',
-        'renda fixa pós': 'var(--color-torquoise)' 
-    }
-    const getWalletTypeColor = (type) => {
-        return walletColors[type.toLowerCase()]
-    }
+
 
     const formatWalletDivisionByTitle = (auxProductData) => {
         let types = auxProductData.map((d) => d.fixedIncome.name)
         types = new Set(types)
 
         let series = {}
-        for(let type of types){
+        for (let type of types) {
             let sum = 0
             auxProductData.map(d => {
-                if(d.fixedIncome.name === type) {
+                if (d.fixedIncome.name === type) {
                     sum += d.position.equity
                 }
             })
-            series[type] = {name: type, y: sum, name: type} 
+            series[type] = { name: type, y: sum, name: type }
         }
-        setWalletDataByTitle(Object.keys(series).map((s) => series[s])) 
+        setWalletDataByTitle(Object.keys(series).map((s) => series[s]))
     }
 
     const formatWalletDivisionByType = (auxProductData) => {
@@ -67,14 +60,14 @@ function FixedIncome() {
         types = new Set(types)
 
         let series = {}
-        for(let type of types){
+        for (let type of types) {
             let sum = 0
             auxProductData.map(d => {
-                if(d.fixedIncome.bondType === type) {
+                if (d.fixedIncome.bondType === type) {
                     sum += d.position.equity
                 }
             })
-            series[type] = {y: sum, name: type, color: getWalletTypeColor(type.toLowerCase())} 
+            series[type] = { y: sum, name: type, color: getWalletTypeColor(type.toLowerCase()) }
         }
         setWalletDataByType(Object.keys(series).map((s) => series[s]))
     }
@@ -178,17 +171,17 @@ function FixedIncome() {
             <LateralNav />
             <div className='content_container'>
                 <h1>Renda Fixa</h1>
-                <PortfolioDataContainer portfolioData={portfolioData} />
+                {portfolioData && <PortfolioDataContainer portfolioData={portfolioData} />}
                 <RentabilityGraph rentabilityData={rentabilityData} />
-                <IncomeTable productData={getPaginatedProductData(activeProductPage)}
+                {usableProductData && <IncomeTable productData={getPaginatedProductData(activeProductPage)}
                     activePage={activeProductPage}
                     setActivePage={setActiveProductPage}
                     search={searchQuery}
                     setSearch={searchProductData}
                     productDataLength={usableProductData ? usableProductData.length : 0}
                     sortingProducts={sortingProducts}
-                    setSortingProducts={handleSortingProducts} />
-                <WalletDivision walletDataByType={walletDataByType} walletDataByTitle={walletDataByTitle}/>
+                    setSortingProducts={handleSortingProducts} />}
+                <WalletDivision walletDataByType={walletDataByType} walletDataByTitle={walletDataByTitle} />
             </div>
         </Container>
     )

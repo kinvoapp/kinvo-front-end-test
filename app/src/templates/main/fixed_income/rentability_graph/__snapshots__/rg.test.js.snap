@@ -9,7 +9,7 @@ exports[`Rentability graph loads data properly 1`] = `
       Rentabilidade dos Títulos
     </h2>
   </div>
-  <Memo(ForwardRef)
+  <Memo([object Object])
     highcharts={
       Object {
         "AST": [Function],
