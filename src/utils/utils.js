@@ -28,22 +28,22 @@ const Utils = () => {
         return result;
       });
     },
-    removeDuplicatedItems: function (array) {
-      return array.filter(function (value, index) {
+    removeDuplicatedItems(array) {
+      return array.filter((value, index) => {
         return array.indexOf(value) === index;
       });
     },
-    sortBySearch: function (querySearch, arrayList, prop, subProp) {
-      var listResult = [];
+    sortBySearch(querySearch, arrayList, prop, subProp) {
+      const listResult = [];
 
-      arrayList.filter(function (product) {
+      arrayList.filter(product => {
         if (!isNaN(querySearch) && product[prop][subProp] === Number(querySearch)) listResult.push(product);
         if (product[prop][subProp].toLowerCase().includes(querySearch.toLowerCase())) listResult.push(product);
       });
 
-      if (querySearch !== "") return this.removeDuplicatedItems(listResult);
+      if (querySearch !== '') return this.removeDuplicatedItems(listResult);
       return arrayList;
-  },
+    },
   };
 };
 

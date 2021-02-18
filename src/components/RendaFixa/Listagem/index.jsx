@@ -66,7 +66,7 @@ function ListagemRendaFixa() {
     if (option === 'Data De Vencimento') sortedProducts = utils().sortListByDate(fixedIncomeProducts, 'due', 'date');
     if (option === 'Dias Até Vencimento') sortedProducts = utils().sortList(fixedIncomeProducts, 'due', 'daysUntilExpiration');
 
-    setFixedIncomeProducts(sortedProducts);
+    setFilteredProducts(sortedProducts);
   }, [sortOption]);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ function ListagemRendaFixa() {
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = fixedIncomeProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
   const goToNextPage = totalPages => {
@@ -89,9 +89,6 @@ function ListagemRendaFixa() {
     const newPage = currentPage - 1;
     if (newPage > 0) setCurrentPage(newPage);
   };
-  const choseListToShow = ()  => {
-    return filteredProducts.length !== 0 ? filteredProducts : fixedIncomeProducts;
-  }
 
   const sortDropdownOptions = [
     'Classe',
@@ -125,8 +122,8 @@ function ListagemRendaFixa() {
           </InputSearchContainer>
         </SearchContainer>
       </Header>
-      {filteredProducts &&
-        filteredProducts.map(({ fixedIncome, position, due }) => (
+      {currentProducts &&
+        currentProducts.map(({ fixedIncome, position, due }) => (
           <Content key={fixedIncome.portfolioProductId}>
             <CardTitle>
               <CardHeader>

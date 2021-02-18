@@ -41,6 +41,7 @@
     "no-console": "off",
     "no-plusplus": "off",
     "no-restricted-globals": "off",
-    "no-unused-vars"
+    "no-unused-vars": "off",
+    "array-callback-return": "off"
   }
 }
