@@ -1,0 +1,19 @@
+.logo{
+    max-width: 168px;
+}
+@media (max-width: 800px){
+    .logo {
+        max-width: 105px;
+    }
+}
+
+.TopMenu{
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    background: white;
+    display: flex;
+    
+    opacity: 1;
+}
