@@ -1,0 +1,8 @@
+.LeftMenu{
+    
+    left: 0;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    max-width: 225px;
+}

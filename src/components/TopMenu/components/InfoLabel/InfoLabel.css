@@ -1,0 +1,31 @@
+.InfoLabel{
+    display: flex;
+    margin-left: 40px;
+    
+}
+
+.iconLabel{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8px;
+    line-height: 19,75px;
+    color: #707B81;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0.45px;
+}
+
+h5{
+    margin: 0;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+}

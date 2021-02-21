@@ -1,0 +1,42 @@
+.iconLabel{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(218, 224, 227);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.MenuOption{
+    display: flex; 
+    border-bottom: 1px solid rgba(204, 207, 209, 0.35);
+    height: 67px;
+    
+}
+
+.MenuOptionLink{
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    padding: 15px;
+    display: grid;
+    color: rgb(112, 123, 129);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.arrow {
+
+    width: 6px;
+    height: 10px;
+    justify-self: flex-end;
+    transform: translateY(-50%);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

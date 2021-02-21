@@ -4,6 +4,7 @@
   text-align: center;
   background: #EEF2F4 0% 0% no-repeat padding-box;
   height: 100vh;
+
 }
 
 .App-logo {
@@ -26,3 +27,6 @@
   color: #61dafb;
 }
 
+ul{
+  margin: 0;
+}
