@@ -5,7 +5,7 @@ const Background = Styled.div`
     
     background-color: white;
     border-radius: 10px;
-    min-width: 100%
+    max-width: 100%
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -19,7 +19,8 @@ const Background = Styled.div`
     h2{
         font-family:'Montserrat';
         font-size:18px;
-        font-weight:normal;
+        color:#627179;
+        font-weight:medium;
     }
 `;
 

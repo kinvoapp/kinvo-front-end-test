@@ -5,8 +5,9 @@ import Styled from 'styled-components';
 import InfoLabel from './InfoLabel';
 import RentabilidadeDosTitulos from './components/RentabilidadeDosTitulos';
 import MinhasRendasFixas from './components/MinhaRendasFixas';
-
+import DivisaoDaCarteira from './components/DivisaoDaCarteira';
 import Container from '../../components/PageContainer';
+
 
 function RendaFixa(){
     return(
@@ -57,7 +58,9 @@ function RendaFixa(){
                     <RentabilidadeDosTitulos/>
 
                     <MinhasRendasFixas/>
-                    
+                 
+                    <DivisaoDaCarteira/>
+                                   
                 </Container>
                 
             </PageDefault>

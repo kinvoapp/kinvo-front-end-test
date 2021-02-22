@@ -6,7 +6,7 @@ const Container = Styled.div`
     display:flex;
     justify-content: space-around;
     width: 100%;
-    padding: 20px 30px 20px 0px;
+    padding: 20px 0px 20px 0px;
     box-sizing: border-box;
     border-bottom: 1px solid #EEF2F4;
 `;
@@ -33,12 +33,13 @@ const Card = Styled.div`
     p{
         margin:2px;
         text-align:left;
+        font-weight: bold;
     }
 `;
 
 const Value = Styled.h5`
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500; 
     color: ${props => props.color};
 `;

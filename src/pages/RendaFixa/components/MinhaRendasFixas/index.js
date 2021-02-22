@@ -5,6 +5,8 @@ import './MinhasRendasFixas.css';
 import LineList from './component/LineList';
 
 const Inputs = Styled.div`
+    font-family:'Montserrat';
+    
     display:flex;
     padding:15px 15px 0px;
     justify-content: space-around;
@@ -17,9 +19,12 @@ const Inputs = Styled.div`
         width:240px;
     }
     select{
+        color:#707B81;
         width: 155px;
     }
 `;
+
+
 
 function MinhasRendasFixas({props,data}){
 
@@ -41,6 +46,10 @@ function MinhasRendasFixas({props,data}){
                 <LineList></LineList>
                 <LineList></LineList>
                 <LineList></LineList>
+            </div>
+            <div className="footer">
+
+                PAGINAÇÃO
             </div>
         </Background>
     )
