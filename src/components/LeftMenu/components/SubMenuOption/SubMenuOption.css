@@ -1,0 +1,19 @@
+.expanded-option{
+    height: 0px;
+    overflow: visible;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F6F3F3;
+    
+}
+
+.expanded-option ul{
+    display: flex;
+    flex-direction: column;
+      margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0px;
+}

@@ -33,7 +33,9 @@ function TopMenu (props){
                     CARTEIRA
                 </InfoLabel>
 
-                <InfoLabel Logo={IconMenuExpand}> </InfoLabel>
+                <InfoLabel Logo={IconMenuExpand}>
+
+                </InfoLabel>
             </ul>
         </nav>
     );

@@ -1,4 +1,4 @@
-.iconLabel{
+.iconOption{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -17,26 +17,28 @@
 
 .MenuOptionLink{
     width: 100%;
-    padding: 15px;
     cursor: pointer;
-    padding: 15px;
-    display: grid;
     color: rgb(112, 123, 129);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
     font-size: 13px;
+    font-family: 'Montserrat';
     line-height: 16px;
     font-weight: 500;
 }
 
 .arrow {
-
-    width: 6px;
-    height: 10px;
-    justify-self: flex-end;
-    transform: translateY(-50%);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    width: 9px;
+    height: 15px;
+    position: relative;
+    justify-self: end;
 }
+
+.textOption{
+    margin-left: -30px;
+    text-align: left;
+    max-width: 33.3%;
+    display: flex;
+}
+

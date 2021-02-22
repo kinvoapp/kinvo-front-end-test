@@ -1,6 +1,8 @@
 import React from 'react';
 import './LeftMenu.css';
-import MenuOption from './components/MenuOption'
+import MenuOption from './components/MenuOption';
+import SubMenuOption from './components/SubMenuOption';
+
 import ResumoCarteira from '../../assets/icons/portfolio-summary-icon--white.svg';
 import MeusProdutos from '../../assets/icons/my-products-icon--white.svg';
 import MeusProventos from '../../assets/icons/proceeds-icon--white.svg';
@@ -12,6 +14,11 @@ import CoberturaFGC from '../../assets/icons/fgc-coverage-icon--white.svg';
 
 function LeftMenu(){
 
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('O item foi clicado',e);
+    }
+    let className = "expanded-option"
     return(
         <nav className="LeftMenu">
 
@@ -27,14 +34,15 @@ function LeftMenu(){
                 Meus
                 Proventos
             </MenuOption>
-            <MenuOption Logo={ClasseDeAtivos}>
+            <MenuOption onClick={handleClick} Logo={ClasseDeAtivos}>
                 Classe de Ativos
+                <SubMenuOption expanded={className}></SubMenuOption>
             </MenuOption>
             <MenuOption Logo={RentabiliadadeGeral}>
                 Rentabildiade Geral
             </MenuOption>
             <MenuOption Logo={ProjecaoCarteira}>
-                Projeção Da Carteira
+                Projeção da Carteira
             </MenuOption>
             <MenuOption Logo={RiscoXRetorno}>
                 Risco x Retorno
@@ -44,6 +52,7 @@ function LeftMenu(){
             </MenuOption>
 
         </nav>
+        
     )
 }
 

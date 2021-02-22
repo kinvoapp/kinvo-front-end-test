@@ -1,0 +1,18 @@
+.card-container{
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+   
+    align-items: center;
+    padding: 2px 20px 2px 10px;
+}
+
+.line{
+    background-color: #DAE0E3;
+    height: 42px;
+    width: 2px;
+    margin-right: 10px;
+}

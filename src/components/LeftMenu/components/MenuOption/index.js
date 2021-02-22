@@ -5,14 +5,17 @@ import Arrow from '../../../../assets/icons/right-arrow.svg'
 function MenuOption(props){
     return(
         <div className="MenuOption">
-            <a className="MenuOptionLink">
-                <div className="iconLabel">
-                    <img src={props.Logo} ></img>
+            <a className="MenuOptionLink" onClick={props.onClick}>
+                <div className="iconOption">
+                    <img src={props.Logo} height="20px" width="20px"></img>
+                </div>
+                <div className="textOption">
+                    {props.children}
                 </div>
                 
-                {props.children}
                 <img src={Arrow} className="arrow"></img>
             </a>
+            
         </div>
     );
 }
