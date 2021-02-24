@@ -26,8 +26,15 @@ const Inputs = Styled.div`
 
 
 
-function MinhasRendasFixas({props,data}){
+function MinhasRendasFixas(props){
 
+    //console.log(props.lista);
+    const snapshotByProduct = props.lista;
+
+    const listItems = snapshotByProduct.map( (product) => 
+    <LineList dados={product}></LineList> )
+    //console.log(snapshotByProduct);
+    
     return(
         <Background>
             <div className="header">
@@ -41,14 +48,11 @@ function MinhasRendasFixas({props,data}){
                 </Inputs>
             </div>
             <div className="Body">
-                <LineList></LineList>
-                <LineList></LineList>
-                <LineList></LineList>
-                <LineList></LineList>
-                <LineList></LineList>
+            
+                {/*props&&props.lista.forEach(element=>{<LineList data={element}></LineList>})*/} 
+                {listItems}
             </div>
             <div className="footer">
-
                 PAGINAÇÃO
             </div>
         </Background>

@@ -2,7 +2,7 @@ import React from 'react'
 import './InfoLabel.css';
 
 function InfoLabel(props){
-    console.log(props);
+    //console.log(props);
     
     return(
         <li className="InfoLabel">

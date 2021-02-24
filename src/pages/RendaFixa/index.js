@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 import PageDefault from '../../components/PageDefault';
 import Styled from 'styled-components';
@@ -8,8 +8,20 @@ import MinhasRendasFixas from './components/MinhaRendasFixas';
 import DivisaoDaCarteira from './components/DivisaoDaCarteira';
 import Container from '../../components/PageContainer';
 
+import api from '../../services/api';
 
 function RendaFixa(){
+
+    const [dados, setDados] = useState(0);
+
+    //fazendo requisição dos dados na API
+    api.get('/getFixedIncomeClassData')
+    .then((response) => {
+        setDados(response.data.data)
+    })
+    .catch((err) => console.log('Ops algo deu errado: '+ err));
+
+
     return(
         <>
             <PageDefault>
@@ -19,37 +31,37 @@ function RendaFixa(){
                     <ul>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="R$ 207.653,10">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.equity.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}>
                                 SALDO BRUTO
                             </InfoLabel>
                         </div>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="R$ 170.025,64">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.valueApplied.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}>
                                 VALOR APLICADO
                             </InfoLabel>
                         </div>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="R$ 37.638,46">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.equityProfit.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}>
                                 RESULTADO
                             </InfoLabel>
                         </div>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="25,08%">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.percentageProfit+'%'}>
                                 RENTABILIDADE
                             </InfoLabel>
                         </div>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="23,68%">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.indexerValue+'%'}>
                                 CDI
                             </InfoLabel>
                         </div>
                         <div className="card-container">
                             <div className="line"></div>
-                            <InfoLabel Value="320%">
+                            <InfoLabel Value={dados && dados.snapshotByPortfolio.percentageOverIndexer+'%'}>
                                 % SOBRE CDI
                             </InfoLabel>
                         </div>
@@ -57,7 +69,7 @@ function RendaFixa(){
                  
                     <RentabilidadeDosTitulos/>
 
-                    <MinhasRendasFixas/>
+                    <MinhasRendasFixas lista={dados && dados.snapshotByProduct}/>
                  
                     <DivisaoDaCarteira/>
                                    

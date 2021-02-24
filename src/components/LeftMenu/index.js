@@ -12,12 +12,10 @@ import ProjecaoCarteira from '../../assets/icons/portfolio-projection-icon--whit
 import RiscoXRetorno from '../../assets/icons/risk-and-return-icon--white.svg';
 import CoberturaFGC from '../../assets/icons/fgc-coverage-icon--white.svg';
 
+
+
 function LeftMenu(){
 
-    function handleClick(e) {
-        e.preventDefault();
-        console.log('O item foi clicado',e);
-    }
     let className = "expanded-option"
     return(
         <nav className="LeftMenu">
@@ -34,7 +32,7 @@ function LeftMenu(){
                 Meus
                 Proventos
             </MenuOption>
-            <MenuOption onClick={handleClick} Logo={ClasseDeAtivos}>
+            <MenuOption Logo={ClasseDeAtivos}>
                 Classe de Ativos
                 <SubMenuOption expanded={className}></SubMenuOption>
             </MenuOption>
