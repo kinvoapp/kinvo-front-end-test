@@ -4,9 +4,11 @@
     flex-direction: column;
     width: 100%;
     background-color: #F6F3F3;
-    
 }
 
+.hidden-menu{
+  overflow: hidden;
+}
 .expanded-option ul{
     display: flex;
     flex-direction: column;

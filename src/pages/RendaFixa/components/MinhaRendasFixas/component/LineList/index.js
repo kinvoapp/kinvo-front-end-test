@@ -39,7 +39,7 @@ const Card = Styled.div`
 
 const Value = Styled.h5`
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500; 
     color: ${props => props.color};
 `;
@@ -54,11 +54,11 @@ function LineList(props){
                 </div>
                 <div className="body">
                     <div className="description">
-                        Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)
+                        {props.dados.fixedIncome.name}
                     </div>
                     <div>
                         <p>CLASSE</p>
-                        <Value color="#8A51BA">Tesouro Direto</Value>
+                        <Value color="#8A51BA">{props.dados.fixedIncome.bondType}</Value>
                     </div>
                 </div>
             </Card>
@@ -69,27 +69,27 @@ function LineList(props){
                 <div className="body">
                     <div>
                         <p>VALOR INVES.</p>
-                        <Value color="#38BFA0">1.003,00</Value>
+                        <Value color="#38BFA0">{props.dados.position.valueApplied.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</Value>
                     </div>
                     <div>
                         <p>SALDO BRUTO</p>
-                        <Value color="#38BFA0">1.124,00</Value>
+                        <Value color="#38BFA0">{props.dados.position.equity.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</Value>
                     </div>
                     <div>
                         <p>RENT</p>
-                        <Value color="#38BFA0">48,55%</Value>
+                        <Value color="#38BFA0">{props.dados.position.profitability.toString().replace('.',',')+'%'}</Value>
                     </div>
                     <div>
                         <p>% DA CART.</p>
-                        <Value color="#38BFA0">5,33%</Value>
+                        <Value color="#38BFA0">{props.dados.position.portfolioPercentage.toString().replace('.',',')+'%'}</Value>
                     </div>
                     <div>
                         <p>CDI</p>
-                        <Value color="#38BFA0">1,24</Value>
+                        <Value color="#38BFA0">{props.dados.position.indexerValue.toString().replace('.',',')}</Value>
                     </div>
                     <div>
                         <p>SOBRE CDI</p>
-                        <Value color="#38BFA0">118</Value>
+                        <Value color="#38BFA0">{props.dados.position.percentageOverIndexer}</Value>
                     </div>
                 </div>
             </Card>
@@ -100,11 +100,11 @@ function LineList(props){
                 <div className="body">
                     <div>
                         <p>DATA VENC.</p>
-                        <Value color="#008DCB">15.05.2024</Value>
+                        <Value color="#008DCB">{props.dados.due.date}</Value>
                     </div>
                     <div>
                         <p>DIAS ATÉ VENC</p>
-                        <Value color="#008DCB">5762</Value>
+                        <Value color="#008DCB">{props.dados.due.daysUntilExpiration}</Value>
                     </div>
                 </div>
             </Card>

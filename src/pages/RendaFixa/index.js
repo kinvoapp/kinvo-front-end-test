@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './style.css';
 import PageDefault from '../../components/PageDefault';
 import Styled from 'styled-components';
@@ -15,11 +15,13 @@ function RendaFixa(){
     const [dados, setDados] = useState(0);
 
     //fazendo requisição dos dados na API
-    api.get('/getFixedIncomeClassData')
-    .then((response) => {
-        setDados(response.data.data)
-    })
-    .catch((err) => console.log('Ops algo deu errado: '+ err));
+    useEffect(() =>
+        api.get('/getFixedIncomeClassData')
+        .then((response) => {
+            setDados(response.data.data)
+        })
+        .catch((err) => console.log('Ops algo deu errado: '+ err))
+    ,[])
 
 
     return(
@@ -69,7 +71,7 @@ function RendaFixa(){
                  
                     <RentabilidadeDosTitulos/>
 
-                    <MinhasRendasFixas lista={dados && dados.snapshotByProduct}/>
+                    <MinhasRendasFixas lista={ dados && dados.snapshotByProduct}/>
                  
                     <DivisaoDaCarteira/>
                                    

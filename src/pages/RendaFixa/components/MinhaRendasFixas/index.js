@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Styled from 'styled-components';
 import Background from '../Background';
 import './MinhasRendasFixas.css';
 import LineList from './component/LineList';
+
 
 const Inputs = Styled.div`
     font-family:'Montserrat';
@@ -15,6 +16,9 @@ const Inputs = Styled.div`
         border-radius: 10px;
         border: 1px solid #D6D9DD;
     }
+    input:focus, select:focus{
+        outline: 0;
+    }
     input{
         width:240px;
     }
@@ -22,41 +26,43 @@ const Inputs = Styled.div`
         color:#707B81;
         width: 155px;
     }
+ 
 `;
 
 
+function MinhasRendasFixas(props) {
 
-function MinhasRendasFixas(props){
+	const snapshotByProduct = props && props.lista;
+	const [textFilter, setTextFilter] = useState('');
+	function filter(e) {
+		setTextFilter(e.target.value);
+	}
 
-    //console.log(props.lista);
-    const snapshotByProduct = props.lista;
-
-    const listItems = snapshotByProduct.map( (product) => 
-    <LineList dados={product}></LineList> )
-    //console.log(snapshotByProduct);
-    
-    return(
-        <Background>
-            <div className="header">
-                <h2>Minhas Rendas Fixas</h2>
-                <Inputs>
-                    <select>
-                        <option selected>Ordenar Por</option>
-                        <option>Rentabilidade</option>
-                    </select>
-                    <input type="text" ></input>
-                </Inputs>
+	return (
+		<Background>
+			<div className="header">
+				<h2>Minhas Rendas Fixas</h2>
+				<Inputs>
+					<select>
+						<option selected>Ordenar Por</option>
+						{snapshotByProduct && snapshotByProduct.map((produtos) =>
+							<option>{produtos.fixedIncome.name}</option>)
+						}
+					</select>
+					<input type="text" onKeyUp={filter}></input>
+				</Inputs>
+			</div>
+			<div className="Body">
+				{snapshotByProduct && snapshotByProduct.filter((produtos) => produtos.fixedIncome.name.includes(textFilter))
+					.map((produtos) =>
+						<LineList dados={produtos}></LineList>)
+				}
+			</div>
+			<div className="footer">
+				PAGINAÇÃO
             </div>
-            <div className="Body">
-            
-                {/*props&&props.lista.forEach(element=>{<LineList data={element}></LineList>})*/} 
-                {listItems}
-            </div>
-            <div className="footer">
-                PAGINAÇÃO
-            </div>
-        </Background>
-    )
+		</Background>
+	)
 }
 
 export default MinhasRendasFixas;

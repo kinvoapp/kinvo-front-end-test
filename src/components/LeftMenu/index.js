@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './LeftMenu.css';
 import MenuOption from './components/MenuOption';
-import SubMenuOption from './components/SubMenuOption';
 
 import ResumoCarteira from '../../assets/icons/portfolio-summary-icon--white.svg';
 import MeusProdutos from '../../assets/icons/my-products-icon--white.svg';
@@ -16,7 +15,12 @@ import CoberturaFGC from '../../assets/icons/fgc-coverage-icon--white.svg';
 
 function LeftMenu(){
 
-    let className = "expanded-option"
+    const [isActive, setActive] = useState("true");
+    
+    function expand(){
+        setActive(!isActive);
+    }
+    
     return(
         <nav className="LeftMenu">
 
@@ -34,7 +38,6 @@ function LeftMenu(){
             </MenuOption>
             <MenuOption Logo={ClasseDeAtivos}>
                 Classe de Ativos
-                <SubMenuOption expanded={className}></SubMenuOption>
             </MenuOption>
             <MenuOption Logo={RentabiliadadeGeral}>
                 Rentabildiade Geral
