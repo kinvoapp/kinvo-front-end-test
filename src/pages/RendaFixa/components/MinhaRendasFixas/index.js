@@ -38,7 +38,7 @@ function MinhasRendasFixas(props) {
 
 
 	const [snapshotByProduc,setSnapshotByProduct] = useState(props && props.lista);
-	const snapshotByProduct = props && props.lista;
+	const snapshotByProduct = props && props.lista ;
 	const [textFilter, setTextFilter] = useState('');
 	const [pageFilter, setPageFilter] = useState(1);
 	const [functionFilter, setFunctionFilter] = useState()
@@ -50,20 +50,20 @@ function MinhasRendasFixas(props) {
 			console.log(e.target.value)
 			switch (e.target.value) {
 				case '0':
-					setSnapshotByProduct(props && props.lista.sort())
+					setSnapshotByProduct(props && props.lista.map((produtos) => <LineList dados={produtos}></LineList>).sort())
 					break;
 				case '1':
-					setSnapshotByProduct(props && props.lista.sort((a,b) => a.fixedIncome.name.localeCompare(b.fixedIncome.name)))
-				case '2': 
+				case '2':
+
 				break;
 				case '3': 
-					setSnapshotByProduct(props && props.lista.sort((a,b) => Date.parse(b.due.date) - Date.parse(a.due.date)))
+				
 				break;
 				case '4':
-					setSnapshotByProduct(props && props.lista.sort((a,b) => a.position.valueApplied - b.position.valueApplied))
+					
 					break;
 				default:
-					setSnapshotByProduct(props && props.lista.sort())
+					setSnapshotByProduct(props && props.lista.map((produtos) => <LineList dados={produtos}></LineList>).sort())
 					break;
 			}
 

@@ -41,7 +41,10 @@ function Pagination(props){
   const Pages = [];
 
   for(let i = 1;i<=totalPages;i++){
+    i == 1 ?
+    Pages.push(<Button autofocus value={i} onClick={props.onChangePage}>{i}</Button>):
     Pages.push(<Button value={i} onClick={props.onChangePage}>{i}</Button>)
+    ;
   }
   return(
     <Ul>
