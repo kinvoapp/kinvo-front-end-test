@@ -1,44 +1,47 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true,
-    node: true,
-    jest: true
+    es2021: true
   },
   extends: [
     'plugin:react/recommended',
+    'airbnb',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'prettier/react'
+    'plugin:prettier/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 11,
+    ecmaVersion: 12,
     sourceType: 'module'
   },
   plugins: [
     'react',
-    'react-hooks',
     '@typescript-eslint',
+    'react-hooks',
     'prettier',
     'import-helpers'
   ],
   rules: {
     'prettier/prettier': 'error',
-    'no-console': 'warn',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
-    'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'import/prefer-default-export': 'off',
-    '@typescript-eslint/no-unused-vars': [
+    '@typescript-eslint/no-unused-vars': 'error',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'import/extensions': [
       'error',
-      { ignoreRestSiblings: true }
+      'ignorePackages',
+      {
+        ts: 'never',
+        tsx: 'never'
+      }
     ],
-    '@typescript-eslint/interface-name-prefix': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
@@ -57,8 +60,8 @@ module.exports = {
     ]
   },
   settings: {
-    react: {
-      version: 'detect'
+    'import/resolver': {
+      typescript: {}
     }
   }
 };
