@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'react/prop-types': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
