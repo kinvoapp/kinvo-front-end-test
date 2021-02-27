@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { DailyEquityByPortfolio } from '../../@types/DailyEquityByPortfolio';
 import { SnapshotByPortfolio } from '../../@types/SnapshotByPortfolio';
 import { SnapshotByProduct } from '../../@types/SnapshotByProduct';
-import { Indicator } from '../../components';
 import { api } from '../../services';
-import { Container, ContainerIndicators, Title } from './styles';
+import { Indicators } from './Indicators';
+import { Products } from './Products';
+import { Container, Title } from './styles';
 
 interface FixedIncomeFundState {
   snapshotByPortfolio: SnapshotByPortfolio;
@@ -55,40 +56,11 @@ export const FixedIncomeFund: React.FC = () => {
 
       <p>{`Dados: ${!!fixedIncomeData}`}</p>
       {fixedIncomeData && (
-        <ContainerIndicators>
-          <Indicator
-            title="Saldo Bruto"
-            value={fixedIncomeData.snapshotByPortfolio.equity}
-          />
+        <Indicators snapshotByPortfolio={fixedIncomeData.snapshotByPortfolio} />
+      )}
 
-          <Indicator
-            title="Valor Aplicado"
-            value={fixedIncomeData.snapshotByPortfolio.valueApplied}
-          />
-
-          <Indicator
-            title="Resultado"
-            value={fixedIncomeData.snapshotByPortfolio.equityProfit}
-          />
-
-          <Indicator
-            title="Rentabilidade"
-            value={fixedIncomeData.snapshotByPortfolio.percentageProfit}
-            percentage
-          />
-
-          <Indicator
-            title="CDI"
-            value={fixedIncomeData.snapshotByPortfolio.indexerValue}
-            percentage
-          />
-
-          <Indicator
-            title="% Sobre CDI"
-            value={fixedIncomeData.snapshotByPortfolio.percentageOverIndexer}
-            percentage
-          />
-        </ContainerIndicators>
+      {fixedIncomeData && (
+        <Products snapshotByProduct={fixedIncomeData.snapshotByProduct} />
       )}
     </Container>
   );
