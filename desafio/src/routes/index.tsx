@@ -1,7 +1,8 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 
 import { Home } from '../pages';
+import Route from './Route';
 
 export const Routes: React.FC = () => {
   return (
