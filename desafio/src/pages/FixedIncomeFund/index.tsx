@@ -54,13 +54,14 @@ export const FixedIncomeFund: React.FC = () => {
     <Container>
       <Title>Renda Fixa</Title>
 
-      <p>{`Dados: ${!!fixedIncomeData}`}</p>
       {fixedIncomeData && (
-        <Indicators snapshotByPortfolio={fixedIncomeData.snapshotByPortfolio} />
-      )}
+        <>
+          <Indicators
+            snapshotByPortfolio={fixedIncomeData.snapshotByPortfolio}
+          />
 
-      {fixedIncomeData && (
-        <Products snapshotByProduct={fixedIncomeData.snapshotByProduct} />
+          <Products snapshotByProduct={fixedIncomeData.snapshotByProduct} />
+        </>
       )}
     </Container>
   );
