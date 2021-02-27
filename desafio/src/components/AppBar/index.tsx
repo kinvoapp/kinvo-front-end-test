@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import appliedValueIcon from '../../assets/applied_value_icon.svg';
 import balanceIcon from '../../assets/balance_icon.svg';
@@ -12,7 +13,9 @@ import { Container, Content, Icon, Logo } from './styles';
 export const AppBar: React.FC = () => {
   return (
     <Container>
-      <Logo src={logoImg} alt="Kinvo" />
+      <Link to="/">
+        <Logo src={logoImg} alt="Kinvo" />
+      </Link>
 
       <Content>
         <AppBarItem
