@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled(Link)`
+interface ContainerProps {
+  active: boolean;
+}
+
+export const Container = styled(Link)<ContainerProps>`
   flex: 1;
   display: flex;
   align-items: center;
@@ -10,6 +14,14 @@ export const Container = styled(Link)`
   padding: 16px 13px 16px 23px;
   text-decoration: none;
   height: 47px;
+  border-bottom: 0.5px solid rgba(204, 207, 209, 0.4);
+  background-color: #fff;
+
+  ${props =>
+    props.active &&
+    css`
+      background-color: #f8fafb;
+    `}
 
   div {
     display: flex;

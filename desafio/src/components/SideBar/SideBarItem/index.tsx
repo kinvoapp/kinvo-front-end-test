@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
 import chevronRightIcon from '../../../assets/chevron_right_icon.svg';
-import { Divider } from '../Divider';
 import { SideBarSubItem } from '../SideBarSubItem';
 import { Container, Icon, Title } from './styles';
 
@@ -28,26 +27,24 @@ export const SideBarItem: React.FC<SideBarItemProps> = ({
   }, []);
 
   return (
-    <Container>
+    <Container isExpanded={expanded}>
       <button type="button" onClick={handleToogleExpanded}>
         <div>
           <Icon src={icon} />
           <Title>{title}</Title>
         </div>
 
-        <img src={chevronRightIcon} alt="chevron icon" width={9} height={5} />
+        <img src={chevronRightIcon} alt="chevron icon" width={9} height={9} />
       </button>
-
-      <Divider />
 
       {expanded && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {subItems.map(subItem => (
-            <>
-              <SideBarSubItem path={subItem.path} title={subItem.title} />
-
-              <Divider />
-            </>
+          {subItems.map((subItem, index) => (
+            <SideBarSubItem
+              key={String(index)}
+              path={subItem.path}
+              title={subItem.title}
+            />
           ))}
         </div>
       )}

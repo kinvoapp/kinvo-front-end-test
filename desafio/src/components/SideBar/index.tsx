@@ -31,7 +31,7 @@ export const SideBar: React.FC = () => {
           { title: 'Ação', path: '/' },
           { title: 'Fundo', path: '/' },
           { title: 'Fundo Imobiliário', path: '/' },
-          { title: 'Fundo Renda Fixa', path: '/' }
+          { title: 'Fundo Renda Fixa', path: '/ativos/renda-fixa' }
         ]}
       />
 

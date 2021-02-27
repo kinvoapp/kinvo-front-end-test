@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  isExpanded: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   background: #f8fafb;
@@ -14,6 +18,14 @@ export const Container = styled.div`
     border: none;
     background: none;
     padding: 17px 15px;
+    border-bottom: 0.5px solid rgba(204, 207, 209, 0.4);
+    background-color: #fff;
+
+    ${props =>
+      props.isExpanded &&
+      css`
+        background-color: #f8fafb;
+      `}
 
     div {
       display: flex;
@@ -28,8 +40,8 @@ export const Title = styled.h1`
   margin-left: 14px;
   font-size: 13px;
   font-weight: 500;
-  width: 100px;
-  text-align: start;
+  width: 40%;
+  text-align: left;
   color: #707b81;
 `;
 
