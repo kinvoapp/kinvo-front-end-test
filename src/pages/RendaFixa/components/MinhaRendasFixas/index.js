@@ -37,11 +37,13 @@ const Inputs = Styled.div`
 function MinhasRendasFixas(props) {
 
 
-	const [snapshotByProduc,setSnapshotByProduct] = useState(props && props.lista);
-	const snapshotByProduct = props && props.lista ;
+
+	const snapshotByProduct = props && props.lista;
 	const [textFilter, setTextFilter] = useState('');
 	const [pageFilter, setPageFilter] = useState(1);
-	const [functionFilter, setFunctionFilter] = useState()
+	const [snapshotByProduc, setSnapshotByProduct] = useState(snapshotByProduct);
+	const [functionFilter, setFunctionFilter] = useState();
+
 	function filter(e) {
 
 		if (e._reactName.includes('onKeyUp')) {
@@ -53,18 +55,34 @@ function MinhasRendasFixas(props) {
 					setSnapshotByProduct(props && props.lista.map((produtos) => <LineList dados={produtos}></LineList>).sort())
 					break;
 				case '1':
+					(props && props.lista
+						.sort((a, b) => a.fixedIncome.name.localeCompare(b.fixedIncome.name)).map((produtos) => <LineList dados={produtos}></LineList>)
+					)
+					break;
 				case '2':
+					setSnapshotByProduct(props && props.lista
 
-				break;
-				case '3': 
-				
-				break;
+						.sort((a, b) => parseInt(b.position.valueApplied) - parseInt(a.position.valueApplied))
+
+					);
+					break;
+				case '3':
+					setSnapshotByProduct(props && props.lista
+
+						.sort((a, b) => parseInt(b.position.profitability) - parseInt(a.position.profitability))
+
+					);
+					break;
 				case '4':
-					
+					(snapshotByProduct && snapshotByProduct
+
+						.sort((a, b) => Date.parse(a.due.date) > Date.parse(b.due.date))
+
+					);
 					break;
 				default:
-					setSnapshotByProduct(props && props.lista.map((produtos) => <LineList dados={produtos}></LineList>).sort())
-					break;
+
+
 			}
 
 		}
@@ -92,14 +110,14 @@ function MinhasRendasFixas(props) {
 						<option value={3}>Rentabilidade | Melhor - Pior</option>
 						<option value={4}>Data de Vencimento</option>
 					</select>
-					<input type="text" onKeyUp={filter}></input>
+					<input type="text" placeholder="Filtrar por Título" onKeyUp={filter}></input>
 				</Inputs>
 			</div>
 			<div className="Body">
-				{(snapshotByProduct && snapshotByProduct.sort((a, b) => (a.fixedIncome.name > b.fixedIncome.name) ? 1 :
-						((b.fixedIncome.name > a.fixedIncome.name) ? -1 : 0))
-						.filter((produtos) => produtos.fixedIncome.name.toLowerCase().includes(textFilter.toLowerCase()))
-						.map((produtos) => <LineList dados={produtos}></LineList>).slice(pageFilter, pageFilter + 5))}
+				{snapshotByProduct && snapshotByProduct
+					.filter((produtos) => produtos.fixedIncome.name.toLowerCase().includes(textFilter.toLowerCase()))
+					.map((produtos) => <LineList dados={produtos}></LineList>).slice(pageFilter, pageFilter + 5)
+				}
 			</div>
 			<div className="footer">
 				<Pagination onChangePage={onPageChanged} totalRecords={snapshotByProduct.length} pageLimit={5} pageNeighbours={1} onPageChanged={onPageChanged}>
