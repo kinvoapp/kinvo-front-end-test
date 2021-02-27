@@ -10,4 +10,6 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   padding: 27px 28px 33px 20px;
+  flex: 1;
+  background-color: #eef2f4;
 `;

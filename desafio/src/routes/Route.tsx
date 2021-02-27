@@ -10,7 +10,10 @@ interface RouteProps extends BaseRouteProps {
   component?: React.ComponentType;
 }
 
-const Route: React.FC<RouteProps> = ({ component: Component, ...rest }) => {
+export const Route: React.FC<RouteProps> = ({
+  component: Component,
+  ...rest
+}) => {
   return (
     <BaseRoute
       {...rest}
@@ -20,5 +23,3 @@ const Route: React.FC<RouteProps> = ({ component: Component, ...rest }) => {
     />
   );
 };
-
-export default Route;

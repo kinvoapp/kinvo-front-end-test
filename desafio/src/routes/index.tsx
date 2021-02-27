@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Redirect } from 'react-router-dom';
 
-import { Home } from '../pages';
-import Route from './Route';
+import { FixedIncomeFund } from '../pages';
+import { Route } from './Route';
 
 export const Routes: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const Routes: React.FC = () => {
         <Redirect to="/ativos/renda-fixa" />
       </Route>
 
-      <Route path="/ativos/renda-fixa" component={Home} />
+      <Route path="/ativos/renda-fixa" component={FixedIncomeFund} />
     </Switch>
   );
 };
