@@ -10,6 +10,9 @@ export const Container = styled.div`
 `;
 
 export const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 12px;
   padding: 0 20px;
 
