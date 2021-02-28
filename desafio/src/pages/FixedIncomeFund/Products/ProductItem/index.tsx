@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { SnapshotByProduct } from '../../../../@types/SnapshotByProduct';
-import { Card } from '../../../../components';
+import { parseCurrency, parsePercentage } from '../../../../utils';
 import {
   BondTypeContainer,
+  CardDue,
+  CardPosition,
+  CardName,
   Container,
   DueContainer,
   NameContainer,
@@ -21,7 +24,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
 }) => {
   return (
     <Container invert={invert}>
-      <Card info="Título">
+      <CardName info="Título">
         <NameContainer>
           <h5>{product.fixedIncome.name}</h5>
         </NameContainer>
@@ -30,41 +33,49 @@ export const ProductItem: React.FC<ProductItemProps> = ({
           <span>Classe</span>
           <h5>{product.fixedIncome.bondType}</h5>
         </BondTypeContainer>
-      </Card>
+      </CardName>
 
-      <Card info="Minha Posição">
+      <CardPosition info="Minha Posição">
         <PositionContainer>
           <span>Valor Inves.</span>
-          <h5>{product.position.valueApplied}</h5>
+          <h5>
+            {parseCurrency(product.position.valueApplied, { symbol: false })}
+          </h5>
         </PositionContainer>
 
         <PositionContainer>
           <span>Saldo Bruto</span>
-          <h5>{product.position.equity}</h5>
+          <h5>{parseCurrency(product.position.equity, { symbol: false })}</h5>
         </PositionContainer>
 
         <PositionContainer>
           <span>Rent.</span>
-          <h5>{product.position.profitability}</h5>
+          <h5>{parsePercentage(product.position.profitability)}</h5>
         </PositionContainer>
 
         <PositionContainer>
           <span>% da Cart.</span>
-          <h5>{product.position.portfolioPercentage}</h5>
+          <h5>{parsePercentage(product.position.portfolioPercentage)}</h5>
         </PositionContainer>
 
         <PositionContainer>
           <span>{product.position.indexerLabel}</span>
-          <h5>{product.position.indexerValue}</h5>
+          <h5>
+            {parsePercentage(product.position.indexerValue, { symbol: false })}
+          </h5>
         </PositionContainer>
 
         <PositionContainer>
           <span>Sobre CDI</span>
-          <h5>{product.position.percentageOverIndexer}</h5>
+          <h5>
+            {parsePercentage(product.position.percentageOverIndexer, {
+              symbol: false
+            })}
+          </h5>
         </PositionContainer>
-      </Card>
+      </CardPosition>
 
-      <Card info="Vencimento">
+      <CardDue info="Vencimento">
         <DueContainer>
           <span>Data Venc.</span>
           <h5>{product.due.date}</h5>
@@ -74,7 +85,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
           <span>Dias Até Venc.</span>
           <h5>{product.due.daysUntilExpiration}</h5>
         </DueContainer>
-      </Card>
+      </CardDue>
     </Container>
   );
 };

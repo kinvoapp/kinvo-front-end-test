@@ -11,7 +11,8 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   info,
   infoIcon = true,
-  children
+  children,
+  ...rest
 }) => {
   function getIcon() {
     if (typeof infoIcon === 'string') return infoIcon;
@@ -20,7 +21,7 @@ export const Card: React.FC<CardProps> = ({
   }
 
   return (
-    <Container>
+    <Container {...rest}>
       <Info>
         <h5>{info}</h5>
         <>{infoIcon && <img src={getIcon()} alt="info icon" />}</>

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   border: 1px solid #dae0e3;
   border-radius: 10px;
-  padding: 8px;
-  flex: 1;
+  padding: 9px 10px;
 `;
 
 export const Info = styled.div`
@@ -17,7 +16,7 @@ export const Info = styled.div`
   }
 
   h5 {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
     text-transform: uppercase;
     color: #4e5b61;
