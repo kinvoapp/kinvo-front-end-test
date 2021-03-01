@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 import { isAfter, isBefore, parse } from 'date-fns';
 
@@ -14,6 +14,8 @@ import { debounce } from '../../../utils';
 import { ProductItem } from './ProductItem';
 import { Container, ProductsContainer, TitleContainer } from './styles';
 
+type ProductSortStrategy = (products: SnapshotByProduct[]) => void;
+
 interface ProductsProps {
   snapshotByProduct: SnapshotByProduct[];
 }
@@ -23,11 +25,10 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
     SnapshotByProduct[]
   >(() => [...snapshotByProduct]);
 
-  const [pageProducts, setPageProducts] = useState<SnapshotByProduct[]>([]);
   const [pagination, setPagination] = useState<PaginationType>();
   const [orderBy, setOrderBy] = useState('');
 
-  const resetPagination = useCallback(() => {
+  useEffect(() => {
     setPagination({
       page: 1,
       size: 5,
@@ -38,17 +39,15 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
     });
   }, [productsToBePaginated]);
 
-  useEffect(() => {
-    resetPagination();
-  }, [resetPagination]);
-
-  useEffect(() => {
+  const pageProducts = useMemo<SnapshotByProduct[]>(() => {
     if (pagination) {
-      let newProducts = [...productsToBePaginated];
-      newProducts = newProducts.splice(pagination.skip, pagination.take);
+      const products = [...productsToBePaginated];
+      const newPageProducts = products.splice(pagination.skip, pagination.take);
 
-      setPageProducts(newProducts);
+      return newPageProducts;
     }
+
+    return [];
   }, [pagination, productsToBePaginated]);
 
   const handlePageChange = useCallback<PaginationHandler>(
@@ -72,38 +71,41 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
     [productsToBePaginated]
   );
 
-  const sortProducts = useCallback(() => {
-    function nameSortStrategy(products: SnapshotByProduct[]) {
-      products.sort((a, b) => {
-        if (a.fixedIncome.name < b.fixedIncome.name) return -1;
-        if (a.fixedIncome.name > b.fixedIncome.name) return 1;
+  const nameSortStrategy = useCallback<ProductSortStrategy>(products => {
+    products.sort((a, b) => {
+      if (a.fixedIncome.name < b.fixedIncome.name) return -1;
+      if (a.fixedIncome.name > b.fixedIncome.name) return 1;
 
-        return 0;
-      });
-    }
+      return 0;
+    });
+  }, []);
 
-    function valueAppliedSortStrategy(products: SnapshotByProduct[]) {
+  const dueDateSortStrategy = useCallback<ProductSortStrategy>(products => {
+    products.sort((a, b) => {
+      const parsedDateA = parse(a.due.date, 'dd/MM/yyyy', new Date());
+      const parsedDateB = parse(b.due.date, 'dd/MM/yyyy', new Date());
+
+      if (isBefore(parsedDateA, parsedDateB)) return -1;
+      if (isAfter(parsedDateA, parsedDateB)) return 1;
+
+      return 0;
+    });
+  }, []);
+
+  const valueAppliedSortStrategy = useCallback<ProductSortStrategy>(
+    products => {
       products.sort((a, b) => {
         if (a.position.valueApplied < b.position.valueApplied) return -1;
         if (a.position.valueApplied > b.position.valueApplied) return 1;
 
         return 0;
       });
-    }
+    },
+    []
+  );
 
-    function dueDateSortStrategy(products: SnapshotByProduct[]) {
-      products.sort((a, b) => {
-        const parsedDateA = parse(a.due.date, 'dd/MM/yyyy', new Date());
-        const parsedDateB = parse(b.due.date, 'dd/MM/yyyy', new Date());
-
-        if (isBefore(parsedDateA, parsedDateB)) return -1;
-        if (isAfter(parsedDateA, parsedDateB)) return 1;
-
-        return 0;
-      });
-    }
-
-    let sortStrategy: (products: SnapshotByProduct[]) => void;
+  const sortProducts = useCallback(() => {
+    let sortStrategy: ProductSortStrategy;
 
     switch (orderBy) {
       case 'name':
@@ -126,7 +128,12 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
 
       return newProductsToBePaginated;
     });
-  }, [orderBy]);
+  }, [
+    dueDateSortStrategy,
+    nameSortStrategy,
+    orderBy,
+    valueAppliedSortStrategy
+  ]);
 
   useEffect(() => {
     sortProducts();
@@ -178,13 +185,13 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
       </TitleContainer>
 
       <ProductsContainer>
-      {pageProducts.map((product, index) => (
-        <ProductItem
-          key={product.fixedIncome.name}
-          product={product}
-          invert={index % 2 !== 0}
-        />
-      ))}
+        {pageProducts.map((product, index) => (
+          <ProductItem
+            key={product.fixedIncome.name}
+            product={product}
+            invert={index % 2 !== 0}
+          />
+        ))}
       </ProductsContainer>
 
       {pagination && (
