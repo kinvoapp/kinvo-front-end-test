@@ -5,18 +5,25 @@ export const Container = styled.div`
   align-items: center;
   background: #fff;
   border-radius: 10px;
-  padding: 8px;
-  border: 1px solid #dae0e3;
-  color: #4e5b61;
+  padding: 9px 10px;
+  border: 1px solid #d6d9dd;
 
-  input {
+  select {
     flex: 1;
     border: 0;
     background: transparent;
-    color: #4e5b61;
+    color: #707b81;
+    font-size: 12px;
+    font-weight: 500;
+
+    option {
+      color: #707b81;
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 
   img {
-    margin-right: 4px;
+    margin-right: 16px;
   }
 `;

@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
+import { isAfter, isBefore, parse } from 'date-fns';
+
 import {
   Pagination as PaginationType,
   PaginationHandler
 } from '../../../@types/Pagination';
 import { SnapshotByProduct } from '../../../@types/SnapshotByProduct';
-import { Input } from '../../../components';
+import searchIcon from '../../../assets/search_icon.svg';
+import { Input, Select, SelectChangeHandler } from '../../../components';
 import { Pagination } from '../../../components/Pagination';
 import { debounce } from '../../../utils';
 import { ProductItem } from './ProductItem';
@@ -16,22 +19,24 @@ interface ProductsProps {
 }
 
 export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
-  const [originalProducts, setOriginalProducts] = useState<SnapshotByProduct[]>(
-    () => [...snapshotByProduct]
-  );
+  const [productsToBePaginated, setProductsToBePaginated] = useState<
+    SnapshotByProduct[]
+  >(() => [...snapshotByProduct]);
 
-  const [products, setProducts] = useState<SnapshotByProduct[]>([]);
+  const [pageProducts, setPageProducts] = useState<SnapshotByProduct[]>([]);
   const [pagination, setPagination] = useState<PaginationType>();
+  const [orderBy, setOrderBy] = useState('');
 
   const resetPagination = useCallback(() => {
     setPagination({
       page: 1,
       size: 5,
-      take: originalProducts.length >= 5 ? 5 : originalProducts.length,
-      total: originalProducts.length,
+      take:
+        productsToBePaginated.length >= 5 ? 5 : productsToBePaginated.length,
+      total: productsToBePaginated.length,
       skip: 0
     });
-  }, [originalProducts]);
+  }, [productsToBePaginated]);
 
   useEffect(() => {
     resetPagination();
@@ -39,12 +44,12 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
 
   useEffect(() => {
     if (pagination) {
-      let newProducts = [...originalProducts];
+      let newProducts = [...productsToBePaginated];
       newProducts = newProducts.splice(pagination.skip, pagination.take);
 
-      setProducts(newProducts);
+      setPageProducts(newProducts);
     }
-  }, [pagination, originalProducts]);
+  }, [pagination, productsToBePaginated]);
 
   const handlePageChange = useCallback<PaginationHandler>(
     options => {
@@ -57,35 +62,97 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
 
         newPagination.page = page;
         newPagination.skip = newPagination.size * (page - 1);
-        newPagination.take = originalProducts.length - newPagination.skip;
+        newPagination.take = productsToBePaginated.length - newPagination.skip;
         if (newPagination.take > newPagination.size)
           newPagination.take = newPagination.size;
 
         return newPagination;
       });
     },
-    [originalProducts]
+    [productsToBePaginated]
   );
+
+  const sortProducts = useCallback(() => {
+    function nameSortStrategy(products: SnapshotByProduct[]) {
+      products.sort((a, b) => {
+        if (a.fixedIncome.name < b.fixedIncome.name) return -1;
+        if (a.fixedIncome.name > b.fixedIncome.name) return 1;
+
+        return 0;
+      });
+    }
+
+    function valueAppliedSortStrategy(products: SnapshotByProduct[]) {
+      products.sort((a, b) => {
+        if (a.position.valueApplied < b.position.valueApplied) return -1;
+        if (a.position.valueApplied > b.position.valueApplied) return 1;
+
+        return 0;
+      });
+    }
+
+    function dueDateSortStrategy(products: SnapshotByProduct[]) {
+      products.sort((a, b) => {
+        const parsedDateA = parse(a.due.date, 'dd/MM/yyyy', new Date());
+        const parsedDateB = parse(b.due.date, 'dd/MM/yyyy', new Date());
+
+        if (isBefore(parsedDateA, parsedDateB)) return -1;
+        if (isAfter(parsedDateA, parsedDateB)) return 1;
+
+        return 0;
+      });
+    }
+
+    let sortStrategy: (products: SnapshotByProduct[]) => void;
+
+    switch (orderBy) {
+      case 'name':
+        sortStrategy = nameSortStrategy;
+        break;
+      case 'valueApplied':
+        sortStrategy = valueAppliedSortStrategy;
+        break;
+      case 'dueDate':
+        sortStrategy = dueDateSortStrategy;
+        break;
+      default:
+        return;
+    }
+
+    setProductsToBePaginated(state => {
+      const newProductsToBePaginated = [...state];
+
+      sortStrategy(newProductsToBePaginated);
+
+      return newProductsToBePaginated;
+    });
+  }, [orderBy]);
+
+  useEffect(() => {
+    sortProducts();
+  }, [sortProducts]);
 
   const handleInputTextChange = useCallback(
     (inputText: string) => {
-      if (inputText === '') {
-        setOriginalProducts([...snapshotByProduct]);
-        return;
+      let newPageProducts = [...snapshotByProduct];
+
+      if (inputText !== '') {
+        newPageProducts = newPageProducts.filter(product => {
+          const productName = product.fixedIncome.name.toLowerCase();
+
+          return productName.includes(inputText.toLowerCase());
+        });
       }
 
-      let newOriginalProducts = [...snapshotByProduct];
-
-      newOriginalProducts = newOriginalProducts.filter(product => {
-        const productName = product.fixedIncome.name.toLowerCase();
-
-        return productName.includes(inputText.toLowerCase());
-      });
-
-      setOriginalProducts(newOriginalProducts);
+      setProductsToBePaginated(newPageProducts);
+      sortProducts();
     },
-    [snapshotByProduct]
+    [snapshotByProduct, sortProducts]
   );
+
+  const handleSelectChange = useCallback<SelectChangeHandler>(valueSelected => {
+    setOrderBy(valueSelected.value);
+  }, []);
 
   return (
     <Container>
@@ -93,11 +160,24 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
         <h3>Minhas Rendas Fixas</h3>
 
         <div>
-          <Input onTextChange={debounce(handleInputTextChange, 500)} />
+          <Select
+            onChange={handleSelectChange}
+            placeholder="Ordernar Por"
+            options={[
+              { label: 'Nome', value: 'name' },
+              { label: 'Valor Inves.', value: 'valueApplied' },
+              { label: 'Data Venc.', value: 'dueDate' }
+            ]}
+          />
+
+          <Input
+            onTextChange={debounce(handleInputTextChange, 500)}
+            leftIcon={searchIcon}
+          />
         </div>
       </TitleContainer>
 
-      {products.map((product, index) => (
+      {pageProducts.map((product, index) => (
         <ProductItem
           key={product.fixedIncome.name}
           product={product}

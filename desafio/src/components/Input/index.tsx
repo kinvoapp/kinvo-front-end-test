@@ -9,11 +9,13 @@ import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onTextChange?: (value: string) => void;
+  leftIcon?: string;
 }
 
 export const Input: React.FC<InputProps> = ({
   onChange,
   onTextChange,
+  leftIcon,
   ...rest
 }) => {
   const [value, setValue] = useState('');
@@ -30,6 +32,8 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <Container>
+      {leftIcon && <img src={leftIcon} alt="input icon" />}
+
       <input value={value} onChange={handleChange} {...rest} />
     </Container>
   );

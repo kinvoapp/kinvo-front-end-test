@@ -21,4 +21,12 @@ export const TitleContainer = styled.div`
     font-weight: 600;
     color: #627179;
   }
+
+  div {
+    display: flex;
+
+    > div {
+      margin-right: 10px;
+    }
+  }
 `;

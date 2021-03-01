@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
 
-  body, input, button {
+  body, input, button, select, option {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
   }
