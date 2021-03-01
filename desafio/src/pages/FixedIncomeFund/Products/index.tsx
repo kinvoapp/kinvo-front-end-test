@@ -12,7 +12,7 @@ import { Input, Select, SelectChangeHandler } from '../../../components';
 import { Pagination } from '../../../components/Pagination';
 import { debounce } from '../../../utils';
 import { ProductItem } from './ProductItem';
-import { Container, TitleContainer } from './styles';
+import { Container, ProductsContainer, TitleContainer } from './styles';
 
 interface ProductsProps {
   snapshotByProduct: SnapshotByProduct[];
@@ -177,6 +177,7 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
         </div>
       </TitleContainer>
 
+      <ProductsContainer>
       {pageProducts.map((product, index) => (
         <ProductItem
           key={product.fixedIncome.name}
@@ -184,6 +185,7 @@ export const Products: React.FC<ProductsProps> = ({ snapshotByProduct }) => {
           invert={index % 2 !== 0}
         />
       ))}
+      </ProductsContainer>
 
       {pagination && (
         <Pagination pagination={pagination} onChange={handlePageChange} />

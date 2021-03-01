@@ -11,6 +11,12 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: row;
   flex: 1;
   padding: 20px;
+  border-top: 1px solid #eef2f4;
+  border-bottom: 1px solid #eef2f4;
+
+  & + div {
+    border-top: none;
+  }
 
   ${props =>
     props.invert &&

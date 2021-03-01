@@ -30,3 +30,7 @@ export const TitleContainer = styled.div`
     }
   }
 `;
+
+export const ProductsContainer = styled.div`
+  margin-bottom: 10px;
+`;
