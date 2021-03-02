@@ -21,6 +21,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
     $ git clone https://github.com/harlancleiton/kinvo-front-end-test
     $ cd kinvo-front-end-test
+    $ cd desafio
 
 ### Instale as dependências
 
