@@ -12,7 +12,7 @@ import {
     ClassBody,
 } from './style'
 
-class FixIncome extends React.Component{
+class PositionIncome extends React.Component{
     constructor(props){
         super(props)
     }
@@ -21,16 +21,17 @@ class FixIncome extends React.Component{
         return(
             <Container>
                 <ContainerTitle>
-                    <Title>TÍTULO</Title>
+                    <Title>VENCIMENTO</Title>
                     <RiInformationLine color="#4E5B61"/>
                 </ContainerTitle>
                 <ContainerBody>
-                    <Separator>
-                        <TitleBody>{this.props.title}</TitleBody>
-                    </Separator>
                     <SeparatorClass>
-                        <Title>CLASSE</Title>
-                        <ClassBody>{this.props.class}</ClassBody>
+                        <Title>DATA VENC.</Title>
+                        <ClassBody>{this.props.date}</ClassBody>
+                    </SeparatorClass>
+                    <SeparatorClass>
+                        <Title>DIAS ATÉ VENC.</Title>
+                        <ClassBody>{this.props.days}</ClassBody>
                     </SeparatorClass>
                 </ContainerBody>
             </Container>
@@ -38,4 +39,4 @@ class FixIncome extends React.Component{
     }
 }
 
-export default FixIncome;
+export default PositionIncome;

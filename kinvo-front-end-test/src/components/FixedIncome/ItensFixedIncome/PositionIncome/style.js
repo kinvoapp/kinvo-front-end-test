@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 372px;
+    width: 490px;
 `;
 
 export const ContainerTitle = styled.div`
@@ -28,7 +28,6 @@ export const Title = styled.label`
 
 export const ContainerBody = styled.div`
     width: 100%;
-    height: 90%;
     border: 1px solid #CCCFD1;
     border-radius: 0px 10px 10px 10px;
     position: relative;
@@ -46,7 +45,7 @@ export const TitleBody = styled.label`
 `;
 
 export const ClassBody = styled.label`
-    color: #8A51BA;
+    color: #38BFA0;
     font-size: 16px;    
 `;
 
@@ -60,7 +59,8 @@ export const Separator = styled.div`
 `;
 
 export const SeparatorClass = styled.div`
-    width: 50%;
+    width: 74px;
+    height: 34px;
     display:flex;
     justify-content:center;
     flex-direction: column;

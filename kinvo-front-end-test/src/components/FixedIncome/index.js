@@ -19,6 +19,8 @@ import {
 } from './style';
 import ContainerInfo from './ContainerInfo'
 import FixIncome from './ItensFixedIncome/FixIncome'
+import PositionIncome from './ItensFixedIncome/PositionIncome'
+import DueIncome from './ItensFixedIncome/DueIncome'
 import teste from '../../assets/Grupo4343.svg'
 
 class FixedIncome extends React.Component{
@@ -36,6 +38,7 @@ class FixedIncome extends React.Component{
                 valueApplied:  0
             },
             snapshotByProduct: [],
+            FixedIncome: false,
         }
     }
 
@@ -50,6 +53,7 @@ class FixedIncome extends React.Component{
             dailyEquityByPortfolioChartData: data.data.dailyEquityByPortfolioChartData,
             snapshotByPortfolio: data.data.snapshotByPortfolio,
             snapshotByProduct: data.data.snapshotByProduct,
+            FixedIncome: true,
         });
         console.log(data)
     }
@@ -115,13 +119,30 @@ class FixedIncome extends React.Component{
                         </Separator>
                     </ContainerFixedIncomeTitle>
                     <ContainerFixedIncomeBody>
-
-
-                        <ContainerItems>
-                            <FixIncome></FixIncome>
-                        </ContainerItems>
-
-
+                        {this.state.FixedIncome == true ? (
+                            this.state.snapshotByProduct.map((item, index) => {
+                                return(
+                                    <ContainerItems key={index}>
+                                        <FixIncome
+                                            title={item.fixedIncome.name}
+                                            class={item.fixedIncome.bondType}
+                                        />
+                                        <PositionIncome
+                                            avalueApplied={item.position.avalueApplied}
+                                            profitability={item.position.profitability}
+                                            portfolioPercentage={item.position.portfolioPercentage}
+                                            percentageOverIndexer={item.position.percentageOverIndexer}
+                                            indexerValue={item.position.indexerValue}
+                                            equity={item.position.equity}
+                                        />
+                                        <DueIncome
+                                            date={item.due.date}
+                                            days={item.due.daysUntilExpiration}
+                                        />
+                                    </ContainerItems>
+                                )
+                            })                            
+                        ) : null}
                     </ContainerFixedIncomeBody>
                 </ContainerFixedIncome>
             </Container>
