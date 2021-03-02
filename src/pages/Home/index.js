@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import SideNav from '../../components/SideNav';
 import { BsSearch } from 'react-icons/bs';
+import api from '../../services/api';
 import { Container, Content, Page, Row, Titulo, Subtitulo, Texto, Card, Session, Div, Select, Search, Input, Divider, Line, Renda, RendaMeio, RendaLine } from './styles';
 
 export default function Home() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            await api.get('getFixedIncomeClassData').then(response => {
+                setData(response.data.data.snapshotByProduct);
+            });
+        })();
+    }, [setData]);
+
     return (
         <Container>
             <Header />
@@ -56,57 +67,59 @@ export default function Home() {
                             </Div>
                         </Row>
                         <Divider />
-                        <Line>
-                            <Renda>
-                                <RendaLine>
-                                    <Titulo size='10px' color='#707b81' margin='10px'>TÍTULO</Titulo>
-                                    <Texto size='10px' color='#707b81'>Tesouro IPCA + com juros</Texto>
-                                    <Texto size='10px' color='#707b81'>semestrais 2020 (ntnb)</Texto>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>CLASSE</Texto>
-                                    <Subtitulo size='12px' color='#8a51ba'>Tesouro Direto</Subtitulo>
-                                </RendaLine>
-                            </Renda>
-                            <RendaMeio>
-                                <RendaLine>
-                                    <Titulo size='10px' color='#707b81' margin='10px'>MINHA POSIÇÃO</Titulo>
-                                    <Texto size='8px' color='#707b81'>VALOR INVES.</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>SALDO BRUTO</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>RENT.</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>% DA CART.</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>CDI</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>SOBRE CDI</Texto>
-                                    <Subtitulo size='16px' color='#38bfa0'>25,08%</Subtitulo>
-                                </RendaLine>
-                            </RendaMeio>
-                            <Renda>
-                                <RendaLine>
-                                    <Titulo size='10px' color='#707b81' margin='10px'>VENCIMENTO</Titulo>
-                                    <Texto size='10px' color='#707b81'>DATA VENC.</Texto>
-                                    <Texto size='10px' color='#008dcb'>15.05.2019</Texto>
-                                </RendaLine>
-                                <RendaLine>
-                                    <Texto size='8px' color='#707b81'>DIAS ATÉ VENC.</Texto>
-                                    <Subtitulo size='16px' color='#008dcb'>5762</Subtitulo>
-                                </RendaLine>
-                            </Renda>
-                        </Line>
+                        {data && data.map(item => (
+                            <Line>
+                                <Renda>
+                                    <RendaLine>
+                                        <Titulo size='10px' color='#707b81' margin='10px'>TÍTULO</Titulo>
+                                        <Texto size='10px' color='#707b81'> </Texto>
+                                        <Texto size='10px' color='#707b81'>{item.fixedIncome.name}</Texto>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>CLASSE</Texto>
+                                        <Subtitulo size='12px' color='#8a51ba'>{item.fixedIncome.bondType}</Subtitulo>
+                                    </RendaLine>
+                                </Renda>
+                                <RendaMeio>
+                                    <RendaLine>
+                                        <Titulo size='10px' color='#707b81' margin='10px'>MINHA POSIÇÃO</Titulo>
+                                        <Texto size='8px' color='#707b81'>VALOR INVES.</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.valueApplied}</Subtitulo>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>SALDO BRUTO</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.equity}</Subtitulo>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>RENT.</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.profitability}%</Subtitulo>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>% DA CART.</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.portfolioPercentage}%</Subtitulo>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>CDI</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.indexerValue}</Subtitulo>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>SOBRE CDI</Texto>
+                                        <Subtitulo size='16px' color='#38bfa0'>{item.position.percentageOverIndexer}%</Subtitulo>
+                                    </RendaLine>
+                                </RendaMeio>
+                                <Renda>
+                                    <RendaLine>
+                                        <Titulo size='10px' color='#707b81' margin='10px'>VENCIMENTO</Titulo>
+                                        <Texto size='10px' color='#707b81'>DATA VENC.</Texto>
+                                        <Texto size='10px' color='#008dcb'>{item.due.date}</Texto>
+                                    </RendaLine>
+                                    <RendaLine>
+                                        <Texto size='8px' color='#707b81'>DIAS ATÉ VENC.</Texto>
+                                        <Subtitulo size='16px' color='#008dcb'>{item.due.daysUntilExpiration}</Subtitulo>
+                                    </RendaLine>
+                                </Renda>
+                            </Line>
+                        ))}
                     </Session>
                 </Page>
             </Content>

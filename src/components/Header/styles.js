@@ -9,6 +9,7 @@ export const Container = styled.header`
     background-color: #ffffff;
     padding: 20px;
     justify-content: space-between;
+    z-index: 1;
 `;
 
 export const Img = styled.img`
