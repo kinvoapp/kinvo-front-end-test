@@ -17,3 +17,7 @@
 ## Observações
     - Para excluir o .DS_Store basta digitar o comando "find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch" e dar o commit
     - Tentei fazer o máximo que pude na alçada de minhas habilidades com React. Utilizo EmberJs no meu emprego atual, mas fiz o possível para relembrar.
+    - Tive dificuldade em criar os cards em "Minhas rendas fixas" e também para achar os ícones apropriados.
+    - Pensei que daria pra usar os itens do adobe xd, mas acabei criando do zero mesmo.
+    - Inseri o filtro de "ordenar por" apenas de enfeite, já que não deu tempo pra implementar.
+    - O submenu da sidebar também foi um desafio.
