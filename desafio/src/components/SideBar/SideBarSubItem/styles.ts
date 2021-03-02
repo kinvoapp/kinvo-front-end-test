@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 interface ContainerProps {
-  active: boolean;
+  active: string;
 }
 
 export const Container = styled(Link)<ContainerProps>`
@@ -18,7 +18,7 @@ export const Container = styled(Link)<ContainerProps>`
   background-color: #fff;
 
   ${props =>
-    props.active &&
+    props.active === 'active' &&
     css`
       background-color: #f8fafb;
     `}

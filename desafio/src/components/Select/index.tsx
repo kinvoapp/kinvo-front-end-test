@@ -46,7 +46,7 @@ export const Select: React.FC<SelectProps> = ({
     <Container>
       <select value={value} onChange={handleChange} {...rest}>
         {placeholder && (
-          <option value="" selected disabled>
+          <option value="" disabled>
             {placeholder}
           </option>
         )}

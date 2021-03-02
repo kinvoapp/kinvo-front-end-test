@@ -16,9 +16,10 @@ export const SideBarSubItem: React.FC<SideBarSubItemProps> = ({
 }) => {
   const location = useLocation();
 
+  const active = location.pathname === path && 'active';
+
   return (
-    // TODO fix console warn
-    <Container active={location.pathname === path} to={path}>
+    <Container active={String(active)} to={path}>
       <div>
         <img src={listDotIcon} alt="list dot icon" width={6} height={6} />
         <h1>{title}</h1>
