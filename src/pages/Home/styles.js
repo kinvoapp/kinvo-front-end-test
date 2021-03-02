@@ -2,13 +2,20 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
+    min-height: 100vh;
     padding: 0;
     margin: 0;
 `;
 
 export const Content = styled.div`
-    padding: 0 30px;
-    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+`;
+
+export const Page = styled.div`
+    padding: 0 10px;
+    margin: 5px auto;
 `;
 
 export const Titulo = styled.h1`
@@ -44,7 +51,8 @@ export const Row = styled.div`
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 180px;
+    margin-right: ${props => props.margin};
     padding: 15px;
     border-radius: 10px;
     background: #FFFFFF;
@@ -90,11 +98,11 @@ export const Select = styled.select`
 `;
 
 export const Search = styled.div`
-  padding: .5rem;
-  position: relative;
-  display: flex;  
-  align-items: center;
-  width: 100%;
+    padding: .5rem;
+    position: relative;
+    display: flex;  
+    align-items: center;
+    width: 100%;
 `
 
 export const Input = styled.input`
@@ -109,7 +117,7 @@ export const Input = styled.input`
 
 export const Divider = styled.hr`
     width: 100%;
-    border-top: 0.5px solid #dae0e3;
+    border: 0.5px solid #dae0e3;
 `;
 
 export const Line = styled.div`
