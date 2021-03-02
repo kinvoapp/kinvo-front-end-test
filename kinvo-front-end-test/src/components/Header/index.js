@@ -1,5 +1,5 @@
 import React from 'react'
-import {  FaChartLine, FaArrowUp, FaChevronDown, FaBars, FaSack } from 'react-icons/fa'
+import {  FaChartLine, FaArrowUp, FaChevronDown, FaBars } from 'react-icons/fa'
 
 import kinvo from '../../assets/kinvo-premium.svg'
 import { 

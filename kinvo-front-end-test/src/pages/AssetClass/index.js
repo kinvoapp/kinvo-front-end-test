@@ -1,6 +1,9 @@
 import React from 'react';
 
 import Header from '../../components/Header';
+import MenuBar from '../../components/MenuBar';
+import FixedIncome from '../../components/FixedIncome';
+import { Container } from './style'
 
 class AssetClass extends React.Component{
     constructor(props){
@@ -11,6 +14,10 @@ class AssetClass extends React.Component{
         return(
             <div>
                 <Header />
+                <Container>
+                    <MenuBar />
+                    <FixedIncome />
+                </Container>
             </div>
         );
     }
