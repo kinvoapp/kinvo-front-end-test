@@ -58,6 +58,10 @@ class FixedIncome extends React.Component{
         console.log(data)
     }
 
+    Search = (value) => {
+        console.log(value)
+    }
+
     render(){
         return(
             <Container>
@@ -107,15 +111,14 @@ class FixedIncome extends React.Component{
                         </Separator>
                         <Separator>
                             <Order>
-                                <option>Ordenar por</option>
+                                <option defaultChecked >Ordenar por</option>                            
                             </Order>
                                 <FaSearch color="#9DA5AC" style={{
                                     position:'relative',
                                     top: '4px',
                                     left: '42px',
                                 }}/>
-                            <Search>
-                            </Search>
+                            <Search onChange={(e) => this.Search(e.target.value)}/>
                         </Separator>
                     </ContainerFixedIncomeTitle>
                     <ContainerFixedIncomeBody>
@@ -128,7 +131,7 @@ class FixedIncome extends React.Component{
                                             class={item.fixedIncome.bondType}
                                         />
                                         <PositionIncome
-                                            avalueApplied={item.position.avalueApplied}
+                                            avalueApplied={item.position.valueApplied}
                                             profitability={item.position.profitability}
                                             portfolioPercentage={item.position.portfolioPercentage}
                                             percentageOverIndexer={item.position.percentageOverIndexer}

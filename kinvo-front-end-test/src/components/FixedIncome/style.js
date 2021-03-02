@@ -39,7 +39,6 @@ export const ContainerFixedIncomeTitle = styled.div`
 `;
 
 export const ContainerFixedIncomeBody = styled.div`
-    padding: 20px;
 `;
 
 export const FixedIncomeTitle = styled.label`
@@ -81,4 +80,7 @@ export const ContainerItems = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 2px #d9d9d9;
+
 `;
