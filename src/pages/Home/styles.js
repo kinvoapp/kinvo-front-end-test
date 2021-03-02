@@ -163,3 +163,26 @@ export const RendaLine = styled.div`
     align-items: flex-start;
     align-self: flex-end;
 `;
+
+export const ButtonsDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+`;
+
+export const Button = styled.button`
+    display: grid;
+    height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    border: 1px solid #dae0e3;
+    background: transparent;
+    padding: 20px;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #707b81;
+    cursor: pointer;
+`;

@@ -1,20 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import SideNav from '../../components/SideNav';
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import api from '../../services/api';
-import { Container, Content, Page, Row, Titulo, Subtitulo, Texto, Card, Session, Div, Select, Search, Input, Divider, Line, Renda, RendaMeio, RendaLine } from './styles';
+import { Container, Content, Page, Row, Titulo, Subtitulo, Texto, Card, Session, Div, Select, Search, Input, Divider, Line, Renda, RendaMeio, RendaLine, ButtonsDiv, Button } from './styles';
 
 export default function Home() {
     const [data, setData] = useState([]);
+    const [actual, setActual] = useState(1);
+    const [pageLimit, setPageLimit] = useState(1);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         (async () => {
             await api.get('getFixedIncomeClassData').then(response => {
                 setData(response.data.data.snapshotByProduct);
+                setPageLimit(Math.ceil(response.data.data.snapshotByProduct.length / 5));
             });
         })();
     }, [setData]);
+
+    const results = !searchTerm
+        ? data
+        : data.filter(item =>
+            item.fixedIncome.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+        );
+
+    function listItems(items, pageActual, limitItems) {
+        let result = [];
+        let totalPage = Math.ceil(items.length / limitItems);
+        let count = (pageActual * limitItems) - limitItems;
+        let delimiter = count + limitItems;
+
+        if (pageActual <= totalPage) {
+            for (let i = count; i < delimiter; i++) {
+                if (items[i] != null) {
+                    result.push(items[i]);
+                }
+                count++;
+            }
+        }
+
+        return result;
+    };
+
+    function onPageChange(e, page) {
+        if (page < 1) {
+            page = 1;
+        }
+
+        if (page > pageLimit) {
+            page = pageLimit;
+        }
+
+        e.preventDefault();
+        setActual(page);
+    }
 
     return (
         <Container>
@@ -61,13 +102,16 @@ export default function Home() {
                                     <option value='4'>Vencimento</option>
                                 </Select>
                                 <Search>
-                                    <BsSearch style={{ marginLeft: "1rem", position: "absolute" }} color="#707b81" />
-                                    <Input placeholder='Pesquisar' />
+                                    <BsSearch style={{ marginLeft: '1rem', position: 'absolute' }} color='#707b81' />
+                                    <Input type='text'
+                                        placeholder='Pesquisar por título'
+                                        value={searchTerm}
+                                        onChange={e => setSearchTerm(e.target.value)} />
                                 </Search>
                             </Div>
                         </Row>
                         <Divider />
-                        {data && data.map(item => (
+                        {data && listItems(results, actual, 5).map(item => (
                             <Line>
                                 <Renda>
                                     <RendaLine>
@@ -120,6 +164,16 @@ export default function Home() {
                                 </Renda>
                             </Line>
                         ))}
+                        <Divider />
+                        <ButtonsDiv>
+                            <Button onClick={(e) => { onPageChange(e, (actual - 1)) }}>
+                                <BsChevronLeft color='#707b81' />
+                            </Button>
+                            <Button>{actual}</Button>
+                            <Button onClick={(e) => { onPageChange(e, (actual + 1)) }}>
+                                <BsChevronRight color='#707b81' />
+                            </Button>
+                        </ButtonsDiv>
                     </Session>
                 </Page>
             </Content>
