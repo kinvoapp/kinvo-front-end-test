@@ -4,6 +4,7 @@ import { DailyEquityByPortfolio } from '../../@types/DailyEquityByPortfolio';
 import { SnapshotByPortfolio } from '../../@types/SnapshotByPortfolio';
 import { SnapshotByProduct } from '../../@types/SnapshotByProduct';
 import { api } from '../../services';
+import { DailyEquityByPortfolioChart } from './DailyEquityByPortfolioChart';
 import { Indicators } from './Indicators';
 import { Products } from './Products';
 import { Container, Title } from './styles';
@@ -58,6 +59,10 @@ export const FixedIncomeFund: React.FC = () => {
         <>
           <Indicators
             snapshotByPortfolio={fixedIncomeData.snapshotByPortfolio}
+          />
+
+          <DailyEquityByPortfolioChart
+            chartData={fixedIncomeData.dailyEquityByPortfolioChartData}
           />
 
           <Products snapshotByProduct={fixedIncomeData.snapshotByProduct} />
