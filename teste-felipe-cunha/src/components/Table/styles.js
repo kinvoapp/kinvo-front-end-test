@@ -15,6 +15,7 @@ export const Info = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  text-transform: uppercase;
 `;
 
 export const Box = styled.div`
@@ -24,9 +25,10 @@ export const Box = styled.div`
   padding: 15px;
   margin-top: 25px;
   overflow: hidden;
-  height: 100vh;
+  height: 96vh;
   position: relative;
 `;
+
 
 export const Header = styled.div`
   display: flex;

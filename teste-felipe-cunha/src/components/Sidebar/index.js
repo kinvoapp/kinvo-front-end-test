@@ -6,6 +6,7 @@ import Resumo from '../../assets/resumo.svg';
 import Produtos from '../../assets/produtos.svg';
 import Proventos from '../../assets/proventos.svg';
 import Ativos from '../../assets/ativos.svg';
+import Ponto from '../../assets/ponto.svg';
 import Rentabilidade from '../../assets/rentabilidade.svg';
 import Projeção from '../../assets/projeção.svg';
 import Risco from '../../assets/risco.svg';
@@ -20,6 +21,10 @@ export default function Sidebar() {
       <SidebarItem to="/produtos" text="Meus Produtos" img={Produtos} />
       <SidebarItem to="/proventos" text="Meus Proventos" img={Proventos} />
       <SidebarItem to="/ativos" text="Classe de Ativos" img={Ativos} />
+      <SidebarItem to="/acao" subText="Ação" subImg={Ponto} />
+      <SidebarItem to="/fundo" subText="Fundo" subImg={Ponto} />
+      <SidebarItem to="/fundoi" subText="Fundo Imobiliário" subImg={Ponto} />
+      <SidebarItem to="/ativos" subText="Fundo Renda Fixa" subImg={Ponto} />
       <SidebarItem to="/rentabilidade" text="Rentabilidade Real" img={Rentabilidade} />
       <SidebarItem to="/projecao" text="Projeção da Carteira" img={Projeção} />
       <SidebarItem to="/risco" text="Risco x Retorno" img={Risco} />

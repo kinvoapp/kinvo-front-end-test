@@ -1,6 +1,6 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/core"
-import InformationIcon from "../../assets/baseline_info_white_18dp.png"
+import InformationIcon from "../../../assets/baseline_info_white_18dp.png"
 const useStyles= makeStyles({
   root: {
     backgroundColor: 'white',
@@ -42,6 +42,7 @@ const useStyles= makeStyles({
     display:"flex"
   }
 })
+
 export default function DueCard({date, days}) {
   const classes = useStyles()
   return (

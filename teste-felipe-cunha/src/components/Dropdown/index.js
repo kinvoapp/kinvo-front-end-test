@@ -32,9 +32,9 @@ export default function SimpleSelect() {
           value={filter}
           onChange={handleChange}
         >
-          <MenuItem value={10}>Primeiro</MenuItem>
-          <MenuItem value={20}>Segundo</MenuItem>
-          <MenuItem value={30}>Terceiro</MenuItem>
+          <MenuItem value={10}>Vencimento</MenuItem>
+          <MenuItem value={20}>Valor Investido</MenuItem>
+          <MenuItem value={30}>Saldo Bruto</MenuItem>
         </Select>
       </FormControl>
   );

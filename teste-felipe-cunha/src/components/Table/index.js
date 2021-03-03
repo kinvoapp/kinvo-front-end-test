@@ -6,7 +6,7 @@ import Dropdown from '../Dropdown';
 import Pagination from '../Pagination';
 import find from '../../assets/find.svg';
 
-import { Container, Info, Box, Header} from './styles';
+import { Container, Info, Box, Header } from './styles';
 import TitleCard from '../Card/TitleCard';
 import PositionCard from '../Card/PositionCard';
 import DueCard from '../Card/DueCard';
@@ -41,12 +41,12 @@ export default function Table() {
   return (
     <Container>
       <Info>
-        <SmallCard text="SALDO BRUTO" value={portfolioHeader.equity} prefix="R$ " />
-        <SmallCard text="VALOR APLICADO" value={portfolioHeader.valueApplied} prefix="R$ " />
-        <SmallCard text="RESULTADO" value={portfolioHeader.equityProfit} prefix="R$ " />
-        <SmallCard text="RENTABILIDADE" value={portfolioHeader.percentageProfit} prefix="R$ " />
+        <SmallCard text="Saldo Bruto" value={portfolioHeader.equity} prefix="R$ " />
+        <SmallCard text="Valor Aplicado" value={portfolioHeader.valueApplied} prefix="R$ " />
+        <SmallCard text="Resultado" value={portfolioHeader.equityProfit} prefix="R$ " />
+        <SmallCard text="Rentabilidade" value={portfolioHeader.percentageProfit} prefix="R$ " />
         <SmallCard text="CDI" value={portfolioHeader.indexerValue} sufix="%" />
-        <SmallCard text="% SOBRE CDI" value={portfolioHeader.indexerValue} sufix="%" />
+        <SmallCard text="% sobre CDI" value={portfolioHeader.indexerValue} sufix="%" />
       </Info>
 
       <Box>
@@ -59,12 +59,7 @@ export default function Table() {
               <input className="text-input" type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)}/>
             </div>         
           </div>
-
         </Header>
-
-        <div>
-        
-        </div>
 
         <div style={{display: "flex", flexDirection: "column", height: '100%'}}>
           {currentItems.filter(product => product.fixedIncome.name.toLowerCase().includes(searchTerm.toLowerCase())).map(product => {

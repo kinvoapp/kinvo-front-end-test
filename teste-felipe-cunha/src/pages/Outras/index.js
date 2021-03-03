@@ -1,19 +1,17 @@
 import React from 'react';
 import dog from '../../assets/dog.png';
 
-import { Container, Image, Title } from './styles';
+import { Container, Title } from './styles';
 
 export default function Outras() {
   return (
     <Container>
       <Title>
-        <h1>Esta página ainda não foi implementada</h1>
-        <h1>Por favor, selecione a opção de Classe de Ativos</h1>
+        <h1>Oops!</h1>
+        <h3 style={{paddingTop: '10px'}}>Página não disponível.</h3>
+        <h4 style={{paddingTop: '10px'}}>Por favor, selecione a opção <p>Classe de Ativos</p> ou <p>Fundo Renda Fixa.</p></h4>
       </Title>
-
-      <Image>
-        <img src={dog} alt="dog" style={{width: '50%', paddingTop: '5%'}}/>
-      </Image>
+        <img src={dog} alt="dog" style={{width: '50%', paddingTop: '5%', float: 'right'}}/>
     </Container>
   );
 }

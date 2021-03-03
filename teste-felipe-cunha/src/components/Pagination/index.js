@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Number, Footer } from './styles';
+
 const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
     const itemNumbers = [];
 
@@ -8,15 +10,15 @@ const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
     }
 
     return (
-        <footer style={{width: '100%', display: 'flex', justifyContent: 'center', position: 'sticky', bottom: 0, left: "50"}}>
-            <div className="pagination" style={{width: '5%', display: 'flex', justifyContent: 'space-evenly'}}>
+        <Footer>
+            <Number>
                 {itemNumbers.map(number =>(
                     <a onClick={() => paginate(number)} href='#' className='page-link'>
                         {number}
                     </a>
                 ))}
-            </div>
-        </footer>
+            </Number>
+        </Footer>
     )
 }
 
