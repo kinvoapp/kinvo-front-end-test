@@ -9,7 +9,7 @@
 5. Fazer uso da biblioteca Styled Components;
 6. Permitir ordenação de produtos seção Minhas Rendas Fixas a partir do menu seletor;
 
-## Para rodar a aplicação, digite na pasta "teste kinvo" os comandos
+## Para rodar a aplicação, digite na pasta "teste-felipe-cunha" os comandos
     1. "yarn"
     2. "yarn start"
 
