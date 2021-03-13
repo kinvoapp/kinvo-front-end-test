@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -14,6 +14,17 @@ export default createGlobalStyle`
   ${({ theme }) => css`
     body {
       font-family: ${theme.font.family};
+      background: ${theme.colors.grayLight};
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   `}
+`;
+
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 22.26rem auto;
+  grid-template-areas:
+    "menu menu"
+    "aside main";
 `;

@@ -20,7 +20,8 @@ const theme = {
   },
   colors: {
     white: "#fff",
-    gray: "#EEF2F4",
+    grayLight: "#EEF2F4",
+    gray: "#707B81",
     grayMedium: "#DAE0E3",
     grayDark: "#4E5B61",
     green: "#38BFA0",
