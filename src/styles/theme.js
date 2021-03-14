@@ -9,6 +9,7 @@ const theme = {
   font: {
     family: "Montserrat, sans-serif",
     normal: 400,
+    medium: 500,
     bold: 700,
     sizes: {
       xsmal: "1rem",

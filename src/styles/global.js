@@ -11,6 +11,11 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
   ${({ theme }) => css`
     body {
       font-family: ${theme.font.family};

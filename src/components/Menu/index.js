@@ -1,11 +1,11 @@
 import * as S from "./styles";
 
+import Balance from "../../assets/balanco.svg";
 import Logo from "../../assets/logo.svg";
-import Balance from "../../assets/balance.svg";
-import Up from "../../assets/up.svg";
-import Rentability from "../../assets/rentability.svg";
-import MyWallet from "../../assets/my-wallet.svg";
+import MyWallet from "../../assets/minha-carteira.svg";
 import Mobile from "../../assets/mobile.svg";
+import Rentability from "../../assets/rentabilidade.svg";
+import Up from "../../assets/up.svg";
 
 const Menu = () => {
   return (
