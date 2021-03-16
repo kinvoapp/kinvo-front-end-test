@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import FixedIncomeProvider from "./context/FixedIncome";
 
 import GlobalStyles, { Container } from "./styles/global";
 import theme from "./styles/theme";
@@ -9,7 +10,7 @@ import Aside from "./components/Aside";
 
 function App() {
   return (
-    <>
+    <FixedIncomeProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Container>
@@ -18,7 +19,7 @@ function App() {
           <Dashboard />
         </Container>
       </ThemeProvider>
-    </>
+    </FixedIncomeProvider>
   );
 }
 
