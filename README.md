@@ -1,6 +1,6 @@
 <img src="https://github.com/biancamagalhaes/kinvo/blob/master/kinvo-premium/public/images/logo.svg" align="right">
 
-# Kinvo Premium &middot; [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm)
+# Kinvo Premium &middot;
 
 Kinvo Premium is a project, with only one page, that allows users to see their investments. The aim of this project is to test the level of the developer who did it and find out if it is able to join the kinvo team.
 
