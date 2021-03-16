@@ -3,13 +3,15 @@ import api from '../../../services/api';
 import {Info, Tag } from './styles';
 
 
+interface PortfolioType {
+  
+    name: string,
+    value: string
+  
+}
+
 export default function Portfolio() {
-  const [portfolioData, setPortfolioData] = useState([
-    {
-      name: '',
-      value: ''
-    },
-  ])
+  const [portfolioData, setPortfolioData] = useState<PortfolioType[]>([]);
 
   const getData = async () => {
     await api.get('').then((response: { data: any; }) => {

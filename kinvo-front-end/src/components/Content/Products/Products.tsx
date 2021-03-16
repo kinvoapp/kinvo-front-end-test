@@ -73,16 +73,12 @@ export default function Products() {
     
 
     if (search) {
-      searchResults();  
-      
-
+      searchResults();        
     } else {
       getData();
       setTotalPages(products.length);
       updatePage(1);
-    }
-
-  
+    }  
   }, [search, loading])
 
 

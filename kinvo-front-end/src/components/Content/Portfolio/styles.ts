@@ -11,7 +11,7 @@ export const Info = styled.div`
   margin: 10px;
 
   display: flex;
-  width: 180px;
+  width: 15%;
   height: 60px;
 
   justify-content: flex-start;

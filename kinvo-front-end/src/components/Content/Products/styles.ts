@@ -12,7 +12,8 @@ export const Container = styled.div`
 
   span.title {
     display: flex;
-    font-size: 9px;  
+    font-size: 9px; 
+    
   }
 
   button {
@@ -29,12 +30,12 @@ export const FixedIncome = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  min-width: 23.125rem;
-  
+  min-width: 25%;
+  max-height: 85px;
 
   span.product {
     font-size: 12px;
-    max-width: 160px;
+    max-width: 170px;
   }
 `;
 
@@ -43,7 +44,7 @@ export const ProductInfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
-
+  
   div {
     display: flex;
     flex-direction: column;
@@ -79,7 +80,8 @@ export const Position = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  min-width: 28.75rem;
+  min-width: 50%;
+  max-height: 85px;
 `;
 
 export const Due = styled.div`
@@ -88,6 +90,8 @@ export const Due = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
+  max-height: 85px;
+  min-width: 20%;
 `;
 
 export const PaginationMenu = styled.div`
@@ -96,6 +100,5 @@ export const PaginationMenu = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
- 
 
 `;

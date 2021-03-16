@@ -84,7 +84,7 @@ export default function SideMenu() {
 
         return (
           <>
-          <Option key={name} theme={selected} >
+          <Option theme={selected} >
             <div>
               <img src={icon} alt='WalletIcon'/>
               <p dangerouslySetInnerHTML={{__html:name}}/>
