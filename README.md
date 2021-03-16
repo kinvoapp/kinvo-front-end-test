@@ -40,6 +40,7 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 
 ## Notas:
 
+- **! Importante !** O cumprimento dos requisitos solicitados para uma vaga em determinado nível não é garantia de aprovação. Focamos em avaliar a forma como os requisitos foram cumpridos.
 - Apesar da listagem de requisitos mínimos acima, caso não tenha tido tempo suficiente ou tenha se esbarrado em alguma dificuldade, entregue o desafio ainda que incompleto e conte-nos na descrição do pull request quais foram as suas maiores dificuldades.
   Não se preocupe, avaliaremos ainda assim! :)
 - O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/adc938b2-4a7a-4837-a849-37d803b83d26-f89a/);
