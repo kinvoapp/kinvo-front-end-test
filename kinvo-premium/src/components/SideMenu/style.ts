@@ -9,7 +9,7 @@ export const Container = styled.div`
   position: fixed;
 
   @media (max-width: 720px) {
-    max-width: 4rem;
+    max-width: 5%;
     align-items: center;
   }
 `;
@@ -68,6 +68,10 @@ export const Title = styled.h5`
 
   @media (max-width: 1280px) {
     font-size: 8pt;
+  }
+
+  @media (max-width: 920px) {
+    font-size: 6pt;
   }
 
   @media (max-width: 720px) {

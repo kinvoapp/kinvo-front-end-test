@@ -16,4 +16,8 @@ export const InnerContainer = styled.div`
   height: 100%;
   margin-left: 15%;
   padding: 1rem;
+
+  @media (max-width: 720px) {
+    margin-left: 5%;
+  }
 `;

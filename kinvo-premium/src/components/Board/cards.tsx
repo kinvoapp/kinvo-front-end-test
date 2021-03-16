@@ -10,7 +10,7 @@ import { formatCurrency } from '../../utility/config';
 
 export function Card(props: { income: { bondType: string; name: string } }) {
   return (
-    <CardContainer width={28.6}>
+    <CardContainer width={22.6}>
       <CardTitle>Título</CardTitle>
       <CardContent>
         <TextLeft>{props.income.name}</TextLeft>
@@ -37,7 +37,7 @@ export function Result(props: {
   };
 }) {
   return (
-    <CardContainer width={44.2}>
+    <CardContainer width={50.2}>
       <CardTitle>Resultado</CardTitle>
       <CardContent>
         <ContentRight>

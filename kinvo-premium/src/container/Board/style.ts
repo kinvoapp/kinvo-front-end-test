@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const BoardContainer = styled.div`
@@ -30,7 +30,7 @@ export const BoardButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 40%;
+  width: 50%;
 `;
 
 export const Title = styled.h1`
@@ -38,6 +38,14 @@ export const Title = styled.h1`
   font-weight: 600;
   text-transform: capitalize;
   color: var(--gray-strong);
+
+  @media (max-width: 920px) {
+    font-size: 10pt;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 8pt;
+  }
 `;
 
 export const ContainerCards = styled.div`
