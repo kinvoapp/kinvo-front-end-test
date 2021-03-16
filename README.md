@@ -39,4 +39,3 @@ yarn dev
 Following this steps you are doing:
  > Cloning the project, going inside the project paste, going inside kinvo-premium paste, installing the node_modules into the project, running the project that will be up on port: https://localhost:3000 
 
-
