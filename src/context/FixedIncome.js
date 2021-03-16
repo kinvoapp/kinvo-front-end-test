@@ -6,6 +6,7 @@ export const FixedIncomeContext = createContext();
 export default function FixedIncomeProvider({ children }) {
   const [myFixedIncomeProducts, setMyFixedIncomeProducts] = useState(null);
   const [walletInformation, setWalletInformation] = useState(null);
+  const [selectedText, setSelectedText] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -26,7 +27,12 @@ export default function FixedIncomeProvider({ children }) {
 
   return (
     <FixedIncomeContext.Provider
-      value={{ myFixedIncomeProducts, walletInformation }}
+      value={{
+        myFixedIncomeProducts,
+        walletInformation,
+        selectedText,
+        setSelectedText,
+      }}
     >
       {children}
     </FixedIncomeContext.Provider>
