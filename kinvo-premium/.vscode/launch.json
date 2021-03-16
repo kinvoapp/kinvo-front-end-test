@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Next: Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Next: Node",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/next/dist/bin/next",
+      "env": {
+        "NODE_OPTIONS": "--inspect-brk"
+      },
+      "port": 9229,
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Next: Full",
+      "configurations": ["Next: Node", "Next: Chrome"]
+    }
+  ]
+}
