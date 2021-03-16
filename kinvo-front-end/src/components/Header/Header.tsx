@@ -5,26 +5,54 @@ import appliedvalue from '../../assets/svg/header/appliedvalue.svg';
 import profit from '../../assets/svg/header/profit.svg';
 import dropdown from '../../assets/svg/header/dropdown.svg';
 import menu from '../../assets/svg/header/menu.svg';
+import { useEffect, useState } from 'react';
+import api from '../../services/api';
+
+
+
+interface HeaderInfoType {
+  
+  img: string;
+  name: string,
+  value: string
+
+}
+
 
 export default function Header() {
+  const [portfolioData, setPortfolioData] = useState<HeaderInfoType[]>([]);
 
-  const headerOptions = [
-    {
-      img: equity,
-      name: 'SALDO BRUTO',
-      value: '130.521.230,02',
-    },
-    {
-      img: appliedvalue,
-      name: 'VALOR APLICADO',
-      value: '521.230,02',
-    },
-    {
-      img: profit,
-      name: 'RENTABILIDADE',
-      value: '2,34%',
-    },
-  ]
+  const getData = async () => {
+    await api.get('').then((response: { data: any; }) => {
+      const res = response.data.data.snapshotByPortfolio;
+
+      setPortfolioData([
+        {
+          img: equity,
+          name: 'SALDO BRUTO',
+          value: res.equity,
+        },
+        {
+          img: appliedvalue,
+          name: 'VALOR APLICADO',
+          value: res.valueApplied,
+        },
+        {
+          img: profit,
+          name: 'RENTABILIDADE',
+          value: `${res.percentageProfit}%`
+        },
+      ])
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+
+  
+
+  useEffect(() => {
+    getData();
+  }, [])
 
 
 
@@ -32,7 +60,7 @@ export default function Header() {
     <Wrapper>
       <img className='kinvo' src={kinvo} alt='kinvo'/>
       <div>
-        {headerOptions.map((hoptions) => {
+        {portfolioData.map((hoptions) => {
           const { img, name, value } = hoptions;
           return (
             <HeaderOption key={name}>
