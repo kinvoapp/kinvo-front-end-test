@@ -7,6 +7,34 @@ export const Container = styled.div`
     background: ${theme.colors.white};
     border-radius: ${theme.border.radius};
   `}
+
+  .paginationButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    gap: 0.5rem;
+    margin: 0 auto;
+
+    li {
+      color: #c2c5cc;
+      border: 2px solid #edeef0;
+      padding: 1rem 1.4rem;
+      list-style: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+      a {
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .paginationActive {
+      color: #fff;
+      background: #dce0e3;
+      border-color: #dce0e3;
+    }
+  }
 `;
 
 export const MyFixedIncomeContainer = styled.div`

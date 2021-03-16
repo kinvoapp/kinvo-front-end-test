@@ -2,17 +2,29 @@ import { useContext } from "react";
 import { FixedIncomeContext } from "../../context/FixedIncome";
 
 import IconSearch from "../../assets/search.svg";
-
 import * as S from "./styles";
 
 const FormsFixedIncome = () => {
-  const { selectedText, setSelectedText } = useContext(FixedIncomeContext);
+  const {
+    selectedText,
+    selectedDrop,
+    setSelectedText,
+    setSelectedDrop,
+  } = useContext(FixedIncomeContext);
 
   return (
     <S.FormContainer>
       <S.SelectFormContainer>
-        <S.SelectedForm>
-          <S.Option>Ordenar por</S.Option>
+        <S.SelectedForm
+          value={selectedDrop}
+          onChange={(event) => setSelectedDrop(event.target.value)}
+        >
+          <S.Option value="" disabled>
+            Ordenar por
+          </S.Option>
+          <S.Option value="valueApplied">Valor Inves.</S.Option>
+          <S.Option value="equity">Saldo Bruto</S.Option>
+          <S.Option value="profitability">Rent.</S.Option>
         </S.SelectedForm>
       </S.SelectFormContainer>
 

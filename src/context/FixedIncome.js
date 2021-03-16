@@ -7,6 +7,7 @@ export default function FixedIncomeProvider({ children }) {
   const [myFixedIncomeProducts, setMyFixedIncomeProducts] = useState(null);
   const [walletInformation, setWalletInformation] = useState(null);
   const [selectedText, setSelectedText] = useState("");
+  const [selectedDrop, setSelectedDrop] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -31,7 +32,10 @@ export default function FixedIncomeProvider({ children }) {
         myFixedIncomeProducts,
         walletInformation,
         selectedText,
+        selectedDrop,
         setSelectedText,
+        setSelectedDrop,
+        setMyFixedIncomeProducts,
       }}
     >
       {children}

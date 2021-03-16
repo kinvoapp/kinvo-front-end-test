@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import ReactPaginate from "react-paginate";
 
 import FormsFixedIncome from "../FormsFixedIncome";
 import MyFixedIncomeCards from "../MyFixedIncomeCards";
@@ -22,6 +23,27 @@ const MyFixedIncome = () => {
             .includes(selectedText.toLowerCase());
   };
 
+  const [pageNumber, setPageNumber] = useState(0);
+  const usersPerPage = 5;
+  const pagesVisited = pageNumber * usersPerPage;
+  const pageCount = Math.ceil(myFixedIncomeProducts?.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  const displayCards = myFixedIncomeProducts
+    ?.filter(filterMyFixedIncome)
+    .slice(pagesVisited, pagesVisited + usersPerPage)
+    .map((props) => {
+      return (
+        <MyFixedIncomeCards
+          props={props}
+          key={props.fixedIncome.portfolioProductId}
+        />
+      );
+    });
+
   return (
     <S.Container>
       <S.MyFixedIncomeContainer>
@@ -29,12 +51,18 @@ const MyFixedIncome = () => {
         <FormsFixedIncome />
       </S.MyFixedIncomeContainer>
 
-      {myFixedIncomeProducts?.filter(filterMyFixedIncome).map((props) => (
-        <MyFixedIncomeCards
-          props={props}
-          key={props.fixedIncome.portfolioProductId}
-        />
-      ))}
+      {displayCards}
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={">"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationButtons"}
+        previousLinkClassName={"previousButton"}
+        nextLinkClassName={"nextButton"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </S.Container>
   );
 };
