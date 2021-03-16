@@ -14,7 +14,8 @@ interface HeaderInfoType {
   
   img: string;
   name: string,
-  value: string
+  value: number,
+
 
 }
 
@@ -31,6 +32,7 @@ export default function Header() {
           img: equity,
           name: 'SALDO BRUTO',
           value: res.equity,
+
         },
         {
           img: appliedvalue,
@@ -40,8 +42,9 @@ export default function Header() {
         {
           img: profit,
           name: 'RENTABILIDADE',
-          value: `${res.percentageProfit}%`
-        },
+          value: `${res.percentageProfit}%`,
+
+        },   
       ])
     }).catch(error => {
       console.log(error);
@@ -67,7 +70,7 @@ export default function Header() {
               <img src={img} alt={name}/>
               <div>
                 <p>{name}</p>
-                <strong>{value}</strong>
+                <strong>{value.toLocaleString()}</strong>
               </div>
             </HeaderOption>
           )

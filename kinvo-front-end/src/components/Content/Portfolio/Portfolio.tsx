@@ -6,7 +6,9 @@ import {Info, Tag } from './styles';
 interface PortfolioType {
   
     name: string,
-    value: string
+    value: number,
+    prefix: string,
+    suffix: string
   
 }
 
@@ -20,27 +22,39 @@ export default function Portfolio() {
       setPortfolioData([
         {
           name: 'SALDO BRUTO',
-          value: `R$ ${res.equity}`
+          value: res.equity,
+          prefix: 'R$',
+          suffix: ''
         },
         {
           name: 'VALOR APLICADO',
-          value: `R$ ${res.valueApplied}`
+          value: res.valueApplied,
+          prefix: 'R$',
+          suffix: ''
         },
         {
           name:'RESULTADO',
-          value: `R$ ${res.equityProfit}`
+          value: res.equityProfit,
+          prefix: 'R$',
+          suffix: ''
         },
         {
           name:'RENTABILIDADE',
-          value: `${res.percentageProfit}%`
+          value: res.percentageProfit,
+          prefix: '',
+          suffix: '%'
         },
         {
           name:'CDI',
-          value: `${res.indexerValue}%`
+          value: res.indexerValue,
+          prefix: '',
+          suffix: '%'
         },
         {
           name:'% SOBRE CDI',
-          value: `${res.percentageOverIndexer}%`
+          value: res.percentageOverIndexer,
+          prefix: '',
+          suffix: '%'
         }
       ])
     }).catch(error => {
@@ -55,14 +69,14 @@ export default function Portfolio() {
   return (
     <>
        {portfolioData.map((data) => {
-          const { name, value } = data;
+          const { name, value, prefix, suffix } = data;
           return (
             <>
               <Info key={name}>
                 <Tag/>
                 <div className='info'> 
                   <span>{name}</span>
-                  <strong>{value}</strong>
+                  <strong>{prefix} {value.toLocaleString()}{suffix}</strong>
                 </div>    
               </Info>
             </>

@@ -11,8 +11,8 @@ import { State } from '../../../store';
 
 interface ProductsType {
   due: {
-    date: string;
-    daysUntilExpiration: string;
+    date: number;
+    daysUntilExpiration: number;
   },
   fixedIncome: {
     bondType: string,
@@ -20,13 +20,13 @@ interface ProductsType {
     portfolioProductId: string
   },
   position: {
-    equity: string,
-    indexerLabel: string,
-    indexerValue: string,
-    percentageOverIndexer: string,
-    portfolioPercentage: string,
-    profitability: string,
-    valueApplied: string
+    equity: number,
+    indexerLabel: number,
+    indexerValue: number,
+    percentageOverIndexer: number,
+    portfolioPercentage: number,
+    profitability: number,
+    valueApplied: number
   }
 }
 
@@ -117,27 +117,27 @@ export default function Products() {
                 <ProductInfoContainer>
                   <div className='data'>
                     <span className='class'>VALOR INVEST</span>
-                    <span className='positiontype'>{position.valueApplied}</span>
+                    <span className='positiontype'>{position.valueApplied.toLocaleString()}</span>
                   </div>
                   <div>
                     <span className='class'>SALDO BRUTO</span>
-                    <span className='positiontype'>{position.equity}</span>
+                    <span className='positiontype'>{position.equity.toLocaleString()}</span>
                   </div>
                   <div>
                     <span className='class'>RENT</span>
-                    <span className='positiontype'>{position.percentageOverIndexer}</span>
+                    <span className='positiontype'>{position.percentageOverIndexer.toLocaleString()}</span>
                   </div>
                   <div>
                     <span className='class'>% DA CART.</span>
-                    <span className='positiontype'>{position.portfolioPercentage}%</span>
+                    <span className='positiontype'>{position.portfolioPercentage.toLocaleString()}%</span>
                   </div>
                   <div>
                     <span className='class'>CDI</span>
-                    <span className='positiontype'>{position.indexerValue}</span>
+                    <span className='positiontype'>{position.indexerValue.toLocaleString()}</span>
                   </div>
                   <div>
                     <span className='class'>SOBRE CDI</span>
-                    <span className='positiontype'>{position.profitability}</span>
+                    <span className='positiontype'>{position.profitability.toLocaleString()}</span>
                   </div>
                 </ProductInfoContainer>
               </Position>
