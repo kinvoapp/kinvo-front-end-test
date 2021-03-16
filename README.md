@@ -4,18 +4,6 @@
 
 Kinvo Premium is a project, with only one page, that allows users to see their investments. The aim of this project is to test the level of the developer who did it and find out if it is able to join the kinvo team.
 
-## Installing / Getting started
-
-```shell
-npm install
-# or
-yarn install
-```
-
-Running the code above you are downloading the node_modules package to your project
-
-## Developing
-
 ### Built With
     "@types/react-redux": "^7.1.16",
     "@types/styled-components": "^5.1.8",
@@ -35,7 +23,7 @@ Running the code above you are downloading the node_modules package to your proj
 Have installed the following list:
  - Node : https://nodejs.org/en/
  - Npm  : https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
- - Yarn (opicionally) : https://classic.yarnpkg.com/en/docs/install/
+ - Yarn : https://classic.yarnpkg.com/en/docs/install/
 
 ### Setting up Dev
 
@@ -46,15 +34,9 @@ git clone https://github.com/biancamagalhaes/kinvo.git
 cd kivo/
 cd kinvo-premium/
 yarn install or npm install
-```
-Following this steps you are doing:
- > Cloning the project, going inside the project paste, going inside kinvo-premium paste, installing the node_modules into the project
-
-### Building
-
-```shell
 yarn dev
 ```
-Running the code above the project will be up on port: https://localhost:3000 
+Following this steps you are doing:
+ > Cloning the project, going inside the project paste, going inside kinvo-premium paste, installing the node_modules into the project, running the project that will be up on port: https://localhost:3000 
 
 
