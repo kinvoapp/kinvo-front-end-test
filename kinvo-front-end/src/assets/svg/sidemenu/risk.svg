@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="Group_12154" data-name="Group 12154" transform="translate(-1675 3722)">
+    <circle id="borda" cx="17" cy="17" r="17" transform="translate(1675 -3722)" fill="#dae0e3"/>
+    <circle id="stroke" cx="9.837" cy="9.837" r="9.837" transform="translate(1682.163 -3714.837)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <circle id="stroke-2" data-name="stroke" cx="4.282" cy="4.282" r="4.282" transform="translate(1687.719 -3709.282)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <line id="stroke-3" data-name="stroke" y1="2.813" x2="2.813" transform="translate(1685.441 -3701.243)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <line id="stroke-4" data-name="stroke" y1="2.813" x2="2.813" transform="translate(1695.69 -3711.492)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <line id="stroke-5" data-name="stroke" x1="2.813" y1="2.813" transform="translate(1695.69 -3701.243)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <line id="stroke-6" data-name="stroke" x1="2.813" y1="2.813" transform="translate(1685.441 -3711.492)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  </g>
+</svg>
