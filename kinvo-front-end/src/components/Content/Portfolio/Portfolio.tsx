@@ -71,7 +71,7 @@ export default function Portfolio() {
        {portfolioData.map((data) => {
           const { name, value, prefix, suffix } = data;
           return (
-            <>
+            
               <Info key={name}>
                 <Tag/>
                 <div className='info'> 
@@ -79,7 +79,7 @@ export default function Portfolio() {
                   <strong>{prefix} {value.toLocaleString()}{suffix}</strong>
                 </div>    
               </Info>
-            </>
+            
           )
         })}
     </>

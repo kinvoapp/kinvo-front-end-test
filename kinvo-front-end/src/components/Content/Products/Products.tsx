@@ -133,7 +133,7 @@ export default function Products() {
                   </div>
                   <div>
                     <span className='class'>CDI</span>
-                    <span className='positiontype'>{position.indexerValue.toLocaleString()}</span>
+                    <span className='positiontype'>{position.indexerValue.toLocaleString(  )}</span>
                   </div>
                   <div>
                     <span className='class'>SOBRE CDI</span>
