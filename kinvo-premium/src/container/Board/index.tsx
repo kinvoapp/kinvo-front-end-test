@@ -78,7 +78,7 @@ function Board(props: {
             <Filter
               ordenations={[
                 {
-                  name: 'Ordenar por',
+                  name: 'Sem Ordenação',
                   onClick: () => {},
                 },
                 {

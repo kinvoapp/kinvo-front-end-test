@@ -18,14 +18,6 @@ export const BoardContainer = styled.div`
   flex-direction: column;
 `;
 
-export const BoardHead = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  margin-bottom: 1rem;
-`;
-
 export const BoardButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -69,6 +61,10 @@ export const SearchInput = styled.input`
   @media (max-width: 1280px) {
     font-size: 7pt;
   }
+
+  @media (max-width: 780px) {
+    font-size: 6pt;
+  }
 `;
 
 export const FilterContainer = styled.div`
@@ -89,6 +85,10 @@ export const FilterText = styled.h5`
   font-size: 8pt;
   font-weight: 600;
   color: var(--gray-strong);
+
+  @media (max-width: 780px) {
+    font-size: 7pt;
+  }
 `;
 
 export const FilterIcon = styled.button`
@@ -103,6 +103,11 @@ export const FilterIcon = styled.button`
     `rotate(${props.rotate})`};
   -ms-transform: rotate(180deg)
     ${(props: { image: string; rotate: string }) => `rotate(${props.rotate})`};
+  
+  @media (max-width: 780px) {
+    width: 0.9rem;
+    height: 0.6rem;
+  }
 `;
 
 export const FilterOpenedContainer = styled.div`
@@ -135,7 +140,7 @@ export const CardContainer = styled.div`
   right: 0;
   margin-right: 1rem;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5rem;
   border-radius: 10px;
   border: 0.1rem solid var(--gray-search);
@@ -151,6 +156,10 @@ export const CardTitle = styled.h5`
   @media (max-width: 1280px) {
     font-size: 6pt;
   }
+
+  @media (max-width: 780px) {
+    font-size: 4pt;
+  }
 `;
 
 export const CardContent = styled.div`
@@ -159,23 +168,29 @@ export const CardContent = styled.div`
   margin-top: 1rem;
   justify-content: space-between;
   flex-direction: row;
+
+  @media (max-width: 780px) {
+    margin-top: 0.7rem;
+  }
 `;
 
 export const TextLeft = styled.h5`
   font-size: 8pt;
   font-weight: 600;
-  max-width: 50%;
   color: var(--gray-strong);
 
   @media (max-width: 1280px) {
     font-size: 6pt;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 5pt;
   }
 `;
 
 export const ContentRight = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 1rem;
   justify-content: flex-start;
 `;
 
@@ -186,6 +201,10 @@ export const TextRight = styled.h5`
 
   @media (max-width: 1280px) {
     font-size: 9pt;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 6pt;
   }
 `;
 
@@ -232,13 +251,4 @@ export const SquareIcon = styled.button`
   border: 0.1rem solid var(--gray-pagination);
   border-radius: 5px;
   box-shadow: -1px 2px 11px -1px rgba(0, 0, 0, 0.01);
-`;
-
-export const ContainerCards = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: ${(props: { color: string }) => props.color};
 `;

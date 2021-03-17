@@ -32,7 +32,6 @@ export default function Filter(props: {
                   setOpenFilter(!openFilter),
                   item.onClick();
               },
-              disable: item.name === textFilter,
               key: indx,
             };
           })}
@@ -43,13 +42,13 @@ export default function Filter(props: {
 }
 
 const FilterOpened = (props: {
-  options: Array<{ text: string; onClick: () => void; disable: boolean }>;
+  options: Array<{ text: string; onClick: () => void; }>;
 }) => {
   const { options } = props;
   return (
     <FilterOpenedContainer>
       {options.map((item, indx) => (
-        <FilterOpenedText key={indx} onClick={item.onClick} disabled={item.disable} color={item.disable ? 'var(--gray-border)' : 'var(--white)'}>
+        <FilterOpenedText key={indx} onClick={item.onClick}>
           {item.text}
         </FilterOpenedText>
       ))}

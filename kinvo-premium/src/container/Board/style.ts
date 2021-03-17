@@ -24,6 +24,10 @@ export const BoardHead = styled.div`
   justify-content: space-between;
   padding: 1rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 780px) {
+    margin-bottom: 0rem;
+  }
 `;
 
 export const BoardButtonsContainer = styled.div`
@@ -41,10 +45,6 @@ export const Title = styled.h1`
 
   @media (max-width: 920px) {
     font-size: 10pt;
-  }
-
-  @media (max-width: 720px) {
-    font-size: 8pt;
   }
 `;
 

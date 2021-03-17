@@ -54,4 +54,8 @@ export const BlockValue = styled.h2`
   @media (max-width: 920px) {
     font-size: 8pt;
   }
+
+  @media (max-width: 780px) {
+    font-size: 6.5pt;
+  }
 `;

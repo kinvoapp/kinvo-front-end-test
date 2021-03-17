@@ -26,7 +26,6 @@ export const SectionContainer = styled.button`
     props.isInner ? '0.7rem 1rem' : '1rem'};
 
   @media (max-width: 720px) {
-    width: 4rem;
     justify-content: center;
     padding: 1rem 0rem;
   }
