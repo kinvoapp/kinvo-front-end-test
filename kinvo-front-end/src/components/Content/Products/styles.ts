@@ -101,4 +101,31 @@ export const PaginationMenu = styled.div`
   justify-content: center;
   margin-top: 20px;
 
+  li.rc-pagination-item, li.rc-pagination-item-1 li.rc-pagination-item-active, button.rc-pagination-item-link {
+    border-radius: 4px;
+    border: 1px solid #EDEEF0;
+
+    
+ }
+
+ li.rc-pagination-item {
+   a {
+     color: #C2C5CC
+   }
+ }
+
+ li.rc-pagination-item-active {
+  background-color: #DCE0E3;
+  
+  a {
+    color: #FFF;
+  }
+ }
+
+ button.rc-pagination-item-link {
+   font-size: 20px;
+ }
+
+ 
+
 `;
