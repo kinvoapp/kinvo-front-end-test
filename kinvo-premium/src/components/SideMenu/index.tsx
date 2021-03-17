@@ -24,6 +24,7 @@ export default function SideMenu() {
         title={item.title}
         iconSrc={item.iconSrc}
         openedOptions={item.openedOptions}
+        key={item.title}
       />)})}
     </Container>
   );
