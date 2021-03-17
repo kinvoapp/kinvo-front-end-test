@@ -35,7 +35,7 @@ export const FixedIncome = styled.div`
 
   span.product {
     font-size: 12px;
-    max-width: 170px;
+    max-width: 160px;
   }
 `;
 
