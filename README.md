@@ -12,6 +12,7 @@ Kinvo Premium is a project, with only one page, that allows users to see their i
     "moment": "^2.29.1",
     "next": "10.0.8",
     "react": "17.0.1",
+    "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
