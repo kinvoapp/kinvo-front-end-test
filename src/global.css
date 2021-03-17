@@ -1,0 +1,60 @@
+:root{
+  --background-page: #EEF2F4;
+  --background-card: white;
+  --border-card: #EEF2F4;
+  --border-in: #DAE0E3;
+  --primary-color: #4C309B;
+  --selected-item: #F8FAFB;
+  --text-label-header: #A5A5A5;
+  --text-items: #707B81;
+  --text-title: #627179;
+  --text-color-bold: #4E5B61;
+
+
+  --color-green: #38BFA0;
+  --color-blue: #008DCB;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  background: var(--background-page);
+}
+
+.pagination {
+  margin: 20px auto;
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: var(--border-card) ;
+  border-color: var(--border-card) ;
+  color: white;
+}
+.pagination > li > a{
+  border: 1px solid var(--border-in) ;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: var(--border-in) ;
+  border-color: var(--border-in);
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: var(--text-label-header)
+}
+
+
