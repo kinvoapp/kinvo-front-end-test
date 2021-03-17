@@ -83,9 +83,9 @@ export default function SideMenu() {
         const {icon,name,selected} = options;
 
         return (
-          <>
+          <div className='wrapper' key={name}>
           <Option theme={selected} >
-            <div>
+            <div className='option'>
               <img src={icon} alt='WalletIcon'/>
               <p dangerouslySetInnerHTML={{__html:name}}/>
             </div>
@@ -98,7 +98,7 @@ export default function SideMenu() {
               <SubOption key={name} theme={selected} ><Marker/>{name}</SubOption>
             )
           }) : null } 
-          </>          
+          </div>          
         )
       })}
     </Container>

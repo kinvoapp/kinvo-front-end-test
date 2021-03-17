@@ -13,6 +13,11 @@ export const Container = styled.div`
   display: flex;
   height: 1000px;
   
+  div.wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
 `;
 
 export const Option = styled.button`
@@ -30,7 +35,7 @@ export const Option = styled.button`
   font-weight: 600;
   text-align: left;
 
-  div {
+  div.option {
     display: flex;
     
     p {
