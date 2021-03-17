@@ -1,11 +1,8 @@
 import { formatedDate, formatedNumber } from "../../helpers";
 
-import Loading from "../../components/Loading";
-
 import * as S from "./styles";
 
 const MyFixedIncomeCards = ({ props }) => {
-  if (!props) return <Loading />;
   return (
     <S.Container>
       <S.Title>

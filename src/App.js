@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import FixedIncomeProvider from "./context/FixedIncome";
+import { FixedIncomeProvider } from "./context/FixedIncome";
 
 import GlobalStyles, { Container } from "./styles/global";
 import theme from "./styles/theme";

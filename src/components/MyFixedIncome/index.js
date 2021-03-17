@@ -32,18 +32,6 @@ const MyFixedIncome = () => {
     setPageNumber(selected);
   };
 
-  const displayCards = myFixedIncomeProducts
-    ?.filter(filterMyFixedIncome)
-    .slice(pagesVisited, pagesVisited + usersPerPage)
-    .map((props) => {
-      return (
-        <MyFixedIncomeCards
-          props={props}
-          key={props.fixedIncome.portfolioProductId}
-        />
-      );
-    });
-
   return (
     <S.Container>
       <S.MyFixedIncomeContainer>
@@ -51,7 +39,17 @@ const MyFixedIncome = () => {
         <FormsFixedIncome />
       </S.MyFixedIncomeContainer>
 
-      {displayCards}
+      {myFixedIncomeProducts
+        ?.filter(filterMyFixedIncome)
+        .slice(pagesVisited, pagesVisited + usersPerPage)
+        .map((props) => {
+          return (
+            <MyFixedIncomeCards
+              props={props}
+              key={props.fixedIncome.portfolioProductId}
+            />
+          );
+        })}
       <ReactPaginate
         previousLabel={"<"}
         nextLabel={">"}
