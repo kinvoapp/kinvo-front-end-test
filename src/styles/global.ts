@@ -1,10 +1,16 @@
 import { createGlobalStyle } from "styled-components";
+import "./fonts/FreeSans.ttf";
 
 export default createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: local('FreeSans'), url(./fonts/FreeSans.ttf) format('truetype');
 }
 
 @media (max-width: 1080px) {
@@ -29,5 +35,11 @@ export default createGlobalStyle`
   html {
     font-size: 62.5%;
   }
+}
+
+body, input, button, textarea, select {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
 `;
