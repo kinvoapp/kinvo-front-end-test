@@ -2,8 +2,13 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+`;
+
+export const Body = styled.div`
+  display: flex;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 80px);
 `;
 
 export default createGlobalStyle`

@@ -6,8 +6,9 @@ export const Container = styled.div`
   background-color: #FFFFFF;
   box-shadow: 0px 3px 5px #CCCCCC80;
   padding: 0 20px;
-  height: 90px;
+  height: 80px;
   width: 100%;
+  z-index: 1;
 `;
 
 export const Logo = styled.img`

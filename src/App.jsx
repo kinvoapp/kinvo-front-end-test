@@ -1,18 +1,19 @@
 import React from 'react';
 import RendaFixa from './pages/RendaFixa';
+import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import GlobalStyle, { Container } from './styles';
+import GlobalStyle, { Container, Body } from './styles';
 
 function App() {
   return (
-    <div>
+    <Container>
       <GlobalStyle />
       <Header />
-      <Container>
-        {/* <Sidebar /> */}
+      <Body>
+        <Sidebar />
         <RendaFixa />
-      </Container>
-    </div>
+      </Body>
+    </Container>
   );
 }
 
