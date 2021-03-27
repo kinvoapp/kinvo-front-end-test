@@ -15,6 +15,11 @@ const MyButtonIcon = styled.div`
     `}
 `
 
+const HorizontalLine = styled.hr`
+    color: #CCCFD1;
+    font-size: 0.5px;
+`
+
 export {
-    MyButtonIcon
+    MyButtonIcon, HorizontalLine
 }
