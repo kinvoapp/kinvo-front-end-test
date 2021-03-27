@@ -37,6 +37,10 @@ export default createGlobalStyle`
   }
 }
 
+body {
+  background: ${({ theme }) => theme.background.page};
+}
+
 body, input, button, textarea, select {
   font-size: 1rem;
   font-weight: 500;
