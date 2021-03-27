@@ -26,4 +26,10 @@ export default createGlobalStyle`
     flex: 1;
     flex-direction: column;
   }
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
