@@ -36,4 +36,6 @@ export const Body = styled.div`
   border: 1px solid #DAE0E3;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
+  flex: 1;
 `;

@@ -21,13 +21,6 @@ export const IncomeName = styled.span`
   font-weight: 500;
 `;
 
-export const IncomeContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-`;
-
 export const CardRow = styled.div`
   display: flex;
   align-items: center;

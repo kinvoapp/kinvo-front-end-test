@@ -13,7 +13,6 @@ import {
   Container,
   Title,
   IncomeName,
-  IncomeContent,
   CardRow,
   MyFixedIncomeHeader,
   MyFixedIncomeFooter,
@@ -185,34 +184,28 @@ function MyFixedIncomesList(props) {
           <Grid container spacing={2}>
             <Grid item xs={4}>
               <IncomeCard title="Título">
-                <IncomeContent>
-                  <Grid item xs={6}>
-                    <IncomeName>{product.fixedIncome.name}</IncomeName>
-                  </Grid>
-                  <IncomeInfo title="Classe" color={colors.lightPurple} value={product.fixedIncome.bondType} />
-                </IncomeContent>
+                <Grid item xs={6}>
+                  <IncomeName>{product.fixedIncome.name}</IncomeName>
+                </Grid>
+                <IncomeInfo title="Classe" color={colors.lightPurple} value={product.fixedIncome.bondType} />
               </IncomeCard>
             </Grid>
             
             <Grid item xs={5}>
               <IncomeCard title="Minha Posição">
-                <IncomeContent>
-                  <IncomeInfo title="Valor Inves." color={colors.green} value={product.position.valueApplied} />
-                  <IncomeInfo title="Saldo Bruto" color={colors.green} value={product.position.equity} />
-                  <IncomeInfo title="Rent." color={colors.green} value={product.position.profitability} />
-                  <IncomeInfo title="% da cart." color={colors.green} value={product.position.portfolioPercentage} />
-                  <IncomeInfo title={product.position.indexerLabel} color={colors.green} value={product.position.indexerValue} />
-                  <IncomeInfo title={`Sobre ${product.position.indexerLabel}`} color={colors.green} value={product.position.percentageOverIndexer} />
-                </IncomeContent>
+                <IncomeInfo title="Valor Inves." color={colors.green} value={product.position.valueApplied} />
+                <IncomeInfo title="Saldo Bruto" color={colors.green} value={product.position.equity} />
+                <IncomeInfo title="Rent." color={colors.green} value={product.position.profitability} />
+                <IncomeInfo title="% da cart." color={colors.green} value={product.position.portfolioPercentage} />
+                <IncomeInfo title={product.position.indexerLabel} color={colors.green} value={product.position.indexerValue} />
+                <IncomeInfo title={`Sobre ${product.position.indexerLabel}`} color={colors.green} value={product.position.percentageOverIndexer} />
               </IncomeCard>
             </Grid>
             
             <Grid item xs={3}>
               <IncomeCard title="Vencimento">
-                <IncomeContent>
-                  <IncomeInfo title="Data Venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.date} />
-                  <IncomeInfo title="Dias até venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.daysUntilExpiration} />
-                </IncomeContent>
+                <IncomeInfo title="Data Venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.date} />
+                <IncomeInfo title="Dias até venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.daysUntilExpiration} />
               </IncomeCard>
             </Grid>
           </Grid>
