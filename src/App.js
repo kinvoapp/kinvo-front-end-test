@@ -4,8 +4,8 @@ import NavVertical from "./componentes/NavVertical";
 function App() {
   return (
     <div>
-    <Header />
-    <NavVertical />
+      <Header />
+      <NavVertical />
     </div>
   );
 }

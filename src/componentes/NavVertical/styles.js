@@ -3,8 +3,17 @@ import styled, { css } from 'styled-components';
 const Menu = styled.ul`
     background-color: #fff;
     max-width: 320px;
-    ${({ noListStyle }) => noListStyle ? css ` list-style: none; ` : css `list-style-type: disc;`}
-    ${({ noDisplay }) => noDisplay ? css ` display: none; ` : false}
+    
+    ${({ noListStyle }) => noListStyle ?
+                                    css` 
+                                        list-style: none; 
+                                        position: relative;
+                                        top: 90px;
+                                    ` :
+                                        css`list-style-type: disc;`
+    }
+    
+    ${({ noDisplay }) => noDisplay ? css` display: none; ` : false}
     height: 100%;
 `
 
@@ -35,7 +44,7 @@ Menu.Li.Expand = styled.span`
 Menu.WrapperIconTitle = styled.div`
     display: flex;
     align-items: center;
-`; 
+`;
 
 export {
     Menu

@@ -8,6 +8,10 @@ const WrapperHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 `
 
 const NomeEmpresa = styled.div`
@@ -29,6 +33,9 @@ DadosHeader.WrapperIconDados = styled.div`
     display: flex;
     align-items: center;
     margin-right: 50px;
+    @media(max-width: 800px){
+        ${({menuLogado}) => !menuLogado ? css`display: none;` : false}
+    }
 `;
 
 DadosHeader.Dados = styled.div`
@@ -40,6 +47,7 @@ DadosHeader.Dados.Valor = styled.h3`
 color: #4E5B61;
     font-weight: 800;
 `;
+
 
 export {
     WrapperHeader,

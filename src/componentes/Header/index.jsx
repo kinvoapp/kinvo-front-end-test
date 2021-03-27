@@ -61,7 +61,7 @@ function Header(props) {
                         </DadosHeader.Dados.Valor>
                     </DadosHeader.Dados>
                 </DadosHeader.WrapperIconDados>
-                <DadosHeader.WrapperIconDados>
+                <DadosHeader.WrapperIconDados menuLogado>
                     <MyButtonIcon colorBackground="#4C309B">
                         ---
                     </MyButtonIcon>
