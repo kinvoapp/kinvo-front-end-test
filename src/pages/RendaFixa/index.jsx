@@ -5,16 +5,14 @@ import RendaFixaService from '../../services/RendaFixaService';
 import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
 import IncomeCard from '../../components/IncomeCard';
+import IncomeInfo from '../../components/IncomeInfo';
 import Select from '../../components/FormElements/Select';
 import TextField from '../../components/FormElements/TextField';
-import colors from '../../utils/colors';
+import colors from '../../constants/colors';
 import {
   Container,
   Title,
   IncomeName,
-  IncomeInfo,
-  IncomeTitle,
-  IncomeValue,
   IncomeContent,
   CardRow,
   MyFixedIncomeHeader,
@@ -191,10 +189,7 @@ function MyFixedIncomesList(props) {
                   <Grid item xs={6}>
                     <IncomeName>{product.fixedIncome.name}</IncomeName>
                   </Grid>
-                  <IncomeInfo>
-                    <IncomeTitle>Classe</IncomeTitle>
-                    <IncomeValue color={colors.lightPurple}>{product.fixedIncome.bondType}</IncomeValue>
-                  </IncomeInfo>
+                  <IncomeInfo title="Classe" color={colors.lightPurple} value={product.fixedIncome.bondType} />
                 </IncomeContent>
               </IncomeCard>
             </Grid>
@@ -202,30 +197,12 @@ function MyFixedIncomesList(props) {
             <Grid item xs={5}>
               <IncomeCard title="Minha Posição">
                 <IncomeContent>
-                  <IncomeInfo>
-                    <IncomeTitle>Valor Inves.</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.valueApplied}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo>
-                    <IncomeTitle>Saldo Bruto</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.equity}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo>
-                    <IncomeTitle>Rent.</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.profitability}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo>
-                    <IncomeTitle>% da cart.</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.portfolioPercentage}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo>
-                    <IncomeTitle>{product.position.indexerLabel}</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.indexerValue}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo>
-                    <IncomeTitle>Sobre {product.position.indexerLabel}</IncomeTitle>
-                    <IncomeValue color={colors.green}>{product.position.percentageOverIndexer}</IncomeValue>
-                  </IncomeInfo>
+                  <IncomeInfo title="Valor Inves." color={colors.green} value={product.position.valueApplied} />
+                  <IncomeInfo title="Saldo Bruto" color={colors.green} value={product.position.equity} />
+                  <IncomeInfo title="Rent." color={colors.green} value={product.position.profitability} />
+                  <IncomeInfo title="% da cart." color={colors.green} value={product.position.portfolioPercentage} />
+                  <IncomeInfo title={product.position.indexerLabel} color={colors.green} value={product.position.indexerValue} />
+                  <IncomeInfo title={`Sobre ${product.position.indexerLabel}`} color={colors.green} value={product.position.percentageOverIndexer} />
                 </IncomeContent>
               </IncomeCard>
             </Grid>
@@ -233,14 +210,8 @@ function MyFixedIncomesList(props) {
             <Grid item xs={3}>
               <IncomeCard title="Vencimento">
                 <IncomeContent>
-                  <IncomeInfo item style={{ flex: 1, justifyContent: 'center' }}>
-                    <IncomeTitle>Data Venc.</IncomeTitle>
-                    <IncomeValue color={colors.blue}>{product.due.date}</IncomeValue>
-                  </IncomeInfo>
-                  <IncomeInfo item style={{ flex: 1, justifyContent: 'center' }}>
-                    <IncomeTitle>Dias até venc.</IncomeTitle>
-                    <IncomeValue color={colors.blue}>{product.due.daysUntilExpiration}</IncomeValue>
-                  </IncomeInfo>
+                  <IncomeInfo title="Data Venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.date} />
+                  <IncomeInfo title="Dias até venc." item style={{ flex: 1, justifyContent: 'center' }} color={colors.blue} value={product.due.daysUntilExpiration} />
                 </IncomeContent>
               </IncomeCard>
             </Grid>

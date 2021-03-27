@@ -21,24 +21,6 @@ export const IncomeName = styled.span`
   font-weight: 500;
 `;
 
-export const IncomeTitle = styled.span`
-  color: #4E5B61;
-  font-size: 9px;
-  text-transform: uppercase;
-`;
-
-export const IncomeValue = styled.span`
-  color: ${props => props.color};
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-`;
-
-export const IncomeInfo = styled(Grid)`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const IncomeContent = styled.div`
   display: flex;
   align-items: center;
