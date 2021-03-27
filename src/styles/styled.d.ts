@@ -8,6 +8,7 @@ declare module "styled-components" {
       focus: string;
     };
     shadow: {
+      header: string;
       section: string;
       item: string;
     };

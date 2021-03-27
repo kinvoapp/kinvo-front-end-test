@@ -7,6 +7,7 @@ const defaultTheme: DefaultTheme = {
     focus: "#F8FAFB",
   },
   shadow: {
+    header: "0px 3px 20px rgba(112, 123, 129, 0.1)",
     section: "0px 2px 6px #0000000A",
     item: "0px 2px 20px #0000000D",
   },
