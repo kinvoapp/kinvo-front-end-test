@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Kinvo Challenge &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project made for Kinvo job's challenge.
 
-## Available Scripts
+## Installing / Getting started
 
-In the project directory, you can run:
+It's a develop project to run this you'll need Node.js, Yarn/NPM and a Internet Connection to get data. Clone this repository to see it running, it will pull the project to your machine:
 
-### `yarn start`
+```shell
+git clone https://github.com/gabriel-codes/kinvo-front-end-test.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then go to "challenge" directory and run Yarn or NPM to install dependencies. Commands list bellow:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```shell
+cd challenge
+yarn
+```
 
-### `yarn test`
+Or if using NPM:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```shell
+cd challenge
+npm install
+```
 
-### `yarn build`
+Then run this project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Or if using NPM:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+npm start
+```
 
-### `yarn eject`
+### Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```json
+{
+  "react": "^17.0.2",
+  "styled-components": "^5.2.1"
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run this project you'll need have installed in your machine Node and Yarn/NPM.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Deploying / Publishing
 
-## Learn More
+If you wanna to deploy your version of this project you can connect your Github account to Netlify and auto publish by linking your repository.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Style guide
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All of the project style was delivered by Kinvo. You can find the prototype on root of this fork.
 
-### Code Splitting
+## Api Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Was provided by Kinvo. You can find the endpoint on the root of this fork.
 
-### Analyzing the Bundle Size
+## Licensing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It's a MIT license. You can find the license file on the root of this fork.
