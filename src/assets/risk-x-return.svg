@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.875" height="20.875" viewBox="0 0 20.875 20.875">
+  <circle id="stroke" cx="9.837" cy="9.837" r="9.837" transform="translate(0.6 0.6)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  <circle id="stroke-2" data-name="stroke" cx="4.282" cy="4.282" r="4.282" transform="translate(6.156 6.155)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  <line id="stroke-3" data-name="stroke" y1="2.813" x2="2.813" transform="translate(3.878 14.194)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  <line id="stroke-4" data-name="stroke" y1="2.813" x2="2.813" transform="translate(14.127 3.945)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  <line id="stroke-5" data-name="stroke" x1="2.813" y1="2.813" transform="translate(14.127 14.194)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  <line id="stroke-6" data-name="stroke" x1="2.813" y1="2.813" transform="translate(3.878 3.945)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+</svg>

@@ -1,5 +1,6 @@
 //---------------------------------------------------------------< components >
 import { Header } from "./components/Header";
+import { Menu } from "./components/Menu";
 //-----------------------------------------------------------------< contexts >
 import { ThemeProvider } from "styled-components";
 //-------------------------------------------------------------------< styles >
@@ -12,6 +13,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
       <Header />
+      <Menu />
     </ThemeProvider>
   );
 }
