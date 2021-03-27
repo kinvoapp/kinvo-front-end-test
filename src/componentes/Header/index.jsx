@@ -1,3 +1,4 @@
+import { MyButtonIcon } from "../utils/styles";
 import { WrapperHeader, NomeEmpresa, DadosHeader } from "./styles";
 
 function Header(props) {
@@ -9,9 +10,9 @@ function Header(props) {
             </NomeEmpresa>
             <DadosHeader>
                 <DadosHeader.WrapperIconDados>
-                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                    <MyButtonIcon colorBackground="#DAE0E3">
                         0
-                    </DadosHeader.Dados.ButtonIcon>
+                    </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
                             Saldo Bruto
@@ -22,9 +23,9 @@ function Header(props) {
                     </DadosHeader.Dados>
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
-                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                    <MyButtonIcon colorBackground="#DAE0E3">
                         0
-                    </DadosHeader.Dados.ButtonIcon>
+                    </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
                             Saldo Brutoo
@@ -35,9 +36,9 @@ function Header(props) {
                     </DadosHeader.Dados>
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
-                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                    <MyButtonIcon colorBackground="#DAE0E3">
                         0
-                    </DadosHeader.Dados.ButtonIcon>
+                    </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
                             Saldo Brutooo
@@ -48,9 +49,9 @@ function Header(props) {
                     </DadosHeader.Dados>
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
-                    <DadosHeader.Dados.ButtonIcon colorBackground="#4C309B">
+                    <MyButtonIcon colorBackground="#4C309B">
                         >
-                    </DadosHeader.Dados.ButtonIcon>
+                    </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
                             Carteira
@@ -61,9 +62,9 @@ function Header(props) {
                     </DadosHeader.Dados>
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
-                    <DadosHeader.Dados.ButtonIcon colorBackground="#4C309B">
+                    <MyButtonIcon colorBackground="#4C309B">
                         ---
-                    </DadosHeader.Dados.ButtonIcon>
+                    </MyButtonIcon>
                 </DadosHeader.WrapperIconDados>
             </DadosHeader>
         </WrapperHeader>

@@ -41,21 +41,6 @@ color: #4E5B61;
     font-weight: 800;
 `;
 
-DadosHeader.Dados.ButtonIcon = styled.div`
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    ${({ colorBackground }) => css`
-        background-color: ${colorBackground};
-    `}
-`
-
 export {
     WrapperHeader,
     NomeEmpresa,
