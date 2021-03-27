@@ -1,12 +1,18 @@
 import Header from "./componentes/Header";
 import NavVertical from "./componentes/NavVertical";
+import { ContentApp, WrapperApp, WrapperMenu } from "./styles";
 
 function App() {
   return (
-    <div>
+    <WrapperApp>
       <Header />
-      <NavVertical />
-    </div>
+      <WrapperMenu>
+        <NavVertical />
+      </WrapperMenu>
+      <ContentApp>
+        <h1 style={{ coler: 'red' }}>oi</h1>
+      </ContentApp>
+    </WrapperApp>
   );
 }
 

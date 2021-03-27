@@ -2,13 +2,9 @@ import styled, { css } from 'styled-components';
 
 const Menu = styled.ul`
     background-color: #fff;
-    max-width: 320px;
-    
     ${({ noListStyle }) => noListStyle ?
                                     css` 
                                         list-style: none; 
-                                        position: relative;
-                                        top: 90px;
                                     ` :
                                         css`list-style-type: disc;`
     }

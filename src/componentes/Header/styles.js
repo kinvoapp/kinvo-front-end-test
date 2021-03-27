@@ -9,9 +9,11 @@ const WrapperHeader = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    grid-area: header;
+
     position: fixed;
-    z-index: 1;
     width: 100%;
+    z-index: 1;
 `
 
 const NomeEmpresa = styled.div`
