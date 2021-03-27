@@ -23,7 +23,7 @@ declare module "styled-components" {
       info: string;
     };
     icon: {
-      focusbackground: string;
+      focusBackground: string;
       background: string;
       tiny: string;
     };

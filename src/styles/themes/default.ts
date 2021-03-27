@@ -22,7 +22,7 @@ const defaultTheme: DefaultTheme = {
     info: "#A5A5A5",
   },
   icon: {
-    focusbackground: "#4C309B",
+    focusBackground: "#4C309B",
     background: "#DAE0E3",
     tiny: "#9DA5AC",
   },

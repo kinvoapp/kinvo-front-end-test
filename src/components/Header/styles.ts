@@ -4,6 +4,7 @@ export const Container = styled.header`
   width: 100vw;
   height: 5.5rem;
   padding: 0 1.75rem;
+  z-index: 10;
 
   position: fixed;
   display: flex;
@@ -13,9 +14,39 @@ export const Container = styled.header`
   background: ${({ theme }) => theme.background.component};
   box-shadow: ${({ theme }) => theme.shadow.header};
 
+  > img {
+    height: 1.75rem;
+    margin-right: 1.75rem;
+  }
+
   .infos {
+    height: 100%;
+    margin-left: 1.25rem;
+    padding-top: 1rem;
+
+    align-self: flex-end;
+    overflow-x: scroll;
     display: flex;
+    align-items: center;
     gap: 2.25rem;
+
+    ::-webkit-scrollbar {
+      height: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.background.component};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border: 3px solid ${({ theme }) => theme.background.component};
+      background: ${({ theme }) => theme.background.focus};
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${({ theme }) => theme.background.page};
+    }
   }
 `;
 
@@ -25,8 +56,8 @@ interface InfoProps {
 
 export const Info = styled.div<InfoProps>`
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: auto max-content;
+  grid-template-rows: max-content max-content;
   grid-template-areas: "img p" "img strong";
 
   div {
@@ -40,7 +71,7 @@ export const Info = styled.div<InfoProps>`
     justify-content: center;
 
     background: ${({ focus, theme }) =>
-      focus ? theme.icon.focusbackground : theme.icon.background};
+      focus ? theme.icon.focusBackground : theme.icon.background};
     border-radius: 50%;
   }
 
