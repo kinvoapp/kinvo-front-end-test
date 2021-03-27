@@ -1,6 +1,13 @@
 import { HorizontalLine, MyButtonIcon } from "../utils/styles"
 import { Menu } from "./styles"
 
+// {
+//     titulo: '',
+//     sub_navegacao: [],
+//     icon: ,
+//     colorBackground: '#DAE0E3',
+// },
+
 function NavVertical() {
     const dados_navegacao = [
         {
@@ -8,6 +15,18 @@ function NavVertical() {
             sub_navegacao: [],
             icon: 0,
             colorBackground: '#DAE0E3'
+        },
+        {
+            titulo: 'Meus Produtos',
+            sub_navegacao: [],
+            icon: 1,
+            colorBackground: '#DAE0E3',
+        },
+        {
+            titulo: 'Meus Proventos',
+            sub_navegacao: [],
+            icon: 2,
+            colorBackground: '#DAE0E3',
         },
         {
             titulo: 'Classe de Ativos',
@@ -26,8 +45,32 @@ function NavVertical() {
                 },
             ],
             colorBackground: '#DAE0E3',
-            icon: 1
-        }
+            icon: 3
+        },
+        {
+            titulo: 'Rentabilidade Real',
+            sub_navegacao: [],
+            icon: 4,
+            colorBackground: '#DAE0E3',
+        },
+        {
+            titulo: 'Projeção da carteira',
+            sub_navegacao: [],
+            icon: 5,
+            colorBackground: '#DAE0E3',
+        },
+        {
+            titulo: 'Risco x Retorno',
+            sub_navegacao: [],
+            icon: 6,
+            colorBackground: '#DAE0E3',
+        },
+        {
+            titulo: 'Cobertura do FGC',
+            sub_navegacao: [],
+            icon: 7,
+            colorBackground: '#DAE0E3',
+        },
     ]
 
     return (
@@ -46,10 +89,17 @@ function NavVertical() {
                         </Menu.WrapperIconTitle>
                         <HorizontalLine />
                         {item.sub_navegacao.length > 0 && (
-                            <Menu>
+                            <Menu noDisplay>
                                 {item.sub_navegacao.map((sub_nav, index_sub_nav) => (
                                     <>
-                                        <Menu.Li key={index_sub_nav}>{sub_nav.titulo}</Menu.Li>
+                                        <Menu.Li key={index_sub_nav}>
+                                            <p>{sub_nav.titulo}
+                                                <Menu.Li.Expand>
+                                                    >
+                                            </Menu.Li.Expand>
+                                            </p>
+
+                                        </Menu.Li>
                                         <HorizontalLine />
                                     </>
                                 ))}
