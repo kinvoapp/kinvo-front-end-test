@@ -1,3 +1,5 @@
+//---------------------------------------------------------------< components >
+import { Header } from "./components/Header";
 //-----------------------------------------------------------------< contexts >
 import { ThemeProvider } from "styled-components";
 //-------------------------------------------------------------------< styles >
@@ -9,7 +11,7 @@ function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
-      <div className="App">Hello world</div>
+      <Header />
     </ThemeProvider>
   );
 }
