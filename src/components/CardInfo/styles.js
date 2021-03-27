@@ -10,6 +10,7 @@ export const CardHeader = styled.div`
   display: flex;
   border-bottom: ${props => props.border ? '2px solid #EEF2F4' : 'none' };
   flex: 1;
+  align-items: center;
 `;
 
 export const CardFooter = styled.div`
@@ -20,7 +21,6 @@ export const CardFooter = styled.div`
 
 export const CardBody = styled.div`
   display: flex;
-  /* padding: 15px; */
   flex-direction: column;
 `;
 

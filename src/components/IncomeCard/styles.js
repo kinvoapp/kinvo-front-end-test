@@ -10,8 +10,9 @@ export const Container = styled.div`
 export const Tag = styled.div`
   display: flex;
   align-self: flex-start;
+  align-items: center;
   padding: 5px 10px;
-  font-size: 9px;
+  font-size: 11px;
   z-index: 1;
   color: #4E5B61;
   margin-bottom: -1px;
@@ -21,6 +22,11 @@ export const Tag = styled.div`
   border-top: 1px solid #DAE0E3;
   border-left: 1px solid #DAE0E3;
   border-right: 1px solid #DAE0E3;
+`;
+
+export const Title = styled.span`
+  margin-right: 10px;
+  font-size: 9px;
 `;
 
 export const Body = styled.div`

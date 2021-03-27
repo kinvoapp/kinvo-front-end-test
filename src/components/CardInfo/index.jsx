@@ -1,21 +1,20 @@
 import React from 'react';
-import { Container, CardHeader, CardTitle, CardBody, CardFooter } from './styles';
+import { Container, CardHeader, CardTitle, CardBody } from './styles';
 import Card from '../Card';
 
 function CardInfo(props) {
-  const { title, titleBorder, children, footer } = props;
+  const { title, titleBorder, headerOptions, footerOptions, children } = props;
   return (
     <Card>
       <Container>
         <CardHeader border={titleBorder}>
           <CardTitle>{title}</CardTitle>
+          {headerOptions}
         </CardHeader>
         <CardBody>
           {children}
         </CardBody>
-        {/* <CardFooter border={titleBorder}>
-          {footer}
-        </CardFooter> */}
+        {footerOptions}
       </Container>
     </Card>
   )
