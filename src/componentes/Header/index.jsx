@@ -1,9 +1,71 @@
-import { WrapperHeader } from "./styles";
+import { WrapperHeader, NomeEmpresa, DadosHeader } from "./styles";
 
-function Header(props){
-    return(
+function Header(props) {
+    return (
         <WrapperHeader>
-            <h1>Hello World!!</h1>
+            <NomeEmpresa>
+                <NomeEmpresa.H1Kinvo>Kinvo</NomeEmpresa.H1Kinvo>
+                <h1>premium</h1>
+            </NomeEmpresa>
+            <DadosHeader>
+                <DadosHeader.WrapperIconDados>
+                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                        0
+                    </DadosHeader.Dados.ButtonIcon>
+                    <DadosHeader.Dados>
+                        <DadosHeader.Dados.Titulo>
+                            Saldo Bruto
+                        </DadosHeader.Dados.Titulo>
+                        <DadosHeader.Dados.Valor>
+                            {130521230.02.toLocaleString('pt-BR')}
+                        </DadosHeader.Dados.Valor>
+                    </DadosHeader.Dados>
+                </DadosHeader.WrapperIconDados>
+                <DadosHeader.WrapperIconDados>
+                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                        0
+                    </DadosHeader.Dados.ButtonIcon>
+                    <DadosHeader.Dados>
+                        <DadosHeader.Dados.Titulo>
+                            Saldo Brutoo
+                        </DadosHeader.Dados.Titulo>
+                        <DadosHeader.Dados.Valor>
+                            {130521230.02.toLocaleString('pt-BR')}
+                        </DadosHeader.Dados.Valor>
+                    </DadosHeader.Dados>
+                </DadosHeader.WrapperIconDados>
+                <DadosHeader.WrapperIconDados>
+                    <DadosHeader.Dados.ButtonIcon colorBackground="#DAE0E3">
+                        0
+                    </DadosHeader.Dados.ButtonIcon>
+                    <DadosHeader.Dados>
+                        <DadosHeader.Dados.Titulo>
+                            Saldo Brutooo
+                        </DadosHeader.Dados.Titulo>
+                        <DadosHeader.Dados.Valor>
+                            {130521230.02.toLocaleString('pt-BR')}
+                        </DadosHeader.Dados.Valor>
+                    </DadosHeader.Dados>
+                </DadosHeader.WrapperIconDados>
+                <DadosHeader.WrapperIconDados>
+                    <DadosHeader.Dados.ButtonIcon colorBackground="#4C309B">
+                        >
+                    </DadosHeader.Dados.ButtonIcon>
+                    <DadosHeader.Dados>
+                        <DadosHeader.Dados.Titulo>
+                            Carteira
+                        </DadosHeader.Dados.Titulo>
+                        <DadosHeader.Dados.Valor>
+                            Minha carteira
+                        </DadosHeader.Dados.Valor>
+                    </DadosHeader.Dados>
+                </DadosHeader.WrapperIconDados>
+                <DadosHeader.WrapperIconDados>
+                    <DadosHeader.Dados.ButtonIcon colorBackground="#4C309B">
+                        ---
+                    </DadosHeader.Dados.ButtonIcon>
+                </DadosHeader.WrapperIconDados>
+            </DadosHeader>
         </WrapperHeader>
     )
 }
