@@ -1,55 +1,70 @@
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+# Getting Started with Create React App
 
-# Desafio Front-end Web
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga.
+## Available Scripts
 
-## Instruções:
+In the project directory, you can run:
 
-1. Faça um fork deste repositório;
-2. Implemente o que é proposto no [protótipo](https://github.com/kinvoapp/kinvo-front-end-test/blob/master/material/layout.xd). **! Importante !** A implementação dos gráficos é opcional para candidatos a vagas de nível trainee/estágio, junior e pleno;
-3. O conjunto mínimo de tecnologias a ser utilizado é HTML, CSS e JS (ES6);
-4. Crie um passo a passo de como rodar sua aplicação ([sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md));
-5. Após terminar, submeta um pull request e aguarde a avaliação;
+### `yarn start`
 
-## Requisitos mínimos:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### ○ Trainee/Estágio
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto;
+### `yarn test`
 
-### ○ Junior
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Todos os requisitos exigidos para o nível Estágio/Trainee;
-- Exibir dados reais obtidos a partir da API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`;
-- Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
+### `yarn build`
 
-### ○ Pleno
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Todos os requisitos exigidos para o nível Junior;
-- Fazer uso da biblioteca [React](https://pt-br.reactjs.org/);
-- Fazer uso da biblioteca [Styled Components](https://styled-components.com/);
-- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### ○ Sênior/Analista
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Todos os requisitos exigidos para o nível Pleno;
-- Projetar arquitetura minimamente escalável;
-- Cobertura de testes utilizando o framework de sua preferência. [Jest](https://jestjs.io/) e [Enzyme](https://enzymejs.github.io/enzyme/) são as nossas sugestões;
-- Gráficos funcionais utilizando a biblioteca de sua preferência. [Highcharts](https://www.highcharts.com/) é a nossa sugestão;
+### `yarn eject`
 
-## Notas:
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- **! Importante !** O cumprimento dos requisitos solicitados para uma vaga em determinado nível não é garantia de aprovação. Focamos em avaliar a forma como os requisitos foram cumpridos.
-- Apesar da listagem de requisitos mínimos acima, caso não tenha tido tempo suficiente ou tenha se esbarrado em alguma dificuldade, entregue o desafio ainda que incompleto e conte-nos na descrição do pull request quais foram as suas maiores dificuldades.
-  Não se preocupe, avaliaremos ainda assim! :)
-- O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/adc938b2-4a7a-4837-a849-37d803b83d26-f89a/);
-- Caso não tenha familiaridade com o Adobe XD, os ativos do protótipo podem ser exportados utilizando o atalho **CTRL + E** ou **CMD + E**. Caso o seu sistema operacional não seja compatível com o software, você pode acessar o protótipo também através do link citado no item anterior;
-- As bibliotecas e demais recursos sugeridos por nós em todos os níveis de exigência são meras sugestões (com exceção do React). Sinta-se a vontade para fazer a escolha que te deixa mais confortável e inclusive para sugerir ;);
-- Lembre-se de fazer um _fork_ deste repositório! Apenas cloná-lo vai te impedir de criar o _pull request_ e dificultar a entrega;
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Crie uma [issue](https://github.com/kinvoapp/kinvo-front-end-test/issues) e descreva o que achar necessário.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**Sucesso!**
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
