@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
-import Card from '../../components/Card';
-import { Container, Title } from './styles';
+import IncomeCard from '../../components/IncomeCard';
+import { Container, Title, IncomeName, IncomeInfo, IncomeTitle, IncomeValue, IncomeContent, CardRow } from './styles';
 
 function RendaFixa() {
   const [ infomations, setInformations ] = useState();
+  const [ fixedIncomes, setFixedIncomes ] = useState();
 
   useEffect(() => {
     if (!infomations) {
@@ -19,7 +20,56 @@ function RendaFixa() {
         { title: "% Sobre CDI", subtitle: "320%" },
       ])
     }
-  }, [infomations])
+
+    if (!fixedIncomes) {
+      setFixedIncomes([
+        {
+          "due":{
+            "date":"14/08/2024",
+            "daysUntilExpiration":1276
+          },
+          "fixedIncome":{
+            "bondType":"Tesouro Direto",
+            "name":"Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+            "portfolioProductId":2068820
+          },
+          "hasBalance":1,
+          "position":{
+            "equity":63894.24,
+            "indexerLabel":"CDI",
+            "indexerValue":14.06,
+            "percentageOverIndexer":141.05,
+            "portfolioPercentage":12.05,
+            "profitability":19.83,
+            "valueApplied":69970.57
+          },
+          "productHasQuotation":1
+        },
+        {
+          "due":{
+            "date":"14/08/2024",
+            "daysUntilExpiration":1276
+          },
+          "fixedIncome":{
+            "bondType":"Tesouro Direto",
+            "name":"Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+            "portfolioProductId":2068820
+          },
+          "hasBalance":1,
+          "position":{
+            "equity":63894.24,
+            "indexerLabel":"CDI",
+            "indexerValue":14.06,
+            "percentageOverIndexer":141.05,
+            "portfolioPercentage":12.05,
+            "profitability":19.83,
+            "valueApplied":69970.57
+          },
+          "productHasQuotation":1
+        },
+      ])
+    }
+  }, [infomations, fixedIncomes])
 
   return (
     <Container>
@@ -43,7 +93,75 @@ function RendaFixa() {
         </Grid>
 
         <Grid item xs={12}>
-          <CardInfo titleBorder title="Minhas Rendas Fixas" />
+          <CardInfo titleBorder title="Minhas Rendas Fixas">
+            {
+              fixedIncomes?.map((fixedIncome, index) => (
+                <CardRow index={index}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                      <IncomeCard title="Título">
+                        <IncomeContent>
+                          <Grid item xs={6}>
+                            <IncomeName>{fixedIncome.fixedIncome.name}</IncomeName>
+                          </Grid>
+                          <IncomeInfo>
+                            <IncomeTitle>Classe</IncomeTitle>
+                            <IncomeValue color="#8A51BA">{fixedIncome.fixedIncome.bondType}</IncomeValue>
+                          </IncomeInfo>
+                        </IncomeContent>
+                      </IncomeCard>
+                    </Grid>
+                    
+                    <Grid item xs={5}>
+                      <IncomeCard title="Minha Posição">
+                        <IncomeContent>
+                          <IncomeInfo>
+                            <IncomeTitle>Valor Inves.</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.valueApplied}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo>
+                            <IncomeTitle>Saldo Bruto</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.equity}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo>
+                            <IncomeTitle>Rent.</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.profitability}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo>
+                            <IncomeTitle>% da cart.</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.portfolioPercentage}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo>
+                            <IncomeTitle>{fixedIncome.position.indexerLabel}</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.indexerValue}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo>
+                            <IncomeTitle>Sobre {fixedIncome.position.indexerLabel}</IncomeTitle>
+                            <IncomeValue color="#38BFA0">{fixedIncome.position.percentageOverIndexer}</IncomeValue>
+                          </IncomeInfo>
+                        </IncomeContent>
+                      </IncomeCard>
+                    </Grid>
+                    
+                    <Grid item xs={3}>
+                      <IncomeCard title="Vencimento">
+                        <IncomeContent>
+                          <IncomeInfo item style={{ flex: 1, justifyContent: 'center' }}>
+                            <IncomeTitle>Data Venc.</IncomeTitle>
+                            <IncomeValue color="#008DCB">{fixedIncome.due.date}</IncomeValue>
+                          </IncomeInfo>
+                          <IncomeInfo item style={{ flex: 1, justifyContent: 'center' }}>
+                            <IncomeTitle>Dias até venc.</IncomeTitle>
+                            <IncomeValue color="#008DCB">{fixedIncome.due.daysUntilExpiration}</IncomeValue>
+                          </IncomeInfo>
+                        </IncomeContent>
+                      </IncomeCard>
+                    </Grid>
+                  </Grid>
+                </CardRow>
+              ))
+            }
+          </CardInfo>
         </Grid>
 
         <Grid item xs={6}>

@@ -20,7 +20,8 @@ export const CardFooter = styled.div`
 
 export const CardBody = styled.div`
   display: flex;
-  padding: 15px;
+  /* padding: 15px; */
+  flex-direction: column;
 `;
 
 export const CardTitle = styled.span`
