@@ -5,4 +5,24 @@ export const SidebarComponent = styled.aside`
   display: flex;
   background-color: white;
   flex-direction: column;
+  nav {
+    display: flex;
+    ul {
+      width: 100%;
+    }
+  }
+`;
+
+export const NavItem = styled.li`
+  flex: 1;
+  ul {
+    width: 100%;
+  }
+
+  .subMenu {
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;
