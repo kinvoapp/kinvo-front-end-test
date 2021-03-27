@@ -16,8 +16,7 @@ function Select(props) {
         label={label}
         onChange={(e) => onChange(e.target.value)}
       >
-        <MenuItem value="" />
-        { options?.map((option) => <MenuItem value={option.value}>{option.content}</MenuItem>) }
+        { options?.map((option) => <MenuItem key={option.value} value={option.value}>{option.name}</MenuItem>) }
       </SelectField>
     </Container>
   )

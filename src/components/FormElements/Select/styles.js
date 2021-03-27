@@ -20,6 +20,7 @@ export const Container = styled(FormControl)`
 `;
 
 export const SelectField = styled(Select)`
+  font-size: 13px;
   & .MuiSelect-outlined {
     padding: 8px;
   }
