@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 //-------------------------------------------------------------------< styles >
 import defaultTheme from "./styles/themes/default";
 import GlobalStyles from "./styles/global";
+import { FixedIncomeFund } from "./components/AssetClass/FixedIncomeFund";
 //==================================================================[ < App > ]
 function App() {
   //-----------------------------------------------------------------< return >
@@ -14,6 +15,7 @@ function App() {
       <GlobalStyles />
       <Header />
       <Menu />
+      <FixedIncomeFund />
     </ThemeProvider>
   );
 }
