@@ -8,6 +8,12 @@ import { arr_dados } from "./utils";
 
 function MinhasRendasFixas() {
     const [arrRendasFixas, setArrRendasFixas] = useState(arr_dados);
+    const [busca, setBusca] = useState("");
+
+    const changeBusca = e => {
+        setBusca(e.target.value);
+    }
+
     return (
         <WrapperRendasFixas>
             <WrapperRendasFixas.Header>
@@ -17,7 +23,7 @@ function MinhasRendasFixas() {
                         <option value="titulo">Titulo</option>
                         <option value="vencimento">Vencimento</option>
                     </WrapperFiltroBusca.Select>
-                    <WrapperFiltroBusca.Input type="text" placeholder='Faça uma busca...' />
+                    <WrapperFiltroBusca.Input value={busca} onChange={changeBusca} type="text" placeholder='Faça uma busca...' />
                 </WrapperFiltroBusca>
             </WrapperRendasFixas.Header>
             <HorizontalLine />
