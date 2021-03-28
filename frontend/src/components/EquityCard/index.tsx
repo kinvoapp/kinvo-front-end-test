@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { formatToCurrency } from '../../utils/formatters';
+
 import { Card } from './styles';
 
 interface CardData {
@@ -7,14 +9,6 @@ interface CardData {
   value: number;
   prefix?: boolean;
   suffix?: boolean;
-}
-
-function toCurrency(value: number): string {
-  const v = new Intl.NumberFormat('pt-BR', {
-    currency: 'BRL',
-    minimumFractionDigits: 2
-  }).format(value);
-  return v;
 }
 
 const EquityCard: React.FC<CardData> = ({
@@ -28,7 +22,7 @@ const EquityCard: React.FC<CardData> = ({
       <h3>{title}</h3>
       <p>
         {prefix && 'R$ '}
-        {toCurrency(value)}
+        {formatToCurrency(value)}
         {suffix && '%'}
       </p>
     </div>
