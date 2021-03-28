@@ -6,7 +6,7 @@ const WrapperApp = styled.div`
         "header header header"
         "aside main main";
     grid-gap: 1rem;
-    grid-template-columns: auto 100%;
+    grid-template-columns: 20%;
     grid-template-rows: auto 100vh auto;
 `
 const WrapperMenu = styled.div`

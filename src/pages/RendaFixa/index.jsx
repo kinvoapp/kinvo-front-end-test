@@ -1,8 +1,12 @@
+import MinhasRendasFixas from "../../componentes/MinhasRendasFixas";
 import { TituloPagina } from "../../componentes/utils/styles";
 
-function RendaFixa(){
+function RendaFixa() {
     return (
-        <TituloPagina>Renda Fixa</TituloPagina>
+        <div>
+            <TituloPagina>Renda Fixa</TituloPagina>
+            <MinhasRendasFixas />
+        </div>
     )
 }
 
