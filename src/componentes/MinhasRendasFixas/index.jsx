@@ -94,11 +94,11 @@ function MinhasRendasFixas() {
                                     <DadosTabela>
                                         <DadosTabela.SubTitulo minhaPosicao>
                                             <DadosTabela.SubTitulo.Span>DATA VENC.</DadosTabela.SubTitulo.Span>
-                                            <DadosTabela.SubTitulo.P>15.05.2019</DadosTabela.SubTitulo.P>
+                                            <DadosTabela.SubTitulo.P>{renda.due.date}</DadosTabela.SubTitulo.P>
                                         </DadosTabela.SubTitulo>
                                         <DadosTabela.SubTitulo>
                                             <DadosTabela.SubTitulo.Span>DIAS ATÉ VENC.</DadosTabela.SubTitulo.Span>
-                                            <DadosTabela.SubTitulo.P>5762</DadosTabela.SubTitulo.P>
+                                            <DadosTabela.SubTitulo.P>{renda.due.daysUntilExpiration}</DadosTabela.SubTitulo.P>
                                         </DadosTabela.SubTitulo>
                                     </DadosTabela>
                                 </ColunaTabela>
