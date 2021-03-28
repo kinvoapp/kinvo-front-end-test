@@ -20,6 +20,11 @@ const HorizontalLine = styled.hr`
     font-size: 0.5px;
 `
 
+const TituloPagina = styled.h2`
+    color: #4C309B;
+    font-stretch: condensed;
+`;
+
 export {
-    MyButtonIcon, HorizontalLine
+    MyButtonIcon, HorizontalLine, TituloPagina
 }

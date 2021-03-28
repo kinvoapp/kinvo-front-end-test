@@ -1,5 +1,6 @@
 import Header from "./componentes/Header";
 import NavVertical from "./componentes/NavVertical";
+import RendaFixa from "./pages/RendaFixa";
 import { ContentApp, WrapperApp, WrapperMenu } from "./styles";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <NavVertical />
       </WrapperMenu>
       <ContentApp>
-        <h1 style={{ coler: 'red' }}>oi</h1>
+        <RendaFixa />
       </ContentApp>
     </WrapperApp>
   );
