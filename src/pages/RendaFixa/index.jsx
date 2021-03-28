@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
-import RendaFixaService from '../../services/RendaFixaService';
+
 import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
-import DonutChart from '../../components/DonutChart';
+import DonutChart from '../../components/ChartElements/DonutChart';
+
+import RendaFixaService from '../../services/RendaFixaService';
+
 import MyFixedIncomesList from './MyFixedIncomesList';
-import {
-  Container,
-  Title,
-} from './styles';
+import { Container, Title } from './styles';
 
 
 function RendaFixa() {
