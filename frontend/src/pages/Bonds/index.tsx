@@ -3,6 +3,7 @@ import React from 'react';
 import EquityCard from '../../components/EquityCard';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
+import MyBonds from '../../components/MyBonds';
 
 import { EquitiesList, PageTitle } from './styles';
 
@@ -24,6 +25,8 @@ const Bonds: React.FC = () => (
           <EquityCard title="CDI" value={23.68} suffix />
           <EquityCard title="% Sobre CDI" value={321} suffix />
         </EquitiesList>
+
+        <MyBonds />
       </div>
     </div>
   </>
