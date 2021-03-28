@@ -28,6 +28,7 @@
     "space-before-function-paren": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
