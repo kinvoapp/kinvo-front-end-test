@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { HorizontalLine } from "../utils/styles";
 import {
@@ -10,8 +11,13 @@ function MinhasRendasFixas() {
     const [arrRendasFixas, setArrRendasFixas] = useState(arr_dados);
     const [busca, setBusca] = useState("");
 
-    const changeBusca = e => {
-        setBusca(e.target.value);
+
+
+    const changeBusca = async (e) => {
+        const { value } = e.target;
+        setBusca(value);
+        const { data: { data: { snapshotByProduct } } } = await axios.get(process.env.REACT_APP_URI);
+        setArrRendasFixas(snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(value.toUpperCase())));
     }
 
     return (
