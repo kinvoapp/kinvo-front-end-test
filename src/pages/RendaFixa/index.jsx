@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
 import RendaFixaService from '../../services/RendaFixaService';
 import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
@@ -9,8 +11,11 @@ import {
   Title,
 } from './styles';
 
+
 function RendaFixa() {
   const [ fixedIncomeData, setFixedIncomeData ] = useState();
+  const [ chartDataByName, setChartDataByName ] = useState();
+  const [ chartDataByBondType, setChartDataByBondType ] = useState();
   const { snapshotByProduct, snapshotByPortfolio, dailyEquityByPortfolioChartData } = fixedIncomeData || {};
 
   useEffect(() => {
@@ -19,6 +24,13 @@ function RendaFixa() {
     }
   })
 
+  useEffect(() => {
+    if (fixedIncomeData) {
+      getChartDataByName();
+      getChartDataByBondType();
+    }
+  }, [fixedIncomeData])
+
   async function getFixedIncomeData() {
     try {
       const data = await RendaFixaService.getAll();
@@ -26,6 +38,25 @@ function RendaFixa() {
     } catch (error) {
       
     }
+  }
+
+  function getChartDataByName() {
+    const { snapshotByProduct } = fixedIncomeData;
+    const data = snapshotByProduct.map((product) => ({ name: product.fixedIncome.name, y: product.position.portfolioPercentage }));
+    setChartDataByName(data);
+  }
+
+  function getChartDataByBondType() {
+    const { snapshotByProduct } = fixedIncomeData;
+    const group = [];
+    snapshotByProduct.forEach((product) => {
+      const { fixedIncome, position } = product;
+      group[fixedIncome.bondType] = group[fixedIncome.bondType] ? group[fixedIncome.bondType] + position.portfolioPercentage : position.portfolioPercentage;
+    });
+    const dataGrouped = Object.entries(group).map(([key, value]) => (
+      { name: key, y: value }
+    ));
+    setChartDataByBondType(dataGrouped);
   }
 
   return (
@@ -47,7 +78,12 @@ function RendaFixa() {
         </Grid>
 
         <Grid item xs={12}>
-          <CardInfo title="Rentabilidade dos Títulos" />
+          <CardInfo title="Rentabilidade dos Títulos">
+            {/* <HighchartsReact
+              highcharts={Highcharts}
+              options={options}
+            /> */}
+          </CardInfo>
         </Grid>
 
         <Grid item xs={12}>
@@ -55,11 +91,67 @@ function RendaFixa() {
         </Grid>
 
         <Grid item xs={6}>
-          <CardInfo titleBorder title="Divisão de Carteira por Tipos" />
+          <CardInfo titleBorder title="Divisão de Carteira por Tipos">
+            <HighchartsReact
+              highcharts={Highcharts}
+              options={{
+                title: {
+                  text: ''
+                },
+                series: [{
+                  type: 'pie',
+                  name: '% do Tipo',
+                  tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                  },
+                  data: chartDataByBondType
+                }],
+                plotOptions: {
+                  pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    innerSize: '30%',
+                    dataLabels: {
+                      enabled: false,
+                    },
+                    showInLegend: true
+                  }
+                },
+              }}
+            />
+          </CardInfo>
         </Grid>
 
         <Grid item xs={6}>
-          <CardInfo titleBorder title="Divisão de Carteira por Título" />
+          <CardInfo titleBorder title="Divisão de Carteira por Título">
+            <HighchartsReact
+              highcharts={Highcharts}
+              options={{
+                title: {
+                  text: ''
+                },
+                series: [{
+                  type: 'pie',
+                  name: '% do Título',
+                  tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                  },
+                  data: chartDataByName
+                }],
+                plotOptions: {
+                  pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    innerSize: '30%',
+                    dataLabels: {
+                      enabled: false,
+                    },
+                    showInLegend: true
+                  }
+                },
+              }}
+            />
+          </CardInfo>
         </Grid>
       </Grid>
     </Container>
