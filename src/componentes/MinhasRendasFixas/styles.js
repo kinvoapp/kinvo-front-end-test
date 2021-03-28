@@ -84,7 +84,13 @@ WrapperTitulo.Titulo = styled.small`
     background-color: #fff;
 `;
 
+const Tabela = styled.table`
+    display: flex;
+    max-height: 500px;
+    overflow: auto;
+`;
+
 export {
     WrapperRendasFixas, WrapperFiltroBusca, DadosTabela,
-    ColunaTabela, WrapperTitulo
+    ColunaTabela, WrapperTitulo, Tabela
 }
