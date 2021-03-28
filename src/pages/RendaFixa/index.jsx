@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
 import RendaFixaService from '../../services/RendaFixaService';
 import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
+import DonutChart from '../../components/DonutChart';
 import MyFixedIncomesList from './MyFixedIncomesList';
 import {
   Container,
@@ -19,15 +18,11 @@ function RendaFixa() {
   const { snapshotByProduct, snapshotByPortfolio, dailyEquityByPortfolioChartData } = fixedIncomeData || {};
 
   useEffect(() => {
-    if (!fixedIncomeData) {
-      getFixedIncomeData();
-    }
-  })
-
-  useEffect(() => {
     if (fixedIncomeData) {
       getChartDataByName();
       getChartDataByBondType();
+    } else {
+      getFixedIncomeData();
     }
   }, [fixedIncomeData])
 
@@ -92,65 +87,13 @@ function RendaFixa() {
 
         <Grid item xs={6}>
           <CardInfo titleBorder title="Divisão de Carteira por Tipos">
-            <HighchartsReact
-              highcharts={Highcharts}
-              options={{
-                title: {
-                  text: ''
-                },
-                series: [{
-                  type: 'pie',
-                  name: '% do Tipo',
-                  tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                  },
-                  data: chartDataByBondType
-                }],
-                plotOptions: {
-                  pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    innerSize: '30%',
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    showInLegend: true
-                  }
-                },
-              }}
-            />
+            <DonutChart label="% do Tipo" data={chartDataByBondType} />
           </CardInfo>
         </Grid>
 
         <Grid item xs={6}>
           <CardInfo titleBorder title="Divisão de Carteira por Título">
-            <HighchartsReact
-              highcharts={Highcharts}
-              options={{
-                title: {
-                  text: ''
-                },
-                series: [{
-                  type: 'pie',
-                  name: '% do Título',
-                  tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                  },
-                  data: chartDataByName
-                }],
-                plotOptions: {
-                  pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    innerSize: '30%',
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    showInLegend: true
-                  }
-                },
-              }}
-            />
+            <DonutChart label="% do Título" data={chartDataByName} />
           </CardInfo>
         </Grid>
       </Grid>
