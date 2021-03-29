@@ -60,11 +60,11 @@ export const Header = styled.header`
   }
 `;
 
-interface ItemProps {
+interface ProductContainerProps {
   isDark: boolean;
 }
 
-export const Item = styled.li<ItemProps>`
+export const ProductContainer = styled.li<ProductContainerProps>`
   margin: 0 -1.25rem;
   padding: 1.25rem;
 

@@ -11,7 +11,7 @@ import arrowRightIcon from "../../../../assets/nav-arrow-right.svg";
 //--------------------------------------------------------------------< mocks >
 import snapshotByProduct from "../../../../mocks/snapshotByProduct.json";
 //-------------------------------------------------------------------< styles >
-import { Container, Header, Item, Navigator } from "./styles";
+import { Container, Header, ProductContainer, Navigator } from "./styles";
 //--------------------------------------------------------------------< types >
 import { Product } from "../../../../types/Product";
 //==========================================================[ < FixedIncome > ]
@@ -32,7 +32,7 @@ export function FixedIncome() {
 
       <ul>
         {products.map(({ fixedIncome, position, due }, index) => (
-          <Item key={index} isDark={!!(index % 2)}>
+          <ProductContainer key={index} isDark={!!(index % 2)}>
             <section className="fixed-income">
               <h3>
                 TÍTULO <img src={infoIcon} alt="Sobre" />
@@ -90,7 +90,7 @@ export function FixedIncome() {
                 </h4>
               </main>
             </section>
-          </Item>
+          </ProductContainer>
         ))}
       </ul>
 
