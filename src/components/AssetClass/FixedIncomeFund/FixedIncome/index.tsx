@@ -1,5 +1,7 @@
 //--------------------------------------------------------------------< hooks >
-import { useState } from "react";
+import { useContext, useState } from "react";
+//-----------------------------------------------------------------< contexts >
+import { ProductsContext } from "../../../../contexts/ProductsContext";
 //--------------------------------------------------------------------< utils >
 import { formatNumber } from "../../../../utils/formatNumber";
 import { formatDate } from "../../../../utils/formatDate";
@@ -8,8 +10,6 @@ import searchIcon from "../../../../assets/search.svg";
 import infoIcon from "../../../../assets/info.svg";
 import arrowLeftIcon from "../../../../assets/nav-arrow-left.svg";
 import arrowRightIcon from "../../../../assets/nav-arrow-right.svg";
-//--------------------------------------------------------------------< mocks >
-import snapshotByProduct from "../../../../mocks/snapshotByProduct.json";
 //-------------------------------------------------------------------< styles >
 import { Container, Header, ProductContainer, Navigator } from "./styles";
 //--------------------------------------------------------------------< types >
@@ -20,7 +20,7 @@ export function FixedIncome() {
   //-------------------------------------------------------------< properties >
   const productsPerPage = 5;
   //---------------------------------------------------------------------------
-  const [products] = useState<Product[]>(snapshotByProduct);
+  const { products } = useContext(ProductsContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
   //---------------------------------------------------------------------------
