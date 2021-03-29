@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { HorizontalLine } from "../utils/styles";
 import {
     ColunaTabela, DadosTabela, WrapperFiltroBusca,
@@ -6,11 +6,13 @@ import {
 } from "./styles";
 import UseMinhasRendasFixas from "./UseMinhasRendasFixas";
 
-function MinhasRendasFixas() {
-    const { 
-        scrollFunc, arrRendasFixas, getDados, ordenacao,
-        changeBusca, changeOrdenacao, busca,
-    } = UseMinhasRendasFixas();
+function MinhasRendasFixas({
+    getDados, arrRendasFixas, setArrRendasFixas, setBusca, busca
+}) {
+    const {
+        scrollFunc, ordenacao,
+        changeBusca, changeOrdenacao,
+    } = UseMinhasRendasFixas(getDados, arrRendasFixas, setArrRendasFixas, setBusca);
 
     useEffect(() => {
         const elTable = document.getElementById("data-table");
@@ -20,10 +22,6 @@ function MinhasRendasFixas() {
             elTable.removeEventListener("scroll", scrollFunc);
         }
     }, [arrRendasFixas])
-
-    useEffect(() => {
-        getDados(0);
-    }, [])
 
     return (
         <WrapperRendasFixas>
