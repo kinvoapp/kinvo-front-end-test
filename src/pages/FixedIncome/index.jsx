@@ -16,7 +16,7 @@ function FixedIncome() {
   const [ fixedIncomeData, setFixedIncomeData ] = useState();
   const [ chartDataByName, setChartDataByName ] = useState();
   const [ chartDataByBondType, setChartDataByBondType ] = useState();
-  const { snapshotByProduct, snapshotByPortfolio, dailyEquityByPortfolioChartData } = fixedIncomeData || {};
+  const { snapshotByProduct, snapshotByPortfolio } = fixedIncomeData || {};
 
   useEffect(() => {
     if (fixedIncomeData) {
@@ -32,7 +32,7 @@ function FixedIncome() {
       const data = await RendaFixaService.getAll();
       setFixedIncomeData(data);
     } catch (error) {
-      
+      console.error(error);
     }
   }
 

@@ -50,9 +50,10 @@ export const InfoText = styled.div`
 export const Title = styled.span`
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 9px;
+  font-size: 8px;
 `;
 
 export const Subtitle = styled.span`
   font-weight: 700;
+  font-size: 16px;
 `;

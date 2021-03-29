@@ -9,7 +9,7 @@ export const IncomeTitle = styled.span`
 
 export const IncomeValue = styled.span`
   color: ${props => props.color};
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
 `;

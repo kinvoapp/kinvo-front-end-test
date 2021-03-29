@@ -26,7 +26,7 @@ export const CardBody = styled.div`
 
 export const CardTitle = styled.span`
   color: #627179;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   padding: 15px;
 `;

@@ -9,6 +9,6 @@ export const Container = styled.div`
 
 export const Title = styled.span`
   color: #4C309B;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 `;

@@ -146,6 +146,7 @@ function MyFixedIncomesList(props) {
     <MyFixedIncomeFooter>
       <Pagination
         count={count}
+        page={currentPage}
         variant="outlined"
         shape="rounded"
         onChange={(e, page) => setCurrentPage(page)}
