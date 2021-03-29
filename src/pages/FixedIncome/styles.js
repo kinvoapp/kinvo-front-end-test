@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../constants/colors';
 
 export const Container = styled.div`
   background-color: #EEF2F4;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.span`
-  color: #4C309B;
+  color: ${colors.purple};
   font-size: 20px;
   font-weight: 700;
 `;

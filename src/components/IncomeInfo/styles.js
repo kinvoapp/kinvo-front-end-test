@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
+import colors from '../../constants/colors';
 
 export const IncomeTitle = styled.span`
-  color: #4E5B61;
+  color: ${colors.blackText};
   font-size: 9px;
   text-transform: uppercase;
 `;

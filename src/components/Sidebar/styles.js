@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import colors from '../../constants/colors';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: ${colors.white};
   width: 225px;
   height: 100%;
   overflow: auto;
@@ -27,7 +28,7 @@ export const ItemIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.active ? '#4C309B' : '#DAE0E3'};
+  background-color: ${props => props.active ? colors.purple : colors.grayBorder};
   width: 34px;
   height: 34px;
   padding: 5px;
@@ -38,7 +39,7 @@ export const ItemPoint = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4C309B;
+  background-color: ${colors.purple};
   width: 5px;
   height: 5px;
   border-radius: 50%;

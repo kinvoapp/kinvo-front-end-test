@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import colors from '../../constants/colors';
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: ${colors.white};
   box-shadow: 0px 3px 5px #CCCCCC80;
   padding: 0 20px;
   height: 80px;
