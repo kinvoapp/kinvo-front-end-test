@@ -9,8 +9,41 @@ import {
 function MinhasRendasFixas() {
     const [arrRendasFixas, setArrRendasFixas] = useState([]);
     const [busca, setBusca] = useState("");
+    const [ordenacao, setOrdenacao] = useState("");
 
-
+    const changeOrdenacao = e => {
+        const { value } = e.target;
+        if (value) {
+            const copy_rendasFixas = [...arrRendasFixas];
+            if (value === 'name') {
+                copy_rendasFixas.sort((renda1, renda2) => {
+                    if (renda1.fixedIncome[value] > renda2.fixedIncome[value]) {
+                        return 1;
+                    }
+                    if (renda1.fixedIncome[value] < renda2.fixedIncome[value]) {
+                        return -1
+                    }
+                    return 0;
+                })
+            } else if (value === 'date') {
+                copy_rendasFixas.sort((renda1, renda2) => {
+                    let split_data1 = renda1.due[value].split("/");
+                    let new_data1 = new Date(parseInt(split_data1[2]), parseInt(split_data1[1] - 1, parseInt(split_data1[0])))
+                    let split_data2 = renda2.due[value].split("/");
+                    let new_data2 = new Date(parseInt(split_data2[2]), parseInt(split_data2[1] - 1, parseInt(split_data2[0])))
+                    if (new_data1 > new_data2) {
+                        return 1;
+                    }
+                    if (new_data1 < new_data2) {
+                        return -1
+                    }
+                    return 0;
+                })
+            }
+            setArrRendasFixas(copy_rendasFixas)
+        }
+        setOrdenacao(value)
+    }
 
     const changeBusca = async (e) => {
         const { value } = e.target;
@@ -26,8 +59,8 @@ function MinhasRendasFixas() {
         Como a busca é de 5 em 5, se tiver menos do que 5, significa dizer que não tem mais dados, se tiver mais que 5
         e esse número não é múltiplo de 5, então chegamos ao final dos dados e dessa forma não buscamos. Aqui ainda há
         falha, no caso de houver busca, e retornar os 5 elementos, o scroll ainda fará uma requisição no servidor*/
-        const isMoreData = ((arrRendasFixas.length / parseInt(process.env.REACT_APP_PAGINATION)) * parseInt(process.env.REACT_APP_PAGINATION)) - 
-                            arrRendasFixas.length === 0 && arrRendasFixas.length % parseInt(process.env.REACT_APP_PAGINATION) === 0;
+        const isMoreData = ((arrRendasFixas.length / parseInt(process.env.REACT_APP_PAGINATION)) * parseInt(process.env.REACT_APP_PAGINATION)) -
+            arrRendasFixas.length === 0 && arrRendasFixas.length % parseInt(process.env.REACT_APP_PAGINATION) === 0;
         if (elTable.scrollTop === elTable.scrollTopMax && isMoreData) {
             getDados(arrRendasFixas.length);
         }
@@ -63,9 +96,10 @@ function MinhasRendasFixas() {
             <WrapperRendasFixas.Header>
                 <h2>Minhas Rendas fixas</h2>
                 <WrapperFiltroBusca>
-                    <WrapperFiltroBusca.Select name="select-ordenacao" id="ordenacao">
-                        <option value="titulo">Titulo</option>
-                        <option value="vencimento">Vencimento</option>
+                    <WrapperFiltroBusca.Select value={ordenacao} onChange={changeOrdenacao} name="select-ordenacao" id="ordenacao">
+                        <option value="">Classificar por...</option>
+                        <option value="name">Titulo</option>
+                        <option value="date">Vencimento</option>
                     </WrapperFiltroBusca.Select>
                     <WrapperFiltroBusca.Input value={busca} onChange={changeBusca} type="text" placeholder='Faça uma busca...' />
                 </WrapperFiltroBusca>
