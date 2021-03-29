@@ -81,6 +81,7 @@ export const Tab = styled.li<TabProps>`
   ul {
     grid-area: ul;
     list-style: none;
+    display: ${({ focus }) => !focus && "none"};
 
     background: ${({ theme }) => theme.background.component};
   }
