@@ -15,6 +15,14 @@ const MyBonds: React.FC<{ data: SnapshotByProduct[] }> = (props: {
     SnapshotByProduct[]
   >([emptyProductsData]);
 
+  const [filterTerm, setFilterTerm] = useState('');
+
+  const filteredProducts = snapshotProductsData.filter(product => {
+    return product.fixedIncome.name
+      .toLowerCase()
+      .includes(filterTerm.toLowerCase());
+  });
+
   const { data } = props;
 
   useEffect(() => {
@@ -38,12 +46,16 @@ const MyBonds: React.FC<{ data: SnapshotByProduct[] }> = (props: {
           </div>
 
           <div className="searchTerm">
-            <input type="text" name="searchTerm" />
+            <input
+              type="text"
+              name="searchTerm"
+              onChange={e => setFilterTerm(e.target.value)}
+            />
           </div>
         </form>
       </header>
 
-      <BondsList data={snapshotProductsData} />
+      <BondsList data={filteredProducts} />
     </BondsContent>
   );
 };
