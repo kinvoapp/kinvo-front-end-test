@@ -10,6 +10,26 @@ export const BondCardItem = styled.div`
   flex-direction: column;
   padding: 8px 10px;
   background-color: white;
+  &.bond {
+    flex: 0.6;
+    p {
+      color: #8a51ba;
+      text-transform: capitalize;
+      font-size: 14px;
+      &.bondType {
+        white-space: nowrap;
+      }
+    }
+  }
+  &.position p {
+    white-space: nowrap;
+  }
+  &.due {
+    flex: 0;
+    p {
+      color: #008dcb;
+    }
+  }
 
   header {
     width: 100%;
@@ -77,6 +97,17 @@ export const ValueList = styled.div`
   justify-content: space-between;
   margin-top: 15px;
   gap: 15px;
+  h3 {
+    width: 160px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #4e5b61;
+    font-weight: 500;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
 `;
 
 export const ValueItem = styled.div`

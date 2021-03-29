@@ -1,35 +1,78 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import api from '../../services/api';
 
+// Components
 import EquityCard from '../../components/EquityCard';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import MyBonds from '../../components/MyBonds';
 
+// Interfaces
+import {
+  emptyPortfolio,
+  // emptyChartData,
+  emptyProductsData,
+  SnapshotByPortfolio,
+  // DailyEquityByPortfolioChartData,
+  SnapshotByProduct
+} from '../../interfaces/api.interface';
+
+// Styles
 import { EquitiesList, PageTitle } from './styles';
 
-const Bonds: React.FC = () => (
-  <>
-    <Header />
+const Bonds: React.FC = () => {
+  const [portfolioData, setPortfolioData] = useState<SnapshotByPortfolio>({
+    ...emptyPortfolio
+  });
 
-    <div className="content">
-      <Sidebar />
+  const [productsData, setProductsData] = useState<SnapshotByProduct[]>([
+    { ...emptyProductsData }
+  ]);
 
-      <div className="mainContent">
-        <PageTitle>Renda Fixa</PageTitle>
+  useEffect(() => {
+    api.then(response => {
+      const portfolioSnapshot = response.data.data.snapshotByPortfolio;
+      setPortfolioData(portfolioSnapshot);
 
-        <EquitiesList>
-          <EquityCard title="Saldo Bruto" value={207653.1} prefix />
-          <EquityCard title="Valor Aplicado" value={170025.64} prefix />
-          <EquityCard title="Resultado" value={37638.46} prefix />
-          <EquityCard title="Rentabilidade" value={25.08} suffix />
-          <EquityCard title="CDI" value={23.68} suffix />
-          <EquityCard title="% Sobre CDI" value={321} suffix />
-        </EquitiesList>
+      const productsSnapshot = response.data.data.snapshotByProduct;
+      setProductsData(productsSnapshot);
+    });
+  });
 
-        <MyBonds />
+  const {
+    equity,
+    valueApplied,
+    equityProfit,
+    percentageProfit,
+    indexerValue,
+    percentageOverIndexer
+  } = portfolioData;
+
+  return (
+    <>
+      <Header />
+      <div className="content">
+        <Sidebar />
+        <div className="mainContent">
+          <PageTitle>Renda Fixa</PageTitle>
+          <EquitiesList>
+            <EquityCard title="Saldo Bruto" value={equity} prefix />
+            <EquityCard title="Valor Aplicado" value={valueApplied} prefix />
+            <EquityCard title="Resultado" value={equityProfit} prefix />
+            <EquityCard title="Rentabilidade" value={percentageProfit} suffix />
+            <EquityCard title="CDI" value={indexerValue} suffix />
+            <EquityCard
+              title="% Sobre CDI"
+              value={percentageOverIndexer}
+              suffix
+            />
+          </EquitiesList>
+
+          <MyBonds data={productsData} />
+        </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default Bonds;

@@ -33,7 +33,7 @@ export default createGlobalStyle`
     flex-wrap: wrap;
     .mainContent {
       flex: 1;
-      padding: 0 28px 0 20px;
+      padding: 0 20px 0 20px;
     }
   }
 `;
