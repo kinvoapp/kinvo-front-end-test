@@ -18,6 +18,44 @@ import { Product } from "../../../../types/Product";
 export function FixedIncome() {
   //-------------------------------------------------------------< properties >
   const [products] = useState<Product[]>(snapshotByProduct);
+  //---------------------------------------------------------------------------
+  const productsPerPage = 5;
+  const numberOfPages = Math.ceil(products.length / productsPerPage);
+  const [currentPage, setCurrentPage] = useState(1);
+  //----------------------------------------------------------------< methods >
+  function getProductsPage() {
+    return products.slice(
+      productsPerPage * (currentPage - 1),
+      productsPerPage * (currentPage - 1) + productsPerPage
+    );
+  }
+
+  function getNavigators() {
+    const navigators = [];
+
+    for (let i = 1; i <= numberOfPages; i++) {
+      navigators.push(
+        <Navigator
+          key={i}
+          selected={i === currentPage}
+          onClick={() => setCurrentPage(i)}
+        >
+          {i}
+        </Navigator>
+      );
+    }
+    return navigators;
+  }
+  //---------------------------------------------------------------------------
+  function handleGoLeft() {
+    setCurrentPage(currentPage - 1 < 1 ? currentPage : currentPage - 1);
+  }
+
+  function handleGoRight() {
+    setCurrentPage(
+      currentPage + 1 > numberOfPages ? currentPage : currentPage + 1
+    );
+  }
   //-----------------------------------------------------------------< return >
   return (
     <Container>
@@ -31,7 +69,7 @@ export function FixedIncome() {
       </Header>
 
       <ul>
-        {products.map(({ fixedIncome, position, due }, index) => (
+        {getProductsPage().map(({ fixedIncome, position, due }, index) => (
           <ProductContainer key={index} isDark={!!(index % 2)}>
             <section className="fixed-income">
               <h3>
@@ -95,12 +133,11 @@ export function FixedIncome() {
       </ul>
 
       <footer>
-        <Navigator>
+        <Navigator onClick={handleGoLeft}>
           <img src={arrowLeftIcon} alt="<" />
         </Navigator>
-        <Navigator selected>1</Navigator>
-        <Navigator>2</Navigator>
-        <Navigator>
+        {getNavigators()}
+        <Navigator onClick={handleGoRight}>
           <img src={arrowRightIcon} alt=">" />
         </Navigator>
       </footer>
