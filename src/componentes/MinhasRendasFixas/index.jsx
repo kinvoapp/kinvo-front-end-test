@@ -15,9 +15,9 @@ function MinhasRendasFixas() {
     const changeBusca = async (e) => {
         const { value } = e.target;
         setBusca(value);
-        const { data: { data: { snapshotByProduct } } } = await axios.get(process.env.REACT_APP_URI);
+        const { data: { data: { snapshotByProduct } } } = await axios.get(parseInt(process.env.REACT_APP_PAGINATION));
         const filtro = snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(value.toUpperCase()))
-        setArrRendasFixas(filtro.slice(0, 5)); //exibe somente os 5 iniciais
+        setArrRendasFixas(filtro.slice(0, parseInt(process.env.REACT_APP_PAGINATION))); //exibe somente os 5 iniciais
     }
 
     const scrollFunc = () => {
@@ -26,7 +26,8 @@ function MinhasRendasFixas() {
         Como a busca é de 5 em 5, se tiver menos do que 5, significa dizer que não tem mais dados, se tiver mais que 5
         e esse número não é múltiplo de 5, então chegamos ao final dos dados e dessa forma não buscamos. Aqui ainda há
         falha, no caso de houver busca, e retornar os 5 elementos, o scroll ainda fará uma requisição no servidor*/
-        const isMoreData = ((arrRendasFixas.length / 5) * 5) - arrRendasFixas.length === 0 && arrRendasFixas.length % 5 === 0;
+        const isMoreData = ((arrRendasFixas.length / parseInt(process.env.REACT_APP_PAGINATION)) * parseInt(process.env.REACT_APP_PAGINATION)) - 
+                            arrRendasFixas.length === 0 && arrRendasFixas.length % parseInt(process.env.REACT_APP_PAGINATION) === 0;
         if (elTable.scrollTop === elTable.scrollTopMax && isMoreData) {
             getDados(arrRendasFixas.length);
         }
@@ -36,10 +37,10 @@ function MinhasRendasFixas() {
         const { data: { data: { snapshotByProduct } } } = await axios.get(process.env.REACT_APP_URI);
         if (busca) { //se tem busca, o getDados só é chamado quando tem scroll ou quando a página é criada
             const filtro = snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(busca.toUpperCase()))
-            const new_data = [...arrRendasFixas, ...filtro.slice(num_total_dados, num_total_dados + 5)];
+            const new_data = [...arrRendasFixas, ...filtro.slice(num_total_dados, num_total_dados + parseInt(process.env.REACT_APP_PAGINATION))];
             setArrRendasFixas(new_data);
         } else {
-            const new_data = [...arrRendasFixas, ...snapshotByProduct.slice(num_total_dados, num_total_dados + 5)];
+            const new_data = [...arrRendasFixas, ...snapshotByProduct.slice(num_total_dados, num_total_dados + parseInt(process.env.REACT_APP_PAGINATION))];
             setArrRendasFixas(new_data);
         }
     }
