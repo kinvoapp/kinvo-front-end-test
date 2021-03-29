@@ -6,11 +6,13 @@ declare module "styled-components" {
       page: string;
       component: string;
       focus: string;
+      navigator: string;
     };
     shadow: {
       header: string;
       section: string;
       item: string;
+      navigator: string;
     };
     text: {
       purple: string;
@@ -21,13 +23,14 @@ declare module "styled-components" {
       blue: string;
       green: string;
       info: string;
+      navigator: string;
     };
     icon: {
       focusBackground: string;
       background: string;
       tiny: string;
     };
-    border: { box: string; menu: string };
+    border: { box: string; menu: string; navigator: string };
     color: {
       pink: string;
       cyan: string;
