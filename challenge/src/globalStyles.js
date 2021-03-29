@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   :root{
     /* COLORS */
-    --c-white:#ffffff;
-    --c-ghostwhite: #F8FAFB;
     --c-alpha: rgba(0, 0, 0, 0.05);
     --c-alpha-light: rgba(0, 0, 0, 0.04);
     --c-alpha-lighter: rgba(0, 0, 0, 0.03);
+    --c-white:#ffffff;
+    --c-ghostwhite: #F8FAFB;
     --c-violet: #4C309B;
     --c-violet-light: #8A51BA;
     --c-blue: #008DCB;
@@ -43,16 +43,21 @@ const GlobalStyle = createGlobalStyle`
     --f-6:0.6rem;
   }
   
-  html{
-    font-size: 62.5%; 
-    font-family: 'Montserrat', 'Helvetica', sans-serif;
-  }
-
   *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+
+  html{
+    font-size: 62.5%; 
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+  }
+
+  body{
+    background-color: var(--c-cyan-light);
+  }
+
 `;
 
 export default GlobalStyle;
