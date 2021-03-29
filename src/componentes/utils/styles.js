@@ -26,7 +26,7 @@ const TituloPagina = styled.h2`
 `;
 
 const TituloDeDados = styled.small`
-    color: #4E5B61;
+    color: #4C309B;
     background-color: #fff;
 `;
 
