@@ -112,7 +112,7 @@ export const ProductContainer = styled.li<ProductContainerProps>`
       border-radius: 0 10px 10px 10px;
 
       p {
-        max-width: 10rem;
+        max-width: 50%;
 
         font-size: 0.75rem;
         color: ${({ theme }) => theme.text.itemTitle};
@@ -138,7 +138,7 @@ export const ProductContainer = styled.li<ProductContainerProps>`
   }
 
   .fixed-income {
-    flex-grow: 3;
+    flex: 3;
 
     strong {
       color: ${({ theme }) => theme.text.pink};
@@ -146,7 +146,7 @@ export const ProductContainer = styled.li<ProductContainerProps>`
   }
 
   .position {
-    flex-grow: 6;
+    flex: 5;
 
     strong {
       color: ${({ theme }) => theme.text.green};
@@ -154,7 +154,7 @@ export const ProductContainer = styled.li<ProductContainerProps>`
   }
 
   .due {
-    flex-grow: 1;
+    flex: 2;
 
     strong {
       color: ${({ theme }) => theme.text.blue};

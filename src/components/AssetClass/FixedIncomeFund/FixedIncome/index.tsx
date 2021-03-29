@@ -14,22 +14,35 @@ import snapshotByProduct from "../../../../mocks/snapshotByProduct.json";
 import { Container, Header, ProductContainer, Navigator } from "./styles";
 //--------------------------------------------------------------------< types >
 import { Product } from "../../../../types/Product";
+import { ChangeEvent } from "react";
 //==========================================================[ < FixedIncome > ]
 export function FixedIncome() {
   //-------------------------------------------------------------< properties >
-  const [products] = useState<Product[]>(snapshotByProduct);
-  //---------------------------------------------------------------------------
   const productsPerPage = 5;
-  const numberOfPages = Math.ceil(products.length / productsPerPage);
+  //---------------------------------------------------------------------------
+  const [products] = useState<Product[]>(snapshotByProduct);
   const [currentPage, setCurrentPage] = useState(1);
+  const [query, setQuery] = useState("");
+  //---------------------------------------------------------------------------
+  const numberOfPages = Math.ceil(filter(products).length / productsPerPage);
   //----------------------------------------------------------------< methods >
-  function getProductsPage() {
-    return products.slice(
+  function filter(_products: Product[]) {
+    return _products.filter(({ fixedIncome }) =>
+      fixedIncome.name
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(query)
+    );
+  }
+
+  function page(_filteredProducts: Product[]) {
+    return _filteredProducts.slice(
       productsPerPage * (currentPage - 1),
       productsPerPage * (currentPage - 1) + productsPerPage
     );
   }
-
+  //---------------------------------------------------------------------------
   function getNavigators() {
     const navigators = [];
 
@@ -47,6 +60,16 @@ export function FixedIncome() {
     return navigators;
   }
   //---------------------------------------------------------------------------
+  function handleQuery(e: ChangeEvent<HTMLInputElement>) {
+    setCurrentPage(1);
+    setQuery(
+      e.target.value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+    );
+  }
+
   function handleGoLeft() {
     setCurrentPage(currentPage - 1 < 1 ? currentPage : currentPage - 1);
   }
@@ -64,12 +87,12 @@ export function FixedIncome() {
         <div>Ordenar por</div>
         <label>
           <img src={searchIcon} alt="search" />
-          <input type="text" />
+          <input type="text" onChange={handleQuery} />
         </label>
       </Header>
 
       <ul>
-        {getProductsPage().map(({ fixedIncome, position, due }, index) => (
+        {page(filter(products)).map(({ fixedIncome, position, due }, index) => (
           <ProductContainer key={index} isDark={!!(index % 2)}>
             <section className="fixed-income">
               <h3>
