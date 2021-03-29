@@ -19,7 +19,7 @@ export const Container = styled.header`
     margin-right: 1.75rem;
   }
 
-  .infos {
+  .portfolio {
     height: 100%;
     margin-left: 1.25rem;
     padding-top: 1rem;
@@ -50,11 +50,11 @@ export const Container = styled.header`
   }
 `;
 
-interface InfoProps {
+interface PortfolioContainerProps {
   focus?: boolean;
 }
 
-export const Info = styled.div<InfoProps>`
+export const PortfolioContainer = styled.div<PortfolioContainerProps>`
   display: grid;
   grid-template-columns: auto max-content;
   grid-template-rows: max-content max-content;
