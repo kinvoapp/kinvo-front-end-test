@@ -16,9 +16,10 @@ export const MenuItem = styled.div`
   border-bottom: 1px solid #CCCFD1;
   color: #707B81;
   cursor: pointer;
+  background-color: ${props => props.active ? '#F8FAFB' : 'unset'};
 
   &:hover {
-    background-color: #f8fafb;
+    background-color: #F8FAFB;
   }
 `;
 
@@ -26,10 +27,20 @@ export const ItemIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DAE0E3;
+  background-color: ${props => props.active ? '#4C309B' : '#DAE0E3'};
   width: 34px;
   height: 34px;
   padding: 5px;
+  border-radius: 50%;
+`;
+
+export const ItemPoint = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4C309B;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
 `;
 
