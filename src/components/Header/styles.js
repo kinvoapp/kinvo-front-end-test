@@ -16,6 +16,14 @@ export const Logo = styled.img`
   width: 100%;
 `;
 
+export const Icon = styled.img`
+  max-width: 30px;
+  max-height: 30px;
+  width: 100%;
+  height: 100%;
+  cursor: ${props => props.clickable ? 'pointer' : 'default' };
+`;
+
 export const InfoList = styled.div`
   flex: 1;
   display: flex;
@@ -28,19 +36,6 @@ export const Info = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 10px;
-`;
-
-export const InfoIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${props => props.active ? '#4C309B' : '#DAE0E3'};
-  border-radius: 50%;
-  padding: 5px;
-  color: #FFFFFF;
-  font-size: 22px;
-  width: 30px;
-  height: 30px;
 `;
 
 export const InfoText = styled.div`

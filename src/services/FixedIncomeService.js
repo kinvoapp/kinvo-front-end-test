@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const url = 'https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData';
 
-class RendaFixaService {
+class FixedIncomeService {
   async getAll() {
     return axios.get(url).then(res => {
       const { data } = res.data;
@@ -12,4 +12,4 @@ class RendaFixaService {
   }
 }
 
-export default new RendaFixaService();
+export default new FixedIncomeService();

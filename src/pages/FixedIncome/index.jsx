@@ -5,13 +5,14 @@ import CardInfo from '../../components/CardInfo';
 import InfoTag from '../../components/InfoTag';
 import DonutChart from '../../components/ChartElements/DonutChart';
 
-import RendaFixaService from '../../services/RendaFixaService';
+import RendaFixaService from '../../services/FixedIncomeService';
 
 import MyFixedIncomesList from './MyFixedIncomesList';
 import { Container, Title } from './styles';
+import AreaChart from '../../components/ChartElements/AreaChart';
 
 
-function RendaFixa() {
+function FixedIncome() {
   const [ fixedIncomeData, setFixedIncomeData ] = useState();
   const [ chartDataByName, setChartDataByName ] = useState();
   const [ chartDataByBondType, setChartDataByBondType ] = useState();
@@ -74,10 +75,7 @@ function RendaFixa() {
 
         <Grid item xs={12}>
           <CardInfo title="Rentabilidade dos Títulos">
-            {/* <HighchartsReact
-              highcharts={Highcharts}
-              options={options}
-            /> */}
+            <AreaChart />
           </CardInfo>
         </Grid>
 
@@ -101,4 +99,4 @@ function RendaFixa() {
   )
 }
 
-export default RendaFixa;
+export default FixedIncome;

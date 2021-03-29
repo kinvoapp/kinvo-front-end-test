@@ -1,10 +1,11 @@
 import React from 'react';
 import LogoPremium from '../../assets/logo_premium.png';
-import { GiDiamondRing } from "react-icons/gi";
-import { AiOutlineArrowUp } from "react-icons/ai";
-import { BsGraphUp } from "react-icons/bs";
-import { MdKeyboardArrowDown, MdMenu } from "react-icons/md";
-import { Container, Logo, InfoList, Info, InfoIcon, InfoText, Title, Subtitle } from './styles';
+import EquityIcon from '../../assets/equity_icon.svg';
+import DropdownIcon from '../../assets/dropdown_icon.svg';
+import AppliedValueIcon from '../../assets/applied_value_icon.svg';
+import MenuIcon from '../../assets/menu_icon.svg';
+import ProfitabilityIcon from '../../assets/profitability_icon.svg';
+import { Container, Logo, Icon, InfoList, Info, InfoText, Title, Subtitle } from './styles';
 
 function Header() {
   return (
@@ -13,9 +14,7 @@ function Header() {
 
       <InfoList>
         <Info>
-          <InfoIcon>
-            <GiDiamondRing />
-          </InfoIcon>
+          <Icon src={EquityIcon} />
           <InfoText>
             <Title>Saldo Bruto</Title>
             <Subtitle>130.521.230,02</Subtitle>
@@ -23,9 +22,7 @@ function Header() {
         </Info>
 
         <Info>
-          <InfoIcon>
-            <AiOutlineArrowUp />
-          </InfoIcon>
+          <Icon src={AppliedValueIcon} />
           <InfoText>
             <Title>Valor Aplicado</Title>
             <Subtitle>521.230,02</Subtitle>
@@ -33,9 +30,7 @@ function Header() {
         </Info>
 
         <Info>
-          <InfoIcon>
-            <BsGraphUp style={{ fontSize: '15px' }} />
-          </InfoIcon>
+          <Icon src={ProfitabilityIcon} />
           <InfoText>
             <Title>Rentabilidade</Title>
             <Subtitle>2,34%</Subtitle>
@@ -43,9 +38,7 @@ function Header() {
         </Info>
 
         <Info>
-          <InfoIcon active>
-            <MdKeyboardArrowDown />
-          </InfoIcon>
+          <Icon clickable src={DropdownIcon} />
           <InfoText>
             <Title>Carteira</Title>
             <Subtitle>Minha Carteira</Subtitle>
@@ -53,9 +46,7 @@ function Header() {
         </Info>
 
         <Info>
-          <InfoIcon active>
-            <MdMenu />
-          </InfoIcon>
+          <Icon clickable src={MenuIcon} />
         </Info>
       </InfoList>
     </Container>

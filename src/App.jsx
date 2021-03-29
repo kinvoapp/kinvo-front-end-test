@@ -1,5 +1,5 @@
 import React from 'react';
-import RendaFixa from './pages/RendaFixa';
+import FixedIncome from './pages/FixedIncome';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import GlobalStyle, { Container, Body } from './styles';
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Body>
         <Sidebar />
-        <RendaFixa />
+        <FixedIncome />
       </Body>
     </Container>
   );
