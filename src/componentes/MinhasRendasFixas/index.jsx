@@ -7,8 +7,13 @@ import {
 import UseMinhasRendasFixas from "./UseMinhasRendasFixas";
 
 function MinhasRendasFixas({
-    getDados, arrRendasFixas, setArrRendasFixas, setBusca, busca
+    getDados,
+    arrRendasFixas,
+    setArrRendasFixas,
+    setBusca,
+    busca
 }) {
+
     const {
         scrollFunc, ordenacao,
         changeBusca, changeOrdenacao,
