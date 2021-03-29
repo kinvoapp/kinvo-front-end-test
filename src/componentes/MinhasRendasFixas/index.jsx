@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HorizontalLine } from "../utils/styles";
 import {
     ColunaTabela, DadosTabela, WrapperFiltroBusca,
@@ -20,6 +20,22 @@ function MinhasRendasFixas() {
         setArrRendasFixas(snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(value.toUpperCase())));
     }
 
+    const scrollFunc = () => {
+        const elTable = document.getElementById("data-table");
+        if(elTable.scrollTop === elTable.scrollTopMax){
+            console.log('estou no final')
+        }
+    }
+
+    useEffect(() => {
+        const elTable = document.getElementById("data-table");
+        elTable.addEventListener("scroll", scrollFunc)
+
+        return () => {
+            elTable.removeEventListener("scroll", scrollFunc);
+        }
+    }, [])
+
     return (
         <WrapperRendasFixas>
             <WrapperRendasFixas.Header>
@@ -33,7 +49,7 @@ function MinhasRendasFixas() {
                 </WrapperFiltroBusca>
             </WrapperRendasFixas.Header>
             <HorizontalLine />
-            <Tabela>
+            <Tabela id="data-table">
                 <tbody>
                     {arrRendasFixas.map((renda, index) => (
                         <tr key={index}>
