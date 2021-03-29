@@ -25,6 +25,29 @@ const TituloPagina = styled.h2`
     font-stretch: condensed;
 `;
 
+const TituloDeDados = styled.small`
+    color: #4E5B61;
+    background-color: #fff;
+`;
+
+const DadosColoridos = styled.p`
+    font-weight: bold;
+    ${({ color }) => {
+        if (!color && color !== false) {
+            return css` color: #008DCB;`; //azul
+        }
+
+        if (color === 'roxo') {
+            return css` color: #8A51BA;`;
+        }
+
+        if (color === 'verde') {
+            return css` color: #38BFA0; `;
+        }
+    }}
+`;
+
 export {
-    MyButtonIcon, HorizontalLine, TituloPagina
+    MyButtonIcon, HorizontalLine, TituloPagina,
+    TituloDeDados, DadosColoridos
 }
