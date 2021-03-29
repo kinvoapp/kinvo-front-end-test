@@ -22,8 +22,18 @@ export const Header = styled.header`
 
   display: grid;
   grid-template-columns: auto max-content max-content;
+  grid-template-areas: "h2 div label";
+  gap: 1.125rem;
+
+  @media (max-width: 870px) {
+    grid-template-columns: auto max-content;
+    grid-template-rows: 1fr;
+    grid-template-areas: "h2 h2" "div label";
+  }
 
   h2 {
+    grid-area: h2;
+
     color: ${({ theme }) => theme.text.sectionTitle};
     font-size: 1.125rem;
     font-weight: 500;
@@ -39,11 +49,17 @@ export const Header = styled.header`
 
   div {
     width: 9.75rem;
-    padding: 0.5rem 0.625rem;
+    padding: 0 0.625rem;
+
+    grid-area: div;
+    display: flex;
+    justify-self: right;
+    align-items: center;
   }
 
   label {
-    margin-left: 1.125rem;
+    grid-area: label;
+
     padding: 0.5rem;
 
     display: flex;
@@ -68,11 +84,25 @@ export const ProductContainer = styled.li<ProductContainerProps>`
   margin: 0 -1.25rem;
   padding: 1.25rem;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 5fr 2fr;
+  grid-template-areas: "fixed-income position due";
   gap: 0.75rem;
 
   background: ${({ isDark, theme }) =>
     !isDark ? theme.background.component : theme.background.focus};
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "fixed-income due" "position position";
+  }
+
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "fixed-income" "position" "due";
+  }
 
   section {
     display: flex;
@@ -138,24 +168,21 @@ export const ProductContainer = styled.li<ProductContainerProps>`
   }
 
   .fixed-income {
-    flex: 3;
-
+    grid-area: fixed-income;
     strong {
       color: ${({ theme }) => theme.text.pink};
     }
   }
 
   .position {
-    flex: 5;
-
+    grid-area: position;
     strong {
       color: ${({ theme }) => theme.text.green};
     }
   }
 
   .due {
-    flex: 2;
-
+    grid-area: due;
     strong {
       color: ${({ theme }) => theme.text.blue};
     }

@@ -1,5 +1,5 @@
 //---------------------------------------------------------------< components >
-import { Infos } from "./Infos";
+import { PortfolioDisplayer } from "./PortfolioDisplayer";
 import { Chart } from "./Chart";
 import { FixedIncome } from "./FixedIncome";
 import { PortfolioDivision } from "./PortfolioDivision";
@@ -11,7 +11,7 @@ export function FixedIncomeFund() {
   return (
     <Container>
       <h1>Renda Fixa</h1>
-      <Infos />
+      <PortfolioDisplayer />
       <Chart />
       <FixedIncome />
       <PortfolioDivision />

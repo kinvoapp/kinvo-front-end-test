@@ -6,6 +6,14 @@ export const Container = styled.section`
   display: flex;
   gap: 0.75rem;
 
+  @media (max-width: 920px) {
+    flex-direction: column;
+
+    section:first-child {
+      margin-bottom: 0;
+    }
+  }
+
   section {
     margin-bottom: 2rem;
 

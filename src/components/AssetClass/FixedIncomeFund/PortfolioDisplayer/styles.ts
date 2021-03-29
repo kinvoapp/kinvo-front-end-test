@@ -1,11 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.75rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 `;
 
-export const Info = styled.div`
+export const PortfolioContainer = styled.div`
   height: 3.75rem;
   padding: 0.625rem 0.5rem;
 

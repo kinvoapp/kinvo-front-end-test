@@ -5,57 +5,57 @@ import { formatNumber } from "../../../../utils/formatNumber";
 //--------------------------------------------------------------------< mocks >
 import snapshotByPortfolio from "../../../../mocks/snapshotByPortfolio.json";
 //-------------------------------------------------------------------< styles >
-import { Container, Info } from "./styles";
+import { Container, PortfolioContainer } from "./styles";
 //--------------------------------------------------------------------< types >
 import { Portfolio } from "../../../../types/Portfolio";
-//================================================================[ < Infos > ]
-export function Infos() {
+//===================================================[ < PortfolioDisplayer > ]
+export function PortfolioDisplayer() {
   //-------------------------------------------------------------< properties >
   const [portfolio] = useState<Portfolio>(snapshotByPortfolio);
   //-----------------------------------------------------------------< return >
   return (
     <Container>
-      <Info>
+      <PortfolioContainer>
         <p>
           SALDO BRUTO
           <strong>R$ {formatNumber(portfolio.equity)}</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
 
-      <Info>
+      <PortfolioContainer>
         <p>
           VALOR APLICADO
           <strong>R$ {formatNumber(portfolio.valueApplied)}</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
 
-      <Info>
+      <PortfolioContainer>
         <p>
           RESULTADO
           <strong>R$ {formatNumber(portfolio.equityProfit)}</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
 
-      <Info>
+      <PortfolioContainer>
         <p>
           RENTABILIDADE
           <strong>{formatNumber(portfolio.percentageProfit)}%</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
 
-      <Info>
+      <PortfolioContainer>
         <p>
           CDI
           <strong>{formatNumber(portfolio.indexerValue)}%</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
 
-      <Info>
+      <PortfolioContainer>
         <p>
           % SOBRE CDI
           <strong>{formatNumber(portfolio.percentageOverIndexer)}%</strong>
         </p>
-      </Info>
+      </PortfolioContainer>
     </Container>
   );
 }
