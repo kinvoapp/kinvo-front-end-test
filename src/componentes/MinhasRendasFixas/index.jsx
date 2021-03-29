@@ -5,10 +5,9 @@ import {
     ColunaTabela, DadosTabela, WrapperFiltroBusca,
     WrapperRendasFixas, WrapperTitulo, Tabela
 } from "./styles";
-import { arr_dados } from "./utils";
 
 function MinhasRendasFixas() {
-    const [arrRendasFixas, setArrRendasFixas] = useState(arr_dados);
+    const [arrRendasFixas, setArrRendasFixas] = useState([]);
     const [busca, setBusca] = useState("");
 
 
@@ -17,13 +16,31 @@ function MinhasRendasFixas() {
         const { value } = e.target;
         setBusca(value);
         const { data: { data: { snapshotByProduct } } } = await axios.get(process.env.REACT_APP_URI);
-        setArrRendasFixas(snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(value.toUpperCase())));
+        const filtro = snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(value.toUpperCase()))
+        setArrRendasFixas(filtro.slice(0, 5)); //exibe somente os 5 iniciais
     }
 
     const scrollFunc = () => {
         const elTable = document.getElementById("data-table");
-        if(elTable.scrollTop === elTable.scrollTopMax){
-            console.log('estou no final')
+        /*significa que temos 0 elementos, temos os 6 elementos totais, ou recebemos da busca menos que 5 elementos.
+        Como a busca é de 5 em 5, se tiver menos do que 5, significa dizer que não tem mais dados, se tiver mais que 5
+        e esse número não é múltiplo de 5, então chegamos ao final dos dados e dessa forma não buscamos. Aqui ainda há
+        falha, no caso de houver busca, e retornar os 5 elementos, o scroll ainda fará uma requisição no servidor*/
+        const isMoreData = ((arrRendasFixas.length / 5) * 5) - arrRendasFixas.length === 0 && arrRendasFixas.length % 5 === 0;
+        if (elTable.scrollTop === elTable.scrollTopMax && isMoreData) {
+            getDados(arrRendasFixas.length);
+        }
+    }
+
+    const getDados = async (num_total_dados) => {
+        const { data: { data: { snapshotByProduct } } } = await axios.get(process.env.REACT_APP_URI);
+        if (busca) { //se tem busca, o getDados só é chamado quando tem scroll ou quando a página é criada
+            const filtro = snapshotByProduct.filter(snapshot => snapshot.fixedIncome.name.toUpperCase().includes(busca.toUpperCase()))
+            const new_data = [...arrRendasFixas, ...filtro.slice(num_total_dados, num_total_dados + 5)];
+            setArrRendasFixas(new_data);
+        } else {
+            const new_data = [...arrRendasFixas, ...snapshotByProduct.slice(num_total_dados, num_total_dados + 5)];
+            setArrRendasFixas(new_data);
         }
     }
 
@@ -34,6 +51,10 @@ function MinhasRendasFixas() {
         return () => {
             elTable.removeEventListener("scroll", scrollFunc);
         }
+    }, [arrRendasFixas])
+
+    useEffect(() => {
+        getDados(0);
     }, [])
 
     return (
