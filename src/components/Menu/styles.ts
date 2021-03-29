@@ -14,6 +14,37 @@ export const Container = styled.nav`
 
   background: ${({ theme }) => theme.background.component};
 
+  &.visible {
+    animation-name: to-visible;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+  }
+
+  @keyframes to-visible {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  &.hidden {
+    animation-name: to-hidden;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    transform: translateX(-100%);
+  }
+
+  @keyframes to-hidden {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
   ::-webkit-scrollbar {
     width: 1rem;
   }
@@ -30,6 +61,16 @@ export const Container = styled.nav`
 
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.background.component};
+  }
+
+  @media (max-width: 720px) {
+    ::-webkit-scrollbar-track {
+      background: #d7dadc;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border: 3px solid #d7dadc;
+    }
   }
 `;
 
@@ -135,5 +176,18 @@ export const SubTab = styled.li<TabProps>`
         0.025,
         focus ? theme.background.focus : theme.background.component
       )};
+  }
+`;
+
+export const Film = styled.div`
+  @media (max-width: 720px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    position: absolute;
+
+    background: #00000019;
   }
 `;

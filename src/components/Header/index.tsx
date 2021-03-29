@@ -1,5 +1,7 @@
 //--------------------------------------------------------------------< hooks >
-import { useState } from "react";
+import { useContext, useState } from "react";
+//-----------------------------------------------------------------< contexts >
+import { MenuContext } from "../../contexts/MenuContext";
 //--------------------------------------------------------------------< utils >
 import { formatNumber } from "../../utils/formatNumber";
 //-------------------------------------------------------------------< assets >
@@ -18,7 +20,10 @@ import { Portfolio } from "../../types/Portfolio";
 //===============================================================[ < Header > ]
 export function Header() {
   //-------------------------------------------------------------< properties >
+  const { visibility, toggleVisibility } = useContext(MenuContext);
+  //---------------------------------------------------------------------------
   const [portfolio] = useState<Portfolio>(snapshotByPortfolio);
+  //----------------------------------------------------------------< methods >
   //-----------------------------------------------------------------< return >
   return (
     <Container>
@@ -57,8 +62,8 @@ export function Header() {
           <strong>Minha Carteira</strong>
         </PortfolioContainer>
 
-        <PortfolioContainer focus>
-          <div>
+        <PortfolioContainer focus={visibility === "visible"}>
+          <div onClick={toggleVisibility} style={{ cursor: "pointer" }}>
             <img src={menuIcon} alt="Menu" />
           </div>
         </PortfolioContainer>

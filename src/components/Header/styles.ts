@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from "polished";
 
 export const Container = styled.header`
   width: 100vw;
@@ -59,6 +60,16 @@ export const PortfolioContainer = styled.div<PortfolioContainerProps>`
   grid-template-columns: auto max-content;
   grid-template-rows: max-content max-content;
   grid-template-areas: "img p" "img strong";
+
+  :hover {
+    div {
+      background: ${({ focus, theme }) =>
+        darken(
+          0.05,
+          focus ? theme.icon.focusBackground : theme.icon.background
+        )};
+    }
+  }
 
   div {
     width: 1.875rem;

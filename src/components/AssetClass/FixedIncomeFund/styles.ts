@@ -5,6 +5,14 @@ export const Container = styled.main`
   height: 100vh;
   padding: 5.5rem 1.75rem 0 16rem;
 
+  &.hidden {
+    padding-left: 1.75rem;
+  }
+
+  @media (max-width: 720px) {
+    padding-left: 1.75rem;
+  }
+
   > h1 {
     margin: 1.6875rem 0 1.5rem 0;
 
