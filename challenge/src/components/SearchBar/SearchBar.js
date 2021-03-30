@@ -22,13 +22,22 @@ function getFilteredRows(rows, searchTerm) {
   });
 }
 
+function debounce(callback, wait) {
+  let timeout;
+
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => callback(...args), wait);
+  };
+}
+
 const SearchBar = ({ rows, setFilteredRows }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = useCallback(
     (e) => {
       setInputValue(e.target.value);
-      setFilteredRows(getFilteredRows(rows, e.target.value));
+      debounce(setFilteredRows, 300)(getFilteredRows(rows, e.target.value));
     },
     [rows, setFilteredRows],
   );

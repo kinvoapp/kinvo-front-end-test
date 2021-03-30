@@ -83,10 +83,7 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
                   id={`btnPag${index}`}
                   checked={index === page}
                 />
-                <S.PaginationLabel
-                  onClick={({ target }) => setPage(index)}
-                  htmlFor={`btnPag${index}`}
-                >
+                <S.PaginationLabel onClick={() => setPage(index)} htmlFor={`btnPag${index}`}>
                   {index + 1}
                 </S.PaginationLabel>
               </S.PaginationButton>

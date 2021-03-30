@@ -4,7 +4,7 @@ import FixedIncomeTableHeader from 'components/FixedIncomeTableHeader/FixedIncom
 import * as S from 'components/styled/lib';
 import { useEffect, useState } from 'react';
 
-const FixedIncomeTable = ({ rows = [] }) => {
+const FixedIncomeTable = ({ rows }) => {
   const [filteredRows, setFilteredRows] = useState(rows);
   const [visibleRows, setVisibleRows] = useState(rows);
 
