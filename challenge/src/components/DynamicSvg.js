@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import colorsPool from '../../helpers/colorsPool';
-import svgPool from '../../helpers/svgPool';
-import { SvgWrapper } from '../styled/lib';
+import colorsPool from 'helpers/colorsPool';
+import svgPool from 'helpers/svgPool';
+import { SvgWrapper } from 'components/styled/lib';
 
 /**
  * @param {String} color - Cor do SVG

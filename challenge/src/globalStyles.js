@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     /* MARGINS */
     --m-28: 2.8rem;
     --m-10: 1rem;
+    --m-5: 0.5rem;
 
     /* PADDING */
     --p-30: 3rem;
@@ -41,6 +42,9 @@ const GlobalStyle = createGlobalStyle`
     --f-9: 0.9rem;
     --f-8: 0.8rem;
     --f-6:0.6rem;
+
+    /* MISC */
+    --box-shadow: 0px 2px 20px var(--c-alpha);
   }
   
   *{
@@ -56,6 +60,11 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: var(--c-cyan-light);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
   }
 
 `;

@@ -3,8 +3,7 @@ import GlobalStyle from './globalStyles';
 import FixedIncome from 'pages/FixedIncome';
 
 const AppWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  /* max-width: 136.6rem; */
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
@@ -13,11 +12,27 @@ const AppWrapper = styled.div`
     'menu   content';
 `;
 
+const Header = styled.div`
+  grid-area: header;
+  width: 100%;
+  height: 9rem;
+  background-color: #000;
+`;
+
+const Menu = styled.div`
+  grid-area: menu;
+  width: 27rem;
+  height: 100%;
+  background-color: #000;
+`;
+
 function App() {
   return (
     <>
       <GlobalStyle />
       <AppWrapper>
+        <Header />
+        <Menu />
         <FixedIncome />
       </AppWrapper>
     </>

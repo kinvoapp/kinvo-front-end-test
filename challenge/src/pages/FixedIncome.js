@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import api from 'services/api';
 import { useEffect, useState } from 'react';
-import Header from 'components/organisms/Header/Header';
-import FixedIncomeCard from 'components/molecules/FixedIncomeCard/FixedIncomeCard';
+import Header from 'components/Header/Header';
+import FixedIncomeTable from 'components/FixedIncomeTable/FixedIncomeTable';
 
 const FixedIncomePage = styled.main`
   display: flex;
   flex-direction: column;
+  grid-area: content;
+  padding: 2.8rem;
 `;
 
 const FixedIncome = () => {
@@ -29,7 +31,7 @@ const FixedIncome = () => {
         loading={loading}
         cardsData={fixedIncomeData?.snapshotByPortfolio}
       />
-      <FixedIncomeCard title="Título" text="Tesouro IPCA + com juros semestrais 2020 (ntnb)" />
+      <FixedIncomeTable rows={fixedIncomeData?.snapshotByProduct} />
     </FixedIncomePage>
   );
 };

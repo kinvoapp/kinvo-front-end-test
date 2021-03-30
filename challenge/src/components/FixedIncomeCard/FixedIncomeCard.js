@@ -1,6 +1,19 @@
 import * as S from 'components/styled/lib';
+import { fixedIncomeDictionary } from 'helpers/dictionaryPool';
 import { ReactComponent as InfoSvg } from 'assets/images/info.svg';
-import FixedIncomeCell from 'components/atoms/FixedIncome/FixedIncomeCell';
+import FixedIncomeCell from 'components/FixedIncomeCell/FixedIncomeCell';
+
+function generateCells(data, color) {
+  const isolatedPropertiesArray = Object.entries(data);
+  return isolatedPropertiesArray.map((entry) => (
+    <FixedIncomeCell
+      key={entry[0]}
+      title={fixedIncomeDictionary[entry[0]]?.title}
+      color={color}
+      value={fixedIncomeDictionary[entry[0]]?.value(entry[1])}
+    />
+  ));
+}
 
 const FixedIncomeCard = ({ title, text, cellColor, cells }) => {
   return (
@@ -25,7 +38,7 @@ const FixedIncomeCard = ({ title, text, cellColor, cells }) => {
             </S.Text>
           </S.FixedIncomeCardText>
         )}
-        <FixedIncomeCell title="Classe" color="violet-light" value="Tesouro Direto" />
+        {cells && generateCells(cells, cellColor)}
       </S.FixedIncomeCardContent>
     </S.FixedIncomeCard>
   );

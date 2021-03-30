@@ -1,4 +1,4 @@
-import * as S from '../../styled/lib';
+import * as S from '../styled/lib';
 
 const Card = ({ title, text }) => {
   return (

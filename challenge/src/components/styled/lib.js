@@ -30,22 +30,22 @@ export const SvgWrapper = styled.div`
 `;
 
 //********* - HEADER - ***********
-export const PageHeader = styled.header`
+export const Header = styled.header`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: var(--m-28);
 `;
 
 export const HeaderCardWrapper = styled.div`
   display: flex;
   margin: var(--m-28) 0;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 // *********** - HEADER CARD - *************
 export const HeaderCard = styled.div`
-  min-width: 17rem;
+  min-width: 16.5rem;
   max-height: 6rem;
   padding: 1rem;
   background-color: var(--c-white);
@@ -54,6 +54,7 @@ export const HeaderCard = styled.div`
   margin-bottom: var(--m-10);
   display: flex;
   align-items: center;
+  box-shadow: var(--box-shadow);
 `;
 
 export const Content = styled.div`
@@ -67,15 +68,16 @@ export const Content = styled.div`
 
 //***** - FIXED INCOME CARD - *****
 export const FixedIncomeCard = styled.div`
-  min-width: 20rem;
-  margin: var(--m-10);
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: auto 3fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas:
     'header   .......'
     'content  content';
+  & + &:not(:last-child) {
+    width: 48rem;
+    margin: 0 1rem;
+  }
 `;
 
 export const FixedIncomeCardHeader = styled.header`
@@ -91,6 +93,10 @@ export const FixedIncomeCardHeader = styled.header`
   z-index: 2;
   position: relative;
   bottom: -0.1rem;
+
+  & > svg {
+    margin-left: 1rem;
+  }
 `;
 
 export const FixedIncomeCardContent = styled.div`
@@ -104,12 +110,61 @@ export const FixedIncomeCardContent = styled.div`
   background-color: var(--c-white);
 `;
 export const FixedIncomeCardText = styled.div`
-  max-width: 45%;
+  width: 20rem;
 `;
 
 export const FixedIncomeCardCell = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 15rem;
+
+  &,
+  & + &:not(:last-child) {
+    margin-right: 1rem;
+  }
+`;
+
+//****** - FIXED INCOME ROW *******
+export const FixedIncomeRow = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--c-white);
+  padding: var(--p-20);
+  border-bottom: 1px solid var(--c-cyan-light);
+
+  &:nth-of-type(even) {
+    background-color: var(--c-ghostwhite);
+  }
+`;
+
+//****** - FIXED INCOME TABLE ******
+export const FixedIncomeTable = styled.section`
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+`;
+
+export const FixedIncomeTableHeader = styled.header`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  padding: var(--p-20);
+  background-color: var(--c-white);
+  border-bottom: 1px solid var(--c-cyan-light);
+  border-radius: 10px 10px 0 0;
+`;
+
+export const FixedIncomeTableFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  padding: var(--p-20);
+  background-color: var(--c-white);
+  border-radius: 0 0 10px 10px;
 `;
 
 //********* - LOADING - ***********
