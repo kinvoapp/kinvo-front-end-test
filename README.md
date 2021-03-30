@@ -26,10 +26,10 @@ Uma pequena introdução mínima para configurar o projeto e executá-lo.
 > styled-components 5.2.1
 
 ## Requisitos completos e observações
-> Filtragem de produtos na seção **Minhas Rendas Fixas** - Completo;
-> Exibição de dados via API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`;
-> Paginação infinita de 5 produtos por página.;
-> Uso do React;
-> Uso da Bibliotece styled-components;
-> Ordenação pelo nome e vencimento do produto.;
-> Gráfico > Não consegui encontrar uma maneira de exibir o gráfico de linha com os dados, pois há muitos produtos que possuem variações no mesmo dia, e outros produtos que só possuem variação em dias completamente diferentes, além de que não estão distribuídos igualmente, para fazer uma comparação no gráfico.;
+* > Filtragem de produtos na seção **Minhas Rendas Fixas**;
+* > Exibição de dados via API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`;
+* > Paginação infinita de 5 produtos por página.;
+* > Uso do React;
+* > Uso da Bibliotece styled-components;
+* > Ordenação pelo nome e vencimento do produto.;
+* > Gráfico - Não consegui encontrar uma maneira de exibir o gráfico de linha com os dados, pois há muitos produtos que possuem variações no mesmo dia, e outros produtos que só possuem variação em dias completamente diferentes, além de que não estão distribuídos igualmente, para fazer uma comparação no gráfico.;
