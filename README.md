@@ -11,7 +11,8 @@ de renda fixa, podendo pesquisar e ordenar os dados.
 
 Uma pequena introdução mínima para configurar o projeto e executá-lo.
 
-``` git clone https://github.com/tarfao/kinvo-front-end-test.git
+``` 
+    git clone https://github.com/tarfao/kinvo-front-end-test.git
     cd kinvo-front-end-test
     npm install 
     npm start
