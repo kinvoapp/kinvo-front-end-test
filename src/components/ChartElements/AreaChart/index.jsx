@@ -4,13 +4,7 @@ import HighchartsReact from 'highcharts-react-official'
 import { Container } from './styles';
 
 function AreaChart(props) {
-  const { data, label, title } = props;
-  const quotaInit = 100;
-
-  function calculate(correctedQuota) {
-    const percentage = (correctedQuota - quotaInit)*100/quotaInit;
-    return Number(percentage.toFixed(2));
-  }
+  const { data, title } = props;
 
   return (
     <Container>
