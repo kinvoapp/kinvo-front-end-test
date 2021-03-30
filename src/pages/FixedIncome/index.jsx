@@ -16,12 +16,14 @@ function FixedIncome() {
   const [ fixedIncomeData, setFixedIncomeData ] = useState();
   const [ chartDataByName, setChartDataByName ] = useState();
   const [ chartDataByBondType, setChartDataByBondType ] = useState();
+  const [ chartDataProfitability, setChartDataProfitability ] = useState();
   const { snapshotByProduct, snapshotByPortfolio } = fixedIncomeData || {};
 
   useEffect(() => {
     if (fixedIncomeData) {
       getChartDataByName();
       getChartDataByBondType();
+      getDataForChart();
     } else {
       getFixedIncomeData();
     }
@@ -34,6 +36,36 @@ function FixedIncome() {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  function calculate(quotaInit, correctedQuota) {
+    const percentage = quotaInit > 0 ? (correctedQuota - quotaInit)*100/quotaInit : 0;
+    return Number(percentage.toFixed(2));
+  }
+
+  function getDataByProduct(array) {
+    let quotaInit = 0;
+    const data = array.map((element) => {
+      const { movementTypeId, correctedQuota, dailyReferenceDate } = element;
+      if (movementTypeId === 1) quotaInit = correctedQuota;
+      if (quotaInit > 0) return [dailyReferenceDate, calculate(quotaInit, correctedQuota)]
+    });
+    return data;
+  }
+
+  function getDataForChart() {
+    const { dailyEquityByPortfolioChartData } = fixedIncomeData;
+    const group = groupBy(dailyEquityByPortfolioChartData, 'productName');
+    const dataGrouped = [];
+
+    Object.entries(group).forEach(([key, value]) => {
+      dataGrouped.push({
+        name: key,
+        data: getDataByProduct(value),
+      })
+    })
+
+    setChartDataProfitability(dataGrouped);
   }
 
   function getChartDataByName() {
@@ -55,6 +87,13 @@ function FixedIncome() {
     setChartDataByBondType(dataGrouped);
   }
 
+  const groupBy = function(xs, key) {
+    return xs.reduce(function(rv, x) {
+      (rv[x[key]] = rv[x[key]] || []).push(x);
+      return rv;
+    }, {});
+  };
+
   return (
     <Container>
       <Grid container spacing={2}>
@@ -75,7 +114,7 @@ function FixedIncome() {
 
         <Grid item xs={12}>
           <CardInfo title="Rentabilidade dos Títulos">
-            <AreaChart />
+            <AreaChart data={chartDataProfitability} />
           </CardInfo>
         </Grid>
 
