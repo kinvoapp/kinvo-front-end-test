@@ -39,30 +39,16 @@ export const Header = styled.header`
     font-weight: 500;
   }
 
-  div,
   label {
+    padding: 0.5rem;
+
+    grid-area: label;
+    display: flex;
+
     font-size: 0.75rem;
     color: ${({ theme }) => theme.text.menu};
     border-radius: 10px;
     border: 1px solid ${({ theme }) => theme.border.box};
-  }
-
-  div {
-    width: 9.75rem;
-    padding: 0 0.625rem;
-
-    grid-area: div;
-    display: flex;
-    justify-self: right;
-    align-items: center;
-  }
-
-  label {
-    grid-area: label;
-
-    padding: 0.5rem;
-
-    display: flex;
 
     input {
       all: unset;
