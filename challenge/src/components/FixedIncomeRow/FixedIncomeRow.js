@@ -2,7 +2,6 @@ import * as S from 'components/styled/lib';
 import FixedIncomeCard from 'components/FixedIncomeCard/FixedIncomeCard';
 
 const FixedIncomeRow = ({ row }) => {
-  console.log(row);
   return (
     <S.FixedIncomeRow>
       <FixedIncomeCard

@@ -3,6 +3,7 @@ import api from 'services/api';
 import { useEffect, useState } from 'react';
 import Header from 'components/Header/Header';
 import FixedIncomeTable from 'components/FixedIncomeTable/FixedIncomeTable';
+import Loading from 'components/Loading/Loading';
 
 const FixedIncomePage = styled.main`
   display: flex;
@@ -24,6 +25,7 @@ const FixedIncome = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  if (loading) return <Loading />;
   return (
     <FixedIncomePage>
       <Header

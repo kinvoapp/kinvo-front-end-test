@@ -1,6 +1,6 @@
 import * as S from 'components/styled/lib';
 import HeaderCard from 'components/HeaderCard/HeaderCard';
-import Loading from 'components/Loading';
+import Loading from 'components/Loading/Loading';
 import { titleDictionary } from 'helpers/dictionaryPool';
 
 function generateCards(data) {
@@ -14,17 +14,13 @@ function generateCards(data) {
   ));
 }
 
-const Header = ({ title, cardsData, loading }) => {
+const Header = ({ title, cardsData }) => {
   return (
     <S.Header>
       <S.Title size="20" color="violet" weight="bold">
         {title}
       </S.Title>
-      {loading ? (
-        <Loading />
-      ) : (
-        <S.HeaderCardWrapper>{cardsData && generateCards(cardsData)}</S.HeaderCardWrapper>
-      )}
+      <S.HeaderCardWrapper>{cardsData && generateCards(cardsData)}</S.HeaderCardWrapper>
     </S.Header>
   );
 };

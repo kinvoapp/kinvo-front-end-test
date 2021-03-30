@@ -1,11 +1,17 @@
+import OrderDropdown from 'components/OrderDropdown/OrderDropdown';
+import SearchBar from 'components/SearchBar/SearchBar';
 import * as S from 'components/styled/lib';
 
-const FixedIncomeTableHeader = () => {
+const FixedIncomeTableHeader = ({ setVisibleRows, allRows }) => {
   return (
     <S.FixedIncomeTableHeader>
       <S.Title as="h2" size="18" color="neutral" weight="500">
         Minhas Rendas Fixas
       </S.Title>
+      <S.FixedIncomeTableHeaderFilterWrapper>
+        <OrderDropdown />
+        <SearchBar rows={allRows} setVisibleRows={setVisibleRows} />
+      </S.FixedIncomeTableHeaderFilterWrapper>
     </S.FixedIncomeTableHeader>
   );
 };

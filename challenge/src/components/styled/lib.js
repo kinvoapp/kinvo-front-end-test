@@ -41,6 +41,10 @@ export const HeaderCardWrapper = styled.div`
   margin: var(--m-28) 0;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  & + &:not(:last-child) {
+    margin-right: var(--m-10);
+  }
 `;
 
 // *********** - HEADER CARD - *************
@@ -50,11 +54,10 @@ export const HeaderCard = styled.div`
   padding: 1rem;
   background-color: var(--c-white);
   border-radius: 10px;
-  margin-right: var(--m-10);
-  margin-bottom: var(--m-10);
   display: flex;
   align-items: center;
   box-shadow: var(--box-shadow);
+  margin-bottom: var(--m-10);
 `;
 
 export const Content = styled.div`
@@ -145,9 +148,11 @@ export const FixedIncomeTable = styled.section`
   box-shadow: var(--box-shadow);
 `;
 
+//****** - FIXED INCOME TABLE HEADER - ******
 export const FixedIncomeTableHeader = styled.header`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 7rem;
   padding: var(--p-20);
@@ -156,6 +161,11 @@ export const FixedIncomeTableHeader = styled.header`
   border-radius: 10px 10px 0 0;
 `;
 
+export const FixedIncomeTableHeaderFilterWrapper = styled.div`
+  display: flex;
+`;
+
+//****** - FIXED INCOME TABLE FOOTER - ******
 export const FixedIncomeTableFooter = styled.footer`
   display: flex;
   justify-content: center;
@@ -167,6 +177,59 @@ export const FixedIncomeTableFooter = styled.footer`
   border-radius: 0 0 10px 10px;
 `;
 
+//********* - SEARCHBAR - ***********
+export const SearchBarWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & svg {
+    position: absolute;
+    left: 1rem;
+  }
+`;
+
+export const SearchBar = styled.input`
+  font-family: inherit;
+  font-size: 1.2rem;
+  width: 24rem;
+  height: 3.2rem;
+  border: 1px solid var(--c-cyan-dark);
+  border-radius: 10px;
+  outline: none;
+  padding-left: 3.5rem;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 1px var(--c-violet);
+  }
+`;
+
+//********* - ORDER DROPDOWN - ***********
+export const OrderDropdownWrapper = styled(SearchBarWrapper)`
+  & svg {
+    position: absolute;
+    right: 3.3rem;
+    left: initial;
+    transform: rotate(90deg) scale(1.2);
+    path {
+      fill: var(--c-neutral-dark);
+    }
+  }
+`;
+
+export const OrderDropdown = styled(SearchBar)`
+  width: 15.5rem;
+  padding: 0 1rem;
+  margin-right: 1.7rem;
+  color: var(--c-neutral-light);
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+
+  & option {
+    width: inherit;
+  }
+`;
 //********* - LOADING - ***********
 export const Loading = styled.div`
   justify-self: center;

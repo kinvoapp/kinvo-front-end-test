@@ -2,5 +2,8 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "typeAcquisition": {
+    "exclude": [ "node_modules" ]
+  }
 }
