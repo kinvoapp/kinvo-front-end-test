@@ -12,6 +12,7 @@ export default createGlobalStyle`
     display: flex;
     width: 100%;
     min-height: 100%;
+    overflow-x: hidden;
   }
   body {
     background: #EEF2F4;

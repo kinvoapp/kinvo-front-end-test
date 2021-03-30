@@ -11,18 +11,26 @@ export const SidebarComponent = styled.aside`
       width: 100%;
     }
   }
+  @media (max-width: 1310px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`
   flex: 1;
   ul {
     width: 100%;
+    height: 200px;
+    display: inline-block;
   }
+`;
 
-  .subMenu {
-    li {
-      display: flex;
-      flex-direction: column;
-    }
+export const Submenu = styled.ul`
+  display: flex;
+  border: 1px solid red;
+  min-height: 100px;
+  li {
+    display: flex;
+    flex-direction: column;
   }
 `;

@@ -23,7 +23,12 @@ const Sidebar: React.FC = () => (
         <NavItem icon={portfolioIcon} title={`Resumo \n da Carteira`} />
         <NavItem icon={productsIcon} title={`Meus \n Produtos`} />
         <NavItem icon={earningsIcon} title={`Meus \n Poventos`} />
-        <NavItem icon={equitiesClassIcon} title={`Classe \n de Ativos`} />
+        <NavItem
+          icon={equitiesClassIcon}
+          title={`Classe \n de Ativos`}
+          active
+          subMenu={['Ação', 'Fundo', 'Fundo Imobiliário', 'Fundo Renda Fixa']}
+        />
         <NavItem icon={realProfitIcon} title={`Rentabilidade \n Real`} />
         <NavItem icon={projectionIcon} title={`Projeção \n da Carteira`} />
         <NavItem icon={riskReturnIcon} title={`Risco x \n Retorno`} />

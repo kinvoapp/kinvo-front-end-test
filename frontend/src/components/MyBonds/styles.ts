@@ -16,7 +16,6 @@ export const BondsContent = styled.section`
       font-weight: 500;
       font-size: 18px;
       color: #627179;
-      margin-top: 2px;
     }
 
     form {

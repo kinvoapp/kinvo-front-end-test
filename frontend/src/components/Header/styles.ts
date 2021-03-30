@@ -33,6 +33,10 @@ export const HeaderBar = styled.header`
 export const HeaderStatus = styled.div`
   display: flex;
   gap: 40px;
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
 `;
 
 export const WalletSelect = styled.div`
