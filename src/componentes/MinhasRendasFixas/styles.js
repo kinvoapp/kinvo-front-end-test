@@ -90,7 +90,11 @@ const Tabela = styled.table`
     overflow: auto;
 `;
 
+const MsgNenhumDado = styled.h1`
+    text-align: center;
+    margin-left: 100px;
+`;
 export {
     WrapperRendasFixas, WrapperFiltroBusca, DadosTabela,
-    ColunaTabela, WrapperTitulo, Tabela
+    ColunaTabela, WrapperTitulo, Tabela, MsgNenhumDado
 }

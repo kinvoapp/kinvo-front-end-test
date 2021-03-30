@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { HorizontalLine } from "../utils/styles";
 import {
     ColunaTabela, DadosTabela, WrapperFiltroBusca,
-    WrapperRendasFixas, WrapperTitulo, Tabela
+    WrapperRendasFixas, WrapperTitulo, Tabela, MsgNenhumDado
 } from "./styles";
 import UseMinhasRendasFixas from "./UseMinhasRendasFixas";
 
@@ -44,7 +44,7 @@ function MinhasRendasFixas({
             <HorizontalLine />
             <Tabela id="data-table">
                 <tbody>
-                    {arrRendasFixas.map((renda, index) => (
+                    {arrRendasFixas.length > 0 ? arrRendasFixas.map((renda, index) => (
                         <tr key={index}>
                             <td>
                                 <ColunaTabela>
@@ -113,7 +113,9 @@ function MinhasRendasFixas({
                                 </ColunaTabela>
                             </td>
                         </tr>
-                    ))}
+                    )) : <div>
+                            <MsgNenhumDado>Nenhum dado encontrado</MsgNenhumDado>
+                        </div>}
                 </tbody>
             </Tabela>
         </WrapperRendasFixas>
