@@ -1,6 +1,6 @@
 # Kinvo Challenge &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
-Project made for Kinvo job's challenge.
+Project made for Kinvo job's challenge. I didn't use any external lib to make the table, pagination, instant search or ordering. It can't be so much escalable but it's a Code Challenge. I put my best in it feel free to open a Issue and sending improvement. Life's a stateful learning component.
 
 ## Installing / Getting started
 
