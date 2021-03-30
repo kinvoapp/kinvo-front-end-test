@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SidebarComponent = styled.aside`
-  min-width: 226px;
+  width: 226px;
   display: flex;
   background-color: white;
   flex-direction: column;
@@ -13,15 +13,6 @@ export const SidebarComponent = styled.aside`
   }
   @media (max-width: 1310px) {
     display: none;
-  }
-`;
-
-export const NavItem = styled.li`
-  flex: 1;
-  ul {
-    width: 100%;
-    height: 200px;
-    display: inline-block;
   }
 `;
 
