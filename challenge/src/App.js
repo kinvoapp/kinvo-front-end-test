@@ -16,14 +16,14 @@ const Header = styled.div`
   grid-area: header;
   width: 100%;
   height: 9rem;
-  background-color: #000;
+  background-color: #fff;
 `;
 
 const Menu = styled.div`
   grid-area: menu;
   width: 27rem;
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
 `;
 
 function App() {

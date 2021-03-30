@@ -18,8 +18,9 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-  ${({ size, color, weight, transform, margin, letterSpacing, lineHeight }) =>
+  ${({ size, color, weight, transform, margin, letterSpacing, lineHeight, right }) =>
     getDinamicBasis(size, color, weight, transform, margin, letterSpacing, lineHeight)}
+  text-align: ${(props) => (props.right ? 'right' : 'initial')};
 `;
 
 //*********** - SVG's - *************
@@ -72,6 +73,7 @@ export const Content = styled.div`
 //***** - FIXED INCOME CARD - *****
 export const FixedIncomeCard = styled.div`
   display: grid;
+  background-color: inherit;
   grid-template-columns: auto 3fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas:
@@ -80,6 +82,10 @@ export const FixedIncomeCard = styled.div`
   & + &:not(:last-child) {
     width: 48rem;
     margin: 0 1rem;
+  }
+
+  & + &:last-child {
+    min-width: 20rem;
   }
 `;
 
@@ -92,10 +98,9 @@ export const FixedIncomeCardHeader = styled.header`
   border: 1px solid var(--c-cyan-dark);
   border-bottom: none;
   border-radius: 10px 10px 0 0;
-  background-color: var(--c-white);
-  z-index: 2;
+  background-color: inherit;
   position: relative;
-  bottom: -0.1rem;
+  bottom: -1px;
 
   & > svg {
     margin-left: 1rem;
@@ -110,7 +115,7 @@ export const FixedIncomeCardContent = styled.div`
   align-items: center;
   border: 1px solid var(--c-cyan-dark);
   border-radius: 0 10px 10px 10px;
-  background-color: var(--c-white);
+  background-color: inherit;
 `;
 export const FixedIncomeCardText = styled.div`
   width: 20rem;
@@ -167,6 +172,7 @@ export const FixedIncomeTableHeaderFilterWrapper = styled.div`
 
 //****** - FIXED INCOME TABLE FOOTER - ******
 export const FixedIncomeTableFooter = styled.footer`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,6 +181,28 @@ export const FixedIncomeTableFooter = styled.footer`
   padding: var(--p-20);
   background-color: var(--c-white);
   border-radius: 0 0 10px 10px;
+`;
+
+export const FixedIncomeTableFooterLimiter = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 2rem;
+
+  & input {
+    height: 3.5rem;
+    width: 3.5rem;
+    text-align: center;
+    border: 1px solid var(--c-cyan);
+    border-radius: 5px;
+    font-size: var(--f-13);
+    color: var(--c-silver);
+    outline: none;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px var(--c-violet);
+    }
+  }
 `;
 
 //********* - SEARCHBAR - ***********
@@ -230,6 +258,66 @@ export const OrderDropdown = styled(SearchBar)`
     width: inherit;
   }
 `;
+
+//******* - PAGINATION - **********
+export const Pagination = styled.div`
+  display: flex;
+`;
+
+export const PaginationNumbersWrapper = styled.div`
+  max-width: 13.5rem;
+  overflow-x: hidden;
+  & div {
+    transition: 0.3s ease-in-out;
+    display: flex;
+    transform: translateX(${(props) => `-${props.motion}` || 0}rem);
+  }
+`;
+
+export const PaginationButton = styled.div`
+  position: relative;
+
+  & input[type='radio'] {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  & input[type='radio']:checked + label {
+    background-color: var(--c-cyan-dark);
+    color: var(--c-white);
+    font-weight: bold;
+  }
+`;
+
+export const PaginationLabel = styled.label`
+  cursor: pointer;
+  width: 3.5rem;
+  margin: 0 0.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--c-cyan-light);
+  border-radius: 5px;
+  font-size: var(--f-13);
+  color: var(--c-silver);
+  box-shadow: 0px 0px 10px var(--c-alpha-lighter);
+
+  &:hover {
+    background-color: var(--c-cyan-light);
+  }
+`;
+
+export const PaginationArrow = styled(PaginationLabel)`
+  & svg {
+    transform: rotate(${(props) => props.rotate || '0'}deg);
+    path {
+      fill: var(--c-silver);
+    }
+  }
+`;
+
 //********* - LOADING - ***********
 export const Loading = styled.div`
   justify-self: center;

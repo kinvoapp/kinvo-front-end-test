@@ -22,15 +22,15 @@ function getFilteredRows(rows, searchTerm) {
   });
 }
 
-const SearchBar = ({ rows, setVisibleRows }) => {
+const SearchBar = ({ rows, setFilteredRows }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = useCallback(
     (e) => {
       setInputValue(e.target.value);
-      setVisibleRows(getFilteredRows(rows, e.target.value));
+      setFilteredRows(getFilteredRows(rows, e.target.value));
     },
-    [rows, setVisibleRows],
+    [rows, setFilteredRows],
   );
 
   return (

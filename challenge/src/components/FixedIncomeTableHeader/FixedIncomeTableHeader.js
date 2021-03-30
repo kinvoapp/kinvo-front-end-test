@@ -2,7 +2,7 @@ import OrderDropdown from 'components/OrderDropdown/OrderDropdown';
 import SearchBar from 'components/SearchBar/SearchBar';
 import * as S from 'components/styled/lib';
 
-const FixedIncomeTableHeader = ({ setVisibleRows, allRows }) => {
+const FixedIncomeTableHeader = ({ setFilteredRows, allRows }) => {
   return (
     <S.FixedIncomeTableHeader>
       <S.Title as="h2" size="18" color="neutral" weight="500">
@@ -10,7 +10,7 @@ const FixedIncomeTableHeader = ({ setVisibleRows, allRows }) => {
       </S.Title>
       <S.FixedIncomeTableHeaderFilterWrapper>
         <OrderDropdown />
-        <SearchBar rows={allRows} setVisibleRows={setVisibleRows} />
+        <SearchBar rows={allRows} setFilteredRows={setFilteredRows} />
       </S.FixedIncomeTableHeaderFilterWrapper>
     </S.FixedIncomeTableHeader>
   );

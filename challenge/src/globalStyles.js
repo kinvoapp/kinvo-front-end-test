@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --c-cyan-light: #EEF2F4;
     --c-cyan-dark: #DCE0E3;
     --c-cyan-darker: #D6D9DD;
+    --c-silver: #C2C5CC;
     --c-neutral: #627179;
     --c-neutral-dark:#4E5B61;
     --c-neutral-light: #707B81;

@@ -4,18 +4,25 @@ import FixedIncomeTableHeader from 'components/FixedIncomeTableHeader/FixedIncom
 import * as S from 'components/styled/lib';
 import { useEffect, useState } from 'react';
 
-const FixedIncomeTable = ({ rows }) => {
-  const [allRows, setAllRows] = useState(rows);
-  const [paginatedRows, setPaginatedRows] = useState([]);
+const FixedIncomeTable = ({ rows = [] }) => {
+  const [filteredRows, setFilteredRows] = useState(rows);
   const [visibleRows, setVisibleRows] = useState(rows);
+
+  useEffect(() => {
+    setVisibleRows(filteredRows);
+  }, [filteredRows]);
 
   return (
     <S.FixedIncomeTable>
-      <FixedIncomeTableHeader allRows={allRows} setVisibleRows={setVisibleRows} />
-      {visibleRows?.map((row) => (
-        <FixedIncomeRow row={row} />
-      ))}
-      <FixedIncomeTableFooter />
+      <FixedIncomeTableHeader allRows={rows} setFilteredRows={setFilteredRows} />
+      {visibleRows?.length > 0 ? (
+        visibleRows?.map((row) => (
+          <FixedIncomeRow key={row?.fixedIncome.portfolioProductId} row={row} />
+        ))
+      ) : (
+        <S.Text margin="2rem">Sem resultados para o termo pesquisado, desculpe :(</S.Text>
+      )}
+      <FixedIncomeTableFooter rows={filteredRows} setVisibleRows={setVisibleRows} />
     </S.FixedIncomeTable>
   );
 };
