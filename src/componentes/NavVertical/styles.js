@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { MyButtonIcon } from '../utils/styles';
 
 const Menu = styled.ul`
     background-color: #fff;
@@ -24,6 +25,9 @@ Menu.Li = styled.li`
         background-color: #F8FAFB;
         & > ${Menu} {
             display: block;
+        }
+        & ${MyButtonIcon}{
+            background-color: #4C309B;
         }
     }
     & > ${Menu} > &{
