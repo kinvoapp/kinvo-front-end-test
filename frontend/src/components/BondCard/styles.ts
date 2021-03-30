@@ -37,7 +37,7 @@ export const BondCardItem = styled.div`
     align-items: center;
     padding: 0;
     h3 {
-      font-size: 0.5rem;
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 0.75px;
       color: #4e5b61;

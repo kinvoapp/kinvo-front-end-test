@@ -30,7 +30,6 @@ export default createGlobalStyle`
   .content {
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
     .mainContent {
       flex: 1;
       padding: 0 20px 0 20px;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import BondsCard from '../BondCard';
+
 import { SnapshotByProduct } from '../../interfaces/api.interface';
 
 import { BondItem } from './styles';

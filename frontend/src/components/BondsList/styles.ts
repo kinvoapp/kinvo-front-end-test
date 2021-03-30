@@ -7,7 +7,7 @@ export const BondItem = styled.div`
   padding: 20px 21px 20px 20px;
   gap: 10px;
   border-top: 1px solid #eef2f4;
-  &:nth-child(odd) {
+  &:nth-of-type(2n) {
     background-color: #f8fafb;
   }
   &:last-child {
