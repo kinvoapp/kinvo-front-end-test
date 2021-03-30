@@ -10,7 +10,7 @@ O desafio exigia que fosse implementada a página **Classe de Ativos > Fundo Ren
 
 ## Requisitos (Pleno)
 
-- Permitir a filtragem de produtos na seção Minhas Rendas Fixas a partir de buscas realizadas no campo de texto
+- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto
 - Exibir dados reais obtidos a partir da API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`
 - Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**
 - Fazer uso da biblioteca [React](https://pt-br.reactjs.org/)
