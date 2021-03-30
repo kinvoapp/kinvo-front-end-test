@@ -5,6 +5,10 @@ import { WalletStatusImg } from '../../interfaces/WalletStatus.interface';
 export const StatusItem = styled.div`
   display: flex;
   align-items: center;
+  p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
 `;
 
 export const Icon = styled('div')<WalletStatusImg>`
