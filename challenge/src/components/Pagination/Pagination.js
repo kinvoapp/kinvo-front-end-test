@@ -33,18 +33,8 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
   const [motion, setMotion] = useState(0);
   const [page, setPage] = useState(0);
 
-  useEffect(() => {
-    const newRows = getPaginatedRows(rows, limit, pagesAmount, setPage);
-    setPaginatedRows(newRows);
-    setVisibleRows(newRows[0]);
-  }, [rows, limit, pagesAmount, setVisibleRows]);
-
-  useEffect(() => {
-    setVisibleRows(paginatedRows[page]);
-  }, [page, setVisibleRows, paginatedRows]);
-
-  const handleNumberClick = useCallback(
-    (index) => () => {
+  const handleMotion = useCallback(
+    (index) => {
       const visibleButtons = 3;
       const buttonsAmount = pagesAmount;
       const motionFactor = 2.25; //Based on button width + margin
@@ -66,6 +56,17 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
     [pagesAmount],
   );
 
+  useEffect(() => {
+    const newRows = getPaginatedRows(rows, limit, pagesAmount, setPage);
+    setPaginatedRows(newRows);
+    setVisibleRows(newRows[0]);
+  }, [rows, limit, pagesAmount, setVisibleRows]);
+
+  useEffect(() => {
+    setVisibleRows(paginatedRows[page]);
+    handleMotion(page);
+  }, [page, setVisibleRows, paginatedRows, handleMotion]);
+
   return (
     <S.Pagination>
       <S.PaginationArrow rotate="-180" onClick={handleArrowClick('back')}>
@@ -82,7 +83,10 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
                   id={`btnPag${index}`}
                   checked={index === page}
                 />
-                <S.PaginationLabel onClick={handleNumberClick(index)} htmlFor={`btnPag${index}`}>
+                <S.PaginationLabel
+                  onClick={({ target }) => setPage(index)}
+                  htmlFor={`btnPag${index}`}
+                >
                   {index + 1}
                 </S.PaginationLabel>
               </S.PaginationButton>

@@ -9,7 +9,7 @@ const FixedIncomeTableHeader = ({ setFilteredRows, allRows }) => {
         Minhas Rendas Fixas
       </S.Title>
       <S.FixedIncomeTableHeaderFilterWrapper>
-        <OrderDropdown />
+        <OrderDropdown setFilteredRows={setFilteredRows} />
         <SearchBar rows={allRows} setFilteredRows={setFilteredRows} />
       </S.FixedIncomeTableHeaderFilterWrapper>
     </S.FixedIncomeTableHeader>
