@@ -1,6 +1,5 @@
 <img src="./logo.png" alt="Logo do projeto" align="right">
-
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+<img src="./logo.svg" alt="Logo do projeto" align="right">
 
 # Desafio Front-end Web
 
