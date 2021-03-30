@@ -40,6 +40,7 @@ Menu.Li.Expand = styled.span`
 Menu.WrapperIconTitle = styled.div`
     display: flex;
     align-items: center;
+    padding-bottom: 20px;
 `;
 
 export {

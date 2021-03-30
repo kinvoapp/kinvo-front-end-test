@@ -17,7 +17,7 @@ const MyButtonIcon = styled.div`
 
 const HorizontalLine = styled.hr`
     color: #CCCFD1;
-    font-size: 0.5px;
+    opacity: 0.2;
 `
 
 const TituloPagina = styled.h2`
