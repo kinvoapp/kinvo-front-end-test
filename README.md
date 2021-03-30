@@ -21,10 +21,10 @@ Uma pequena introdução mínima para configurar o projeto e executá-lo.
 ## Desenvolvimento
 
 ### Bibliotecas
-> React 17.0.2
-> axios 0.21.1
-> React Father 2.0.9
-> styled-components 5.2.1
+* > React 17.0.2
+* > axios 0.21.1
+* > React Father 2.0.9
+* > styled-components 5.2.1
 
 ## Requisitos completos e observações
 * > Filtragem de produtos na seção **Minhas Rendas Fixas**;
