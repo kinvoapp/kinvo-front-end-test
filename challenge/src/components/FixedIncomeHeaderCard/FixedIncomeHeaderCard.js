@@ -1,6 +1,6 @@
 import * as S from '../styled/lib';
 
-const Card = ({ title, text }) => {
+const FixedIncomeHeaderCard = ({ title, text }) => {
   return (
     <S.HeaderCard>
       <S.Content>
@@ -23,4 +23,4 @@ const Card = ({ title, text }) => {
   );
 };
 
-export default Card;
+export default FixedIncomeHeaderCard;

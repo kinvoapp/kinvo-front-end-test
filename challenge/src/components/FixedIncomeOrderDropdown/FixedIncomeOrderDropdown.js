@@ -29,7 +29,7 @@ function orderBySelectedValue(rowA, rowB, selectedValue) {
   return 0;
 }
 
-const OrderDropdown = ({ setFilteredRows }) => {
+const FixedIncomeOrderDropdown = ({ setFilteredRows }) => {
   const [selectedValue, setSelectedValue] = useState('');
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const OrderDropdown = ({ setFilteredRows }) => {
         value={selectedValue}
         onChange={({ target }) => setSelectedValue(target.value)}
       >
-        <option value="" disabled selected>
+        <option value="" disabled>
           Ordernar por
         </option>
         {Object.entries(fixedIncomeDictionary).map((opt) => {
@@ -63,4 +63,4 @@ const OrderDropdown = ({ setFilteredRows }) => {
   );
 };
 
-export default OrderDropdown;
+export default FixedIncomeOrderDropdown;

@@ -31,7 +31,7 @@ function debounce(callback, wait) {
   };
 }
 
-const SearchBar = ({ rows, setFilteredRows }) => {
+const FixedIncomeTableSearchBar = ({ rows, setFilteredRows }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = useCallback(
@@ -50,4 +50,4 @@ const SearchBar = ({ rows, setFilteredRows }) => {
   );
 };
 
-export default SearchBar;
+export default FixedIncomeTableSearchBar;

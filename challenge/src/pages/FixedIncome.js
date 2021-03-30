@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import api from 'services/api';
 import { useEffect, useState } from 'react';
-import Header from 'components/Header/Header';
+import FixedIncomeHeader from 'components/FixedIncomeHeader/FixedIncomeHeader';
 import FixedIncomeTable from 'components/FixedIncomeTable/FixedIncomeTable';
 import Loading from 'components/Loading/Loading';
 
@@ -28,7 +28,7 @@ const FixedIncome = () => {
   if (loading) return <Loading />;
   return (
     <FixedIncomePage>
-      <Header
+      <FixedIncomeHeader
         title="Renda Fixa"
         loading={loading}
         cardsData={fixedIncomeData?.snapshotByPortfolio}

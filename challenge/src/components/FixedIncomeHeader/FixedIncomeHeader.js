@@ -1,12 +1,11 @@
 import * as S from 'components/styled/lib';
-import HeaderCard from 'components/HeaderCard/HeaderCard';
-import Loading from 'components/Loading/Loading';
+import FixedIncomeHeaderCard from 'components/FixedIncomeHeaderCard/FixedIncomeHeaderCard';
 import { titleDictionary } from 'helpers/dictionaryPool';
 
 function generateCards(data) {
   const isolatedPropertiesArray = Object.entries(data);
   return isolatedPropertiesArray.map((entry, index) => (
-    <HeaderCard
+    <FixedIncomeHeaderCard
       key={index}
       title={titleDictionary[entry[0]]?.title}
       text={titleDictionary[entry[0]]?.value(entry[1])}
@@ -14,7 +13,7 @@ function generateCards(data) {
   ));
 }
 
-const Header = ({ title, cardsData }) => {
+const FixedIncomeHeader = ({ title, cardsData }) => {
   return (
     <S.Header>
       <S.Title size="20" color="violet" weight="bold">
@@ -25,4 +24,4 @@ const Header = ({ title, cardsData }) => {
   );
 };
 
-export default Header;
+export default FixedIncomeHeader;

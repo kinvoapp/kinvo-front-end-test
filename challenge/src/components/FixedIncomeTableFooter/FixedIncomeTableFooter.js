@@ -1,4 +1,4 @@
-import Pagination from 'components/Pagination/Pagination';
+import FixedIncomeTablePagination from 'components/FixedIncomeTablePagination/FixedIncomeTablePagination';
 import * as S from 'components/styled/lib';
 import { useState } from 'react';
 
@@ -9,7 +9,7 @@ const FixedIncomeTableFooter = ({ rows, setVisibleRows }) => {
   return (
     <S.FixedIncomeTableFooter>
       {rows && (
-        <Pagination
+        <FixedIncomeTablePagination
           rows={rows}
           limit={limitPagination || initialLimit}
           setVisibleRows={setVisibleRows}

@@ -22,12 +22,10 @@ function getMotion(buttonIndex, visibleButtons, buttonsAmount, motionFactor) {
   const skipFirstMotion = buttonIndex - 1;
   const motion = (skipFirstMotion > 0 ? skipFirstMotion : 0) * motionFactor;
 
-  console.log(motion);
-
   return motion > maxMotion ? maxMotion : motion;
 }
 
-const Pagination = ({ rows, limit, setVisibleRows }) => {
+const FixedIncomeTablePagination = ({ rows, limit, setVisibleRows }) => {
   const [paginatedRows, setPaginatedRows] = useState([]);
   const pagesAmount = Math.ceil(rows.length / limit);
   const [motion, setMotion] = useState(0);
@@ -82,6 +80,7 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
                   name="pagination"
                   id={`btnPag${index}`}
                   checked={index === page}
+                  readOnly
                 />
                 <S.PaginationLabel onClick={() => setPage(index)} htmlFor={`btnPag${index}`}>
                   {index + 1}
@@ -98,4 +97,4 @@ const Pagination = ({ rows, limit, setVisibleRows }) => {
   );
 };
 
-export default Pagination;
+export default FixedIncomeTablePagination;

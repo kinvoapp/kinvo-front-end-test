@@ -1,5 +1,5 @@
-import OrderDropdown from 'components/OrderDropdown/OrderDropdown';
-import SearchBar from 'components/SearchBar/SearchBar';
+import FixedIncomeOrderDropdown from 'components/FixedIncomeOrderDropdown/FixedIncomeOrderDropdown';
+import FixedIncomeTableSearchBar from 'components/FixedIncomeTableSearchBar/FixedIncomeTableSearchBar';
 import * as S from 'components/styled/lib';
 
 const FixedIncomeTableHeader = ({ setFilteredRows, allRows }) => {
@@ -9,8 +9,8 @@ const FixedIncomeTableHeader = ({ setFilteredRows, allRows }) => {
         Minhas Rendas Fixas
       </S.Title>
       <S.FixedIncomeTableHeaderFilterWrapper>
-        <OrderDropdown setFilteredRows={setFilteredRows} />
-        <SearchBar rows={allRows} setFilteredRows={setFilteredRows} />
+        <FixedIncomeOrderDropdown setFilteredRows={setFilteredRows} />
+        <FixedIncomeTableSearchBar rows={allRows} setFilteredRows={setFilteredRows} />
       </S.FixedIncomeTableHeaderFilterWrapper>
     </S.FixedIncomeTableHeader>
   );
