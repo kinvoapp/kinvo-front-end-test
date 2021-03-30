@@ -1,3 +1,4 @@
+import { Activity, BarChart2, ChevronRight, DollarSign, LifeBuoy, Lock, PieChart, Target, Zap } from "react-feather"
 import { HorizontalLine, MyButtonIcon } from "../utils/styles"
 import { Menu } from "./styles"
 
@@ -13,19 +14,19 @@ function NavVertical() {
         {
             titulo: 'Resumo da Carteira',
             sub_navegacao: [],
-            icon: 0,
+            IconItem: Target,
             colorBackground: '#DAE0E3'
         },
         {
             titulo: 'Meus Produtos',
             sub_navegacao: [],
-            icon: 1,
+            IconItem: PieChart,
             colorBackground: '#DAE0E3',
         },
         {
             titulo: 'Meus Proventos',
             sub_navegacao: [],
-            icon: 2,
+            IconItem: DollarSign,
             colorBackground: '#DAE0E3',
         },
         {
@@ -45,30 +46,30 @@ function NavVertical() {
                 },
             ],
             colorBackground: '#DAE0E3',
-            icon: 3
+            IconItem: BarChart2
         },
         {
             titulo: 'Rentabilidade Real',
             sub_navegacao: [],
-            icon: 4,
+            IconItem: Zap,
             colorBackground: '#DAE0E3',
         },
         {
             titulo: 'Projeção da carteira',
             sub_navegacao: [],
-            icon: 5,
+            IconItem: Activity,
             colorBackground: '#DAE0E3',
         },
         {
             titulo: 'Risco x Retorno',
             sub_navegacao: [],
-            icon: 6,
+            IconItem: LifeBuoy,
             colorBackground: '#DAE0E3',
         },
         {
             titulo: 'Cobertura do FGC',
             sub_navegacao: [],
-            icon: 7,
+            IconItem: Lock,
             colorBackground: '#DAE0E3',
         },
     ]
@@ -80,11 +81,11 @@ function NavVertical() {
                     <Menu.Li key={index}>
                         <Menu.WrapperIconTitle>
                             <MyButtonIcon colorBackground={item.colorBackground}>
-                                {item.icon}
+                                <item.IconItem color="#fff"/>
                             </MyButtonIcon>
                             {item.titulo}
                             <Menu.Li.Expand>
-                                >
+                                <ChevronRight />
                             </Menu.Li.Expand>
                         </Menu.WrapperIconTitle>
                         <HorizontalLine />
@@ -95,7 +96,7 @@ function NavVertical() {
                                         <Menu.Li key={index_sub_nav}>
                                             <p>{sub_nav.titulo}
                                                 <Menu.Li.Expand>
-                                                    >
+                                                    <ChevronRight />
                                             </Menu.Li.Expand>
                                             </p>
 

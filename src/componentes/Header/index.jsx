@@ -1,3 +1,6 @@
+import { 
+    Award, ArrowUp, TrendingUp, ChevronDown, Menu
+} from "react-feather";
 import { MyButtonIcon } from "../utils/styles";
 import { WrapperHeader, NomeEmpresa, DadosHeader } from "./styles";
 
@@ -11,7 +14,7 @@ function Header(props) {
             <DadosHeader>
                 <DadosHeader.WrapperIconDados>
                     <MyButtonIcon colorBackground="#DAE0E3">
-                        0
+                        <Award color="#fff"/>
                     </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
@@ -24,7 +27,7 @@ function Header(props) {
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
                     <MyButtonIcon colorBackground="#DAE0E3">
-                        0
+                        <ArrowUp color="#fff"/>
                     </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
@@ -37,7 +40,7 @@ function Header(props) {
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
                     <MyButtonIcon colorBackground="#DAE0E3">
-                        0
+                        <TrendingUp color="#fff"/>
                     </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
@@ -50,7 +53,7 @@ function Header(props) {
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados>
                     <MyButtonIcon colorBackground="#4C309B">
-                        >
+                        <ChevronDown color="#fff"/>
                     </MyButtonIcon>
                     <DadosHeader.Dados>
                         <DadosHeader.Dados.Titulo>
@@ -63,7 +66,7 @@ function Header(props) {
                 </DadosHeader.WrapperIconDados>
                 <DadosHeader.WrapperIconDados menuLogado>
                     <MyButtonIcon colorBackground="#4C309B">
-                        ---
+                        <Menu color="#fff"/>
                     </MyButtonIcon>
                 </DadosHeader.WrapperIconDados>
             </DadosHeader>
