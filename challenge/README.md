@@ -2,6 +2,10 @@
 
 Project made for Kinvo job's challenge. I didn't use any external lib to make the table, pagination, instant search or ordering. It can't be so much escalable but it's a Code Challenge. Feel free to open a Issue and send an improvement. Life's a stateful learning component.
 
+## Online Demo
+
+You can see a demo running on Vercel [here](https://kinvo-challenge.vercel.app/).
+
 ## Installing / Getting started
 
 It's a develop project to run this you'll need Node.js, Yarn/NPM and a Internet Connection to get data. Clone this repository to see it running, it will pull the project to your machine:
