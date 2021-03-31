@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const initialLimit = 5;
 const FixedIncomeTableFooter = ({ rows, setVisibleRows }) => {
-  const [limitPagination, setLimitPagination] = useState(0);
+  const [limitPagination, setLimitPagination] = useState(initialLimit);
 
   return (
     <S.FixedIncomeTableFooter>

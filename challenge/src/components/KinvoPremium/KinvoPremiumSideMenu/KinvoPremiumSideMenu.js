@@ -7,9 +7,10 @@ const KinvoPremiumSideMenu = () => {
     <S.KinvoPremiumSideMenu>
       {menuItems.map((menuItem) => (
         <KinvoPremiumSideMenuItem
+          key={menuItem.name}
           name={menuItem.name}
           text={menuItem.title}
-          color={menuItem.subItems.length <= 0 && 'cyan'}
+          svgColor={menuItem.subItems.length <= 0 ? 'cyan' : 'violet'}
           subItems={menuItem.subItems.length > 0 && menuItem.subItems}
         />
       ))}

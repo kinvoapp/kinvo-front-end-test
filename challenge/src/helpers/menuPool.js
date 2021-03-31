@@ -18,10 +18,10 @@ export const menuItems = [
     name: 'ativos',
     title: 'Classe de Ativos',
     subItems: [
-      { title: 'Ação', active: false },
-      { title: 'Fundo', active: false },
-      { title: 'Fundo Imobiliário', active: false },
-      { title: 'Fundo Renda Fixa', active: true },
+      { title: 'Ação', activeColor: '' },
+      { title: 'Fundo', activeColor: '' },
+      { title: 'Fundo Imobiliário', activeColor: '' },
+      { title: 'Fundo Renda Fixa', activeColor: 'ghostwhite' },
     ],
   },
   {

@@ -43,7 +43,7 @@ const FixedIncomeOrderDropdown = ({ setFilteredRows }) => {
   }, [order, selectedValue, setFilteredRows]);
 
   return (
-    <S.OrderDropdownWrapper order={order}>
+    <S.OrderDropdownWrapper orderRotateIcon={order ? 0 : 180}>
       <OrderSvg onClick={() => setOrder((prevState) => !prevState)} />
       <S.OrderDropdown
         as="select"

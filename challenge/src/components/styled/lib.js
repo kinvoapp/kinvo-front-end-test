@@ -282,7 +282,7 @@ export const OrderDropdownWrapper = styled(SearchBarWrapper)`
     cursor: pointer;
     position: absolute;
     transition: 0.3s ease-in-out;
-    transform: rotateY(180deg) scale(1.3) rotateX(${(props) => (props.order ? 0 : 180)}deg);
+    transform: rotateY(180deg) scale(1.3) rotateX(${(props) => props.orderRotateIcon}deg);
     left: -2.5rem;
 
     path {
@@ -498,7 +498,8 @@ export const KinvoPremiumSideMenuSubItem = styled.div`
   padding-left: 5rem;
   height: 4.7rem;
   width: 100%;
-  background-color: var(--c-${(props) => (props.active ? 'ghostwhite' : 'white')});
+  background-color: var(--c-${(props) => props.color || 'white'});
+  border-bottom: 1px solid var(--c-silver-light);
 
   &::before {
     content: '';

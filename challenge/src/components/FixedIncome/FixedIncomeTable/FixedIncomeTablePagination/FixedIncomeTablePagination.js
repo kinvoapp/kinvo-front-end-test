@@ -2,9 +2,8 @@ import * as S from 'components/styled/lib';
 import { ReactComponent as ArrowSvg } from 'assets/images/arrow.svg';
 import { useCallback, useEffect, useState } from 'react';
 
-function getPaginatedRows(rows, limit, pagesAmount, setPage) {
+function getPaginatedRows(rows, limit, pagesAmount) {
   if (rows.length <= limit) {
-    setPage(0);
     return [rows];
   }
   const totalRows = [...rows];
@@ -55,15 +54,16 @@ const FixedIncomeTablePagination = ({ rows, limit, setVisibleRows }) => {
   );
 
   useEffect(() => {
-    const newRows = getPaginatedRows(rows, limit, pagesAmount, setPage);
-    setPaginatedRows(newRows);
-    setVisibleRows(newRows[0]);
-  }, [rows, limit, pagesAmount, setVisibleRows]);
-
-  useEffect(() => {
     setVisibleRows(paginatedRows[page]);
     handleMotion(page);
   }, [page, setVisibleRows, paginatedRows, handleMotion]);
+
+  useEffect(() => {
+    setPage(0);
+    const newRows = getPaginatedRows(rows, limit, pagesAmount);
+    setPaginatedRows(newRows);
+    setVisibleRows(newRows[0]);
+  }, [rows, limit, pagesAmount, setVisibleRows]);
 
   return (
     <S.Pagination>
