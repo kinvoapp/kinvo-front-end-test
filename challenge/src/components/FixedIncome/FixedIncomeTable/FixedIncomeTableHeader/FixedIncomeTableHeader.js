@@ -1,5 +1,5 @@
-import FixedIncomeOrderDropdown from 'components/FixedIncomeOrderDropdown/FixedIncomeOrderDropdown';
-import FixedIncomeTableSearchBar from 'components/FixedIncomeTableSearchBar/FixedIncomeTableSearchBar';
+import FixedIncomeOrderDropdown from 'components/FixedIncome/FixedIncomeTable/FixedIncomeOrderDropdown/FixedIncomeOrderDropdown';
+import FixedIncomeTableSearchBar from 'components/FixedIncome/FixedIncomeTable/FixedIncomeTableSearchBar/FixedIncomeTableSearchBar';
 import * as S from 'components/styled/lib';
 
 const FixedIncomeTableHeader = ({ setFilteredRows, allRows }) => {

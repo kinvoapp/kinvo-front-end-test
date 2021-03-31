@@ -1,4 +1,4 @@
-import * as S from '../styled/lib';
+import * as S from 'components/styled/lib';
 
 const FixedIncomeHeaderCard = ({ title, text }) => {
   return (

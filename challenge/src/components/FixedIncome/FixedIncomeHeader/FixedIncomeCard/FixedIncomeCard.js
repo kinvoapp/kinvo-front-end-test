@@ -1,7 +1,7 @@
 import * as S from 'components/styled/lib';
 import { fixedIncomeDictionary } from 'helpers/dictionaryPool';
 import { ReactComponent as InfoSvg } from 'assets/images/info.svg';
-import FixedIncomeCell from 'components/FixedIncomeCell/FixedIncomeCell';
+import FixedIncomeCell from 'components/FixedIncome/FixedIncomeHeader/FixedIncomeCell/FixedIncomeCell';
 
 function generateCells(data, color) {
   const isolatedPropertiesArray = Object.entries(data);

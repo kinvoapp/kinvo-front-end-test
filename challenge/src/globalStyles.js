@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --c-alpha: rgba(0, 0, 0, 0.05);
     --c-alpha-light: rgba(0, 0, 0, 0.04);
     --c-alpha-lighter: rgba(0, 0, 0, 0.03);
+    --c-alpha-cyan: rgba(112, 123, 129, 0.1);
     --c-white:#ffffff;
     --c-ghostwhite: #F8FAFB;
     --c-violet: #4C309B;
@@ -17,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --c-cyan-dark: #DCE0E3;
     --c-cyan-darker: #D6D9DD;
     --c-silver: #C2C5CC;
+    --c-silver-light: #CCCFD1;
     --c-neutral: #627179;
     --c-neutral-dark:#4E5B61;
     --c-neutral-light: #707B81;
@@ -25,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     --m-28: 2.8rem;
     --m-10: 1rem;
     --m-5: 0.5rem;
+
 
     /* PADDING */
     --p-30: 3rem;

@@ -1,5 +1,5 @@
 import * as S from 'components/styled/lib';
-import FixedIncomeHeaderCard from 'components/FixedIncomeHeaderCard/FixedIncomeHeaderCard';
+import FixedIncomeHeaderCard from 'components/FixedIncome/FixedIncomeHeader/FixedIncomeHeaderCard/FixedIncomeHeaderCard';
 import { titleDictionary } from 'helpers/dictionaryPool';
 
 function generateCards(data) {

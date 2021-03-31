@@ -25,8 +25,9 @@ export const Text = styled.p`
 
 //*********** - SVG's - *************
 export const SvgWrapper = styled.div`
-  & > svg circle {
-    fill: var(--c-${(props) => props.color});
+  & > svg circle,
+  ellipse {
+    fill: var(--c-${(props) => props.color || 'violet'});
   }
 `;
 
@@ -103,7 +104,7 @@ export const FixedIncomeCardHeader = styled.header`
   bottom: -1px;
 
   & > svg {
-    margin-left: 1rem;
+    margin-left: var(--m-10);
   }
 `;
 
@@ -128,7 +129,7 @@ export const FixedIncomeCardCell = styled.div`
 
   &,
   & + &:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: var(--m-10);
   }
 `;
 
@@ -408,4 +409,95 @@ export const Loading = styled.div`
       transform: scale(1.5);
     }
   }
+`;
+
+//********* - MENU - **********
+export const KinvoPremiumSideMenu = styled.nav`
+  grid-area: menu;
+  width: 27rem;
+  height: 100%;
+  background-color: #fff;
+`;
+export const KinvoPremiumSideMenuItem = styled.a`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--c-${(props) => props.color || 'white'});
+  height: 6.7rem;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--c-silver-light);
+`;
+
+export const KinvoPremiumSideMenuItemContent = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+`;
+
+export const KinvoPremiumSideMenuItemWrapper = styled.div``;
+export const KinvoPremiumSideMenuSubItemWrapper = styled.div``;
+
+export const KinvoPremiumSideMenuSubItem = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  padding-left: 5rem;
+  height: 4.7rem;
+  width: 100%;
+  background-color: var(--c-${(props) => (props.active ? 'ghostwhite' : 'white')});
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 3rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
+    background-color: var(--c-violet);
+  }
+`;
+
+//********* - HEADER - **********
+export const KinvoPremiumHeader = styled.div`
+  grid-area: header;
+  padding: 0 var(--p-30);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 9rem;
+  background-color: #fff;
+  box-shadow: 0px 3px 20px var(--c-alpha-cyan);
+  z-index: 1;
+`;
+
+export const KinvoPremiumHeaderInfo = styled.div`
+  display: flex;
+
+  & > div:not(:last-child) {
+    margin: var(--m-28);
+  }
+`;
+export const KinvoPremiumHeaderInfoItem = styled.div`
+  display: flex;
+  align-items: center;
+
+  & div {
+    margin-left: var(--m-10);
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+//********* - KINVO PREMIUM - **********
+export const KinvoPremiumWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'menu   content';
 `;

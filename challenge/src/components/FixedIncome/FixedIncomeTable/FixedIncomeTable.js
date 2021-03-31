@@ -1,6 +1,6 @@
-import FixedIncomeRow from 'components/FixedIncomeRow/FixedIncomeRow';
-import FixedIncomeTableFooter from 'components/FixedIncomeTableFooter/FixedIncomeTableFooter';
-import FixedIncomeTableHeader from 'components/FixedIncomeTableHeader/FixedIncomeTableHeader';
+import FixedIncomeRow from 'components/FixedIncome/FixedIncomeTable/FixedIncomeRow/FixedIncomeRow';
+import FixedIncomeTableFooter from 'components/FixedIncome/FixedIncomeTable/FixedIncomeTableFooter/FixedIncomeTableFooter';
+import FixedIncomeTableHeader from 'components/FixedIncome/FixedIncomeTable/FixedIncomeTableHeader/FixedIncomeTableHeader';
 import * as S from 'components/styled/lib';
 import { useEffect, useState } from 'react';
 

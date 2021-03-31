@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import api from 'services/api';
 import { useEffect, useState } from 'react';
-import FixedIncomeHeader from 'components/FixedIncomeHeader/FixedIncomeHeader';
-import FixedIncomeTable from 'components/FixedIncomeTable/FixedIncomeTable';
+import FixedIncomeHeader from 'components/FixedIncome/FixedIncomeHeader/FixedIncomeHeader';
+import FixedIncomeTable from 'components/FixedIncome/FixedIncomeTable/FixedIncomeTable';
 import Loading from 'components/Loading/Loading';
 
 const FixedIncomePage = styled.main`

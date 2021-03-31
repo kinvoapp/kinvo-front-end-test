@@ -4,6 +4,6 @@
   },
   "include": ["src"],
   "typeAcquisition": {
-    "exclude": [ "node_modules" ]
+    "exclude": [ "node_modules", "dotenv" ]
   }
 }

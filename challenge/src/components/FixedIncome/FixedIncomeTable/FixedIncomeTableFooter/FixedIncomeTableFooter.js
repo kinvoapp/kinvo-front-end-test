@@ -1,10 +1,10 @@
-import FixedIncomeTablePagination from 'components/FixedIncomeTablePagination/FixedIncomeTablePagination';
+import FixedIncomeTablePagination from 'components/FixedIncome/FixedIncomeTable/FixedIncomeTablePagination/FixedIncomeTablePagination';
 import * as S from 'components/styled/lib';
 import { useState } from 'react';
 
 const initialLimit = 5;
 const FixedIncomeTableFooter = ({ rows, setVisibleRows }) => {
-  const [limitPagination, setLimitPagination] = useState(initialLimit);
+  const [limitPagination, setLimitPagination] = useState(0);
 
   return (
     <S.FixedIncomeTableFooter>
