@@ -71,6 +71,11 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  #root{
+    width: 100%;
+    max-width: 142rem;
+  }
+
 `;
 
 export default GlobalStyle;

@@ -1,18 +1,21 @@
 import * as S from 'components/styled/lib';
 import { fixedIncomeDictionary } from 'helpers/dictionaryPool';
 import { ReactComponent as InfoSvg } from 'assets/images/info.svg';
-import FixedIncomeCell from 'components/FixedIncome/FixedIncomeHeader/FixedIncomeCell/FixedIncomeCell';
+import FixedIncomeCell from 'components/FixedIncome/FixedIncomeTable/FixedIncomeCard/FixedIncomeCell/FixedIncomeCell';
 
 function generateCells(data, color) {
   const isolatedPropertiesArray = Object.entries(data);
-  return isolatedPropertiesArray.map((entry) => (
-    <FixedIncomeCell
-      key={entry[0]}
-      title={fixedIncomeDictionary[entry[0]]?.title}
-      color={color}
-      value={fixedIncomeDictionary[entry[0]]?.value(entry[1])}
-    />
-  ));
+  return isolatedPropertiesArray.map(
+    (entry) =>
+      fixedIncomeDictionary[entry[0]] && (
+        <FixedIncomeCell
+          key={entry[0]}
+          title={fixedIncomeDictionary[entry[0]]?.title}
+          color={color}
+          value={fixedIncomeDictionary[entry[0]]?.value(entry[1])}
+        />
+      ),
+  );
 }
 
 const FixedIncomeCard = ({ title, text, cellColor, cells }) => {

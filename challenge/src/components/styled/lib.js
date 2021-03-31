@@ -60,6 +60,18 @@ export const HeaderCard = styled.div`
   align-items: center;
   box-shadow: var(--box-shadow);
   margin-bottom: var(--m-10);
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -83,6 +95,24 @@ export const FixedIncomeCard = styled.div`
   & + &:not(:last-child) {
     width: 48rem;
     margin: 0 1rem;
+    & div:nth-child(6) {
+      order: 1;
+    }
+    & div:nth-child(1) {
+      order: 2;
+    }
+    & div:nth-child(5) {
+      order: 3;
+    }
+    & div:nth-child(4) {
+      order: 4;
+    }
+    & div:nth-child(2) {
+      order: 5;
+    }
+    & div:nth-child(3) {
+      order: 6;
+    }
   }
 
   & + &:last-child {
@@ -137,6 +167,7 @@ export const FixedIncomeCardCell = styled.div`
 export const FixedIncomeRow = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   background-color: var(--c-white);
   padding: var(--p-20);
@@ -150,6 +181,7 @@ export const FixedIncomeRow = styled.div`
 //****** - FIXED INCOME TABLE ******
 export const FixedIncomeTable = styled.section`
   display: flex;
+  width: 100%;
   flex-direction: column;
   box-shadow: var(--box-shadow);
 `;
@@ -235,13 +267,32 @@ export const SearchBar = styled.input`
 
 //********* - ORDER DROPDOWN - ***********
 export const OrderDropdownWrapper = styled(SearchBarWrapper)`
-  & svg {
+  & svg:not(:first-child) {
+    pointer-events: none;
     position: absolute;
     right: 3.3rem;
     left: initial;
     transform: rotate(90deg) scale(1.2);
     path {
       fill: var(--c-neutral-dark);
+    }
+  }
+
+  & svg:first-child {
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    transform: rotateY(180deg) scale(1.3) rotateX(${(props) => (props.order ? 0 : 180)}deg);
+    left: -2.5rem;
+
+    path {
+      fill: var(--c-cyan-darker);
+    }
+
+    &:hover {
+      path {
+        fill: var(--c-neutral-light);
+      }
     }
   }
 `;

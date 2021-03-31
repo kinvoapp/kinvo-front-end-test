@@ -1,5 +1,6 @@
 import * as S from 'components/styled/lib';
 import { ReactComponent as SvgArrow } from 'assets/images/arrow.svg';
+import { ReactComponent as OrderSvg } from 'assets/images/order.svg';
 import { fixedIncomeDictionary } from 'helpers/dictionaryPool';
 import { useEffect, useState } from 'react';
 
@@ -31,17 +32,19 @@ function orderBySelectedValue(rowA, rowB, selectedValue) {
 
 const FixedIncomeOrderDropdown = ({ setFilteredRows }) => {
   const [selectedValue, setSelectedValue] = useState('');
+  const [order, setOrder] = useState(false);
 
   useEffect(() => {
     setFilteredRows((prevState) => {
       const ordered = [...prevState];
-      ordered.sort((rowA, rowB) => orderBySelectedValue(rowA, rowB, selectedValue)).reverse();
-      return ordered;
+      ordered.sort((rowA, rowB) => orderBySelectedValue(rowA, rowB, selectedValue));
+      return order ? ordered.reverse() : ordered;
     });
-  }, [selectedValue, setFilteredRows]);
+  }, [order, selectedValue, setFilteredRows]);
 
   return (
-    <S.OrderDropdownWrapper>
+    <S.OrderDropdownWrapper order={order}>
+      <OrderSvg onClick={() => setOrder((prevState) => !prevState)} />
       <S.OrderDropdown
         as="select"
         value={selectedValue}

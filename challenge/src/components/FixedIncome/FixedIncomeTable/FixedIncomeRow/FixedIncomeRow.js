@@ -1,5 +1,5 @@
 import * as S from 'components/styled/lib';
-import FixedIncomeCard from 'components/FixedIncome/FixedIncomeHeader/FixedIncomeCard/FixedIncomeCard';
+import FixedIncomeCard from 'components/FixedIncome/FixedIncomeTable/FixedIncomeCard/FixedIncomeCard';
 
 const FixedIncomeRow = ({ row }) => {
   return (
