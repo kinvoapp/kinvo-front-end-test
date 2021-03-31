@@ -1,0 +1,27 @@
+.toolbar {
+  margin-left: auto;
+  padding: 10px;
+}
+
+.rendaFixaContainer {
+  top: 604px;
+  left: 248px;
+  width: auto;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 6px #0000000a;
+  border-radius: 10px;
+  opacity: 1;
+  text-transform: capitalize;
+}
+
+.toolbarContainer h6 {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #627179;
+  opacity: 1;
+  margin: 1vw;
+}
+.toolbarContainer {
+  display: flex;
+  align-items: center;
+}

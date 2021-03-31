@@ -1,0 +1,27 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 10vh;
+  background-color: white;
+}
+
+.navbarElements {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.logo {
+  max-height: 2.5vw;
+  font-size: x-large;
+  color: rgb(128 128 128);
+  margin: 0.5vw ;
+}
+
+.navbarElement{
+    margin: 1vw;
+    display: flex;
+    min-width: fit-content;
+}
+

@@ -1,0 +1,27 @@
+.sidebarContainer {
+  background: whitesmoke 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.sidebarOptions {
+  text-align: start;
+  width: 100%;
+  padding: 0.5vw 1vw;
+  font-size: 1.2vw;
+  margin: 1em;
+}
+
+.sidebarOptions a:hover {
+  font-size: 1.2vw;
+}
+
+.sidebarOptions a {
+  color: black;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+i {
+  margin: 0.2em;
+  padding: 0.2em;
+}

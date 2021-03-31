@@ -1,0 +1,36 @@
+.rendaContainer {
+  margin: 3vw;
+}
+
+.rendaContainer h5 {
+  text-align: start;
+  margin: 0.5vw;
+  color: #4c309b;
+}
+.graph {
+  opacity: 1;
+}
+.card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 20px #0000000d;
+  border-radius: 10px;
+  opacity: 1;
+  
+}
+.top-card{
+  width: 172px;
+
+}
+.card-text {
+  font-size: xx-large;
+  margin: 0.5vw 0.5vw;
+  text-align: left;
+  font: normal normal bold 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #4c309b;
+  opacity: 1;
+}
+.card-title {
+  text-align: left;
+  color: #4e5b61;
+}

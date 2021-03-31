@@ -1,0 +1,26 @@
+.dashboardContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #e8e8e8;
+  font-size: 1vw;
+  font-family: system-ui;
+  flex-flow: wrap;
+  top: 0px;
+  left: 0px;
+  background: #eef2f4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.dashboardContent {
+  flex-flow: column nowrap;
+}
+
+.pagination {
+  justify-content: center;
+  margin: 1vw;
+}
+
+
+.dashboardSidebar {
+  display: flex;
+}
