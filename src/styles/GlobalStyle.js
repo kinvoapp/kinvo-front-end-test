@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
     padding: 0;
@@ -17,9 +17,11 @@ const GlobalStyle = createGlobalStyle`
     --purpleDark: #4C309B
     --green: #38BFA0;
     --blue: #008DCB;
+  }
 
-
-  
+  body{
+    background-color: var(--background);
+    color: var(--text);
   }
 
   @media (max-width: 1060px) {
