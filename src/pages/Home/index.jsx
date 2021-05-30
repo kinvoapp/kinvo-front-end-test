@@ -1,9 +1,13 @@
 import { Header } from "../../components/Header";
+import { SideBar } from "../../components/SideBar";
+
+import { Container } from "./styles";
 
 export function Home() {
   return (
-    <div>
+    <Container>
       <Header />
-    </div>
+      <SideBar />
+    </Container>
   );
 }
