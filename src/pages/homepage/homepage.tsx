@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Card from '../../components/common/micro-card'
 import GraphCard from '../../components/common/graph-card'
 import GraphRoundedCard from '../../components/common/graph-rounded-card'
-import BigCard from '../../components/common/big-card'
+import BigCard from '../../components/card-info-map/big-card'
 /*
   Componentes styles
 */
