@@ -16,7 +16,7 @@ export const NavBar = styled.header`
   width: 100vw;
   max-width: 100%;
   color: #333;
-  background-color: ${p => p.theme.colors.black};
+  background-color: ${p => p.theme.colors.white};
   align-items: center;
 `
 

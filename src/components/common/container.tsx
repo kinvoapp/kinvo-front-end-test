@@ -12,11 +12,9 @@ export const ContainerLayout = styled.div`
 `
 
 export const ContainerLayoutLateral = styled.div`
-  height: 100vh;
   color: #333;
   display: flex;
-  width: 20vw;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  width: 15vw;
   margin: 0 auto;
 `
