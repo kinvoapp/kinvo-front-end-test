@@ -7,7 +7,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        background: #fff;
+        background: #EEF2F4;
         font-size: 14px;
         color: #333;
         font-family: 'Open Sans Condensed', sans-serif;
