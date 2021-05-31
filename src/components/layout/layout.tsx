@@ -14,6 +14,12 @@ export const Container = styled.div`
 export const WrapChildren = styled.div`
   display flex;
 `
+export const Content = styled.div`
+  display flex;
+  flex-direction: column;
+  margin: 50px 25px;
+  width: 100vw;
+`
 /*
   MAIN
   @TEX
@@ -27,8 +33,10 @@ const HomePage: React.FC<Props> = ({ children, title }: Props) => {
       <NavTop />
       <WrapChildren>
         <NavLateral></NavLateral>
-        <h1>{title}</h1>
-        {children}
+        <Content>
+          <h1>{title}</h1>
+          {children}
+        </Content>
       </WrapChildren>
     </Container>
   )
