@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { routes } from './routes'
+import GlobalStyle from './styles/global'
+import FullThemeLight from './styles/themes/themes'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={FullThemeLight}>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Switch>
+          {routes.map((route: any) => (
+            <Route
+              key={route.name}
+              path={route.path}
+              exact
+              component={route.component}
+            />
+          ))}
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
