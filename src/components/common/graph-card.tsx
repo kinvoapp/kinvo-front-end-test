@@ -8,8 +8,10 @@ import styled from 'styled-components'
 export const Card = styled.header`
   border-radius: 10px;
   height: 400px;
-  background-color: ${p => p.theme.colors.black};
+  background-color: ${p => p.theme.colors.white};
   align-items: center;
+  box-shadow: 0px 2px 6px #0000000a;
+  border-radius: 10px;
 `
 
 /*

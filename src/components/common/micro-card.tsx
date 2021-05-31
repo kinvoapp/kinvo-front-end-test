@@ -9,8 +9,12 @@ export const Card = styled.div`
   border-radius: 10px;
   width: 100%;
   height: 60px;
-  background-color: ${p => p.theme.colors.black};
   align-items: center;
+  border-radius: 10px;
+  background-color: ${p => p.theme.colors.white};
+  align-items: center;
+  box-shadow: 0px 2px 6px #0000000a;
+  border-radius: 10px;
 `
 
 /*

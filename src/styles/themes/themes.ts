@@ -48,7 +48,7 @@ export default {
     },
 
     text: {
-      primary: '#8C8C8C',
+      primary: '#627179',
       secondary: 'rgba(0, 0, 0, 0.54)',
       disabled: 'rgba(0, 0, 0, 0.38)',
       hint: 'rgba(0, 0, 0, 0.38)'
@@ -56,7 +56,7 @@ export default {
 
     border: {
       light: '#f5f5f5',
-      main: '#e0e0e0',
+      main: '#DAE0E3',
       dark: '#bdbdbd'
     },
 

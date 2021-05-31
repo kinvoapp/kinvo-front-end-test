@@ -22,18 +22,20 @@ export const Card = styled.div`
   height: auto;
   background-color: ${p => p.theme.colors.white};
   align-items: center;
+  box-shadow: 0px 2px 6px #0000000a;
+  border-radius: 10px;
 `
 export const Head = styled.div`
   display: flex;
   padding: 10px;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${p => p.theme.colors.border.main};
 `
 export const Footer = styled.div`
   display: flex;
   padding: 10px;
   justify-content: space-around;
-  border-top: 1px solid black;
+  border-top: 1px solid ${p => p.theme.colors.border.main};
   align-items: center;
   margin: 0 auto;
 `
@@ -42,8 +44,16 @@ export const Elements = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export const Order = styled.input``
-export const Search = styled.input``
+export const Order = styled.input`
+  border-radius: 10px;
+  margin: 0 10px;
+  border: 1px solid ${p => p.theme.colors.border.main};
+`
+export const Search = styled.input`
+  border-radius: 10px;
+  margin: 0 10px;
+  border: 1px solid ${p => p.theme.colors.border.main};
+`
 
 /*
   MAIN
