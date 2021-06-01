@@ -46,6 +46,12 @@ export const Dot = styled.div<IPDots>`
   padding: 4px 0;
   margin: 0 15px 0 0;
 `
+export const Ico = styled.img`
+  height: 32px;
+  width: 32px;
+  margin: 4px 8px;
+  color: #fff;
+`
 export const LinkStyle = styled.div`
   text-align: left;
   width: 60%;
@@ -116,13 +122,17 @@ const AccordionDetails = withStyles(theme => ({
 const HomePage: React.FC = () => {
   const [active, setActive] = useState(-1)
   const handleChange = (index: number) => {
-    setActive(index)
+    setActive(index !== active ? index : -1)
   }
   return (
     <NavBar>
       <ContainerLayoutLateral>
         {Links.map((link: any, index) => (
-          <Accordion key={link.name} onChange={() => handleChange(index)}>
+          <Accordion
+            key={link.name}
+            expanded={active === index}
+            onChange={() => handleChange(index)}
+          >
             <AccordionSummary
               expandIcon={
                 active === index ? (
@@ -136,9 +146,13 @@ const HomePage: React.FC = () => {
             >
               <SubLinkStyle>
                 {index === active ? (
-                  <Dot size={48} color></Dot>
+                  <Dot size={48} color>
+                    <Ico src={link.ico} />
+                  </Dot>
                 ) : (
-                  <Dot size={48} color={false}></Dot>
+                  <Dot size={48} color={false}>
+                    <Ico src={link.ico} />
+                  </Dot>
                 )}
                 <h3>{link.label}</h3>
               </SubLinkStyle>

@@ -23,7 +23,7 @@ const MyFix: React.FC = () => {
   }, [])
   return (
     <Content>
-      <Layout title="Minhas Rendas Fixas">
+      <Layout title="Renda Fixa">
         <Grid container spacing={2}>
           <Grid key={1} item xs={2}>
             <Card

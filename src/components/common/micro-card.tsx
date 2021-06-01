@@ -23,16 +23,17 @@ export const Card = styled.div`
   padding: 15px 20px;
 `
 export const Title = styled.div`
-  margin: 0 0 0 20px;
+  margin: 0 0 0 15px;
   font-size: 9px;
 `
 export const SubTitle = styled.div`
-  margin: 0 0 0 20px;
-  font-weight: bold;
+  margin: 0 0 0 15px;
+  font-weight: 900;
+  color: ${p => p.theme.colors.text.purpleStrong};
 `
 
 export const Border = styled.div`
-  border-left: 2px solid #333;
+  border-left: 2px solid ${p => p.theme.colors.text.disabled}; ;
 `
 /*
   MAIN

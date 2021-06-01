@@ -1,6 +1,8 @@
+import Ico from '../../styles/assets/dollar.svg'
+
 export const Links = [
   {
-    ico: 'Oi',
+    ico: Ico,
     label: 'Renda Da Carteira',
     subLinks: [
       {
@@ -22,7 +24,7 @@ export const Links = [
     ]
   },
   {
-    ico: 'Oi',
+    ico: Ico,
     label: 'Meus Produtos',
     subLinks: [
       {
@@ -44,8 +46,96 @@ export const Links = [
     ]
   },
   {
-    ico: 'Oi',
+    ico: Ico,
     label: 'Meus Proventos',
+    subLinks: [
+      {
+        link: '',
+        label: 'Ação'
+      },
+      {
+        link: '',
+        label: 'Fundo'
+      },
+      {
+        link: '',
+        label: 'Fundo Imobiliário'
+      },
+      {
+        link: '',
+        label: 'Fundo Renda Fixa'
+      }
+    ]
+  },
+  {
+    ico: Ico,
+    label: 'Classe de Ativos',
+    subLinks: [
+      {
+        link: '',
+        label: 'Ação'
+      },
+      {
+        link: '',
+        label: 'Fundo'
+      },
+      {
+        link: '',
+        label: 'Fundo Imobiliário'
+      },
+      {
+        link: '',
+        label: 'Fundo Renda Fixa'
+      }
+    ]
+  },
+  {
+    ico: Ico,
+    label: 'Rentabilidade Real',
+    subLinks: [
+      {
+        link: '',
+        label: 'Ação'
+      },
+      {
+        link: '',
+        label: 'Fundo'
+      },
+      {
+        link: '',
+        label: 'Fundo Imobiliário'
+      },
+      {
+        link: '',
+        label: 'Fundo Renda Fixa'
+      }
+    ]
+  },
+  {
+    ico: Ico,
+    label: 'Projeção da Carteira',
+    subLinks: [
+      {
+        link: '',
+        label: 'Ação'
+      },
+      {
+        link: '',
+        label: 'Fundo'
+      },
+      {
+        link: '',
+        label: 'Fundo Imobiliário'
+      },
+      {
+        link: '',
+        label: 'Fundo Renda Fixa'
+      }
+    ]
+  },
+  {
+    ico: Ico,
+    label: 'Risco x Retorno',
     subLinks: [
       {
         link: '',

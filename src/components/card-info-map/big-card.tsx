@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Pagination from '@material-ui/lab/Pagination'
 import CardInfo from './card-info'
 import { useSelector } from 'react-redux'
@@ -13,15 +12,6 @@ import { OrderUtil } from '../../utils/order'
 /*
   Componentes style
 */
-const useStyles = makeStyles(theme =>
-  createStyles({
-    root: {
-      '& > *': {
-        marginTop: theme.spacing(2)
-      }
-    }
-  })
-)
 
 export const Card = styled.div`
   border-radius: 10px;
