@@ -40,15 +40,21 @@ export const Info = styled.div`
   display: flex;
   justify-content: space-between;
   p {
-    font-size: 15px;
+    font-size: 13px;
+    width: 50%;
   }
   label {
-    font-size: 10px;
+    font-size: 9px;
   }
 `
 export const Label = styled.label<PLabel>`
+  margin: 0 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   p {
     color: ${p => p.theme.colors.text[p.color]};
+    font-size: 15px;
   }
 `
 
@@ -61,7 +67,7 @@ export const TitleInfo = styled.p`
   color: #4e5b61;
   text-transform: uppercase;
   padding: 12px;
-  width: 150px;
+  width: 110px;
   border: 1px solid ${p => p.theme.colors.border.main};
   border-bottom: 3px solid ${p => p.theme.colors.white};
   background-color: ${p => p.theme.colors.white};
@@ -117,12 +123,12 @@ const MicroCard: React.FC<PropTypes> = ({
                 <p>{equity}</p>
               </Label>
               <Label color="blue">
-                RENTA
-                <p>{equity}</p>
+                RENT.
+                <p>{equity}%</p>
               </Label>
               <Label color="blue">
                 % DA CART
-                <p>{equity}</p>
+                <p>{equity}%</p>
               </Label>
               <Label color="blue">
                 CDI

@@ -5,7 +5,14 @@ const INITIAL_STATE: LocalState = {
   data: {
     sucess: false,
     data: {
-      snapshotByPortfolio: [],
+      snapshotByPortfolio: {
+        equity: 0,
+        valueApplied: 0,
+        equityProfit: 0,
+        percentageProfit: 0,
+        indexerValue: 0,
+        percentageOverIndexer: 0
+      },
       dailyEquityByPortfolioCharData: [],
       snapshotByProduct: []
     },

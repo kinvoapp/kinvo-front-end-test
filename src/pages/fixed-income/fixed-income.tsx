@@ -6,13 +6,18 @@ import Card from '../../components/common/micro-card'
 import GraphCard from '../../components/common/graph-card'
 import GraphRoundedCard from '../../components/common/graph-rounded-card'
 import BigCard from '../../components/card-info-map/big-card'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getMyFix } from '../../store/ducks/local/actions'
+import { ApplicationState } from '../../store'
+
 /*
   Componentes styles
 */
 const MyFix: React.FC = () => {
   const dispatch = useDispatch()
+  const { snapshotByPortfolio } = useSelector(
+    (state: ApplicationState) => state.local.data.data
+  )
   useEffect(() => {
     dispatch(getMyFix())
   }, [])
@@ -20,11 +25,49 @@ const MyFix: React.FC = () => {
     <Content>
       <Layout title="Minhas Rendas Fixas">
         <Grid container spacing={2}>
-          {[0, 1, 2, 3, 4, 5].map(value => (
-            <Grid key={value} item xs={2}>
-              <Card />
-            </Grid>
-          ))}
+          <Grid key={1} item xs={2}>
+            <Card
+              title="SALDO BRUTO"
+              isPercent={false}
+              percentOrNumber={snapshotByPortfolio.equity}
+            />
+          </Grid>
+          <Grid key={1} item xs={2}>
+            <Card
+              title="VALOR APLICADO"
+              isPercent={false}
+              percentOrNumber={snapshotByPortfolio.valueApplied}
+            />
+          </Grid>
+          <Grid key={2} item xs={2}>
+            <Card
+              title="RESULTADO"
+              isPercent={false}
+              percentOrNumber={snapshotByPortfolio.equityProfit}
+            />
+          </Grid>
+          <Grid key={1} item xs={2}>
+            <Card
+              title="RENTABILIDADE"
+              isPercent
+              percentOrNumber={snapshotByPortfolio.percentageProfit}
+            />
+          </Grid>
+          <Grid key={1} item xs={2}>
+            <Card
+              title="CDI"
+              isPercent
+              percentOrNumber={snapshotByPortfolio.indexerValue}
+            />
+          </Grid>
+          <Grid key={1} item xs={2}>
+            <Card
+              title="% SOBRE CDI"
+              isPercent
+              percentOrNumber={snapshotByPortfolio.percentageOverIndexer}
+            />
+          </Grid>
+
           <Grid key="{value}" item xs={12}>
             <GraphCard />
           </Grid>

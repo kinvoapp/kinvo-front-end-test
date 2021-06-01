@@ -24,7 +24,14 @@ export interface LocalState {
   data: {
     sucess: boolean
     data: {
-      snapshotByPortfolio: []
+      snapshotByPortfolio: {
+        equity: number
+        valueApplied: number
+        equityProfit: number
+        percentageProfit: number
+        indexerValue: number
+        percentageOverIndexer: number
+      }
       dailyEquityByPortfolioCharData: []
       snapshotByProduct: []
     }
