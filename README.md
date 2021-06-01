@@ -21,7 +21,7 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 ### ○ Junior
 
 - Todos os requisitos exigidos para o nível Estágio/Trainee;
-- Exibir dados reais obtidos a partir da API `https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/getFixedIncomeClassData`;
+- Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`;
 - Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
 
 ### ○ Pleno
