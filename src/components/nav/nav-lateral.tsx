@@ -1,25 +1,32 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ContainerLayoutLateral } from '../common/container'
 import { withStyles } from '@material-ui/core/styles'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary'
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails'
 import MuiAccordion from '@material-ui/core/Accordion'
+import { Links } from './lateral-content'
 /*
   Componentes style
 */
 
+interface IPDots {
+  size?: number
+  color?: any
+}
+
 export const NavBar = styled.header`
   height: auto;
-  width: 15vw;
+  width: 20vw;
   color: #333;
   background-color: ${p => p.theme.colors.white};
   align-items: center;
 `
 export const Linkable = styled.button`
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 15px 10px 25px;
   overflow: hidden;
   background-color: #f1f1f1;
   border: none;
@@ -29,16 +36,29 @@ export const Linkable = styled.button`
     margin: 3px 0;
   }
 `
-export const Dot = styled.div`
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
+export const Dot = styled.div<IPDots>`
+  height: ${p => (p.size ? `${p.size}px` : '10px')};
+  width: ${p => (p.size ? `${p.size}px` : '10px')};
+  background-color: ${p =>
+    p.color ? p.theme.colors.text.purpleStrong : p.theme.colors.text.disabled};
   border-radius: 50%;
   display: inline-block;
   padding: 4px 0;
+  margin: 0 15px 0 0;
 `
 export const LinkStyle = styled.div`
-  width: 40%;
+  text-align: left;
+  width: 60%;
+`
+export const SubLinkStyle = styled.div`
+  text-align: left;
+  display: flex;
+  width: 90%;
+  h3 {
+    font-size: 16px;
+    margin: 7px 0;
+    width: 50%;
+  }
 `
 
 const Accordion = withStyles({
@@ -78,7 +98,7 @@ const AccordionSummary = withStyles({
     }
   },
   expanded: {
-    backgroundColor: '#F8FAFB'
+    backgroundColor: '#fff'
   }
 })(MuiAccordionSummary)
 
@@ -94,62 +114,48 @@ const AccordionDetails = withStyles(theme => ({
   @TEX
 */
 const HomePage: React.FC = () => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
+  const [active, setActive] = useState(-1)
+  const handleChange = (index: number) => {
+    setActive(index)
+  }
   return (
     <NavBar>
       <ContainerLayoutLateral>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <h1>1</h1>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Linkable>
-              <LinkStyle>
-                <Dot />
-                <label>Home</label>
-              </LinkStyle>
-              <ExpandMoreIcon />
-            </Linkable>
-            <Linkable>
-              <LinkStyle>
-                <Dot />
-                <label>Home</label>
-              </LinkStyle>
-              <ExpandMoreIcon />
-            </Linkable>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <h1>1</h1>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Linkable>
-              <LinkStyle>
-                <Dot />
-                <label>Home</label>
-              </LinkStyle>
-              <ExpandMoreIcon />
-            </Linkable>
-            <Linkable>
-              <LinkStyle>
-                <Dot />
-                <label>Home</label>
-              </LinkStyle>
-              <ExpandMoreIcon />
-            </Linkable>
-          </AccordionDetails>
-        </Accordion>
+        {Links.map((link: any, index) => (
+          <Accordion key={link.name} onChange={() => handleChange(index)}>
+            <AccordionSummary
+              expandIcon={
+                active === index ? (
+                  <ArrowBackIosIcon fontSize="small" />
+                ) : (
+                  <ArrowForwardIosIcon fontSize="small" />
+                )
+              }
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <SubLinkStyle>
+                {index === active ? (
+                  <Dot size={48} color></Dot>
+                ) : (
+                  <Dot size={48} color={false}></Dot>
+                )}
+                <h3>{link.label}</h3>
+              </SubLinkStyle>
+            </AccordionSummary>
+            <AccordionDetails>
+              {link.subLinks?.map((sub: any) => (
+                <Linkable key={sub.label}>
+                  <LinkStyle>
+                    <Dot color />
+                    <label>{sub.label}</label>
+                  </LinkStyle>
+                  <ArrowForwardIosIcon fontSize="small" />
+                </Linkable>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+        ))}
       </ContainerLayoutLateral>
     </NavBar>
   )

@@ -52,6 +52,10 @@ export const Label = styled.label<PLabel>`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 500;
+  text-transform: initial;
+  letter-spacing: normal;
+  line-height: 1.6;
   p {
     color: ${p => p.theme.colors.text[p.color]};
     font-size: 15px;
@@ -141,6 +145,7 @@ const MicroCard: React.FC<PropTypes> = ({
             </Info>
           </Contain>
         </Grid>
+
         <Grid item xs={2}>
           <Contain>
             <TitleInfo>VENCIMENTO</TitleInfo>

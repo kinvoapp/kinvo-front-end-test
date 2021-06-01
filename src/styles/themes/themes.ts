@@ -53,7 +53,8 @@ export default {
       green: '#38BFA0',
       blue: '#008DCB',
       purple: '#8A51BA',
-      disabled: 'rgba(0, 0, 0, 0.38)',
+      purpleStrong: '#4C309B',
+      disabled: '#bbb',
       hint: 'rgba(0, 0, 0, 0.38)'
     },
 

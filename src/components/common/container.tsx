@@ -15,6 +15,6 @@ export const ContainerLayoutLateral = styled.div`
   color: #333;
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  width: 20vw;
   margin: 0 auto;
 `

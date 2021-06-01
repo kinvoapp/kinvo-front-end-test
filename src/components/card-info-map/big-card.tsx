@@ -6,6 +6,10 @@ import CardInfo from './card-info'
 import { useSelector } from 'react-redux'
 import { ApplicationState } from '../../store'
 import { PaginationUtil } from '../../utils/pagination'
+import Select from '../common/form-select'
+import { productOrders } from '../../utils/constants'
+import { OrderUtil } from '../../utils/order'
+
 /*
   Componentes style
 */
@@ -46,11 +50,7 @@ export const Elements = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export const Order = styled.input`
-  border-radius: 10px;
-  margin: 0 10px;
-  border: 1px solid ${p => p.theme.colors.border.main};
-`
+
 export const Search = styled.input`
   border-radius: 10px;
   margin: 0 10px;
@@ -66,19 +66,30 @@ const MicroCard: React.FC = () => {
     (state: ApplicationState) => state.local.data.data
   )
   const [currentPage, setCurrentPage] = useState(1)
+  const [order, setOrder] = useState('')
   const [listCurrentPage, setListCurrentPage] = useState(snapshotByProduct)
   const peerPage = 5
 
   useEffect(() => {
+    console.log(PaginationUtil(snapshotByProduct, peerPage, currentPage))
     setListCurrentPage(PaginationUtil(snapshotByProduct, peerPage, currentPage))
-  }, [currentPage])
+  }, [currentPage, snapshotByProduct, peerPage])
+
+  useEffect(() => {
+    const newOrder = OrderUtil(order, snapshotByProduct)
+    setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
+  }, [order, snapshotByProduct])
 
   return (
     <Card>
       <Head>
         <h1>Minhas Rendas Fixas</h1>
         <Elements>
-          <Order />
+          <Select
+            options={productOrders}
+            onChange={setOrder}
+            label="Ordernar por"
+          />
           <Search />
         </Elements>
       </Head>
