@@ -1,21 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Pagination from '@material-ui/lab/Pagination'
 import CardInfo from './card-info'
+import { useSelector } from 'react-redux'
+import { ApplicationState } from '../../store'
+import { PaginationUtil } from '../../utils/pagination'
+import Select from '../common/form-select'
+import { productOrders } from '../../utils/constants'
+import { OrderUtil } from '../../utils/order'
 
 /*
   Componentes style
 */
-const useStyles = makeStyles(theme =>
-  createStyles({
-    root: {
-      '& > *': {
-        marginTop: theme.spacing(2)
-      }
-    }
-  })
-)
 
 export const Card = styled.div`
   border-radius: 10px;
@@ -44,11 +40,7 @@ export const Elements = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export const Order = styled.input`
-  border-radius: 10px;
-  margin: 0 10px;
-  border: 1px solid ${p => p.theme.colors.border.main};
-`
+
 export const Search = styled.input`
   border-radius: 10px;
   margin: 0 10px;
@@ -60,23 +52,56 @@ export const Search = styled.input`
   @TEX
 */
 const MicroCard: React.FC = () => {
+  const { snapshotByProduct } = useSelector(
+    (state: ApplicationState) => state.local.data.data
+  )
+  const [currentPage, setCurrentPage] = useState(1)
+  const [order, setOrder] = useState('')
+  const [listCurrentPage, setListCurrentPage] = useState(snapshotByProduct)
+  const peerPage = 5
+
   useEffect(() => {
-    console.log('First log')
-  }, [])
+    console.log(PaginationUtil(snapshotByProduct, peerPage, currentPage))
+    setListCurrentPage(PaginationUtil(snapshotByProduct, peerPage, currentPage))
+  }, [currentPage, snapshotByProduct, peerPage])
+
+  useEffect(() => {
+    const newOrder = OrderUtil(order, snapshotByProduct)
+    setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
+  }, [order, snapshotByProduct])
+
   return (
     <Card>
       <Head>
         <h1>Minhas Rendas Fixas</h1>
         <Elements>
-          <Order />
+          <Select
+            options={productOrders}
+            onChange={setOrder}
+            label="Ordernar por"
+          />
           <Search />
         </Elements>
       </Head>
-      {[1, 2].map(v => (
-        <CardInfo isColor={v % 2 === 0} key={v} />
+      {listCurrentPage.map((v: any, index) => (
+        <CardInfo
+          isColor={(index + 1) % 2 === 0}
+          key={v}
+          title={v.fixedIncome.name}
+          bondType={v.fixedIncome.bondType}
+          equity={v.position.equity}
+          valDate={v.due.date}
+          valDays={v.due.daysUntilExpiration}
+        />
       ))}
       <Footer>
-        <Pagination count={2} variant="outlined" shape="rounded" />
+        <Pagination
+          count={Math.ceil(snapshotByProduct.length / peerPage)}
+          page={currentPage}
+          variant="outlined"
+          shape="rounded"
+          onChange={(e, page) => setCurrentPage(page)}
+        />
       </Footer>
     </Card>
   )

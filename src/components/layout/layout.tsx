@@ -17,8 +17,14 @@ export const WrapChildren = styled.div`
 export const Content = styled.div`
   display flex;
   flex-direction: column;
-  margin: 50px 25px;
+  margin: 20px 25px;
   width: 100vw;
+`
+
+export const Title = styled.h1`
+  margin: 20px 0 40px 0;
+  color: ${p => p.theme.colors.text.purpleStrong};
+  font-weight: bold;
 `
 /*
   MAIN
@@ -34,7 +40,7 @@ const HomePage: React.FC<Props> = ({ children, title }: Props) => {
       <WrapChildren>
         <NavLateral></NavLateral>
         <Content>
-          <h1>{title}</h1>
+          <Title>{title}</Title>
           {children}
         </Content>
       </WrapChildren>

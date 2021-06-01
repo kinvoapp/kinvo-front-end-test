@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-
 export default createGlobalStyle`
     * {
         margin: 0;
@@ -10,7 +9,7 @@ export default createGlobalStyle`
         background: #EEF2F4;
         font-size: 14px;
         color: #333;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: Montserrat;
     }
     a{
         cursor: pointer;
