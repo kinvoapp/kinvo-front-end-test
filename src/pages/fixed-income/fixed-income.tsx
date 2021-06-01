@@ -19,7 +19,7 @@ const MyFix: React.FC = () => {
     (state: ApplicationState) => state.local.data.data
   )
   useEffect(() => {
-    dispatch(getMyFix())
+    // dispatch(getMyFix())
   }, [])
   return (
     <Content>
