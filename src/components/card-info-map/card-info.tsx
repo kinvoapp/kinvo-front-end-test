@@ -9,7 +9,7 @@ interface PropTypes {
   isColor: boolean
   title?: string
   bondType?: string
-  equity?: number
+  equity?: number | 0
   valDate?: string
   valDays?: string
 }
@@ -48,7 +48,7 @@ export const Info = styled.div`
   }
 `
 export const Label = styled.label<PLabel>`
-  margin: 0 5px;
+  margin: 0 1px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -56,6 +56,7 @@ export const Label = styled.label<PLabel>`
   text-transform: initial;
   letter-spacing: normal;
   line-height: 1.6;
+  font-weight: 600;
   p {
     color: ${p => p.theme.colors.text[p.color]};
     font-size: 15px;
@@ -114,39 +115,39 @@ const MicroCard: React.FC<PropTypes> = ({
             </Info>
           </Contain>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <Contain>
             <TitleInfo>RESULTADO</TitleInfo>
             <Info>
               <Label color="blue">
                 VALOR INVESTIDO
-                <p>{equity}</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}</p>
               </Label>
               <Label color="blue">
                 SALDO BRUTO
-                <p>{equity}</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}</p>
               </Label>
               <Label color="blue">
                 RENT.
-                <p>{equity}%</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}%</p>
               </Label>
               <Label color="blue">
                 % DA CART
-                <p>{equity}%</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}%</p>
               </Label>
               <Label color="blue">
                 CDI
-                <p>{equity}</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}</p>
               </Label>
               <Label color="blue">
                 SOBRE CDI
-                <p>{equity}</p>
+                <p>{equity ? Math.floor(equity / 100) : 0}</p>
               </Label>
             </Info>
           </Contain>
         </Grid>
 
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <Contain>
             <TitleInfo>VENCIMENTO</TitleInfo>
             <Info>

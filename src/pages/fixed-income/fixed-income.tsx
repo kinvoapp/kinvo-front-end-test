@@ -4,7 +4,7 @@ import Layout from '../../components/layout/layout'
 import Grid from '@material-ui/core/Grid'
 import Card from '../../components/common/micro-card'
 import GraphCard from '../../components/card-graph/graph-card'
-import GraphRoundedCard from '../../components/card-graph/graph-rounded-card'
+import GraphRoundedCard from '../../components/card-graph/graph-donut-card'
 import BigCard from '../../components/card-info-map/big-card'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMyFix } from '../../store/ducks/local/actions'
@@ -15,9 +15,10 @@ import { ApplicationState } from '../../store'
 */
 const MyFix: React.FC = () => {
   const dispatch = useDispatch()
-  const { snapshotByPortfolio } = useSelector(
+  const { snapshotByPortfolio, dailyEquityByPortfolioCharData } = useSelector(
     (state: ApplicationState) => state.local.data.data
   )
+  console.log(snapshotByPortfolio, dailyEquityByPortfolioCharData)
   useEffect(() => {
     // dispatch(getMyFix())
   }, [])

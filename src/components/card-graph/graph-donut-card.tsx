@@ -8,23 +8,10 @@ const options = (data1?: any, data2?: any) => ({
     text: 'Rentabilidade dos titulos'
   },
   chart: {
-    type: 'areaspline'
+    type: 'pie'
   },
   xAxis: {
-    categories: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ]
+    categories: ['Jan', 'Feb', 'Mar']
   },
   plotOptions: {
     line: {
@@ -35,29 +22,12 @@ const options = (data1?: any, data2?: any) => ({
   },
   series: [
     {
-      data: [
-        29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1,
-        95.6, 54.4
-      ],
-
+      data: [29.9, 71.5, 106.4],
+      innerSize: '50%',
       fillColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [
           [0, 'rgba(0, 10, 255, 1)'],
-          [1, '#fff']
-        ]
-      }
-    },
-    {
-      data: [
-        120.9, 71.5, 106.4, 2.2, 2.0, 2.0, 135.6, 148.5, 216.4, 194.1, 900.6,
-        54.4
-      ],
-
-      fillColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [
-          [0, '#8b008b'],
           [1, '#fff']
         ]
       }
@@ -86,7 +56,7 @@ export const Card = styled.header`
   MAIN
   @TEX
 */
-const MicroCard: React.FC = () => {
+const ChartDonut: React.FC = () => {
   useEffect(() => {
     console.log('First log')
   }, [])
@@ -96,4 +66,4 @@ const MicroCard: React.FC = () => {
     </Card>
   )
 }
-export default MicroCard
+export default ChartDonut

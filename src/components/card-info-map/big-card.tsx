@@ -61,7 +61,6 @@ const MicroCard: React.FC = () => {
   const peerPage = 5
 
   useEffect(() => {
-    console.log(PaginationUtil(snapshotByProduct, peerPage, currentPage))
     setListCurrentPage(PaginationUtil(snapshotByProduct, peerPage, currentPage))
   }, [currentPage, snapshotByProduct, peerPage])
 
