@@ -50,6 +50,9 @@ export default {
     text: {
       primary: '#627179',
       secondary: 'rgba(0, 0, 0, 0.54)',
+      green: '#38BFA0',
+      blue: '#008DCB',
+      purple: '#8A51BA',
       disabled: 'rgba(0, 0, 0, 0.38)',
       hint: 'rgba(0, 0, 0, 0.38)'
     },

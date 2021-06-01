@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Pagination from '@material-ui/lab/Pagination'
 import CardInfo from './card-info'
-
+import { useSelector } from 'react-redux'
+import { ApplicationState } from '../../store'
+import { PaginationUtil } from '../../utils/pagination'
 /*
   Componentes style
 */
@@ -60,9 +62,17 @@ export const Search = styled.input`
   @TEX
 */
 const MicroCard: React.FC = () => {
+  const { snapshotByProduct } = useSelector(
+    (state: ApplicationState) => state.local.data.data
+  )
+  const [currentPage, setCurrentPage] = useState(1)
+  const [listCurrentPage, setListCurrentPage] = useState(snapshotByProduct)
+  const peerPage = 5
+
   useEffect(() => {
-    console.log('First log')
-  }, [])
+    setListCurrentPage(PaginationUtil(snapshotByProduct, peerPage, currentPage))
+  }, [currentPage])
+
   return (
     <Card>
       <Head>
@@ -72,11 +82,25 @@ const MicroCard: React.FC = () => {
           <Search />
         </Elements>
       </Head>
-      {[1, 2].map(v => (
-        <CardInfo isColor={v % 2 === 0} key={v} />
+      {listCurrentPage.map((v: any, index) => (
+        <CardInfo
+          isColor={(index + 1) % 2 === 0}
+          key={v}
+          title={v.fixedIncome.name}
+          bondType={v.fixedIncome.bondType}
+          equity={v.position.equity}
+          valDate={v.due.date}
+          valDays={v.due.daysUntilExpiration}
+        />
       ))}
       <Footer>
-        <Pagination count={2} variant="outlined" shape="rounded" />
+        <Pagination
+          count={Math.ceil(snapshotByProduct.length / peerPage)}
+          page={currentPage}
+          variant="outlined"
+          shape="rounded"
+          onChange={(e, page) => setCurrentPage(page)}
+        />
       </Footer>
     </Card>
   )

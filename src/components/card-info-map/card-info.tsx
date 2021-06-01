@@ -7,6 +7,15 @@ import Grid from '@material-ui/core/Grid'
 */
 interface PropTypes {
   isColor: boolean
+  title?: string
+  bondType?: string
+  equity?: number
+  valDate?: string
+  valDays?: string
+}
+
+interface PLabel {
+  color: 'blue' | 'purple' | 'green'
 }
 export const Card = styled.div<PropTypes>`
   border-radius: 10px;
@@ -22,13 +31,27 @@ export const Info = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  height: auto;
+  height: 80px;
   width: 100%;
   padding: 20px 10px;
   border: 1px solid ${p => p.theme.colors.border.main};
   background-color: ${p => p.theme.colors.white};
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 15px;
+  }
+  label {
+    font-size: 10px;
+  }
 `
+export const Label = styled.label<PLabel>`
+  p {
+    color: ${p => p.theme.colors.text[p.color]};
+  }
+`
+
 export const TitleInfo = styled.p`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -55,7 +78,14 @@ export const Contain = styled.div`
   MAIN
   @TEX
 */
-const MicroCard: React.FC<PropTypes> = ({ isColor }: PropTypes) => {
+const MicroCard: React.FC<PropTypes> = ({
+  isColor,
+  title,
+  bondType,
+  equity,
+  valDate,
+  valDays
+}: PropTypes) => {
   useEffect(() => {
     console.log('First log')
   }, [])
@@ -64,25 +94,59 @@ const MicroCard: React.FC<PropTypes> = ({ isColor }: PropTypes) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <Contain>
-            <TitleInfo>Minhas rendas</TitleInfo>
+            <TitleInfo>TITULO</TitleInfo>
             <Info>
-              <p>Este elementos é assim assado</p>
+              <p>{title}</p>
+              <Label color="purple">
+                CLASSE
+                <p>{bondType}</p>
+              </Label>
             </Info>
           </Contain>
         </Grid>
         <Grid item xs={6}>
           <Contain>
-            <TitleInfo>Minhas rendas</TitleInfo>
+            <TitleInfo>RESULTADO</TitleInfo>
             <Info>
-              <p>Este elementos é assim assado</p>
+              <Label color="blue">
+                VALOR INVESTIDO
+                <p>{equity}</p>
+              </Label>
+              <Label color="blue">
+                SALDO BRUTO
+                <p>{equity}</p>
+              </Label>
+              <Label color="blue">
+                RENTA
+                <p>{equity}</p>
+              </Label>
+              <Label color="blue">
+                % DA CART
+                <p>{equity}</p>
+              </Label>
+              <Label color="blue">
+                CDI
+                <p>{equity}</p>
+              </Label>
+              <Label color="blue">
+                SOBRE CDI
+                <p>{equity}</p>
+              </Label>
             </Info>
           </Contain>
         </Grid>
         <Grid item xs={2}>
           <Contain>
-            <TitleInfo>Minhas rendas</TitleInfo>
+            <TitleInfo>VENCIMENTO</TitleInfo>
             <Info>
-              <p>Este elementos é assim assado</p>
+              <Label color="green">
+                DATA VENC.
+                <p>{valDate}</p>
+              </Label>
+              <Label color="green">
+                DIAS ATÉ VENC.
+                <p>{valDays}</p>
+              </Label>
             </Info>
           </Contain>
         </Grid>
