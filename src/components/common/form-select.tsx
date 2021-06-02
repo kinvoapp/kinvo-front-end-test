@@ -36,7 +36,7 @@ interface Props {
   MAIN
   @TEX
 */
-const MicroCard: React.FC<Props> = ({ options, onChange, label }: Props) => {
+const FormSelect: React.FC<Props> = ({ options, onChange, label }: Props) => {
   return (
     <Container>
       <Order>
@@ -45,7 +45,11 @@ const MicroCard: React.FC<Props> = ({ options, onChange, label }: Props) => {
             {label}
           </MenuItem>
           {options.map(option => (
-            <MenuItem key={option.value} value={option.value}>
+            <MenuItem
+              key={option.value}
+              e-test={`title-item-${option.value}`}
+              value={option.value}
+            >
               {option.name}
             </MenuItem>
           ))}
@@ -54,4 +58,4 @@ const MicroCard: React.FC<Props> = ({ options, onChange, label }: Props) => {
     </Container>
   )
 }
-export default MicroCard
+export default FormSelect
