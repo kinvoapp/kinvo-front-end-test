@@ -13,7 +13,7 @@ const INITIAL_STATE: LocalState = {
         indexerValue: 0,
         percentageOverIndexer: 0
       },
-      dailyEquityByPortfolioCharData: [],
+      dailyEquityByPortfolioChartData: [],
       snapshotByProduct: []
     },
     error: ''

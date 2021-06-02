@@ -23,6 +23,8 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "highcharts": "^9.1.0",
+    "highcharts-react-official": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -48,7 +50,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://1762dd35-8f53-49fd-8b8e-c8134a283cb4.mock.pstmn.io/",
+  "proxy": "https://60b6ad6f17d1dc0017b882fd.mockapi.io",
   "browserslist": {
     "production": [
       ">0.2%",

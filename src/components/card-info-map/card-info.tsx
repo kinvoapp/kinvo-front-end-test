@@ -9,9 +9,14 @@ interface PropTypes {
   isColor: boolean
   title?: string
   bondType?: string
-  equity?: number
+  equity?: number | string | 0
   valDate?: string
   valDays?: string
+  profitability?: string | number
+  valueApplied?: string | number
+  percentageOverIndexer?: string | number
+  indexerValue?: string | number
+  portfolioPercentage?: string | number
 }
 
 interface PLabel {
@@ -48,7 +53,7 @@ export const Info = styled.div`
   }
 `
 export const Label = styled.label<PLabel>`
-  margin: 0 5px;
+  margin: 0 1px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -56,9 +61,13 @@ export const Label = styled.label<PLabel>`
   text-transform: initial;
   letter-spacing: normal;
   line-height: 1.6;
+  font-weight: 600;
   p {
     color: ${p => p.theme.colors.text[p.color]};
     font-size: 15px;
+    @media (max-width: 1400px) {
+      font-size: 13px;
+    }
   }
 `
 
@@ -94,7 +103,12 @@ const MicroCard: React.FC<PropTypes> = ({
   bondType,
   equity,
   valDate,
-  valDays
+  valDays,
+  profitability,
+  valueApplied,
+  percentageOverIndexer,
+  indexerValue,
+  portfolioPercentage
 }: PropTypes) => {
   useEffect(() => {
     console.log('First log')
@@ -114,7 +128,7 @@ const MicroCard: React.FC<PropTypes> = ({
             </Info>
           </Contain>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <Contain>
             <TitleInfo>RESULTADO</TitleInfo>
             <Info>
@@ -124,35 +138,35 @@ const MicroCard: React.FC<PropTypes> = ({
               </Label>
               <Label color="blue">
                 SALDO BRUTO
-                <p>{equity}</p>
+                <p>{valueApplied}</p>
               </Label>
               <Label color="blue">
                 RENT.
-                <p>{equity}%</p>
+                <p>{profitability}</p>
               </Label>
               <Label color="blue">
                 % DA CART
-                <p>{equity}%</p>
+                <p>{portfolioPercentage}%</p>
               </Label>
               <Label color="blue">
                 CDI
-                <p>{equity}</p>
+                <p>{indexerValue}</p>
               </Label>
               <Label color="blue">
                 SOBRE CDI
-                <p>{equity}</p>
+                <p>{percentageOverIndexer}</p>
               </Label>
             </Info>
           </Contain>
         </Grid>
 
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <Contain>
             <TitleInfo>VENCIMENTO</TitleInfo>
             <Info>
               <Label color="green">
                 DATA VENC.
-                <p>{valDate}</p>
+                <p>{valDate?.replaceAll('/', '.')}</p>
               </Label>
               <Label color="green">
                 DIAS ATÉ VENC.

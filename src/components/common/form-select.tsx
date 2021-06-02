@@ -1,6 +1,6 @@
-import React, { useEffect, Dispatch, SetStateAction } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
-import { ProductOrder } from '../../utils/constants'
+import { ProductOrder } from '../../utils/schemas'
 /*
   Componentes style
 */

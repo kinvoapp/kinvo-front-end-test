@@ -32,7 +32,7 @@ export interface LocalState {
         indexerValue: number
         percentageOverIndexer: number
       }
-      dailyEquityByPortfolioCharData: []
+      dailyEquityByPortfolioChartData: []
       snapshotByProduct: []
     }
     error: string
