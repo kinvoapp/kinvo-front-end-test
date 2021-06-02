@@ -1,15 +1,16 @@
 import { Container } from "./styles";
 import { IncomeItem } from "./IncomeItem";
+import { formatMoney } from "../../utils/formatMoney";
 
-export function IncomeMenu() {
+export function IncomeMenu({ data }) {
   return (
     <Container>
-      <IncomeItem title="SALDO BRUTO" value="R$ 207.653,10" />
-      <IncomeItem title="VALOR APLICADO" value="R$ 170.025,64" />
-      <IncomeItem title="RESULTADO" value="R$ 37.638,46" />
-      <IncomeItem title="RENTABILIDADE" value="25,08%" />
-      <IncomeItem title="CDI" value="23,68%" />
-      <IncomeItem title="% SOBRE CDI" value="320%" />
+      <IncomeItem title="SALDO BRUTO" value={formatMoney(data.equity)} />
+      <IncomeItem title="VALOR APLICADO" value={formatMoney(data.valueApplied)} />
+      <IncomeItem title="RESULTADO" value={formatMoney(data.equityProfit)} />
+      <IncomeItem title="RENTABILIDADE" value={`${data.percentageProfit}%`} />
+      <IncomeItem title="CDI" value={`${data.indexerValue}%`} />
+      <IncomeItem title="% SOBRE CDI" value={`${data.percentageOverIndexer}%`} />
     </Container>
   );
 }

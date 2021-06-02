@@ -43,8 +43,8 @@ export const MyFixedIncomesRow = styled.div`
 
 export const FixedIncomeTitle = styled.div`
   // border: 1px solid red;
-  min-width: auto;
-  max-width: ${({ minus }) => (minus ? "350px" : "auto")};
+  min-width: ${({ minus, plus }) => (minus ? "350px" : plus ? "450px" : "auto")};
+  max-width: ${({ minus, plus }) => (minus ? "350px" : plus ? "450px" : "auto")};
 
   position: relative;
 
@@ -100,7 +100,7 @@ export const FixedIncomeTitle = styled.div`
 
       strong {
         color: var(--purple);
-        font-size: 14px;
+        font-size: 11px;
         white-space: nowrap;
       }
     }
@@ -118,7 +118,7 @@ export const FixedIncomeTitle = styled.div`
 
       strong {
         color: var(--green);
-        font-size: 14px;
+        font-size: 11px;
         white-space: nowrap;
       }
     }
@@ -136,7 +136,7 @@ export const FixedIncomeTitle = styled.div`
 
       strong {
         color: var(--blue);
-        font-size: 14px;
+        font-size: 11px;
         white-space: nowrap;
       }
     }

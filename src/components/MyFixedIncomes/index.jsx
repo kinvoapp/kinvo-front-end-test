@@ -14,17 +14,8 @@ import { SelectInput } from "../Inputs/SelectInput";
 import { Input } from "../Inputs/SearchInput";
 import SearchIcon from "../../assets/icons/search.svg";
 
-const data = {
-  equity: 1521.65,
-  indexerLabel: "CDI",
-  indexerValue: 0.4,
-  percentageOverIndexer: 357.1,
-  portfolioPercentage: 0.28,
-  profitability: 1.44,
-  valueApplied: 1500,
-};
-
-export function MyFixedIncomes() {
+export function MyFixedIncomes({ data }) {
+  console.log("data", data);
   return (
     <MyFixedIncomesContainer>
       <MyFixedIncomesHeader>
@@ -35,46 +26,21 @@ export function MyFixedIncomes() {
         </div>
       </MyFixedIncomesHeader>
       <MyFixedIncomesBody>
-        <MyFixedIncomesRow>
-          <FixedIncomeTitleCard
-            incomeClass="Tesouro Direto"
-            description="Tesouro IPCA + com juros semestrais 2020(ntnb)"
-          />
-          <FixedIncomePostionCard data={data} />
-          <FixedIncomeDueDateCard daysUntilExpiration={5762} date="15.05.2019" />
-        </MyFixedIncomesRow>
-        <MyFixedIncomesRow>
-          <FixedIncomeTitleCard
-            incomeClass="Tesouro Direto"
-            description="Tesouro IPCA + com juros semestrais 2020(ntnb)"
-          />
-          <FixedIncomePostionCard data={data} />
-          <FixedIncomeDueDateCard daysUntilExpiration={5762} date="15.05.2019" />
-        </MyFixedIncomesRow>
-        <MyFixedIncomesRow>
-          <FixedIncomeTitleCard
-            incomeClass="Tesouro Direto"
-            description="Tesouro IPCA + com juros semestrais 2020(ntnb)"
-          />
-          <FixedIncomePostionCard data={data} />
-          <FixedIncomeDueDateCard daysUntilExpiration={5762} date="15.05.2019" />
-        </MyFixedIncomesRow>
-        <MyFixedIncomesRow>
-          <FixedIncomeTitleCard
-            incomeClass="Tesouro Direto"
-            description="Tesouro IPCA + com juros semestrais 2020(ntnb)"
-          />
-          <FixedIncomePostionCard data={data} />
-          <FixedIncomeDueDateCard daysUntilExpiration={5762} date="15.05.2019" />
-        </MyFixedIncomesRow>
-        <MyFixedIncomesRow>
-          <FixedIncomeTitleCard
-            incomeClass="Tesouro Direto"
-            description="Tesouro IPCA + com juros semestrais 2020(ntnb)"
-          />
-          <FixedIncomePostionCard data={data} />
-          <FixedIncomeDueDateCard daysUntilExpiration={5762} date="15.05.2019" />
-        </MyFixedIncomesRow>
+        {data.map((income) => {
+          return (
+            <MyFixedIncomesRow key={income.fixedIncome.portfolioProductId}>
+              <FixedIncomeTitleCard
+                incomeClass={income.fixedIncome.bondType}
+                description={income.fixedIncome.name}
+              />
+              <FixedIncomePostionCard data={income.position} />
+              <FixedIncomeDueDateCard
+                daysUntilExpiration={income.due.daysUntilExpiration}
+                date={income.due.date}
+              />
+            </MyFixedIncomesRow>
+          );
+        })}
       </MyFixedIncomesBody>
     </MyFixedIncomesContainer>
   );
