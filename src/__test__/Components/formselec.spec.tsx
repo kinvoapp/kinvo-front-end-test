@@ -35,7 +35,7 @@ describe('tests for form select', () => {
     const wraper = shallow(
       <FormSelect options={options} onChange={change} label={label} />
     )
-    console.log(wraper.debug())
+
     expect(wraper.exists()).toBeTruthy()
     expect(
       wraper.find(`[e-test='title-item-${options[0].value}']`)

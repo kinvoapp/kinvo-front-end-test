@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Grid from '@material-ui/core/Grid'
 
@@ -110,9 +110,6 @@ const MicroCard: React.FC<PropTypes> = ({
   indexerValue,
   portfolioPercentage
 }: PropTypes) => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
   return (
     <Card isColor={isColor}>
       <Grid container spacing={2}>
@@ -146,7 +143,7 @@ const MicroCard: React.FC<PropTypes> = ({
               </Label>
               <Label color="blue">
                 % DA CART
-                <p>{portfolioPercentage}%</p>
+                <p>{portfolioPercentage}</p>
               </Label>
               <Label color="blue">
                 CDI

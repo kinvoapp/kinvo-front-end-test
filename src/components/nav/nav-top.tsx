@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Logo from '../../styles/assets/logo.svg'
+import Logo from '../../styles/assets/logo.png'
+import Side from '../../styles/assets/side.png'
 import { ContainerLayout } from '../common/container'
 
 /*
@@ -18,6 +19,9 @@ export const NavBar = styled.header`
   color: #333;
   background-color: ${p => p.theme.colors.white};
   align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  z-index: 99;
 `
 
 const GroupMessage = styled.div`
@@ -39,18 +43,16 @@ const Logos = styled.img<PropsStyles>`
   @TEX
 */
 const HomePage: React.FC = () => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
   return (
     <NavBar>
       <ContainerLayout>
-        <Link to="/home">
+        <Link to="/">
           <Logos src={Logo} />
         </Link>
-        <GroupMessage>
-          <b>Bem vindo</b> ao Super!
-        </GroupMessage>
+        <GroupMessage>easter egg</GroupMessage>
+        <Link to="/">
+          <Logos src={Side} />
+        </Link>
       </ContainerLayout>
     </NavBar>
   )

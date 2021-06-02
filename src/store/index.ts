@@ -6,15 +6,19 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import rootReducer from './ducks'
 import { LocalState } from './ducks/local/types'
+import { NavState } from './ducks/nav/types'
+import { NotifyState } from './ducks/notify/types'
 
 export interface ApplicationState {
   local: LocalState
+  nav: NavState
+  notify: NotifyState
 }
 
 const persistConfig = {
   key: 'data',
   storage,
-  whitelist: ['local']
+  whitelist: ['nav']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

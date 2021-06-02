@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
-const options = (data1?: any, data2?: any) => ({
+const options = (data1?: number[]) => ({
   title: {
     text: 'Rentabilidade dos titulos'
   },
@@ -22,7 +22,7 @@ const options = (data1?: any, data2?: any) => ({
   },
   series: [
     {
-      data: [29.9, 71.5, 106.4],
+      data: data1,
       innerSize: '50%',
       fillColor: {
         linearGradient: [0, 0, 0, 300],
@@ -57,12 +57,12 @@ export const Card = styled.header`
   @TEX
 */
 const ChartDonut: React.FC = () => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
   return (
     <Card>
-      <HighChartWrapper highcharts={Highcharts} options={options()} />
+      <HighChartWrapper
+        highcharts={Highcharts}
+        options={options([29.9, 71.5, 106.4])}
+      />
     </Card>
   )
 }

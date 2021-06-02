@@ -18,9 +18,6 @@ export const Card = styled.header`
   @TEX
 */
 const MicroCard: React.FC = () => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
   return (
     <Card>
       <h1>oi</h1>

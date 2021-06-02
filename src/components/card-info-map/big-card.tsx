@@ -68,7 +68,7 @@ const MicroCard: React.FC = () => {
     const newOrder = OrderUtil(order, snapshotByProduct)
     setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
   }, [order, snapshotByProduct])
-  console.log(listCurrentPage)
+
   return (
     <Card>
       <Head>
@@ -85,7 +85,7 @@ const MicroCard: React.FC = () => {
       {listCurrentPage.map((v: any, index) => (
         <CardInfo
           isColor={(index + 1) % 2 === 0}
-          key={v}
+          key={v.fixedIncome.name}
           title={v.fixedIncome.name}
           bondType={v.fixedIncome.bondType}
           equity={formatMoney(v.position.equity)}

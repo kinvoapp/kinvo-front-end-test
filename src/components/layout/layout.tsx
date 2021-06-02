@@ -1,7 +1,10 @@
-import React, { useEffect, ReactChild } from 'react'
+import React, { ReactChild } from 'react'
 import NavTop from '../nav/nav-top'
 import styled from 'styled-components'
 import NavLateral from '../nav/nav-lateral'
+import { ApplicationState } from '../../store'
+import { useSelector } from 'react-redux'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 interface Props {
   children: ReactChild
@@ -12,6 +15,7 @@ export const Container = styled.div`
 `
 
 export const WrapChildren = styled.div`
+  margin-top: 120px;
   display flex;
 `
 export const Content = styled.div`
@@ -30,21 +34,19 @@ export const Title = styled.h1`
   MAIN
   @TEX
 */
-const HomePage: React.FC<Props> = ({ children, title }: Props) => {
-  useEffect(() => {
-    console.log('First log')
-  }, [])
+const Layout: React.FC<Props> = ({ children, title }: Props) => {
+  const { loading } = useSelector((state: ApplicationState) => state.notify)
   return (
     <Container>
       <NavTop />
       <WrapChildren>
         <NavLateral></NavLateral>
         <Content>
-          <Title>{title}</Title>
-          {children}
+          <Title e-test="lay-title">{title}</Title>
+          {loading ? <CircularProgress disableShrink /> : children}
         </Content>
       </WrapChildren>
     </Container>
   )
 }
-export default HomePage
+export default Layout

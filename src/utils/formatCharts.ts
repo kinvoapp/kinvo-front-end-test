@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { DataChartSpline } from './schemas'
 
 export const formatValuesChartExample = (
@@ -5,7 +6,7 @@ export const formatValuesChartExample = (
 ) => {
   let lastData = 0
   let lastD = 0
-  const pseudo = dailyEquityByPortfolioChartData.map((val: any, index: any) => {
+  const pseudo = dailyEquityByPortfolioChartData.map((val: any) => {
     const valWithoutRent =
       val.movementTypeId === 1 ? val.value + lastD : lastD - val.value
     const valWithRent =

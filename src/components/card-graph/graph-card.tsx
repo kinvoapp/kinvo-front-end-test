@@ -10,7 +10,7 @@ interface Props {
 
 const options = (data1?: any, data2?: any) => ({
   title: {
-    text: 'Rentabilidade dos titulos'
+    text: ''
   },
   chart: {
     type: 'areaspline'
@@ -41,7 +41,7 @@ const options = (data1?: any, data2?: any) => ({
   series: [
     {
       data: data1,
-
+      name: 'Rendimento com a kinvo',
       fillColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [
@@ -52,7 +52,7 @@ const options = (data1?: any, data2?: any) => ({
     },
     {
       data: data2,
-
+      name: 'Rendimento sem a kinvo',
       fillColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [
@@ -74,11 +74,14 @@ const HighChartWrapper = styled(HighchartsReact)`
 
 export const Card = styled.header`
   border-radius: 10px;
-  height: 400px;
+  height: 500px;
   background-color: ${p => p.theme.colors.white};
   align-items: center;
   box-shadow: 0px 2px 6px #0000000a;
   border-radius: 10px;
+  h1 {
+    padding: 10px 20px;
+  }
 `
 
 /*
@@ -94,6 +97,7 @@ const MicroCard: React.FC<Props> = ({ data }: Props) => {
   }, [data])
   return (
     <Card>
+      <h1>Rentabilidade dos Títulos</h1>
       <HighChartWrapper
         highcharts={Highcharts}
         options={options(whitRent, whitOutRent)}
