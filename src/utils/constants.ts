@@ -1,7 +1,4 @@
-export interface ProductOrder {
-  name: string
-  value: string
-}
+import { ProductOrder } from './schemas'
 
 export const productOrders: ProductOrder[] = [
   { name: 'Nome', value: 'name' },

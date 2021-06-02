@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import { DataChartSpline } from '../../pages/fixed-income/fixed-income'
+
+interface Props {
+  data: DataChartSpline[]
+}
 
 const options = (data1?: any, data2?: any) => ({
   title: {
@@ -35,10 +40,7 @@ const options = (data1?: any, data2?: any) => ({
   },
   series: [
     {
-      data: [
-        29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1,
-        95.6, 54.4
-      ],
+      data: data1,
 
       fillColor: {
         linearGradient: [0, 0, 0, 300],
@@ -49,10 +51,7 @@ const options = (data1?: any, data2?: any) => ({
       }
     },
     {
-      data: [
-        120.9, 71.5, 106.4, 2.2, 2.0, 2.0, 135.6, 148.5, 216.4, 194.1, 900.6,
-        54.4
-      ],
+      data: data2,
 
       fillColor: {
         linearGradient: [0, 0, 0, 300],
@@ -69,7 +68,7 @@ const options = (data1?: any, data2?: any) => ({
 */
 const HighChartWrapper = styled(HighchartsReact)`
   .highcharts-plot-border {
-    fill: black !important;
+    fill: white !important;
   }
 `
 
@@ -86,13 +85,19 @@ export const Card = styled.header`
   MAIN
   @TEX
 */
-const MicroCard: React.FC = () => {
+const MicroCard: React.FC<Props> = ({ data }: Props) => {
+  const [whitRent, setWithRent] = useState<number[]>([])
+  const [whitOutRent, setWithOutRent] = useState<number[]>([])
   useEffect(() => {
-    console.log('First log')
-  }, [])
+    setWithRent(data.map(v => v.value))
+    setWithOutRent(data.map(v => v.valueWithOutRent))
+  }, [data])
   return (
     <Card>
-      <HighChartWrapper highcharts={Highcharts} options={options()} />
+      <HighChartWrapper
+        highcharts={Highcharts}
+        options={options(whitRent, whitOutRent)}
+      />
     </Card>
   )
 }

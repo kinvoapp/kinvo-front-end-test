@@ -8,7 +8,7 @@ import { PaginationUtil } from '../../utils/pagination'
 import Select from '../common/form-select'
 import { productOrders } from '../../utils/constants'
 import { OrderUtil } from '../../utils/order'
-
+import { formatMoney, formatPercent } from '../../utils/formatValues'
 /*
   Componentes style
 */
@@ -68,7 +68,7 @@ const MicroCard: React.FC = () => {
     const newOrder = OrderUtil(order, snapshotByProduct)
     setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
   }, [order, snapshotByProduct])
-
+  console.log(listCurrentPage)
   return (
     <Card>
       <Head>
@@ -88,7 +88,14 @@ const MicroCard: React.FC = () => {
           key={v}
           title={v.fixedIncome.name}
           bondType={v.fixedIncome.bondType}
-          equity={v.position.equity}
+          equity={formatMoney(v.position.equity)}
+          profitability={formatPercent(v.position.profitability)}
+          valueApplied={formatMoney(v.position.valueApplied)}
+          percentageOverIndexer={formatPercent(
+            v.position.percentageOverIndexer
+          )}
+          indexerValue={formatPercent(v.position.indexerValue)}
+          portfolioPercentage={formatPercent(v.position.portfolioPercentage)}
           valDate={v.due.date}
           valDays={v.due.daysUntilExpiration}
         />

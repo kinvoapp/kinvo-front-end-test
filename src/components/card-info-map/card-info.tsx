@@ -9,9 +9,14 @@ interface PropTypes {
   isColor: boolean
   title?: string
   bondType?: string
-  equity?: number | 0
+  equity?: number | string | 0
   valDate?: string
   valDays?: string
+  profitability?: string | number
+  valueApplied?: string | number
+  percentageOverIndexer?: string | number
+  indexerValue?: string | number
+  portfolioPercentage?: string | number
 }
 
 interface PLabel {
@@ -60,6 +65,9 @@ export const Label = styled.label<PLabel>`
   p {
     color: ${p => p.theme.colors.text[p.color]};
     font-size: 15px;
+    @media (max-width: 1400px) {
+      font-size: 13px;
+    }
   }
 `
 
@@ -95,7 +103,12 @@ const MicroCard: React.FC<PropTypes> = ({
   bondType,
   equity,
   valDate,
-  valDays
+  valDays,
+  profitability,
+  valueApplied,
+  percentageOverIndexer,
+  indexerValue,
+  portfolioPercentage
 }: PropTypes) => {
   useEffect(() => {
     console.log('First log')
@@ -121,27 +134,27 @@ const MicroCard: React.FC<PropTypes> = ({
             <Info>
               <Label color="blue">
                 VALOR INVESTIDO
-                <p>{equity ? Math.floor(equity / 100) : 0}</p>
+                <p>{equity}</p>
               </Label>
               <Label color="blue">
                 SALDO BRUTO
-                <p>{equity ? Math.floor(equity / 100) : 0}</p>
+                <p>{valueApplied}</p>
               </Label>
               <Label color="blue">
                 RENT.
-                <p>{equity ? Math.floor(equity / 100) : 0}%</p>
+                <p>{profitability}</p>
               </Label>
               <Label color="blue">
                 % DA CART
-                <p>{equity ? Math.floor(equity / 100) : 0}%</p>
+                <p>{portfolioPercentage}%</p>
               </Label>
               <Label color="blue">
                 CDI
-                <p>{equity ? Math.floor(equity / 100) : 0}</p>
+                <p>{indexerValue}</p>
               </Label>
               <Label color="blue">
                 SOBRE CDI
-                <p>{equity ? Math.floor(equity / 100) : 0}</p>
+                <p>{percentageOverIndexer}</p>
               </Label>
             </Info>
           </Contain>
@@ -153,7 +166,7 @@ const MicroCard: React.FC<PropTypes> = ({
             <Info>
               <Label color="green">
                 DATA VENC.
-                <p>{valDate}</p>
+                <p>{valDate?.replaceAll('/', '.')}</p>
               </Label>
               <Label color="green">
                 DIAS ATÉ VENC.
