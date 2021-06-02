@@ -13,8 +13,9 @@ export const GlobalStyle = createGlobalStyle`
     --background: #EEF2F4;
     --gray: #DAE0E3;
     --text: #707B81;
+    --textDark: #627179;
     --purple: #5D41AC;
-    --purpleDark: #4C309B
+    --purpleDark: #4C309B;
     --green: #38BFA0;
     --blue: #008DCB;
   }

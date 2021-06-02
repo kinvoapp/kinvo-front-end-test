@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.aside`
   width: 227px;
-  height: 100%;
-  padding-top: 90px;
+  height: auto;
   background: var(--white);
 `;
 
@@ -14,6 +13,7 @@ export const Item = styled.li`
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
+  background: var(--white);
 
   border-bottom: 1px solid var(--gray);
 

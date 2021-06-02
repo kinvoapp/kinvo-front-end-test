@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  position: absolute;
-  left: 0;
-  right: 0;
-
   display: flex;
   align-items: center;
 
