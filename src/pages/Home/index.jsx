@@ -28,8 +28,6 @@ export function Home() {
       try {
         const response = await api.get("/getFixedIncomeClassData");
 
-        console.log(response);
-
         if (response.data.error) {
           toast.error("Ocorreu algum erro ao recuperar os dados!");
           return;

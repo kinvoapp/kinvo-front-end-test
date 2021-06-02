@@ -31,13 +31,13 @@ export const MyFixedIncomesBody = styled.div`
   padding: 30px 25px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
 `;
 
 export const MyFixedIncomesRow = styled.div`
   display: flex;
   align-items: center;
-
+  margin: 20px 0;
   gap: 10px;
 `;
 
@@ -140,6 +140,37 @@ export const FixedIncomeTitle = styled.div`
         font-size: 11px;
         white-space: nowrap;
       }
+    }
+  }
+`;
+
+export const PaginationContainer = styled.div`
+  border-top: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  gap: 10px;
+`;
+
+export const PaginationButton = styled.button`
+  height: 35px;
+  width: 35px;
+
+  background: ${({ selected }) => (selected ? "var(--gray)" : "var(--white)")};
+  color: ${({ selected }) => (selected ? "var(--white)" : "var(--gray)")};
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+
+    img {
+      opacity: 0.5;
     }
   }
 `;
