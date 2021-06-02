@@ -8,6 +8,8 @@ export const Wrapper = styled.header`
   height: 90px;
 
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  padding-bottom: 1px;
 `;
 
 export const Content = styled.div`

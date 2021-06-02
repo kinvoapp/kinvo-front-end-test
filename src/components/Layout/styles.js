@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   .division {
     display: flex;
+    margin-top: 1px;
   }
 `;
 

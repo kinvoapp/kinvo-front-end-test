@@ -83,9 +83,10 @@ export const FixedIncomeTitle = styled.div`
     margin-top: 10px;
 
     strong {
-      font-size: 11px;
+      font-size: 9px;
       max-width: 50%;
       color: var(--text);
+      flex: 1;
     }
 
     .class {
