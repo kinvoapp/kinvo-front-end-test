@@ -7,7 +7,7 @@ export const Content = styled.div`
   & + div {
     margin-left: 15px;
   }
-
+  max-width: 928px;
   width: 100%;
   &:first-child {
     max-width: 410px;
@@ -48,6 +48,7 @@ export const ContentBody = styled.div`
   align-items: center;
   justify-content: space-between;
   min-width: 250px;
+
   padding: 15px;
   border: 1px solid ${props => props.theme.colors.grey400};
   border-top-right-radius: 10px;
