@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Grid from '@material-ui/core/Grid'
-
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 /*
   Componentes style
 */
@@ -85,6 +85,8 @@ export const TitleInfo = styled.p`
   border-bottom: 3px solid ${p => p.theme.colors.white};
   background-color: ${p => p.theme.colors.white};
   transform: translateY(6%);
+  display: flex;
+  justify-content: space-between;
   z-index: 2;
 `
 
@@ -115,7 +117,9 @@ const MicroCard: React.FC<PropTypes> = ({
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <Contain>
-            <TitleInfo>TITULO</TitleInfo>
+            <TitleInfo>
+              <h4>TITULO</h4> <AiOutlineInfoCircle size={12} />
+            </TitleInfo>
             <Info>
               <p>{title}</p>
               <Label color="purple">
@@ -127,7 +131,9 @@ const MicroCard: React.FC<PropTypes> = ({
         </Grid>
         <Grid item xs={5}>
           <Contain>
-            <TitleInfo>RESULTADO</TitleInfo>
+            <TitleInfo>
+              <h4>RESULTADO</h4> <AiOutlineInfoCircle size={12} />
+            </TitleInfo>
             <Info>
               <Label color="blue">
                 VALOR INVESTIDO
@@ -159,7 +165,10 @@ const MicroCard: React.FC<PropTypes> = ({
 
         <Grid item xs={3}>
           <Contain>
-            <TitleInfo>VENCIMENTO</TitleInfo>
+            <TitleInfo>
+              <h4>VENCIMENTO</h4>
+              <AiOutlineInfoCircle size={12} />
+            </TitleInfo>
             <Info>
               <Label color="green">
                 DATA VENC.
