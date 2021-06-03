@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import axios from 'axios'
 
 export const getMyFixService = async () => {
@@ -7,7 +8,7 @@ export const getMyFixService = async () => {
     },
     withCredentials: true
   }
-  const resp = await axios.get(`${process.env.REACT_APP_API_URL}`, headers)
+  const resp = await axios.get(`/mock/getFixedIncomeClassData`, headers)
 
   return resp
 }

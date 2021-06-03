@@ -11,6 +11,9 @@ export const getMyFix = () => async (dispatch: Dispatch) => {
   dispatch({ type: NotifyTypes.SET_LOADING, payload: true })
   try {
     const respData: any = await getMyFixService()
+    if (respData.data.error) {
+      throw new Error()
+    }
     dispatch({
       type: LocalTypes.TOGGLE_MY_FIX,
       payload: respData.data
@@ -21,7 +24,7 @@ export const getMyFix = () => async (dispatch: Dispatch) => {
       payload: {
         severity: 'error',
         active: true,
-        errorType: error.response.data.error.type,
+        errorType: error.response?.data.error.type,
         message: error.response?.data.error.message || 'opps'
       }
     })

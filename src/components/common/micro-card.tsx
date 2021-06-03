@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 /*
@@ -40,18 +40,14 @@ export const Border = styled.div`
   @TEX
 */
 const MicroCard: React.FC<Props> = ({ title, percentOrNumber, isPercent }) => {
-  const [subTitle, setSubTitle] = useState('')
-
-  useEffect(() => {
-    isPercent
-      ? setSubTitle(`${percentOrNumber} %`)
-      : setSubTitle(`R$ ${percentOrNumber}`)
-  }, [])
+  const [subTitle] = useState(
+    isPercent ? `${percentOrNumber} %` : `R$ ${percentOrNumber}`
+  )
   return (
     <Card>
       <Border>
-        <Title>{title}</Title>
-        <SubTitle>{subTitle}</SubTitle>
+        <Title e-test="title-item">{title}</Title>
+        <SubTitle e-test="subtitle-item">{subTitle}</SubTitle>
       </Border>
     </Card>
   )

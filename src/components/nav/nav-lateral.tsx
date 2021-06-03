@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { ContainerLayoutLateral } from '../common/container'
 import { withStyles } from '@material-ui/core/styles'
@@ -8,6 +8,9 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary'
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails'
 import MuiAccordion from '@material-ui/core/Accordion'
 import { Links } from './lateral-content'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeLink } from '../../store/ducks/nav/actions'
+import { ApplicationState } from '../../store'
 /*
   Componentes style
 */
@@ -120,9 +123,10 @@ const AccordionDetails = withStyles(theme => ({
   @TEX
 */
 const HomePage: React.FC = () => {
-  const [active, setActive] = useState(-1)
+  const dispatch = useDispatch()
+  const { active } = useSelector((state: ApplicationState) => state.nav)
   const handleChange = (index: number) => {
-    setActive(index !== active ? index : -1)
+    dispatch(changeLink(index !== active ? index : -1))
   }
   return (
     <NavBar>

@@ -7,7 +7,7 @@ import { ApplicationState } from '../../store'
 import { PaginationUtil } from '../../utils/pagination'
 import Select from '../common/form-select'
 import { productOrders } from '../../utils/constants'
-import { OrderUtil } from '../../utils/order'
+import { OrderUtil, SearchUtil } from '../../utils/order'
 import { formatMoney, formatPercent } from '../../utils/formatValues'
 /*
   Componentes style
@@ -57,6 +57,7 @@ const MicroCard: React.FC = () => {
   )
   const [currentPage, setCurrentPage] = useState(1)
   const [order, setOrder] = useState('')
+  const [search, setSearch] = useState('')
   const [listCurrentPage, setListCurrentPage] = useState(snapshotByProduct)
   const peerPage = 5
 
@@ -68,7 +69,15 @@ const MicroCard: React.FC = () => {
     const newOrder = OrderUtil(order, snapshotByProduct)
     setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
   }, [order, snapshotByProduct])
-  console.log(listCurrentPage)
+
+  useEffect(() => {
+    if (search) {
+      /** the last param is dinamical */
+      const newOrder = SearchUtil(search, snapshotByProduct, 'name')
+      setListCurrentPage(PaginationUtil(newOrder, peerPage, currentPage))
+    }
+  }, [search])
+
   return (
     <Card>
       <Head>
@@ -79,13 +88,13 @@ const MicroCard: React.FC = () => {
             onChange={setOrder}
             label="Ordernar por"
           />
-          <Search />
+          <Search onChange={(e: any) => setSearch(e.target.value)} />
         </Elements>
       </Head>
       {listCurrentPage.map((v: any, index) => (
         <CardInfo
           isColor={(index + 1) % 2 === 0}
-          key={v}
+          key={v.fixedIncome.name}
           title={v.fixedIncome.name}
           bondType={v.fixedIncome.bondType}
           equity={formatMoney(v.position.equity)}

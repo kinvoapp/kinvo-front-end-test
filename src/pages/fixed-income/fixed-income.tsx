@@ -34,49 +34,51 @@ const MyFix: React.FC = () => {
   )
 
   useEffect(() => {
-    setChartSpline(formatValuesChartExample(dailyEquityByPortfolioChartData))
-    // dispatch(getMyFix())
+    dispatch(getMyFix())
   }, [])
+  useEffect(() => {
+    setChartSpline(formatValuesChartExample(dailyEquityByPortfolioChartData))
+  }, [dailyEquityByPortfolioChartData])
   return (
     <Content>
       <Layout title="Renda Fixa">
         <Grid container spacing={2}>
-          <Grid key={1} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="SALDO BRUTO"
               isPercent={false}
               percentOrNumber={snapshotByPortfolio.equity}
             />
           </Grid>
-          <Grid key={1} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="VALOR APLICADO"
               isPercent={false}
               percentOrNumber={snapshotByPortfolio.valueApplied}
             />
           </Grid>
-          <Grid key={2} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="RESULTADO"
               isPercent={false}
               percentOrNumber={snapshotByPortfolio.equityProfit}
             />
           </Grid>
-          <Grid key={1} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="RENTABILIDADE"
               isPercent
               percentOrNumber={snapshotByPortfolio.percentageProfit}
             />
           </Grid>
-          <Grid key={1} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="CDI"
               isPercent
               percentOrNumber={snapshotByPortfolio.indexerValue}
             />
           </Grid>
-          <Grid key={1} item xs={2}>
+          <Grid item xs={2}>
             <Card
               title="% SOBRE CDI"
               isPercent
@@ -84,16 +86,16 @@ const MyFix: React.FC = () => {
             />
           </Grid>
 
-          <Grid key="{value}" item xs={12}>
+          <Grid item xs={12}>
             <GraphCard data={chartSpline} />
           </Grid>
-          <Grid key="{value}" item xs={12}>
+          <Grid item xs={12}>
             <BigCard />
           </Grid>
-          <Grid key="{value}" item xs={6}>
+          <Grid item xs={6}>
             <GraphRoundedCard />
           </Grid>
-          <Grid key="{value}" item xs={6}>
+          <Grid item xs={6}>
             <GraphRoundedCard />
           </Grid>
         </Grid>
