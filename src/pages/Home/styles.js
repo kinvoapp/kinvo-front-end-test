@@ -22,6 +22,7 @@ export const RentabilityTitleContainer = styled.div`
 
 export const GraphContainer = styled.div`
   margin-top: 10px;
+  max-width: 1090px;
   //border: 1px solid red;
   display: flex;
   gap: 10px;
