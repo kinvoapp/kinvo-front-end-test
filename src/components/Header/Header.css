@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700');
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  font-family: Titillium Web;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0 0 0 -5px;
+}
+
+.header_items {
+  display: flex;
+  flex-direction: row;
+  margin-right: 150px;
+}
+
+.header_item {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_item_title_and_value {
+  margin: 0 5px;
+}
+
+.header_item_title {
+  margin: 0;
+  color: #bfbfbf;
+  font-size: xx-small;
+}
+
+.header_item_value {
+  margin: 0;
+  font-weight: bold;
+}
+
+.area-arrow {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header-wallet {
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-wallet {
+  margin: 0;
+  font-weight: bold smaller;
+}
+
+.wallet {
+  margin: 0;
+  color: #bfbfbf;
+  font-size: xx-small;
+}
+
+.menu {
+  background-color: #4c309b;
+}
+
+.arrow-up {
+  transform-style: flat;
+}
