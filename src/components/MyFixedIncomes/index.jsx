@@ -15,6 +15,7 @@ import { Input } from "../Inputs/SearchInput";
 import SearchIcon from "../../assets/icons/search.svg";
 import { Pagination } from "./Pagination";
 import { validateFilterDate } from "../../utils/validateFilterData";
+import { debounce } from "../../utils/debounce";
 
 const filterOptions = [
   "Saldo Bruto",
@@ -33,6 +34,8 @@ export function MyFixedIncomes({ data }) {
 
   const [page, setPage] = useState(1);
   const [initialPosition, setInitialPosition] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+
   const limitPerPage = 5;
 
   const pagesQtd = Math.ceil(fixedIncomeData.length / limitPerPage);
@@ -62,13 +65,43 @@ export function MyFixedIncomes({ data }) {
     setFixedIncomeData(filteredData);
   }
 
+  function debounce(callback, wait) {
+    let timeout;
+
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => callback(...args), wait);
+    };
+  }
+
+  function filterByTerm(fixedIncomesData, data, term) {
+    if (searchTerm === "") {
+      return data;
+    }
+
+    const filteredData = fixedIncomesData.filter((income) =>
+      income.fixedIncome.name.toLowerCase().includes(term.toLowerCase())
+    );
+
+    return filteredData;
+  }
+
+  function handleInputChange(event) {
+    setSearchTerm(event.target.value);
+
+    debounce(() => {
+      const filteredData = filterByTerm(fixedIncomeData, data, searchTerm);
+      setFixedIncomeData(filteredData);
+    }, 3000)();
+  }
+
   return (
     <MyFixedIncomesContainer>
       <MyFixedIncomesHeader>
         <h1>Minhas Rendas Fixas</h1>
         <div>
           <SelectInput onChange={handleChange} options={filterOptions} />
-          <Input icon={SearchIcon} />
+          <Input icon={SearchIcon} value={searchTerm} onChange={handleInputChange} />
         </div>
       </MyFixedIncomesHeader>
       <MyFixedIncomesBody>
