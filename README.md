@@ -11,3 +11,9 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 2. Digite yarn ou npm start
 3. Acesse a aplicação no navegador!
 ```
+
+## Deploy na Vercel
+
+```js
+const link = https://kinvo-front-end-test.vercel.app/
+```
