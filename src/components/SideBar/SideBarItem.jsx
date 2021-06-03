@@ -4,7 +4,7 @@ import ArrowIcon from "../../assets/icons/arrow.svg";
 
 export function SideBarItem({ icon, title }) {
   return (
-    <Item normalize={!!icon}>
+    <Item normalize={!!icon} selected={title === "Fundo Renda Fixa"}>
       <ItemContent>
         {!!icon ? <img src={icon} alt={title[0] + title[1]} /> : <Pointer />}
 

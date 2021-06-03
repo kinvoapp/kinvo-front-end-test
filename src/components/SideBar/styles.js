@@ -13,7 +13,7 @@ export const Item = styled.li`
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
-  background: var(--white);
+  background: ${({ selected }) => (selected ? "var(--gray)" : "var(--white)")};
 
   border-bottom: 1px solid var(--gray);
 
