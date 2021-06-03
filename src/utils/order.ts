@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable array-callback-return */
 export const OrderUtil = (orderOption: any, filteredProducts: any): [] => {
@@ -41,4 +42,15 @@ export const OrderUtil = (orderOption: any, filteredProducts: any): [] => {
         break
     }
   })
+}
+
+export const SearchUtil = (
+  search: string,
+  filteredProducts: any,
+  position: string
+): [] => {
+  const data = filteredProducts.filter((item: any) =>
+    item.fixedIncome[position].toLowerCase().includes(search.toLowerCase())
+  )
+  return data
 }
