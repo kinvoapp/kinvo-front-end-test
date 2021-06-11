@@ -22,14 +22,14 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 
 - Todos os requisitos exigidos para o nível Estágio/Trainee;
 - Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`;
-- Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
+- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
 
 ### ○ Pleno
 
 - Todos os requisitos exigidos para o nível Junior;
 - Fazer uso da biblioteca [React](https://pt-br.reactjs.org/);
 - Fazer uso da biblioteca [Styled Components](https://styled-components.com/);
-- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
+- Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
 
 ### ○ Sênior/Analista
 
