@@ -1,13 +1,56 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header */
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 3vw;
+  color: #707B81;
+}
+.header-infos{
+  display: flex;
+}
+.infos-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2vw;
+}
+.header-icon{
+  margin-right: 10px;
+}
+.infos-h2{
+  font-size: 8px;
+}
+.infos-h2-carteira{
+  font-size: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.infos-h1{
+  font-size: 16px;
+  font-weight: bold;
+}
+.info-btn{
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #5D41AC;
+  margin-right: 10px;
+}
+.header-icon-btn{
+  font-size: 20px;
+  border-radius: 100%;
+  color: white;
 }
