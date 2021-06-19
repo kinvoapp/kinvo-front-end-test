@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="Grupo_12159" data-name="Grupo 12159" transform="translate(-1675 3973)">
+    <ellipse id="borda" cx="17" cy="17" rx="17" ry="17" transform="translate(1675 -3973)" fill="#dae0e3"/>
+    <g id="Grupo_12133" data-name="Grupo 12133" transform="translate(1682.196 -3965.808)">
+      <g id="aberto" transform="translate(0 0)">
+        <g id="icon-menu-carteira">
+          <path id="borda-2" data-name="borda" d="M68.414,60.263a9.9,9.9,0,1,1-2.891-7.008A9.9,9.9,0,0,1,68.414,60.263Z" transform="translate(-48.656 -50.347)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+          <path id="stroke" d="M59.588,54.6a6.6,6.6,0,0,1,4.737,1.966,6.828,6.828,0,0,1,1.957,4.756,6.657,6.657,0,0,1-1.957,4.756,6.8,6.8,0,0,1-4.737,1.993A6.7,6.7,0,0,1,52.867,61.4h0V61.35" transform="translate(-49.703 -51.404)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+          <path id="stroke-2" data-name="stroke" d="M61.814,58.959a3.475,3.475,0,0,1,0,6.949" transform="translate(-51.928 -52.488)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
