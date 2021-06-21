@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
 
         setProducts(prod => [
           ...prod, 
-          {titulo, classe, prodValorAplicado, prodSaldoBruto, prodRentabilidade, porcentagemCart, referencial, referencialValor, porcentagemSobreRef, dataVenc, diasVenc, portfolioID}])
+          {titulo, classe, prodValorAplicado:prodValorAplicado.toLocaleString(), prodSaldoBruto:prodSaldoBruto.toLocaleString(), prodRentabilidade:prodRentabilidade.toLocaleString(), porcentagemCart:porcentagemCart.toLocaleString(), referencial, referencialValor:referencialValor.toLocaleString(), porcentagemSobreRef:porcentagemSobreRef.toLocaleString(), dataVenc:dataVenc.replaceAll("/", "."), diasVenc, portfolioID}])
       })
       
       setIsLoading(false)
