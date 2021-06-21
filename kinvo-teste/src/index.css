@@ -291,3 +291,33 @@
   font-weight: 500;
   color: #008DCB
 }
+
+/* Loading */
+.loading-gif{
+  display: block;
+  margin: 0 auto;
+}
+
+/* Erro */
+.erro-container{
+  text-align: center;
+  padding-top: 100px;
+}
+.erro-h1-box{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin-bottom: 25px;
+}
+.erro-h2{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin-bottom: 25px;
+}
+.erro-p{
+  color: #6a6a6a;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
