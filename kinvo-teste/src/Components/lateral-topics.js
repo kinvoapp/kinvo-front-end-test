@@ -5,7 +5,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 
 
 const LateralTopics = () => {
-    // const {discoverBook, goSingleBook} = useGlobalContext()
+    const {siteTopic, setSiteTopic, siteSubTopic, setSiteSubTopic} = useGlobalContext()
     const lateralTopics = [
         {
             title: 'Resumo Da Carteira',
@@ -56,8 +56,7 @@ const LateralTopics = () => {
             subTopics: null
         },
     ]
-    const [siteTopic, setSiteTopic] = useState('Classe de Ativos')
-    const [siteSubTopic, setSiteSubTopic] = useState('Fundo Renda Fixa')
+    
 
   return (
     <article className='lateral-container'>
@@ -83,7 +82,7 @@ const LateralTopics = () => {
                     <section className='lateral-topic-box-Selected' key={sIndex}>
                         <div className='lateral-topic-info'>
                             <GoPrimitiveDot className='lateral-subtopic-dot'/>
-                            <h1 className='lateral-topic-h1'>{sub}</h1>
+                            <h1 className='lateral-subtopic-h1'>{sub}</h1>
                         </div>
                         <BiChevronRight className='lateral-topic-seta'/>
                     </section>
@@ -91,7 +90,7 @@ const LateralTopics = () => {
                     <section className='lateral-topic-box' onClick={()=> setSiteSubTopic(sub)} key={sIndex}>
                         <div className='lateral-topic-info'>
                             <GoPrimitiveDot className='lateral-subtopic-dot'/>
-                            <h1 className='lateral-topic-h1'>{sub}</h1>
+                            <h1 className='lateral-subtopic-h1'>{sub}</h1>
                         </div>
                         <BiChevronRight className='lateral-topic-seta'/>
                     </section>
