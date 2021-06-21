@@ -1,11 +1,15 @@
-import { useGlobalContext } from '../context'
+import React, {useEffect} from 'react';
+import { useGlobalContext } from '../../context'
 import { BiSearch, BiInfoCircle } from "react-icons/bi";
-
+import Grafico from '../gráficos/graficoRosquinha';
 
 
 const RendaFixa = () => {
-    const {portfolio, products, updateSort, sort} = useGlobalContext()
-
+    const {portfolio, products, updateSort, sort, grafTitulos, newGrafTipo} = useGlobalContext()
+    
+    useEffect(()=>{
+      console.log(newGrafTipo)
+    })
     return (
     <article className='infos-container'>
         <h1 className='infos-container-h1'>Renda Fixa</h1>
@@ -120,6 +124,21 @@ const RendaFixa = () => {
             )
           })}
           </section>  
+        </section>
+
+        <section className='graficos-container'>
+          <section className='grafico-box'>
+            <div className='grafico-header'>
+              <h1 className='grafico-h1'>Divisão de Carteira por Tipos</h1>
+            </div>
+            <Grafico data={newGrafTipo}/>
+          </section>
+          <section className='grafico-box'>
+            <div className='grafico-header'>
+              <h1 className='grafico-h1'>Divisão de Carteira por Títulos</h1>
+            </div>
+            <Grafico data={grafTitulos}/>
+          </section>
         </section>
     </article>
     )

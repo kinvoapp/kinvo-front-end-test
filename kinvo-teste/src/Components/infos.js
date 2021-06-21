@@ -1,5 +1,5 @@
 import { useGlobalContext } from '../context'
-import RendaFixa from './rendaFixa'
+import RendaFixa from './subTopicos/rendaFixa'
 import Erro from './erro'
 
 const Infos = () => {

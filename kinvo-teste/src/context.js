@@ -12,7 +12,9 @@ const AppProvider = ({ children }) => {
   
   const [portfolio, setPortfolio] = useState(null)
   const [products, setProducts] = useState([])
+
   const [sort, setSort] = useState('default')
+  
 
    // Chamando API para diferentes seções
    useEffect(()=>{
@@ -86,6 +88,17 @@ const AppProvider = ({ children }) => {
     setProducts(tempProducts)
   },[sort])
 
+  // Separando os dados para os gráficos
+  const grafTitulos = products.map((prod)=>{return {label:prod.titulo,value:parseInt(prod.prodSaldoBruto.replaceAll(".",""))}})
+  const grafTipos = products.map((prod)=>{return {label:prod.classe,value:parseInt(prod.prodSaldoBruto.replaceAll(".",""))}})
+      const filtradoPos = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pós');
+      const somadoPos = filtradoPos.reduce((ac, x) => ac + x.value, 0)
+      const filtradoPre = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pré');
+      const somadoPre = filtradoPre.reduce((ac, x) => ac + x.value, 0)
+      const filtradoTd = grafTipos.filter((graf)=> graf.label === 'Tesouro Direto');
+      const somadoTd = filtradoTd.reduce((ac, x) => ac + x.value, 0)
+    const newGrafTipo = [{label:'Renda Fixa Pós', value:somadoPos},{label:'Renda Fixa Pré', value:somadoPre},{label:'Tesouro Direto', value:somadoTd},]
+
   return <AppContext.Provider value={{
     siteTopic,
     setSiteTopic,
@@ -96,7 +109,9 @@ const AppProvider = ({ children }) => {
     isLoading,
     updateSort,
     sort,
-    erroConnection
+    erroConnection,
+    grafTitulos,
+    newGrafTipo
   }}>{children}</AppContext.Provider>
 }
 

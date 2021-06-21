@@ -10,9 +10,6 @@ function Home() {
         <LateralTopics />
         <Infos />
       </article>
-      <header className="App-header">
-        aloha
-      </header>
     </>
   );
 }

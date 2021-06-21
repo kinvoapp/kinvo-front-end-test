@@ -155,6 +155,7 @@
 .meus-rendimentos-box{
   width: 100%;
   margin-top: 1.8vw;
+  padding-bottom: 4vw;
   border-radius: 10px;
   background-color: white;
 }
@@ -291,6 +292,29 @@
   font-weight: 500;
   color: #008DCB
 }
+
+/* Gráficos */
+.graficos-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8vw;
+  margin-bottom: 4vw;
+}
+.grafico-box{
+  width: 45%;
+  border-radius: 10px;
+  background-color: white;
+}
+.grafico-header{
+  padding: 1vw;
+  border-bottom: solid rgba(128, 128, 128, 0.199) 1px;
+}
+.grafico-h1{
+  font-size: 18px;
+  font-weight: 500;
+  color: #627179;
+}
+
 
 /* Loading */
 .loading-gif{
