@@ -213,6 +213,7 @@
   justify-content: space-between;
   background-color: white;
   padding: 2vw;
+  min-height: 135.11px;
   border-bottom: solid rgba(128, 128, 128, 0.199) 1px;
 }
 .meus-produtos-box-grey{
@@ -238,7 +239,7 @@
   padding: 0.5vw;
   border: solid 1px #CACED5;
   border-radius: 10px;
-  width: 42%;
+  width: 45%;
 }
 .meus-produtos-data{
   display: flex;
@@ -257,6 +258,7 @@
 .titulo-base{
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .meus-produtos-h1{
   font-size: 14px;

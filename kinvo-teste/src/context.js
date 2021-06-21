@@ -5,19 +5,30 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
-  const url = 'https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData'
+  const [erroConnection, setErroConnection] = useState(false)
 
   const [siteTopic, setSiteTopic] = useState('Classe de Ativos')
   const [siteSubTopic, setSiteSubTopic] = useState('Fundo Renda Fixa')
   
   const [portfolio, setPortfolio] = useState(null)
   const [products, setProducts] = useState([])
+  const [sort, setSort] = useState('default')
+
+   // Chamando API para diferentes seções
+   useEffect(()=>{
+    setIsLoading(true)
+    let url = 'https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/'
+    if(siteSubTopic === 'Fundo Renda Fixa'){
+      url = 'https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData' 
+    }
+    fetchData(url)
+  },[siteSubTopic])
 
   async function fetchData (url) {
     try {
       const response = await axios.get(url)
       const data = await response.data.data
-      console.log(response)
+      
       const {equity:portSaldoBruto, valueApplied:portValorAplicado, equityProfit:portResultado, percentageProfit:portRentabilidade, indexerValue:portCDI, percentageOverIndexer:portPorcentCDI} = data.snapshotByPortfolio
 
       setPortfolio([
@@ -37,19 +48,43 @@ const AppProvider = ({ children }) => {
           ...prod, 
           {titulo, classe, prodValorAplicado:prodValorAplicado.toLocaleString(), prodSaldoBruto:prodSaldoBruto.toLocaleString(), prodRentabilidade:prodRentabilidade.toLocaleString(), porcentagemCart:porcentagemCart.toLocaleString(), referencial, referencialValor:referencialValor.toLocaleString(), porcentagemSobreRef:porcentagemSobreRef.toLocaleString(), dataVenc:dataVenc.replaceAll("/", "."), diasVenc, portfolioID}])
       })
-      
       setIsLoading(false)
+      setErroConnection(false)
     } catch (err){
+      setIsLoading(false)
+      setErroConnection(true)
       console.log(err)
     }
   }
 
+  // Classificando os Produtos
+  const updateSort = (e) => {
+    const value = e.target.value
+    setSort(value)
+  }
   useEffect(()=>{
-    fetchData(url)
-  },[])
-  // useEffect(()=>{
-  //   console.log(products)
-  // })
+    let tempProducts =  [...products]
+    if(sort === 'classe'){
+      tempProducts = tempProducts.sort((a,b)=>{
+        return a.classe.localeCompare(b.classe)
+      })
+    }
+    if(sort === 'titulo'){
+      tempProducts = tempProducts.sort((a,b)=>{
+        return a.titulo.localeCompare(b.titulo)
+      })
+    }
+    if(sort === 'prodSaldoBruto'){
+      tempProducts = tempProducts.sort((a,b)=>parseFloat(b.prodSaldoBruto)-parseFloat(a.prodSaldoBruto))
+    }
+    if(sort === 'prodValorAplicado'){
+      tempProducts = tempProducts.sort((a,b)=>parseFloat(b.prodValorAplicado)-parseFloat(a.prodValorAplicado))
+    }
+    if(sort === 'diasVenc'){
+      tempProducts = tempProducts.sort((a,b)=>a.diasVenc-b.diasVenc)
+    }
+    setProducts(tempProducts)
+  },[sort])
 
   return <AppContext.Provider value={{
     siteTopic,
@@ -58,7 +93,10 @@ const AppProvider = ({ children }) => {
     setSiteSubTopic,
     portfolio,
     products,
-    isLoading
+    isLoading,
+    updateSort,
+    sort,
+    erroConnection
   }}>{children}</AppContext.Provider>
 }
 
