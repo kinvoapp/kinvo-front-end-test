@@ -14,6 +14,10 @@ const AppProvider = ({ children }) => {
   const [products, setProducts] = useState([])
 
   const [sort, setSort] = useState('default')
+
+  const [grafTitulos, setGrafTitulos] = useState([])
+  const [grafTipos, setGrafTipos] = useState([])
+  const [grafTiposRef, setGrafTiposRef] = useState([])
   
 
    // Chamando API para diferentes seções
@@ -33,6 +37,12 @@ const AppProvider = ({ children }) => {
       
       const {equity:portSaldoBruto, valueApplied:portValorAplicado, equityProfit:portResultado, percentageProfit:portRentabilidade, indexerValue:portCDI, percentageOverIndexer:portPorcentCDI} = data.snapshotByPortfolio
 
+      // zerando
+      setProducts([])
+      setGrafTitulos([])
+      setGrafTipos([])
+      setGrafTiposRef([])
+
       setPortfolio([
         {title:'saldo bruto', value:portSaldoBruto.toLocaleString(), type:'moeda'}, 
         {title:'valor aplicado',value:portValorAplicado, type:'moeda'}, 
@@ -49,9 +59,20 @@ const AppProvider = ({ children }) => {
         setProducts(prod => [
           ...prod, 
           {titulo, classe, prodValorAplicado:prodValorAplicado.toLocaleString(), prodSaldoBruto:prodSaldoBruto.toLocaleString(), prodRentabilidade:prodRentabilidade.toLocaleString(), porcentagemCart:porcentagemCart.toLocaleString(), referencial, referencialValor:referencialValor.toLocaleString(), porcentagemSobreRef:porcentagemSobreRef.toLocaleString(), dataVenc:dataVenc.replaceAll("/", "."), diasVenc, portfolioID}])
+        
+          //gráficos 
+          setGrafTitulos(graf => [
+          ...graf,
+          {label:titulo,value:parseInt(prodSaldoBruto)}
+        ])
+          setGrafTipos(graf2 => [
+            ...graf2,
+            {label:classe, value:parseInt(prodSaldoBruto)}
+          ])
       })
       setIsLoading(false)
       setErroConnection(false)
+      
     } catch (err){
       setIsLoading(false)
       setErroConnection(true)
@@ -88,17 +109,19 @@ const AppProvider = ({ children }) => {
     setProducts(tempProducts)
   },[sort])
 
-  // Separando os dados para os gráficos
-  const grafTitulos = products.map((prod)=>{return {label:prod.titulo,value:parseInt(prod.prodSaldoBruto.replaceAll(".",""))}})
-  const grafTipos = products.map((prod)=>{return {label:prod.classe,value:parseInt(prod.prodSaldoBruto.replaceAll(".",""))}})
-      const filtradoPos = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pós');
-      const somadoPos = filtradoPos.reduce((ac, x) => ac + x.value, 0)
-      const filtradoPre = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pré');
-      const somadoPre = filtradoPre.reduce((ac, x) => ac + x.value, 0)
-      const filtradoTd = grafTipos.filter((graf)=> graf.label === 'Tesouro Direto');
-      const somadoTd = filtradoTd.reduce((ac, x) => ac + x.value, 0)
-    const newGrafTipo = [{label:'Renda Fixa Pós', value:somadoPos},{label:'Renda Fixa Pré', value:somadoPre},{label:'Tesouro Direto', value:somadoTd},]
 
+  // Filtrando gráfico de Tipos
+  useEffect(()=>{
+    const filtradoPos = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pós');
+    const somadoPos = filtradoPos.reduce((ac, x) => ac + x.value, 0)
+    const filtradoPre = grafTipos.filter((graf)=> graf.label === 'Renda Fixa Pré');
+    const somadoPre = filtradoPre.reduce((ac, x) => ac + x.value, 0)
+    const filtradoTd = grafTipos.filter((graf)=> graf.label === 'Tesouro Direto');
+    const somadoTd = filtradoTd.reduce((ac, x) => ac + x.value, 0)
+    const newGrafTipo = [{label:'Renda Fixa Pós', value:somadoPos},{label:'Renda Fixa Pré', value:somadoPre},{label:'Tesouro Direto', value:somadoTd},]
+    setGrafTiposRef(newGrafTipo)
+  },[grafTipos])
+  
   return <AppContext.Provider value={{
     siteTopic,
     setSiteTopic,
@@ -111,7 +134,8 @@ const AppProvider = ({ children }) => {
     sort,
     erroConnection,
     grafTitulos,
-    newGrafTipo
+    grafTipos,
+    grafTiposRef
   }}>{children}</AppContext.Provider>
 }
 

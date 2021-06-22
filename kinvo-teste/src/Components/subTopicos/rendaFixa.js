@@ -5,11 +5,8 @@ import Grafico from '../gráficos/graficoRosquinha';
 
 
 const RendaFixa = () => {
-    const {portfolio, products, updateSort, sort, grafTitulos, newGrafTipo} = useGlobalContext()
+    const {portfolio, products, updateSort, sort, grafTitulos, grafTipos, grafTiposRef} = useGlobalContext()
     
-    useEffect(()=>{
-      console.log(newGrafTipo)
-    })
     return (
     <article className='infos-container'>
         <h1 className='infos-container-h1'>Renda Fixa</h1>
@@ -131,7 +128,7 @@ const RendaFixa = () => {
             <div className='grafico-header'>
               <h1 className='grafico-h1'>Divisão de Carteira por Tipos</h1>
             </div>
-            <Grafico data={newGrafTipo}/>
+            <Grafico data={grafTiposRef}/>
           </section>
           <section className='grafico-box'>
             <div className='grafico-header'>
