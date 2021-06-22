@@ -1,6 +1,6 @@
 # Desafio Técnico Kinvo - FrontEnd Jr. 
 
-**Front**:@RodCerB
+**Front**:[Rodrigo Cersosimo Braga](https://github.com/RodCerB)
 
 ## Instruções de instalação
 
