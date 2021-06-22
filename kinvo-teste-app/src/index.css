@@ -14,12 +14,16 @@
 
 /* Header */
 .header-container{
+  position: fixed;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2vw 3vw;
+  width: 100%;
   color: #707B81;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.151);
+  background-color: white;
 }
 .header-infos{
   display: flex;
@@ -67,6 +71,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 17%;
+  margin-top: 6vw;
   color: #707B81;
 }
 .lateral-topic-box{
@@ -112,9 +117,11 @@
 /* Infos */
 .infos-container{
   width: 83%;
+  margin-top: 6vw;
   padding: 2vw  2vw 0 1.5vw;
   background-color: #EEF2F4;
 }
+
 .infos-container-h1{
   font-size: 20px;
   font-weight: 700;
@@ -222,6 +229,7 @@
   justify-content: space-between;
   background-color: #F8FAFB;
   padding: 2vw;
+  min-height: 135.11px;
   border-bottom: solid rgba(128, 128, 128, 0.199) 1px;
 }
 .meus-produtos-titulo{
@@ -305,6 +313,15 @@
   border-radius: 10px;
   background-color: white;
 }
+.grafico-box-topo{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.8vw;
+  background-color: white;
+}
+.grafico-topo-img{
+  width: 100%;
+}
 .grafico-header{
   padding: 1vw;
   border-bottom: solid rgba(128, 128, 128, 0.199) 1px;
@@ -344,4 +361,51 @@
   font-weight: 400;
   font-size: 1rem;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 1050px) {
+  .returns-h1{
+    font-size: 12px;
+  }
+  .form-select{
+    width: 15vw;
+  }
+  .meus-produtos-h1-resultados{
+    font-size: 12px;
+  }
+  .meus-produtos-h1-datas{
+    font-size: 12px;
+  }
+  .meus-produtos-h3{
+    font-size: 8px;
+  }
+  .titulo-base-indvidual{
+    text-align: end;
+  }
+}
+@media (max-width: 980px) {
+  .lateral-topic-h1 {
+    font-size: 10px;  
+  }
+  .meus-produtos-h2{
+    font-size: 10px;
+  }
+  .meus-produtos-h1{
+    font-size: 12px;
+  }
+  .meus-produtos-box{
+    min-height: 120px;
+  }
+  .meus-produtos-box-grey{
+    min-height: 120px;
+  }
+}
+@media (max-width: 960px) {
+  .infos-container {
+    background-color: #EEF2F4;  
+  }
 }

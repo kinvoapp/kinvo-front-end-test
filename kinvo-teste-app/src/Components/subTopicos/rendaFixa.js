@@ -29,6 +29,13 @@ const RendaFixa = () => {
           })}
         </section>
 
+        <section className='grafico-box-topo'>
+            <div className='grafico-header'>
+              <h1 className='grafico-h1'>Rentabilidade dos Títulos</h1>
+            </div>
+            <img src="./imgs/rendaFixa/grafico.png" alt="grafico 1" className='grafico-topo-img'/>
+          </section>
+
         <section className='meus-rendimentos-box'>
           <section className='meus-rendimentos-header'>
             <h1 className='meus-rendimentos-header-h1'>Minhas Rendas Fixas</h1>
@@ -47,6 +54,7 @@ const RendaFixa = () => {
               </div>
             </form>
           </section>
+
         
           <section className='meus-produtos-container'>
           {products.map((product, index)=>{
