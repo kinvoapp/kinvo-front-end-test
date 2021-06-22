@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
 import { useGlobalContext } from '../../context'
 import { BiSearch, BiInfoCircle } from "react-icons/bi";
 import Grafico from '../gráficos/graficoRosquinha';
 
 
 const RendaFixa = () => {
-    const {portfolio, products, updateSort, sort, grafTitulos, grafTipos, grafTiposRef} = useGlobalContext()
+    const {portfolio, products, updateSort, sort, grafTitulos, grafTiposRef} = useGlobalContext()
     
     return (
     <article className='infos-container'>

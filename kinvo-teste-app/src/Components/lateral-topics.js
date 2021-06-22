@@ -1,4 +1,3 @@
-    import React, {useState}  from 'react';
 import { useGlobalContext } from '../context'
 import { BiChevronRight} from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";

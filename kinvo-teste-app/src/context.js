@@ -55,7 +55,7 @@ const AppProvider = ({ children }) => {
         const {date:dataVenc,daysUntilExpiration:diasVenc} = product.due
         const {bondType:classe, name:titulo, portfolioProductId:portfolioID} = product.fixedIncome
         const {valueApplied:prodValorAplicado, equity:prodSaldoBruto, profitability:prodRentabilidade, portfolioPercentage:porcentagemCart, indexerLabel:referencial, indexerValue:referencialValor, percentageOverIndexer:porcentagemSobreRef} = product.position
-
+        
         setProducts(prod => [
           ...prod, 
           {titulo, classe, prodValorAplicado:prodValorAplicado.toLocaleString(), prodSaldoBruto:prodSaldoBruto.toLocaleString(), prodRentabilidade:prodRentabilidade.toLocaleString(), porcentagemCart:porcentagemCart.toLocaleString(), referencial, referencialValor:referencialValor.toLocaleString(), porcentagemSobreRef:porcentagemSobreRef.toLocaleString(), dataVenc:dataVenc.replaceAll("/", "."), diasVenc, portfolioID}])

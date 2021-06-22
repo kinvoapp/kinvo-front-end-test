@@ -1,8 +1,6 @@
-import { useGlobalContext } from '../context'
 import { BiChevronDown, BiMenu } from "react-icons/bi";
 
 const Header = () => {
-    // const {discoverBook, goSingleBook} = useGlobalContext()
     const headInfos = [
         {
             title: 'saldo bruto',
