@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+    import React, {useState}  from 'react';
 import { useGlobalContext } from '../context'
 import { BiChevronRight} from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";
@@ -66,7 +66,7 @@ const LateralTopics = () => {
             return (
                 title === siteTopic 
                 ?
-                <div key={index}>
+                <div key={index} className='selected-div'>
                 <section className='lateral-topic-box-Selected'>
                     <div className='lateral-topic-info'>
                         <img src={iconSelected} alt={title} className='lateral-topic-icon'/>
@@ -87,7 +87,7 @@ const LateralTopics = () => {
                         <BiChevronRight className='lateral-topic-seta'/>
                     </section>
                     :
-                    <section className='lateral-topic-box' onClick={()=> setSiteSubTopic(sub)} key={sIndex}>
+                    <section className='lateral-subtopic-box' onClick={()=> setSiteSubTopic(sub)} key={sIndex}>
                         <div className='lateral-topic-info'>
                             <GoPrimitiveDot className='lateral-subtopic-dot'/>
                             <h1 className='lateral-subtopic-h1'>{sub}</h1>

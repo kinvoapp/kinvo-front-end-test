@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <article className='header-container'>
-        <img src="./imgs/header/kinvo premium.svg" alt="kinvo logo" />
+        <img src="./imgs/header/kinvo premium.svg" alt="kinvo logo" className='img-logo'/>
         <section className='header-infos'>
             {headInfos.map((info, index)=>{
                 const {title, icon, value} = info
@@ -38,18 +38,14 @@ const Header = () => {
                 )
             })}
             <div className='infos-block'>
-                <button className='info-btn'>
                 <BiChevronDown className='header-icon-btn'/>
-                </button>
                 <div className='infos-values'>
                     <h2 className='infos-h2-carteira'>CARTEIRA</h2>
                     <h1 className='infos-h1'>Minha Carteira</h1>
                 </div>
             </div>
             <div className='infos-block'>
-            <button className='info-btn'>
                 <BiMenu className='header-icon-btn'/>
-            </button>
             </div>
         </section>
     </article>

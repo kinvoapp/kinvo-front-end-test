@@ -15,7 +15,7 @@
 /* Header */
 .header-container{
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,19 +49,14 @@
   font-size: 16px;
   font-weight: 700;
 }
-.info-btn{
-  border: none;
+.header-icon-btn{
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  font-size: 30px;
+  border-radius: 100%;
+  color: white;
   border-radius: 100%;
   background-color: #5D41AC;
   margin-right: 10px;
-}
-.header-icon-btn{
-  font-size: 20px;
-  border-radius: 100%;
-  color: white;
 }
 
 
@@ -75,6 +70,14 @@
   color: #707B81;
 }
 .lateral-topic-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1vw;
+  border-bottom: solid rgba(128, 128, 128, 0.199) 1px;
+}
+.lateral-subtopic-box{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -405,7 +408,96 @@
   }
 }
 @media (max-width: 960px) {
+  .lateral-container{
+    width: 20%;
+    margin-top: 7vw;
+  }
   .infos-container {
     background-color: #EEF2F4;  
   }
+  .meus-produtos-box{
+    flex-wrap: wrap;
+  }
+  .meus-produtos-box-grey{
+    flex-wrap: wrap;
+  }
+  .meus-produtos-titulo{
+    width: 100%;
+    margin-bottom: 1vw;
+  }
+  .meus-produtos-resultado{
+    width: 70%;
+  }
+  .meus-produtos-data{
+    width: 28%;
+  }
+  .infos-h1{
+    font-size: 12px;
+  }
+  .header-icon{
+    width: 15px;
+  }
+  .header-icon-btn{
+  font-size: 17px;
+  }
+  .grafico-box{
+    width: 48%;
+  }
 }
+@media (max-width: 760px) {
+.img-logo{
+  width: 30%;
+  margin-bottom: 3vw;
+}
+.header-container{
+  flex-direction: column;
+}
+.home-container{
+  flex-direction: column;
+}
+.lateral-container{
+  flex-direction: row;
+  width: 100%;
+  margin-top: 22vw;
+  padding: 1vw;
+}
+.lateral-topic-box{
+  width: 50%;
+}
+.selected-div{
+  width: 50%;
+}
+.lateral-topic-box-Selected{
+  width: 100%;
+}
+
+.infos-container{
+  width: 100%;
+}
+.infos-returns{
+  flex-wrap: wrap;
+}
+.returns-box{
+  flex-basis: 30vw;
+  margin-bottom: 1.5vw;
+}
+.form-select{
+  width: 25vw;
+}
+.meus-produtos-resultado{
+  width: 100%;
+  margin-bottom: 1vw;
+}
+.meus-produtos-data{
+  width: 40%;
+}
+.graficos-container{
+  flex-wrap: wrap;
+}
+
+.grafico-box{
+  width: 100%;
+  margin-bottom: 1vw;
+}
+}
+
