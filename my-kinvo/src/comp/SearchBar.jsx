@@ -2,17 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchText: '',
-    };
-  }
-
-  onSearchTextChange (event) {
-    this.setState({ searchText: event.target.value});
-  }
-
   inputText(searchText, onSearchTextChange) {
     return (
       <label
@@ -49,7 +38,7 @@ class SearchBar extends React.Component {
 }
 
 SearchBar.propTypes = {
-  searchText: PropTypes.string.isRequired,
+  searchText: PropTypes.string,
   onSearchTextChange: PropTypes.func.isRequired,
 }
 

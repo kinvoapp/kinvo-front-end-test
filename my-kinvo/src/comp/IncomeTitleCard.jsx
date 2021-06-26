@@ -8,7 +8,7 @@ class IncomeTitleCard extends React.Component {
     return (
       <div className="income-card" data-testid="income-card">
         <div className="income-card-body">
-          <h5>TÍTULO</h5>
+          <h5 className="title">TÍTULO</h5>
           <p className="name">{name}</p>
           <label htmlFor="bondType"
         data-testid="classe-label"
