@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class IncomeCard extends React.Component {
   render() {
     const { income } = this.props;
-    const { position: { valueApplied, equity, percentageProfit, portfolioPercentage, indexerValue, percentageOverIndexer } } = income;
+    const { position: { valueApplied, equity, profitability, portfolioPercentage, indexerValue, percentageOverIndexer } } = income;
     return (
       <div className="income-card" data-testid="income-card">
         <div className="income-card-body">
@@ -17,9 +17,9 @@ class IncomeCard extends React.Component {
         data-testid="equity-label"> SALDO BRUTO
           <p className="equity">{equity}</p>
           </label>
-          <label htmlFor="percentageProfit"
+          <label htmlFor="profitability"
         data-testid="percentage-profit-label"> RENT.
-          <p className="percentageProfit">{percentageProfit}</p>
+          <p className="profitability">{profitability}</p>
           </label>
           <label htmlFor="portfolioPercentage"
         data-testid="percentage-portfolio-label"> % DA CART.
