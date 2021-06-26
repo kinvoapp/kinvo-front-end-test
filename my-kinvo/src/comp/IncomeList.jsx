@@ -8,7 +8,6 @@ import IncomeDueCard from './IncomeDueCard';
 class IncomeList extends React.Component {
   render() {
     const { incomesToRender } = this.props;
-    console.log(incomesToRender)
     return (
       <div data-testid="income-list" className="income-list">
         { incomesToRender && incomesToRender.map((income, index) => (
