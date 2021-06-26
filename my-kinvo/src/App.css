@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 12px;
+}
+
+.input {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 30px;
+  margin: 2px;
+  max-width: 500px;
+  padding: 1px 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.App-header {
+  align-items: center;
+  background-color: #343a40;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.App-logo {
+  color: #f8f9fa;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.income-card-body{
+  display: flex;
+  font-size: 14px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 2.5px;
+  border-radius: 5px;
+}
+
+.income{
+  display: flex;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
