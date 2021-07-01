@@ -1,0 +1,33 @@
+body {
+    //overflow-x: hidden;
+}
+
+:root {
+    --background : #ffffff;
+    --background2: #EEF2F4;
+
+    --purple: #4C309B;
+
+    --grey: #707B81;
+    --grey-white: #DAE0E3;
+    --white: #ffffff;
+
+    --hover: #fafafa;
+    --orange: #FF7551;
+
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
