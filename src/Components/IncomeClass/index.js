@@ -2,19 +2,18 @@ import React from 'react';
 import styles from './styles.module.scss';
 import  infoSvg  from '../../assets/info.svg';
 import { parsePercent, parseMoney } from '../../utils/format';
-export default function IncomeClass ({item}) {
+export default function IncomeClass ({item, id}) {
     const { fixedIncome, due, position } = item;
-    console.log(position, fixedIncome)
-
+    
     return (
-        <div className={styles.assets}>
+        <div className={styles.assets} id={id}>
             <div className={styles.assetType}>
                 <div className={styles.titleName}>
                     <h1 className={styles.subtitle}>TÍTULO</h1>
                     <img src={infoSvg} alt="info" />
                 </div>
                 <div className={styles.assetsInfo}>
-                    <h2>{fixedIncome.name}</h2>
+                    <h2 id='IncomeName'>{fixedIncome.name}</h2>
                     <div className={styles.class}>
                         <h1 className={styles.subtitle}>CLASSE</h1>
                         <p>{fixedIncome.bondType}</p>

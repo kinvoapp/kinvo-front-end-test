@@ -16,7 +16,6 @@ export default function Main () {
             setSnapshotByProduct(data.snapshotByProduct);
 
             setLoading(false)
-            console.log(data)
         }   
         getApi();
 
