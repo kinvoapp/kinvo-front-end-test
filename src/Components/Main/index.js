@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Statistics from '../Statistics';
+import Portfolio from '../Portfolio';
 export default function Main () {
     return (
         <main className={styles.container}>
@@ -14,7 +15,7 @@ export default function Main () {
                 <Statistics title='% SOBRE CDI'>320%</Statistics>
             </div>
             <div className={styles.chart}>
-        
+                <Portfolio/>
             </div>
 
         </main>
