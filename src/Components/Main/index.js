@@ -8,23 +8,22 @@ export default function Main () {
     const [snapshotByPortfolio, setSnapshotByPortfolio] = useState(null);
     const [snapshotByProduct, setSnapshotByProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         const getApi = async () => {
             const { data: { data: data }} = await api.get('getFixedIncomeClassData');
             setSnapshotByPortfolio(data.snapshotByPortfolio);
             setSnapshotByProduct(data.snapshotByProduct);
-
+            
             setLoading(false)
         }   
         getApi();
-
+        
     }, [])
-
+    
     if (loading) {
         return <div> </div>
     }
-
+    
     return (
         <main className={styles.container}>
             <h1 className={styles.title}>Renda Fixa</h1>
@@ -39,7 +38,6 @@ export default function Main () {
             <div className={styles.chart}>
                 <Portfolio apiData={snapshotByProduct}/>
             </div>
-
         </main>
     )
 }
