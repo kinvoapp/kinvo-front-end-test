@@ -1,10 +1,12 @@
 .container {
+    position: relative;
     display: flex;
     height: 90px;
     width: 100vw;
     padding: 30px;
     justify-content: space-between;
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+    background: var(--background);
 
     a {
         width: 190px;

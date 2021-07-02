@@ -9,7 +9,7 @@ import { ReactComponent as Align } from '../../assets/align-justify.svg';
 
 export default function Header () {
     return (
-        <header className={styles.container}>
+        <header className={styles.container} id='header'>
             <a href=""><img src={Logo} alt="Logo Kinvo"/></a>
 
             <div className={styles.menu}>

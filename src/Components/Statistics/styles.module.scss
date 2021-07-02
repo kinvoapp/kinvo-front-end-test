@@ -1,0 +1,34 @@
+.container {
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 170px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+    h1 {
+        font-size: 14px;
+        font-weight: var(--bold);
+        
+    }
+    
+    h2 {
+        font-size: 9px;
+        font-weight: var(--medium);
+    }
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 9px;
+    height: 40px;
+    border-left: 2px solid var(--grey-white);
+
+    h1, h2 {
+        padding: 3px 9px;
+    }
+}

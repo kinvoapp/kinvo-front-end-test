@@ -1,8 +1,10 @@
 body {
-    //overflow-x: hidden;
+    overflow-x: hidden;
+    background: var(--background2);
 }
 
 :root {
+    
     --background : #ffffff;
     --background2: #EEF2F4;
 

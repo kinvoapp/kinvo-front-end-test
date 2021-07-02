@@ -1,0 +1,16 @@
+.container {
+    background: var(--background2);
+    margin: 27px 27px 32px 24px;
+
+    h1 {
+        font-size: 20px;
+        padding-bottom: 24px;
+        font-weight: var(--bold);
+        color: var(--purple);
+    }
+
+    .list {
+        display: flex;
+
+    }   
+}

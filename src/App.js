@@ -1,12 +1,17 @@
 import React from 'react'
 import Header from './Components/Header';
 import Menu from './Components/Menu';
-import './global.scss';
+import Main from './Components/Main';
+import './styles/global.scss';
+import './styles/appStyle.scss';
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Menu/>
+      <section className='section'>
+        <Menu/>
+        <Main/>
+      </section>
     </div>
   );
 }
