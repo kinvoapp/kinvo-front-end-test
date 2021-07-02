@@ -43,7 +43,7 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 - **! Importante !** O cumprimento dos requisitos solicitados para uma vaga em determinado nível não é garantia de aprovação. Focamos em avaliar a forma como os requisitos foram cumpridos.
 - Apesar da listagem de requisitos mínimos acima, caso não tenha tido tempo suficiente ou tenha se esbarrado em alguma dificuldade, entregue o desafio ainda que incompleto e conte-nos na descrição do pull request quais foram as suas maiores dificuldades.
   Não se preocupe, avaliaremos ainda assim! :)
-- O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/adc938b2-4a7a-4837-a849-37d803b83d26-f89a/);
+- O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/efae346e-370a-4a7a-9037-43510c4c8028-bafd/);
 - Caso não tenha familiaridade com o Adobe XD, os ativos do protótipo podem ser exportados utilizando o atalho **CTRL + E** ou **CMD + E**. Caso o seu sistema operacional não seja compatível com o software, você pode acessar o protótipo também através do link citado no item anterior;
 - As bibliotecas e demais recursos sugeridos por nós em todos os níveis de exigência são meras sugestões (com exceção do React). Sinta-se a vontade para fazer a escolha que te deixa mais confortável e inclusive para sugerir ;);
 - Lembre-se de fazer um _fork_ deste repositório! Apenas cloná-lo vai te impedir de criar o _pull request_ e dificultar a entrega;
