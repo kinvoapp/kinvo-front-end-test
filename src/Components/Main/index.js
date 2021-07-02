@@ -1,21 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import Statistics from '../Statistics';
 import Portfolio from '../Portfolio';
+import api from '../../Services/api';
+import {parseMoney, parsePercent } from '../../utils/format';
 export default function Main () {
+    const [snapshotByPortfolio, setSnapshotByPortfolio] = useState(null);
+    const [snapshotByProduct, setSnapshotByProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const getApi = async () => {
+            const { data: { data: data }} = await api.get('getFixedIncomeClassData');
+            setSnapshotByPortfolio(data.snapshotByPortfolio);
+            setSnapshotByProduct(data.snapshotByProduct);
+
+            setLoading(false)
+            console.log(data)
+        }   
+        getApi();
+
+    }, [])
+
+    if (loading) {
+        return <div> </div>
+    }
+
     return (
         <main className={styles.container}>
             <h1 className={styles.title}>Renda Fixa</h1>
             <div className={styles.list}>
-                <Statistics title='SALDO BRUTO'>R$ 207.653,10</Statistics>
-                <Statistics title='VALOR APLICADO'>R$ 170.025,64</Statistics>
-                <Statistics title='RESULTADO'>R$ 37.638,46</Statistics>
-                <Statistics title='RENTABILIDADE'>25,08%</Statistics>
-                <Statistics title='CDI'>23,68%</Statistics>
-                <Statistics title='% SOBRE CDI'>320%</Statistics>
+                <Statistics title='SALDO BRUTO'>{parseMoney(snapshotByPortfolio.equity)}</Statistics>
+                <Statistics title='VALOR APLICADO'>{parseMoney(snapshotByPortfolio.valueApplied)}</Statistics>
+                <Statistics title='RESULTADO'>{parseMoney(snapshotByPortfolio.equityProfit)}</Statistics>
+                <Statistics title='RENTABILIDADE'>{parsePercent(snapshotByPortfolio.percentageProfit, 2)}</Statistics>
+                <Statistics title='CDI'>{parsePercent(snapshotByPortfolio.indexerValue, 2)}</Statistics>
+                <Statistics title='% SOBRE CDI'>{parsePercent(snapshotByPortfolio.percentageOverIndexer)}</Statistics>
             </div>
             <div className={styles.chart}>
-                <Portfolio/>
+                <Portfolio apiData={snapshotByProduct}/>
             </div>
 
         </main>
