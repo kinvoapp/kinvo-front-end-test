@@ -5,7 +5,7 @@ import Portfolio from '../Portfolio';
 export default function Main () {
     return (
         <main className={styles.container}>
-            <h1>Renda Fixa</h1>
+            <h1 className={styles.title}>Renda Fixa</h1>
             <div className={styles.list}>
                 <Statistics title='SALDO BRUTO'>R$ 207.653,10</Statistics>
                 <Statistics title='VALOR APLICADO'>R$ 170.025,64</Statistics>
