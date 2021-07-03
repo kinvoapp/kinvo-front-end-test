@@ -1,11 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { DataContextProvider } from './contexts/DataContext';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
+import { Menu } from './components/Menu';
+import { Content } from './components/Content';
+import { ContentSection } from './components/ContentSection';
+import { SelectInput } from './components/SelectInput';
+import { SearchInput } from './components/SearchInput';
+import { GlobalStyle } from './globalStyle';
+import { MyFixedIncome } from './components/MyFixedIncome';
 
 const App = () => {
-  const kinvoTest = 'Kinvo Front-end Test';
+  const [type, setType] = useState('OrdenarPor');
+  const [search, setSearch] = useState('');
+  const selectOptions = [
+    {
+      name: 'Data de expiração',
+      value: 'due-date',
+    },
+  ];
+
   return (
-    <React.Fragment>
-      <h1>{kinvoTest}</h1>
-    </React.Fragment>
+    <DataContextProvider>
+      <GlobalStyle />
+      <Header />
+      <Main>
+        <Menu />
+        <Content title="Renda Fixa">
+          <ContentSection
+            title="Minhas Rendas Fixas"
+            filter={
+              <div style={{ display: 'flex' }}>
+                <SelectInput
+                  options={selectOptions}
+                  onChange={({ target: { value } }) => setType(value)}
+                  defaultValue={type}
+                />
+                <SearchInput
+                  value={search}
+                  onChange={({ target: { value } }) => setSearch(value)}
+                />
+              </div>
+            }
+          >
+            <MyFixedIncome />
+          </ContentSection>
+        </Content>
+      </Main>
+    </DataContextProvider>
   );
 };
 
