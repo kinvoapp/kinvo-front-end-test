@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import fetchPortfolioInfo from '../services/apiServices';
+import fetchInfo from '../services/apiServices';
 import AppContext from './AppContext';
 
 function Provider({ children }) {
@@ -7,16 +7,17 @@ function Provider({ children }) {
     const [portfolioData, setPortfolioData] = useState({});
     const [isFetching, setIsFetching] = useState(true);
 
-    async function fetchInfo() {
-        setIsFetching(true);
-        const requestResult = await fetchPortfolioInfo();
+    async function fetchPortfolioInfo() {
+        const baseApi = 'https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/';
+        const endpoint = 'getFixedIncomeClassData';
+        const requestResult = await fetchInfo(baseApi, endpoint);
         setPortfolioData(requestResult);
         setIsFetching(false);
         console.log(requestResult);
     }
 
     useEffect(() => {
-        fetchInfo();
+        fetchPortfolioInfo();
     }, []);
 
     const contextValue = {
