@@ -17,20 +17,15 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "prettier"
-  ],
+  "plugins": ["react", "prettier"],
   "rules": {
     "react/jsx-fragments": "off",
     "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ]
   }
