@@ -5,8 +5,8 @@ import './Header.css';
 
 function Header() {
     const { portfolioData, isFetching } = useContext(AppContext);
-    const { data: { snapshotByPortfolio: { equity } } } = portfolioData;
-    console.log(equity);
+    /* const { data: { snapshotByPortfolio: { equity } } } = portfolioData;
+    console.log(equity); */
     return (
         <header>
             <h1>kinvopremium</h1>
