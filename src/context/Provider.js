@@ -3,7 +3,6 @@ import fetchInfo from '../services/apiServices';
 import AppContext from './AppContext';
 
 function Provider({ children }) {
-    const [stateA, setStateA] = useState('initialStateA');
     const [portfolioData, setPortfolioData] = useState({});
     const [isFetching, setIsFetching] = useState(true);
 
@@ -21,7 +20,6 @@ function Provider({ children }) {
     }, []);
 
     const contextValue = {
-        stateA,
         portfolioData,
         isFetching,
     };
