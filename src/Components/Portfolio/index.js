@@ -16,35 +16,35 @@ export default function Portfolio ({apiData}) {
     const handleOption = (e) => {
         let optionSelected = e.target.value;
         setOption(optionSelected);
-        if (optionSelected == 'due') { 
+        if (optionSelected === 'due') { 
             setDatas(apiData.sort(function(a,b) {
                 if(a.due.daysUntilExpiration < b.due.daysUntilExpiration) return -1
                 if(a.due.daysUntilExpiration > b.due.daysUntilExpiration) return 1
-                if(a.due.daysUntilExpiration == b.due.daysUntilExpiration) return 0
+                if(a.due.daysUntilExpiration === b.due.daysUntilExpiration) return 0
             }))
-        } else if (optionSelected == 'equity') {
+        } else if (optionSelected === 'equity') {
             setDatas(apiData.sort(function(a,b) {
                 if(a.position.equity < b.position.equity) return 1
                 if(a.position.equity > b.position.equity) return -1
-                if(a.position.equity == b.position.equity) return 0
+                if(a.position.equity === b.position.equity) return 0
             }))
-        } else if (optionSelected == 'valueapplied') {
+        } else if (optionSelected === 'valueapplied') {
             setDatas(apiData.sort(function(a,b) {
                 if(a.position.valueApplied < b.position.valueApplied) return 1
                 if(a.position.valueApplied > b.position.valueApplied) return -1
-                if(a.position.valueApplied == b.position.valueApplied) return 0
+                if(a.position.valueApplied === b.position.valueApplied) return 0
             }))
-        } else if (optionSelected == 'portfolioPercentage') {
+        } else if (optionSelected === 'portfolioPercentage') {
             setDatas(apiData.sort(function(a,b) {
                 if(a.position.portfolioPercentage < b.position.portfolioPercentage) return 1
                 if(a.position.portfolioPercentage > b.position.portfolioPercentage) return -1
-                if(a.position.portfolioPercentage == b.position.portfolioPercentage) return 0
+                if(a.position.portfolioPercentage === b.position.portfolioPercentage) return 0
             }))
-        } else if (optionSelected == 'directTreasure') {
+        } else if (optionSelected === 'directTreasure') {
             setDatas(apiData.filter(item => {
                 return item.fixedIncome.bondType.toLowerCase().includes('tesouro direto')
             }))
-        } else if (optionSelected == 'fixedIncome') {
+        } else if (optionSelected === 'fixedIncome') {
             setDatas(apiData.filter(item => {
                 return item.fixedIncome.bondType.toLowerCase().includes('renda fixa')
             }))

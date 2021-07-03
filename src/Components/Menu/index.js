@@ -12,21 +12,8 @@ import { ReactComponent as Shield} from '../../assets/shield.svg';
 import { ReactComponent as Projection} from '../../assets/projection.svg';
 //import { ReactComponent as Ative} from '../../assets/feather.svg';
 export default function Menu () {
-    const [open, setOpen] = useState('');
-
-    useEffect(()=> {
-        document.addEventListener('click', (e) => {
-            let el = e.target;
-            let optionWithDrop = document.querySelector('#dropDown');
-            if(el === optionWithDrop) {
-                console.log(open)
-                return open == false ? setOpen(true) : setOpen(false);
-            }
-        })
-    },[open])
-
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='menu'>
             <Option title={'Resumo Da Carteira'} icon={<Resumo stroke='var(--white)'/>}></Option>
             <Option title={'Meus Produtos'} icon={<Products stroke='var(--white)'/>}></Option>
             <Option title={'Meus Proventos'} icon={<Sign stroke='var(--white)'/>}></Option>

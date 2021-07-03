@@ -11,6 +11,8 @@ import { parsePercent, parseMoney } from '../../utils/format';
 export default function Header () {
     const [snapshotByPortfolio, setSnapshotByPortfolio] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [open, setOpen] = useState(true)
+
     useEffect(() => {
         const getApi = async () => {
             const { data: { data: data }} = await api.get('getFixedIncomeClassData');
@@ -20,6 +22,17 @@ export default function Header () {
         getApi();
         
     }, [])
+
+    const handleClick = () => {
+        const menu = document.querySelector('#menu'); 
+        menu.animate([{
+            width: open ? '0px' : '250px',
+        }],{
+            duration: 300,
+            fill: 'forwards',
+        })
+        setOpen(!open);
+    }
     
     if (loading) {
         return <div> </div>
@@ -63,7 +76,7 @@ export default function Header () {
                     </div>
                 </div>
                 <div className={styles.groupDown}>
-                    <a href="#"><Align stroke='var(--white)'/></a>
+                    <a onClick={handleClick}><Align stroke='var(--white)'/></a>
                 </div>
             </div>
         </header>

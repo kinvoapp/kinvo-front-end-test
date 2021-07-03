@@ -7,6 +7,22 @@
     margin: 0 10px 0 10px;
 }
 
+.assetType:nth-child(2) {
+    margin-left: 20%;
+}
+.assetType:nth-child(3) {
+    margin-left: auto;
+}
+
+@media (max-width: 1640px) {
+    .assetType:nth-child(2) {
+        margin-left: 5%;
+    }
+    .assetType:nth-child(3) {
+        margin-left: auto;
+    }
+}
+
 .titleName {
     position: relative;
     display: flex;
