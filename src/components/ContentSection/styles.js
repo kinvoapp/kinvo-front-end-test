@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
   margin-top: 15px;
   background-color: #ffffff;
-  padding: 16px 20px;
   border-radius: 10px;
 `;
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #eef2f4;
+  padding: 16px 20px;
 `;
 
 export const Title = styled.h1`
