@@ -12,9 +12,16 @@
 
   <!-- Fonts -->
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- SCRIPT -->
+
+
 
   <title>Document</title>
 </head>
@@ -26,7 +33,6 @@
     </div>
 
     <div class="infos-header">
-
       <div class="info-header">
         <div class="info-logo">
           <img src="/kinvo-front-end-test/img/total-cash.svg" alt="">
@@ -72,9 +78,92 @@
           <img src="/kinvo-front-end-test/img/menu.svg" alt="">
         </div>
       </div>
-
     </div>
   </header>
+
+  <main>
+    <section class="sidebar">
+      <ul>
+        <li>
+          <img src="/kinvo-front-end-test/img/resumo.svg" alt="">
+          <div class="sidebar-text">
+            <p>Resumo <br>Da Carteira</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/produtos.svg" alt="">
+          <div class="sidebar-text">
+            <p>Meus <br>Produtos</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/proventos.svg" alt="">
+          <div class="sidebar-text">
+            <p>Meus <br>Proventos</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <div class="nodrop-content" onclick="openDropdown()">
+            <img src="/kinvo-front-end-test/img/classe-ativos.svg" alt="">
+            <div class="sidebar-text">
+              <p>Classe <br>De Ativos</p>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="#">Ação</a></li>
+              <li><a href="#">Fundo</a></li>
+              <li><a href="#">Fundo Imobiliário</a></li>
+              <li><a href="#">Fundo Renda Fixa</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/rentabilidade.svg" alt="">
+          <div class="sidebar-text">
+            <p>Rentabilidade <br>Real</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/projecao.svg" alt="">
+          <div class="sidebar-text">
+            <p>Projeção <br>Da Carteira</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/risco.svg" alt="">
+          <div class="sidebar-text">
+            <p>Risco <br>x Retorno</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+        <li>
+          <img src="/kinvo-front-end-test/img/resumo.svg" alt="">
+          <div class="sidebar-text">
+            <p>Cobertura <br>Do FGC</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

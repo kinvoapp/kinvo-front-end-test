@@ -17,6 +17,8 @@ html {
   --purple-light: #8a51ba;
   --white: #ffffff;
 
+  --text-medium: #707b81;
+
   font-family: "Montserrat", sans-serif;
   background: var(--gray);
 }
@@ -30,6 +32,10 @@ header {
   padding: 3rem 2.8rem;
   background: var(--white);
   box-shadow: 0px 3px 20px #707b811a;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  margin-bottom: 200px;
 }
 
 header .infos-header {
@@ -42,11 +48,127 @@ header .infos-header .info-header {
   align-items: center;
 }
 
+header .infos-header .info-header p {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-medium);
+  text-transform: uppercase;
+}
+
+header .infos-header .info-header h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-medium);
+  text-transform: uppercase;
+}
+
 header .infos-header .info-header .info-logo {
-  margin: 0 2rem 0 5rem;
+  margin: 0 1.5rem 0 3rem;
 }
 
 header .infos-header .info-header .info-logo img {
-  width: 5rem;
+  width: 3rem;
   text-align: center;
+}
+
+/* MAIN */
+
+main {
+  display: flex;
+  position: relative;
+  top: 93px;
+}
+
+/* SIDEBAR */
+
+main .sidebar {
+  width: max(22.6rem, 15%);
+  height: 100vh;
+  background: var(--white);
+}
+
+main .sidebar ul li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+}
+
+main .sidebar ul li:hover {
+  background: var(--gray);
+}
+
+main .sidebar ul li img {
+  padding: 1.6rem 1.4rem;
+}
+
+main .sidebar ul li .sidebar-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+main .sidebar ul li .sidebar-text p {
+  font-size: 1.3rem;
+  color: var(--text-medium);
+}
+
+main .sidebar ul li .sidebar-text i {
+  color: var(--text-medium);
+  padding-right: 2rem;
+}
+
+main .sidebar ul li.dropdown {
+  display: inline;
+}
+
+main .sidebar ul li.dropdown > div {
+  display: flex;
+  border-bottom: 1px solid var(--gray);
+}
+
+main .sidebar ul li.dropdown .nodrop-content:hover {
+  background: var(--gray);
+}
+
+main .sidebar ul li.dropdown .dropdown-content {
+  display: none;
+  animation: slidein 0.3s ease-in-out;
+}
+
+main .sidebar ul li.dropdown .dropdown-content li {
+  padding: 1.6rem 0;
+}
+
+main .sidebar ul li.dropdown .dropdown-content li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--text-medium);
+}
+
+main .sidebar ul li.dropdown .dropdown-content li::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 1rem 0 2rem;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.active {
+  display: block !important;
+}
+
+.selected {
+  background: var(--gray);
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
