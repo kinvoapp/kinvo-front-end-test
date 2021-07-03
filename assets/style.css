@@ -5,14 +5,14 @@
 
 body{
     background-color: #EEF2F4;
-    font-family: 'Poppins', sans-serif;
-    
+    font-family: 'Montserrat';    
 }
 
 .topside{
     background: #fff;
-    border: 1px solid red;
-    height: 110px;
+    top: 0;
+    left: 0;
+    height: 90px;
     width: 100%;
 }
 
@@ -54,24 +54,145 @@ span{
 }
 
 .principal{
-    border: 1px solid black;
     width: 90%;
-    margin-left: 248px;
+    margin-left: 14%;
     float: left;
     position: absolute;
+    margin-top: 20px;
 }
 
 .lateral{
-    border: 1px solid red;
-    width: 12%;
+    background: transparent;
+    width: 13%;
     float: left;
     background-color: #fff;
     height: 1817px;
 }
 
-.logo-text{
-   
+.txt{
+    font-weight: bold;
+    color: #4C309B;
+    font-size: 22px;
+    
 }
+
+.txt2{
+    margin-left: 19px;
+    padding-top: 21px;
+    font: normal normal medium Montserrat;
+    font-size: 18px;
+    color: #627179;
+    width: 50%;
+    float: left;
+}
+
+.blocos{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 20px #0000000D;
+    border-radius: 10px;
+    opacity: 1;
+    width: 172px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 2%;
+    padding: 5px;
+
+}
+
+.txt-bloco{
+    font-size: 11px;
+    letter-spacing: 0.45px;
+    color: #4E5B61;
+    text-transform: uppercase;
+}
+
+.txt-money{
+    font-size: 18px;
+    color: #4C309B;
+    font-weight: bolder;
+}
+
+.grafico{
+    background-color: white;
+    border-radius: 10px;
+    width: 1090px;
+    height: 348px;
+    margin-top: 2%;
+}
+
+.grafico2{
+    background-color: white;
+    border-radius: 10px;
+    width: 1090px;
+    height: 721px;
+    margin-top: 2%;
+}
+
+#bottom-num{
+    top: 174px;
+}
+
+.select-box{
+    float: right;
+}
+
+span{
+    margin-left: 20px;
+}
+
+.select-box{
+    
+}
+
+#select{
+    width: 155px;
+    height: 32px;
+    margin-right: 32px;
+    margin-top: 21px;
+    border: 1px solid #D6D9DD;
+    border-radius: 10px;
+    opacity: 1;   
+}
+
+select{
+    font: normal Montserrat;
+    color: #707B81;
+}
+
+input{
+    width: 240px;
+    height: 32px;
+    border: 1px solid #D6D9DD;
+    border-radius: 10px;
+    margin-right: 32px;
+    margin-top: 21px;
+    opacity: 1;
+}
+
+
+.grafico3{
+    width: 530px;
+    height: 448px;
+    margin-top: 11px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 20px #0000000D;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.grafico4{
+    position: absolute;
+    float: right;
+    width: 530px;
+    height: 448px;
+    margin-top: 11px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 20px #0000000D;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+
 
 
 
