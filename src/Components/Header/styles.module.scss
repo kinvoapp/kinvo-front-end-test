@@ -1,8 +1,8 @@
 .container {
-    position: relative;
+    position: fixed;
     display: flex;
     height: 90px;
-    width: 100vw;
+    width: 100%;
     padding: 30px;
     justify-content: space-between;
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);

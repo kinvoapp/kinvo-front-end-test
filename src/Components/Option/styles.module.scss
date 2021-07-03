@@ -30,6 +30,7 @@
     width: 76px;
     margin-right: 70px;
     text-align: left;
+    user-select: none;
     
     h1 {
         font-size: 13px;
@@ -78,6 +79,7 @@
         width: 76px;
         margin-right: 70px;
         text-align: left;
+        user-select: none;
         
         h1 {
             font-size: 13px;
@@ -92,4 +94,9 @@
     .container:hover {
         background: var(--background2);
     }
+}
+
+.options {
+    height: 0;
+    overflow: hidden;
 }

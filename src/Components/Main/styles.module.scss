@@ -1,6 +1,8 @@
 .container {
     background: var(--background2);
-    margin: 27px 27px 32px 24px;
+    width: 100%;
+    flex: 1;
+    padding: 27px 24px 32px 24px;
 
     .title {
         font-size: 20px;

@@ -30,7 +30,7 @@ export default function Portfolio ({apiData}) {
                     </form>
                 </header> 
                 <div>
-                    {datas.map((item, index) => (<IncomeClass key={index} item={item} id={index}/>))}
+                    {datas.map((item, index) => (<IncomeClass key={index} item={item}/>))}
                 </div>
         </div>
     )

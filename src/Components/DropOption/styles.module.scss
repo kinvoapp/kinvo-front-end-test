@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    height: 47px;
+    width: 250px;
+    padding: 22px;
+    background: var(--white);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-white);
+    cursor: pointer;
+    transition: 2s all;
+
+}
+.div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    text-align: left;
+    
+    span {
+        margin-right: 10px;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: var(--purple);
+    }
+
+    h1 {
+        font-size: 13px;
+        font-weight: var(--medium);
+        color: var(--grey)
+    }
+
+}
+
+.container:hover {
+    background: var(--hover);
+}

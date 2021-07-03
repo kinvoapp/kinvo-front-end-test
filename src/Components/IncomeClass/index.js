@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './styles.module.scss';
 import  infoSvg  from '../../assets/info.svg';
 import { parsePercent, parseMoney } from '../../utils/format';
-export default function IncomeClass ({item, id}) {
+export default function IncomeClass ({item}) {
     const { fixedIncome, due, position } = item;
-    
+
     return (
-        <div className={styles.assets} id={id}>
+        <div className={styles.assets}>
             <div className={styles.assetType}>
                 <div className={styles.titleName}>
                     <h1 className={styles.subtitle}>TÍTULO</h1>
@@ -73,7 +73,6 @@ export default function IncomeClass ({item, id}) {
                                 <p>{due.daysUntilExpiration}</p>
                             </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>
