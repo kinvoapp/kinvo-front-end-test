@@ -1,11 +1,12 @@
-import React from 'react';
-import AppContext from '../context/AppContext';
+import React, { useContext } from 'react';
+import FixedIncomeSnapshot from './FixedIncomeSnapshot';
 import './FixedIncomeReport.css';
 
 function FixedIncomeReport() {
     return (
         <section>
             <h2>Renda Fixa</h2>
+            <FixedIncomeSnapshot />
         </section>
     );
 }

@@ -1,0 +1,18 @@
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 15%;
+}
+
+.card-label {
+    color: #868181;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.card-info {
+    color: #375db1;
+    font-weight: 600;
+    font-size: 0.9rem;
+}

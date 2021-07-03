@@ -4,6 +4,12 @@ import AppContext from './AppContext';
 
 function Provider({ children }) {
     const [portfolioData, setPortfolioData] = useState({});
+    const [snapshotByPortfolio, setSnapshotByPortfolio] = useState({});
+    const [
+        dailyEquityByPortfolioChartData,
+        setDailyEquityByPortfolioChartData
+    ] = useState([]);
+    const [snapshotByProduct, setSnapshotByProduct] = useState([]);
     const [isFetching, setIsFetching] = useState(true);
 
     async function fetchPortfolioInfo() {
@@ -11,6 +17,11 @@ function Provider({ children }) {
         const endpoint = 'getFixedIncomeClassData';
         const requestResult = await fetchInfo(baseApi, endpoint);
         setPortfolioData(requestResult);
+        setSnapshotByPortfolio(requestResult.data.snapshotByPortfolio);
+        setDailyEquityByPortfolioChartData(
+            requestResult.data.dailyEquityByPortfolioChartData
+        );
+        setSnapshotByProduct(requestResult.data.snapshotByProduct);
         setIsFetching(false);
         console.log(requestResult);
     }
@@ -21,12 +32,15 @@ function Provider({ children }) {
 
     const contextValue = {
         portfolioData,
+        snapshotByPortfolio,
+        dailyEquityByPortfolioChartData,
+        snapshotByProduct,
         isFetching,
     };
 
     return (
         <AppContext.Provider value={contextValue}>
-            { children}
+            { children }
         </AppContext.Provider>
     );
 }
