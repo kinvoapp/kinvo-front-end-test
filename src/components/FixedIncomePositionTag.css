@@ -1,0 +1,14 @@
+.positiontag-container {
+    border: 1px solid #ccc;
+    margin-right: 25px;
+    padding: 10px;
+    width: 50%;
+}
+
+.position-container {
+    display: flex;
+}
+
+.position-info{
+    text-align: center;
+}

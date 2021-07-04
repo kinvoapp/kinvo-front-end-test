@@ -1,0 +1,24 @@
+.nametag-container {
+    border: 1px solid #ccc;
+    margin-right: 25px;
+    padding: 10px;
+    width: 30%;
+}
+
+.title-label, .class-label {
+    font-weight: 500;
+}
+
+.class-name {
+    color: #375db1;
+    font-weight: 700;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.income-name {
+    width: 50%;
+}

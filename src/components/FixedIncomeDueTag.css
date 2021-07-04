@@ -1,0 +1,10 @@
+.duetag-container {
+    border: 1px solid #ccc;
+    margin-right: 25px;
+    padding: 10px;
+    width: 20%;
+}
+
+.due-container {
+    display: flex;
+}

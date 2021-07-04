@@ -3,7 +3,6 @@ import fetchInfo from '../services/apiServices';
 import AppContext from './AppContext';
 
 function Provider({ children }) {
-    const [portfolioData, setPortfolioData] = useState({});
     const [snapshotByPortfolio, setSnapshotByPortfolio] = useState({});
     const [
         dailyEquityByPortfolioChartData,
@@ -16,7 +15,6 @@ function Provider({ children }) {
         const baseApi = 'https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/';
         const endpoint = 'getFixedIncomeClassData';
         const requestResult = await fetchInfo(baseApi, endpoint);
-        setPortfolioData(requestResult);
         setSnapshotByPortfolio(requestResult.data.snapshotByPortfolio);
         setDailyEquityByPortfolioChartData(
             requestResult.data.dailyEquityByPortfolioChartData
@@ -31,7 +29,6 @@ function Provider({ children }) {
     }, []);
 
     const contextValue = {
-        portfolioData,
         snapshotByPortfolio,
         dailyEquityByPortfolioChartData,
         snapshotByProduct,
