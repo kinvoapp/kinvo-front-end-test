@@ -429,4 +429,14 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  text-align: center;
+}
+
+#wallet .card .card-info ul li::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 1rem 0 2rem;
+  border-radius: 50%;
+  background: var(--purple);
 }
