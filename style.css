@@ -12,6 +12,7 @@ html {
   --blue: #008dcb;
   --gray: #eef2f4;
   --gray-dark: #4e5b61;
+  --gray-medium: #dae0e3;
   --green: #38bfa0;
   --purple: #4c309b;
   --purple-light: #8a51ba;
@@ -302,6 +303,10 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   gap: 1rem;
 }
 
+#fixed-income-details .fid-content .fid-card:nth-child(even) {
+  background: #f8fafb;
+}
+
 #fixed-income-details .fid-content .fid-card .fid-card1 {
   width: 38%;
 }
@@ -317,7 +322,7 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
 #fixed-income-details .fid-content .fid-card .fid-card1,
 #fixed-income-details .fid-content .fid-card .fid-card2,
 #fixed-income-details .fid-content .fid-card .fid-card3 {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-medium);
   padding: 0.9rem;
   border-radius: 10px;
   height: 7.7rem;

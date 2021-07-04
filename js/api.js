@@ -47,6 +47,98 @@ async function getDataApi (){
   percentageProfitField.innerHTML = formPercent.format(percentageProfit)
   indexerValueField.innerHTML = formPercent.format(indexerValue)
   percentageOverIndexerField.innerHTML = formPercentInt.format(percentageOverIndexer)
+
+  /* GET THE SNAPSOTDATAS */
+  const snapshotData = data.data.snapshotByProduct
+  let output = ""
+  
+  snapshotData.map((element) => {
+
+    const dateParse = JSON.stringify(element.due.date)
+    const daysUntlParse = JSON.stringify(element.due.daysUntilExpiration)
+    const bondTypeParse = JSON.stringify(element.fixedIncome.bondType)
+    const fidNameParse = JSON.stringify(element.fixedIncome.name)
+    const equityParse = JSON.stringify(element.position.equity)
+    const indexerParse = JSON.stringify(element.position.indexerLabel)
+    const indexerValueParse = JSON.stringify(element.position.indexerValue)
+    const percent0verParse = JSON.stringify(element.position.percentageOverIndexer)
+    const portfolioPercentParse = JSON.stringify(element.position.portfolioPercentage) / 100
+    const profParse = JSON.stringify(element.position.profitability) / 100
+    const valueAplParse = JSON.stringify(element.position.valueApplied)
+    const productIdParse = JSON.stringify(element.fixedIncome.portfolioProductId)
+    // const prodHaQstParse = JSON.stringify(element.position.productHasQuotation)
+    // const hasBalanceParse = JSON.stringify(element.hasBalance)
+    
+    console.log(element);
+
+    output += `
+  <div class="fid-card" id="${productIdParse}">
+    <div class="fid-card1">
+      <div class="fid-title">
+        <h5>título</h5>
+        <img src="img/info-title.svg" alt="">
+      </div>
+      <div class="fid-info">
+        <p>${fidNameParse.replace(/"/g, '')}</p>
+        <div>
+          <p>classe</p>
+          <h5>${bondTypeParse.replace(/"/g, '')}</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="fid-card2">
+      <div class="fid-title">
+        <h5>resultado</h5>
+      </div>
+      <div class="fid-info">
+        <div>
+          <p>Valor inves.</p>
+          <h4>${formCurrency.format(valueAplParse).replace('R$', "")}</h4>
+        </div>
+        <div>
+          <p>saldo bruto</p>
+          <h4>${formCurrency.format(equityParse).replace('R$', "")}</h4>
+        </div>
+        <div>
+          <p>rent</p>
+          <h4>${formPercent.format(profParse)}</h4>
+        </div>
+        <div>
+          <p>% da cart.</p>
+          <h4>${formPercent.format(portfolioPercentParse)}</h4>
+        </div>
+        <div>
+          <p>${indexerParse.replace(/"/g, '')}</p>
+          <h4>${indexerValueParse}</h4>
+        </div>
+        <div>
+          <p>sobre cdi</p>
+          <h4>${percent0verParse}</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="fid-card3">
+      <div class="fid-title">
+        <h5>vencimento</h5>
+        <img src="img/info-title.svg" alt="">
+      </div>
+      <div class="fid-info">
+        <div>
+          <p>data venc</p>
+          <h4>${dateParse.replace(/"/g, '')}</h4>
+        </div>
+        <div>
+          <p>dias até venc</p>
+          <h4>${daysUntlParse}</h4>
+        </div>
+      </div>
+    </div>
+  </div>`
+  })
+
+  document.querySelector('.fid-content').innerHTML = output
 }
 
 getDataApi()
