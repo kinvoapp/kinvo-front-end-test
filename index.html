@@ -19,14 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- SCRIPT -->
-
-
-
   <title>Document</title>
 </head>
 
 <body>
+
+  <!--      HEADER      -->
+
   <header>
     <div class="logo">
       <img src="/kinvo-front-end-test/img/logo2.svg" alt="">
@@ -69,7 +68,7 @@
         </div>
         <div>
           <p>categoria</p>
-          <h2>minha carteira</h2>
+          <h2>Minha Carteira</h2>
         </div>
       </div>
 
@@ -82,6 +81,9 @@
   </header>
 
   <main>
+
+    <!--      SIDEBAR      -->
+
     <section class="sidebar">
       <ul>
         <li>
@@ -121,7 +123,7 @@
               <li><a href="#">Ação</a></li>
               <li><a href="#">Fundo</a></li>
               <li><a href="#">Fundo Imobiliário</a></li>
-              <li><a href="#">Fundo Renda Fixa</a></li>
+              <li onclick="showContent()"><a href="#">Fundo Renda Fixa</a></li>
             </ul>
           </div>
         </li>
@@ -157,10 +159,460 @@
             <i class="fas fa-chevron-right"></i>
           </div>
         </li>
-
       </ul>
     </section>
 
+    <!--      PRINCIPAL (RENDA FIXA)      -->
+
+    <section id="fixed-income" class="container">
+      <h2>Renda Fixa</h2>
+
+      <!--      CARDS      -->
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-info">
+            <p>saldo bruto</p>
+            <h3>R$ 207.653,10</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <p>valor aplicado</p>
+            <h3>R$ 207.653,10</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <p>resultado</p>
+            <h3>R$ 37.638,46</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <p>rentabilidade</p>
+            <h3>25,08%</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <p>cdi</p>
+            <h3>23,68%</h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <p>% sobre cdi</p>
+            <h3>320%</h3>
+          </div>
+        </div>
+      </div>
+
+      <!--      GRAPHIC      -->
+
+      <div class="graphic">
+      </div>
+
+      <!--      FIXED INCOME DETAILS (MINHAS RENDAS FIXAS)      -->
+
+      <div id="fixed-income-details">
+        <div class="fid-header">
+          <h2>Minhas Rendas Fixas</h2>
+          <div class="fid-search">
+            <select name="" id="order">
+              <option value="">Ordenar por</option>
+              <option value="">A-Z</option>
+              <option value="">Z-A</option>
+            </select>
+            <div class="input-search">
+              <input type="text">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="fid-content">
+          <div class="fid-card">
+            <div class="fid-card1">
+              <div class="fid-title">
+                <h5>título</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <p>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</p>
+                <div>
+                  <p>classe</p>
+                  <h5>Tesouro Direto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card2">
+              <div class="fid-title">
+                <h5>resultado</h5>
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>Valor inves.</p>
+                  <h4>1.003,00</h4>
+                </div>
+                <div>
+                  <p>saldo bruto</p>
+                  <h4>1.124,00</h4>
+                </div>
+                <div>
+                  <p>rent</p>
+                  <h4>48,55%</h4>
+                </div>
+                <div>
+                  <p>% da cart.</p>
+                  <h4>5,33%</h4>
+                </div>
+                <div>
+                  <p>cdi</p>
+                  <h4>1,24</h4>
+                </div>
+                <div>
+                  <p>sobre cdi</p>
+                  <h4>118</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card3">
+              <div class="fid-title">
+                <h5>vencimento</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>data venc</p>
+                  <h4>15.05.2024</h4>
+                </div>
+                <div>
+                  <p>dias até venc</p>
+                  <h4>5762</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="fid-content">
+          <div class="fid-card">
+            <div class="fid-card1">
+              <div class="fid-title">
+                <h5>título</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <p>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</p>
+                <div>
+                  <p>classe</p>
+                  <h5>Tesouro Direto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card2">
+              <div class="fid-title">
+                <h5>resultado</h5>
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>Valor inves.</p>
+                  <h4>1.003,00</h4>
+                </div>
+                <div>
+                  <p>saldo bruto</p>
+                  <h4>1.124,00</h4>
+                </div>
+                <div>
+                  <p>rent</p>
+                  <h4>48,55%</h4>
+                </div>
+                <div>
+                  <p>% da cart.</p>
+                  <h4>5,33%</h4>
+                </div>
+                <div>
+                  <p>cdi</p>
+                  <h4>1,24</h4>
+                </div>
+                <div>
+                  <p>sobre cdi</p>
+                  <h4>118</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card3">
+              <div class="fid-title">
+                <h5>vencimento</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>data venc</p>
+                  <h4>15.05.2024</h4>
+                </div>
+                <div>
+                  <p>dias até venc</p>
+                  <h4>5762</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fid-content">
+          <div class="fid-card">
+            <div class="fid-card1">
+              <div class="fid-title">
+                <h5>título</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <p>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</p>
+                <div>
+                  <p>classe</p>
+                  <h5>Tesouro Direto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card2">
+              <div class="fid-title">
+                <h5>resultado</h5>
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>Valor inves.</p>
+                  <h4>1.003,00</h4>
+                </div>
+                <div>
+                  <p>saldo bruto</p>
+                  <h4>1.124,00</h4>
+                </div>
+                <div>
+                  <p>rent</p>
+                  <h4>48,55%</h4>
+                </div>
+                <div>
+                  <p>% da cart.</p>
+                  <h4>5,33%</h4>
+                </div>
+                <div>
+                  <p>cdi</p>
+                  <h4>1,24</h4>
+                </div>
+                <div>
+                  <p>sobre cdi</p>
+                  <h4>118</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card3">
+              <div class="fid-title">
+                <h5>vencimento</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>data venc</p>
+                  <h4>15.05.2024</h4>
+                </div>
+                <div>
+                  <p>dias até venc</p>
+                  <h4>5762</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fid-content">
+          <div class="fid-card">
+            <div class="fid-card1">
+              <div class="fid-title">
+                <h5>título</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <p>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</p>
+                <div>
+                  <p>classe</p>
+                  <h5>Tesouro Direto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card2">
+              <div class="fid-title">
+                <h5>resultado</h5>
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>Valor inves.</p>
+                  <h4>1.003,00</h4>
+                </div>
+                <div>
+                  <p>saldo bruto</p>
+                  <h4>1.124,00</h4>
+                </div>
+                <div>
+                  <p>rent</p>
+                  <h4>48,55%</h4>
+                </div>
+                <div>
+                  <p>% da cart.</p>
+                  <h4>5,33%</h4>
+                </div>
+                <div>
+                  <p>cdi</p>
+                  <h4>1,24</h4>
+                </div>
+                <div>
+                  <p>sobre cdi</p>
+                  <h4>118</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card3">
+              <div class="fid-title">
+                <h5>vencimento</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>data venc</p>
+                  <h4>15.05.2024</h4>
+                </div>
+                <div>
+                  <p>dias até venc</p>
+                  <h4>5762</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fid-content">
+          <div class="fid-card">
+            <div class="fid-card1">
+              <div class="fid-title">
+                <h5>título</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <p>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</p>
+                <div>
+                  <p>classe</p>
+                  <h5>Tesouro Direto</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card2">
+              <div class="fid-title">
+                <h5>resultado</h5>
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>Valor inves.</p>
+                  <h4>1.003,00</h4>
+                </div>
+                <div>
+                  <p>saldo bruto</p>
+                  <h4>1.124,00</h4>
+                </div>
+                <div>
+                  <p>rent</p>
+                  <h4>48,55%</h4>
+                </div>
+                <div>
+                  <p>% da cart.</p>
+                  <h4>5,33%</h4>
+                </div>
+                <div>
+                  <p>cdi</p>
+                  <h4>1,24</h4>
+                </div>
+                <div>
+                  <p>sobre cdi</p>
+                  <h4>118</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fid-card3">
+              <div class="fid-title">
+                <h5>vencimento</h5>
+                <img src="img/info-title.svg" alt="">
+              </div>
+              <div class="fid-info">
+                <div>
+                  <p>data venc</p>
+                  <h4>15.05.2024</h4>
+                </div>
+                <div>
+                  <p>dias até venc</p>
+                  <h4>5762</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--      WALLET (divisão de carteira)      -->
+
+      <div id="wallet">
+        <div class="card">
+          <h1>Divisão de Carteira por Tipos</h1>
+          <div class="radius-graph">
+            <img src="img/logo2.svg" alt="">
+          </div>
+          <div class="card-info">
+            <ul>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h1>Divisão de Carteira por Tipos</h1>
+          <div class="radius-graph">
+            <img src="img/logo2.svg" alt="">
+          </div>
+          <div class="card-info">
+            <ul>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+              <li>Título</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <script type="text/javascript" src="js/script.js"></script>

@@ -59,7 +59,6 @@ header .infos-header .info-header h2 {
   font-size: 1.6rem;
   font-weight: bold;
   color: var(--text-medium);
-  text-transform: uppercase;
 }
 
 header .infos-header .info-header .info-logo {
@@ -83,7 +82,7 @@ main {
 
 main .sidebar {
   width: max(22.6rem, 15%);
-  height: 100vh;
+  min-height: 100vh;
   background: var(--white);
 }
 
@@ -156,6 +155,13 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   background: var(--purple);
 }
 
+/* FIXED INCOME */
+
+#fixed-income.container {
+  padding: 2.7rem 2rem;
+  width: 100%;
+}
+
 .active {
   display: block !important;
 }
@@ -171,4 +177,256 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   to {
     opacity: 1;
   }
+}
+
+#fixed-income h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--purple);
+  padding-bottom: 2.7rem;
+}
+
+#fixed-income .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.1rem;
+  gap: 1.1rem;
+}
+
+#fixed-income .cards .card {
+  background: var(--white);
+  padding: 1rem 0.8rem;
+  border-radius: 1rem;
+  min-width: 17.24rem;
+  width: 100%;
+}
+
+#fixed-income .cards .card .card-info {
+  border-left: 2px solid #dae0e3;
+  padding: 0.3rem 0.8rem;
+}
+
+#fixed-income .cards .card .card-info p {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  text-transform: uppercase;
+  padding-bottom: 0.2rem;
+}
+
+#fixed-income .cards .card .card-info h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+/* GRAPHIC */
+
+#fixed-income .graphic {
+  width: 100%;
+  height: 34.8rem;
+  background: var(--white);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* FIXED INCOME DETAILS */
+
+#fixed-income-details {
+  width: 100%;
+  background: var(--white);
+  border-radius: 1rem;
+}
+
+#fixed-income-details .fid-header {
+  padding: 1.6rem 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+}
+
+#fixed-income-details .fid-header h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--text-medium);
+  padding: 0;
+}
+
+#fixed-income-details .fid-header .fid-search {
+  display: flex;
+}
+
+#fixed-income-details .fid-header .fid-search select {
+  border: 1px solid #d6d9dd;
+  border-radius: 1rem;
+  height: 3.2rem;
+  width: 15.5rem;
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  padding: 0 1rem;
+  outline: none;
+}
+
+#fixed-income-details .fid-header .fid-search .input-search {
+  position: relative;
+}
+
+#fixed-income-details .fid-header .fid-search .input-search input {
+  margin-left: 1.7rem;
+  height: 3.2rem;
+  width: 24rem;
+  border: 1px solid #d6d9dd;
+  border-radius: 1rem;
+  padding: 0.9rem;
+  padding-left: 2.5rem;
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  outline: none;
+}
+
+#fixed-income-details .fid-header .fid-search i {
+  font-size: 1.5rem;
+  color: #9da5ac;
+  position: absolute;
+  left: 25px;
+  top: 8px;
+}
+
+/* FID CONTENT */
+
+#fixed-income-details .fid-content .fid-card {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 {
+  width: 38%;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card2 {
+  width: 44%;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card3 {
+  width: 18%;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1,
+#fixed-income-details .fid-content .fid-card .fid-card2,
+#fixed-income-details .fid-content .fid-card .fid-card3 {
+  border: 1px solid var(--gray);
+  padding: 0.9rem;
+  border-radius: 10px;
+  height: 7.7rem;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-title h5 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--text-medium);
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 .fid-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 .fid-info div {
+  width: 30%;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 .fid-info > p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--gray-dark);
+  width: 50%;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 .fid-info div p,
+#fixed-income-details .fid-content .fid-card .fid-card2 .fid-info div p,
+#fixed-income-details .fid-content .fid-card .fid-card3 .fid-info div p {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--gray-dark);
+  text-transform: uppercase;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card2 .fid-info,
+#fixed-income-details .fid-content .fid-card .fid-card3 .fid-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card1 .fid-info div h5 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--purple-light);
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card2 .fid-info div h4 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--green);
+}
+
+#fixed-income-details .fid-content .fid-card .fid-card3 .fid-info div h4 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--blue);
+}
+
+/* WALLET */
+
+#wallet {
+  display: flex;
+  align-self: center;
+  margin-top: 0.6rem;
+  gap: 1.25rem;
+}
+
+#wallet .card {
+  background: var(--white);
+  border-radius: 10px;
+  width: 100%;
+}
+
+#wallet .card h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--text-medium);
+  padding: 1.8rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+#wallet .card .radius-graph {
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+#wallet .card img {
+  margin: 2rem 0;
+}
+
+#wallet .card .card-info {
+  padding: 2rem;
+}
+
+#wallet .card .card-info ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
 }
