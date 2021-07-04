@@ -13,30 +13,30 @@ function FixedIncomePositionTag({ position }) {
     } = position;
     return (
         <div className="positiontag-container">
-            <p>MINHA POSIÇÃO</p>
+            <h3 className="title-label">MINHA POSIÇÃO</h3>
             <div className="position-container">
                 <div className="position-info">
-                    <p>VALOR INVES.</p>
+                    <h4>VALOR INVES.</h4>
                     <p>{ valueApplied.toLocaleString('pt-BR') }</p>
                 </div>
                 <div className="position-info">
-                    <p>SALDO BRUTO</p>
+                    <h4>SALDO BRUTO</h4>
                     <p>{ equity.toLocaleString('pt-BR') }</p>
                 </div>
                 <div className="position-info">
-                    <p>RENT.</p>
+                    <h4>RENT.</h4>
                     <p>{ profitability }%</p>
                 </div>
                 <div className="position-info">
-                    <p>% DA CART.</p>
+                    <h4>% DA CART.</h4>
                     <p>{ portfolioPercentage }%</p>
                 </div>
                 <div className="position-info">
-                    <p>{ indexerLabel }</p>
+                    <h4>{ indexerLabel }</h4>
                     <p>{ parseFloat(indexerValue) }</p>
                 </div>
                 <div className="position-info">
-                    <p>SOBRE { indexerLabel }</p>
+                    <h4>SOBRE { indexerLabel }</h4>
                     <p>{ parseInt(percentageOverIndexer) }</p>
                 </div>
 

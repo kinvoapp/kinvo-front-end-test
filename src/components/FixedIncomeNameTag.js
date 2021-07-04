@@ -6,7 +6,7 @@ function FixedIncomeNameTag({ fixedIncome }) {
     const { name, bondType } = fixedIncome;
     return (
         <div className="nametag-container">
-            <p className="title-label">TÍTULO</p>
+            <h3 className="title-label">TÍTULO</h3>
             <div className="info-container">
                 <div className="income-name">
                     { name }

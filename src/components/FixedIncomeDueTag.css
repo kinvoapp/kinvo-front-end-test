@@ -1,5 +1,6 @@
 .duetag-container {
     border: 1px solid #ccc;
+    border-radius: 5px;
     margin-right: 25px;
     padding: 10px;
     width: 20%;
@@ -7,4 +8,9 @@
 
 .due-container {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.due-info {
+    text-align: center;
 }

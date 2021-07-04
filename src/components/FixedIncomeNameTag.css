@@ -1,12 +1,14 @@
 .nametag-container {
     border: 1px solid #ccc;
+    border-radius: 5px;
     margin-right: 25px;
     padding: 10px;
     width: 30%;
 }
 
 .title-label, .class-label {
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .class-name {

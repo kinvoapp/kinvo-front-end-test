@@ -80,8 +80,9 @@ function FixedIncomeDisplayer() {
     return (
         <section className="income-displayer">
             <div className="income-displayer-header">
-                <p>Minhas Rendas Fixas</p>
+                <h2 className="oplas">Minhas Rendas Fixas</h2>
                 <select
+                className="sort-input"
                     name="order"
                     onChange={ (event) => handleSortChange(event) }
                     defaultValue={'DEFAULT'}

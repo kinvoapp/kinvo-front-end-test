@@ -1,14 +1,20 @@
 .positiontag-container {
     border: 1px solid #ccc;
+    border-radius: 5px;
     margin-right: 25px;
     padding: 10px;
-    width: 50%;
+    width: 45%;
 }
 
 .position-container {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .position-info{
     text-align: center;
+}
+
+h4 {
+    margin-bottom: 10px;
 }

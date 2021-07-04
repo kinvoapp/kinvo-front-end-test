@@ -5,14 +5,14 @@ function FixedIncomeDueTag({ due }) {
     const { date, daysUntilExpiration } = due;
     return (
         <div className="duetag-container">
-            <p>VENCIMENTO</p>
+            <h3 className="title-label">VENCIMENTO</h3>
             <div className="due-container">
                 <div className="due-info">
-                    <p>DATA VENC.</p>
+                    <h4>DATA VENC.</h4>
                     <p>{ date }</p>
                 </div>
                 <div className="due-info">
-                    <p>DIAS ATÉ VENC.</p>
+                    <h4>DIAS ATÉ VENC.</h4>
                     <p>{ daysUntilExpiration }</p>
                 </div>
             </div>
