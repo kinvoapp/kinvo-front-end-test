@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinvo</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/assets/style.css">
+    
 
     <script src="/assets/script.js"></script>
 </head>
@@ -23,10 +26,10 @@
             <div class="nav">
                 <div class="animation">
             <ul>
-                <li><span><img src="/assets/images/logo1.png"><span class="logo-text">Saldo Bruto</span> <br>ff</span></li>
-                <li><img src="/assets/images/logo2.png"><span>Valor Aplicado</span><span><br>g</span></li>
-                <li><img src="/assets/images/logo3.png"><span>Rentabilidade</span><span><br>g</span></li>
-                <li><img src="/assets/images/logo4.png"><span>Carteira</span><span><br>g</span></li>
+                <li><span><img src="/assets/images/logo1.png"><span class="txt-bloco">Saldo Bruto</span> <p></p> <span class="txt-rend">130.521.230,02</span></li>
+                <li><img src="/assets/images/logo2.png"><span class="txt-bloco">Saldo Bruto</span> <p></p> <span class="txt-rend">130.521.230,02</span></li>
+                <li><img src="/assets/images/logo3.png"><span class="txt-bloco">Saldo Bruto</span> <p></p> <span class="txt-rend">130.521.230,02</span></li>
+                <li><img src="/assets/images/logo4.png"><span class="txt-bloco">Saldo Bruto</span> <p></p> <span class="txt-rend">130.521.230,02</span></li>
                 <li><img src="/assets/images/logo5.png"></li>
                 <li><img src="/assets/images/logo6.png"></li>
 
@@ -97,7 +100,7 @@
                 </div> 
 
                 <div class="select-box">
-                    <input type="text">
+                    <input id="search" type="text" oninput="rerender(this.value)" />
                 </div>
 
                 <div class="select-box">
@@ -106,12 +109,16 @@
                     </select>            
                 </div>
 
-                <div class="rendas">
+                <div class="tables">
+                    <div>
+                        <table id="table">
+                                                          
+                        </table>
+                    </div>
                 </div>
+  
             </div>
-            <div>
-                
-            </div>
+            
             <div class="grafico3">
 
             </div>
@@ -125,6 +132,65 @@
         </div>
         
     </div>
+    
+    <script>
+
+        function rerender(txt) {
+            // tabela.remove();
+
+            let tabela = document.getElementById('table');
+            let children = tabela.getElementsByTagName('tr');
+            console.log(children)
+
+            for(let c of children) {
+               tabela.removeChild(c);
+            }
+
+            let lista_renda_fixa = filtrar(txt);
+            console.log(lista_renda_fixa);
+            // let tabela = document.getElementById('table');
+            // tabela_old.remove();
+            // tabela = document.createElement('table');
+            let thead = document.createElement('thead');
+            let td1 =  document.createElement('td');
+            let td2 =  document.createElement('td');
+            let td3 =  document.createElement('td');
+            td1.innerHTML = 'Título';
+            td2.innerHTML = 'Classe';
+            td3.innerHTML = 'Valor Investimento';
+            thead.appendChild(td1);
+            thead.appendChild(td2);
+            thead.appendChild(td3);
+            tabela.appendChild(thead);
+
+
+            // let children = tabela.getElementsByTagName('tr');
+            // console.log(children)
+
+            // for(let c of children) {
+            //    tabela.removeChild(c);
+            // }
+            
+            // let lista_renda_fixa = renda_fixa;
+            // let resultado = filtrar(txt)
+            lista_renda_fixa.forEach(element => {
+                let tr = document.createElement('tr');
+                let td_titulo = document.createElement('td');
+                let td_classe = document.createElement('td');
+                td_titulo.innerHTML = element.titulo.descricao;
+                td_classe.innerHTML = element.titulo.classe;  
+                tr.appendChild(td_titulo);
+                tr.appendChild(td_classe);
+                tabela.appendChild(tr);          
+            });
+            // document.createElement('')
+            // document.body.appendChild(tabela);
+            console.log(tabela);
+        }
+
+        rerender(txt = '');
+
+    </script>
     
 </body>
 </html>

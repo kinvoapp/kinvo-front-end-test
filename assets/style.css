@@ -112,6 +112,13 @@ span{
     font-weight: bolder;
 }
 
+.txt-rend{
+    font-size: 18px;
+    color: gray;
+    font-weight: bolder;
+    
+}
+
 .grafico{
     background-color: white;
     border-radius: 10px;
@@ -140,10 +147,6 @@ span{
     margin-left: 20px;
 }
 
-.select-box{
-    
-}
-
 #select{
     width: 155px;
     height: 32px;
@@ -167,6 +170,19 @@ input{
     margin-right: 32px;
     margin-top: 21px;
     opacity: 1;
+}
+
+
+table{
+    padding-top: 84px;
+    padding-left: 20px;
+    border: 1px solid #DAE0E3;
+    border-radius: 10px;  
+}
+
+
+th{
+    padding: 5px;
 }
 
 
