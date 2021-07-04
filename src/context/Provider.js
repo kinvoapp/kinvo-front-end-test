@@ -21,7 +21,6 @@ function Provider({ children }) {
         );
         setSnapshotByProduct(requestResult.data.snapshotByProduct);
         setIsFetching(false);
-        console.log(requestResult);
     }
 
     useEffect(() => {
