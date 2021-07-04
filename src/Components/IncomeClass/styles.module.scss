@@ -23,6 +23,36 @@
     }
 }
 
+@media (max-width: 1366px) {
+  .assetType:nth-child(2) {
+    margin-left: 0px ;
+    }
+    .assetType:nth-child(3) {
+    margin-left: 0px ;
+    }
+
+    .assetsInfo {
+        p, h1 {
+            font-size: 12px;
+        }
+    }
+    .titleName {
+        p, h1 {
+            font-size: 12px;
+        }
+    }
+    .classResult {
+        li>h1, li>p {
+            font-size: 12px;
+        }
+    }
+    .classVenc {
+        li>h1, li>p {
+            font-size: 12px;
+        }
+    }
+}
+
 .titleName {
     position: relative;
     display: flex;

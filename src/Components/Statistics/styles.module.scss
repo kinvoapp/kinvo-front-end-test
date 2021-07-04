@@ -34,3 +34,30 @@
         padding: 3px 9px;
     }
 }
+
+@media (max-width: 1366px) {
+    .container {
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            height: 60px;
+            width: 150px;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+        
+            h1 {
+                font-size: 12px;
+                font-weight: var(--bold);
+                color: var(--purple);
+                
+            }
+            
+            h2 {
+                font-size: 9px;
+                font-weight: var(--medium);
+            }
+
+    }
+}

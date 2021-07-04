@@ -132,3 +132,14 @@
     color: var(--grey);
     font-weight: var(--medium);
 }
+
+@media (max-width: 1366px) {
+    .container {
+        margin-top: 10px;
+        background: var(--background);
+        border-radius: 10px;
+        width: max-content;
+        box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+    }
+    
+}
