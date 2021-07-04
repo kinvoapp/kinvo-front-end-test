@@ -104,19 +104,33 @@ span{
     letter-spacing: 0.45px;
     color: #4E5B61;
     text-transform: uppercase;
+    border: 1px solid red;
+}
+
+.txt-bloco1{
+    font-size: 11px;
+    letter-spacing: 0.45px;
+    color: #4E5B61;
+    text-transform: uppercase;
+    border: 1px solid blue;   
 }
 
 .txt-money{
     font-size: 18px;
     color: #4C309B;
     font-weight: bolder;
+    border: 1px solid red;
 }
 
 .txt-rend{
     font-size: 18px;
     color: gray;
-    font-weight: bolder;
-    
+    font-weight: bolder; 
+    border: 1px solid red;
+}
+
+.logo-image{
+    margin-bottom: 22px;
 }
 
 .grafico{
@@ -145,7 +159,9 @@ span{
 
 span{
     margin-left: 20px;
+    
 }
+
 
 #select{
     width: 155px;
@@ -187,6 +203,7 @@ th{
 
 
 .grafico3{
+    float: left;
     width: 530px;
     height: 448px;
     margin-top: 11px;
@@ -197,11 +214,12 @@ th{
 }
 
 .grafico4{
-    position: absolute;
-    float: right;
+    display: flex; 
+    align-items:stretch;
     width: 530px;
     height: 448px;
     margin-top: 11px;
+    margin-left: 558px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 20px #0000000D;
     border-radius: 10px;
