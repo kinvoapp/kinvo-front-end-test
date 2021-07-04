@@ -1,6 +1,24 @@
 .income-displayer {
+    background-color: #fff;
     border: 1px solid green;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    width: 100%;
+}
+
+.income-displayer-header {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.search-input {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
 }
