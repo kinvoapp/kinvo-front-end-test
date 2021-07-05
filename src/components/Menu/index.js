@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { ReactComponent as WalletSummary } from '../../assets/wallet-summary.svg';
 import { ReactComponent as MyProducts } from '../../assets/my-products.svg';
 import { ReactComponent as MyEarnings } from '../../assets/my-earnings.svg';
@@ -112,7 +112,7 @@ export const Menu = () => {
   return (
     <Wrapper>
       {menuItems.map(({ title, icon, path, subMenu }) => (
-        <>
+        <Fragment key={path}>
           <NavItem
             active={window.location.pathname === path}
             onClick={() => subMenu && setIsOpened(!isOpened)}
@@ -129,18 +129,21 @@ export const Menu = () => {
               <Arrow />
             </span>
           </NavItem>
-          {subMenu &&
-            subMenu.map(({ title: subMenuTitle, active }) => (
-              <ul style={{ margin: 0, padding: 0 }}>
-                {isOpened && (
-                  <SubItem className={active && 'active'}>
-                    {subMenuTitle}
-                    <Arrow />
-                  </SubItem>
-                )}
-              </ul>
-            ))}
-        </>
+          {subMenu && (
+            <ul style={{ margin: 0, padding: 0 }}>
+              {subMenu.map(({ title: subMenuTitle, active }) => (
+                <Fragment key={subMenuTitle}>
+                  {isOpened && (
+                    <SubItem className={active && 'active'}>
+                      {subMenuTitle}
+                      <Arrow />
+                    </SubItem>
+                  )}
+                </Fragment>
+              ))}
+            </ul>
+          )}
+        </Fragment>
       ))}
     </Wrapper>
   );
