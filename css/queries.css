@@ -92,3 +92,48 @@
     text-align: center;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #header {
+    position: inherit;
+    margin: 0;
+  }
+
+  #header .infos-header .info-header {
+    display: none;
+  }
+
+  #header .infos-header .info-header:nth-child(5) {
+    display: flex;
+  }
+
+  main {
+    display: block;
+    top: 0;
+  }
+
+  main .sidebar {
+    width: 100%;
+    min-height: 0;
+  }
+
+  main .sidebar ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #fixed-income-details .fid-content .fid-card {
+    flex-direction: column;
+  }
+
+  #fixed-income-details .fid-content .fid-card .fid-card1,
+  #fixed-income-details .fid-content .fid-card .fid-card2,
+  #fixed-income-details .fid-content .fid-card .fid-card3 {
+    width: 100%;
+  }
+
+  #fixed-income-details .fid-content .fid-card .fid-card2 .fid-info,
+  #fixed-income-details .fid-content .fid-card .fid-card3 .fid-info {
+    justify-content: stretch;
+  }
+}
