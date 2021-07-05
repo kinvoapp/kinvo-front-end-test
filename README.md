@@ -47,6 +47,8 @@
 yarn install && yarn start
 ```
 
+O sistema utilizado para desenvolver foi o Mac OS. Se vocês tiverem algum problema para rodar por favor me avise.
+
 ---
 
 Agradeço a oportunidade de realizar esse teste. Grande abraço à todos.
