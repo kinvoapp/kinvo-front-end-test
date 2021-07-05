@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
-  height: 100vh;
+  background-color: #fff;
   width: 227px;
 `;
 
