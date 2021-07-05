@@ -1,4 +1,15 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+# KINVO Premium
+
+## Tecnologias Usadas
+ - React JS
+ - Styled Components
+ - TypeScript
+ - Axios para fazer as requisições HTTP.
+
+ ## Instalar Dependências
+  - yarn install
+
 
 # Desafio Front-end Web
 
