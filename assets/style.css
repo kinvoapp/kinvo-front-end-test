@@ -60,17 +60,22 @@ span{
 }
 
 .logo-lateral{
+    float: left;
     border: 1px solid blue;
     margin-top: 16px;
     margin-left: 14px;
 }
 
 .logo-txt{
+    float: right;
     font-size: 13px;
     color: #707B81;
-    margin-left: 62px;
-    margin-bottom: 37px;
+    margin-left: 52px;
     border: 1px solid red;
+}
+
+.img-lateral{
+    width: 100%;
 }
 
 .principal{
@@ -104,6 +109,17 @@ span{
     color: #627179;
     width: 50%;
     float: left;
+}
+
+.txt3{
+    margin-left: 19px;
+    padding-top: 21px;
+    font: normal normal medium Montserrat;
+    font-size: 18px;
+    color: #627179;
+    width: 50%;
+    float: left;
+    position: absolute
 }
 
 .blocos{
@@ -265,6 +281,11 @@ th{
 
 .grafico-carteira{
     margin-top: 35px;
+    margin-left: 119px;
+}
+
+.grafico-carteira2{
+    margin-bottom: 20px;
     margin-left: 119px;
 }
 
