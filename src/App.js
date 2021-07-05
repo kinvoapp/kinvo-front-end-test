@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Main } from './components/Main';
 import { Menu } from './components/Menu';
 import { Content } from './components/Content';
+import { SnapshotByPortfolio } from './components/SnapshotByPortfolio';
 import { ContentSection } from './components/ContentSection';
 import { SelectInput } from './components/SelectInput';
 import { SearchInput } from './components/SearchInput';
@@ -27,6 +28,7 @@ const App = () => {
       <Main>
         <Menu />
         <Content title="Renda Fixa">
+          <SnapshotByPortfolio />
           <ContentSection
             title="Minhas Rendas Fixas"
             filter={
@@ -43,7 +45,7 @@ const App = () => {
               </div>
             }
           >
-            <MyFixedIncome />
+            <MyFixedIncome type={type} search={search} />
           </ContentSection>
         </Content>
       </Main>
