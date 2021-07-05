@@ -27,6 +27,7 @@ const indexerValueField = document.getElementById('indexer-value')
 const percentageOverIndexerField = document.getElementById('over-indexer')
 
 /* FUNCTION GET DATA FROM API */
+
 async function getDataApi (){
   const api = await fetch (url)
   const data = await api.json()
@@ -37,25 +38,37 @@ async function getDataApi (){
   const percentageProfit = data.data.snapshotByPortfolio.percentageProfit / 100
   const indexerValue = data.data.snapshotByPortfolio.indexerValue / 100
   const percentageOverIndexer = data.data.snapshotByPortfolio.percentageOverIndexer / 100
-
+  
   /* INSERT DATAS IN HTML */
-
+  
   equityField.innerHTML = formCurrency.format(equity)
   valueAppliedField.innerHTML = formCurrency.format(valueApplied)
   equityProfitField.innerHTML = formCurrency.format(equityProfit)
   percentageProfitField.innerHTML = formPercent.format(percentageProfit)
   indexerValueField.innerHTML = formPercent.format(indexerValue)
   percentageOverIndexerField.innerHTML = formPercentInt.format(percentageOverIndexer)
-
-  /* GET THE SNAPSOTDATAS */
+  
   return data.data.snapshotByProduct
 }
 
+/* GET THE SNAPSHOTDATAS */
+
 function render(data) {
   let output = ""
+
+  const order = document.querySelector('#order')
+
+  order.addEventListener('change', () => {
+    if (order.value == "a-z") {
+      data.sort(function (a, b) { return a.fixedIncome.name > b.fixedIncome.name ? 1 : -1; })
+    }
+    if (order.value == "z-a"){
+      data.sort(function (a, b) { return a.fixedIncome.name < b.fixedIncome.name ? 1 : -1; })
+    }
+  })  
   
   data.forEach((element) => {
-
+    
     const dateParse = JSON.stringify(element.due.date)
     const daysUntlParse = JSON.stringify(element.due.daysUntilExpiration)
     const bondTypeParse = JSON.stringify(element.fixedIncome.bondType)
@@ -70,6 +83,8 @@ function render(data) {
     const productIdParse = JSON.stringify(element.fixedIncome.portfolioProductId)
     // const prodHaQstParse = JSON.stringify(element.position.productHasQuotation)
     // const hasBalanceParse = JSON.stringify(element.hasBalance)
+
+    /* INSERT HMTL */
 
     output += `
   <div class="fid-card" id="${productIdParse}">
@@ -135,14 +150,16 @@ function render(data) {
         </div>
       </div>
     </div>
-    <div >
+    <div class="fid-footer">
 
     </div>
   </div>`
   })
-
+  
   document.querySelector('.fid-content').innerHTML = output
 }
+
+/*  FILTER BY SEARCH  */
 
 let snapshotData
 (async () => {
