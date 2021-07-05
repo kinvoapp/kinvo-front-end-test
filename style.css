@@ -12,7 +12,7 @@ html {
   --blue: #008dcb;
   --gray: #eef2f4;
   --gray-dark: #4e5b61;
-  --gray-medium: #dae0e3;
+  --gray-medium: #dce0e3;
   --green: #38bfa0;
   --purple: #4c309b;
   --purple-light: #8a51ba;
@@ -225,7 +225,7 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
 
 #fixed-income .graphic {
   width: 100%;
-  height: 34.8rem;
+  height: 36.8rem;
   background: var(--white);
   border-radius: 1rem;
   margin-bottom: 1.5rem;
@@ -239,7 +239,8 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   border-radius: 1rem;
 }
 
-#fixed-income-details .fid-header {
+#fixed-income-details .fid-header,
+.graphic .graphic-header {
   padding: 1.6rem 1.9rem;
   display: flex;
   align-items: center;
@@ -247,7 +248,8 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   border-bottom: 1px solid var(--gray);
 }
 
-#fixed-income-details .fid-header h2 {
+#fixed-income-details .fid-header h2,
+.graphic .graphic-header h1 {
   font-size: 1.8rem;
   font-weight: normal;
   color: var(--text-medium);
@@ -392,6 +394,30 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   font-size: 1.6rem;
   font-weight: normal;
   color: var(--blue);
+}
+
+#fixed-income-details .fid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+#fixed-income-details .fid-footer button {
+  border: 1px solid #edeef0;
+  border-radius: 4px;
+  width: 3.5rem;
+  height: 3.5rem;
+  box-shadow: 0px 0px 10px #00000008;
+  background: var(--white);
+  color: var(--gray-medium);
+  cursor: pointer;
+}
+
+#fixed-income-details .fid-footer button.active {
+  background: var(--gray-medium);
+  color: var(--white);
 }
 
 /* WALLET */

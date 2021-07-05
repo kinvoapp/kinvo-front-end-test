@@ -56,15 +56,19 @@ async function getDataApi (){
 function render(data) {
   let output = ""
 
+  
+  /*  ORDERED BY TITLE  */
+  
   const order = document.querySelector('#order')
-
   order.addEventListener('change', () => {
 
     if (order.value == "a-z") {
       data.sort(function (a, b) { return a.fixedIncome.name > b.fixedIncome.name ? 1 : -1; })
+      render(snapshotData)
     }
     if (order.value == "z-a"){
       data.sort(function (a, b) { return a.fixedIncome.name < b.fixedIncome.name ? 1 : -1; })
+      render(snapshotData)
     }
   })  
   

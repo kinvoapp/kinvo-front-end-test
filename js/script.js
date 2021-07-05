@@ -10,3 +10,7 @@ function openDropdown(){
 function showContent(){
   itemSelect.classList.add('selected')
 }
+
+
+
+

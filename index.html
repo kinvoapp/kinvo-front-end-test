@@ -48,7 +48,7 @@
         </div>
         <div>
           <p>valor aplicado</p>
-          <h2>130.521.230,02</h2>
+          <h2>521.230,02</h2>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
         </div>
         <div>
           <p>rentabilidade</p>
-          <h2>130.521.230,02</h2>
+          <h2>2,34%</h2>
         </div>
       </div>
 
@@ -216,6 +216,10 @@
       <!--      GRAPHIC      -->
 
       <div class="graphic">
+        <div class="graphic-header">
+          <h1>Rentabilidade dos Títulos</h1>
+        </div>
+        <div id="chart"></div>
       </div>
 
       <!--      FIXED INCOME DETAILS (MINHAS RENDAS FIXAS)      -->
@@ -241,7 +245,7 @@
         </div>
         <div class="fid-footer">
           <button><i class="fas fa-chevron-left"></i></button>
-          <button>1</button>
+          <button class="active">1</button>
           <button>2</button>
           <button><i class="fas fa-chevron-right"></i></button>
         </div>
@@ -253,8 +257,7 @@
       <div id="wallet">
         <div class="card">
           <h1>Divisão de Carteira por Tipos</h1>
-          <div class="radius-graph">
-            <img src="img/logo2.svg" alt="">
+          <div id="donut" class="radius-graph">
           </div>
           <div class="card-info">
             <ul>
@@ -270,8 +273,7 @@
 
         <div class="card">
           <h1>Divisão de Carteira por Tipos</h1>
-          <div class="radius-graph">
-            <img src="img/logo2.svg" alt="">
+          <div id="donut2" class="radius-graph">
           </div>
           <div class="card-info">
             <ul>
@@ -289,6 +291,7 @@
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/api.js"></script>
   <script type="module" src="js/utils.js"></script>
