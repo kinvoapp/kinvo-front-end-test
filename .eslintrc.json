@@ -20,7 +20,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "react/jsx-fragments": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": [
       1,
