@@ -1,0 +1,22 @@
+header {
+    align-items: center;
+    background-color: #fefefe;
+    border: 1px solid blue;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+h1 {
+    background: -webkit-linear-gradient(#09203f, #537895);
+    font-size: 2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.snapshot-info-container {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}

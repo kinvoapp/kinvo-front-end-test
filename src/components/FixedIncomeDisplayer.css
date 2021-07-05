@@ -1,0 +1,32 @@
+.income-displayer {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+}
+
+.income-displayer-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 25px 10px 10px;
+}
+
+.sort-input, .search-input {
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+.search-input {
+    margin-left: 15px;
+    width: 20%;
+}
+
+.oplas {
+    font-size: 1.2rem;
+    flex-grow: 2;
+}
