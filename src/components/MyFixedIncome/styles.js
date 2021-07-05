@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  min-height: 500px;
+`;
 
 export const Item = styled.div`
   display: flex;
@@ -129,5 +131,53 @@ export const Result = styled.h3`
     font-size: 9px;
     color: #4e5b61;
     display: block;
+  }
+`;
+
+export const Navigation = styled.footer`
+  padding: 10px 10px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eef2f4;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #edeef0;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #c2c5cc;
+    cursor: pointer;
+
+    &.left {
+      transform: rotate(90deg);
+    }
+
+    &.right {
+      transform: rotate(-90deg);
+    }
+
+    &.active {
+      background-color: #dce0e3;
+      font-size: 13px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    & + button {
+      margin-left: 10px;
+    }
+  }
+
+  span {
+    & + span {
+      margin-left: 10px;
+      border-radius: 5px;
+    }
   }
 `;
