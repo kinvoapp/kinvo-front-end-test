@@ -9,13 +9,13 @@ import FixedIncomePositionTag from './FixedIncomePositionTag';
 import FixedIncomeDueTag from './FixedIncomeDueTag';
 
 export {
-    Header,
-    FixedIncomeReport,
-    FixedIncomeSnapshot,
-    SnapshotCard,
-    FixedIncomeDisplayer,
-    FixedIncomeCard,
-    FixedIncomeNameTag,
-    FixedIncomePositionTag,
-    FixedIncomeDueTag,
+  Header,
+  FixedIncomeReport,
+  FixedIncomeSnapshot,
+  SnapshotCard,
+  FixedIncomeDisplayer,
+  FixedIncomeCard,
+  FixedIncomeNameTag,
+  FixedIncomePositionTag,
+  FixedIncomeDueTag,
 };

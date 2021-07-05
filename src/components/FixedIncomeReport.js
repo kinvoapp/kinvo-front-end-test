@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import FixedIncomeSnapshot from './FixedIncomeSnapshot';
 import FixedIncomeDisplayer from './FixedIncomeDisplayer';
 import './FixedIncomeReport.css';
 
 function FixedIncomeReport() {
-    return (
-        <section>
-            <h2>Renda Fixa</h2>
-            <FixedIncomeSnapshot />
-            <FixedIncomeDisplayer />
-        </section>
-    );
+  return (
+    <section>
+      <h2>Renda Fixa</h2>
+      <FixedIncomeSnapshot />
+      <FixedIncomeDisplayer />
+    </section>
+  );
 }
 
 export default FixedIncomeReport;
