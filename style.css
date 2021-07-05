@@ -445,3 +445,7 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   border-radius: 50%;
   background: var(--purple);
 }
+
+.invisivel {
+  display: none;
+}

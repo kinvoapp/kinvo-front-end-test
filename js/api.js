@@ -27,7 +27,6 @@ const indexerValueField = document.getElementById('indexer-value')
 const percentageOverIndexerField = document.getElementById('over-indexer')
 
 /* FUNCTION GET DATA FROM API */
-
 async function getDataApi (){
   const api = await fetch (url)
   const data = await api.json()
@@ -49,10 +48,13 @@ async function getDataApi (){
   percentageOverIndexerField.innerHTML = formPercentInt.format(percentageOverIndexer)
 
   /* GET THE SNAPSOTDATAS */
-  const snapshotData = data.data.snapshotByProduct
+  return data.data.snapshotByProduct
+}
+
+function render(data) {
   let output = ""
   
-  snapshotData.map((element) => {
+  data.forEach((element) => {
 
     const dateParse = JSON.stringify(element.due.date)
     const daysUntlParse = JSON.stringify(element.due.daysUntilExpiration)
@@ -68,8 +70,6 @@ async function getDataApi (){
     const productIdParse = JSON.stringify(element.fixedIncome.portfolioProductId)
     // const prodHaQstParse = JSON.stringify(element.position.productHasQuotation)
     // const hasBalanceParse = JSON.stringify(element.hasBalance)
-    
-    console.log(element);
 
     output += `
   <div class="fid-card" id="${productIdParse}">
@@ -79,7 +79,7 @@ async function getDataApi (){
         <img src="img/info-title.svg" alt="">
       </div>
       <div class="fid-info">
-        <p>${fidNameParse.replace(/"/g, '')}</p>
+        <p id="title-card">${fidNameParse.replace(/"/g, '')}</p>
         <div>
           <p>classe</p>
           <h5>${bondTypeParse.replace(/"/g, '')}</h5>
@@ -135,10 +135,23 @@ async function getDataApi (){
         </div>
       </div>
     </div>
+    <div >
+
+    </div>
   </div>`
   })
 
   document.querySelector('.fid-content').innerHTML = output
 }
 
-getDataApi()
+let snapshotData
+(async () => {
+  snapshotData = await getDataApi()
+  render(snapshotData)
+})()
+
+function filter(search) {
+  if (snapshotData) {
+    render(snapshotData.filter(item => item.fixedIncome.name.toUpperCase().includes(String(search).toUpperCase())))
+  }
+}
