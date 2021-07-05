@@ -399,8 +399,8 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
 #wallet {
   display: flex;
   align-self: center;
-  margin-top: 0.6rem;
-  gap: 1.25rem;
+  margin-top: 1.5rem;
+  gap: 1.5rem;
 }
 
 #wallet .card {

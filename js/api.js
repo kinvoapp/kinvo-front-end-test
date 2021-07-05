@@ -59,6 +59,7 @@ function render(data) {
   const order = document.querySelector('#order')
 
   order.addEventListener('change', () => {
+
     if (order.value == "a-z") {
       data.sort(function (a, b) { return a.fixedIncome.name > b.fixedIncome.name ? 1 : -1; })
     }
@@ -149,9 +150,6 @@ function render(data) {
           <h4>${daysUntlParse}</h4>
         </div>
       </div>
-    </div>
-    <div class="fid-footer">
-
     </div>
   </div>`
   })
