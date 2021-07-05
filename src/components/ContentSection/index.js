@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper, Header, Title } from './styles';
 
 export const ContentSection = ({ title, children, filter }) => {
@@ -12,4 +12,14 @@ export const ContentSection = ({ title, children, filter }) => {
       {children}
     </Wrapper>
   );
+};
+
+ContentSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+  filter: PropTypes.element,
+};
+
+ContentSection.defaultProps = {
+  filter: null,
 };

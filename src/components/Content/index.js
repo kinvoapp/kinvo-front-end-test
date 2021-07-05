@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper, Title } from './styles';
 
 export const Content = ({ title, children }) => {
@@ -9,4 +9,12 @@ export const Content = ({ title, children }) => {
       {children}
     </Wrapper>
   );
+};
+
+Content.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };

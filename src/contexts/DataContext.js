@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const DataContext = createContext();
 
@@ -21,4 +21,11 @@ export const DataContextProvider = ({ children }) => {
 
 export const useData = () => {
   return useContext(DataContext);
+};
+
+DataContextProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };

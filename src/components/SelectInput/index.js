@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Arrow from '../../assets/arrow.png';
 import { Select } from './styles';
 
@@ -14,8 +14,16 @@ export const SelectInput = ({ options, onChange, defaultValue }) => {
         Ordenar Por
       </option>
       {options.map((option) => (
-        <option value={option.value}>{option.name}</option>
+        <option key={option.value} value={option.value}>
+          {option.name}
+        </option>
       ))}
     </Select>
   );
+};
+
+SelectInput.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+  onChange: PropTypes.func.isRequired,
+  defaultValue: PropTypes.string.isRequired,
 };
