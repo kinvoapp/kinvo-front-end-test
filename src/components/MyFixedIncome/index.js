@@ -31,10 +31,7 @@ export const MyFixedIncome = ({ type, search, limit }) => {
         );
       }
     } else {
-      products = snapshotByProduct.slice(
-        currentPage === 0 ? 0 : currentPage * limit,
-        currentPage === 0 ? limit : (currentPage + 1) * limit,
-      );
+      products = snapshotByProduct;
 
       if (type !== 'OrdenarPor') {
         products = snapshotByProduct.sort((a, b) =>
