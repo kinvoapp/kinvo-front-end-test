@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Skeleton from 'react-loading-skeleton';
 import { useData } from '../../contexts/DataContext';
@@ -7,9 +7,7 @@ import { ReactComponent as ArrowPage } from '../../assets/arrow-page.svg';
 import { Wrapper, Item, Result, Navigation } from './styles';
 
 export const MyFixedIncome = ({ type, search, limit }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [products, setProducts] = useState(null);
-  const [removePagination, setRemovePagination] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const {
     data: {
@@ -17,165 +15,115 @@ export const MyFixedIncome = ({ type, search, limit }) => {
     },
   } = useData();
 
-  const getProducts = () => {
-    setCurrentPage(1);
-    // Put the products in the state when entering the page
-    if (snapshotByProduct)
-      setProducts(snapshotByProduct.slice(currentPage - 1, limit));
-  };
+  const renderProducts = () => {
+    let products;
+    if (search !== '') {
+      products = snapshotByProduct.filter((product) =>
+        product.fixedIncome.name.toLowerCase().includes(search.toLowerCase()),
+      );
 
-  const changePage = (page) => {
-    setCurrentPage(page);
-    let pagination;
-    if (page === 1) pagination = 0;
-    else pagination = (page - 1) * (limit - 1);
-    setProducts(snapshotByProduct.slice(pagination, limit));
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, [snapshotByProduct]);
-
-  useEffect(() => {
-    // Responsible for pagination and the filters
-    if (snapshotByProduct) {
-      if (search !== '' && type !== 'OrdenarPor') {
-        const productsFound = snapshotByProduct.filter((product) =>
-          product.fixedIncome.name.toLowerCase().includes(search.toLowerCase()),
+      if (type !== 'OrdenarPor') {
+        products.sort((a, b) =>
+          a[type.split('.')[0]][type.split('.')[1]] >
+          b[type.split('.')[0]][type.split('.')[1]]
+            ? 1
+            : -1,
         );
+      }
+    } else {
+      products = snapshotByProduct.slice(
+        currentPage === 0 ? 0 : currentPage * limit,
+        currentPage === 0 ? limit : (currentPage + 1) * limit,
+      );
 
-        if (type === 'due-date') {
-          const productsFoundOrdered = productsFound.sort((a, b) =>
-            a.due.daysUntilExpiration > b.due.daysUntilExpiration ? 1 : -1,
-          );
-
-          if (productsFoundOrdered.length <= limit) {
-            setRemovePagination(true);
-            setCurrentPage(1);
-            setProducts(productsFoundOrdered);
-          } else {
-            setRemovePagination(false);
-            setCurrentPage(1);
-            setProducts(productsFoundOrdered.slice(0, limit));
-          }
-        } else {
-          setRemovePagination(true);
-          setCurrentPage(1);
-          setProducts(productsFound);
-          if (productsFound.length >= limit) {
-            setRemovePagination(false);
-            setCurrentPage(1);
-            setProducts(productsFound.slice(0, limit));
-          }
-        }
-      } else if (search !== '' && type === 'OrdenarPor') {
-        const productsFound = snapshotByProduct.filter((product) =>
-          product.fixedIncome.name.toLowerCase().includes(search.toLowerCase()),
+      if (type !== 'OrdenarPor') {
+        products = snapshotByProduct.sort((a, b) =>
+          a[type.split('.')[0]][type.split('.')[1]] >
+          b[type.split('.')[0]][type.split('.')[1]]
+            ? 1
+            : -1,
         );
-
-        if (productsFound.length <= limit) {
-          setRemovePagination(true);
-          setCurrentPage(1);
-          setProducts(productsFound);
-        } else {
-          setRemovePagination(false);
-          setCurrentPage(1);
-          setProducts(productsFound.slice(0, limit));
-        }
-      } else if (search === '' && type === 'due-date') {
-        const productsOrdered = snapshotByProduct.sort((a, b) =>
-          a.due.daysUntilExpiration > b.due.daysUntilExpiration ? 1 : -1,
-        );
-
-        setRemovePagination(false);
-        setCurrentPage(1);
-        setProducts(productsOrdered.slice(0, limit));
-      } else if (search === '' && type === 'OrdenarPor') {
-        const defaultProducts = snapshotByProduct;
-
-        if (defaultProducts.length <= limit) {
-          setRemovePagination(true);
-          setCurrentPage(1);
-          setProducts(defaultProducts);
-        } else {
-          setRemovePagination(false);
-          setCurrentPage(1);
-          setProducts(defaultProducts.slice(0, limit));
-        }
       }
     }
-  }, [type, search]);
+
+    return products
+      .slice(
+        currentPage === 0 ? 0 : currentPage * limit,
+        currentPage === 0 ? limit : (currentPage + 1) * limit,
+      )
+      .map(
+        ({
+          due: { date, daysUntilExpiration },
+          fixedIncome: { bondType, name },
+          position: {
+            equity,
+            valueApplied,
+            profitability,
+            portfolioPercentage,
+            indexerLabel,
+            indexerValue,
+            percentageOverIndexer,
+          },
+        }) => (
+          <Item key={name}>
+            <div>
+              <h2>
+                Título <Info />
+              </h2>
+              <section>
+                <h2>{name}</h2>
+                <Result color="#8A51BA" text="Classe">
+                  {bondType}
+                </Result>
+              </section>
+            </div>
+            <div>
+              <h2>
+                Minha Posição <Info />
+              </h2>
+              <section>
+                <Result color="#38BFA0" text="Valor Inves.">
+                  {valueApplied.toLocaleString('pt-br')}
+                </Result>
+                <Result color="#38BFA0" text="Saldo Bruto">
+                  {equity.toLocaleString('pt-br')}
+                </Result>
+                <Result color="#38BFA0" text="Rent.">
+                  {profitability.toLocaleString('pt-br')}%
+                </Result>
+                <Result color="#38BFA0" text="% da Cart.">
+                  {portfolioPercentage.toLocaleString('pt-br')}%
+                </Result>
+                <Result color="#38BFA0" text={indexerLabel}>
+                  {indexerValue.toLocaleString('pt-br')}
+                </Result>
+                <Result color="#38BFA0" text={`Sobre ${indexerLabel}`}>
+                  {percentageOverIndexer.toLocaleString('pt-br')}%
+                </Result>
+              </section>
+            </div>
+            <div>
+              <h2>
+                Vencimento <Info />
+              </h2>
+              <section>
+                <Result color="#008DCB" text="Data Venc.">
+                  {date}
+                </Result>
+                <Result color="#008DCB" text="Dias até Venc.">
+                  {daysUntilExpiration}
+                </Result>
+              </section>
+            </div>
+          </Item>
+        ),
+      );
+  };
 
   return (
     <Wrapper>
-      {products
-        ? products.map(
-            ({
-              due: { date, daysUntilExpiration },
-              fixedIncome: { bondType, name },
-              position: {
-                equity,
-                valueApplied,
-                profitability,
-                portfolioPercentage,
-                indexerLabel,
-                indexerValue,
-                percentageOverIndexer,
-              },
-            }) => (
-              <Item key={name}>
-                <div>
-                  <h2>
-                    Título <Info />
-                  </h2>
-                  <section>
-                    <h2>{name}</h2>
-                    <Result color="#8A51BA" text="Classe">
-                      {bondType}
-                    </Result>
-                  </section>
-                </div>
-                <div>
-                  <h2>
-                    Minha Posição <Info />
-                  </h2>
-                  <section>
-                    <Result color="#38BFA0" text="Valor Inves.">
-                      {equity.toLocaleString('pt-br')}
-                    </Result>
-                    <Result color="#38BFA0" text="Saldo Bruto">
-                      {valueApplied.toLocaleString('pt-br')}
-                    </Result>
-                    <Result color="#38BFA0" text="Rent.">
-                      {profitability.toLocaleString('pt-br')}%
-                    </Result>
-                    <Result color="#38BFA0" text="% da Cart.">
-                      {portfolioPercentage.toLocaleString('pt-br')}%
-                    </Result>
-                    <Result color="#38BFA0" text={indexerLabel}>
-                      {indexerValue.toLocaleString('pt-br')}
-                    </Result>
-                    <Result color="#38BFA0" text={`Sobre ${indexerLabel}`}>
-                      {percentageOverIndexer.toLocaleString('pt-br')}%
-                    </Result>
-                  </section>
-                </div>
-                <div>
-                  <h2>
-                    Vencimento <Info />
-                  </h2>
-                  <section>
-                    <Result color="#008DCB" text="Data Venc.">
-                      {date}
-                    </Result>
-                    <Result color="#008DCB" text="Dias até Venc.">
-                      {daysUntilExpiration}
-                    </Result>
-                  </section>
-                </div>
-              </Item>
-            ),
-          )
+      {snapshotByProduct
+        ? renderProducts()
         : Array.from(Array(limit), (e, i) => (
             <Item key={i}>
               <div>
@@ -217,45 +165,47 @@ export const MyFixedIncome = ({ type, search, limit }) => {
               </div>
             </Item>
           ))}
-      {snapshotByProduct &&
-        snapshotByProduct.length > 5 &&
-        !removePagination && (
-          <Navigation>
-            {currentPage !== 1 && (
+      {snapshotByProduct && snapshotByProduct.length > 5 && (
+        <Navigation>
+          {currentPage !== 0 && (
+            <button
+              type="button"
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 0}
+              className="left"
+            >
+              <ArrowPage />
+            </button>
+          )}
+          {Array.from(
+            Array(Math.ceil(snapshotByProduct.length / limit)),
+            (e, i) => (
               <button
+                key={i}
                 type="button"
-                onClick={() => changePage(currentPage - 1)}
-                className="left"
+                onClick={() => setCurrentPage(i)}
+                disabled={currentPage === i && 'active'}
+                className={currentPage === i ? 'active' : ''}
               >
-                <ArrowPage />
+                {i + 1}
               </button>
-            )}
-            {Array.from(
-              Array(Math.ceil(snapshotByProduct.length / limit)),
-              (e, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => changePage(i + 1)}
-                  disabled={currentPage === i + 1 && 'active'}
-                  className={currentPage === i + 1 ? 'active' : ''}
-                >
-                  {i + 1}
-                </button>
-              ),
-            )}
-            {currentPage !== Math.ceil(snapshotByProduct.length / limit) && (
-              <button
-                type="button"
-                onClick={() => changePage(currentPage + 1)}
-                className="right"
-              >
-                <ArrowPage />
-              </button>
-            )}
-          </Navigation>
-        )}{' '}
-      {!products && (
+            ),
+          )}
+          {currentPage !== Math.ceil(snapshotByProduct.length / limit - 1) && (
+            <button
+              type="button"
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={
+                currentPage === Math.ceil(snapshotByProduct.length / limit - 1)
+              }
+              className="right"
+            >
+              <ArrowPage />
+            </button>
+          )}
+        </Navigation>
+      )}
+      {!snapshotByProduct && (
         <Navigation>
           <Skeleton width={35} height={35} />
           <Skeleton width={35} height={35} />
