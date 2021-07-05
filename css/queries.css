@@ -1,0 +1,94 @@
+@media (max-width: 767px) {
+  #header {
+    position: inherit;
+    margin: 0;
+  }
+
+  #header .infos-header .info-header {
+    display: none;
+  }
+
+  #header .infos-header .info-header:nth-child(5) {
+    display: flex;
+  }
+
+  main {
+    display: block;
+    top: 0;
+  }
+
+  main .sidebar {
+    width: 100%;
+    min-height: 0;
+  }
+
+  #fixed-income h2 {
+    text-align: center;
+  }
+
+  #fixed-income .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #fixed-income-details .fid-header,
+  .graphic .graphic-header {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  #fixed-income-details .fid-header .fid-search {
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #fixed-income-details .fid-header .fid-search select,
+  #fixed-income-details .fid-header .fid-search .input-search input,
+  #fixed-income-details .fid-header .fid-search .input-search {
+    width: 100%;
+    margin: 0;
+  }
+
+  #fixed-income-details .fid-header .fid-search i {
+    left: 7px;
+  }
+
+  #fixed-income-details .fid-content .fid-card {
+    flex-direction: column;
+  }
+
+  #fixed-income-details .fid-content .fid-card .fid-card1,
+  #fixed-income-details .fid-content .fid-card .fid-card2,
+  #fixed-income-details .fid-content .fid-card .fid-card3 {
+    width: 100%;
+  }
+
+  #fixed-income-details .fid-content .fid-card .fid-card1,
+  #fixed-income-details .fid-content .fid-card .fid-card2,
+  #fixed-income-details .fid-content .fid-card .fid-card3 {
+    height: auto;
+  }
+
+  #fixed-income-details .fid-content .fid-card .fid-card2 .fid-info,
+  #fixed-income-details .fid-content .fid-card .fid-card3 .fid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #wallet {
+    flex-direction: column;
+  }
+
+  div#donut,
+  div#donut2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #wallet .card h1 {
+    text-align: center;
+  }
+}

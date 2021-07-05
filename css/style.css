@@ -1,32 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-
-  --blue: #008dcb;
-  --gray: #eef2f4;
-  --gray-dark: #4e5b61;
-  --gray-medium: #dce0e3;
-  --green: #38bfa0;
-  --purple: #4c309b;
-  --purple-light: #8a51ba;
-  --white: #ffffff;
-
-  --text-medium: #707b81;
-
-  font-family: "Montserrat", sans-serif;
-  background: var(--gray);
-}
-
-/* HEADER */
-
-header {
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -199,7 +171,6 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
   background: var(--white);
   padding: 1rem 0.8rem;
   border-radius: 1rem;
-  min-width: 17.24rem;
   width: 100%;
 }
 
