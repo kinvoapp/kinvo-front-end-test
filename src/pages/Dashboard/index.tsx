@@ -1,19 +1,39 @@
 import { Sumary } from "../../components/Sumary";
 import grafico from '../../assets/grafico.png'
-import { Ativos, Image } from "./styles";
+import { Ativos, Container, Image } from "./styles";
 import info from '../../assets/iconinfo.svg'
-import { useContext } from "react";
+import { useContext} from "react";
 import { AtivosContext } from "../../AtivosContext";
-
-// tipagem dos dados da API
 
 
 export default function Dashboard() {
   const ativos = useContext(AtivosContext); 
   
+  //FUNÇÃO PARA BUSCAR PRODUTOS NA LISTA MINHAS RENDAS FIXAS 
+
+  // function Pesquisar() {
+  //   const [text, setText] = useState('');
+
+  //   useEffect(() => {
+  //     if (text){      
+  //       fetch(`${api}/getFixedIncomeClassData}`)
+  //       .then((response) => response.json())
+  //       .then((response) => {
+  //         console.log('response', response);
+  //       });
+  //     }
+  //   }, [text]);
+
+  //   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //     setText(e.currentTarget.value);
+  //   };
+  //   return <input type="text" value={text} onChange={handleChange} />;
+  // }
+  
   return (
-    <>
-       <Sumary/> 
+    <Container>
+       
+       <Sumary/>
       <Image>
         <div>
           <img src={grafico} alt="grafico" />
@@ -23,6 +43,9 @@ export default function Dashboard() {
         <div className="title">
           <h1>Minhas Rendas Fixas</h1>
         </div>
+
+        {/* <Pesquisar /> */}
+       
 
         {/* listagem dos dados MINHAS RENDAS FIXAS*/}
         {ativos?.snapshotByProduct?.map((item, index) => (
@@ -98,7 +121,7 @@ export default function Dashboard() {
           </div>
         ))}
       </Ativos>
-    </>
+    </Container>
 
 
   )

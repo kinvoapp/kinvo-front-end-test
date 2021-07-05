@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+margin-top: 0;
+width: 1040px;
+
+`;
+
+
 export const Ativos = styled.div`
     width: 1090px;
-    
+    margin-left: 10px;
     margin-top: 8px;
-    margin-left: 248px;
     border-radius: 10px;
     padding-bottom: 16px;
     box-shadow: 0px 2px 6px #0000000A;
@@ -228,7 +234,6 @@ export const Ativos = styled.div`
 
 export const Image = styled.div`
     img{
-        margin-left: 240px;
         margin-top: 10px;
     }
 

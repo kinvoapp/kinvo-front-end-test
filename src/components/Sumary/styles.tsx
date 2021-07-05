@@ -1,31 +1,35 @@
 import styled from "styled-components";
 
-
 export const Container = styled.section`
-    margin-right: 28px;
-    margin-left: 248px;
+    margin-top: 0;    
 `;
 
 export const Content = styled.main`
     display: flex;
     flex-direction: column;
-    margin-top: 24px;   
-    
+    margin-left: 0;
+
+        //RENDA FIXA
         .title {
             font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: bold;
             color: #4C309B;
+            margin-left: 10px;
+            margin-top: 20px;
         }
 
+        //LISTA COM 6 ITEM
         .itens {
             margin-top: 24px;
+            margin-left: 10px;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
+
             /* overflow-x: scroll;  lembrar estilizar o scroll */
 
-
+            //ITEM INDIVIDUAL
             .item {
                 background: #FFFFFF;
                 display: flex;

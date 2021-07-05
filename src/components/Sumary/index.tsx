@@ -2,8 +2,6 @@ import {  useContext } from 'react';
 import { AtivosContext} from '../../AtivosContext';
 import { Container, Content } from './styles'
 
-
-
 export function Sumary() {
     const ativos = useContext(AtivosContext);   
 

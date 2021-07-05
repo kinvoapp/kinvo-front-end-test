@@ -12,8 +12,8 @@ export const Content = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: solid green; */
     padding: 1.5rem;
+    
 
     img {
         padding-left: 32px;
@@ -22,10 +22,8 @@ export const Content = styled.header`
     .infoHeader {
         display: flex;
         align-items: center;       
-        /* border: solid red; */
 
         .itemHeader {
-            /* border: solid yellow; */
             display: flex;
             align-items: flex-end;
             justify-content: left;
@@ -62,7 +60,6 @@ export const Content = styled.header`
         }
 
         .itemMenu {
-            /* border: solid blueviolet; */
             display: flex;
             align-items: flex-end;
             justify-content: left;

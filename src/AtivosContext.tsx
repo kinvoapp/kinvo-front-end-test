@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import api from './services/api';
 
+//TIPAGEM DOS DADOS DA API
 interface APIDataProps {
     snapshotByProduct: [
       {
@@ -37,8 +38,11 @@ interface AtivosProviderProps {
     children: ReactNode;
 }
 
+//CRIAÇÃO DO CONTEXTO
 export const AtivosContext = createContext<APIDataProps>({} as APIDataProps);
 
+
+//CRIAÇÃO DO PROVIDER QUE PASSARÁ TODO O CONTEXTO OS COMPONENTES FILHOS
 export function AtivosProvider({ children }: AtivosProviderProps) {
     const [ativos, setAtivos] = useState<APIDataProps>({} as APIDataProps);
      
