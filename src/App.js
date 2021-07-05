@@ -15,10 +15,13 @@ const App = () => {
   const [type, setType] = useState('OrdenarPor');
   const [search, setSearch] = useState('');
   const selectOptions = [
-    {
-      name: 'Data de expiração',
-      value: 'due-date',
-    },
+    { name: 'Valor Investido', value: 'position.valueApplied' },
+    { name: 'Saldo Bruto', value: 'position.equity' },
+    { name: 'Rentabilidade', value: 'position.profitability' },
+    { name: '% da Carteira', value: 'position.portfolioPercentage' },
+    { name: 'Indexer', value: 'position.indexerValue' },
+    { name: '% Sobre Indexer', value: 'position.percentageOverIndexer' },
+    { name: 'Data de expiração', value: 'due.daysUntilExpiration' },
   ];
 
   return (
