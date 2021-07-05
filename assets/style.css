@@ -56,22 +56,31 @@ span{
 .aba-lateral{
     width: 100%;
     height: 67px;
+    display: flex;
     background-color: #F8FAFB; 
 }
 
+
+
+.aba-lateral > div{
+    flex: 1;
+}
+
 .logo-lateral{
-    float: left;
-    border: 1px solid blue;
     margin-top: 16px;
-    margin-left: 14px;
+    margin-left: 11px;
+}
+
+.lateral-simbol{
+    display: grid;
+    place-items: center;
 }
 
 .logo-txt{
-    float: right;
-    font-size: 13px;
+    font-size: 10px;
+    margin-top: 16px;
+    margin-right: 50px;
     color: #707B81;
-    margin-left: 52px;
-    border: 1px solid red;
 }
 
 .img-lateral{
