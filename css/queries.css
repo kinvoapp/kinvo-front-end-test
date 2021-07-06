@@ -2,6 +2,7 @@
   #header {
     position: inherit;
     margin: 0;
+    z-index: 999999;
   }
 
   #header .infos-header .info-header {
@@ -20,6 +21,23 @@
   main .sidebar {
     width: 100%;
     min-height: 0;
+    display: none;
+    animation: move 500ms ease-in-out;
+  }
+
+  main .sidebar.active {
+    display: block;
+  }
+
+  @keyframes move {
+    from {
+      opacity: 0;
+      margin-top: -536px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
   }
 
   #fixed-income h2 {

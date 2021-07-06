@@ -106,7 +106,7 @@ main .sidebar ul li.dropdown .nodrop-content:hover {
 
 main .sidebar ul li.dropdown .dropdown-content {
   display: none;
-  animation: slidein 0.3s ease-in-out;
+  animation: slidein 500ms ease-in-out;
 }
 
 main .sidebar ul li.dropdown .dropdown-content li {
@@ -145,10 +145,12 @@ main .sidebar ul li.dropdown .dropdown-content li::before {
 
 @keyframes slidein {
   from {
-    opacity: 0;
+    opacity: 0.5;
+    margin-left: -536px;
   }
   to {
     opacity: 1;
+    margin-left: 0;
   }
 }
 
