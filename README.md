@@ -1,8 +1,27 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
 
-# Desafio Front-end Web
+# Desafio técnico para vaga de Front-End Junior!
 
-Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga.
+### Tecnologias e Bibliotecas Utilizadas:
+
+- Html;
+- CSS;
+- Javascript;
+- ApexChart (gráficos);
+- FontAwesome 5.15.
+
+# Sobre a aplicação:
+
+- Esta totalmente responsiva (Capaz de se adaptar a diferentes tipos de telas);
+- Possui filtro de pesquisa por título na sessão "Minhas Rendas Fixas";
+- Possui ordenação dos cards por ordem alfabética;
+- Todos os Dados estã sendo requisitados de uma api externa (`https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`);
+
+![gif da aplicação](https://github.com/Gabrielhidro/kinvo-front-end-test/blob/master/readme.gif)
+
+#  Instruções do desafio Front-end Web
+
+Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga .
 
 ## Instruções:
 
@@ -16,17 +35,17 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 
 ### ○ Trainee/Estágio
 
-- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto;
+- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto; [x]
 
 ### ○ Junior
 
-- Todos os requisitos exigidos para o nível Estágio/Trainee;
-- Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`;
-- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
+- Todos os requisitos exigidos para o nível Estágio/Trainee; [x]
+- Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`; [x]
+- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor; [x]
 
 ### ○ Pleno
 
-- Todos os requisitos exigidos para o nível Junior;
+- Todos os requisitos exigidos para o nível Junior; 
 - Fazer uso da biblioteca [React](https://pt-br.reactjs.org/);
 - Fazer uso da biblioteca [Styled Components](https://styled-components.com/);
 - Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
