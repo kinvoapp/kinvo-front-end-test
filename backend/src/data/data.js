@@ -6,4 +6,4 @@ async function pegarDados()
     return api_completa;
 }
 
-module.exports = {pegarDados};
+module.exports = { pegarDados };

@@ -1,8 +1,8 @@
 const express = require('express');
-const { ordenarDados } = require('./controller/controller')
+const { retornarDados } = require('./controller/controller')
 
 const router = express();
 
-router.get('/', ordenarDados);
+router.get('/', retornarDados);
 
 module.exports = router;
