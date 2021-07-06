@@ -1,6 +1,25 @@
 > ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
 
-#  Desafio Front-end Web
+# Desafio técnico para vaga de Front-End Junior!
+
+### Tecnologias e Bibliotecas Utilizadas:
+
+- Html;
+- CSS;
+- Javascript;
+- ApexChart (gráficos);
+- FontAwesome 5.15.
+
+# Sobre a aplicação:
+
+- Esta totalmente responsiva (Capaz de se adaptar a diferentes tipos de telas);
+- Possui filtro de pesquisa por título na sessão "Minhas Rendas Fixas";
+- Possui ordenação dos cards por ordem alfabética;
+- Todos os Dados estã sendo requisitados de uma api externa (`https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`);
+
+![gif da aplicação]()
+
+#  Instruções do desafio Front-end Web
 
 Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga .
 
