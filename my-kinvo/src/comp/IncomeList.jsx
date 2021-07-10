@@ -10,16 +10,12 @@ class IncomeList extends React.Component {
     const { incomesToRender } = this.props;
     return (
       <div data-testid="income-list" className="income-list">
-        { incomesToRender && incomesToRender.map((income) => (
+        { incomesToRender && incomesToRender.map((income, index) => (
+        <div className="income">
           <IncomeTitleCard key={ income.fixedIncome.portfolioProductId } income={ income } />
-        )) }
-
-        {incomesToRender && incomesToRender.map((income) => (
           <IncomePositionCard key={ income.position.equity } income={ income } />
-        ))}
-
-        {incomesToRender && incomesToRender.map((income, index) => (
           <IncomeDueCard key={ index } income={ income } />
+          </div>
         ))}
       </div>
     );
