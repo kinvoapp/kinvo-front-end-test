@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #ffffff;
-  height: 100%;
+  min-height: 100%;
   width: 227px;
   flex-shrink: 0;
 `;
@@ -18,13 +18,15 @@ type ListItemContainerProps = {
   bullet?: boolean;
 };
 export const ListItemContainer = styled.li<ListItemContainerProps>`
-  ${p => p.isActive && `background: #F8FAFB;` }
-  height: ${p => p.height ?? `67px` };
-  border-bottom: 0.5px solid #CCCFD1;
-  
+  ${(p) => p.isActive && `background: #F8FAFB;`}
+  height: ${(p) => p.height ?? `67px`};
+  border-bottom: 0.5px solid #cccfd1;
+
   position: relative;
-  
-  ${p => p.bullet && `
+
+  ${(p) =>
+    p.bullet &&
+    `
       ::before {
         background-color: #4C309B;
         border-radius: 100%;
@@ -37,8 +39,7 @@ export const ListItemContainer = styled.li<ListItemContainerProps>`
         transform: translateY(-50%);
         width: 6px;
       }
-  ` }
-
+  `}
 `;
 
 export const ListItemLink = styled.a`
@@ -47,7 +48,7 @@ export const ListItemLink = styled.a`
   padding: 15px;
 
   span.label {
-    color: #707B81;
+    color: #707b81;
     font-size: 13px;
     margin: 0 15px;
     flex-grow: 1;
