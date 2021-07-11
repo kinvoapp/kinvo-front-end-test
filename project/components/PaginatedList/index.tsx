@@ -27,6 +27,7 @@ function PaginatedList<T = any>({
       <Box justifyContent="center" margin="12px 0 0">
         {Array.from({ length: pagesAmount }).map((page, idx) => (
           <PageButton
+            key={idx}
             isActive={idx + 1 === currentPage}
             onClick={() => onPageChange && onPageChange(idx + 1)}
           >

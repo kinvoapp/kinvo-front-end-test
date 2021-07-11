@@ -30,8 +30,6 @@ function Select({ options, onChange, defaultLabel, ...props }: SelectProps) {
             {option.label}
           </StyledOption>
         ))}
-        {/* <option value="">Nome</option>
-        <option value="">Valor Inves.</option> */}
       </StyledSelect>
     </Container>
   );
