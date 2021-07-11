@@ -1,13 +1,13 @@
 .container {
   align-items: flex-start;
-  background-color: #EEF2F4;
+  background-color: #eef2f4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
 }
 
-.content-container {
+.contentContainer {
   display: flex;
   flex-grow: 1;
   width: 100%;
@@ -17,4 +17,58 @@
   flex-grow: 1;
   height: 100%;
   width: 100%;
+  padding: 20px;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 24px 0;
+}
+
+@media screen and (max-width: 765px) {
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .highlights {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.fixedIncomeContainer {
+  margin: 15px 0;
+}
+
+.portfolioChartsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.myFixedIcomesCardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myFixedIcomesListContainer {
+}
+
+.myFixedIcomesList {
+  display: grid;
+  grid-template-columns: 3fr 5fr 2fr;
+  gap: 10px;
+}
+
+.myFixedIcomesListContainer > * {
+  flex-basis: auto;
+  padding: 20px 0;
+}
+
+.fixedIcomeDetailContainer {
+  display: grid;
+  grid-auto-columns: 1fr;
 }
