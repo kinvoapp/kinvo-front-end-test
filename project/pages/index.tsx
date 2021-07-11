@@ -313,12 +313,18 @@ export default function Home() {
           </div>
           <div className={styles.portfolioChartsContainer}>
             <Card height="448px">
+              <Typo.Title variant="h2">
+                Divisão de Carteira por Tipos
+              </Typo.Title>
               <ProductEquityChart
                 productEquities={productEquities}
                 pieChartColors={pieChartColors}
               />
             </Card>
             <Card height="448px">
+              <Typo.Title variant="h2">
+                Divisão de Carteira por Título
+              </Typo.Title>
               <ProductTypeChart
                 productTypes={productTypes}
                 pieChartColors={pieChartColors}
