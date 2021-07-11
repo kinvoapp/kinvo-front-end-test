@@ -20,7 +20,7 @@ function ProductTypeChart({ productTypes, pieChartColors }: Props) {
           fill="#8884d8"
           dataKey="value"
         >
-          {productTypes.map((_, index) => (
+          {productTypes?.map((_, index) => (
             <Cell
               key={`cell-${index}`}
               fill={pieChartColors[index % pieChartColors.length]}

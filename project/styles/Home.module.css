@@ -54,13 +54,11 @@
   justify-content: space-between;
 }
 
-.myFixedIcomesListContainer {
-}
-
 .myFixedIcomesList {
   display: grid;
   grid-template-columns: 3fr 5fr 2fr;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .myFixedIcomesListContainer > * {
