@@ -39,6 +39,14 @@
   }
 }
 
+.highlightBar {
+  background-color: #dae0e3;
+  border-radius: 100px;
+  height: 39px;
+  width: 2px;
+  margin-right: 8px;
+}
+
 .fixedIncomeContainer {
   margin: 15px 0;
 }

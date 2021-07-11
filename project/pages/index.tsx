@@ -134,64 +134,96 @@ export default function Home() {
           <Typo.Title>Renda Fixa</Typo.Title>
           <div className={styles.highlights}>
             <Card>
-              <Typo.Text textTransform="uppercase">Saldo Bruto</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.equity
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">Saldo Bruto</Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.equity
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
             <Card>
-              <Typo.Text textTransform="uppercase">Valor aplicado</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.valueApplied
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">
+                    Valor aplicado
+                  </Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.valueApplied
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
             <Card>
-              <Typo.Text textTransform="uppercase">Resultado</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.equityProfit
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">Resultado</Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.equityProfit
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
             <Card>
-              <Typo.Text textTransform="uppercase">Rentabilidade</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.percentageProfit
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">Rentabilidade</Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.percentageProfit
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
             <Card>
-              <Typo.Text textTransform="uppercase">cdi</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.indexerValue
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">cdi</Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.indexerValue
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
             <Card>
-              <Typo.Text textTransform="uppercase">% sobre cdi</Typo.Text>
-              <Typo.Text variant="tinted">
-                {isLoading ? (
-                  <Skeleton />
-                ) : (
-                  data.data?.snapshotByPortfolio.percentageOverIndexer
-                )}
-              </Typo.Text>
+              <Box justifyContent="flex-start" alignItems="center">
+                <div className={styles.highlightBar} />
+                <Box flexDirection="column" alignItems="flex-start">
+                  <Typo.Text textTransform="uppercase">% sobre cdi</Typo.Text>
+                  <Typo.Text variant="tinted">
+                    {isLoading ? (
+                      <Skeleton />
+                    ) : (
+                      data.data?.snapshotByPortfolio.percentageOverIndexer
+                    )}
+                  </Typo.Text>
+                </Box>
+              </Box>
             </Card>
           </div>
           <Card height="348px" padding="8px 12px">
