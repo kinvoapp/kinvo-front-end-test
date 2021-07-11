@@ -23,8 +23,8 @@ function FixedIncomeCard({ details = [], title, defaultTintColor }: Props) {
           <Typo.Text textTransform="uppercase">{title}</Typo.Text>
         </Box>
         <Box justifyContent="space-between">
-          {details.map((detail) => (
-            <Box flexDirection="column">
+          {details.map((detail, idx) => (
+            <Box key={idx} flexDirection="column">
               <Typo.Text textTransform="uppercase">{detail.label}</Typo.Text>
               <Typo.Text fontSize={16} color={detail.color ?? defaultTintColor}>
                 {detail.value}

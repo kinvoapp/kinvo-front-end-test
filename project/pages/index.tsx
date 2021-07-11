@@ -231,7 +231,10 @@ export default function Home() {
                     onPageChange={setPage}
                     total={filteredProducts.length}
                     renderItem={(product) => (
-                      <div className={styles.myFixedIcomesList}>
+                      <div
+                        key={product.fixedIncome.portfolioProductId}
+                        className={styles.myFixedIcomesList}
+                      >
                         <Box>
                           <Card width="100%" variant="outline">
                             <Box margin="0 0 10px">

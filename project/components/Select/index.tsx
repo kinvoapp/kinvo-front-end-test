@@ -25,8 +25,10 @@ function Select({ options, onChange, defaultLabel, ...props }: SelectProps) {
     <Container {...props}>
       <StyledSelect defaultValue="" onChange={onChange}>
         {defaultLabel && <option value="">{defaultLabel}</option>}
-        {options.map((option) => (
-          <StyledOption value={option.value}>{option.label}</StyledOption>
+        {options.map((option, idx) => (
+          <StyledOption key={idx} value={option.value}>
+            {option.label}
+          </StyledOption>
         ))}
         {/* <option value="">Nome</option>
         <option value="">Valor Inves.</option> */}
