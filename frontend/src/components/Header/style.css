@@ -1,0 +1,50 @@
+*
+{
+    margin: 0;
+    size: 10px;
+}
+
+.cabecalho
+{    
+    display: flex;
+    align-items: center;
+    
+    background-color: whitesmoke;
+    
+    padding: 4vh;
+    margin-bottom: 2.5vh;
+}
+
+.menu
+{
+    display: flex;
+
+    margin-left: auto;
+    margin-right: 2.5vh;
+}
+
+.item-menu
+{
+    display: grid;
+    
+    column-gap: 2.5vh;
+    margin-right: 5vh;
+    
+    grid-template-areas: "img nome" "img value";
+}
+
+.imagem
+{
+    grid-area: img;
+    align-self: center;
+}
+
+.texto
+{
+    grid-area: nome;
+}
+
+.valor
+{
+    grid-area: value;
+}
