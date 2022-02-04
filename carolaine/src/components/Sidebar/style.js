@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Aside = styled.aside`
   background: var(--cor-fundo);
-  width: 20%;
+  width: 22%;
 `;
 
 export const Lista = styled.ul`
