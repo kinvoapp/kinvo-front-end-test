@@ -1,55 +1,34 @@
-> ![Logo Kinvo](https://github.com/cbfranca/kinvo-front-end-test/blob/master/logo.svg)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Desafio Front-end Web
+## Getting Started
 
-Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de candidatos à vagas de Desenvolvedor Front-end voltadas para o desenvolvimento web, independente da senioridade. O nível de exigência da avaliação se adequa ao nível da vaga.
+First, run the development server:
 
-## Instruções:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-1. Faça um fork deste repositório;
-2. Implemente o que é proposto no [protótipo](https://github.com/kinvoapp/kinvo-front-end-test/blob/master/material/layout.xd). **! Importante !** A implementação dos gráficos é opcional para candidatos a vagas de nível trainee/estágio, junior e pleno;
-3. O conjunto mínimo de tecnologias a ser utilizado é HTML, CSS e JS (ES6);
-4. Crie um passo a passo de como rodar sua aplicação ([sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md));
-5. Após terminar, submeta um pull request e aguarde a avaliação;
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Requisitos mínimos:
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### ○ Trainee/Estágio
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-- Permitir a filtragem de produtos na seção **Minhas Rendas Fixas** a partir de buscas realizadas no campo de texto;
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### ○ Junior
+## Learn More
 
-- Todos os requisitos exigidos para o nível Estágio/Trainee;
-- Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`;
-- Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
+To learn more about Next.js, take a look at the following resources:
 
-### ○ Pleno
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- Todos os requisitos exigidos para o nível Junior;
-- Fazer uso da biblioteca [React](https://pt-br.reactjs.org/);
-- Fazer uso da biblioteca [Styled Components](https://styled-components.com/);
-- Paginar produtos (5 por página) na seção **Minhas Rendas Fixas**;
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### ○ Sênior/Analista
+## Deploy on Vercel
 
-- Todos os requisitos exigidos para o nível Pleno;
-- Projetar arquitetura minimamente escalável;
-- Cobertura de testes utilizando o framework de sua preferência. [Jest](https://jestjs.io/) e [Enzyme](https://enzymejs.github.io/enzyme/) são as nossas sugestões;
-- Gráficos funcionais utilizando a biblioteca de sua preferência. [Highcharts](https://www.highcharts.com/) é a nossa sugestão;
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Notas:
-
-- **! Importante !** O cumprimento dos requisitos solicitados para uma vaga em determinado nível não é garantia de aprovação. Focamos em avaliar a forma como os requisitos foram cumpridos.
-- Apesar da listagem de requisitos mínimos acima, caso não tenha tido tempo suficiente ou tenha se esbarrado em alguma dificuldade, entregue o desafio ainda que incompleto e conte-nos na descrição do pull request quais foram as suas maiores dificuldades.
-  Não se preocupe, avaliaremos ainda assim! :)
-- O protótipo é disponibilizado no formato de arquivo Adobe XD e está disponível em [/material](/material) ou a partir [deste link](https://xd.adobe.com/view/efae346e-370a-4a7a-9037-43510c4c8028-bafd/);
-- Caso não tenha familiaridade com o Adobe XD, os ativos do protótipo podem ser exportados utilizando o atalho **CTRL + E** ou **CMD + E**. Caso o seu sistema operacional não seja compatível com o software, você pode acessar o protótipo também através do link citado no item anterior;
-- As bibliotecas e demais recursos sugeridos por nós em todos os níveis de exigência são meras sugestões (com exceção do React). Sinta-se a vontade para fazer a escolha que te deixa mais confortável e inclusive para sugerir ;);
-- Lembre-se de fazer um _fork_ deste repositório! Apenas cloná-lo vai te impedir de criar o _pull request_ e dificultar a entrega;
-
----
-
-Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Crie uma [issue](https://github.com/kinvoapp/kinvo-front-end-test/issues) e descreva o que achar necessário.
-
-**Sucesso!**
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
