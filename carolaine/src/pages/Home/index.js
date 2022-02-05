@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
-import Rendas from "../../components/Rendas";
+import Incomes from "../../components/Incomes";
 import {
   Main,
   Container,
@@ -80,7 +80,7 @@ const Home = () => {
             <p>gráfico</p>
           </Rentabilidade>
 
-          <Rendas data={dados} />
+          <Incomes data={dados} />
 
           <Colunas>
             <Rentabilidade>

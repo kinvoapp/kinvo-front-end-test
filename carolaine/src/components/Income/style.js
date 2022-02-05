@@ -72,5 +72,5 @@ export const ClassLabel = styled.div`
 export const Class = styled.div`
   font-weight: 700;
   font-size: 14px;
-  color: var(--cor-realce-um);
+  color: var(--cor-realce-quatro);
 `;

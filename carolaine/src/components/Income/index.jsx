@@ -10,9 +10,9 @@ import {
 } from "./style";
 import { AiOutlineInfoCircle as InfoIcon } from "react-icons/ai";
 
-const Renda = ({ income }) => {
-  const className = income.fixedIncome.bondType;
-  const title = income.fixedIncome.name;
+const Income = ({ data }) => {
+  const className = data.fixedIncome.bondType;
+  const title = data.fixedIncome.name;
 
   // console.log(income.fixedIncome);
 
@@ -59,4 +59,4 @@ const Renda = ({ income }) => {
   );
 };
 
-export default Renda;
+export default Income;
