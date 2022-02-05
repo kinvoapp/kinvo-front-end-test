@@ -1,4 +1,4 @@
-type ColorName =
+export type ColorName =
   | "primary"
   | "secondary"
   | "tertiary"
@@ -9,15 +9,18 @@ type ColorName =
   | "disabled"
   | "text";
 
-interface Color {
-  lightest?: string;
-  lighter?: string;
-  light?: string;
-  main?: string;
-  dark?: string;
-  darker?: string;
-  darkest?: string;
-}
+export type ColorShade =
+  | "lightest"
+  | "lighter"
+  | "light"
+  | "main"
+  | "dark"
+  | "darker"
+  | "darkest";
+
+type Color = {
+  [name in ColorShade]?: string;
+};
 
 export type ColorTheme = {
   [name in ColorName]: Color;
