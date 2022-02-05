@@ -9,7 +9,7 @@ export const RendaContainer = styled.div`
 export const Item = styled.div`
   border: 1px solid #dae0e3;
   border-radius: 10px;
-  padding: 8px;
+  padding: 10px;
   flex: ${(props) => {
     switch (props.$mode) {
       case "title":
@@ -47,11 +47,26 @@ export const Title = styled.div`
   }
 `;
 
+export const Columns = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const Texto = styled.div`
   font-size: 12px;
   font-weight: 600;
+  margin-right: 10px;
+  flex: 1 0 75%;
 `;
 
-export const Classe = styled.div``;
+export const ClassLabel = styled.div`
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+`;
 
-export const Columns = styled.div``;
+export const Class = styled.div`
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--cor-realce-um);
+`;

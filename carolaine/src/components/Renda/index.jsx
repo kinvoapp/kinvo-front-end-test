@@ -1,5 +1,13 @@
 import React from "react";
-import { RendaContainer, Item, Title, Columns, Texto, Classe } from "./style";
+import {
+  RendaContainer,
+  Item,
+  Title,
+  Columns,
+  Texto,
+  ClassLabel,
+  Class,
+} from "./style";
 import { AiOutlineInfoCircle as InfoIcon } from "react-icons/ai";
 
 const Renda = ({ income }) => {
@@ -17,18 +25,23 @@ const Renda = ({ income }) => {
         </Title>
         <Columns>
           <Texto>{title}</Texto>
-          <Classe></Classe>
+          <div>
+            <ClassLabel>Classe</ClassLabel>
+            <Class>{className}</Class>
+          </div>
         </Columns>
       </Item>
 
       <Item $mode="position">
-        <Title>
-          <span>Minha Posição</span>
-          <InfoIcon />
-        </Title>
         <Columns>
-          <Texto></Texto>
-          <Classe></Classe>
+          <Title>
+            <span>Minha Posição</span>
+            <InfoIcon />
+          </Title>
+          <div>
+            <ClassLabel></ClassLabel>
+            <Class></Class>
+          </div>
         </Columns>
       </Item>
 
@@ -39,7 +52,7 @@ const Renda = ({ income }) => {
         </Title>
         <Columns>
           <Texto></Texto>
-          <Classe></Classe>
+          <Class></Class>
         </Columns>
       </Item>
     </RendaContainer>
