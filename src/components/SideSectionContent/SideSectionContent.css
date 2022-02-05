@@ -1,0 +1,40 @@
+.side-section-content {
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid #cccfd1;
+
+  text-align: left;
+  font: normal normal medium 13px/16px Montserrat;
+  color: #707b81;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.section-icon-area {
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title-area {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-expand {
+  width: 20%;
+  /* padding: 10px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
