@@ -1,11 +1,11 @@
 header {
-  height: 90px;
-
   background-color: #fff;
 
   display: flex;
 
   box-shadow: 0 0 20px rgb(240, 240, 240);
+
+  grid-area: Header;
 }
 
 .icon {
