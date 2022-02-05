@@ -53,7 +53,7 @@ const theme: Themes = {
     warning: {},
     background: {
       lighter: "#ffffff",
-      light: "##F8FAFB",
+      light: "#F8FAFB",
       main: "#EEF2F4",
       dark: "#DAE0E3",
     },
