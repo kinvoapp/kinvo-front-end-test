@@ -53,14 +53,41 @@ export const Title = styled.div`
 
 export const Columns = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => {
+    switch (props.$mode) {
+      case "two-columns":
+        return `space-between`;
+
+      case "six-columns":
+        return `flex-start`;
+    }
+  }};
+
+  div {
+    flex: ${(props) => {
+      switch (props.$mode) {
+        case "two-columns":
+          return `0 0 calc(50% - 5px)`;
+
+        case "six-columns":
+          return `0 0 calc(100% / 6)`;
+      }
+    }};
+  }
+
+  div:nth-of-type(1) {
+    flex: ${(props) => (props.altMode ? "0 0 30%" : null)};
+  }
+
+  h3 {
+    flex: ${(props) => (props.altMode ? "0 0 70%" : null)};
+  }
 `;
 
-export const Texto = styled.div`
+export const Texto = styled.h3`
   font-size: 12px;
   font-weight: 600;
-  margin-right: 10px;
-  flex: 1 0 75%;
+  margin: 0 10px 0 0;
 `;
 
 export const ClassLabel = styled.div`
@@ -72,5 +99,18 @@ export const ClassLabel = styled.div`
 export const Class = styled.div`
   font-weight: 700;
   font-size: 14px;
-  color: var(--cor-realce-quatro);
+  width: 98%;
+  word-break: break-word;
+  color: ${(props) => {
+    switch (props.$mode) {
+      case "title":
+        return `var(--cor-realce-quatro)`;
+
+      case "position":
+        return `var(--cor-realce-seis)`;
+
+      case "due":
+        return `var(--cor-realce-cinco)`;
+    }
+  }};
 `;

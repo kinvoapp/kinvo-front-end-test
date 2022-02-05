@@ -29,26 +29,6 @@ const Header = (props) => {
         return aux;
       });
       setRentabilidade(props.data.data.snapshotByPortfolio.percentageProfit);
-
-      // setValorAplicado(() => {
-      //   props.data.data.snapshotByProduct.forEach((item) => {
-      //     aux += item.position.valueApplied;
-      //     valorFixado = aux.toFixed(2);
-      //   });
-
-      //   return valorFixado;
-      // });
-
-      // setSaldoBruto(() => {
-      //   console.log();
-      //   props.data.data.snapshotByProduct.forEach((item) => {
-      //     // console.log(item.position.portfolioPercentage);
-      //     aux += item.position.equity;
-      //     valorFixado = aux.toFixed(2);
-      //   });
-
-      //   return valorFixado;
-      // });
     }
   }, [props.data]);
 

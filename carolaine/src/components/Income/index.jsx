@@ -13,8 +13,15 @@ import { AiOutlineInfoCircle as InfoIcon } from "react-icons/ai";
 const Income = ({ data }) => {
   const className = data.fixedIncome.bondType;
   const title = data.fixedIncome.name;
+  const dueDate = data.due.date;
+  const daysExpiration = data.due.daysUntilExpiration;
+  const valueApplied = data.position.valueApplied.toLocaleString("pt-BR");
+  const equity = data.position.equity.toLocaleString("pt-BR");
+  const percentagePortfolio = data.position.portfolioPercentage;
+  const percentageIndexer = data.position.percentageOverIndexer;
+  const profitability = data.position.profitability;
 
-  // console.log(income.fixedIncome);
+  console.log(data.position);
 
   return (
     <RendaContainer>
@@ -23,24 +30,49 @@ const Income = ({ data }) => {
           <span>Título</span>
           <InfoIcon />
         </Title>
-        <Columns>
+        <Columns $mode="two-columns" altMode>
           <Texto>{title}</Texto>
           <div>
             <ClassLabel>Classe</ClassLabel>
-            <Class>{className}</Class>
+            <Class $mode="title">{className}</Class>
           </div>
         </Columns>
       </Item>
 
       <Item $mode="position">
-        <Columns>
-          <Title>
-            <span>Minha Posição</span>
-            <InfoIcon />
-          </Title>
+        <Title>
+          <span>Minha Posição</span>
+          <InfoIcon />
+        </Title>
+        <Columns $mode="six-columns">
           <div>
-            <ClassLabel></ClassLabel>
-            <Class></Class>
+            <ClassLabel>Valor Inves.</ClassLabel>
+            <Class $mode="position">{valueApplied}</Class>
+          </div>
+
+          <div>
+            <ClassLabel>Saldo Bruto</ClassLabel>
+            <Class $mode="position">{equity}</Class>
+          </div>
+
+          <div>
+            <ClassLabel>Rent.</ClassLabel>
+            <Class $mode="position">{profitability}%</Class>
+          </div>
+
+          <div>
+            <ClassLabel>% da Cart.</ClassLabel>
+            <Class $mode="position">{percentagePortfolio}%</Class>
+          </div>
+
+          <div>
+            <ClassLabel>CDI</ClassLabel>
+            <Class $mode="position">{percentagePortfolio}%</Class>
+          </div>
+
+          <div>
+            <ClassLabel>Sobre CDI</ClassLabel>
+            <Class $mode="position">{percentagePortfolio}%</Class>
           </div>
         </Columns>
       </Item>
@@ -50,9 +82,16 @@ const Income = ({ data }) => {
           <span>Vencimento</span>
           <InfoIcon />
         </Title>
-        <Columns>
-          <Texto></Texto>
-          <Class></Class>
+        <Columns $mode="two-columns">
+          <div>
+            <ClassLabel>Data venc.</ClassLabel>
+            <Class $mode="due">{dueDate}</Class>
+          </div>
+
+          <div>
+            <ClassLabel>Dias até venc.</ClassLabel>
+            <Class $mode="due">{daysExpiration}</Class>
+          </div>
         </Columns>
       </Item>
     </RendaContainer>

@@ -11,7 +11,7 @@ import { FaChevronDown as ChevronDown } from "react-icons/fa";
 
 const Incomes = ({ data }) => {
   const [rendas, setRendas] = useState(null);
-  const [sortedMode, setSortedMode] = useState();
+  const [sortedMode, setSortedMode] = useState(null);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
 
   useEffect(() => {
@@ -24,46 +24,38 @@ const Incomes = ({ data }) => {
 
   const injectIncome = () => {
     if (rendas != null) {
-      let sortedIncome;
-      // const sortValueAppliedLow = () => {};
-      console.log(rendas);
+      // console.log(rendas);
 
-      if (sortedMode === "valueApplied-low") {
-        /**
-         * Sort by valueApplied: LOW to HIGH.
-         */
-        sortedIncome = rendas.sort((a, b) => {
-          if (a.position.valueApplied > b.position.valueApplied) {
-            return 1;
-          } else if (a.position.valueApplied < b.position.valueApplied) {
-            return -1;
-          } else {
-            return 0;
-          }
-        });
+      if (sortedMode) {
+        let sortedIncome = null;
 
-        return sortedIncome.map((renda, index) => (
-          <Income data={renda} key={index} />
-        ));
-      } else if (sortedMode === "valueApplied-high") {
-        /**
-         * Sort by valueApplied: HIGH to LOW.
-         */
-        sortedIncome = rendas.sort((a, b) => {
-          if (a.position.valueApplied > b.position.valueApplied) {
-            return -1;
-          } else if (a.position.valueApplied < b.position.valueApplied) {
-            return 1;
-          } else {
-            return 0;
-          }
-        });
+        if (sortedMode === "valueApplied-low") {
+          // Sort by valueApplied: LOW to HIGH.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.valueApplied > b.position.valueApplied) {
+              return 1;
+            } else if (a.position.valueApplied < b.position.valueApplied) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+        } else if (sortedMode === "valueApplied-high") {
+          // Sort by valueApplied: HIGH to LOW.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.valueApplied > b.position.valueApplied) {
+              return -1;
+            } else if (a.position.valueApplied < b.position.valueApplied) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+        }
 
         return sortedIncome.map((renda, index) => (
-          <Income data={renda} key={index} />
-        ));
-      } else if (sortedMode === "default") {
-        return rendas.map((renda, index) => (
           <Income data={renda} key={index} />
         ));
       } else {
@@ -97,11 +89,6 @@ const Incomes = ({ data }) => {
               {showFilterOptions ? (
                 <ol>
                   <FilterOption>
-                    <a onClick={() => setSortedMode("default")}>
-                      <b>Padrão</b>
-                    </a>
-                  </FilterOption>
-                  <FilterOption>
                     <a onClick={() => setSortedMode("valueApplied-low")}>
                       <b>Valor Aplicado:</b> Baixo ao Alto
                     </a>
@@ -109,6 +96,16 @@ const Incomes = ({ data }) => {
                   <FilterOption>
                     <a onClick={() => setSortedMode("valueApplied-high")}>
                       <b>Valor Aplicado:</b> Alto ao Baixo
+                    </a>
+                  </FilterOption>
+                  <FilterOption>
+                    <a onClick={() => setSortedMode("profitability-low")}>
+                      <b>Lucratividade:</b> Baixo ao Alto
+                    </a>
+                  </FilterOption>
+                  <FilterOption>
+                    <a onClick={() => setSortedMode("profitability-high")}>
+                      <b>Lucratividade:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
                 </ol>

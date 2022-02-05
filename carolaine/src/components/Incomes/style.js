@@ -49,11 +49,16 @@ export const Filter = styled.div`
     margin-top: 5px;
     background: var(--cor-fundo);
     border: 1px solid #d6d9dd;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 8%);
     border-radius: 10px;
   }
 
   ol li {
     border-bottom: 1px solid #d6d9dd;
+  }
+
+  ol li:last-child {
+    border-bottom: none;
   }
 `;
 export const FilterOption = styled.li`
@@ -62,5 +67,6 @@ export const FilterOption = styled.li`
     display: ${(props) => (props.filterTitle ? "flex" : "block")};
     justify-content: space-between;
     align-items: center;
+    font-weight: ${(props) => (props.filterTitle ? "600" : "400")};
   }
 `;
