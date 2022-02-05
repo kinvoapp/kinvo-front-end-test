@@ -5,6 +5,7 @@ export const RendasContainer = styled.div`
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 5%);
   border-radius: 10px;
   margin-top: 22px;
+  overflow: hidden;
 `;
 
 export const Title = styled.h2`

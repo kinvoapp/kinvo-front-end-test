@@ -4,6 +4,10 @@ export const RendaContainer = styled.div`
   display: flex;
   padding: 20px;
   border-bottom: 1px solid #eef2f4;
+
+  &:nth-of-type(even) {
+    background: #f8fafb;
+  }
 `;
 
 export const Item = styled.div`
