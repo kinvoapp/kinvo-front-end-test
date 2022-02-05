@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
   Cabecalho,
@@ -7,42 +6,51 @@ import {
   Texto,
   Titulo,
   Valor,
-  Logo,
 } from "./style";
 
-const Header = () => {
-  // const [dados, setDados] = useState();
+const Header = (props) => {
   const [saldoBruto, setSaldoBruto] = useState();
   const [valorAplicado, setValorAplicado] = useState(0);
-  // const [rendas, setRendas] = useState();
-  let rendas,
-    aux = 0;
+  const [rentabilidade, setRentabilidade] = useState(0);
 
   useEffect(() => {
-    const fetchDados = async () => {
-      await axios
-        .get(
-          "https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData"
-        )
-        .then(function (response) {
-          setDados(response.data);
-        });
-    };
+    if (typeof props.data !== "undefined") {
+      let aux = 0,
+        valorFixado = 0;
 
-    fetchDados();
-  }, []);
-
-  const setDados = (dados) => {
-    rendas = dados.data.snapshotByProduct;
-    rendas.forEach((renda) => {
-      setValorAplicado((state) => {
-        console.log(renda.position.valueApplied);
-        return state + renda.position.valueApplied;
+      setValorAplicado(() => {
+        aux = props.data.data.snapshotByPortfolio.valueApplied;
+        aux = aux.toLocaleString("pt-BR");
+        return aux;
       });
-    });
+      setSaldoBruto(() => {
+        aux = props.data.data.snapshotByPortfolio.equity;
+        aux = aux.toLocaleString("pt-BR");
+        return aux;
+      });
+      setRentabilidade(props.data.data.snapshotByPortfolio.percentageProfit);
 
-    console.log(valorAplicado);
-  };
+      // setValorAplicado(() => {
+      //   props.data.data.snapshotByProduct.forEach((item) => {
+      //     aux += item.position.valueApplied;
+      //     valorFixado = aux.toFixed(2);
+      //   });
+
+      //   return valorFixado;
+      // });
+
+      // setSaldoBruto(() => {
+      //   console.log();
+      //   props.data.data.snapshotByProduct.forEach((item) => {
+      //     // console.log(item.position.portfolioPercentage);
+      //     aux += item.position.equity;
+      //     valorFixado = aux.toFixed(2);
+      //   });
+
+      //   return valorFixado;
+      // });
+    }
+  }, [props.data]);
 
   return (
     <Cabecalho>
@@ -63,7 +71,7 @@ const Header = () => {
           </figure>
           <Texto>
             <Titulo>Saldo Bruto</Titulo>
-            <Valor>130.521.230,02</Valor>
+            <Valor>{saldoBruto}</Valor>
           </Texto>
         </NavegacaoItem>
 
@@ -89,7 +97,7 @@ const Header = () => {
           </figure>
           <Texto>
             <Titulo>Rentabilidade</Titulo>
-            <Valor>130.521.230,02</Valor>
+            <Valor>{rentabilidade}%</Valor>
           </Texto>
         </NavegacaoItem>
 

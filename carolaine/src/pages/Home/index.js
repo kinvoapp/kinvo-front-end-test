@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import Rendas from "../../components/Rendas";
@@ -14,11 +14,30 @@ import {
   Rentabilidade,
   Colunas,
 } from "./style";
+import axios from "axios";
 
 const Home = () => {
+  const [dados, setDados] = useState();
+
+  useEffect(() => {
+    const fetchDados = async () => {
+      await axios
+        .get(
+          "https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData"
+        )
+        .then(function (response) {
+          setDados((state) => {
+            return response.data;
+          });
+        });
+    };
+
+    fetchDados();
+  }, []);
+
   return (
     <>
-      <Header />
+      <Header data={dados} />
       <Main>
         <Sidebar />
         <Container>
@@ -61,10 +80,7 @@ const Home = () => {
             <p>gráfico</p>
           </Rentabilidade>
 
-          <Rentabilidade>
-            <Title>Minhas Rendas Fixas</Title>
-            <Rendas />
-          </Rentabilidade>
+          <Rendas data={dados} />
 
           <Colunas>
             <Rentabilidade>
