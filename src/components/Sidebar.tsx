@@ -13,7 +13,7 @@ const SidebarWrapper = styled.aside`
   flex-direction: column;
   justify-content: flex-start
   align-items: stretch;
-  width: 14rem;
+  width: 16rem;
   background: linear-gradient(to bottom, ${props => getTheme(props).background.lighter}, ${props => getTheme(props).background.lightest} 4rem)
 `;
 
@@ -27,7 +27,7 @@ const SidebarItemWrapper = styled.div.attrs(props => ({
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     border-bottom: ${props => getTheme(props).background.main} solid 2px;
     background-color: ${props => props.hover || props.active ? getTheme(props).background.light : "transparent"};
     cursor: ${props => props.active ? "default" : "pointer"};

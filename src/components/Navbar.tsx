@@ -51,7 +51,7 @@ function NavbarInfo({iconSrc, title, value, type}: NavbarInfoProps) {
     <>
       <NavbarInfoWrapper button={type === "button"}>
         <div>
-          <Icon src={iconSrc} color={type === "info" ? "background" : "primary"} shade={type === "info" ? "dark" : "main"} />
+          <Icon button={type === "button"} src={iconSrc} color={type === "info" ? "background" : "primary"} shade={type === "info" ? "dark" : "main"} />
         </div>
         <div>
           <Text style={{ textTransform: "uppercase", fontSize: "0.5rem", lineHeight: "0.5rem" }}>{title}</Text><br/>
@@ -96,7 +96,7 @@ export function Navbar() {
         <Image src={logo} alt="Kinvo Premium" />
         <NavbarButtons>
           { menu.map((props, index) => <NavbarInfo {...props} key={index} />)}
-          <Icon src={hamburgerMenuIcon} />
+          <Icon button src={hamburgerMenuIcon} color="primary"/>
         </NavbarButtons>
       </NavbarWrapper>
     </>

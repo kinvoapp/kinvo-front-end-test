@@ -10,6 +10,7 @@ export interface IconProps {
   shade?: ColorShade;
   size?: number;
   alt?: string;
+  button?: boolean
 }
 
 export const FilledCircle = styled.div.attrs(props => ({
@@ -43,11 +44,11 @@ const IconSvg = styled(Image)`
   height: 100%;
 `
 
-export function Icon({ src, color, shade = "main", size = 1.5, alt = "" }: IconProps) {
+export function Icon({ src, color, shade = "main", size = 1.5, alt = "", button = false }: IconProps) {
 
   return (
     <>
-      <FilledCircle color={color} size={size} shade={shade} >
+      <FilledCircle color={color} size={size} shade={shade} button={button} >
         {src ? <IconSvg src={src} alt={alt} /> : null}
       </FilledCircle>
     </>
