@@ -6,6 +6,9 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../src/styles/theme";
 import { Navbar } from "../src/components/Navbar";
 import { Sidebar } from "../src/components/Sidebar";
+import { MainContent } from '../src/components/MainContent';
+import { Text } from "../src/components/Text";
+import { Flex } from "../src/components/Flex";
 
 const Home: NextPage = () => {
   return (
@@ -16,23 +19,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme.light}>
-        <div style={{
-          display: 'flex',
-          width: '100vw',
-          minHeight: '100vh',
-          flexDirection: 'column',
-          margin: 0
-        }}>
+        <Flex direction="column" width="100vw" minHeight="100vh">
           <Navbar />
-          <div style={{
-            flexGrow: 1,
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'stretch'
-          }}>
+          <Flex grow direction="row" align="stretch">
             <Sidebar />
-          </div>
-        </div>
+            <MainContent>
+              <h3>
+                <Text color="primary">Renda fixa</Text>
+              </h3>
+              <Flex direction="row" justify="space-between" gap={1}>
+                <div>Test</div>
+                <div>Test</div>
+                <div>Test</div>
+                <div>Test</div>
+                <div>Test</div>
+                <div>Test</div>
+              </Flex>
+            </MainContent>
+            </Flex>
+          </Flex>
       </ThemeProvider>
     </>
   );
