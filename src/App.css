@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 .App {
   text-align: center;
   background-color: #EEF2F4;
+  height: 100vh;
 }
 
 
 *{
-  font-family: 'Spartan', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
