@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { Container, PageTitle } from "./style";
 
-const ChartProfitability = ({ data }) => {
+const StackedChart = ({ data, title }) => {
   const [dataChart, setDataChart] = useState();
 
   // console.log(dataChart);
@@ -23,7 +23,7 @@ const ChartProfitability = ({ data }) => {
 
   return (
     <Container>
-      <PageTitle>Rentabilidade dos Títulos</PageTitle>
+      <PageTitle>{title}</PageTitle>
       <ResponsiveContainer width="100%" height="85%">
         <AreaChart
           width={500}
@@ -60,4 +60,4 @@ const ChartProfitability = ({ data }) => {
   );
 };
 
-export default ChartProfitability;
+export default StackedChart;

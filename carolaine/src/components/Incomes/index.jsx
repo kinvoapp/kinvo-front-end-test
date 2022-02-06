@@ -16,9 +16,7 @@ import {
 
 const Incomes = ({ data }) => {
   const [rendas, setRendas] = useState(null);
-  const [sortedMode, setSortedMode] = useState(null);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
-  const [searchMode, setSearchMode] = useState(false);
   const [incomeData, setIncomeData] = useState(null);
 
   useEffect(() => {
@@ -33,11 +31,9 @@ const Incomes = ({ data }) => {
     }
   }, [data]);
 
-  useEffect(() => {
-    console.log("teste");
-  }, [incomeData]);
+  useEffect(() => {}, [incomeData]);
 
-  const injectIncome = (type) => {
+  const handleSearchMode = (type) => {
     if (rendas) {
       if (type === "search") {
         const searchInput = document.querySelector("#search");
@@ -56,7 +52,7 @@ const Incomes = ({ data }) => {
     }
   };
 
-  const sortMode = (type) => {
+  const handleSortMode = (type) => {
     if (rendas) {
       let sortedIncome = null;
 
@@ -163,32 +159,32 @@ const Incomes = ({ data }) => {
               {showFilterOptions ? (
                 <ol>
                   <FilterOption>
-                    <a onClick={() => sortMode("valueApplied-low")}>
+                    <a onClick={() => handleSortMode("valueApplied-low")}>
                       <b>Valor Investido:</b> Baixo ao Alto
                     </a>
                   </FilterOption>
                   <FilterOption>
-                    <a onClick={() => sortMode("valueApplied-high")}>
+                    <a onClick={() => handleSortMode("valueApplied-high")}>
                       <b>Valor Investido:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
                   <FilterOption>
-                    <a onClick={() => sortMode("profitability-low")}>
+                    <a onClick={() => handleSortMode("profitability-low")}>
                       <b>Rentabilidade:</b> Baixo ao Alto
                     </a>
                   </FilterOption>
                   <FilterOption>
-                    <a onClick={() => sortMode("profitability-high")}>
+                    <a onClick={() => handleSortMode("profitability-high")}>
                       <b>Rentabilidade:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
                   <FilterOption>
-                    <a onClick={() => sortMode("equity-low")}>
+                    <a onClick={() => handleSortMode("equity-low")}>
                       <b>Saldo Bruto:</b> Baixo ao Alto
                     </a>
                   </FilterOption>
                   <FilterOption>
-                    <a onClick={() => sortMode("equity-high")}>
+                    <a onClick={() => handleSortMode("equity-high")}>
                       <b>Saldo Bruto:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
@@ -199,7 +195,7 @@ const Incomes = ({ data }) => {
 
           <SearchBox>
             <input type="search" id="search" />
-            <a onClick={() => injectIncome("search")}>
+            <a onClick={() => handleSearchMode("search")}>
               <SearchIcon />
             </a>
           </SearchBox>

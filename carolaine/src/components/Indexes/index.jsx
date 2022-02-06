@@ -20,7 +20,7 @@ const Indexes = ({ data }) => {
 
     let auxEquity = 0,
       auxValueApplied = 0,
-      auxResult;
+      auxResult = 0;
 
     data.forEach((index) => {
       auxEquity += index.position.equity;
@@ -28,29 +28,29 @@ const Indexes = ({ data }) => {
     });
 
     setEquity(() => {
-      auxEquity = auxEquity.toLocaleString("pt-BR", {
+      const value = auxEquity.toLocaleString("pt-BR", {
         minimumFractionDigits: 2,
       });
 
-      return auxEquity;
+      return value;
     });
 
     setValueApplied(() => {
-      auxValueApplied = auxValueApplied.toLocaleString("pt-BR", {
+      const value = auxValueApplied.toLocaleString("pt-BR", {
         minimumFractionDigits: 2,
       });
 
-      return auxValueApplied;
+      return value;
     });
 
     auxResult = auxEquity - auxValueApplied;
 
     setResult(() => {
-      auxResult = auxResult.toLocaleString("pt-BR", {
+      const value = auxResult.toLocaleString("pt-BR", {
         minimumFractionDigits: 2,
       });
 
-      return auxResult;
+      return value;
     });
 
     setProfitability(() => {

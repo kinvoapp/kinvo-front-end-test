@@ -4,60 +4,48 @@ import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import Incomes from "../../components/Incomes";
 import Indexes from "../../components/Indexes";
-import ChartProfitability from "../../components/ChartProfitability";
-import {
-  Main,
-  Container,
-  PageTitle,
-  Title,
-  Rentabilidade,
-  Colunas,
-} from "./style";
+import StackedChart from "../../components/StackedChart";
+import PieChart from "../../components/PieChart";
+import { Main, Container, PageTitle, Columns } from "./style";
 
 const Home = () => {
-  const [dados, setDados] = useState();
+  const [data, setData] = useState();
 
   useEffect(() => {
-    const fetchDados = async () => {
+    const fetchData = async () => {
       await axios
         .get(
           "https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData"
         )
         .then(function (response) {
-          setDados(() => {
+          setData(() => {
             return response.data;
           });
         });
     };
 
-    fetchDados();
+    fetchData();
   }, []);
 
   return (
     <>
-      <Header data={dados} />
+      <Header data={data} />
       <Main>
         <Sidebar />
         <Container>
           <PageTitle>Renda Fixa</PageTitle>
 
-          <Indexes data={dados} />
+          <Indexes data={data} />
 
-          <ChartProfitability data={dados} />
+          <StackedChart data={data} title="Rentabilidade dos Títulos" />
 
-          <Incomes data={dados} />
+          <Incomes data={data} />
 
-          <Colunas>
-            <Rentabilidade>
-              <Title>Divisão de Carteira por Tipos</Title>
-              <p>gráfico</p>
-            </Rentabilidade>
+          <Columns>
+            <PieChart data={data} title="Divisão de Carteira por Tipos" />
 
-            <Rentabilidade>
-              <Title>Divisão de Carteira por Título</Title>
-              <p>gráfico</p>
-            </Rentabilidade>
-          </Colunas>
+            <PieChart data={data} title="Divisão de Carteira por Título" />
+          </Columns>
         </Container>
       </Main>
     </>
