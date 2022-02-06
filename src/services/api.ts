@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 const api = axios.create({
-    baseURL:'https://covid-api.mmediagroup.fr/v1',
+    baseURL:'ttps://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/',
     
 })
 
