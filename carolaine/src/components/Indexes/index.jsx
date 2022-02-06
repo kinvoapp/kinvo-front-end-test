@@ -6,6 +6,8 @@ const Indexes = ({ data }) => {
   const [valueApplied, setValueApplied] = useState();
   const [result, setResult] = useState();
   const [profitability, setProfitability] = useState();
+  const [indexerValue, setIndexerValue] = useState();
+  const [percentageOverIndexer, setPercentageOverIndexer] = useState();
 
   useEffect(() => {
     let newData;
@@ -16,15 +18,19 @@ const Indexes = ({ data }) => {
   }, [data]);
 
   const setData = (data) => {
-    // console.log(data.position);
+    console.log(data);
 
     let auxEquity = 0,
       auxValueApplied = 0,
-      auxResult = 0;
+      auxResult = 0,
+      auxIndexerValue = 0,
+      auxPercentageOverIndexer = 0;
 
     data.forEach((index) => {
       auxEquity += index.position.equity;
       auxValueApplied += index.position.valueApplied;
+      auxIndexerValue += index.position.indexerValue;
+      auxPercentageOverIndexer += index.position.percentageOverIndexer;
     });
 
     setEquity(() => {
@@ -58,6 +64,18 @@ const Indexes = ({ data }) => {
       aux = (aux * 100).toFixed(2);
       return aux;
     });
+
+    setIndexerValue(() => {
+      // console.log(data.length);
+      // console.log(auxIndexerValue);
+      let aux = (auxIndexerValue / data.length).toFixed(2);
+      return aux;
+    });
+
+    setPercentageOverIndexer(() => {
+      let aux = (auxPercentageOverIndexer / data.length).toFixed(2);
+      return aux;
+    });
   };
 
   return (
@@ -84,12 +102,12 @@ const Indexes = ({ data }) => {
 
       <Index>
         <IndexTitle>CDI</IndexTitle>
-        <IndexValue>69,98%</IndexValue>
+        <IndexValue>{indexerValue}%</IndexValue>
       </Index>
 
       <Index>
-        <IndexTitle>0% Sobre CDI</IndexTitle>
-        <IndexValue>69,98%</IndexValue>
+        <IndexTitle>% Sobre CDI</IndexTitle>
+        <IndexValue>{percentageOverIndexer}%</IndexValue>
       </Index>
     </IndexesContainer>
   );

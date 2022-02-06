@@ -6,6 +6,7 @@ export const Container = styled.div`
   border-radius: 10px;
   margin-top: 22px;
   height: 300px;
+  overflow: hidden;
 `;
 
 export const PageTitle = styled.h2`

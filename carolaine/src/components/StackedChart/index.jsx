@@ -13,7 +13,7 @@ import { Container, PageTitle } from "./style";
 const StackedChart = ({ data, title }) => {
   const [dataChart, setDataChart] = useState();
 
-  console.log(dataChart);
+  // console.log(dataChart);
 
   useEffect(() => {
     if (data) {

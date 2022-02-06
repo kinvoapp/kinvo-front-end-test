@@ -8,33 +8,35 @@ import {
   Valor,
 } from "./style";
 
-const Header = (props) => {
+const Header = ({ data }) => {
   const [saldoBruto, setSaldoBruto] = useState();
   const [valorAplicado, setValorAplicado] = useState(0);
   const [rentabilidade, setRentabilidade] = useState(0);
 
   useEffect(() => {
-    if (typeof props.data !== "undefined") {
-      let aux = 0,
-        valorFixado = 0;
+    if (data) {
+      let aux = 0;
 
       setValorAplicado(() => {
-        aux = props.data.data.snapshotByPortfolio.valueApplied;
-        aux = aux.toLocaleString("pt-BR", {
-          minimumFractionDigits: 2,
-        });
+        aux = data.data.snapshotByPortfolio.valueApplied.toLocaleString(
+          "pt-BR",
+          {
+            minimumFractionDigits: 2,
+          }
+        );
         return aux;
       });
+
       setSaldoBruto(() => {
-        aux = props.data.data.snapshotByPortfolio.equity;
-        aux = aux.toLocaleString("pt-BR", {
+        aux = data.data.snapshotByPortfolio.equity.toLocaleString("pt-BR", {
           minimumFractionDigits: 2,
         });
         return aux;
       });
-      setRentabilidade(props.data.data.snapshotByPortfolio.percentageProfit);
+
+      setRentabilidade(data.data.snapshotByPortfolio.percentageProfit);
     }
-  }, [props.data]);
+  }, [data]);
 
   return (
     <Cabecalho>

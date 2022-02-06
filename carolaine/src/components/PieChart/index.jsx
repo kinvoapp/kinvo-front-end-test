@@ -11,7 +11,7 @@ import {
 
 const PieChart = (props) => {
   const [dataChart, setDataChart] = useState();
-  console.log(dataChart);
+  // console.log(dataChart);
 
   useEffect(() => {
     if (props.data) {
