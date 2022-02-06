@@ -54,8 +54,8 @@ function NavbarInfo({iconSrc, title, value, type}: NavbarInfoProps) {
           <Icon button={type === "button"} src={iconSrc} color={type === "info" ? "background" : "primary"} shade={type === "info" ? "dark" : "main"} />
         </div>
         <div>
-          <Text style={{ textTransform: "uppercase", fontSize: "0.5rem", lineHeight: "0.5rem" }}>{title}</Text><br/>
-          <Text selectable={type === "info"} style={{ fontWeight: "bold", fontSize: "1rem" }}>{value}</Text>
+          <Text variant="card_subtitle" style={{ textTransform: "uppercase" }}>{title}</Text><br/>
+          <Text variant="card_info_1" selectable={type === "info"}>{value}</Text>
         </div>
       </NavbarInfoWrapper>
     </>

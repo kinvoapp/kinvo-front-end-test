@@ -8,7 +8,7 @@ type JustifyContent = 'flex-start'
 
 type AlignItems = JustifyContent | 'baseline' | 'stretch'
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
     justify?: JustifyContent
     justifySelf?: JustifyContent | 'auto'
     align?: AlignItems
@@ -80,7 +80,7 @@ export function Flex({
     maxHeight,
     style,
     children,
-}: Props) {
+}: FlexProps) {
     return (
         <div
             style={{

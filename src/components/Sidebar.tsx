@@ -46,7 +46,7 @@ function SidebarItem({ iconSrc, title, active }: SidebarItemProps) {
     return <>
         <SidebarItemWrapper active={active} hover={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <Icon src={iconSrc} color={active ? "primary" : "background"} shade={active ? "main" : "dark"} />
-            <Text style={{ fontSize: "0.8rem", fontWeight: 500 }}>{title}</Text>
+            <Text variant="default">{title}</Text>
             <div style={{ justifySelf: 'flex-end' }}>
                 <Icon src={arrowChevronRightDarkIcon} />
             </div>

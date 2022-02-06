@@ -9,6 +9,8 @@ import { Sidebar } from "../src/components/Sidebar";
 import { MainContent } from '../src/components/MainContent';
 import { Text } from "../src/components/Text";
 import { Flex } from "../src/components/Flex";
+import { Card } from "../src/components/Card";
+import { FixedIncomeCards } from "../src/components/FixedIncomeCards";
 
 const Home: NextPage = () => {
   return (
@@ -24,16 +26,9 @@ const Home: NextPage = () => {
           <Flex grow direction="row" align="stretch">
             <Sidebar />
             <MainContent>
-              <h3>
-                <Text color="primary">Renda fixa</Text>
-              </h3>
+              <Text variant="title" color="primary">Renda fixa</Text>
               <Flex direction="row" justify="space-between" gap={1}>
-                <div>Test</div>
-                <div>Test</div>
-                <div>Test</div>
-                <div>Test</div>
-                <div>Test</div>
-                <div>Test</div>
+                <FixedIncomeCards />
               </Flex>
             </MainContent>
             </Flex>
