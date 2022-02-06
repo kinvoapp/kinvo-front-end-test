@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  // grid-template-columns: 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .buttonMenu {
+    color: #747373;
+    font-weight: normal;
+    font-size: 12px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 26px 26px 7px 14px;
+    border-bottom: 1px solid #cccfd0;
+    background-color: #fefefe;
+
+    .iconMenu {
+      display: flex;
+
+      span {
+        width: 10px;
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.headerContainer {
+  height: 5rem;
+}
+
+.headerContent {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  font-size: small;
+
+  nav {
+    margin-left: 30rem;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      text-decoration: none;
+      color: #aaa492;
+      text-transform: uppercase;
+    }
+  }
+}

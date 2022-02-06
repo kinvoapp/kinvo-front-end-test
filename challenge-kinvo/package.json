@@ -1,0 +1,27 @@
+{
+  "name": "challenge-kinvo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-pro-sidebar": "^0.7.1",
+    "react-router": "^6.2.1",
+    "sass": "^1.49.7",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.22",
+    "@vitejs/plugin-react": "^1.0.7",
+    "typescript": "^3.5.1",
+    "vite": "^2.7.2"
+  }
+}
