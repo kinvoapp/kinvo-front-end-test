@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import {
-  Cabecalho,
-  Navegacao,
-  NavegacaoItem,
-  Texto,
-  Titulo,
-  Valor,
+  HeaderContainer,
+  Navigation,
+  NavigationItem,
+  Text,
+  Title,
+  Value,
 } from "./style";
 
 const Header = ({ data }) => {
-  const [saldoBruto, setSaldoBruto] = useState();
-  const [valorAplicado, setValorAplicado] = useState(0);
-  const [rentabilidade, setRentabilidade] = useState(0);
+  const [equity, setEquity] = useState();
+  const [valueApplied, setValueApplied] = useState(0);
+  const [profitability, setProfitability] = useState(0);
 
   useEffect(() => {
     if (data) {
       let aux = 0;
 
-      setValorAplicado(() => {
+      setValueApplied(() => {
         aux = data.data.snapshotByPortfolio.valueApplied.toLocaleString(
           "pt-BR",
           {
@@ -27,19 +27,19 @@ const Header = ({ data }) => {
         return aux;
       });
 
-      setSaldoBruto(() => {
+      setEquity(() => {
         aux = data.data.snapshotByPortfolio.equity.toLocaleString("pt-BR", {
           minimumFractionDigits: 2,
         });
         return aux;
       });
 
-      setRentabilidade(data.data.snapshotByPortfolio.percentageProfit);
+      setProfitability(data.data.snapshotByPortfolio.percentageProfit);
     }
   }, [data]);
 
   return (
-    <Cabecalho>
+    <HeaderContainer>
       <figure>
         <img
           src={require("../../assets/logo_kinvo_premium.png")}
@@ -47,66 +47,66 @@ const Header = ({ data }) => {
         />
       </figure>
 
-      <Navegacao>
-        <NavegacaoItem>
+      <Navigation>
+        <NavigationItem>
           <figure>
             <img
               src={require("../../assets/icone_saldo_bruto.png")}
               alt="Saldo Bruto"
             />
           </figure>
-          <Texto>
-            <Titulo>Saldo Bruto</Titulo>
-            <Valor>{saldoBruto}</Valor>
-          </Texto>
-        </NavegacaoItem>
+          <Text>
+            <Title>Saldo Bruto</Title>
+            <Value>{equity}</Value>
+          </Text>
+        </NavigationItem>
 
-        <NavegacaoItem>
+        <NavigationItem>
           <figure>
             <img
               src={require("../../assets/icone_valor_aplicado.png")}
-              alt="Valor Aplicado"
+              alt="Value Aplicado"
             />
           </figure>
-          <Texto>
-            <Titulo>Valor Aplicado</Titulo>
-            <Valor>{valorAplicado}</Valor>
-          </Texto>
-        </NavegacaoItem>
+          <Text>
+            <Title>Valor Aplicado</Title>
+            <Value>{valueApplied}</Value>
+          </Text>
+        </NavigationItem>
 
-        <NavegacaoItem>
+        <NavigationItem>
           <figure>
             <img
               src={require("../../assets/icone_rentabilidade.png")}
               alt="Rentabilidade"
             />
           </figure>
-          <Texto>
-            <Titulo>Rentabilidade</Titulo>
-            <Valor>{rentabilidade}%</Valor>
-          </Texto>
-        </NavegacaoItem>
+          <Text>
+            <Title>Rentabilidade</Title>
+            <Value>{profitability}%</Value>
+          </Text>
+        </NavigationItem>
 
-        <NavegacaoItem>
+        <NavigationItem>
           <figure>
             <img
               src={require("../../assets/icone_minha_carteira.png")}
               alt="Minha Carteira"
             />
           </figure>
-          <Texto>
-            <Titulo>Carteira</Titulo>
-            <Valor>Minha Carteira</Valor>
-          </Texto>
-        </NavegacaoItem>
+          <Text>
+            <Title>Carteira</Title>
+            <Value>Minha Carteira</Value>
+          </Text>
+        </NavigationItem>
 
-        <NavegacaoItem>
+        <NavigationItem>
           <figure>
             <img src={require("../../assets/icone_menu.png")} alt="Menu" />
           </figure>
-        </NavegacaoItem>
-      </Navegacao>
-    </Cabecalho>
+        </NavigationItem>
+      </Navigation>
+    </HeaderContainer>
   );
 };
 

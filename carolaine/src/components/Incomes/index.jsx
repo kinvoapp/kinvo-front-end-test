@@ -19,13 +19,13 @@ import {
 } from "react-icons/fa";
 
 const Incomes = ({ data }) => {
-  const [rendas, setRendas] = useState(null);
+  const [initialIncomeData, setInitialIncomeData] = useState(null);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [incomeData, setIncomeData] = useState(null);
 
   useEffect(() => {
     if (data) {
-      setRendas(() => {
+      setInitialIncomeData(() => {
         return data.data.snapshotByProduct;
       });
 
@@ -37,33 +37,31 @@ const Incomes = ({ data }) => {
 
   useEffect(() => {}, [incomeData]);
 
-  const handleSearchMode = (type) => {
-    if (rendas) {
-      if (type === "search") {
-        const searchInput = document.querySelector("#search");
-        const query = rendas.filter((renda) => {
-          return renda.fixedIncome.name
-            .toLowerCase()
-            .includes(searchInput.value.toLowerCase());
-        });
+  const handleSearchMode = () => {
+    if (initialIncomeData) {
+      const searchInput = document.querySelector("#search");
+      const query = initialIncomeData.filter((income) => {
+        return income.fixedIncome.name
+          .toLowerCase()
+          .includes(searchInput.value.toLowerCase());
+      });
 
-        if (query) {
-          setIncomeData(() => {
-            return query;
-          });
-        }
+      if (query) {
+        setIncomeData(() => {
+          return query;
+        });
       }
     }
   };
 
   const handleSortMode = (type) => {
-    if (rendas) {
+    if (incomeData) {
       let sortedIncome = null;
 
       if (type === "valueApplied-low") {
         // Sort by valueApplied: LOW to HIGH.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.valueApplied > b.position.valueApplied) {
             return 1;
           } else if (a.position.valueApplied < b.position.valueApplied) {
@@ -75,7 +73,7 @@ const Incomes = ({ data }) => {
       } else if (type === "valueApplied-high") {
         // Sort by valueApplied: HIGH to LOW.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.valueApplied > b.position.valueApplied) {
             return -1;
           } else if (a.position.valueApplied < b.position.valueApplied) {
@@ -87,7 +85,7 @@ const Incomes = ({ data }) => {
       } else if (type === "profitability-low") {
         // Sort by profitability: HIGH to LOW.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.profitability > b.position.profitability) {
             return 1;
           } else if (a.position.profitability < b.position.profitability) {
@@ -99,7 +97,7 @@ const Incomes = ({ data }) => {
       } else if (type === "profitability-high") {
         // Sort by profitability: HIGH to LOW.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.profitability > b.position.profitability) {
             return -1;
           } else if (a.position.profitability < b.position.profitability) {
@@ -111,7 +109,7 @@ const Incomes = ({ data }) => {
       } else if (type === "equity-low") {
         // Sort by equity: HIGH to LOW.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.equity > b.position.equity) {
             return 1;
           } else if (a.position.equity < b.position.equity) {
@@ -123,7 +121,7 @@ const Incomes = ({ data }) => {
       } else if (type === "equity-high") {
         // Sort by equity: HIGH to LOW.
 
-        sortedIncome = [...rendas].sort((a, b) => {
+        sortedIncome = [...incomeData].sort((a, b) => {
           if (a.position.equity > b.position.equity) {
             return -1;
           } else if (a.position.equity < b.position.equity) {
@@ -155,7 +153,7 @@ const Incomes = ({ data }) => {
                     })
                   }
                 >
-                  <span>Ordenar Por</span>
+                  <span>Ordenar por</span>
                   <ChevronDown />
                 </a>
               </FilterOption>
@@ -199,7 +197,7 @@ const Incomes = ({ data }) => {
 
           <SearchBox>
             <input type="search" id="search" />
-            <a onClick={() => handleSearchMode("search")}>
+            <a onClick={() => handleSearchMode()}>
               <SearchIcon />
             </a>
           </SearchBox>
@@ -207,7 +205,9 @@ const Incomes = ({ data }) => {
       </SectionHeader>
 
       {incomeData
-        ? incomeData.map((renda, index) => <Income data={renda} key={index} />)
+        ? incomeData.map((income, index) => (
+            <Income data={income} key={index} />
+          ))
         : null}
 
       <Pagination>

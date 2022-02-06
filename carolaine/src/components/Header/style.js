@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Cabecalho = styled.header`
+export const HeaderContainer = styled.header`
   color: var(--cor-texto);
   background: var(--cor-fundo);
   box-shadow: 0 3px 20px 0 rgba(112, 123, 129, 0.1);
@@ -12,11 +12,11 @@ export const Cabecalho = styled.header`
   z-index: 9;
 `;
 
-export const Navegacao = styled.div`
+export const Navigation = styled.div`
   display: flex;
 `;
 
-export const NavegacaoItem = styled.div`
+export const NavigationItem = styled.div`
   display: flex;
   margin-left: 40px;
 
@@ -25,15 +25,15 @@ export const NavegacaoItem = styled.div`
   }
 `;
 
-export const Texto = styled.div``;
+export const Text = styled.div``;
 
-export const Titulo = styled.div`
+export const Title = styled.div`
   text-transform: uppercase;
   font-size: 8px;
   font-weight: 500;
 `;
 
-export const Valor = styled.div`
+export const Value = styled.div`
   font-weight: 700;
   font-size: 16px;
 `;

@@ -5,7 +5,7 @@ export const Aside = styled.aside`
   width: 22%;
 `;
 
-export const Lista = styled.ul`
+export const List = styled.ul`
   margin: 0;
   padding: 0;
 `;
@@ -32,14 +32,14 @@ export const Item = styled.li`
   }
 `;
 
-export const Texto = styled.div`
+export const Text = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-left: 10px;
 `;
 
-export const Titulo = styled.span`
+export const Title = styled.span`
   font-size: 13px;
   font-weight: 600;
   display: block;
@@ -54,7 +54,7 @@ export const Link = styled.span`
   justify-content: flex-end;
 `;
 
-export const ItemLista = styled(Item)`
+export const ItemList = styled(Item)`
   padding: 0;
 
   a {
@@ -62,12 +62,12 @@ export const ItemLista = styled(Item)`
   }
 `;
 
-export const SubLista = styled.ol`
+export const SubList = styled.ol`
   margin: 0;
   padding: 0;
 `;
 
-export const ItemSubLista = styled(Item)`
+export const ItemSubList = styled(Item)`
   a {
     background: ${(props) => (props.selected ? "#f8fafb" : "var(--cor-fundo)")};
     display: flex;

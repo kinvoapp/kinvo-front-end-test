@@ -1,32 +1,32 @@
 import React from "react";
 import {
   Aside,
-  Lista,
-  SubLista,
+  List,
+  SubList,
   Item,
-  ItemLista,
-  ItemSubLista,
-  Texto,
+  ItemList,
+  ItemSubList,
+  Text,
   Link,
-  Titulo,
+  Title,
 } from "./style";
 import { FaChevronRight as ChevronRight } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
     <Aside>
-      <Lista>
+      <List>
         <Item>
           <a href="">
             <figure>
               <img src={require("../../assets/icone_resumo_carteira.png")} />
             </figure>
-            <Texto>
-              <Titulo>Resumo da Carteira</Titulo>
+            <Text>
+              <Title>Resumo da Carteira</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
@@ -35,12 +35,12 @@ const Sidebar = () => {
             <figure>
               <img src={require("../../assets/icone_meus_produtos.png")} />
             </figure>
-            <Texto>
-              <Titulo>Meus Produtos</Titulo>
+            <Text>
+              <Title>Meus Produtos</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
@@ -49,78 +49,78 @@ const Sidebar = () => {
             <figure>
               <img src={require("../../assets/icone_meus_proventos.png")} />
             </figure>
-            <Texto>
-              <Titulo>Meus Proventos</Titulo>
+            <Text>
+              <Title>Meus Proventos</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
-        <ItemLista>
+        <ItemList>
           <a href="">
             <figure>
               <img src={require("../../assets/icone_classe_ativos.png")} />
             </figure>
-            <Texto>
-              <Titulo>Classe de Ativos</Titulo>
+            <Text>
+              <Title>Classe de Ativos</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
 
-          <SubLista>
-            <ItemSubLista>
+          <SubList>
+            <ItemSubList>
               <a href="">
-                <Titulo>Ação</Titulo>
+                <Title>Ação</Title>
                 <Link>
                   <ChevronRight />
                 </Link>
               </a>
-            </ItemSubLista>
+            </ItemSubList>
 
-            <ItemSubLista>
+            <ItemSubList>
               <a href="">
-                <Titulo>Fundo</Titulo>
+                <Title>Fundo</Title>
                 <Link>
                   <ChevronRight />
                 </Link>
               </a>
-            </ItemSubLista>
+            </ItemSubList>
 
-            <ItemSubLista>
+            <ItemSubList>
               <a href="">
-                <Titulo>Fundo Imobiliário</Titulo>
+                <Title>Fundo Imobiliário</Title>
                 <Link>
                   <ChevronRight />
                 </Link>
               </a>
-            </ItemSubLista>
+            </ItemSubList>
 
-            <ItemSubLista selected>
+            <ItemSubList selected>
               <a href="">
-                <Titulo>Fundo Renda Fixa</Titulo>
+                <Title>Fundo Renda Fixa</Title>
                 <Link>
                   <ChevronRight />
                 </Link>
               </a>
-            </ItemSubLista>
-          </SubLista>
-        </ItemLista>
+            </ItemSubList>
+          </SubList>
+        </ItemList>
 
         <Item>
           <a href="">
             <figure>
               <img src={require("../../assets/icone_rentabilidade_real.png")} />
             </figure>
-            <Texto>
-              <Titulo>Rentabilidade Real</Titulo>
+            <Text>
+              <Title>Rentabilidade Real</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
@@ -129,12 +129,12 @@ const Sidebar = () => {
             <figure>
               <img src={require("../../assets/icone_projecao_carteira.png")} />
             </figure>
-            <Texto>
-              <Titulo>Projeção de Carteira</Titulo>
+            <Text>
+              <Title>Projeção de Carteira</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
@@ -143,12 +143,12 @@ const Sidebar = () => {
             <figure>
               <img src={require("../../assets/icone_risco_retorno.png")} />
             </figure>
-            <Texto>
-              <Titulo>Risco x Retorno</Titulo>
+            <Text>
+              <Title>Risco x Retorno</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
 
@@ -157,15 +157,15 @@ const Sidebar = () => {
             <figure>
               <img src={require("../../assets/icone_cobertura_fgc.png")} />
             </figure>
-            <Texto>
-              <Titulo>Cobertura do FGC</Titulo>
+            <Text>
+              <Title>Cobertura do FGC</Title>
               <Link>
                 <ChevronRight />
               </Link>
-            </Texto>
+            </Text>
           </a>
         </Item>
-      </Lista>
+      </List>
     </Aside>
   );
 };
