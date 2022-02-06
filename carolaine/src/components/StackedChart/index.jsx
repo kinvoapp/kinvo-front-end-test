@@ -42,8 +42,8 @@ const StackedChart = ({ data, title }) => {
             type="monotone"
             dataKey="productName"
             stackId="1"
-            stroke="#56D9FE"
-            fill="#56D9FE"
+            stroke="#FF8052"
+            fill="#FF8052"
           />
           <Area
             type="monotone"
