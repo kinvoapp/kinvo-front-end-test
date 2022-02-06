@@ -13,8 +13,6 @@ import { Container, PageTitle } from "./style";
 const StackedChart = ({ data, title }) => {
   const [dataChart, setDataChart] = useState();
 
-  // console.log(dataChart);
-
   useEffect(() => {
     if (data) {
       setDataChart(data.data.dailyEquityByPortfolioChartData);
@@ -37,9 +35,16 @@ const StackedChart = ({ data, title }) => {
           }}
         >
           <CartesianGrid strokeDasharray="0 0" />
-          <XAxis dataKey="movementTypeId" />
-          <YAxis />
+          <XAxis dataKey="dailyReferenceDate" />
+          <YAxis dataKey="value" />
           <Tooltip />
+          <Area
+            type="monotone"
+            dataKey="productName"
+            stackId="1"
+            stroke="#56D9FE"
+            fill="#56D9FE"
+          />
           <Area
             type="monotone"
             dataKey="correctedQuota"

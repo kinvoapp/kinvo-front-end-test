@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, PageTitle } from "./style";
+import { Container, PageTitle, List, ListItem } from "./style";
 import {
   PieChart as Chart,
   Pie,
@@ -11,7 +11,6 @@ import {
 
 export const PieChartType = (props) => {
   const [dataChart, setDataChart] = useState();
-  console.log(dataChart);
 
   useEffect(() => {
     if (props.data) {
@@ -25,13 +24,13 @@ export const PieChartType = (props) => {
     <Container>
       <PageTitle>{props.title}</PageTitle>
 
-      <ResponsiveContainer width="100%" height="100%">
-        <Chart width={300} height={250}>
+      <ResponsiveContainer width="100%" height={180}>
+        <Chart width={300} height={180}>
           <Pie
             dataKey="movementTypeId"
             data={dataChart}
             cx="50%"
-            cy="30%"
+            cy="50%"
             innerRadius={40}
             outerRadius={80}
             fill="#82ca9d"
@@ -49,6 +48,14 @@ export const PieChartType = (props) => {
           <Tooltip />
         </Chart>
       </ResponsiveContainer>
+      <List>
+        <ListItem>Tipo</ListItem>
+        <ListItem>Tipo</ListItem>
+        <ListItem>Tipo</ListItem>
+        <ListItem>Tipo</ListItem>
+        <ListItem>Tipo</ListItem>
+        <ListItem>Tipo</ListItem>
+      </List>
     </Container>
   );
 };
@@ -68,13 +75,13 @@ export const PieChartIndexes = (props) => {
     <Container>
       <PageTitle>{props.title}</PageTitle>
 
-      <ResponsiveContainer width="100%" height="100%">
-        <Chart width={300} height={250}>
+      <ResponsiveContainer width="100%" height={180}>
+        <Chart width={300} height={180}>
           <Pie
             dataKey="portfolioProductId"
             data={dataChart}
             cx="50%"
-            cy="30%"
+            cy="50%"
             innerRadius={40}
             outerRadius={80}
             fill="#82ca9d"
@@ -92,6 +99,14 @@ export const PieChartIndexes = (props) => {
           <Tooltip />
         </Chart>
       </ResponsiveContainer>
+      <List>
+        <ListItem>Título</ListItem>
+        <ListItem>Título</ListItem>
+        <ListItem>Título</ListItem>
+        <ListItem>Título</ListItem>
+        <ListItem>Título</ListItem>
+        <ListItem>Título</ListItem>
+      </List>
     </Container>
   );
 };
