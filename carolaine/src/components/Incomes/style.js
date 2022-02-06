@@ -107,7 +107,7 @@ export const SearchBox = styled.div`
 `;
 
 export const Pagination = styled.div`
-  padding: 11px 10px 18px 10px;
+  padding: 12px 10px 19px 10px;
 
   ul {
     margin: 0 auto;
