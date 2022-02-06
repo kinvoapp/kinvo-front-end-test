@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import Incomes from "../../components/Incomes";
+import Indexes from "../../components/Indexes";
 import {
   Main,
   Container,
   PageTitle,
   Title,
-  Indicativos,
-  Indicativo,
-  IndicativoTitulo,
-  IndicativoValor,
   Rentabilidade,
   Colunas,
 } from "./style";
-import axios from "axios";
 
 const Home = () => {
   const [dados, setDados] = useState();
@@ -29,6 +26,8 @@ const Home = () => {
           setDados((state) => {
             return response.data;
           });
+
+          // console.log(response.data);
         });
     };
 
@@ -43,37 +42,7 @@ const Home = () => {
         <Container>
           <PageTitle>Renda Fixa</PageTitle>
 
-          <Indicativos>
-            <Indicativo>
-              <IndicativoTitulo>Saldo Bruto</IndicativoTitulo>
-              <IndicativoValor>R$ 56533</IndicativoValor>
-            </Indicativo>
-
-            <Indicativo>
-              <IndicativoTitulo>Valor Aplicado</IndicativoTitulo>
-              <IndicativoValor>R$ 56533</IndicativoValor>
-            </Indicativo>
-
-            <Indicativo>
-              <IndicativoTitulo>Resultado</IndicativoTitulo>
-              <IndicativoValor>R$ 56533</IndicativoValor>
-            </Indicativo>
-
-            <Indicativo>
-              <IndicativoTitulo>Rentabilidade</IndicativoTitulo>
-              <IndicativoValor>69,98%</IndicativoValor>
-            </Indicativo>
-
-            <Indicativo>
-              <IndicativoTitulo>CDI</IndicativoTitulo>
-              <IndicativoValor>69,98%</IndicativoValor>
-            </Indicativo>
-
-            <Indicativo>
-              <IndicativoTitulo>0% Sobre CDI</IndicativoTitulo>
-              <IndicativoValor>69,98%</IndicativoValor>
-            </Indicativo>
-          </Indicativos>
+          <Indexes data={dados} />
 
           <Rentabilidade>
             <Title>Rentabilidade dos Títulos</Title>

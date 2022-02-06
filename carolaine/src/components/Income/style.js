@@ -5,7 +5,7 @@ export const RendaContainer = styled.div`
   padding: 20px;
   border-bottom: 1px solid #eef2f4;
 
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     background: #f8fafb;
   }
 `;
@@ -17,10 +17,10 @@ export const Item = styled.div`
   flex: ${(props) => {
     switch (props.$mode) {
       case "title":
-        return `0 0 calc(35% - 20px)`;
+        return `0 0 calc(32% - 20px)`;
 
       case "position":
-        return `1 0 calc(45% - 20px)`;
+        return `1 0 calc(48% - 20px)`;
 
       case "due":
         return `0 0 20%`;
