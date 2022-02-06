@@ -20,12 +20,16 @@ const Header = (props) => {
 
       setValorAplicado(() => {
         aux = props.data.data.snapshotByPortfolio.valueApplied;
-        aux = aux.toLocaleString("pt-BR");
+        aux = aux.toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+        });
         return aux;
       });
       setSaldoBruto(() => {
         aux = props.data.data.snapshotByPortfolio.equity;
-        aux = aux.toLocaleString("pt-BR");
+        aux = aux.toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+        });
         return aux;
       });
       setRentabilidade(props.data.data.snapshotByPortfolio.percentageProfit);
