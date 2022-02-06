@@ -95,18 +95,24 @@ function App() {
           <div className='card_conatiner'>
             {isLoading ? <p>Carregando...</p> : (
               <>
-                <SnapshotProductStats
-                  title='Título'
-                  dataFixed={fixedIncomeData.snapshotByProduct[0].fixedIncome}
-                />
-                <SnapshotProductStats
-                  title='Minha Posição'
-                  dataPosition={fixedIncomeData.snapshotByProduct[0].position}
-                />
-                <SnapshotProductStats
-                  title='Vencimento'
-                  dataDue={fixedIncomeData.snapshotByProduct[0].due}
-                />
+                {fixedIncomeData.snapshotByProduct.map((item) => {
+                  return (
+                    <>
+                      <SnapshotProductStats
+                        title='Título'
+                        dataFixed={item.fixedIncome}
+                      />
+                      <SnapshotProductStats
+                        title='Minha Posição'
+                        dataPosition={item.position}
+                      />
+                      <SnapshotProductStats
+                        title='Vencimento'
+                        dataDue={item.due}
+                      />
+                    </>
+                  )
+                })}
               </>
             )}
 

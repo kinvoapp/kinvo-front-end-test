@@ -13,8 +13,10 @@ interface Iprops {
 
 function SnapshotProductStats(props: Iprops) {
     const { title, dataFixed, dataDue, dataPosition } = { ...props }
+
+    const labelColor = dataFixed ? '#8A51BA' : dataPosition ? '#38BFA0' : dataDue ? '#008DCB' : 'black';
     return (
-        <ProductStatsCard>
+        <ProductStatsCard color={labelColor}>
             <div className='card_top'>
                 <p>{title}</p>
                 <img alt='info' src={infoSVG} />

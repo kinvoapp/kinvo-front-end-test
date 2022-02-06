@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const ProductStatsCard = styled.div`
+interface Iprops {
+    color: string;
+}
+
+export const ProductStatsCard = styled.div<Iprops>`
   display: flex;
   background: #FFFF;
   border: 2px solid #DAE0E3;
@@ -33,12 +37,13 @@ export const ProductStatsCard = styled.div`
   }
 
   h3 {
-      color: #4C309B;
+      color: ${props => props.color};;
       margin: 0;
   }
 
   h4{
       width:40%;
       margin: 0;
+      text-align: start;
   }
 `
