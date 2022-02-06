@@ -1,0 +1,13 @@
+#main-header-title {
+  padding-bottom: 20px;
+
+  color: #4c309b;
+}
+
+.cards-section {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
