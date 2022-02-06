@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
+import Income from "../Income";
 import {
   IncomesContainer,
   Title,
   SectionHeader,
   Filter,
   FilterOption,
+  SearchBox,
+  Container,
 } from "./style";
-import Income from "../Income";
-import { FaChevronDown as ChevronDown } from "react-icons/fa";
+import {
+  FaChevronDown as ChevronDown,
+  FaSearch as SearchIcon,
+} from "react-icons/fa";
 
 const Incomes = ({ data }) => {
   const [rendas, setRendas] = useState(null);
@@ -53,6 +58,54 @@ const Incomes = ({ data }) => {
               return 0;
             }
           });
+        } else if (sortedMode === "profitability-low") {
+          // Sort by profitability: HIGH to LOW.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.profitability > b.position.profitability) {
+              return 1;
+            } else if (a.position.profitability < b.position.profitability) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+        } else if (sortedMode === "profitability-high") {
+          // Sort by profitability: HIGH to LOW.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.profitability > b.position.profitability) {
+              return -1;
+            } else if (a.position.profitability < b.position.profitability) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
+        } else if (sortedMode === "equity-low") {
+          // Sort by equity: HIGH to LOW.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.equity > b.position.equity) {
+              return 1;
+            } else if (a.position.equity < b.position.equity) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+        } else if (sortedMode === "equity-high") {
+          // Sort by equity: HIGH to LOW.
+
+          sortedIncome = rendas.sort((a, b) => {
+            if (a.position.equity > b.position.equity) {
+              return -1;
+            } else if (a.position.equity < b.position.equity) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
         }
 
         return sortedIncome.map((renda, index) => (
@@ -70,7 +123,7 @@ const Incomes = ({ data }) => {
     <IncomesContainer>
       <SectionHeader>
         <Title>Minhas Rendas Fixas</Title>
-        <div>
+        <Container>
           <Filter>
             <ul>
               <FilterOption filterTitle>
@@ -90,29 +143,46 @@ const Incomes = ({ data }) => {
                 <ol>
                   <FilterOption>
                     <a onClick={() => setSortedMode("valueApplied-low")}>
-                      <b>Valor Aplicado:</b> Baixo ao Alto
+                      <b>Valor Investido:</b> Baixo ao Alto
                     </a>
                   </FilterOption>
                   <FilterOption>
                     <a onClick={() => setSortedMode("valueApplied-high")}>
-                      <b>Valor Aplicado:</b> Alto ao Baixo
+                      <b>Valor Investido:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
                   <FilterOption>
                     <a onClick={() => setSortedMode("profitability-low")}>
-                      <b>Lucratividade:</b> Baixo ao Alto
+                      <b>Rentabilidade:</b> Baixo ao Alto
                     </a>
                   </FilterOption>
                   <FilterOption>
                     <a onClick={() => setSortedMode("profitability-high")}>
-                      <b>Lucratividade:</b> Alto ao Baixo
+                      <b>Rentabilidade:</b> Alto ao Baixo
+                    </a>
+                  </FilterOption>
+                  <FilterOption>
+                    <a onClick={() => setSortedMode("equity-low")}>
+                      <b>Saldo Bruto:</b> Baixo ao Alto
+                    </a>
+                  </FilterOption>
+                  <FilterOption>
+                    <a onClick={() => setSortedMode("equity-high")}>
+                      <b>Saldo Bruto:</b> Alto ao Baixo
                     </a>
                   </FilterOption>
                 </ol>
               ) : null}
             </ul>
           </Filter>
-        </div>
+
+          <SearchBox>
+            <input type="search" id="search" />
+            <a>
+              <SearchIcon />
+            </a>
+          </SearchBox>
+        </Container>
       </SectionHeader>
 
       {injectIncome()}

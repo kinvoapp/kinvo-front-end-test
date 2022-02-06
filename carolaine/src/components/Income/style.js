@@ -5,7 +5,7 @@ export const RendaContainer = styled.div`
   padding: 20px;
   border-bottom: 1px solid #eef2f4;
 
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     background: #f8fafb;
   }
 `;
