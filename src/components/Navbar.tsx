@@ -9,6 +9,7 @@ import { Icon, IconProps } from './Icon';
 import { Text } from "./Text";
 
 import { moneyBagIcon, arrowUpIcon, arrowWaveUpRightIcon, arrowChevronDown, hamburgerMenuIcon } from "../styles/icons";
+import { useFixedIncome } from '../hooks/FixedIncomeContext';
 
 const NavbarWrapper = styled.nav`
   display: flex;

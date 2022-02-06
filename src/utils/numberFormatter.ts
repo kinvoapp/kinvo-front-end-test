@@ -1,4 +1,4 @@
-type Format = '$' | '%'
+type Format = '$' | '%' | 'R$'
 
 export function formatNumber(value: number, format: Format): string {
     switch (format) {
@@ -7,6 +7,9 @@ export function formatNumber(value: number, format: Format): string {
             break;
         case '$':
             return value.toLocaleString("pt");
+            break;
+        case 'R$':
+            return "R$ " + value.toLocaleString("pt");
             break;
     }
 }

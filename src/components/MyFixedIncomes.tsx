@@ -74,7 +74,7 @@ function FixedIncomeBox(props: { titleInfo: FixedIncomeTitle, darkBg: boolean })
             ]} gridTemplateColumns="2fr 1fr" />
             <OutlinedInfo title="Minha posição" info={[
                 { name: "Valor inves.", value: formatNumber(position.valueApplied, "$"), color: "success" },
-                { name: "Saldo bruto", value: formatNumber(position.valueApplied, "$"), color: "success" },
+                { name: "Saldo bruto", value: formatNumber(position.equity, "$"), color: "success" },
                 { name: "Rent.", value: formatNumber(position.profitability, "%"), color: "success" },
                 { name: "% da cart.", value: formatNumber(position.portfolioPercentage, "%"), color: "success" },
                 { name: position.indexerLabel, value: formatNumber(position.indexerValue, "$"), color: "success" },
@@ -88,7 +88,7 @@ function FixedIncomeBox(props: { titleInfo: FixedIncomeTitle, darkBg: boolean })
     </> : null)
 }
 
-type SortingCriteria = 'title' | 'bond_type' | 'value_applied' | 'profitability' | 'due_date';
+type SortingCriteria = 'title' | 'bond_type' | 'equity' | 'value_applied' | 'profitability' | 'due_date';
 
 interface Sorting {
     criteria: SortingCriteria,
@@ -103,6 +103,10 @@ const sortingOptions: { [key: string]: Sorting } = {
     "Classe": {
         criteria: "bond_type",
         order: "ascending",
+    },
+    "Saldo bruto": {
+        criteria: "equity",
+        order: "descending",
     },
     "Valor investido": {
         criteria: "value_applied",
@@ -144,6 +148,9 @@ export function MyFixedIncomes() {
                 break;
             case "bond_type":
                 newFiltered.sort((a, b) => a.fixedIncome.bondType.localeCompare(b.fixedIncome.bondType, "pt") * coefficient);
+                break;
+            case "equity":
+                newFiltered.sort((a, b) => (a.position.equity - b.position.equity) * coefficient);
                 break;
             case "value_applied":
                 newFiltered.sort((a, b) => (a.position.valueApplied - b.position.valueApplied) * coefficient);

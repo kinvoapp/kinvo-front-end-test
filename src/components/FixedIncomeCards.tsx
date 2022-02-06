@@ -1,44 +1,15 @@
 import styled from "styled-components";
 
 import { getTheme } from "../styles/theme";
+import { formatNumber } from "../utils/numberFormatter";
 import { Card } from "./Card";
 import { Flex } from './Flex';
 import { Text } from './Text';
+import { useFixedIncome } from '../hooks/FixedIncomeContext';
 
 interface FixedIncomeInfo {
     title: string,
     value: string
-}
-
-const info: FixedIncomeInfo[] = [
-    {
-        title: "Saldo bruto",
-        value: "R$ 207.653,10"
-    },
-    {
-        title: "Valor aplicado",
-        value: "R$ 170.025,64"
-    },
-    {
-        title: "Resultado",
-        value: "R$ 37.638,46"
-    },
-    {
-        title: "Rentabilidade",
-        value: "25,08%"
-    },
-    {
-        title: "CDI",
-        value: "23,68%"
-    },
-    {
-        title: "% sobre CDI",
-        value: "320%"
-    },
-]
-
-interface FixedIncomeCardsProps {
-    info: FixedIncomeInfo[]
 }
 
 const FixedIncomeCardContent = styled.div`
@@ -46,7 +17,36 @@ const FixedIncomeCardContent = styled.div`
     border-left: solid 3px ${props => getTheme(props).background.main};
 `;
 
-export function FixedIncomeCards(/*{ info }: FixedIncomeCardsProps*/) {
+export function FixedIncomeCards() {
+    const navbarInfo = useFixedIncome()?.data?.snapshotByPortfolio;
+
+    const info: FixedIncomeInfo[] = navbarInfo ? [
+        {
+            title: "Saldo bruto",
+            value: formatNumber(navbarInfo.equity ?? 0, "R$")
+        },
+        {
+            title: "Valor aplicado",
+            value: formatNumber(navbarInfo.valueApplied ?? 0, "R$")
+        },
+        {
+            title: "Resultado",
+            value: formatNumber(navbarInfo.equityProfit ?? 0, "R$")
+        },
+        {
+            title: "Rentabilidade",
+            value: formatNumber(navbarInfo.percentageProfit ?? 0, "%")
+        },
+        {
+            title: "CDI",
+            value: formatNumber(navbarInfo.indexerValue ?? 0, "%")
+        },
+        {
+            title: "% sobre CDI",
+            value: formatNumber(navbarInfo.percentageOverIndexer ?? 0, "%")
+        },
+    ] : [];
+
     return (<>
         {info.map(({ title, value }, index) => <Card key={index}>
             <Flex grow align="center" height="100%">

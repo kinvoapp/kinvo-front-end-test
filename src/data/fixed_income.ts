@@ -4,24 +4,28 @@ export interface FixedIncomeAPIResponse {
     success: boolean,
     error: string|null,
     data?: {
-        snapshotByPortfolio: {
-            equity: number,
-            valueApplied: number,
-            equityProfit: number,
-            percentageProfit: number,
-            indexerValue: number,
-            percentageOverIndexer: number,
-        },
-        dailyEquityByPortfolioChartData: {
-            correctedQuota: number,
-            dailyReferenceDate: number,
-            movementTypeId: number,
-            portfolioProductId: number,
-            productName: string,
-            value: number
-        }[],
+        snapshotByPortfolio: PortfolioSnapshot,
+        dailyEquityByPortfolioChartData: ChartDataPoint[],
         snapshotByProduct: FixedIncomeTitle[]
     }
+}
+
+export interface ChartDataPoint {
+    correctedQuota: number,
+    dailyReferenceDate: number,
+    movementTypeId: number,
+    portfolioProductId: number,
+    productName: string,
+    value: number
+}
+
+export interface PortfolioSnapshot {
+    equity: number,
+    valueApplied: number,
+    equityProfit: number,
+    percentageProfit: number,
+    indexerValue: number,
+    percentageOverIndexer: number,
 }
 
 export interface FixedIncomeTitle {
