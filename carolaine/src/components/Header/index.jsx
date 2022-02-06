@@ -15,16 +15,17 @@ const Header = (props) => {
 
   useEffect(() => {
     if (typeof props.data !== "undefined") {
-      let aux = 0;
+      let aux = 0,
+        valorFixado = 0;
 
       setValorAplicado(() => {
         aux = props.data.data.snapshotByPortfolio.valueApplied;
-        aux = aux.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+        aux = aux.toLocaleString("pt-BR");
         return aux;
       });
       setSaldoBruto(() => {
         aux = props.data.data.snapshotByPortfolio.equity;
-        aux = aux.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+        aux = aux.toLocaleString("pt-BR");
         return aux;
       });
       setRentabilidade(props.data.data.snapshotByPortfolio.percentageProfit);

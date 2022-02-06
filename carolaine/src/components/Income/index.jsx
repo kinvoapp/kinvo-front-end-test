@@ -15,17 +15,13 @@ const Income = ({ data }) => {
   const title = data.fixedIncome.name;
   const dueDate = data.due.date;
   const daysExpiration = data.due.daysUntilExpiration;
-  const valueApplied = data.position.valueApplied.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-  });
-  const equity = data.position.equity.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-  });
+  const valueApplied = data.position.valueApplied.toLocaleString("pt-BR");
+  const equity = data.position.equity.toLocaleString("pt-BR");
   const percentagePortfolio = data.position.portfolioPercentage;
   const percentageIndexer = data.position.percentageOverIndexer;
   const profitability = data.position.profitability;
 
-  // console.log(data.position);
+  console.log(data.position);
 
   return (
     <RendaContainer>
