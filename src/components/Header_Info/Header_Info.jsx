@@ -3,7 +3,7 @@ import React from "react";
 
 function Header_Info({ svgIcon, cardTitle, cardValue }) {
   return (
-    <div className='card'>
+    <div className='header-card'>
       <img src={svgIcon} alt='Card Icon' className='card-icon' />
       <div className='card-info'>
         <p className='card-title'>{cardTitle}</p>

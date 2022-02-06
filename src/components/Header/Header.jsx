@@ -12,7 +12,7 @@ import ring from "../../assets/header/ring.svg";
 //? Componentes
 import HeaderInfo from "../Header_Info/Header_Info";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header>
       <div className='icon'>
