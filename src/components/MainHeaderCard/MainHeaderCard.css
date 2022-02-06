@@ -1,0 +1,32 @@
+.main-header-card {
+  width: 18%;
+  height: 65px;
+
+  margin: 5px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.divider {
+  width: 3px;
+  height: 70%;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  background-color: #dae0e3;
+}
+
+.main-header-card-title {
+  color: #4e5b61;
+}
+
+.main-header-card-content {
+  color: #4c309b;
+}
