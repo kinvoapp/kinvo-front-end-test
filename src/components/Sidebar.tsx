@@ -48,7 +48,7 @@ function SidebarItem({ iconSrc, title, active }: SidebarItemProps) {
             <Icon src={iconSrc} color={active ? "primary" : "background"} shade={active ? "main" : "dark"} />
             <Text variant="default">{title}</Text>
             <div style={{ justifySelf: 'flex-end' }}>
-                <Icon src={arrowChevronRightDarkIcon} />
+                <Icon src={arrowChevronRightDarkIcon} noCircle />
             </div>
         </SidebarItemWrapper>
     </>

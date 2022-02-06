@@ -10,7 +10,8 @@ export interface IconProps {
   shade?: ColorShade;
   size?: number;
   alt?: string;
-  button?: boolean
+  button?: boolean;
+  noCircle?: boolean;
 }
 
 export const FilledCircle = styled.div.attrs(props => ({
@@ -39,18 +40,37 @@ export const FilledCircle = styled.div.attrs(props => ({
   cursor: ${props => props.button ? "pointer" : "default"};
 `;
 
+const IconWrapper = styled.div.attrs(props => ({
+  size: ((props as any).size ?? 1) as number,
+  button: (props as any).button ? true : false
+}))`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: ${props => props.size || 1}rem;
+  min-width: ${props => props.size || 1}rem;
+  height: ${props => props.size || 1}rem;
+  min-height: ${props => props.size || 1}rem;
+
+  ${props => props.button ? "cursor: pointer;" : ""}
+`;
+
 const IconSvg = styled(Image)`
   width: 100%;
   height: 100%;
 `
 
-export function Icon({ src, color, shade = "main", size = 1.5, alt = "", button = false }: IconProps) {
+export function Icon({ src, color, shade = "main", size = 1.5, alt = "", button = false, noCircle = false }: IconProps) {
+  const icon = src ? <IconSvg src={src} alt={alt} /> : null;
 
   return (
     <>
-      <FilledCircle color={color} size={size} shade={shade} button={button} >
-        {src ? <IconSvg src={src} alt={alt} /> : null}
-      </FilledCircle>
+      {noCircle ? <IconWrapper size={size} button={button} >
+        {icon}
+      </IconWrapper> : <FilledCircle color={color} shade={shade} size={size} button={button} >
+        {icon}
+      </FilledCircle>}
     </>
   );
 }
