@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 19px;
   border-radius: 10px;
   margin-top: 22px;
-  height: 500px;
+  height: 400px;
 
   tspan {
     font-size: 11px;
