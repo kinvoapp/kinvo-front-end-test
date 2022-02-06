@@ -23,6 +23,7 @@ export const FixedIncomeDetails = styled.div`
     display: grid;
     grid-template-columns: 30% 48% 20%;
     grid-gap: 20px;
+    margin: 1%;
   }
    hr{
      width:100%;
@@ -42,8 +43,25 @@ export const ContainerTop = styled.div`
 export const InputxBox = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 25%;
+  width: 35%;
   height: 100px;
   flex-direction: row;
   align-items: center;  
+
+  input {
+    width: 300px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D6D9DD;
+    border-radius: 10px;
+    opacity: 1;
+  }
+  select{
+    width: 200px;
+    height: 45px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D6D9DD;
+    border-radius: 10px;
+    opacity: 1;
+  }
 `

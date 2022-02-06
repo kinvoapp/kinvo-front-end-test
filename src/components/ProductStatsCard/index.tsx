@@ -46,19 +46,19 @@ function SnapshotProductStats(props: Iprops) {
                 <div className='card_bottom'>
                     <div>
                         <p>VALOR INVES</p>
-                        <h3>{dataPosition.valueApplied}</h3>
+                        <h3>{dataPosition.valueApplied.toLocaleString()}</h3>
                     </div>
                     <div>
                         <p>SALDO BRUTO</p>
-                        <h3>{dataPosition.equity}</h3>
+                        <h3>{dataPosition.equity.toLocaleString()}</h3>
                     </div>
                     <div>
                         <p>RENT</p>
-                        <h3>{dataPosition.profitability}</h3>
+                        <h3>{dataPosition.profitability.toLocaleString()} %</h3>
                     </div>
                     <div>
                         <p>% DA CART</p>
-                        <h3>{dataPosition.portfolioPercentage}</h3>
+                        <h3>{dataPosition.portfolioPercentage} %</h3>
                     </div>
                     <div>
                         <p>CDI</p>

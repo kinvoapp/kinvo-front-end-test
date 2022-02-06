@@ -25,7 +25,7 @@ export type positionType = {
     valueApplied: number;
 }
 
-type snapshotProductType = {
+export type snapshotProductType = {
     due: dueType;
     fixedIncome: fixedIncomeType;
     hasBalance: number;
