@@ -105,3 +105,38 @@ export const SearchBox = styled.div`
     margin: 3px 0 0 10px;
   }
 `;
+
+export const Pagination = styled.div`
+  padding: 11px 10px 18px 10px;
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+`;
+
+export const PaginationItem = styled.li`
+  list-style: none;
+  display: inline-block;
+  margin: 0 2px 4px 2px;
+
+  a {
+    display: inline-block;
+    padding: 9px 12px;
+    border: 1px solid;
+    border-color: ${(props) => (props.selected ? "#DCE0E3" : "#edeef0")};
+    color: ${(props) => (props.selected ? "#fff" : "var(--cor-texto)")};
+    font-size: 13px;
+    min-width: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background: ${(props) => (props.selected ? "#DCE0E3" : "var(--cor-fundo)")};
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3%);
+  }
+
+  a svg {
+    position: relative;
+    top: 2px;
+  }
+`;

@@ -8,10 +8,14 @@ import {
   FilterOption,
   SearchBox,
   Container,
+  Pagination,
+  PaginationItem,
 } from "./style";
 import {
   FaChevronDown as ChevronDown,
   FaSearch as SearchIcon,
+  FaChevronRight as ChevronRight,
+  FaChevronLeft as ChevronLeft,
 } from "react-icons/fa";
 
 const Incomes = ({ data }) => {
@@ -205,6 +209,30 @@ const Incomes = ({ data }) => {
       {incomeData
         ? incomeData.map((renda, index) => <Income data={renda} key={index} />)
         : null}
+
+      <Pagination>
+        <ul>
+          <PaginationItem>
+            <a>
+              <ChevronLeft />
+            </a>
+          </PaginationItem>
+
+          <PaginationItem selected>
+            <a>1</a>
+          </PaginationItem>
+
+          <PaginationItem>
+            <a>2</a>
+          </PaginationItem>
+
+          <PaginationItem>
+            <a>
+              <ChevronRight />
+            </a>
+          </PaginationItem>
+        </ul>
+      </Pagination>
     </IncomesContainer>
   );
 };
