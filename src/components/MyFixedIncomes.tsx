@@ -13,6 +13,7 @@ import type { FixedIncomeTitle } from "../data/fixed_income";
 import { formatNumber } from "../utils/numberFormatter";
 import { searchIcon } from "../styles/icons";
 import { Select } from "./Select";
+import { Divider } from "./Divider";
 
 const OutlinedInfoWrapper = styled.div`
     display: flex;
@@ -56,8 +57,6 @@ const ExternalGrid = styled.div.attrs(props => ({
 }))`
     display: grid;
     gap: 1rem;
-    width: 100%;
-    height: 100%:
     padding: 1rem;
     grid-template-columns: 4fr 6fr 2fr;
     grid-template-rows: 1fr;
@@ -169,9 +168,9 @@ export function MyFixedIncomes() {
     }, [fixedIncomeInfo, query, sorting]);
 
     return (<>
-        <Card>
+        <Card noPadding>
             <Flex grow direction="column" justifySelf="stretch" justify="flex-start" height="100%">
-                <Flex justify="space-between" marginBottom={2}>
+                <Flex justify="space-between" align="center" padding={1}>
                     <Text variant="card_title">
                         Minhas Rendas Fixas
                     </Text>
@@ -183,12 +182,13 @@ export function MyFixedIncomes() {
                                 return <option key={key} value={JSON.stringify(value)} selected={sorting.criteria === value.criteria}>{label}</option>
                             })}
                         </Select>
-                        <Input value={query} onChange={({ target }) => setQuery((target as any).value)} startAdornment={
+                        <Input style={{ width: "100vw", maxWidth: "24rem" }} value={query} onChange={({ target }) => setQuery((target as any).value)} startAdornment={
                             <Icon src={searchIcon} />
                         } />
                     </Flex>
                 </Flex>
-                <Flex grow direction="column" alignSelf="stretch" gap={1}>
+                <Divider />
+                <Flex grow width="100%" direction="column" gap={1}>
                     {filtered?.map((titleInfo, index) => <FixedIncomeBox key={index} titleInfo={titleInfo} darkBg={index % 2 ? true : false} />)}
                 </Flex>
             </Flex>

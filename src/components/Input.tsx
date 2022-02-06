@@ -8,7 +8,7 @@ const InputWrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0rem 0.5rem;
     border-radius: 0.75rem;
     border: solid 2px ${props => getTheme(props).background.main};
 `
