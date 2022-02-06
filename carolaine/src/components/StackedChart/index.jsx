@@ -1,4 +1,4 @@
-import React, { PureComponent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AreaChart,
   Area,
@@ -13,7 +13,7 @@ import { Container, PageTitle } from "./style";
 const StackedChart = ({ data, title }) => {
   const [dataChart, setDataChart] = useState();
 
-  // console.log(dataChart);
+  console.log(dataChart);
 
   useEffect(() => {
     if (data) {
@@ -24,7 +24,7 @@ const StackedChart = ({ data, title }) => {
   return (
     <Container>
       <PageTitle>{title}</PageTitle>
-      <ResponsiveContainer width="100%" height="85%">
+      <ResponsiveContainer width="99%" height="85%">
         <AreaChart
           width={500}
           height={400}
@@ -36,8 +36,8 @@ const StackedChart = ({ data, title }) => {
             bottom: 0,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="productName" />
+          <CartesianGrid strokeDasharray="0 0" />
+          <XAxis dataKey="movementTypeId" />
           <YAxis />
           <Tooltip />
           <Area

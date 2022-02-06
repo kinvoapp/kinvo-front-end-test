@@ -7,6 +7,12 @@ export const Container = styled.div`
   border-radius: 10px;
   margin-top: 22px;
   height: 500px;
+
+  tspan {
+    font-size: 11px;
+    font-weight: 600;
+    color: #707b81;
+  }
 `;
 
 export const PageTitle = styled.h2`
