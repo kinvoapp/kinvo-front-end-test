@@ -30,10 +30,9 @@ const Incomes = ({ data }) => {
 
   const injectIncome = () => {
     if (rendas != null) {
-      // console.log(rendas);
-
       if (searchMode) {
         const searchInput = document.querySelector("#search");
+
         const query = rendas.filter((renda) => {
           return renda.fixedIncome.name
             .toLowerCase()
@@ -46,8 +45,11 @@ const Incomes = ({ data }) => {
           ));
         }
 
+        searchInput.value = "";
         setSearchMode(false);
-      } else if (sortedMode) {
+      }
+
+      if (sortedMode) {
         let sortedIncome = null;
 
         if (sortedMode === "valueApplied-low") {

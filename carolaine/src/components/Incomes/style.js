@@ -88,6 +88,8 @@ export const SearchBox = styled.div`
     width: 220px;
     font-size: 12px;
     padding: 10px 9px 10px 35px;
+    font-family: "Montserrat";
+    color: var(--cor-texto);
   }
 
   input:focus {

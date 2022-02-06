@@ -44,6 +44,7 @@ const Indexes = ({ data }) => {
     });
 
     auxResult = auxEquity - auxValueApplied;
+
     setResult(() => {
       auxResult = auxResult.toLocaleString("pt-BR", {
         minimumFractionDigits: 2,

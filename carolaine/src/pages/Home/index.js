@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import Incomes from "../../components/Incomes";
 import Indexes from "../../components/Indexes";
+import ChartProfitability from "../../components/ChartProfitability";
 import {
   Main,
   Container,
@@ -42,10 +43,7 @@ const Home = () => {
 
           <Indexes data={dados} />
 
-          <Rentabilidade>
-            <Title>Rentabilidade dos Títulos</Title>
-            <p>gráfico</p>
-          </Rentabilidade>
+          <ChartProfitability data={dados} />
 
           <Incomes data={dados} />
 
