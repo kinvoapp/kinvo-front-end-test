@@ -13,7 +13,7 @@ import { Container, PageTitle } from "./style";
 const ChartProfitability = ({ data }) => {
   const [dataChart, setDataChart] = useState();
 
-  console.log(dataChart);
+  // console.log(dataChart);
 
   useEffect(() => {
     if (data) {
