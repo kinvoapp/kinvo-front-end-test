@@ -18,8 +18,6 @@ const Indexes = ({ data }) => {
   }, [data]);
 
   const setData = (data) => {
-    console.log(data);
-
     let auxEquity = 0,
       auxValueApplied = 0,
       auxResult = 0,
@@ -66,8 +64,6 @@ const Indexes = ({ data }) => {
     });
 
     setIndexerValue(() => {
-      // console.log(data.length);
-      // console.log(auxIndexerValue);
       let aux = (auxIndexerValue / data.length).toFixed(2);
       return aux;
     });

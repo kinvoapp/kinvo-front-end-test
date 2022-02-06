@@ -22,8 +22,11 @@ const Income = ({ data }) => {
     minimumFractionDigits: 2,
   });
   const percentagePortfolio = data.position.portfolioPercentage;
-  const percentageIndexer = data.position.percentageOverIndexer;
+  const indexerValue = data.position.indexerValue;
+  const percentageOverIndexer = data.position.percentageOverIndexer;
   const profitability = data.position.profitability;
+
+  console.log(data);
 
   return (
     <RendaContainer>
@@ -69,12 +72,12 @@ const Income = ({ data }) => {
 
           <div>
             <ClassLabel>CDI</ClassLabel>
-            <Class $mode="position">{percentagePortfolio}%</Class>
+            <Class $mode="position">{indexerValue}%</Class>
           </div>
 
           <div>
             <ClassLabel>Sobre CDI</ClassLabel>
-            <Class $mode="position">{percentagePortfolio}%</Class>
+            <Class $mode="position">{percentageOverIndexer}%</Class>
           </div>
         </Columns>
       </Item>
