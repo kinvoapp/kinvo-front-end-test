@@ -16,6 +16,7 @@ export const FilledCircle = styled.div.attrs(props => ({
   size: ((props as any).size ?? 1) as number,
   color: (props.color) as ColorName,
   shade: ((props as any).shade ?? "main") as ColorShade,
+  button: (props as any).button ? true : false
 }))`
   display: flex;
   flex-direction: row;
@@ -34,6 +35,7 @@ export const FilledCircle = styled.div.attrs(props => ({
       return "transparent";
     }
   }};
+  cursor: ${props => props.button ? "pointer" : "default"};
 `;
 
 const IconSvg = styled(Image)`

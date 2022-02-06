@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 import { getTheme } from "../styles/theme";
 
@@ -13,10 +14,13 @@ const SidebarWrapper = styled.aside`
   justify-content: flex-start
   align-items: stretch;
   width: 14rem;
-  background-color: ${props => getTheme(props).background.lighter};
+  background: linear-gradient(to bottom, ${props => getTheme(props).background.lighter}, ${props => getTheme(props).background.lightest} 4rem)
 `;
 
-const SidebarItemWrapper = styled.div`
+const SidebarItemWrapper = styled.div.attrs(props => ({
+    hover: (props as any).hover ? true : false,
+    active: (props as any).active ? true : false,
+}))`
     height: 3rem;
     padding: 1rem;
     display: flex;
@@ -25,22 +29,27 @@ const SidebarItemWrapper = styled.div`
     align-items: center;
     gap: 0.5rem;
     border-bottom: ${props => getTheme(props).background.main} solid 2px;
+    background-color: ${props => props.hover || props.active ? getTheme(props).background.light : "transparent"};
+    cursor: ${props => props.active ? "default" : "pointer"};
+    transition: background-color 0.2s;
 `;
 
 interface SidebarItemProps {
     iconSrc: any,
-    title: string
+    title: string,
+    active?: boolean
 }
 
-function SidebarItem({ iconSrc, title }: SidebarItemProps) {
+function SidebarItem({ iconSrc, title, active }: SidebarItemProps) {
+    const [hover, setHover] = useState(false);
+
     return <>
-        <SidebarItemWrapper>
-            <Icon src={iconSrc} color="background" shade="dark" />
+        <SidebarItemWrapper active={active} hover={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+            <Icon src={iconSrc} color={active ? "primary" : "background"} shade={active ? "main" : "dark"} />
             <Text style={{ fontSize: "0.8rem", fontWeight: 500 }}>{title}</Text>
             <div style={{ justifySelf: 'flex-end' }}>
                 <Icon src={arrowChevronRightDarkIcon} />
             </div>
-
         </SidebarItemWrapper>
     </>
 }
@@ -61,6 +70,7 @@ const menu: SidebarItemProps[] = [
     {
         title: "Classe de Ativos",
         iconSrc: puzzlePieceIcon,
+        active: true
     },
     {
         title: "Rentabilidade Real",

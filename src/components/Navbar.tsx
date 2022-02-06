@@ -29,29 +29,33 @@ const NavbarButtons = styled.div`
   gap: 2rem;
 `;
 
-const NavbarInfoWrapper = styled.div`
+const NavbarInfoWrapper = styled.div.attrs(props => ({
+  button: (props as any).button ? true : false
+}))`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  cursor: ${props => props.button ? "pointer" : "default"};
 `
 
 interface NavbarInfoProps {
-  icon: React.ReactNode,
+  iconSrc: any,
   title: string,
   value: string,
+  type: "info"|"button"
 }
 
-function NavbarInfo({icon, title, value}: NavbarInfoProps) {
+function NavbarInfo({iconSrc, title, value, type}: NavbarInfoProps) {
   return (
     <>
-      <NavbarInfoWrapper>
+      <NavbarInfoWrapper button={type === "button"}>
         <div>
-          { icon }
+          <Icon src={iconSrc} color={type === "info" ? "background" : "primary"} shade={type === "info" ? "dark" : "main"} />
         </div>
         <div>
           <Text style={{ textTransform: "uppercase", fontSize: "0.5rem", lineHeight: "0.5rem" }}>{title}</Text><br/>
-          <Text style={{ fontWeight: "bold", fontSize: "1rem" }}>{value}</Text>
+          <Text selectable={type === "info"} style={{ fontWeight: "bold", fontSize: "1rem" }}>{value}</Text>
         </div>
       </NavbarInfoWrapper>
     </>
@@ -62,22 +66,26 @@ const menu: NavbarInfoProps[] = [
   {
     title: "Saldo bruto",
     value: "130.521.230,02",
-    icon: <Icon src={moneyBagIcon} color="background" shade="dark" />
+    iconSrc: moneyBagIcon,
+    type: "info",
   },
   {
     title: "Valor aplicado",
     value: "521.230,02",
-    icon: <Icon src={arrowUpIcon} color="background" shade="dark" />
+    iconSrc: arrowUpIcon,
+    type: "info",
   },
   {
     title: "Rentabilidade",
     value: "2,34%",
-    icon: <Icon src={arrowWaveUpRightIcon} color="background" shade="dark" />
+    iconSrc: arrowWaveUpRightIcon,
+    type: "info",
   },
   {
     title: "Carteira",
     value: "Minha carteira",
-    icon: <Icon src={arrowChevronDown} color="primary" />
+    iconSrc: arrowChevronDown,
+    type: "button",
   },
 ];
 
