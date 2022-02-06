@@ -5,7 +5,7 @@ import Sidebar from "../../components/Sidebar";
 import Incomes from "../../components/Incomes";
 import Indexes from "../../components/Indexes";
 import StackedChart from "../../components/StackedChart";
-import PieChart from "../../components/PieChart";
+import { PieChartType, PieChartIndexes } from "../../components/PieChart";
 import { Main, Container, PageTitle, Columns } from "./style";
 
 const Home = () => {
@@ -42,9 +42,12 @@ const Home = () => {
           <Incomes data={data} />
 
           <Columns>
-            <PieChart data={data} title="Divisão de Carteira por Tipos" />
+            <PieChartType data={data} title="Divisão de Carteira por Tipos" />
 
-            <PieChart data={data} title="Divisão de Carteira por Título" />
+            <PieChartIndexes
+              data={data}
+              title="Divisão de Carteira por Título"
+            />
           </Columns>
         </Container>
       </Main>

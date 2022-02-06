@@ -9,9 +9,9 @@ import {
   Cell,
 } from "recharts";
 
-const PieChart = (props) => {
+export const PieChartType = (props) => {
   const [dataChart, setDataChart] = useState();
-  // console.log(dataChart);
+  console.log(dataChart);
 
   useEffect(() => {
     if (props.data) {
@@ -19,16 +19,7 @@ const PieChart = (props) => {
     }
   }, [props.data]);
 
-  const data02 = [
-    { name: "Group A", value: 2400 },
-    { name: "Group B", value: 4567 },
-    { name: "Group C", value: 1398 },
-    { name: "Group D", value: 9800 },
-    { name: "Group E", value: 3908 },
-    { name: "Group F", value: 4800 },
-  ];
-
-  const COLORS = ["#FF8052", "#0DD1E3", "#9E51BA"];
+  const COLORS = ["#0DD1E3", "#FF8052", "#9E51BA"];
 
   return (
     <Container>
@@ -37,7 +28,7 @@ const PieChart = (props) => {
       <ResponsiveContainer width="100%" height="100%">
         <Chart width={300} height={250}>
           <Pie
-            dataKey="value"
+            dataKey="movementTypeId"
             data={dataChart}
             cx="50%"
             cy="30%"
@@ -45,12 +36,14 @@ const PieChart = (props) => {
             outerRadius={80}
             fill="#82ca9d"
           >
-            {data02.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
-            ))}
+            {dataChart
+              ? dataChart.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))
+              : null}
           </Pie>
 
           <Tooltip />
@@ -60,4 +53,45 @@ const PieChart = (props) => {
   );
 };
 
-export default PieChart;
+export const PieChartIndexes = (props) => {
+  const [dataChart, setDataChart] = useState();
+
+  useEffect(() => {
+    if (props.data) {
+      setDataChart(props.data.data.dailyEquityByPortfolioChartData);
+    }
+  }, [props.data]);
+
+  const COLORS = ["#9E51BA", "#FF8052", "#0DD1E3"];
+
+  return (
+    <Container>
+      <PageTitle>{props.title}</PageTitle>
+
+      <ResponsiveContainer width="100%" height="100%">
+        <Chart width={300} height={250}>
+          <Pie
+            dataKey="portfolioProductId"
+            data={dataChart}
+            cx="50%"
+            cy="30%"
+            innerRadius={40}
+            outerRadius={80}
+            fill="#82ca9d"
+          >
+            {dataChart
+              ? dataChart.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))
+              : null}
+          </Pie>
+
+          <Tooltip />
+        </Chart>
+      </ResponsiveContainer>
+    </Container>
+  );
+};
