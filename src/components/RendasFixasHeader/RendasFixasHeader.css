@@ -1,0 +1,54 @@
+.rendas-fixas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderer-area {
+  width: 50%;
+  padding: 5px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-area {
+  margin-left: 10px;
+  padding: 5px;
+  background-color: #fff;
+
+  border-radius: 5px;
+  border: 1px solid #d6d9dd;
+
+  display: flex;
+}
+
+#select {
+  background-color: #fff;
+  border: 1px solid #d6d9dd;
+}
+
+#search {
+  text-indent: 10px;
+  border: none;
+}
+
+#icon-lupa {
+  margin: 0 5px 0 5px;
+}
+
+#select,
+#search {
+  border-radius: 5px;
+}
+
+#select:focus,
+#search:focus {
+  outline: none;
+}
+
+.header-divider {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid #d6d9dd;
+}
