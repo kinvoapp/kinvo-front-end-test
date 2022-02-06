@@ -26,8 +26,7 @@ const textVariants: { [key in TextVariant]: string } = {
     `,
     card_title: `
         font-size: 1.125rem;
-        font-weight: bold;
-        margin: 1rem 0rem;
+        margin-bottom: 1rem;
     `,
     title: `
         font-size: 1.5rem;

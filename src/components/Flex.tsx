@@ -5,8 +5,9 @@ type JustifyContent = 'flex-start'
     | 'center'
     | 'space-between'
     | 'space-around'
+    | 'stretch'
 
-type AlignItems = JustifyContent | 'baseline' | 'stretch'
+type AlignItems = JustifyContent | 'baseline'
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
     justify?: JustifyContent
