@@ -18,6 +18,7 @@ const Incomes = ({ data }) => {
   const [rendas, setRendas] = useState(null);
   const [sortedMode, setSortedMode] = useState(null);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
+  const [searchMode, setSearchMode] = useState(false);
 
   useEffect(() => {
     if (data) {
@@ -25,13 +26,28 @@ const Incomes = ({ data }) => {
         return data.data.snapshotByProduct;
       });
     }
-  }, [data]);
+  }, [data, searchMode]);
 
   const injectIncome = () => {
     if (rendas != null) {
       // console.log(rendas);
 
-      if (sortedMode) {
+      if (searchMode) {
+        const searchInput = document.querySelector("#search");
+        const query = rendas.filter((renda) => {
+          return renda.fixedIncome.name
+            .toLowerCase()
+            .includes(searchInput.value.toLowerCase());
+        });
+
+        if (query) {
+          return query.map((renda, index) => (
+            <Income data={renda} key={index} />
+          ));
+        }
+
+        setSearchMode(false);
+      } else if (sortedMode) {
         let sortedIncome = null;
 
         if (sortedMode === "valueApplied-low") {
@@ -178,7 +194,7 @@ const Incomes = ({ data }) => {
 
           <SearchBox>
             <input type="search" id="search" />
-            <a>
+            <a onClick={() => setSearchMode(true)}>
               <SearchIcon />
             </a>
           </SearchBox>

@@ -25,8 +25,6 @@ const Income = ({ data }) => {
   const percentageIndexer = data.position.percentageOverIndexer;
   const profitability = data.position.profitability;
 
-  console.log(data.position);
-
   return (
     <RendaContainer>
       <Item $mode="title">
