@@ -52,7 +52,8 @@ const theme: Themes = {
     danger: {},
     warning: {},
     background: {
-      lighter: "#ffffff",
+      lightest: "#ffffff",
+      lighter: "#FAFBFB",
       light: "#F8FAFB",
       main: "#EEF2F4",
       dark: "#DAE0E3",
