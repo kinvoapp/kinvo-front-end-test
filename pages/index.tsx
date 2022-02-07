@@ -33,7 +33,7 @@ const Home: NextPage<HomeProps> = ({ fixedIncomeInfo }) => {
       </Head>
       <ThemeProvider theme={theme.light}>
         <FixedIncomeProvider value={fixedIncomeInfo}>
-          <Flex direction="column" width="100vw" minHeight="100vh">
+          <Flex direction="column" minHeight="100vh">
             <Navbar />
             <Flex grow direction="row" align="stretch">
               <Sidebar />
