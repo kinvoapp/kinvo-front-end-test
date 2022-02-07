@@ -88,26 +88,33 @@ const Vencimento = ({ dataExp, daysLeft }) => {
 };
 
 function RendasFixasCard({ data }) {
+  const { name, bondType } = data.fixedIncome;
+
+  const {
+    valueApplied,
+    equity,
+    profitability,
+    portfolioPercentage,
+    indexerValue,
+    percentageOverIndexer,
+  } = data.position;
+
+  const { date, daysUntilExpiration } = data.due;
+
   return (
     <div className='rendas-fixas-card'>
-      <TitleComponent
-        contentText={data.fixedIncome.name}
-        classText={data.fixedIncome.bondType}
-      />
+      <TitleComponent contentText={name} classText={bondType} />
 
       <MinhaPosicao
-        values={data.position.valueApplied}
-        saldo={data.position.equity}
-        rent={data.position.profitability}
-        percent={data.position.portfolioPercentage}
-        cdi={data.position.indexerValue}
-        overCdi={data.position.percentageOverIndexer}
+        values={valueApplied}
+        saldo={equity}
+        rent={profitability + "%"}
+        percent={portfolioPercentage + "%"}
+        cdi={indexerValue + "%"}
+        overCdi={percentageOverIndexer}
       />
 
-      <Vencimento
-        dataExp={data.due.date}
-        daysLeft={data.due.daysUntilExpiration}
-      />
+      <Vencimento dataExp={date} daysLeft={daysUntilExpiration} />
     </div>
   );
 }
