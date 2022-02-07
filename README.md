@@ -30,7 +30,7 @@ npm install
 
 ### Executar localmente
 
-Por fim, para executar o projeto, basta executar o comando:
+Após a instalação, para executar o projeto em sua máquina, basta executar o comando:
 
 ```bash
 yarn dev
@@ -38,7 +38,7 @@ yarn dev
 npm run dev
 ```
 
-Abra o seu navegador em [http://localhost:3000](http://localhost:3000) para ver os resultados.
+Por fim, abra o seu navegador em [http://localhost:3000](http://localhost:3000) para executar localmente o projeto.
 
 ## Tecnologias utilizadas
 
