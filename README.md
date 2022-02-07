@@ -1,6 +1,6 @@
 # Kinvo Front-End Test
 
-Este repositório é um teste para a vaga de desenvolvedor front-end do Kinvo.
+Este repositório se trata de um teste técnico para uma vaga de desenvolvedor front-end do Kinvo.
 
 ## Instruções de instalação
 
