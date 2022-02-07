@@ -3,7 +3,7 @@ import React from "react";
 import SideSection from "../SideSection/SideSection";
 import MainSection from "../MainSection/MainSection";
 
-function Main({ rendaFixa, minhasRendasFixas, setSearchText }) {
+function Main({ rendaFixa, minhasRendasFixas, setSearchText, setOrderType }) {
   return (
     <main className='main-content'>
       <SideSection />
@@ -12,6 +12,7 @@ function Main({ rendaFixa, minhasRendasFixas, setSearchText }) {
         rendaFixa={rendaFixa}
         minhasRendasFixas={minhasRendasFixas}
         setSearchText={setSearchText}
+        setOrderType={setOrderType}
       />
     </main>
   );

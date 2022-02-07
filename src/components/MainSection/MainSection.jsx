@@ -5,7 +5,12 @@ import RendasFixas from "../RendasFixas/RendasFixas";
 
 import grafico1 from "../../assets/main-content/grafico1.svg";
 
-function MainSection({ rendaFixa, minhasRendasFixas, setSearchText }) {
+function MainSection({
+  rendaFixa,
+  minhasRendasFixas,
+  setSearchText,
+  setOrderType,
+}) {
   return (
     <div className='main-section'>
       <MainHeader rendaFixa={rendaFixa} />
@@ -15,6 +20,7 @@ function MainSection({ rendaFixa, minhasRendasFixas, setSearchText }) {
       <RendasFixas
         minhasRendasFixas={minhasRendasFixas}
         setSearchText={setSearchText}
+        setOrderType={setOrderType}
       />
     </div>
   );
