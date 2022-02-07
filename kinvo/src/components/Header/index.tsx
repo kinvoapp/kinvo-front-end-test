@@ -46,7 +46,7 @@ export const Header = () => {
 						<img src="arrowChart.svg" alt="Ícone Rentabilidade" />
 						<div>
 							<p>RENTABILIDADE</p>
-							<h1>{`${userData?.percentageProfit}%`}</h1>
+							<h1>{`${userData?.percentageProfit.toLocaleString("pt-BR")}%`}</h1>
 						</div>
 					</S.HeaderSurface>
 				</S.HeaderBox>
