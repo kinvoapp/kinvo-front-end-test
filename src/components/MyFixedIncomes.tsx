@@ -14,6 +14,7 @@ import { formatNumber } from "../utils/numberFormatter";
 import { searchIcon } from "../styles/icons";
 import { Select } from "./Select";
 import { Divider } from "./Divider";
+import { PageNavigator } from "./PageNavigator";
 
 const OutlinedInfoWrapper = styled.div`
     display: flex;
@@ -121,6 +122,8 @@ const sortingOptions: { [key: string]: Sorting } = {
     }
 };
 
+const INCOMES_PER_PAGE = 5;
+
 export function MyFixedIncomes() {
     const fixedIncomeInfo = useFixedIncome();
     const [filtered, setFiltered] = useState(fixedIncomeInfo?.data?.snapshotByProduct);
@@ -129,6 +132,8 @@ export function MyFixedIncomes() {
         criteria: "title",
         order: "ascending"
     });
+    const [page, setPage] = useState(1);
+    const numPages = filtered ? Math.ceil(filtered.length / INCOMES_PER_PAGE) : 1;
 
     useEffect(() => {
         let newFiltered = [...(fixedIncomeInfo?.data?.snapshotByProduct ?? [])];
@@ -189,7 +194,10 @@ export function MyFixedIncomes() {
                 </Flex>
                 <Divider />
                 <Flex grow width="100%" direction="column">
-                    {filtered?.map((titleInfo, index) => <FixedIncomeBox key={index} titleInfo={titleInfo} darkBg={index % 2 ? true : false} />)}
+                    {filtered?.filter((titleInfo, index) => index >= (page - 1) * INCOMES_PER_PAGE && index < page * INCOMES_PER_PAGE).map((titleInfo, index) => <FixedIncomeBox key={index} titleInfo={titleInfo} darkBg={index % 2 ? true : false} />)}
+                </Flex>
+                <Flex justify="center" marginBottom={1}>
+                    <PageNavigator pages={numPages} onChange={({ page }) => setPage(page)} />
                 </Flex>
             </Flex>
         </Card>

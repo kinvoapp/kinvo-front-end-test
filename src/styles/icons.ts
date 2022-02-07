@@ -1,4 +1,5 @@
 export * as arrowChevronDown from "../assets/icons/arrow_chevron_down.svg";
+export * as arrowChevronLeftDarkIcon from "../assets/icons/arrow_chevron_left_dark.svg";
 export * as arrowChevronRightDarkIcon from "../assets/icons/arrow_chevron_right_dark.svg";
 export * as arrowUpIcon from "../assets/icons/arrow_up.svg";
 export * as arrowWaveUpRightIcon from "../assets/icons/arrow_wave_up_right.svg";
