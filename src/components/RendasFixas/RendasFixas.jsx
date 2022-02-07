@@ -15,7 +15,7 @@ function RendasFixas({ minhasRendasFixas, setSearchText, setOrderType }) {
         setOrderType={setOrderType}
       />
 
-      {listaDeContainers ? <ul>{listaDeContainers}</ul> : ""}
+      {listaDeContainers ? <ul>{listaDeContainers}</ul> : <></>}
     </div>
   );
 }
