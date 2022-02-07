@@ -69,7 +69,7 @@ export const MyBondsSurface = styled.div`
 
 export const BondContainer = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1.25fr 0.75fr;
+	grid-template-columns: 0.9fr 1.45fr 0.65fr;
 	width: 100%;
 	padding: 20px;
 	gap: 10px;
