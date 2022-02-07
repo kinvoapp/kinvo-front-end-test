@@ -8,7 +8,9 @@ function App() {
   const [rendaFixa, setRendaFixa] = useState([]);
   const [minhasRendasFixas, setMinhasRendasFixas] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [orderType, setOrderType] = useState("Saldo bruto");
 
+  //? Filtra os cards de acordo com o valor do input de pesquisa
   const filteredCards = !!searchText
     ? minhasRendasFixas.filter((card) => {
         return card.fixedIncome.name
@@ -17,6 +19,21 @@ function App() {
           .includes(searchText.normalize("NFD").toLowerCase());
       })
     : minhasRendasFixas;
+
+  //? Ordena os cards de acordo com o valor investido ou saldo bruto
+  const orderedCards = filteredCards.sort((a, b) => {
+    if (orderType === "Valor investido") {
+      const previus = a.position.valueApplied;
+      const next = b.position.valueApplied;
+
+      return previus > next ? -1 : previus < next ? 1 : 0;
+    } else if (orderType === "Saldo bruto") {
+      const previus = a.position.equity;
+      const next = b.position.equity;
+
+      return previus > next ? -1 : previus < next ? 1 : 0;
+    }
+  });
 
   useEffect(() => {
     api
@@ -38,8 +55,9 @@ function App() {
 
       <Main
         rendaFixa={rendaFixa}
-        minhasRendasFixas={filteredCards}
+        minhasRendasFixas={orderedCards}
         setSearchText={setSearchText}
+        setOrderType={setOrderType}
       />
     </div>
   );
