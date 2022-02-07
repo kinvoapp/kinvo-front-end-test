@@ -6,6 +6,10 @@ header {
   box-shadow: 0 0 20px rgb(240, 240, 240);
 
   grid-area: Header;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 .icon {
