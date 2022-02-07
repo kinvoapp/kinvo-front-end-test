@@ -19,7 +19,7 @@ function SnapshotProductStats(props: Iprops) {
         <ProductStatsCard color={labelColor}>
             <div className='card_top'>
                 <p>{title}</p>
-                <img alt='info' src={infoSVG} />
+                <img alt='info' src={infoSVG} />               
             </div>
             {dataFixed ? (
                 <div className='card_bottom'>

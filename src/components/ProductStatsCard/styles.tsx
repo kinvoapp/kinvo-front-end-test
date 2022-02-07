@@ -34,6 +34,7 @@ export const ProductStatsCard = styled.div<Iprops>`
   }
   p{
       font-size: 15px;
+      margin-right: 8px;
   }
 
   h3 {
