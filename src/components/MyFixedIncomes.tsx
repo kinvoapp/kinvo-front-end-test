@@ -57,7 +57,7 @@ const ExternalGrid = styled.div.attrs(props => ({
 }))`
     display: grid;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     grid-template-columns: 4fr 6fr 2fr;
     grid-template-rows: 1fr;
     background-color: ${props => props.dark ? getTheme(props).background.lighter : "transparent"};
@@ -188,7 +188,7 @@ export function MyFixedIncomes() {
                     </Flex>
                 </Flex>
                 <Divider />
-                <Flex grow width="100%" direction="column" gap={1}>
+                <Flex grow width="100%" direction="column">
                     {filtered?.map((titleInfo, index) => <FixedIncomeBox key={index} titleInfo={titleInfo} darkBg={index % 2 ? true : false} />)}
                 </Flex>
             </Flex>
