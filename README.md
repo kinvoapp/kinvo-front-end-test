@@ -14,7 +14,7 @@ Abra uma janela do terminal ou do prompt de comando, e clone o repositório:
 
 ```bash
 git clone git@github.com:ThalesQwerty/kinvo-front-end-test.git
-#ou
+# ou
 git clone https://github.com/ThalesQwerty/kinvo-front-end-test.git
 ```
 
@@ -28,9 +28,9 @@ cd kinvo-front-end-test
 npm install
 ```
 
-### Executando localmente
+### Executar localmente
 
-Por fim, para executar o projeto
+Por fim, para executar o projeto, basta executar o comando:
 
 ```bash
 yarn dev
