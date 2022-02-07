@@ -21,22 +21,28 @@ export const MyBondsContainer = styled.section`
 export const MyBondsSurface = styled.div`
 	display: flex;
 	justify-content: space-between;
+
 	margin-bottom: 20px;
 
 	div {
 		position: relative;
-		padding: 2.5rem 2.5rem 0.5rem;
+
 		display: flex;
 		gap: 2rem;
+
+		padding: 2.5rem 2.5rem 0.5rem;
 
 		&:before {
 			content: "";
 			position: absolute;
 			top: 67%;
 			left: 290px;
-			transform: translateY(-55%);
+
 			width: 15.15px;
 			height: 15.15px;
+
+			transform: translateY(-55%);
+
 			background-size: 100%;
 			background-image: url(/searchIcon.svg);
 		}
@@ -44,20 +50,22 @@ export const MyBondsSurface = styled.div`
 
 	input,
 	select {
-		height: 38px;
-		line-height: 30px;
-		border: 1px solid rgb(214, 217, 221);
-		border-radius: 10px;
-		padding-left: 40px;
 		width: 100%;
+		height: 38px;
+
 		padding-right: 10px;
+		padding-left: 40px;
+
+		border: 1px solid #d6d9dd;
+		border-radius: 10px;
 		background-color: white;
-		color: rgb(112, 123, 129);
+		color: #707b81;
+		line-height: 30px;
 		transition: border 0.15s ease 0s;
 
 		&:focus {
 			outline: none;
-			border-color: rgb(165, 231, 244);
+			border-color: #a5e7f4;
 			box-shadow: rgb(218 224 227 / 55%) 2px 2px 5px;
 		}
 	}
@@ -68,11 +76,14 @@ export const MyBondsSurface = styled.div`
 `;
 
 export const BondContainer = styled.div`
+	width: 100%;
+
 	display: grid;
 	grid-template-columns: 0.9fr 1.45fr 0.65fr;
-	width: 100%;
-	padding: 20px;
 	gap: 10px;
+
+	padding: 20px;
+
 	border-top: 1px solid #eef2f4;
 	border-bottom: 1px solid #eef2f4;
 
@@ -101,17 +112,20 @@ export const BondContainer = styled.div`
 
 export const BondBox = styled.div`
 	display: flex;
-	justify-content: space-between;
-	padding: 10px;
-	border-radius: 10px;
-	gap: 7px;
 	flex-direction: column;
+	justify-content: space-between;
+	gap: 7px;
+
+	padding: 10px;
+
+	border-radius: 10px;
 	border: 1px solid #dae0e3;
 `;
 
 export const BondTitle = styled.div`
-	display: flex;
 	height: fit-content;
+
+	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	gap: 10px;

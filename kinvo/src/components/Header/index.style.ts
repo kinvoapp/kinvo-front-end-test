@@ -28,12 +28,13 @@ export const HeaderBox = styled.div`
 
 export const HeaderSurface = styled.div<{ boldLabel?: boolean }>`
 	display: flex;
-	gap: 1rem;
 	align-items: center;
+	gap: 1rem;
 
 	div {
 		display: flex;
 		flex-direction: column;
+
 		color: #627179;
 		line-height: 2.2rem;
 

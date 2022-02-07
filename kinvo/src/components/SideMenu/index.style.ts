@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const SideMenuContainer = styled.aside`
-	width: fit-content;
-	max-width: 250px;
-	background-color: #fff;
-	height: 100%;
 	position: sticky;
 	top: 95px;
+
+	width: fit-content;
+	max-width: 250px;
+	height: 100%;
+
+	background-color: #fff;
 `;
 
 export const SideMenuNav = styled.nav`
@@ -17,15 +19,20 @@ export const SideMenuNav = styled.nav`
 `;
 
 export const MenuItem = styled.a<{ active?: boolean }>`
+	position: relative;
+
+	min-width: 22rem;
+
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 2rem;
+
 	padding: 1.5rem;
-	position: relative;
+
 	border-bottom: 1px solid rgba(204, 207, 209, 0.35);
-	min-width: 22rem;
 	cursor: pointer;
+
 	background-color: ${(props) => (props.active ? "#f8fafb" : "#fff")};
 
 	p {
@@ -35,11 +42,14 @@ export const MenuItem = styled.a<{ active?: boolean }>`
 	&::after {
 		content: "";
 		position: absolute;
-		width: 6px;
-		height: 10px;
 		right: 20px;
 		top: 50%;
+
+		width: 6px;
+		height: 10px;
+
 		transform: translateY(-50%);
+
 		background-size: 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -48,14 +58,18 @@ export const MenuItem = styled.a<{ active?: boolean }>`
 `;
 
 export const IconBox = styled.div<{ active?: boolean }>`
-	background-color: ${(props) => (props.active ? "#4C309B" : "#dae1e2")};
-	border-radius: 50px;
-	padding: 0.8rem;
+	width: 34px;
+	height: 34px;
+
 	justify-content: center;
 	align-items: center;
-	width: 34px;
+
 	margin: 0;
-	height: 34px;
+	padding: 0.8rem;
+
+	border-radius: 50px;
+
+	background-color: ${(props) => (props.active ? "#4C309B" : "#dae1e2")};
 `;
 
 export const Icon = styled.img`
@@ -64,19 +78,24 @@ export const Icon = styled.img`
 `;
 
 export const SubItem = styled.li<{ active?: boolean }>`
-	padding: 1.5rem 1.5rem 1.5rem 4rem;
 	position: relative;
-	background-color: ${(props) => (props.active ? "#f8fafb" : "#fff")};
+
+	padding: 1.5rem 1.5rem 1.5rem 4rem;
 	border-bottom: 1px solid rgba(204, 207, 209, 0.35);
+
+	background-color: ${(props) => (props.active ? "#f8fafb" : "#fff")};
 
 	&::after {
 		content: "";
 		position: absolute;
-		width: 6px;
-		height: 10px;
 		right: 20px;
 		top: 50%;
+
+		width: 6px;
+		height: 10px;
+
 		transform: translateY(-50%);
+
 		background-size: 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -85,11 +104,12 @@ export const SubItem = styled.li<{ active?: boolean }>`
 
 	&::before {
 		content: "•";
-		color: #4c309b;
-		font-size: 4rem;
 		position: absolute;
 		top: 25%;
 		left: 15px;
+
+		color: #4c309b;
+		font-size: 4rem;
 	}
 `;
 

@@ -4,19 +4,20 @@ main {
 	justify-content: space-between;
 }
 section {
-	display: flex;
 	width: 100%;
 	height: fit-content;
-	flex-direction: row;
+
+	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
 
 section h1 {
+	padding: 2.5rem 2.5rem 0.5rem;
+
 	color: #4c309b;
 	font-size: 2rem;
 	line-height: 1.8rem;
-	padding: 2.5rem 2.5rem 0.5rem;
 }
 
 section img {
