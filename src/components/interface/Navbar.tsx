@@ -5,10 +5,16 @@ import logo from "../../assets/logo_kinvo_premium.svg";
 
 import { getTheme } from "../../styles/theme";
 
-import { Icon } from '../base/Icon';
+import { Icon } from "../base/Icon";
 import { Text } from "../base/Text";
 
-import { moneyBagIcon, arrowUpIcon, arrowWaveUpRightIcon, arrowChevronDown, hamburgerMenuIcon } from "../../styles/icons";
+import {
+  moneyBagIcon,
+  arrowUpIcon,
+  arrowWaveUpRightIcon,
+  arrowChevronDown,
+  hamburgerMenuIcon,
+} from "../../styles/icons";
 
 const NavbarWrapper = styled.nav`
   position: sticky;
@@ -19,7 +25,7 @@ const NavbarWrapper = styled.nav`
   height: 5.5rem;
   padding-right: 2rem;
   padding-left: 2rem;
-  background-color: ${props => getTheme(props).background.lightest};
+  background-color: ${(props) => getTheme(props).background.lightest};
 `;
 
 const NavbarButtons = styled.div`
@@ -30,37 +36,55 @@ const NavbarButtons = styled.div`
   gap: 2rem;
 `;
 
-const NavbarInfoWrapper = styled.div.attrs(props => ({
-  button: (props as any).button ? true : false
+const NavbarInfoWrapper = styled.div.attrs((props) => ({
+  button: (props as any).button ? true : false,
 }))`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  cursor: ${props => props.button ? "pointer" : "default"};
-`
+  cursor: ${(props) => (props.button ? "pointer" : "default")};
+`;
 
 interface NavbarInfoProps {
-  iconSrc: any,
-  title: string,
-  value: string,
-  type: "info"|"button"
+  iconSrc: any;
+  title: string;
+  value: string;
+  type: "info" | "button";
 }
 
-function NavbarInfo({iconSrc, title, value, type}: NavbarInfoProps) {
+function NavbarInfo({
+  iconSrc,
+  title,
+  value,
+  type,
+}: NavbarInfoProps) {
   return (
     <>
       <NavbarInfoWrapper button={type === "button"}>
         <div>
-          <Icon button={type === "button"} src={iconSrc} color={type === "info" ? "background" : "primary"} shade={type === "info" ? "dark" : "main"} />
+          <Icon
+            button={type === "button"}
+            src={iconSrc}
+            color={type === "info" ? "background" : "primary"}
+            shade={type === "info" ? "dark" : "main"}
+          />
         </div>
         <div>
-          <Text variant="card_subtitle" style={{ textTransform: "uppercase" }}>{title}</Text><br/>
-          <Text variant="card_info_1" selectable={type === "info"}>{value}</Text>
+          <Text
+            variant="card_subtitle"
+            style={{ textTransform: "uppercase" }}
+          >
+            {title}
+          </Text>
+          <br />
+          <Text variant="card_info_1" selectable={type === "info"}>
+            {value}
+          </Text>
         </div>
       </NavbarInfoWrapper>
     </>
-  )
+  );
 }
 
 const menu: NavbarInfoProps[] = [
@@ -96,8 +120,10 @@ export function Navbar() {
       <NavbarWrapper>
         <Image src={logo} alt="Kinvo Premium" />
         <NavbarButtons>
-          { menu.map((props, index) => <NavbarInfo {...props} key={index} />)}
-          <Icon button src={hamburgerMenuIcon} color="primary"/>
+          {menu.map((props, index) => (
+            <NavbarInfo {...props} key={index} />
+          ))}
+          <Icon button src={hamburgerMenuIcon} color="primary" />
         </NavbarButtons>
       </NavbarWrapper>
     </>

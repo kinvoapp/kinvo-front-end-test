@@ -6,18 +6,18 @@ const MainWrapper = styled.main`
   flex-direction: column;
   justify-content: flex-start
   align-items: stretch;
-  background: ${props => getTheme(props).background.main};
+  background: ${(props) => getTheme(props).background.main};
   padding: 1rem;
-`
+`;
 
 interface MainContentProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function MainContent({ children }: MainContentProps) {
-  return (<>
-    <MainWrapper >
-      {children}
-    </MainWrapper>
-  </>)
+  return (
+    <>
+      <MainWrapper>{children}</MainWrapper>
+    </>
+  );
 }
