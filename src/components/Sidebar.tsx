@@ -3,10 +3,11 @@ import { useState } from "react";
 
 import { getTheme } from "../styles/theme";
 
-import { Icon } from './Icon';
+import { FilledCircle, Icon } from './Icon';
 import { Text } from "./Text";
 
 import { moneySignIcon, chartIcon, arrowChevronRightDarkIcon, puzzlePieceIcon, diamondIcon, spiralIcon, pizzaSliceQuarter, padlockIcon, donutGraphIcon } from "../styles/icons";
+import { Flex } from './Flex';
 
 const SidebarWrapper = styled.aside`
   display: flex;
@@ -20,11 +21,13 @@ const SidebarWrapper = styled.aside`
 const SidebarItemWrapper = styled.div.attrs(props => ({
     hover: (props as any).hover ? true : false,
     active: (props as any).active ? true : false,
+    subItem: (props as any).subItem ? true : false
 }))`
     height: 3rem;
-    padding: 1rem;
+    padding: ${props => props.subItem ? "0 1rem" : "1rem"};
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
     gap: 1rem;
@@ -37,19 +40,46 @@ const SidebarItemWrapper = styled.div.attrs(props => ({
 interface SidebarItemProps {
     iconSrc: any,
     title: string,
-    active?: boolean
+    active?: boolean,
+    subItems?: SidebarSubItemProps[]
 }
 
-function SidebarItem({ iconSrc, title, active }: SidebarItemProps) {
+function SidebarItem({ iconSrc, title, active, subItems }: SidebarItemProps) {
     const [hover, setHover] = useState(false);
 
     return <>
         <SidebarItemWrapper active={active} hover={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <Icon src={iconSrc} color={active ? "primary" : "background"} shade={active ? "main" : "dark"} />
-            <Text variant="default">{title}</Text>
-            <div style={{ justifySelf: 'flex-end' }}>
+            <Flex grow>
+                <Text variant="default">{title}</Text>
+            </Flex>
+            <Flex justify-content="flex-end">
                 <Icon src={arrowChevronRightDarkIcon} noCircle />
-            </div>
+            </Flex>
+        </SidebarItemWrapper>
+        {
+            subItems?.map((subItem, key) =>
+                <SidebarSubItem {...subItem} key={key} />
+            )
+        }
+    </>
+}
+
+interface SidebarSubItemProps {
+    title: string,
+}
+
+function SidebarSubItem({ title }: SidebarSubItemProps) {
+    const [hover, setHover] = useState(false);
+    return <>
+        <SidebarItemWrapper subItem hover={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+            <FilledCircle color="primary" size={0.5} style={{ marginLeft: "1rem" }} />
+            <Flex grow>
+                <Text variant="default">{title}</Text>
+            </Flex>
+            <Flex justify-content="flex-end">
+                <Icon src={arrowChevronRightDarkIcon} noCircle />
+            </Flex>
         </SidebarItemWrapper>
     </>
 }
@@ -70,7 +100,13 @@ const menu: SidebarItemProps[] = [
     {
         title: "Classe de Ativos",
         iconSrc: puzzlePieceIcon,
-        active: true
+        active: true,
+        subItems: [
+            { title: "Ação" },
+            { title: "Fundo" },
+            { title: "Fundo Imobiliário" },
+            { title: "Fundo Renda Fixa" },
+        ]
     },
     {
         title: "Rentabilidade Real",

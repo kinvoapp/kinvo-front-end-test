@@ -28,7 +28,6 @@ export const FilledCircle = styled.div.attrs(props => ({
   min-width: ${props => props.size || 1}rem;
   height: ${props => props.size || 1}rem;
   min-height: ${props => props.size || 1}rem;
-  padding: 0.5rem;
   border-radius: 100%;
   background-color: ${(props) => {
     try {
@@ -68,7 +67,7 @@ export function Icon({ src, color, shade = "main", size = 1.5, alt = "", button 
     <>
       {noCircle ? <IconWrapper size={size} button={button} >
         {icon}
-      </IconWrapper> : <FilledCircle color={color} shade={shade} size={size} button={button} >
+      </IconWrapper> : <FilledCircle color={color} shade={shade} size={size} button={button} style={{ padding: "0.5rem" }}>
         {icon}
       </FilledCircle>}
     </>
