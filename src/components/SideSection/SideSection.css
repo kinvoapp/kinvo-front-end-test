@@ -1,3 +1,28 @@
 .side-section {
   grid-area: SideSection;
 }
+
+.select-side-section-content {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid #cccfd1;
+
+  text-align: left;
+  font: normal normal medium 13px/16px Montserrat;
+  color: #707b81;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+
+  background-color: #4c309b;
+
+  border-radius: 20px;
+}
