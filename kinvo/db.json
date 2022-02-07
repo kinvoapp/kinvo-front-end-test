@@ -4,46 +4,46 @@
 		"valueApplied": 521230.02,
 		"percentageProfit": 2.34
 	},
-	"sideMenu": {
-		"portifolioAbstract": {
+	"sideMenu": [
+		{
 			"label": "Resumo Da Carteira",
-			"icon": "/ringsChart",
+			"icon": "/ringsChart.svg",
 			"route": "#"
 		},
-		"myProducts": {
+		{
 			"label": "Meus Produtos",
 			"icon": "/chartIcon.svg",
 			"route": "#"
 		},
-		"myIncome": {
+		{
 			"label": "Meus Proventos",
 			"icon": "/dollarSign.svg",
 			"route": "#"
 		},
-		"assetClasses": {
+		{
 			"label": "Classe de Ativos",
 			"icon": "/puzzle.svg",
-			"route": "#"
-		},
-		"realProfitability": {
-			"label": "Rentabilidade Real",
-			"icon": "/diamond.svg",
 			"route": false
 		},
-		"portifolioProjection": {
+		{
+			"label": "Rentabilidade Real",
+			"icon": "/diamond.svg",
+			"route": "#"
+		},
+		{
 			"label": "Projeção da Carteira",
 			"icon": "/bannerChart.svg",
-			"route": ""
+			"route": "#"
 		},
-		"riskReturn": {
-			"label": "Risco X Retorno",
+		{
+			"label": "Projeção da Carteira",
 			"icon": "/floater.svg",
 			"route": "#"
 		},
-		"fgcCoverage": {
+		{
 			"label": "Cobertura do FGC",
 			"icon": "/locker.svg",
 			"route": "#"
 		}
-	}
+	]
 }
