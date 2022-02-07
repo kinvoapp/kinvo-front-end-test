@@ -10,6 +10,7 @@ import { moneySignIcon, chartIcon, arrowChevronRightDarkIcon, puzzlePieceIcon, d
 import { Flex } from '../base/Flex';
 
 const SidebarWrapper = styled.aside`
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: flex-start

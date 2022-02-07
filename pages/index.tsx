@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { ThemeProvider } from "styled-components";
-import { useState, createContext, Context } from "react";
 
 import { theme } from "../src/styles/theme";
 import { Navbar } from "../src/components/interface/Navbar";
@@ -10,7 +8,6 @@ import { Sidebar } from "../src/components/interface/Sidebar";
 import { MainContent } from '../src/components/interface/MainContent';
 import { Text } from "../src/components/base/Text";
 import { Flex } from "../src/components/base/Flex";
-import { Card } from "../src/components/base/Card";
 import { FixedIncomeCards } from "../src/components/sections/index_page/FixedIncomeCards";
 
 import { getFixedIncome, FixedIncomeAPIResponse } from "../src/data/fixed_income";
@@ -39,7 +36,7 @@ const Home: NextPage<HomeProps> = ({ fixedIncomeInfo }) => {
               <Sidebar />
               <MainContent>
                 <Text variant="title" color="primary">Renda fixa</Text>
-                <Flex direction="row" justify="space-between" gap={1} marginBottom={1}>
+                <Flex wrap direction="row" justify="space-between" gap={1} marginBottom={1}>
                   <FixedIncomeCards />
                 </Flex>
                 <MyFixedIncomes />

@@ -1,17 +1,17 @@
-import logo from "../assets/logo_kinvo_premium.svg";
 import Image from "next/image";
-
 import styled from "styled-components";
+
+import logo from "../../assets/logo_kinvo_premium.svg";
 
 import { getTheme } from "../../styles/theme";
 
-import { Icon, IconProps } from '../base/Icon';
+import { Icon } from '../base/Icon';
 import { Text } from "../base/Text";
 
 import { moneyBagIcon, arrowUpIcon, arrowWaveUpRightIcon, arrowChevronDown, hamburgerMenuIcon } from "../../styles/icons";
-import { useFixedIncome } from '../../hooks/FixedIncomeContext';
 
 const NavbarWrapper = styled.nav`
+  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

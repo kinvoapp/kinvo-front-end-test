@@ -6,7 +6,6 @@ const MainWrapper = styled.main`
   flex-direction: column;
   justify-content: flex-start
   align-items: stretch;
-  width: 100%;
   background: ${props => getTheme(props).background.main};
   padding: 1rem;
 `

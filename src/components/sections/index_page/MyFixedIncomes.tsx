@@ -30,7 +30,7 @@ const InternalGrid = styled.div.attrs(props => ({
     templateColumns: (props as any).templateColumns as string,
 }))`
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     width: 100%;
     grid-template-columns: ${props => props.templateColumns || `repeat(${props.numColumns}, 1fr)`};
     grid-template-rows: 1fr;
