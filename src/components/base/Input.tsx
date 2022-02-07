@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { getTheme } from "../styles/theme"
+import { getTheme } from "../../styles/theme"
 import { HTMLAttributes } from "react"
 
 const InputWrapper = styled.div`

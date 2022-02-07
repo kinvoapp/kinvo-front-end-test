@@ -5,16 +5,16 @@ import { ThemeProvider } from "styled-components";
 import { useState, createContext, Context } from "react";
 
 import { theme } from "../src/styles/theme";
-import { Navbar } from "../src/components/Navbar";
-import { Sidebar } from "../src/components/Sidebar";
-import { MainContent } from '../src/components/MainContent';
-import { Text } from "../src/components/Text";
-import { Flex } from "../src/components/Flex";
-import { Card } from "../src/components/Card";
-import { FixedIncomeCards } from "../src/components/FixedIncomeCards";
+import { Navbar } from "../src/components/interface/Navbar";
+import { Sidebar } from "../src/components/interface/Sidebar";
+import { MainContent } from '../src/components/interface/MainContent';
+import { Text } from "../src/components/base/Text";
+import { Flex } from "../src/components/base/Flex";
+import { Card } from "../src/components/base/Card";
+import { FixedIncomeCards } from "../src/components/sections/index_page/FixedIncomeCards";
 
 import { getFixedIncome, FixedIncomeAPIResponse } from "../src/data/fixed_income";
-import { MyFixedIncomes } from "../src/components/MyFixedIncomes";
+import { MyFixedIncomes } from "../src/components/sections/index_page/MyFixedIncomes";
 
 import { FixedIncomeProvider } from "../src/hooks/FixedIncomeContext";
 

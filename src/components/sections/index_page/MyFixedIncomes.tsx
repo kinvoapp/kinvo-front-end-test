@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
-import { ColorName, ColorShade, getTheme } from "../styles/theme";
-import { Card } from "./Card";
-import { Flex } from "./Flex";
-import { Text } from "./Text";
-import { Input } from "./Input";
-import { Icon } from "./Icon";
+import { ColorName, ColorShade, getTheme } from "../../../styles/theme";
+import { Card } from "../../base/Card";
+import { Flex } from "../../base/Flex";
+import { Text } from "../../base/Text";
+import { Input } from "../../base/Input";
+import { Icon } from "../../base/Icon";
 
-import { useFixedIncome } from "../hooks/FixedIncomeContext";
-import type { FixedIncomeTitle } from "../data/fixed_income";
-import { formatNumber } from "../utils/numberFormatter";
-import { searchIcon } from "../styles/icons";
-import { Select } from "./Select";
-import { Divider } from "./Divider";
-import { PageNavigator } from "./PageNavigator";
+import { useFixedIncome } from "../../../hooks/FixedIncomeContext";
+import type { FixedIncomeTitle } from "../../../data/fixed_income";
+import { formatNumber } from "../../../utils/numberFormatter";
+import { searchIcon } from "../../../styles/icons";
+import { Select } from "../../base/Select";
+import { Divider } from "../../base/Divider";
+import { PageNavigator } from "../../interface/PageNavigator";
 
 const OutlinedInfoWrapper = styled.div`
     display: flex;

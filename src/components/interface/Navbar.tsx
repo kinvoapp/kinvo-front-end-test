@@ -3,13 +3,13 @@ import Image from "next/image";
 
 import styled from "styled-components";
 
-import { getTheme } from "../styles/theme";
+import { getTheme } from "../../styles/theme";
 
-import { Icon, IconProps } from './Icon';
-import { Text } from "./Text";
+import { Icon, IconProps } from '../base/Icon';
+import { Text } from "../base/Text";
 
-import { moneyBagIcon, arrowUpIcon, arrowWaveUpRightIcon, arrowChevronDown, hamburgerMenuIcon } from "../styles/icons";
-import { useFixedIncome } from '../hooks/FixedIncomeContext';
+import { moneyBagIcon, arrowUpIcon, arrowWaveUpRightIcon, arrowChevronDown, hamburgerMenuIcon } from "../../styles/icons";
+import { useFixedIncome } from '../../hooks/FixedIncomeContext';
 
 const NavbarWrapper = styled.nav`
   display: flex;

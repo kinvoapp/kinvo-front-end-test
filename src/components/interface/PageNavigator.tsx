@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import styled from "styled-components";
-import { arrowChevronLeftDarkIcon, arrowChevronRightDarkIcon } from '../styles/icons';
-import { getTheme } from "../styles/theme";
-import { Flex } from './Flex';
-import { Icon } from './Icon';
+import { arrowChevronLeftDarkIcon, arrowChevronRightDarkIcon } from '../../styles/icons';
+import { getTheme } from "../../styles/theme";
+import { Flex } from '../base/Flex';
+import { Icon } from '../base/Icon';
 
 const PageButton = styled.div.attrs(props => ({
     disabled: (props as any).disabled ? true : false,

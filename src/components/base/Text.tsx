@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { getTheme, ColorName, ColorShade } from '../styles/theme';
-import { TextVariant, textVariants } from '../styles/typography';
+import { getTheme, ColorName, ColorShade } from '../../styles/theme';
+import { TextVariant, textVariants } from '../../styles/typography';
 
 export const Text = styled.span.attrs(props => ({
     color: (props.color ?? "text") as ColorName,

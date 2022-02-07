@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import { getTheme } from "../styles/theme";
-import { formatNumber } from "../utils/numberFormatter";
-import { Card } from "./Card";
-import { Flex } from './Flex';
-import { Text } from './Text';
-import { useFixedIncome } from '../hooks/FixedIncomeContext';
+import { getTheme } from "../../../styles/theme";
+import { formatNumber } from "../../../utils/numberFormatter";
+import { Card } from "../../base/Card";
+import { Flex } from '../../base/Flex';
+import { Text } from '../../base/Text';
+import { useFixedIncome } from '../../../hooks/FixedIncomeContext';
 
 interface FixedIncomeInfo {
     title: string,

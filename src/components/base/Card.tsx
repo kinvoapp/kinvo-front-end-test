@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getTheme } from "../styles/theme";
+import { getTheme } from "../../styles/theme";
 
 const Card = styled.div.attrs(props => ({
     noPadding: (props as any).noPadding ? true : false

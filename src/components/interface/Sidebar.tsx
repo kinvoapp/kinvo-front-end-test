@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-import { getTheme } from "../styles/theme";
+import { getTheme } from "../../styles/theme";
 
-import { FilledCircle, Icon } from './Icon';
-import { Text } from "./Text";
+import { FilledCircle, Icon } from '../base/Icon';
+import { Text } from "../base/Text";
 
-import { moneySignIcon, chartIcon, arrowChevronRightDarkIcon, puzzlePieceIcon, diamondIcon, spiralIcon, pizzaSliceQuarter, padlockIcon, donutGraphIcon } from "../styles/icons";
-import { Flex } from './Flex';
+import { moneySignIcon, chartIcon, arrowChevronRightDarkIcon, puzzlePieceIcon, diamondIcon, spiralIcon, pizzaSliceQuarter, padlockIcon, donutGraphIcon } from "../../styles/icons";
+import { Flex } from '../base/Flex';
 
 const SidebarWrapper = styled.aside`
   display: flex;

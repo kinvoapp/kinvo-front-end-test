@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import styled from "styled-components";
 
-import { getTheme, ColorName, ColorShade } from "../styles/theme";
+import { getTheme, ColorName, ColorShade } from "../../styles/theme";
 
 export interface IconProps {
   src: any;
