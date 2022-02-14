@@ -1,0 +1,49 @@
+{
+	"resume": {
+		"equity": 130521230.02,
+		"valueApplied": 521230.02,
+		"percentageProfit": 2.34
+	},
+	"sideMenu": [
+		{
+			"label": "Resumo Da Carteira",
+			"icon": "/ringsChart.svg",
+			"route": "#"
+		},
+		{
+			"label": "Meus Produtos",
+			"icon": "/chartIcon.svg",
+			"route": "#"
+		},
+		{
+			"label": "Meus Proventos",
+			"icon": "/dollarSign.svg",
+			"route": "#"
+		},
+		{
+			"label": "Classe de Ativos",
+			"icon": "/puzzle.svg",
+			"route": false
+		},
+		{
+			"label": "Rentabilidade Real",
+			"icon": "/diamond.svg",
+			"route": "#"
+		},
+		{
+			"label": "Projeção da Carteira",
+			"icon": "/bannerChart.svg",
+			"route": "#"
+		},
+		{
+			"label": "Projeção da Carteira",
+			"icon": "/floater.svg",
+			"route": "#"
+		},
+		{
+			"label": "Cobertura do FGC",
+			"icon": "/locker.svg",
+			"route": "#"
+		}
+	]
+}
