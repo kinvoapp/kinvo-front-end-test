@@ -7,5 +7,7 @@ export const api = axios.create({
 });
 
 export const db = axios.create({
-	baseURL: process.env.DB_URL || "http://localhost:3333/",
+	baseURL:
+		process.env.DB_URL ||
+		"https://my-json-server.typicode.com/pedrobarbosa0/kinvo-front-end-test/",
 });

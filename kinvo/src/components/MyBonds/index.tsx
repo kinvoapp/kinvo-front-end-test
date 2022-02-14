@@ -36,7 +36,7 @@ export const MyBonds = () => {
 		const fetchData = async () => {
 			const { data } = await api.get("/");
 			setBondData(data?.data?.snapshotByProduct);
-			setBonds(bondData);
+			setBonds(data?.data?.snapshotByProduct);
 		};
 
 		fetchData();
