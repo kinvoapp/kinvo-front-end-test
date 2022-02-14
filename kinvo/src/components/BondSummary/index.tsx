@@ -19,7 +19,6 @@ export const BondSummary = () => {
 		const fetchData = async () => {
 			const { data } = await api.get("/");
 			setSummary(data?.data?.snapshotByPortfolio);
-			console.log(summary);
 		};
 
 		fetchData();

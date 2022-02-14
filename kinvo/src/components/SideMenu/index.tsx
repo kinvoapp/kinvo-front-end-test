@@ -16,13 +16,10 @@ export const SideMenu = () => {
 		const fetchData = async () => {
 			const { data } = await db.get("sideMenu");
 			setMenuItems(data);
-			console.log(data);
 		};
 
 		fetchData();
 	}, []);
-
-	console.log(menuItems);
 
 	return (
 		<S.SideMenuContainer>

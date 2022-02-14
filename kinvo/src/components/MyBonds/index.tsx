@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 import * as S from "./index.style";
@@ -38,7 +39,6 @@ export const MyBonds = () => {
 			setBonds(bondData);
 		};
 
-		console.log("passou no fetch");
 		fetchData();
 	}, []);
 
@@ -63,10 +63,7 @@ export const MyBonds = () => {
 			setBonds(() =>
 				sortType === "1" ? sortedDate : sortType === "2" ? sortedValue : bondData
 			);
-			// console.log("bonds", bonds);
 		};
-
-		console.log("passou no sort");
 
 		handleClickSort();
 	}, [sortType]);
@@ -82,8 +79,6 @@ export const MyBonds = () => {
 		if (searchBond === "") {
 			return setBonds(bondData);
 		} else return setBonds(results);
-
-		console.log("passou no search");
 	}, [searchBond]);
 
 	return (

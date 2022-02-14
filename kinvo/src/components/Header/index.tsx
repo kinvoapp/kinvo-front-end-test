@@ -16,7 +16,6 @@ export const Header = () => {
 		const fetchData = async () => {
 			const { data } = await db.get("resume");
 			setUserData(data);
-			console.log(data);
 		};
 
 		fetchData();
