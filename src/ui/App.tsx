@@ -33,6 +33,10 @@ const ScrollableContent = styled.div`
 `;
 
 const MainContent = styled.main`
+	flex-grow: 1;
+
+	background-color: #eef2f4;
+
 	padding: 21px;
 `;
 

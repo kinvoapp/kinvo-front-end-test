@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-	flex-shrink: 0;
 	flex-basis: 16%;
 `;
 
-interface NavProps {
+export interface NavProps {
 	linksList: {
 		groupLabel: string;
 		links: {
