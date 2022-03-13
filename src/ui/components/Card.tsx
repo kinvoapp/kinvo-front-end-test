@@ -4,6 +4,7 @@ import styled from "styled-components";
 const CardWrapper = styled.article`
 	background-color: #ffffff;
 
+	box-sizing: border-box;
 	padding: 18px;
 	border-radius: 15px;
 `;

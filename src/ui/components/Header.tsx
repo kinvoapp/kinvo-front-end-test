@@ -1,13 +1,9 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-interface HeaderWrapperProps {
-	xPadding: string;
-}
-const HeaderWrapper = styled.header.attrs<HeaderWrapperProps>((props) => ({
-	xPadding: props.xPadding || "30px",
-}))<Partial<HeaderWrapperProps>>`
-	width: calc(100% - 2 * ${(props) => props.xPadding});
+const HeaderWrapper = styled.header`
+	width: calc(100%);
+	max-height: 90px;
 
 	position: sticky;
 	top: 0;
@@ -17,7 +13,8 @@ const HeaderWrapper = styled.header.attrs<HeaderWrapperProps>((props) => ({
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 27px ${(props) => props.xPadding};
+	box-sizing: border-box;
+	padding: 27px 30px;
 
 	background-color: #ffffff;
 `;

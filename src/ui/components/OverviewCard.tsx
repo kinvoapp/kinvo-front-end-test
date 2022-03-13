@@ -8,6 +8,7 @@ const CardWrapper = styled.article`
 	flex-shrink: 0;
 	flex-basis: 100px;
 
+	box-sizing: border-box;
 	padding: 5px;
 	border-radius: 15px;
 `;
