@@ -3,6 +3,13 @@ import styled from "styled-components";
 import Card from "../components/Card";
 import OverviewCard from "../components/OverviewCard";
 
+const Root = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	gap: 20px;
+`;
+
 const OverviewData = styled.article`
 	display: flex;
 	flex-direction: row;
@@ -14,7 +21,7 @@ const OverviewData = styled.article`
 
 const FixedIncomePage: FC = function () {
 	return (
-		<>
+		<Root>
 			<h2>Renda Fixa</h2>
 			<OverviewData>
 				<h3 hidden>Resumo</h3>
@@ -35,7 +42,7 @@ const FixedIncomePage: FC = function () {
 			<Card title="Minhas rendas fixas"></Card>
 			<Card title="Divisão de carteira por tipos"></Card>
 			<Card title="Divisão de carteira por título"></Card>
-		</>
+		</Root>
 	);
 };
 

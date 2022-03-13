@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const CardWrapper = styled.article`
 	background-color: #ffffff;
+
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: 100px;
+
+	padding: 5px;
+	border-radius: 15px;
 `;
 
 export interface OverviewCardProps {

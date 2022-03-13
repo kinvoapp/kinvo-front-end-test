@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 const CardWrapper = styled.article`
 	background-color: #ffffff;
+
+	padding: 18px;
+	border-radius: 15px;
 `;
 
 export interface CardProps {
