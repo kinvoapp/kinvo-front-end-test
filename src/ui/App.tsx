@@ -25,6 +25,7 @@ const linksList = [
 
 const Root = styled.div`
 	min-height: 100vh;
+	font-family: "Montserrat";
 `;
 
 const ScrollableContent = styled.div`

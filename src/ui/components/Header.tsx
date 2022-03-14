@@ -35,6 +35,14 @@ const InfoWrapper = styled.article`
 	gap: 35px;
 `;
 
+const CardTitle = styled.h3`
+	margin: 5px;
+`;
+
+const CardValue = styled.p`
+	color: #4c309b;
+`;
+
 const Header: FC = function () {
 	return (
 		<HeaderWrapper>
@@ -44,15 +52,21 @@ const Header: FC = function () {
 					<h2 hidden>Resumo</h2>
 					<article>
 						<h3>Saldo bruto</h3>
-						<p>130.521.230,02</p>
+						<CardValue>
+							<b>130.521.230,02</b>
+						</CardValue>
 					</article>
 					<article>
 						<h3>Valor Aplicado</h3>
-						<p>521.230,02</p>
+						<CardValue>
+							<b>521.230,02</b>
+						</CardValue>
 					</article>
 					<article>
 						<h3>Rentabilidade</h3>
-						<p>2,34%</p>
+						<CardValue>
+							<b>2,34%</b>
+						</CardValue>
 					</article>
 				</InfoWrapper>
 				<div>
