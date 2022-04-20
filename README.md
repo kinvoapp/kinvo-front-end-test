@@ -7,7 +7,8 @@ Seja bem-vindo! Este desafio foi projetado para avaliar a capacidade técnica de
 ## Instruções:
 
 1. Faça um fork deste repositório;
-2. Implemente o que é proposto no [protótipo](https://github.com/kinvoapp/kinvo-front-end-test/blob/master/material/layout.xd). **! Importante !** A implementação dos gráficos é opcional para candidatos a vagas de nível trainee/estágio, junior e pleno;
+2. Implemente o que é proposto no [protótipo](https://github.com/kinvoapp/kinvo-front-end-test/blob/master/material/layout.xd). **! Importante !** A implementação dos gráficos é opcional para candidatos a vagas de nível trainee/estágio, junior e pleno ([
+Faça o download AdobeXD por aqui](https://helpx.adobe.com/br/xd/get-started.html));
 3. O conjunto mínimo de tecnologias a ser utilizado é HTML, CSS e JS (ES6);
 4. Crie um passo a passo de como rodar sua aplicação ([sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md));
 5. Após terminar, submeta um pull request e aguarde a avaliação;
