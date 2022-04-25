@@ -13,6 +13,13 @@ Faça o download AdobeXD por aqui](https://helpx.adobe.com/br/xd/get-started.htm
 4. Crie um passo a passo de como rodar sua aplicação ([sugestão](https://github.com/elsewhencode/project-guidelines/blob/master/README.sample.md));
 5. Após terminar, submeta um pull request e aguarde a avaliação;
 
+### Critérios de avaliação:
+
+Nossos critérios de avaliação se baseiam e 3 grandes áreas, sendo elas:
+1. Versionamento
+2. Projeto e estrutura
+3. Qualidade de Código
+
 ## Requisitos mínimos:
 
 ### ○ Trainee/Estágio
