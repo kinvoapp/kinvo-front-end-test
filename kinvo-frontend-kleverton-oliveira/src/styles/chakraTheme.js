@@ -2,7 +2,7 @@ import { extendTheme, theme as base } from "@chakra-ui/react";
 
 const colors = {
   brand: {
-    background: "#EDF1F3",
+    background: "#EEF2F4",
     lightPurple: "#8A51BA",
     darkPurple: "#4C309B",
     lightGray: "#4E5B61",

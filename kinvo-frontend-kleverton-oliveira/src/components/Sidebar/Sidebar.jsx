@@ -8,7 +8,7 @@ function Sidebar() {
   const [activeItem, setActiveItem] = useState('');
 
   return (
-    <Box minH='100vh' w='19vw' bg='white'>
+    <Box minH='100vh' w='24vw' bg='white'>
       {sidebarItems.map((item, index)=>(
         <Accordion allowToggle key={index}>
           <SidebarItem item={item} activeItem={activeItem} setActiveItem={setActiveItem}/>

@@ -11,7 +11,46 @@ function useDataFetch() {
     );
     const data = await response.json();
 
-    setPortfolioData(data.data.snapshotByPortfolio);
+    // Separating content to use at Portfolio Component in Main Content Area
+    const {
+      equity,
+      equityProfit,
+      indexerValue,
+      percentageOverIndexer,
+      percentageProfit,
+      valueApplied,
+    } = data.data.snapshotByPortfolio;
+
+    const portfolio = [
+      {
+        title: "SALDO BRUTO",
+        value: `R$ ${Number(equity).toLocaleString()}0`,
+      },
+      {
+        title: "VALOR APLICADO",
+        value: `R$ ${Number(valueApplied).toLocaleString()}`,
+      },
+      {
+        title: "RESULTADO",
+        value: `R$ ${Number(equityProfit).toLocaleString()}`,
+      },
+      {
+        title: "RENTABILIDADE",
+        value: `${percentageProfit}%`,
+      },
+      {
+        title: "CDI",
+        value: `${indexerValue}%`,
+      },
+      {
+        title: "% SOBRE CDI",
+        value: `${percentageOverIndexer}%`,
+      },
+    ];
+
+    setPortfolioData(portfolio);
+
+    // Separating content to use at ... in Main Content Area;
     setProductListData(data.data.snapshotByProduct);
     setIsLoading(false);
   }
