@@ -3,7 +3,7 @@ import React from "react";
 type BulletProps = {
   thumbnail: string;
   title: string;
-  value: string;
+  value: number;
 };
 
 function HeaderBullet(props: BulletProps) {
