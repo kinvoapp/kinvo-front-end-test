@@ -23,6 +23,7 @@ import information from '../../assets/icones/information.svg'
 
 import { Resume } from "../Resume";
 import { DashboardDataTitle } from "../DashboardDataTitle";
+import { DashboardDataPosition } from "../DashboardDataPosition";
 
 
 export function DashboardData({
@@ -48,7 +49,8 @@ export function DashboardData({
 
     const resultsMinhasRendasFixas = minhasRendasFixas.map((data, index) => {
         return [
-            <DashboardDataTitle data={data} key={index}/>
+            <DashboardDataTitle data={data} key={index}/>,
+            <DashboardDataPosition data={data} key={index}/>
         ]
     })
 
@@ -87,53 +89,6 @@ export function DashboardData({
                         fixedIncomeName={minhasRendasFixas.name}
                         fixedIncomebondType={minhasRendasFixas.bondType}
                     /> */}
-
-                    <DataPosition>
-                        <Classification>
-                            Minha posição 
-                            <img src={information} alt="" />
-                        </Classification>
-
-                        <DataPositionInformations>
-                            <DataTitleInfo1>
-                                <p>Valor invest.</p>
-                                <DataPositionInfo1>
-                                    <p>1.003,00</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>Saldo bruto</p>
-                                <DataPositionInfo1>
-                                    <p>1.124,00</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>Rent.</p>
-                                <DataPositionInfo1>
-                                    <p>48,55%</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>% da cart.</p>
-                                <DataPositionInfo1>
-                                    <p>5,33%</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>cdi</p>
-                                <DataPositionInfo1>
-                                    <p>1,24</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>Sobr cdi</p>
-                                <DataPositionInfo1>
-                                    <p>118</p>
-                                </DataPositionInfo1>
-                            </DataTitleInfo1>
-                            
-                        </DataPositionInformations>
-                    </DataPosition>
 
                     <DataExpiration>
                         <Classification>
