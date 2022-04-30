@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 function useDataFetch() {
   const [isLoading, setIsLoading] = useState(true);
-  const [productListData, setProductListData] = useState("");
-  const [portfolioData, setPortfolioData] = useState("");
+  const [productListData, setProductListData] = useState([]);
+  const [portfolioData, setPortfolioData] = useState([]);
 
   async function getData() {
     const response = await fetch(
@@ -50,7 +50,6 @@ function useDataFetch() {
 
     setPortfolioData(portfolio);
 
-    // Separating content to use at ... in Main Content Area;
     setProductListData(data.data.snapshotByProduct);
     setIsLoading(false);
   }

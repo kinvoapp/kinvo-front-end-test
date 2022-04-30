@@ -21,9 +21,9 @@ function Navbar() {
           <Flex as='ul' alignItems={'center'} gap={'2rem'}>
             {navbarItems.map((item, index)=>(
               <Flex as='li' key={index} gap={'0.625rem'} alignItems={'center'}>
-                <Image src={item.imgSrc} alt={item.name} boxSize={'2rem'}/>
+                <Image src={item.imgSrc} alt={item.title} boxSize={'2rem'}/>
                 <Box>
-                  <Heading as='h6' fontWeight={'normal'} fontSize={'12px'} color={'brand.darkGray'}>{item.title}</Heading>
+                  <Heading as='h6' fontWeight={'normal'} fontSize={'9px'} color={'brand.darkGray'}>{item.title.toUpperCase()}</Heading>
                   <Text fontSize={'1rem'} fontWeight={'bold'} color={'brand.darkGray'}>{item.value}</Text>
                 </Box>
               </Flex>

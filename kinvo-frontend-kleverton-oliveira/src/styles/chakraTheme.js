@@ -4,6 +4,7 @@ const colors = {
   brand: {
     background: "#EEF2F4",
     lightPurple: "#8A51BA",
+    mediumGray: "#627179",
     darkPurple: "#4C309B",
     lightGray: "#4E5B61",
     darkGray: "#707B81",
