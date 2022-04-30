@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #EEF2F4;
+    background-color: var(--background);
+
+        padding-left: 14.2rem;
+`
+
+export const Content = styled.div`
+    padding-left: 1.25rem;
 `
