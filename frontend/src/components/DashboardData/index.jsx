@@ -1,5 +1,4 @@
 import {
-    Classe1,
     Classification,
     Container,
     DataContainer,
@@ -9,10 +8,7 @@ import {
     DataPosition,
     DataPositionInfo1,
     DataPositionInformations,
-    DataTitle,
-    DataTitleInfo,
     DataTitleInfo1,
-    DataTitleInformations,
     DataTopActions,
     DataTopInformations,
     DataTopOrder,
@@ -23,13 +19,15 @@ import {
 } from "./styles";
 
 import Select from 'react-select'
-
 import information from '../../assets/icones/information.svg'
+
 import { Resume } from "../Resume";
+import { DashboardDataTitle } from "../DashboardDataTitle";
 
 
 export function DashboardData({
-    rendaFixa
+    rendaFixa,
+    minhasRendasFixas
 }){
     // Objeto para select
     const options = [
@@ -47,6 +45,12 @@ export function DashboardData({
             color: state.selectProps.menuColor,
         })
     }
+
+    const resultsMinhasRendasFixas = minhasRendasFixas.map((data, index) => {
+        return [
+            <DashboardDataTitle data={data} key={index}/>
+        ]
+    })
 
     return(
         <Container>
@@ -78,25 +82,11 @@ export function DashboardData({
                 </DataTopInformations>
 
                 <DataInformations>
-                    <DataTitle>
-                        <Classification>
-                            Título 
-                            <img src={information} alt="" />
-                        </Classification>
-
-                        <DataTitleInformations>
-                            <DataTitleInfo>
-                                <p>Tesouro IPCA+ com juros</p>
-                                <p>Semestrais 2024 (NTNB)</p>
-                            </DataTitleInfo>
-                            <DataTitleInfo1>
-                                <p>classe</p>
-                                <Classe1>
-                                    <p>Tesouro Direto</p>
-                                </Classe1>
-                            </DataTitleInfo1>
-                        </DataTitleInformations>
-                    </DataTitle>
+                    {resultsMinhasRendasFixas}
+                    {/* <DashboardDataTitle
+                        fixedIncomeName={minhasRendasFixas.name}
+                        fixedIncomebondType={minhasRendasFixas.bondType}
+                    /> */}
 
                     <DataPosition>
                         <Classification>

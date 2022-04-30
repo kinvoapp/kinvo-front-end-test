@@ -40,6 +40,7 @@ export function Dashboard(){
                 <InfoRight>
                     <DashboardData
                         rendaFixa={rendaFixa}
+                        minhasRendasFixas={minhasRendasFixas}
                     />
                 </InfoRight>
             </Informations>

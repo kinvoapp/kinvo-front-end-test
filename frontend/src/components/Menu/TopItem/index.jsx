@@ -13,8 +13,6 @@ export  function TopItem({
     circleBackground
 }){
 
-    console.log(circleBackground)
-
     return(
 
         <Item>
