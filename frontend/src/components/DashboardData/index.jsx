@@ -19,11 +19,11 @@ import {
 } from "./styles";
 
 import Select from 'react-select'
-import information from '../../assets/icones/information.svg'
 
 import { Resume } from "../Resume";
 import { DashboardDataTitle } from "../DashboardDataTitle";
 import { DashboardDataPosition } from "../DashboardDataPosition";
+import { DashboardDataDue } from "../DashboardDataDue";
 
 
 export function DashboardData({
@@ -50,7 +50,8 @@ export function DashboardData({
     const resultsMinhasRendasFixas = minhasRendasFixas.map((data, index) => {
         return [
             <DashboardDataTitle data={data} key={index}/>,
-            <DashboardDataPosition data={data} key={index}/>
+            <DashboardDataPosition data={data} key={index}/>,
+            <DashboardDataDue data={data} key={index}/>
         ]
     })
 
@@ -89,28 +90,6 @@ export function DashboardData({
                         fixedIncomeName={minhasRendasFixas.name}
                         fixedIncomebondType={minhasRendasFixas.bondType}
                     /> */}
-
-                    <DataExpiration>
-                        <Classification>
-                            Minha posição 
-                            <img src={information} alt="" />
-                        </Classification>
-
-                        <DataPositionInformations>
-                            <DataTitleInfo1>
-                                <p>Data venc.</p>
-                                <DataExpirationInfo1>
-                                    <p>15.05.20248</p>
-                                </DataExpirationInfo1>
-                            </DataTitleInfo1>
-                            <DataTitleInfo1>
-                                <p>Dias ate venc.</p>
-                                <DataExpirationInfo1>
-                                    <p>5762</p>
-                                </DataExpirationInfo1>
-                            </DataTitleInfo1>
-                        </DataPositionInformations>
-                    </DataExpiration>
                 </DataInformations>
             </DataContainer>
         </Container>
