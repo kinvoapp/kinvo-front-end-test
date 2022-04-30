@@ -10,6 +10,7 @@ const colors = {
     darkGray: "#707B81",
     blue: "#008DCB",
     green: "#38BFA0",
+    hoverBgColor: "#F8FAFB",
   },
 };
 

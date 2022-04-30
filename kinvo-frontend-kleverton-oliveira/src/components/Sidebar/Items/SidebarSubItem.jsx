@@ -8,9 +8,9 @@ function SidebarSubItem({item, activeSubItem, setActiveSubItem}) {
   return (
     <AccordionItem
       w='full'
-      bg={activeSubItem === title ? '#F8FAFB' : 'white'}
+      bg={activeSubItem === title ? 'brand.hoverBgColor' : 'white'}
       py={'0.5rem'}
-      _hover={{backgroundColor: '#F8FAFB'}} 
+      _hover={{backgroundColor: 'brand.hoverBgColor'}} 
       onClick={()=>{setActiveSubItem(title)}}
     >
       <h2>

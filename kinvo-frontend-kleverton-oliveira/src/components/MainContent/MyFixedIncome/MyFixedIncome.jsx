@@ -1,6 +1,6 @@
 import { SearchIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Input, InputGroup, InputLeftElement, Select } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import useDataFetch from '../../../hooks/useDataFetch';
 import Due from './ProductSubItem/Due';
 import FixedIncome from './ProductSubItem/FixedIncome';
@@ -9,6 +9,54 @@ import Position from './ProductSubItem/Position';
 function MyFixedIncome() {
 
   const {productListData} = useDataFetch();
+
+  /* Product Filtering Area */
+  const productList = [...productListData];
+  const [isSearching, setIsSearching] = useState(false);
+  const [filteredProductListData, setFilteredProductListData] = useState([]);
+
+  function searchByProductName(event) {
+
+    const searchContent = event.target.value;
+
+    if (searchContent.length > 0) {
+      setIsSearching(true);
+
+      const searchResult = productList.filter(product => {
+        const rule = new RegExp(searchContent, "gi");
+        return rule.test(product.fixedIncome.name);
+      });
+
+      setFilteredProductListData(searchResult);
+
+    } else {
+      setIsSearching(false);
+    }
+  }
+
+  /* Product Sorting Area */
+  const [categoryToSortBy, setCategoryToSortBy] = useState('');
+  
+  function compareProductByCategory(product1, product2){
+    if(!categoryToSortBy) return;
+
+    switch(categoryToSortBy){
+      case 'name': 
+        return product1.fixedIncome.name.localeCompare(product2.fixedIncome.name);
+        
+      case 'bondType':
+        return product1.fixedIncome.bondType.localeCompare(product2.fixedIncome.bondType);
+        
+      case 'profitability':
+        return product1.position.profitability - product2.position.profitability;
+      
+      case 'daysUntilExpiration':
+        return product1.due.daysUntilExpiration - product2.due.daysUntilExpiration;
+      
+      default:
+        return;
+    }
+  }
 
   return (
     <Box 
@@ -27,9 +75,18 @@ function MyFixedIncome() {
         >
           Minhas Rendas Fixas
         </Heading>
-        <Flex gap={'1rem'}>
-          <Select placeholder='Ordenar por'>
-            <option value="opt">Option 1</option>
+        <Flex gap={'1rem'}>        
+          <Select 
+            id='sorter'
+            name='sorter'
+            onChange={(e)=>setCategoryToSortBy(e.target.value)}
+            value={categoryToSortBy}
+            placeholder='Ordenar por'
+          >
+            <option value="name">Nome</option>
+            <option value="bondType">Classe</option>
+            <option value="profitability">Rentabilidade</option>
+            <option value="daysUntilExpiration">Dias até Vencimento</option>
           </Select>
 
           <InputGroup>
@@ -37,25 +94,54 @@ function MyFixedIncome() {
               pointerEvents={'none'}
               children={<SearchIcon color='brand.mediumGray'/>}
             />
-            <Input type='text'/>
+            <Input 
+              id='search'
+              name='search'
+              type='text'
+              placeholder='Buscar por título'
+              onChange={searchByProductName}
+            />
           </InputGroup>
         </Flex>
       </Flex>
 
-      {productListData.map((product)=>(
-        <Flex 
-          key={product.fixedIncome.portfolioProductId} 
-          px={'1.5rem'} 
-          py={'2rem'} 
-          gap={'1rem'} 
-          borderBottom={'2px solid'} 
-          borderColor={'blackAlpha.50'}
-          >
-            <FixedIncome content={product.fixedIncome}/>
-            <Position content={product.position}/>
-            <Due content={product.due}/>
-        </Flex>
-      ))}
+      {
+        isSearching ?
+
+        (filteredProductListData.sort(compareProductByCategory).map((product, index)=>(
+          <Flex 
+            // Applies 'blue background' only on elements with odd index.
+            bg={index % 2 !== 1 ? 'white' : 'brand.hoverBgColor'}
+            key={product.fixedIncome.portfolioProductId} 
+            p={'1.5rem'}
+            gap={'1rem'} 
+            borderBottom={'2px solid'} 
+            borderColor={'blackAlpha.50'}
+            >
+              <FixedIncome content={product.fixedIncome}/>
+              <Position content={product.position}/>
+              <Due content={product.due}/>
+          </Flex>
+          )))
+
+        :
+
+        (productListData.sort(compareProductByCategory).map((product, index)=>(
+          <Flex 
+            bg={index % 2 !== 1 ? 'white' : 'brand.hoverBgColor'}
+            key={product.fixedIncome.portfolioProductId} 
+            p={'1.5rem'}
+            gap={'1rem'} 
+            borderBottom={'2px solid'} 
+            borderColor={'blackAlpha.50'}
+            >
+              <FixedIncome content={product.fixedIncome}/>
+              <Position content={product.position}/>
+              <Due content={product.due}/>
+          </Flex>
+          )))  
+        }
+
     </Box>
   )
 }

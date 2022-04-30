@@ -11,8 +11,6 @@ function useDataFetch() {
     );
     const data = await response.json();
 
-    console.log(data);
-
     // Separating content to use at Portfolio Component in Main Content Area
     const {
       equity,
