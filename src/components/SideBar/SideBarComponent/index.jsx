@@ -1,4 +1,4 @@
-import { Container, IconContainer, Divider, OptionContainer } from "./styles";
+import { Container, IconContainer, Divider, Option, OptionsContainer } from "./styles";
 import { ReactComponent as ArrowRight2 } from "../../../assets/arrowRight2.svg"
 import { useState } from "react";
 
@@ -8,7 +8,6 @@ export function SideBarComponent({ name, Icon, options, actualPage}) {
 
     function handleActive() {
         setActive(!active);
-        console.log("gg")
     }
 
     if (active || actualPage) {
@@ -31,20 +30,29 @@ export function SideBarComponent({ name, Icon, options, actualPage}) {
                 {
                     active
                     &&
+                    <OptionsContainer>
+
                     <ul>
                         {options.map((option) => {
                             return (
-                                <a href={option.link}>
-                                    <OptionContainer>
-                                            <li>{option.value}</li>
-                                        <ArrowRight2 style={{
-                                            marginLeft: "auto",
-                                        }}/>
-                                    </OptionContainer>
-                                </a>
-                            )
-                        })}
+                                <>
+                                    <a href={option.link}>
+                                        <Option>
+                                                <li>{option.value}</li>
+                                            <ArrowRight2 style={{
+                                                marginLeft: "auto",
+                                            }}/>
+                                        </Option>
+                                        
+                                    </a>
+                                    <Divider></Divider>
+                                </>
+
+                                
+                                )
+                            })}
                     </ul>
+                </OptionsContainer>
                 }
             </>
             

@@ -13,6 +13,7 @@ export const Container = styled.div`
     &.active{
         background-color: #F8FAFB;
     }
+    transition: all 0.5s;
 `
 
 
@@ -36,11 +37,18 @@ export const Divider = styled.div`
     height: 1px;
     background-color: #CCCFD1;
 `
+export const OptionsContainer = styled.div`
+    ul {
+        padding: 0;
+    }
 
-export const OptionContainer = styled.div`
+`
+
+export const Option = styled.div`
     padding: 1rem;
     display: flex;
     align-items: center;
+    padding-left: 3rem;
     li {
         font-size: 0.875rem;
         display: flex;
@@ -53,8 +61,8 @@ export const OptionContainer = styled.div`
         color: #4C309B;
         font-weight: bold;
         display: inline-block; 
-        font-size: 1.5rem;
-        margin-left: -1em;
+        font-size: 1.4rem;
+        margin-left: -1.5em;
     }
 
 `
