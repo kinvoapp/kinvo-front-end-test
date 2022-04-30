@@ -59,6 +59,7 @@ export const DataContainer = styled.div`
     margin: 20px 0 0 0;
     
     display: flex;
+    flex-direction: column;
     
     border-radius: 10px;
     background: var(--cor003);
@@ -85,11 +86,60 @@ export const DataTopActions = styled.div`
 
 export const DataTopOrder = styled.div`
     width: 156px;
-    background: rebeccapurple;
-    padding: 10px 0;
 `;
 
 export const DataTopSearch = styled.div`
     width: 240px;
     background: yellowgreen;
+`;
+
+export const DataInformations = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+
+    padding: 20px 0 20px 20px;
+`;
+
+export const DataTitle = styled.div`
+    font-size: 0.6rem;
+    border: 1px solid var(--cor001);
+
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Classification = styled.div`
+    display: flex;
+
+    img{
+        padding: 0 0 10px 5px;
+    }
+`;
+
+export const DataTitleInformations = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-end;
+`;
+
+export const DataTitleInfo = styled.div`
+    p{
+        font-size: 0.8rem;
+    }
+`;
+
+export const DataTitleInfo1 = styled.div`
+`;
+
+export const Classe1 = styled.div`
+    color: var(--color005);
+    font-size: 1rem;
+`;
+
+export const DataPosition = styled.display`
+
 `;
