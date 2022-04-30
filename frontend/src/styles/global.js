@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         --cor007: #008dcb;
 
         --cor008: #707b81;
+        --cor009: #4c309b;
     }
 
     *{

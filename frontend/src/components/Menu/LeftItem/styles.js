@@ -23,7 +23,7 @@ export const Container = styled.li`
         background: var(--cor002);
 
        div:first-of-type{
-           background: var(--cor005);
+           background: var(--cor009);
        }
     }
 `;
