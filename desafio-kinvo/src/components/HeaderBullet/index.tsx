@@ -10,7 +10,7 @@ function HeaderBullet(props: BulletProps) {
   const { thumbnail, title, value } = props;
   return (
     <div>
-      <img src={thumbnail} alt="" />
+      <img src={thumbnail} alt={title} />
       <h3> {title} </h3>
       <p>{value}</p>
     </div>
