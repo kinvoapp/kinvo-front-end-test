@@ -1,8 +1,8 @@
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Box, Container, Flex, Heading, IconButton, Image, Text } from '@chakra-ui/react';
 import React from 'react';
-import logoImg from '../assets/ativos/logo.png';
-import { navbarItems } from '../data/navbarItems';
+import logoImg from '../../assets/ativos/logo.png';
+import { navbarItems } from '../../data/navbarItems';
 
 function Navbar() {
 
@@ -19,8 +19,8 @@ function Navbar() {
           
           {/* Items Area */}
           <Flex as='ul' alignItems={'center'} gap={'2rem'}>
-            {navbarItems.map(item=>(
-              <Flex as='li' gap={'0.625rem'} alignItems={'center'}>
+            {navbarItems.map((item, index)=>(
+              <Flex as='li' key={index} gap={'0.625rem'} alignItems={'center'}>
                 <Image src={item.imgSrc} alt={item.name} boxSize={'2rem'}/>
                 <Box>
                   <Heading as='h6' fontWeight={'normal'} fontSize={'12px'} color={'brand.darkGray'}>{item.title}</Heading>

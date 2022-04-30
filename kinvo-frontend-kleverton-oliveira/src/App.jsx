@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import useDataFetch from './hooks/useDataFetch';
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
     )
   }
   
-
   return (
     <Box minH='100vh' bg={'brand.background'}>
       <Navbar />
+      <Sidebar />
     </Box>
   )
 }

@@ -10,7 +10,6 @@ function useDataFetch() {
       "https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData"
     );
     const data = await response.json();
-    console.log(data);
 
     setPortfolioData(data.data.snapshotByPortfolio);
     setProductListData(data.data.snapshotByProduct);
