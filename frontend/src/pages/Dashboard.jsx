@@ -1,5 +1,10 @@
+import { Top } from "../components/Menu/Top";
+
+
 export function Dashboard(){
     return (
-        <h1>Hello World</h1>
+        <>
+            <Top/>
+        </>
     )
 }
