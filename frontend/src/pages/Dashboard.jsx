@@ -5,7 +5,27 @@ import { Top } from "../components/Menu/Top";
 import { Container, InfoLeft, InfoRight, Informations } from "./styles";
 
 
+import api from '../services/api'
+import { useEffect, useState } from "react";
+
 export function Dashboard(){
+    const [rendaFixa, setRendaFixa] = useState([])
+    const [minhasRendasFixas, setMinhasRendasFixas] = useState([]);
+
+
+    useEffect(() => {
+        api
+            .get("/mock/getFixedIncomeClassData")
+            .then(({ data }) => {
+                setRendaFixa(data.data.snapshotByPortfolio)
+
+                setMinhasRendasFixas(data.data.snapshotByProduct)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }, [])
+
     return (
         <Container>
             <Top/>
@@ -16,7 +36,9 @@ export function Dashboard(){
                 </InfoLeft>
 
                 <InfoRight>
-                    <DashboardData/>
+                    <DashboardData
+                        rendaFixa={rendaFixa}
+                    />
                 </InfoRight>
             </Informations>
 

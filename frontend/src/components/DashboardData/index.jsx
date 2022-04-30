@@ -18,21 +18,19 @@ import {
     DataTopOrder,
     DataTopSearch,
     DataTopTitle,
-    Resume1,
-    Resume2,
     ResumeContainer,
-    ResumeInformations,
-    Resumes,
     Title,
-    VerticalLine 
 } from "./styles";
 
-import React from "react";
 import Select from 'react-select'
 
 import information from '../../assets/icones/information.svg'
+import { Resume } from "../Resume";
 
-export function DashboardData(){
+
+export function DashboardData({
+    rendaFixa
+}){
     // Objeto para select
     const options = [
         { value: 'chocolate', label: 'Chocolate' },
@@ -55,15 +53,11 @@ export function DashboardData(){
             <Title>Renda Fixa</Title>
 
             <ResumeContainer>
-                <ResumeInformations>
-                    <VerticalLine/>
-                    <Resumes>
-                        <Resume1>Saldo Bruto</Resume1>
-                        <Resume2>R$ 207.635,10</Resume2>
-                    </Resumes>
-                </ResumeInformations>
+                <Resume
+                    rendaFixa={rendaFixa}
+                />
             </ResumeContainer>
-
+            
             <DataContainer>
                 <DataTopInformations>
                     <DataTopTitle>Minhas Rendas Fixas</DataTopTitle>
