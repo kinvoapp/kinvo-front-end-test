@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
         --cor008: #707b81;
         --cor009: #4c309b;
+        --cor010: #4e5b61;
     }
 
     *{
@@ -25,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         background: var(--cor002);
         font-family: 'Montserrat';
+        color: var(--cor010);
     }
 
     
