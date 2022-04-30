@@ -15,7 +15,6 @@ export function Top(){
                     <img src={logo} alt="Logo" />
                 </Logo>
 
-
                 <MenuItens>
                     <Item>
                         <Circle>
@@ -31,8 +30,8 @@ export function Top(){
                             <img src={topMenu2} alt="Menu1" />
                         </Circle>
                         <Informations>
-                            <Information1>Saldo Bruto</Information1>
-                            <Information2>130.521.230,02</Information2>
+                            <Information1>Valor Aplicado</Information1>
+                            <Information2>521.230,02</Information2>
                         </Informations>
                     </Item>
                     <Item>
@@ -40,8 +39,8 @@ export function Top(){
                             <img src={topMenu3} alt="Menu1" />
                         </Circle>
                         <Informations>
-                            <Information1>Saldo Bruto</Information1>
-                            <Information2>130.521.230,02</Information2>
+                            <Information1>Rentabilidade</Information1>
+                            <Information2>2,34%</Information2>
                         </Informations>
                     </Item>
                     <Item>
@@ -49,18 +48,14 @@ export function Top(){
                             <img src={topMenu4} alt="Menu1" />
                         </Circle>
                         <Informations>
-                            <Information1>Saldo Bruto</Information1>
-                            <Information2>130.521.230,02</Information2>
+                            <Information1>Carteira</Information1>
+                            <Information2>Minha Carteira</Information2>
                         </Informations>
                     </Item>
                     <Item>
                         <Circle>
                             <img src={topMenu5} alt="Menu1" />
                         </Circle>
-                        <Informations>
-                            <Information1>Saldo Bruto</Information1>
-                            <Information2>130.521.230,02</Information2>
-                        </Informations>
                     </Item>
                 </MenuItens>
 
