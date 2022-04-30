@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type BulletProps = {
   thumbnail: string;
@@ -11,7 +11,7 @@ function HeaderBullet(props: BulletProps) {
   return (
     <div>
       <img src={thumbnail} alt={title} />
-      <h3> {title} </h3>
+      <h3>{title}</h3>
       <p>{value}</p>
     </div>
   );
