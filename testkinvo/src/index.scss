@@ -1,0 +1,23 @@
+$bgcolor: #eef2f4;
+$bgwhite: #fff;
+$fontDefault: #707b81;
+$borderColor: #707070;
+$titleColor: #627179;
+$fontrPurple: #4c309b;
+$fontrGreen: #38bfa0;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bgcolor;
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+  p {
+    color: $fontDefault;
+  }
+}
