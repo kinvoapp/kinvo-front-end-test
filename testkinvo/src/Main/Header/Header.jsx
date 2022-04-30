@@ -7,6 +7,7 @@ import brute from "./img/brute.png";
 import arrowup from "./img/arrowup.png";
 import arrowdiagright from "./img/arrowdiagright.png";
 import dropdown from "./img/dropdown.png";
+import menu from "./img/menu.png";
 
 const Header = ({ data }) => {
   //data Reciver
@@ -59,7 +60,7 @@ const Header = ({ data }) => {
           </li>
           <li>
             <div className="header-icon-nav">
-              <img src="" alt="" />
+              <img src={menu} alt="Clique para abrir o menu" title="Clique para abrir o menu"/>
             </div>
           </li>
         </ul>

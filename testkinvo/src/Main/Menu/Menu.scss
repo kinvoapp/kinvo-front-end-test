@@ -1,0 +1,14 @@
+@import "../../index.scss";
+
+aside {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $bgcolor;
+
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+  }
+}
