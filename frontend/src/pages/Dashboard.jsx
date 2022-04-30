@@ -28,7 +28,9 @@ export function Dashboard(){
 
     return (
         <Container>
-            <Top/>
+            <Top
+                rendaFixa={rendaFixa}
+            />
 
             <Informations>
                 <InfoLeft>
