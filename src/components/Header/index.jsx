@@ -1,11 +1,12 @@
 import { Container, Content, HeaderMenu, HomeButton } from "./styles";
-import { ReactComponent as Bag }   from "../assets/bag.svg"
-import { ReactComponent as Menu }   from "../assets/menu.svg"
-import { ReactComponent as ArrowDown2 }   from "../assets/arrowDown2.svg"
-import { ReactComponent as ArrowUp }   from "../assets/arrowUp.svg"
-import { ReactComponent as RisingArrow }   from "../assets/risingArrow.svg"
-import { ReactComponent as Logo } from "../assets/logo.svg"
+import { ReactComponent as Bag }   from "../../assets/bag.svg"
+import { ReactComponent as Menu }   from "../../assets/menu.svg"
+import { ReactComponent as ArrowDown2 }   from "../../assets/arrowDown2.svg"
+import { ReactComponent as ArrowUp }   from "../../assets/arrowUp.svg"
+import { ReactComponent as RisingArrow }   from "../../assets/risingArrow.svg"
+import { ReactComponent as Logo } from "../../assets/logo.svg"
 import { HeaderMenuInfo } from "./HeaderMenuInfo";
+
 export function Header() {
     return(
        <Container>

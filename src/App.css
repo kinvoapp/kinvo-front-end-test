@@ -4,7 +4,15 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
     font-family: 'Montserrat', sans-serif;
     color: #707B81;
 }
