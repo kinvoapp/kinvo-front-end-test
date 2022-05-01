@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-function useDataFetch() {
+const MainContext = React.createContext({});
+
+export const MainContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [productListData, setProductListData] = useState([]);
   const [portfolioData, setPortfolioData] = useState([]);
@@ -49,7 +51,6 @@ function useDataFetch() {
     ];
 
     setPortfolioData(portfolio);
-
     setProductListData(data.data.snapshotByProduct);
     setIsLoading(false);
   }
@@ -58,11 +59,17 @@ function useDataFetch() {
     getData();
   }, []);
 
-  return {
-    isLoading,
-    portfolioData,
-    productListData,
-  };
-}
+  return (
+    <MainContext.Provider
+      value={{
+        isLoading,
+        productListData,
+        portfolioData,
+      }}
+    >
+      {children}
+    </MainContext.Provider>
+  );
+};
 
-export default useDataFetch;
+export const useMainContext = () => useContext(MainContext);

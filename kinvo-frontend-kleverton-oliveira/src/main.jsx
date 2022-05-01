@@ -10,13 +10,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { theme } from '../src/styles/chakraTheme';
 import App from './App';
+import { MainContextProvider } from './context/mainContext';
 import './styles/global.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <MainContextProvider>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </MainContextProvider>
   </React.StrictMode>
 )

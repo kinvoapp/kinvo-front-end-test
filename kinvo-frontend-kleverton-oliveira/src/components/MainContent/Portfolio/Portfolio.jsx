@@ -1,16 +1,15 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
-import useDataFetch from '../../../hooks/useDataFetch';
+import { useMainContext } from '../../../context/mainContext';
 import PortfolioItem from './PortfolioItem';
 
 function Portfolio() {
 
-  const {portfolioData} = useDataFetch();
+  const {portfolioData} = useMainContext();
 
   return (
     <Flex mt={'1.5rem'} as='section' gap={'1rem'}>
-      {
-        portfolioData.map((item, index)=>(
+      {portfolioData.map((item, index)=>(
           <PortfolioItem key={index} title={item.title} value={item.value}/>
         ))
       }

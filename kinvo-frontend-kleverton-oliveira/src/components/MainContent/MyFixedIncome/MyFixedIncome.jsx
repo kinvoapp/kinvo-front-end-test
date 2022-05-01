@@ -1,19 +1,15 @@
 import { SearchIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Input, InputGroup, InputLeftElement, Select } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import useDataFetch from '../../../hooks/useDataFetch';
+import { useMainContext } from '../../../context/mainContext';
 import Due from './ProductSubItem/Due';
 import FixedIncome from './ProductSubItem/FixedIncome';
 import Position from './ProductSubItem/Position';
 
 function MyFixedIncome() {
 
-  const {productListData} = useDataFetch();
-
-  /* Product Filtering Area */
+  const {productListData} = useMainContext();
   const [searchContent, setSearchContent] = useState('');
-
-  /* Product Sorting Area */
   const [categoryToSortBy, setCategoryToSortBy] = useState('');
   
   function compareProductByCategory(product1, product2){
@@ -108,7 +104,6 @@ function MyFixedIncome() {
         </Flex>
         ))
       }
-
     </Box>
   )
 }

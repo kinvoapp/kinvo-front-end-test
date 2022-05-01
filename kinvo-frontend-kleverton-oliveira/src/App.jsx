@@ -2,11 +2,11 @@ import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import MainContent from './components/MainContent';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import useDataFetch from './hooks/useDataFetch';
+import { useMainContext } from './context/mainContext';
 
 function App() {
 
-  const {isLoading} = useDataFetch();
+  const {isLoading} = useMainContext();
 
   if(isLoading) {
     return (
