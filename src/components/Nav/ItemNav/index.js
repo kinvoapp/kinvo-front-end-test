@@ -3,9 +3,6 @@ import React from 'react'
 import { Container, Text } from './style'
 
 const ItemNav = ( props ) => {
-
-    let parser = new DOMParser();
-    let doc = parser.parseFromString("<br>", "text/html");
   
   return(
 

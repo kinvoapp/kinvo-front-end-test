@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.a`
+export const Container = styled.div`
 
   position: relative;
   min-height: 67px;
@@ -12,6 +12,11 @@ export const Container = styled.a`
   cursor: pointer;
   color: var(--text-color-header);
   border-bottom: 1px solid rgba(204, 207, 209, 0.35);
+
+  &:hover{
+
+    background-color: var(--btn-hover);
+  }
 
   &::after{
 
