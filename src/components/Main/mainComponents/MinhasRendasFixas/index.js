@@ -14,7 +14,10 @@ import ItemBox from './ItemBox'
 const MinhasRendasFixas = () => {
 
     const [dataRendaFixa, setDataRendaFixa] = useState([])
-
+    const [search, setSearch] = useState('')
+    const [select, setSelect] = useState('')
+    
+    
     useEffect(() => {
 
         api.get('')
@@ -24,38 +27,53 @@ const MinhasRendasFixas = () => {
 
                 setDataRendaFixa(snapshotByProduct)
 
-                console.log(snapshotByProduct)
-            })
-        
+            })        
     }, [])
+
+    const itemsFilteredSelect = dataRendaFixa.filter(item => item.fixedIncome.name.includes(select))
+    const itemsFiltered = itemsFilteredSelect.filter(item => item.fixedIncome.name.includes(search))
 
     return (
 
-        <Container>
+        <Container> 
             <Header>
                 <Title>Minhas Rendas Fixas</Title>
                 <SearchContainer search={SearchIcon}>
-                    <select name="select">
-                        <option value="valor1">Valor 1</option>
-                        <option value="valor2" selected>Valor 2</option>
-                        <option value="valor3">Valor 3</option>
+                    <select name="select" value={select} onChange={el => setSelect(el.target.value)}>
+                        <option value="">Todos</option>
+                        <option value="Tesouro" selected>Tesouro</option>
+                        <option value="CDB">CDB</option>
+                        <option value="LC">LC</option>
                     </select>
                     <div>
-                        <input type='text' />
+                        <input type='text' 
+                               onChange={(e) => setSearch(e.target.value)} 
+                               value={search}
+                        />
                     </div>
                 </SearchContainer>
             </Header>
+            
             <Section>
-                {dataRendaFixa.map((item, index) => (
-                    <ItemBox key={index} 
-                             due={item.due} 
-                             fixedIncome={item.fixedIncome} 
-                             position={item.position}
-                    />
-                )) }
+            {itemsFiltered.map( (item, index) => (
+            <ItemBox key={index} 
+                    itemsFiltered={itemsFiltered}
+                    due={item.due} 
+                    fixedIncome={item.fixedIncome} 
+                    position={item.position}
+                />
+            ))}
             </Section>
         </Container>
     )
 }
 
+// itemsFiltered.map( (item, index) => (
+//     <ItemBox key={index} 
+//             itemsFiltered={itemsFiltered}
+//             due={item.due} 
+//             fixedIncome={item.fixedIncome} 
+//             position={item.position}
+//     />
+// ))
 export default MinhasRendasFixas

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import UserValues from './UserValues'
+import api from '../../api/api'
 
 import { Head, DivHead } from './style'
 
@@ -13,6 +14,22 @@ import menu from '../../assets/menu-icon.svg'
 import logo from '../../images/logo.svg'
 
 const Header = () => {
+
+  const [dataRendaFixa, setDataRendaFixa] = useState([])
+
+    useEffect(() => {
+
+        api.get('')
+            .then(( res ) => {
+
+                let { snapshotByProduct } = res.data.data
+
+                setDataRendaFixa(snapshotByProduct)
+
+                console.log(res.data.data)
+            })
+        
+    }, [])
 
   return (
 

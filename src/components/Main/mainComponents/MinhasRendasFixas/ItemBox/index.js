@@ -1,4 +1,4 @@
-import { useEffect, useState, currencyFormat } from 'react'
+import { useEffect, useState } from 'react'
 import { Container, Box, Title, BoxValues } from './style'
 
 import Value from './Values'
@@ -9,67 +9,33 @@ const ItemBox = ( props ) => {
 
     const [due, setDue] = useState([])
     const [fixedIncome, setFixedIncome] = useState([])
+    const [position, setPosition] = useState([])
 
     const [tratedDate, setTratedDate] = useState([])
-    const [tratedApplied, setTratedValueApplied] = useState([])
-    const [tratedPercentage, setTratedPercentage] = useState([])
-    const [tratedEquity, setTratedEquity] = useState([])
-    const [tratedPortfolioPercentage, setTratedPortfolioPercentage] = useState([])
-    const [TratedIndexerValue, setTratedIndexerValue] = useState([])
-    const [TratedPercentageOverIndexer, setTratedPercentageOverIndexer] = useState([])
 
+    // RECEBENDO OS DADOS DA API ATRAVÉS DAS PROPS
+    // TRATANDO INFORMAÇÕES PARA O FORMATO DE DINHEIRO E DE DATA
     useEffect(() => {
 
         setDue(props.due)
         setFixedIncome(props.fixedIncome)
 
-        //indexerValue
+        const positionContent = props.position
+            
+        Object.keys(positionContent).forEach(item => {
 
-        formatMoneyNumber(props.position.valueApplied)
-            .then( res => {
-                setTratedValueApplied(res)
-            })
+            positionContent[item] = positionContent[item].toLocaleString('pt-br')
 
-        formatMoneyNumber(props.position.equity)
-            .then( res => {
-                setTratedEquity(res)
-            })
+        })
 
-        formatMoneyNumber(props.position.profitability)
-            .then( res => {
-                setTratedPercentage(res)
-            })
-
-        formatMoneyNumber(props.position.portfolioPercentage)
-            .then( res => {
-                setTratedPortfolioPercentage(res)
-            })
-
-        formatMoneyNumber(props.position.indexerValue)
-            .then( res => {
-                setTratedIndexerValue(res)
-            })
-
-        formatMoneyNumber(props.position.percentageOverIndexer)
-            .then( res => {
-                setTratedPercentageOverIndexer(res)
-            })
+        setPosition(positionContent)
 
         formatDate(props.due.date)
             .then( res => {
                 setTratedDate(res)
             })
             
-    }, [])
-
-    const formatMoneyNumber = async ( n ) => {
-
-        let number = await n
-
-        let money = number.toLocaleString('pt-br')
-
-        return money
-    }
+    }, [props.itemsFiltered])
 
     const formatDate = async ( d ) => {
 
@@ -104,27 +70,27 @@ const ItemBox = ( props ) => {
                 <BoxValues>
                     <Value color='var(--text-color-amount-main)' 
                            title='VALOR INVES.' 
-                           value={tratedApplied} 
+                           value={position.valueApplied} 
                     />
                     <Value color='var(--text-color-amount-main)' 
                            title='SALDO BRUTO' 
-                           value={tratedEquity} 
+                           value={position.equity} 
                     />
                     <Value color='var(--text-color-amount-main)' 
                            title='RENT.' 
-                           value={`${tratedPercentage}%`} 
+                           value={`${position.profitability}%`} 
                     />
                     <Value color='var(--text-color-amount-main)' 
                            title='% DA CART.' 
-                           value={tratedPortfolioPercentage} 
+                           value={`${position.portfolioPercentage}%`} 
                     />
                     <Value color='var(--text-color-amount-main)' 
                            title='CDI' 
-                           value={TratedIndexerValue} 
+                           value={position.indexerValue} 
                     />
                     <Value color='var(--text-color-amount-main)' 
                            title='SOBRE CDI' 
-                           value={TratedPercentageOverIndexer} 
+                           value={position.percentageOverIndexer} 
                     />
                 </BoxValues>
             </Box>

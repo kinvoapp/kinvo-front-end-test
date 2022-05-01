@@ -6,7 +6,7 @@ const BoxValue = ( props ) => {
 
         <Box>
             <Title>{props.title}</Title>
-            <Amount>{`R$${props.amount}`}</Amount>
+            <Amount>{props.amount}</Amount>
         </Box>
     )
 }

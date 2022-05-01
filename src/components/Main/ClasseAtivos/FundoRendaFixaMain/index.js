@@ -1,4 +1,8 @@
+import React, { useEffect, useState} from 'react'
+
 import { RenderDashboard, Title, ContainerValuesDisplay } from './style'
+
+import api from '../../../../api/api'
 
 import BoxValue from '../../mainComponents/BoxValue'
 import Graphic from '../../mainComponents/Graphic'
@@ -6,28 +10,49 @@ import MinhasRendasFixas from '../../mainComponents/MinhasRendasFixas'
 
 const FundoRendaFixaMain = () => {
 
+  const [dataRendaFixa, setDataRendaFixa] = useState({})
+
+  useEffect(() => {
+
+    api.get('')
+        .then(( res ) => {
+
+            let { snapshotByPortfolio } = res.data.data
+
+            Object.keys(snapshotByPortfolio).forEach(item => {
+
+              snapshotByPortfolio[item] = snapshotByPortfolio[item].toLocaleString('pt-br')
+
+            })
+
+            setDataRendaFixa(snapshotByPortfolio)
+            
+          })
+          
+  }, [])
+
   return(
 
    <RenderDashboard>
      <Title>Renda Fixa</Title>
      <ContainerValuesDisplay>
       <BoxValue title='SALDO BRUTO' 
-                amount='121.212,00'
+                amount={`R$${dataRendaFixa.equity}`}
       />
       <BoxValue title='VALOR APLICADO' 
-                amount='170.025,64'
+                amount={`R$${dataRendaFixa.valueApplied}`}
       />
       <BoxValue title='RESULTADO' 
-                amount='37.638,46'
+                amount={`R$${dataRendaFixa.equityProfit}`}
       />
       <BoxValue title='RENTABILIDADE' 
-                amount='25,08%'
+                amount={`${dataRendaFixa.percentageProfit}%`}
       />
       <BoxValue title='CDI' 
-                amount='23,68%'
+                amount={`${dataRendaFixa.indexerValue}%`}
       />
       <BoxValue title='% SOBRE CDI' 
-                amount='320%'
+                amount={`${dataRendaFixa.percentageOverIndexer}%`}
       />
      </ContainerValuesDisplay>
      <Graphic />
