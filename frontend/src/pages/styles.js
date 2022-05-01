@@ -10,7 +10,7 @@ export const Informations = styled.div`
     grid-template-columns: 225px 1fr;
     gap: 20px;
 
-    height: 100vh;
+    max-height: 100vh;
 `;
 
 export const InfoLeft = styled.div`

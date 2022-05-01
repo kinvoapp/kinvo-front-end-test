@@ -17,7 +17,7 @@ export const ResumeContainer = styled.div`
 
 export const DataContainer = styled.div`
     /* height: 200px; */
-    margin: 20px 0 0 0;
+    margin: 20px 0;
     
     display: flex;
     flex-direction: column;
@@ -46,12 +46,19 @@ export const DataTopActions = styled.div`
 `;
 
 export const DataTopOrder = styled.div`
+    display: flex;
     width: 156px;
+    border: 1px solid var(--cor001);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0 0 0 .5em;
 `;
 
 export const DataTopSearch = styled.div`
+    display: flex;
     width: 240px;
-    background: yellowgreen;
+    border: 1px solid var(--cor001);
+    border-radius: 10px;
 `;
 
 export const DataInformations = styled.div`

@@ -5,10 +5,6 @@ export const Container = styled.li`
     height: 60px;
     border-bottom: 1px solid var(--cor001);
 
-    &:last-child{
-        border: 0;
-    }
-    
     display: flex;
     align-items: center;
     

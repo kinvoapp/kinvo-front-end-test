@@ -11,33 +11,19 @@ import {
     Title,
 } from "./styles";
 
-import Select from 'react-select'
-
 import { Resume } from "../Resume";
 import { DashboardDataCard } from "../DashboardDataCard";
 
+import { Select } from "../Select";
+import { InputSearch } from "../InputSearch";
 
 export function DashboardData({
     rendaFixa,
-    minhasRendasFixas
+    minhasRendasFixas,
+    setOrderType,
+    setSearchText
 }){
-    // Objeto para select
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-    ]
-
-    const selectCustomStyles = {
-        option: (provided, state) =>({
-            ...provided,
-        }), 
-        menu: (provided, state) => ({
-            ...provided,
-            color: state.selectProps.menuColor,
-        })
-    }
-
+    
     const resultsMinhasRendasFixas = minhasRendasFixas.map((data, index) => {
         return <DashboardDataCard data={data} key={index}/>
     })
@@ -59,14 +45,20 @@ export function DashboardData({
                     <DataTopActions>
                         <DataTopActions>
                             <DataTopOrder>
-                                <Select 
-                                    options={options}
-                                    styles={selectCustomStyles}
-                                    menuColor = '#4c309b'
+                                <Select
+                                    name=''
+                                    defaulTitle='Ordenar por'
+                                    onChange={(e) => setOrderType(e.target.value)}
                                 />
                             </DataTopOrder>
 
-                            <DataTopSearch>Ola</DataTopSearch>
+                            <DataTopSearch>
+                                <InputSearch
+                                    onChange={(e) => {
+                                        setSearchText(e.target.value);
+                                    }}
+                                />
+                            </DataTopSearch>
                         </DataTopActions>
                     </DataTopActions>
                 </DataTopInformations>
