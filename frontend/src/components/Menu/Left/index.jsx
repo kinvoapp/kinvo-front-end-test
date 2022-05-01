@@ -18,48 +18,56 @@ export function Left(){
             <ul>
 
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu1}
                     alt="Menu Interno Esquerda 1"
                 >
                     Resumo da Carteira
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu2}
                     alt="Menu Interno Esquerda 2"
                 >
                     Meus Produtos
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu3}
                     alt="Menu Interno Esquerda 3"
                 >
                     Meus Proventos
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu4}
                     alt="Menu Interno Esquerda 4"
                 >
                     Classe de Ativos
                 </LeftItem>
                 <LeftItem
+                    sobMenu='ativos'
                     src={leftMenu5}
                     alt="Menu Interno Esquerda 5"
                 >
                     Rentabilidade Real
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu6}
                     alt="Menu Interno Esquerda 6"
                 >
                     Projeção da Carteira
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu7}
                     alt="Menu Interno Esquerda 7"
                 >
                     Risco x Retorno
                 </LeftItem>
                 <LeftItem
+                    sobMenu=''
                     src={leftMenu8}
                     alt="Menu Interno Esquerda 8"
                 >
