@@ -11,28 +11,7 @@ function MyFixedIncome() {
   const {productListData} = useDataFetch();
 
   /* Product Filtering Area */
-  const productList = [...productListData];
-  const [isSearching, setIsSearching] = useState(false);
-  const [filteredProductListData, setFilteredProductListData] = useState([]);
-
-  function searchByProductName(event) {
-
-    const searchContent = event.target.value;
-
-    if (searchContent.length > 0) {
-      setIsSearching(true);
-
-      const searchResult = productList.filter(product => {
-        const rule = new RegExp(searchContent, "gi");
-        return rule.test(product.fixedIncome.name);
-      });
-
-      setFilteredProductListData(searchResult);
-
-    } else {
-      setIsSearching(false);
-    }
-  }
+  const [searchContent, setSearchContent] = useState('');
 
   /* Product Sorting Area */
   const [categoryToSortBy, setCategoryToSortBy] = useState('');
@@ -46,9 +25,12 @@ function MyFixedIncome() {
         
       case 'bondType':
         return product1.fixedIncome.bondType.localeCompare(product2.fixedIncome.bondType);
-        
-      case 'profitability':
-        return product2.position.profitability - product1.position.profitability;
+      
+      case 'valueApplied':
+        return product2.position.valueApplied - product1.position.valueApplied;
+
+      case 'equity':
+        return product2.position.equity - product1.position.equity;
       
       case 'daysUntilExpiration':
         return product1.due.daysUntilExpiration - product2.due.daysUntilExpiration;
@@ -85,6 +67,8 @@ function MyFixedIncome() {
           >
             <option value="name">Nome</option>
             <option value="bondType">Classe</option>
+            <option value="valueApplied">Valor Investido</option>
+            <option value="equity">Saldo Bruto</option>
             <option value="profitability">Rentabilidade</option>
             <option value="daysUntilExpiration">Dias até Vencimento</option>
           </Select>
@@ -99,48 +83,31 @@ function MyFixedIncome() {
               name='search'
               type='text'
               placeholder='Buscar por título'
-              onChange={searchByProductName}
+              onChange={(e)=>setSearchContent(e.target.value)}
             />
           </InputGroup>
         </Flex>
       </Flex>
 
-      {
-        isSearching ?
-
-        (filteredProductListData.sort(compareProductByCategory).map((product, index)=>(
-          <Flex 
-            // Applies 'blue background' only on elements with odd index.
-            bg={index % 2 !== 1 ? 'white' : 'brand.hoverBgColor'}
-            key={product.fixedIncome.portfolioProductId} 
-            p={'1.5rem'}
-            gap={'1rem'} 
-            borderBottom={'2px solid'} 
-            borderColor={'blackAlpha.50'}
-            >
-              <FixedIncome content={product.fixedIncome}/>
-              <Position content={product.position}/>
-              <Due content={product.due}/>
-          </Flex>
-          )))
-
-        :
-
-        (productListData.sort(compareProductByCategory).map((product, index)=>(
-          <Flex 
-            bg={index % 2 !== 1 ? 'white' : 'brand.hoverBgColor'}
-            key={product.fixedIncome.portfolioProductId} 
-            p={'1.5rem'}
-            gap={'1rem'} 
-            borderBottom={'2px solid'} 
-            borderColor={'blackAlpha.50'}
-            >
-              <FixedIncome content={product.fixedIncome}/>
-              <Position content={product.position}/>
-              <Due content={product.due}/>
-          </Flex>
-          )))  
-        }
+      {productListData
+        .sort(compareProductByCategory)
+        .filter((product)=> searchContent === '' || product.fixedIncome.name.toLowerCase().includes(searchContent.toLowerCase()))
+        .map((product, index)=>(
+        <Flex 
+          // Applies 'blue background' only on elements with odd index.
+          bg={index % 2 !== 1 ? 'white' : 'brand.hoverBgColor'}
+          key={product.fixedIncome.portfolioProductId} 
+          p={'1.5rem'}
+          gap={'1rem'} 
+          borderBottom={'2px solid'} 
+          borderColor={'blackAlpha.50'}
+          >
+            <FixedIncome content={product.fixedIncome}/>
+            <Position content={product.position}/>
+            <Due content={product.due}/>
+        </Flex>
+        ))
+      }
 
     </Box>
   )
