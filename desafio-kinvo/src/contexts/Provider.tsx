@@ -7,9 +7,9 @@ type ProviderProps = {
 
 function Provider(props: ProviderProps) {
   const { children } = props;
-  const [grossBalance, setGrossBalance] = useState(0);
-  const [amountApplied, setAmountApplied] = useState(0);
-  const [profitRate, setProfitRate] = useState(0);
+  const [grossBalance, setGrossBalance] = useState('130.521.230,02');
+  const [amountApplied, setAmountApplied] = useState('521.230,02');
+  const [profitRate, setProfitRate] = useState('2,34');
   const [walletName, setWalletName] = useState('Minha carteira');
   const value = useMemo(() => ({
     grossBalance,
