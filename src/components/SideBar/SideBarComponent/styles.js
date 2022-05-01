@@ -58,7 +58,7 @@ export const Option = styled.div`
     }
     li::before {
         content: "• ";
-        color: var(--purple);
+        color: var(--purple-600);
         font-weight: bold;
         display: inline-block; 
         font-size: 1.4rem;

@@ -14,7 +14,7 @@ export const Name = styled.p`
     font-size: 0.75rem;
 `
 export const Value = styled.h3`
-    color: var(--purple);
+    color: var(--purple-600);
 `
 export const Column = styled.div`
     width: 2px;

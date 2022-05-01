@@ -8,4 +8,6 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     padding-left: 1.25rem;
+    padding-top: 1.6875rem;
+    padding-bottom: 2rem;
 `

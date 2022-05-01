@@ -1,8 +1,12 @@
-import { SideBar } from "../SideBar";
-import { Container, Content } from "./styles";
-import { Summary } from "../Summary/index";
 import { useEffect } from "react";
 import { useState } from "react";
+
+import { Container, Content } from "./styles";
+
+import { SideBar } from "../SideBar";
+import { Summary } from "../Summary/index";
+import { ProfitabilityGraph } from "../ProfitabilityGraph/index"
+import { FixedIncomes } from "../FixedIncomes";
 
 export function Dashboard() {
     const [fixedIncomeData, setFixedIncomeData] = useState({})
@@ -19,11 +23,9 @@ export function Dashboard() {
             <SideBar />
             <Container>
                 <Content>
-                    <button onClick={() => console.log(fixedIncomeData)}>
-                        aaaa
-                    </button>
                     <Summary portfolio={fixedIncomeData.data?.snapshotByPortfolio}/>
-                    
+                    <ProfitabilityGraph />
+                    <FixedIncomes products={fixedIncomeData.data?.snapshotByProduct} />
                 </Content>
             </Container>
         </>
