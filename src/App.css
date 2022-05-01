@@ -1,0 +1,12 @@
+body {
+  background-color: #EEF2F4;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background-image: url("./assets/images/search.svg");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
