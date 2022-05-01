@@ -1,25 +1,33 @@
 import styled from "styled-components";
 
-export const CardTopMenuStyle = styled.div `
+export const CardTopMenuStyle = styled.div`
     padding: 10px;
     display: flex;
+    margin-right:30px;
     .IconCard{
-        height: 40px;
-        width: 40px;
-        background-color: #000 ;
+        height: 30px;
+        width: 30px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
     .dataCard{
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        padding-left:10px;
         .titulo {
-            height: 15px;
+            height: 10px;
             min-width:10px;
-            background-color: #abc;
+            text-transform: uppercase;
+            font-size:9px;
+            font-weight: bold;
+            color: #D2D7D9;
         }
         .valueCard {
-            height: 25px;
+            height: 20px;
             min-width:10px;
-            background-color: #cba;
+            font-weight: bold;
+            color:#88898C;
         }
     }
 `

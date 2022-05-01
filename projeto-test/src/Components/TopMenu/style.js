@@ -12,10 +12,20 @@ export const LogNav = styled.header `
     padding: 0px 20px ;
     box-sizing: border-box;
     #logo {
-        height: 35px;
+        height: 30px;
         width: 300px;
     }
     #TopMenu {
         list-style:none;
+        display: flex;
+        align-items:center;
+        padding-right: 40px;
+        li{
+
+        }
+        #IconMenu{
+            height: 30px;
+            width: 30px;
+        }
     }
 `

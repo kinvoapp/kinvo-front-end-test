@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
-export const CardSideMenu = styled.li`
-    display:flex;
+export const CardTwo = styled.li`
     height: 67px;
     width: 227px;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content:center;
-    .icon{
-        height: 100%;
-        width: 62px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        img{
-            height: 30px;
-            width: 100%;
-        }
+    .dot{
+        height: 5px;
+        width: 5px;
+        background-color: #540fc4;
+        margin: 25px 15px;
+        border-radius:50%;
     }
     .text{
         height: 100%;
-        width: calc(100% - 92px);
+        flex:1;
         font-size:12px;
-        display:flex;
+        color:#585859;
+        display: flex;
         align-items:center;
         p{
-            width: 60%;
             color:#585859;
+            text-align:left;
         }
     }
     .iconArrow{
