@@ -16,30 +16,21 @@ export const HeaderSection = styled.div`
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 3.5rem;
-    &::after {
-        content: '';
-        width: 120%;
-        height: 1.5px;
-        background-color: #EEF2F4;
-        position: absolute;
-        top: 44rem;
-        right: 0rem;
-        transition: 0.0.2s;
-    }
+    border-bottom: 2px solid #EEF2F4;
 `
 
 export const MenuSection = styled.div`
     display: flex;
     align-items: center;
     margin-right: 2.125rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
 
 `
 
 export const HeaderTitle = styled.h3`
-    margin-bottom: 2rem;
     font-weight: normal;
     font-size: 1.125rem;
+    margin-bottom: 1rem;
 `
 export const SearchBar = styled.div`
     display: flex;
