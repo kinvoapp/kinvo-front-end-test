@@ -36,6 +36,9 @@ function MyFixedIncome() {
 
       case 'equity':
         return product2.position.equity - product1.position.equity;
+
+      case 'profitability':
+        return product2.position.profitability - product1.position.profitability;
       
       case 'daysUntilExpiration':
         return product1.due.daysUntilExpiration - product2.due.daysUntilExpiration;
