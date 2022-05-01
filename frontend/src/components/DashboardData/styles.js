@@ -108,3 +108,9 @@ export const DataInformations = styled.div`
     padding: 20px;
     gap: 10px;
 `;
+
+export const PieChartsContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+`;

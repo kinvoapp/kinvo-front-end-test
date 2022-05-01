@@ -3,8 +3,6 @@ import {
     Title
 } from "./styles";
 
-import React, { useEffect, useState } from "react"
-
 import {
   AreaChart,
   Area,
@@ -15,7 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-export function ProfitabilityGraphic({
+export function ProfitabilityChart({
     graphicData, title
 }){
        

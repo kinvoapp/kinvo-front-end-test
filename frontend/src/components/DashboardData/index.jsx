@@ -7,6 +7,7 @@ import {
     DataTopOrder,
     DataTopSearch,
     DataTopTitle,
+    PieChartsContainer,
     ResumeContainer,
     Title,
 } from "./styles";
@@ -16,9 +17,11 @@ import { DashboardDataCard } from "../DashboardDataCard";
 
 import { Select } from "../Select";
 import { InputSearch } from "../InputSearch";
-import { ProfitabilityGraphic } from "../ProfitabilityGraphic";
 
 import ReactPaginate from "react-paginate"
+import { ProfitabilityChart } from "../ProfitabilityChart";
+import { TypeChart } from "../PieChart/TypeChart";
+import { TitleChart } from "../PieChart/TitleChart";
 
 export function DashboardData({
     rendaFixa,
@@ -55,7 +58,7 @@ export function DashboardData({
                 />
             </ResumeContainer>
             
-            <ProfitabilityGraphic 
+            <ProfitabilityChart
                 title='Rentabilidade dos Títulos'
                 graphicData={chartData}
             />
@@ -111,6 +114,18 @@ export function DashboardData({
                     activeClassName={'active'}
                 />
             </DataContainer>
+
+            <PieChartsContainer>
+                <TypeChart
+                    title='Divisão de Carteira por Tipos'
+                    typeChartData={chartData}
+                />
+
+                <TitleChart
+                    title='Divisão de Carteira por Título'
+                    typeChartData={chartData}
+                />
+            </PieChartsContainer>
         </Container>
 
     )
