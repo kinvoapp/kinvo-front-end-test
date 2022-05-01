@@ -1,15 +1,16 @@
 import React, { useState, ReactNode } from 'react';
 import context from './context';
 
-interface ProviderProps {
+type ProviderProps = {
   children: ReactNode;
-}
+};
 
-function contexts(children:ReactNode) {
-  const { Provider } = context;
+function Provider(props: ProviderProps) {
+  const { children } = props;
   const [grossBalance, setGrossBalance] = useState(0);
   const [amountApplied, setAmountApplied] = useState(0);
   const [profitRate, setProfitRate] = useState(0);
+  const [walletName, setWalletName] = useState('Minha carteira');
   const value = {
     grossBalance,
     setGrossBalance,
@@ -17,12 +18,14 @@ function contexts(children:ReactNode) {
     setAmountApplied,
     profitRate,
     setProfitRate,
+    walletName,
+    setWalletName,
   };
   return (
-    <Provider value={value}>
+    <context.Provider value={value}>
       {children}
-    </Provider>
+    </context.Provider>
   );
 }
 
-export default contexts;
+export default Provider;
