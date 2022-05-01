@@ -6,6 +6,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 0.875rem;
     padding: 1rem;
+    cursor: pointer;
     p {
         max-width: 4.625rem;
         font-size: 0.8125rem;    
@@ -49,6 +50,7 @@ export const Option = styled.div`
     display: flex;
     align-items: center;
     padding-left: 3rem;
+    background-color: white;
     li {
         font-size: 0.875rem;
         display: flex;

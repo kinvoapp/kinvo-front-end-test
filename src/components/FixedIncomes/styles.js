@@ -7,14 +7,15 @@ export const Container = styled.div`
     padding-bottom: 1.5rem;
     margin-bottom: 0.375rem;
     margin-left: 1.25rem;
+    margin-right: 1.25rem;
     
 `
 export const HeaderSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 1.25rem;
     padding-left: 2rem;
+    padding-right: 3.5rem;
     &::after {
         content: '';
         width: 120%;
@@ -23,7 +24,7 @@ export const HeaderSection = styled.div`
         position: absolute;
         top: 44rem;
         right: 0rem;
-        transition: 0.2s;
+        transition: 0.0.2s;
     }
 `
 
@@ -70,6 +71,35 @@ export const OrderButton = styled.button`
     background-color: white;
     border: 1px solid var(--gray-400);
 
+`
+
+export const OrderButtonModal = styled.div`
+    display: block;
+    max-width: 10rem;
+    background-color: white;
+    position: absolute;
+    float: right;
+    z-index: 2;
+    top: 43rem;
+    right: 20.4rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 10px;
+    `
+
+export const ModalOption = styled.button`   
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.8rem;
+    padding-top:0.3rem;
+    padding-bottom:0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray-600);
+    background-color: white;
+    border-bottom: 1px solid var(--gray-400);
+    &:last-child {
+        border-radius: 10px;
+    }
 `
 
 export const MainSection = styled.div`

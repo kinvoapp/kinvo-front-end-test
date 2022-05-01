@@ -6,14 +6,13 @@ export function ProfitabilityGraph() {
         //TODO
         <div
             style={{
-                width:"1255px",
                 height:"348px",
                 backgroundColor: "white",
                 borderRadius: "10px",
                 marginTop: "1.375rem",
                 marginBottom: "1rem",
-                marginLeft: "1.25rem",
-
+                marginLeft: "1.30rem",
+                marginRight: "1.25rem",
             }}
         >
             

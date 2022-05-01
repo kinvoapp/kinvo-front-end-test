@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-import { Container, OrderButton, SearchBar, HeaderTitle, MenuSection, HeaderSection, MainSection } from "./styles";
+import { Container, OrderButton, SearchBar, HeaderTitle, MenuSection, HeaderSection, MainSection, OrderButtonModal, ModalOption } from "./styles";
 
 import { ReactComponent as ArrowDown2} from "../../assets/arrowDown2.svg"
 import { ReactComponent as Magnifier } from "../../assets/magnifier.svg"
@@ -10,37 +10,68 @@ import { Title } from "./Title/index"
 
 export function FixedIncomes({products=[]}) {
 
-        const incomes = products.map((product) => {
-            return (
-                {
-                    name: product.fixedIncome.name,
-                    bondType: product.fixedIncome.bondType,
-                valueApplied: product.position.valueApplied,
-                equity: product.position.equity,
-                profitability: product.position.profitability,
-                portfolioPercentage: product.position.portfolioPercentage,
-                indexerValue: product.position.indexerValue,
-                percentageOverIndexer: product.position.percentageOverIndexer,
-                date: product.due.date,
-                daysUntilExpiration: product.due.daysUntilExpiration,
-                portfolioProductId: product.fixedIncome.portfolioProductId,
-            }
-        )});
+    const incomesArray = products.map((product) => {
+        return (
+            {
+                name: product.fixedIncome.name,
+                bondType: product.fixedIncome.bondType,
+            valueApplied: product.position.valueApplied,
+            equity: product.position.equity,
+            profitability: product.position.profitability,
+            portfolioPercentage: product.position.portfolioPercentage,
+            indexerValue: product.position.indexerValue,
+            percentageOverIndexer: product.position.percentageOverIndexer,
+            date: product.due.date,
+            daysUntilExpiration: product.due.daysUntilExpiration,
+            portfolioProductId: product.fixedIncome.portfolioProductId,
+        }
+    )});
     
-    
+    useEffect(() => {
+        setFixedIncomes(incomesArray)
+    }, [products])
+
+    const [fixedIncomes, setFixedIncomes] = useState(incomesArray)
     const [results, setResults] = useState([]);
     const [search, setSearch] = useState('');
-    
+    const [showModal, setShowModal] = useState(false)
+
+
     function searchIncomes(search) {
-        setResults(incomes.filter((product) => {
+        setResults(fixedIncomes.filter((product) => {
             const name = product.name.toLowerCase()
-            console.log(name)
-            console.log(name.includes(search.toLowerCase()))
             return name.includes(search.toLowerCase());
         }))
         setSearch(search);
     }
 
+    function orderChange(order) {
+        setShowModal(!showModal)
+        switch (order) {
+            case 'none':
+                setFixedIncomes(incomesArray)
+                break
+            case 'alphabetical':
+                setFixedIncomes(
+                    incomesArray.sort((a, b) => a.name.localeCompare(b.name))
+                    )
+                break
+            case'valueApplied':
+                setFixedIncomes(
+                    incomesArray.sort((a, b) => b.valueApplied - a.valueApplied)
+                )
+                break
+            case 'date':
+                setFixedIncomes(
+                    incomesArray.sort((a, b) => a.daysUntilExpiration - b.daysUntilExpiration)
+                )
+                break
+            default:
+                return
+        }
+    }
+
+    
     if(search !== '') {
         return (
             <Container>
@@ -51,6 +82,16 @@ export function FixedIncomes({products=[]}) {
                                 <p>Ordenar por</p>
                                 <ArrowDown2 />
                         </OrderButton>
+                        {
+                            showModal
+                            &&
+
+                        <OrderButtonModal>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </OrderButtonModal>
+                        }
                         <SearchBar>
                                 <Magnifier 
                                     style={{
@@ -84,7 +125,7 @@ export function FixedIncomes({products=[]}) {
             <HeaderSection>
                 <HeaderTitle>Minhas Rendas Fixas</HeaderTitle>
                 <MenuSection>
-                    <OrderButton>
+                    <OrderButton onClick={() => setShowModal(!showModal)}>
                             <p>Ordenar por</p>
                             <ArrowDown2 />
                     </OrderButton>
@@ -101,10 +142,21 @@ export function FixedIncomes({products=[]}) {
                             />
                     </SearchBar>
                 </MenuSection>
+                            {
+                                    showModal
+                                    &&
+        
+                                <OrderButtonModal>
+                                    <ModalOption onClick={() => orderChange('none')}>NENHUM</ModalOption>
+                                    <ModalOption onClick={() => orderChange('alphabetical')}>ORDEM ALFABÉTICA(A-Z)</ModalOption>
+                                    <ModalOption onClick={() => orderChange('valueApplied')}>VALOR INVESTIDO</ModalOption>
+                                    <ModalOption onClick={() => orderChange('date')}>DATA DE VENCIMENTO</ModalOption>
+                                </OrderButtonModal>
+                            }
             </HeaderSection>
             <MainSection>
                     {
-                        incomes.map((product, index) => {
+                        fixedIncomes.map((product, index) => {
                             if (index % 2 === 0) {
 
                                 return <Title key={product.portfolioProductId} {...product} evenPosition={"even"}/>

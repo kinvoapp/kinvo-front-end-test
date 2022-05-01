@@ -14,7 +14,11 @@ export function Title({
     daysUntilExpiration,
     evenPosition
 } ) {
-
+    const percentageFormatter = new Intl.NumberFormat("pt-BR", {
+        style: "percent",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+    });
     return (
         <Container className={evenPosition}>
             <NameSection>
@@ -38,27 +42,27 @@ export function Title({
                 <LowerSection>
                 <ResultComponent>
                    <p>VALOR INVES.</p>
-                   <p>{valueApplied}</p>
+                   <p>{valueApplied.toLocaleString('pt-BR')}</p>
                </ResultComponent>
                <ResultComponent>
                    <p>SALDO BRUTO</p>
-                   <p>{equity}</p>
+                   <p>{equity.toLocaleString('pt-BR')}</p>
                </ResultComponent>
                <ResultComponent>
                    <p>RENT.</p>
-                   <p>{profitability}</p>
+                   <p>{percentageFormatter.format(profitability/100)}</p>
                </ResultComponent>
                <ResultComponent>
                    <p>% DA CART.</p>
-                   <p>{portfolioPercentage}</p>
+                   <p>{percentageFormatter.format(portfolioPercentage/100)}</p>
                </ResultComponent>
                <ResultComponent>
                    <p>CDI</p>
-                   <p>{indexerValue}</p>
+                   <p>{indexerValue.toLocaleString('pt-BR')}</p>
                </ResultComponent>
                <ResultComponent>
                    <p>SOBRE CDI</p>
-                   <p>{percentageOverIndexer}</p>
+                   <p>{percentageOverIndexer.toLocaleString('pt-BR')}</p>
                </ResultComponent>
                 </LowerSection>
                

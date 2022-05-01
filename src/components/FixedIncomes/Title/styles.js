@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 0.625rem;
     &.odd{ 
-        background-color: var(--background)
+        background-color: var(--gray-100)
     }
 
 `
@@ -61,7 +61,7 @@ export const Result = styled.div`
     border-radius: 10px;
     border: 1px solid var(--gray-200);
     padding: 0.625rem;
-    width: 30.25rem;
+    width: 32rem;
     height: 5rem;
 
 
