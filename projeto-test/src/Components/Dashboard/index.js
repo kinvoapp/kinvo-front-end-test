@@ -1,10 +1,12 @@
 import { BodyDashBoard } from "./style";
-import { SideBar } from "../SideMenu/style";
+import { SideMenu } from "../SideMenu";
+import { DataArea } from "../DataArea";
 
 const Dashboard =() => {
     return (
         <BodyDashBoard>
-            <SideBar></SideBar>
+            <SideMenu></SideMenu>
+            <DataArea></DataArea>
         </BodyDashBoard>
     )
 }

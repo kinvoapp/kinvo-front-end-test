@@ -1,7 +1,10 @@
-import { SideBar } from "./style"
+import { SideBarMenu } from "./style";
+import { BasicCardSideMenu } from "../BasicCardSideMenu";
 
 export const SideMenu = ()=> {
     return (
-        <SideBar></SideBar>
+        <SideBarMenu>
+                <BasicCardSideMenu></BasicCardSideMenu>
+        </SideBarMenu>
     )
-}
+};
