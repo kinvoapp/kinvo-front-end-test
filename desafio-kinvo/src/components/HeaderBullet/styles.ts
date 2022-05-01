@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const HeaderBullet = styled.div`
+const Container = styled.div`
   display: flex;
-
-  width: 150px;
+  justify-content: start;
+ 
+  
   height: 30px;
   background: #f7f7f7;
 
@@ -11,7 +12,7 @@ export const HeaderBullet = styled.div`
     display: block;
   }
 
-  > h3 {
+   h3 {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
@@ -20,14 +21,20 @@ export const HeaderBullet = styled.div`
     color: #707b81;
   }
 
-  > p {
-    font-family: "Montserrat";
+  p {
+    font-family: "Montserrat" ;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
     line-height: 20px;
-    
+    align-items: start;
+  }
+  
+  div{ 
+    margin-left:10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
   }
 `;
-
-export default HeaderBullet;
+export default Container;

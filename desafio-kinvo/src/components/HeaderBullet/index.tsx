@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './styles';
 
 type BulletProps = {
   thumbnail: string;
@@ -9,11 +10,13 @@ type BulletProps = {
 function HeaderBullet(props: BulletProps) {
   const { thumbnail, title, value } = props;
   return (
-    <div>
+    <Container>
       <img src={thumbnail} alt={title} />
-      <h3>{title}</h3>
-      <p>{value}</p>
-    </div>
+      <div>
+        <h3>{title}</h3>
+        <p>{value}</p>
+      </div>
+    </Container>
   );
 }
 
