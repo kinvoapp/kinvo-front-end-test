@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const Home = () => {
+import "./Home.scss";
+
+const Home = ({ data }) => {
   return (
-    <div>Home</div>
-  )
-}
+    <main>
+      <div className="home-content">
+        <div className="home-title">
+          <h1 style={{ width: "100%" }}>Renta Fixa</h1>
+        </div>
+        <div className="home-data-block">
+          <h2></h2>
+          <p>{data ? 'foi' : 'nao foi'}</p>
+        </div>
+      </div>
+    </main>
+  );
+};
 
-export default Home
+export default Home;

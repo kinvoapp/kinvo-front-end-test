@@ -1,0 +1,17 @@
+@import url("../../index.scss");
+main {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: auto;
+  .content {
+    margin: 1rem;
+    width: 100%;
+    .title {
+      h1 {
+        color: #4c309b;
+        font-size: 20px;
+      }
+    }
+  }
+}

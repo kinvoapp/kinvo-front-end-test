@@ -16,7 +16,6 @@ function Modal() {
     width: "auto",
     height: "auto",
     textAlign: "left",
-    backgroundColor: "white",
     zIndex: "999",
     padding: "1rem",
     boxSizing: "border-box",
@@ -41,7 +40,7 @@ function Main() {
     <>
       <Header data={data} />
       <Menu />
-      <Home />
+      <Home data={data} />
     </>
   );
 }

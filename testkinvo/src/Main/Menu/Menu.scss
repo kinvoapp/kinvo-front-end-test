@@ -1,12 +1,14 @@
 @import "../../index.scss";
 
 aside {
+  position: relative;
+  float: left;
+  width: 250px;
+  margin-right: 1rem;
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: $bgcolor;
-
     background-color: #fff;
     width: 250px;
     height: 100vh;
