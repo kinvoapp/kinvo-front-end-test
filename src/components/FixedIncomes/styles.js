@@ -4,15 +4,17 @@ export const Container = styled.div`
     background-color: white;
     border-radius: 10px;
     padding-top: 1rem;
-    padding-left: 2rem;
     padding-bottom: 1.5rem;
     margin-bottom: 0.375rem;
+    margin-left: 1.25rem;
+    
 `
 export const HeaderSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 1.25rem;
+    padding-left: 2rem;
     &::after {
         content: '';
         width: 120%;

@@ -12,10 +12,11 @@ export function Title({
     percentageOverIndexer,
     date,
     daysUntilExpiration,
+    evenPosition
 } ) {
 
     return (
-        <Container>
+        <Container className={evenPosition}>
             <NameSection>
                 <UpperSection>
                     <p>TÍTULO</p>

@@ -3,9 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
     padding-bottom: 1.25rem;
     padding-top: 1.25rem;
+    padding-left: 2rem;
     display: flex;
     align-items: center;
     gap: 0.625rem;
+    &.odd{ 
+        background-color: var(--background)
+    }
 
 `
 

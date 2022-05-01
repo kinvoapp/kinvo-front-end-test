@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
+    padding-bottom: 1.675rem;
+    margin-bottom: 0.2rem;
     padding-left: 1.875rem;
-
-`
+    box-shadow: 0px -10px 12px 1px #707B81;
+    `
 export const Content = styled.div`
     display: flex;
 

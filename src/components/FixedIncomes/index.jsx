@@ -69,9 +69,9 @@ export function FixedIncomes({products=[]}) {
                     {
                         results.map((product, index) => {
                             if (index % 2 === 0) {
-
-                                return <Title key={product.portfolioProductId} {...product}/>
+                                return <Title key={product.portfolioProductId} {...product} evenPosition={"even"}/>
                             }
+                            return <Title key={product.portfolioProductId} {...product} evenPosition={"odd"}/>
                         })
                     }
                 </MainSection>
@@ -107,8 +107,9 @@ export function FixedIncomes({products=[]}) {
                         incomes.map((product, index) => {
                             if (index % 2 === 0) {
 
-                                return <Title key={product.portfolioProductId} {...product}/>
+                                return <Title key={product.portfolioProductId} {...product} evenPosition={"even"}/>
                             }
+                            return <Title key={product.portfolioProductId} {...product} evenPosition={"odd"}/>
                         })
                     }
             </MainSection>

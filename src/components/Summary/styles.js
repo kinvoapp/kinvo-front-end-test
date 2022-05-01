@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    padding-left: 1.25rem;
     h2 {
         color: var(--purple-600)
     }
