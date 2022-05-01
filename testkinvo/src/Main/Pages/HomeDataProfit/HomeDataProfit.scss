@@ -1,0 +1,18 @@
+.home-data-profit {
+  border: 1px solid black;
+  .home-data-list {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    border: 1px solid black;
+    .home-data-item {
+      display: flex;
+      padding: 0.5rem;
+      border: 1px solid black;
+      width: 100%;
+      h2 {
+        order: 0;
+      }
+    }
+  }
+}

@@ -4,14 +4,31 @@ main {
   position: relative;
   display: flex;
   width: auto;
-  .content {
+  .home-content {
     margin: 1rem;
     width: 100%;
-    .title {
+    .home-title {
       h1 {
         color: #4c309b;
         font-size: 20px;
       }
     }
+  }
+  .home-data-block {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100;
+  }
+  .home-data-chart {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .home-data-profits {
+    width: 100%;
+    background-color: #fff;
   }
 }

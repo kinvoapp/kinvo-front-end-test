@@ -86,7 +86,9 @@ const Menu = () => {
     <aside>
       <ul>
         {dataItems.data.map((item) => (
-          <MenuItem key={item.key} title={item.title} img={item.img} children={null} />
+          <>
+            <MenuItem value={item.key} title={item.title} img={item.img} children={null} />
+          </>
         ))}
       </ul>
     </aside>

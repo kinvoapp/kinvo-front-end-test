@@ -1,0 +1,30 @@
+.home-data-block-item {
+  position: relative;
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 14px;
+    width: 2px;
+    height: 27px;
+    background-color: #DAE0E3;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 9px;
+    color: #4e5b61;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #4c309b;
+    font-weight: bold;
+  }
+}

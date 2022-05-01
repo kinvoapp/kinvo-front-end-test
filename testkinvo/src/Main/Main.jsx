@@ -32,7 +32,7 @@ function Main() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(dataURL).then((resp) => setData(resp.data));
+    axios.get(dataURL).then((resp) => setData(resp.data.data));
   }, []);
 
   if (!data) return <Modal />;
