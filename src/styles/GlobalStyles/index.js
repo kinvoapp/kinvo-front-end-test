@@ -9,6 +9,9 @@ const GlobalStyles = createGlobalStyle`
     --text-color-component-main: #4C309B;
     --text-color-title-main: #4E5B61;
     --text-color-title-main-2: #627179;
+    --text-color-tesdir-main: #8A51BA;
+    --text-color-amount-main: #38BFA0;
+    --text-color-amount-main-2: #008DCB;
 
 
     --bg-main: rgba(238, 242, 244, 1);

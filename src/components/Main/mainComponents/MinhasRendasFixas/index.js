@@ -1,12 +1,33 @@
+import React, { useState, useEffect } from 'react'
+
 import { Container, 
          Header, 
          Title, 
          SearchContainer, 
          Section } from './style'
 
+import api from '../../../../api/api.js'
+
 import SearchIcon from '../../../../assets/search-icon.svg'
+import ItemBox from './ItemBox'
 
 const MinhasRendasFixas = () => {
+
+    const [dataRendaFixa, setDataRendaFixa] = useState([])
+
+    useEffect(() => {
+
+        api.get('')
+            .then(( res ) => {
+
+                let { snapshotByProduct } = res.data.data
+
+                setDataRendaFixa(snapshotByProduct)
+
+                console.log(snapshotByProduct)
+            })
+        
+    }, [])
 
     return (
 
@@ -25,7 +46,13 @@ const MinhasRendasFixas = () => {
                 </SearchContainer>
             </Header>
             <Section>
-                
+                {dataRendaFixa.map((item, index) => (
+                    <ItemBox key={index} 
+                             due={item.due} 
+                             fixedIncome={item.fixedIncome} 
+                             position={item.position}
+                    />
+                )) }
             </Section>
         </Container>
     )

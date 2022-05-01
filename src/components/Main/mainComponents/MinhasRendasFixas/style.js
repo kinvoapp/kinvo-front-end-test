@@ -69,5 +69,6 @@ export const SearchContainer = styled.div`
 
 export const Section = styled.section`
 
+    margin-top: 10px;
     width: 100%;
 `

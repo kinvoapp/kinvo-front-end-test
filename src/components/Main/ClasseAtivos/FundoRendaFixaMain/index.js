@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { RenderDashboard, Title, ContainerValuesDisplay } from './style'
 
 import BoxValue from '../../mainComponents/BoxValue'
