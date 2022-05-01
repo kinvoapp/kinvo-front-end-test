@@ -7,7 +7,8 @@ function Portfolio() {
 
   const {portfolioData} = useApiDataContext();
 
-  const {
+  // Formatting Api data to use in PortfolioItem Component
+    const {
     equity,
     equityProfit,
     indexerValue,

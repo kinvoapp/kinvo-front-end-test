@@ -29,17 +29,15 @@ function SidebarItem({item, activeItem, setActiveItem}) {
           <AccordionIcon />
         </AccordionButton>
       </h2>
-      {
-        item.subItems &&
-          <AccordionPanel pb={4}>
-            <Accordion allowToggle>
-              {
-                item.subItems.map((subItem, index)=>(
-                  <SidebarSubItem key={index} item={subItem} activeSubItem={activeSubItem} setActiveSubItem={setActiveSubItem}/>
-                ))
-              }
-            </Accordion>
-          </AccordionPanel>
+      
+      {item.subItems &&
+        <AccordionPanel pb={4}>
+          <Accordion allowToggle>
+            {item.subItems.map((subItem, index)=>(
+              <SidebarSubItem key={index} item={subItem} activeSubItem={activeSubItem} setActiveSubItem={setActiveSubItem}/>
+            ))}
+          </Accordion>
+        </AccordionPanel>
       }
     </AccordionItem>
   )

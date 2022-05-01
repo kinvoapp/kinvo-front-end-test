@@ -2,6 +2,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Input, InputGroup, InputLeftElement, Select } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useApiDataContext } from '../../../context/apiDataContext';
+import Pagination from './Pagination';
 import Due from './ProductSubItem/Due';
 import FixedIncome from './ProductSubItem/FixedIncome';
 import Position from './ProductSubItem/Position';
@@ -9,7 +10,15 @@ import Position from './ProductSubItem/Position';
 function MyFixedIncome() {
 
   const {productListData} = useApiDataContext();
+
+  /* Filtering Area */
   const [searchContent, setSearchContent] = useState('');
+
+  function searchByInputContent(product){
+    return searchContent === '' || product.fixedIncome.name.toLowerCase().includes(searchContent.toLowerCase())
+  }
+  
+  /* Sorting Area */
   const [categoryToSortBy, setCategoryToSortBy] = useState('');
   
   function compareProductByCategory(product1, product2){
@@ -36,9 +45,27 @@ function MyFixedIncome() {
     }
   }
 
+  /* Pagination Area */
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 5;
+  
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirsProduct = indexOfLastProduct - productsPerPage;
+  
+  const currentProducts = (
+    productListData
+    .filter(searchByInputContent)
+    .sort(compareProductByCategory)
+    .slice(indexOfFirsProduct, indexOfLastProduct)
+  );
+
+  //Change current page
+  function paginate(pageNumber){
+    return setCurrentPage(pageNumber);
+  }
+
   return (
-    <Box 
-      minH='100vh'
+    <Box
       w='full' 
       mt={'2rem'}  
       bg={'white'}
@@ -85,9 +112,7 @@ function MyFixedIncome() {
         </Flex>
       </Flex>
 
-      {productListData
-        .sort(compareProductByCategory)
-        .filter((product)=> searchContent === '' || product.fixedIncome.name.toLowerCase().includes(searchContent.toLowerCase()))
+      {currentProducts
         .map((product, index)=>(
         <Flex 
           // Applies 'blue background' only on elements with odd index.
@@ -104,6 +129,13 @@ function MyFixedIncome() {
         </Flex>
         ))
       }
+
+      <Pagination 
+        productsPerPage={productsPerPage}
+        totalProducts={productListData.filter(searchByInputContent).length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </Box>
   )
 }
