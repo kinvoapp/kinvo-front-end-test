@@ -8,6 +8,7 @@ import Header from './components/Header';
 function App() {
   return (
     <Provider>
+      <Header />
       <Router />
     </Provider>
   );
