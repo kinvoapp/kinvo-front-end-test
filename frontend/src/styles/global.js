@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
         background: var(--cor002);
         font-family: 'Montserrat';
         color: var(--cor010);
+        overflow-x: hidden;
     }
 
     ::-webkit-scrollbar{

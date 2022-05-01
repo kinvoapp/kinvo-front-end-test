@@ -16,7 +16,6 @@ export const ResumeContainer = styled.div`
 `;
 
 export const DataContainer = styled.div`
-    /* height: 200px; */
     margin: 20px 0;
     
     display: flex;
@@ -24,6 +23,47 @@ export const DataContainer = styled.div`
     
     border-radius: 10px;
     background: var(--cor003);
+
+    .pagination{
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid var(--cor001);
+        gap: 10px;
+
+        .page-item{
+            margin: 20px 0;
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--cor001);
+            cursor: pointer;
+
+            border-radius: 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                color: var(--cor001);
+            }
+
+            &.active{
+                background: var(--cor001);
+                
+                a{
+                    color: white;
+                }
+            }
+
+            &:hover{
+                background: var(--cor009);
+            }
+        }
+
+        li{
+            list-style: none;
+        }
+    }
 `;
 
 export const DataTopInformations = styled.div`

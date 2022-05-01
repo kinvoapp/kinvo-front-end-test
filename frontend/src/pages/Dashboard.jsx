@@ -1,18 +1,24 @@
-import { DashboardData } from "../components/DashboardData";
-import { Left } from "../components/Menu/Left";
-import { Top } from "../components/Menu/Top";
-
-import { Container, InfoLeft, InfoRight, Informations } from "./styles";
-
+import { DashboardData } from "../components/DashboardData"
+import { Left } from "../components/Menu/Left"
+import { Top } from "../components/Menu/Top"
 
 import api from '../services/api'
-import { useEffect, useState } from "react";
+
+import {
+    Container,
+    InfoLeft,
+    InfoRight,
+    Informations
+} from "./styles";
+
+import { useEffect, useState } from "react"
 
 export function Dashboard(){
     const [rendaFixa, setRendaFixa] = useState([])
-    const [minhasRendasFixas, setMinhasRendasFixas] = useState([]);
-    const [searchText, setSearchText] = useState("");
-    const [orderType, setOrderType] = useState("");
+    const [minhasRendasFixas, setMinhasRendasFixas] = useState([])
+    const [chartData, setChartData] = useState([])
+    const [searchText, setSearchText] = useState("")
+    const [orderType, setOrderType] = useState("")
 
     // Api call
     useEffect(() => {
@@ -22,6 +28,8 @@ export function Dashboard(){
                 setRendaFixa(data.data.snapshotByPortfolio)
 
                 setMinhasRendasFixas(data.data.snapshotByProduct)
+
+                setChartData(data.data.dailyEquityByPortfolioChartData)
             })
             .catch((error) => {
                 console.log(error)
@@ -83,6 +91,7 @@ export function Dashboard(){
                     <DashboardData
                         rendaFixa={rendaFixa}
                         minhasRendasFixas={orderedDashboardDataCards}
+                        chartData={chartData}
                         setSearchText={setSearchText}
                         setOrderType={setOrderType}
                     />
