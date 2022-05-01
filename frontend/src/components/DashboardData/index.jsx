@@ -1,14 +1,7 @@
 import {
-    Classification,
     Container,
     DataContainer,
-    DataExpiration,
-    DataExpirationInfo1,
     DataInformations,
-    DataPosition,
-    DataPositionInfo1,
-    DataPositionInformations,
-    DataTitleInfo1,
     DataTopActions,
     DataTopInformations,
     DataTopOrder,
@@ -21,9 +14,7 @@ import {
 import Select from 'react-select'
 
 import { Resume } from "../Resume";
-import { DashboardDataTitle } from "../DashboardDataTitle";
-import { DashboardDataPosition } from "../DashboardDataPosition";
-import { DashboardDataDue } from "../DashboardDataDue";
+import { DashboardDataCard } from "../DashboardDataCard";
 
 
 export function DashboardData({
@@ -48,11 +39,7 @@ export function DashboardData({
     }
 
     const resultsMinhasRendasFixas = minhasRendasFixas.map((data, index) => {
-        return [
-            <DashboardDataTitle data={data} key={index}/>,
-            <DashboardDataPosition data={data} key={index}/>,
-            <DashboardDataDue data={data} key={index}/>
-        ]
+        return <DashboardDataCard data={data} key={index}/>
     })
 
     return(
@@ -86,10 +73,6 @@ export function DashboardData({
 
                 <DataInformations>
                     {resultsMinhasRendasFixas}
-                    {/* <DashboardDataTitle
-                        fixedIncomeName={minhasRendasFixas.name}
-                        fixedIncomebondType={minhasRendasFixas.bondType}
-                    /> */}
                 </DataInformations>
             </DataContainer>
         </Container>
