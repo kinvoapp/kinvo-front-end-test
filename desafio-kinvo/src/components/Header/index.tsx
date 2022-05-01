@@ -5,9 +5,11 @@ import BurguerMenu from '../BurguerMenu';
 
 import logo from '../../assets/header/logo.svg';
 
+import Container from './styles';
+
 function Header() {
   return (
-    <header>
+    <Container>
       <img className="logo" src={logo} alt="" />
       <WalletValues />
       <div>
@@ -16,7 +18,7 @@ function Header() {
         </div>
         <BurguerMenu />
       </div>
-    </header>
+    </Container>
   );
 }
 
