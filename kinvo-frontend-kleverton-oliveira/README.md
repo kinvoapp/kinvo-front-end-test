@@ -1,4 +1,4 @@
-<img src="/logo.svg" alt="Logo of the project" align="right">
+<img src="./logo.svg" alt="Logo of the project" align="right">
 
 # Kinvo - Front-end Test - Kleverton Oliveira (English / Português)&middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 > 01/05/2022
@@ -7,9 +7,12 @@ This project was developed as a solution to the technical challenge of the selec
 
 Este projeto foi desenvolvido como solução para o desafio técnico do processo seletivo para o cargo de Desenvolvedor Front-end na empresa Kinvo.
 
-## Demonstration Video / Vídeo de Demonstração
+##
+## :movie_camera: Demonstration Video / Vídeo de Demonstração
+https://user-images.githubusercontent.com/71989630/166155135-73df6fb9-d6c9-465d-b5df-640b7172dde7.mp4
 
-## Developing / Desenvolvimento
+##
+## :gear: Developing / Desenvolvimento
 
 ### Built With / Construído Com
 - [React (v18.0.0)](https://reactjs.org/)
@@ -39,9 +42,16 @@ npm install
 ## Run project / Executar projeto
 npm run dev
 ```
-
-## Api Reference / Referência da API
+##
+## :information_source: Api Reference / Referência da API
 
 The API used in this project was provided by Kinvo company.
 
 A API utilizada neste projeto foi fornecida pela empresa Kinvo.
+
+##
+## :raising_hand_man: Author / Autor
+
+José Kleverton Yvens Oliveira
+
+https://www.linkedin.com/in/klevertonoliveira/
