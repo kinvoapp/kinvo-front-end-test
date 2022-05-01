@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, useMemo, ReactNode } from 'react';
 import context from './context';
 
 type ProviderProps = {
@@ -11,7 +11,7 @@ function Provider(props: ProviderProps) {
   const [amountApplied, setAmountApplied] = useState(0);
   const [profitRate, setProfitRate] = useState(0);
   const [walletName, setWalletName] = useState('Minha carteira');
-  const value = {
+  const value = useMemo(() => ({
     grossBalance,
     setGrossBalance,
     amountApplied,
@@ -20,7 +20,17 @@ function Provider(props: ProviderProps) {
     setProfitRate,
     walletName,
     setWalletName,
-  };
+  }), [
+    grossBalance,
+    setGrossBalance,
+    amountApplied,
+    setAmountApplied,
+    profitRate,
+    setProfitRate,
+    walletName,
+    setWalletName,
+  ]);
+  // source: https://stackoverflow.com/questions/71233273/the-object-passed-as-the-value-prop-to-the-context-provider-changes-every-render
   return (
     <context.Provider value={value}>
       {children}
