@@ -1,14 +1,14 @@
 import { SearchIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Input, InputGroup, InputLeftElement, Select } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { useMainContext } from '../../../context/mainContext';
+import { useApiDataContext } from '../../../context/apiDataContext';
 import Due from './ProductSubItem/Due';
 import FixedIncome from './ProductSubItem/FixedIncome';
 import Position from './ProductSubItem/Position';
 
 function MyFixedIncome() {
 
-  const {productListData} = useMainContext();
+  const {productListData} = useApiDataContext();
   const [searchContent, setSearchContent] = useState('');
   const [categoryToSortBy, setCategoryToSortBy] = useState('');
   
