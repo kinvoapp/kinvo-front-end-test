@@ -6,6 +6,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
     color: var(--cor009);
+    margin: 0 0 20px 0;
 `;
 
 export const ResumeContainer = styled.div`
