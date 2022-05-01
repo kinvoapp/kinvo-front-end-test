@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import context from '../../contexts/context';
 import HeaderBullet from '../HeaderBullet';
 
+import Container from './styles';
+
 import groosBalanceTmb from '../../assets/header/gross-balance.svg';
 import amountAppliedTmb from '../../assets/header/value-aplication.svg';
 import profitRateTmb from '../../assets/header/profitability.svg';
