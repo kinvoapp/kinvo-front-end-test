@@ -48,7 +48,7 @@ function MyFixedIncome() {
         return product1.fixedIncome.bondType.localeCompare(product2.fixedIncome.bondType);
         
       case 'profitability':
-        return product1.position.profitability - product2.position.profitability;
+        return product2.position.profitability - product1.position.profitability;
       
       case 'daysUntilExpiration':
         return product1.due.daysUntilExpiration - product2.due.daysUntilExpiration;
