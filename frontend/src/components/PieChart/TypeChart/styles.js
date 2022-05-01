@@ -32,7 +32,6 @@ export const ChartLegend = styled.li`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
     position: relative;
     padding: 20px 0 0 12px;
     color: var(--cor010);

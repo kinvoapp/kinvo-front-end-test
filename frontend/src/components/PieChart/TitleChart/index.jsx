@@ -18,7 +18,22 @@ export function TitleChart({
     title
 }){
 
-  const COLORS = ["#0DD1E3", "#FF8052", "#9E51BA"];
+    const colors = ["#0DD1E3", "#FF8052", "#9E51BA"];
+
+    const legendResults = typeChartData.map((entry, index) => {
+        return <ChartLegend
+            key={`title-${index}`}
+        >
+            {index}) {entry.productName}
+        </ChartLegend>
+    })
+    
+    const colorsResults = typeChartData.map((entry, index) => {
+        return <Cell
+            key={index}
+            fill={colors[index % colors.length]}
+        />
+    })
 
     return(
         <Container>
@@ -35,25 +50,13 @@ export function TitleChart({
                         outerRadius={80}
                         fill="#bfca82"
                     >
-                        {typeChartData
-                        ? typeChartData.map((entry, index) => (
-                            <Cell
-                                key={index}
-                                fill={COLORS[index % COLORS.length]}
-                            />
-                            ))
-                        : null}
+                        {colorsResults}
                     </Pie>
                     <Tooltip />
                 </PieChart>
             </ResponsiveContainer>
             <ChartLegendContainer>
-                <ChartLegend>Tipo</ChartLegend>
-                <ChartLegend>Tipo</ChartLegend>
-                <ChartLegend>Tipo</ChartLegend>
-                <ChartLegend>Tipo</ChartLegend>
-                <ChartLegend>Tipo</ChartLegend>
-                <ChartLegend>Tipo</ChartLegend>
+                {legendResults}
             </ChartLegendContainer>
 
         </Container>

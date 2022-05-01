@@ -25,17 +25,17 @@ export const ChartLegendContainer = styled.ul`
 
     margin: 25px 0 0 0;
     border-top: 1px solid var(--cor001);
-    padding: 10px 0 20px 0;
+    padding: 10px 20px 20px 20px;
 `;
 
 export const ChartLegend = styled.li`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
     position: relative;
     padding: 20px 0 0 12px;
     color: var(--cor010);
+    font-size: 0.8rem;
 
     &:before {
         content: "";
@@ -43,7 +43,7 @@ export const ChartLegend = styled.li`
         width: 5px;
         height: 5px;
         background: var(--cor001);
-        left: 38%;
+        left: 2%;
         border-radius: 100%;
     }
 `;
