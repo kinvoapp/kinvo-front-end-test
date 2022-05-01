@@ -1,9 +1,9 @@
 import React from 'react';
 
-function WalletInfo() {
+function FixedIncome() {
   return (
     <div> </div>
   );
 }
 
-export default WalletInfo;
+export default FixedIncome;
