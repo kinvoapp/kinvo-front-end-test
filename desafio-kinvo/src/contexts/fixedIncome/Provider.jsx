@@ -1,16 +1,21 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import propTypes from 'prop-types';
 import context from '.';
-import FetchIncomeData from '../../services/api';
+import fetchIncomeData from '../../services/api';
 
 function FixedIncomeProvider({ children }) {
   const [assets, setAssets] = useState([]);
 
-  const fetchAssets = () => {
-    setAssets(FetchIncomeData()
-      .then(({ snapshotByProduct }) => snapshotByProduct)
-      .catch((error) => { throw new Error(error.message); }));
+  const fetchAssets = async () => {
+    fetchIncomeData()
+      .then(({ data: { snapshotByProduct } }) => (
+        setAssets((state) => [...state, ...snapshotByProduct])))
+      .catch((error) => { throw new Error(error.message); });
   };
+
+  useEffect(() => {
+    fetchAssets();
+  }, []);
 
   const value = useMemo(() => ({
     assets,
