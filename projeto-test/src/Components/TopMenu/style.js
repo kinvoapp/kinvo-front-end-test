@@ -21,11 +21,12 @@ export const LogNav = styled.header `
         align-items:center;
         padding-right: 40px;
         li{
-
+            cursor:pointer;
         }
         #IconMenu{
             height: 30px;
             width: 30px;
+            cursor:pointer;
         }
     }
 `

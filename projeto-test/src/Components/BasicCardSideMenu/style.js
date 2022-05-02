@@ -6,6 +6,8 @@ export const CardSideMenu = styled.li`
     width: 227px;
     align-items:center;
     justify-content:center;
+    border-bottom: 1px solid rgba(211,211,211,0.4);
+    cursor:pointer;
     .icon{
         height: 100%;
         width: 62px;
@@ -25,7 +27,8 @@ export const CardSideMenu = styled.li`
         align-items:center;
         p{
             width: 60%;
-            color:#585859;
+            color:#88898c;
+            font-weight: bold;
         }
     }
     .iconArrow{

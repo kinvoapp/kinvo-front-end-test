@@ -6,6 +6,8 @@ export const CardTwo = styled.li`
     display: flex;
     align-items: center;
     justify-content:center;
+    border-bottom: 1px solid rgba(211,211,211,0.4);
+    cursor:pointer;
     .dot{
         height: 5px;
         width: 5px;
@@ -21,7 +23,8 @@ export const CardTwo = styled.li`
         display: flex;
         align-items:center;
         p{
-            color:#585859;
+            color:#88898c;
+            font-weight: bold;
             text-align:left;
         }
     }

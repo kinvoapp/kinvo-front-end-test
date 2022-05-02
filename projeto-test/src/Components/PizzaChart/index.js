@@ -1,11 +1,17 @@
 import { PChart } from "./style";
 
-export const PizzaChart = ()=>{
+export const PizzaChart = ({title,graphic,tps})=>{
+    const titletypes = ['CDB','Tesouro Real','CDI','LCI','Ações','Bitcoin']
     return (
         <PChart>
-            <div className="titlePizzaChart">Chart</div>
-            <div className="pizzachart">x</div>
-            <div className="pizzachartfooter">y</div>            
+            <div className="titlePizzaChart">{title}</div>
+            <img className="pizzachart" src="" alt=""/>
+            <ul className="pizzachartfooter">{titletypes.map((e,i)=><li key={i}>
+                                                                        <div></div>
+                                                                        <p>{e}</p>
+                                                                    </li>)}
+                
+            </ul>            
         </PChart>
     )
 };

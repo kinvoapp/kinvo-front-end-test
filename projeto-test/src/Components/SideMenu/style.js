@@ -6,8 +6,8 @@ export const SideBarMenu = styled.ul`
     background-color: #fff;
     list-style:none;
     padding: 0px;
-    margin: 0px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    margin:0px;
 `;

@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 import api from '../../Services';
 
 const FixedContext = createContext();
@@ -6,16 +6,23 @@ const FixedContext = createContext();
 
 const FixedProvider = ({children})=>{
 
-    const [fixeds,setFixeds] = useState([]);
+    const [snapshotByPortfolio,setSnapshotByPortfolio] = useState([]);
+
+    const [snapshotByProduct, setSnapshotByProduct] = useState()
 
     const getFixeds = ()=>{
         api.get()
-        .then(resp=>setFixeds(resp))
+        .then(resp=>{
+            setSnapshotByPortfolio(resp.data.data.snapshotByPortfolio)
+            setSnapshotByProduct(resp.data.data.snapshotByProduct)
+        })
         .catch((err)=>console.log(err))
     }
 
+    useEffect(()=>getFixeds(),[])
+
     return (
-        <FixedContext.Provider value={{getFixeds, fixeds}}>
+        <FixedContext.Provider value={{getFixeds, snapshotByPortfolio, snapshotByProduct}}>
             {children}
         </FixedContext.Provider>
     )

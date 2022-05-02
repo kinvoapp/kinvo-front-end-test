@@ -5,7 +5,8 @@ export const Chart = styled.section`
     width: 100%;
     padding: 15px 21px 10px 21px;
     margin: 0px;
-    #grafic{
+    display:flex;
+    #graphic{
         height: 100%;
         width: 100%;
         background-color: #fff;
