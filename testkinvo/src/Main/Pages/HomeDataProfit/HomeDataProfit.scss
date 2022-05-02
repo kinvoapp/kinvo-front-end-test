@@ -12,7 +12,7 @@
     justify-content: space-between;
     select {
       border-radius: 10px;
-      width: 150px;
+      width: 250px;
       text-align: left;
       margin: 0 1rem;
       padding: 0.3rem;
@@ -30,7 +30,7 @@
       width: 150px;
       text-align: left;
       margin: 0 1rem;
-      padding: 0.3rem;
+      padding: 0.3rem 1.5rem;
       border: 1px solid #707b81;
       background: url("./img/search.svg") no-repeat 6px;
       &:focus {

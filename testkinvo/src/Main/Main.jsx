@@ -6,7 +6,8 @@ import loading from "../img/loading-buffering.gif";
 import Menu from "./Menu/Menu";
 import Home from "./Pages/Home";
 
-const dataURL = "https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData";
+const dataURL = "https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData";
+
 
 function Modal() {
   const style = {
@@ -32,7 +33,10 @@ function Main() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(dataURL).then((resp) => setData(resp.data.data));
+    axios
+      .get(dataURL)
+      .then((resp) => setData(resp.data.data))
+      .catch((e) => alert("Sem comunicação com o Servidor de Banca de Dados"));
   }, []);
 
   if (!data) return <Modal />;
