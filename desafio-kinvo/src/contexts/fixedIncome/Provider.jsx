@@ -13,6 +13,10 @@ function FixedIncomeProvider({ children }) {
       .catch((error) => { throw new Error(error.message); });
   };
 
+  const filterAssetsByName = (filterText) => {
+    setAssets((state) => state.filter(({ fixedIncome: { name } }) => name.includes(filterText)));
+  };
+
   useEffect(() => {
     fetchAssets();
   }, []);
@@ -21,10 +25,12 @@ function FixedIncomeProvider({ children }) {
     assets,
     setAssets,
     fetchAssets,
+    filterAssetsByName,
   }), [
     assets,
     setAssets,
     fetchAssets,
+    filterAssetsByName,
   ]);
 
   return (
