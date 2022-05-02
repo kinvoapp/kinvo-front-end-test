@@ -8,7 +8,7 @@ function FixedIncomeProvider({ children }) {
 
   const fetchAssets = () => {
     setAssets(FetchIncomeData()
-      .then((data) => data)
+      .then(({ snapshotByProduct }) => snapshotByProduct)
       .catch((error) => { throw new Error(error.message); }));
   };
 
