@@ -33,20 +33,21 @@ const Header = () => {
 
   return (
 
+    // NÃO ACHEI AS INFORMAÇÕES QUE EU DEVERIA RENDERIZAR AQUI NA API, POR ISSO COLOQUEI ESTÁTICO
     <Head>
       <img src={logo} />
       <DivHead>
         <UserValues icon={jewel} 
                     title="SALDO BRUTO" 
-                    amount="123.122,00"
+                    amount="130.521.230,02"
         />
         <UserValues icon={arrow} 
                     title="VALOR APLICADO" 
-                    amount="123.122,00"
+                    amount="521.230,02"
         />
         <UserValues icon={breakArrow} 
                     title="RENTABILIDADE" 
-                    amount="123.122,00"
+                    amount="2,34%"
         />
         <UserValues icon={arrow2} 
                     title="CARTEIRA" 
