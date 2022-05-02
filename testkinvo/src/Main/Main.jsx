@@ -38,7 +38,7 @@ function Main() {
   if (!data) return <Modal />;
   return (
     <>
-      <Header data={data} />
+      <Header data={data.snapshotByPortfolio} />
       <Menu />
       <Home data={data} />
     </>

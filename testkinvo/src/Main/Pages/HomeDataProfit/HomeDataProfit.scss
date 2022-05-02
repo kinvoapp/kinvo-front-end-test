@@ -1,17 +1,161 @@
 .home-data-profit {
-  border: 1px solid black;
-  .home-data-list {
+  margin-bottom: 1.5rem;
+  h1 {
+    font-size: 18px;
+    color: #627179;
+    order: 0;
+  }
+  .home-data-title {
     display: flex;
-    padding: 0.5rem;
+    padding: 1rem;
+    align-items: center;
     justify-content: space-between;
-    border: 1px solid black;
-    .home-data-item {
+    select {
+      border-radius: 10px;
+      width: 150px;
+      text-align: left;
+      margin: 0 1rem;
+      padding: 0.3rem;
+      border: 1px solid #707b81;
+      &:focus,
+      &:active,
+      &:focus-visible,
+      &:focus-within,
+      &:target {
+        border: 1px solid #707b8169 !important;
+      }
+    }
+    input {
+      border-radius: 10px;
+      width: 150px;
+      text-align: left;
+      margin: 0 1rem;
+      padding: 0.3rem;
+      border: 1px solid #707b81;
+      background: url("./img/search.svg") no-repeat 6px;
+      &:focus {
+        background: none;
+      }
+    }
+  }
+}
+.home-data-profits-list {
+  h3,
+  h4 {
+    color: #4e5b61;
+    font-size: 9px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  display: flex;
+  padding: 1rem;
+  .home-data-fixedIncome {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 50%;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 0 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+    .home-data-fixedIncome-title {
+      position: relative;
+      top: 0;
+      margin: 0 0 1rem;
+    }
+    .home-data-fixedIncome-item {
       display: flex;
-      padding: 0.5rem;
-      border: 1px solid black;
+      align-items: center;
+      justify-content: space-between;
+      .home-data-fixedIncome-item-title {
+        width: 65%;
+        margin-right: 1rem;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .home-data-fixedIncome-item-data {
+        width: 35%;
+        p {
+          margin: 0;
+          padding: 0;
+          &:first-child {
+            font-size: 12px;
+            color: #4e5b61;
+          }
+          &:last-child {
+            font-size: 14px;
+            color: #8a51ba;
+          }
+        }
+      }
+    }
+  }
+  .home-data-position {
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: 50%;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    .home-data-position-title {
       width: 100%;
-      h2 {
-        order: 0;
+      margin-bottom: 1rem;
+    }
+    .home-data-position-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .home-data-position-item-data {
+        h4 {
+          font-weight: 100;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          margin-top: 0.5rem;
+          font-weight: 500;
+          font-size: 16px;
+          color: #38bfa0;
+        }
+      }
+    }
+  }
+  .home-data-due {
+    position: relative;
+    display: flex;
+    width: 20%;
+    height: 50%;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 1rem;
+    justify-content: space-between;
+    .home-data-due-title {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .home-data-due-item {
+      display: flex;
+      justify-content: space-between;
+      .home-data-due-item-data {
+        p {
+          font-size: 16px;
+          color: #008DCB;
+          margin: 0;
+          padding: 0;
+          margin-top: .5rem;
+        }
       }
     }
   }

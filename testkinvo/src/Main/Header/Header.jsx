@@ -11,9 +11,9 @@ import menu from "./img/menu.png";
 
 const Header = ({ data }) => {
   //data Reciver
-  const valorbruto = data.snapshotByPortfolio.valueApplied;
-  const valoraplicado = data.snapshotByPortfolio.equityProfit;
-  const rentabilidade = data.snapshotByPortfolio.indexerValue;
+  const valorbruto = data.valueApplied;
+  const valoraplicado = data.equityProfit;
+  const rentabilidade = data.indexerValue;
 
   return (
     <header>

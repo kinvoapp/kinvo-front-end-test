@@ -4,9 +4,9 @@ import "./MenuItem.scss";
 
 import iconArrow from "../img/arrow.svg";
 
-const MenuItem = ({ value, title, img, children }) => {
+const MenuItem = ({ value, title, img }) => {
   return (
-    <li key={value + title}>
+    <li key={value}>
       <div className="menu-select-item">
         <div className="menu-img">
           <img src={img ? img : "none"} alt={title} />

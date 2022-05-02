@@ -9,7 +9,7 @@ import HomeDataProfit from "./HomeDataProfit/HomeDataProfit";
 
 const Home = ({ data }) => {
   const dataSnapShot = data.snapshotByPortfolio;
-  const dataprofit = data;
+  const dataByProduct = data.snapshotByProduct;
 
   return (
     <main>
@@ -18,9 +18,27 @@ const Home = ({ data }) => {
           <h1 style={{ width: "100%" }}>Renta Fixa</h1>
         </div>
         <section className="home-data-block">
-          <HomeDataBlockItem title="Saldo Bruto" data={"R$ " + dataSnapShot.equity} />
-          <HomeDataBlockItem title="Valor aplicado" data={"R$ " + dataSnapShot.valueApplied} />
-          <HomeDataBlockItem title="Resultado" data={"R$ " + dataSnapShot.equityProfit} />
+          <HomeDataBlockItem
+            title="Saldo Bruto"
+            data={dataSnapShot.equity.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          />
+          <HomeDataBlockItem
+            title="Valor aplicado"
+            data={dataSnapShot.valueApplied.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          />
+          <HomeDataBlockItem
+            title="Resultado"
+            data={dataSnapShot.equityProfit.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          />
           <HomeDataBlockItem title="Rentabilidade" data={dataSnapShot.percentageProfit + "%"} />
           <HomeDataBlockItem title="CDI" data={dataSnapShot.indexerValue + "%"} />
           <HomeDataBlockItem title="% Sobre CDI" data={dataSnapShot.percentageOverIndexer + "%"} />
@@ -29,7 +47,7 @@ const Home = ({ data }) => {
           <img src={chart} alt="" />
         </div>
         <section className="home-data-profits">
-          <HomeDataProfit title={"Minhas Rendas Fixas"} data={dataprofit} />
+          <HomeDataProfit title={"Minhas Rendas Fixas"} data={dataByProduct} />
         </section>
       </div>
     </main>
