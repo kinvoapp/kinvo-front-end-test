@@ -29,7 +29,7 @@ Nossos critérios de avaliação se baseiam e 3 grandes áreas, sendo elas:
 ### ○ Junior
 
 - Todos os requisitos exigidos para o nível Estágio/Trainee;
-- Exibir dados reais obtidos a partir da API `https://60b6ad6f17d1dc0017b882fd.mockapi.io/mock/getFixedIncomeClassData`;
+- Exibir dados reais obtidos a partir da API `https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData`;
 - Permitir ordenação de produtos seção **Minhas Rendas Fixas** a partir do menu seletor;
 
 ### ○ Pleno
