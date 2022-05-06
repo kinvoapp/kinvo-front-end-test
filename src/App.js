@@ -1,7 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch(
+      "https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((resp) => resp.json())
+      .then((data) => console.log(data.data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
