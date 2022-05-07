@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import styles from "./FixedIncome.module.css";
+
 const FixedIncome = () => {
   const fixedIncomeData =
     "https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData";
@@ -11,7 +13,7 @@ const FixedIncome = () => {
 
   getData();
 
-  return <h1>fixed income</h1>;
+  return <div className={styles.containerFixedIncome}>fixed income</div>;
 };
 
 export default FixedIncome;

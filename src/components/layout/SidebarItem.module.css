@@ -1,0 +1,26 @@
+.containerItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  height: 67px;
+  color: #707b81;
+  border-bottom: 1px solid #cccfd1;
+}
+
+.containerItem div {
+  margin-left: 15px;
+}
+
+.containerItem div p {
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  width: 73px;
+  margin-left: 15px;
+}
+
+.arrow {
+  margin-right: 15px;
+  transform: rotate(-90deg);
+}
