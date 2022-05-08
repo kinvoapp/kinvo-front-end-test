@@ -1,5 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .containerFixedIncome {
   background-color: #eef2f4;
   height: 100vh;
-  width: 83vw;
+  width: 100%;
+}
+
+.containerFixedIncome div {
+  margin: 0 auto;
+  height: 300px;
+  width: 79vw;
+}
+
+.title {
+  color: #4c309b;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 25px;
 }

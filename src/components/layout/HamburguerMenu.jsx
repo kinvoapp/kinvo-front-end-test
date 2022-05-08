@@ -2,9 +2,9 @@ import hamburguermenu from "../../assets/hamburguermenu.svg";
 
 import styles from "./HamburguerMenu.module.css";
 
-const HamburguerMenu = () => {
+const HamburguerMenu = ({ onClick }) => {
   return (
-    <div className={styles.containerMenu}>
+    <div className={styles.containerMenu} onClick={onClick}>
       <img
         src={hamburguermenu}
         alt={"Clique para abrir ou fechar o menu lateral"}

@@ -1,5 +1,11 @@
 .containerSidebar {
   display: flex;
   flex-direction: column;
-  width: 17vw;
+  width: 20vw;
+  margin-left: -20vw;
+  transition: 0.3s ease-in-out;
+}
+
+.fadeSidebar {
+  margin-left: 0;
 }

@@ -11,7 +11,9 @@ import padlock from "../../assets/padlock.svg";
 
 import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+import { v4 as uuidv4 } from "uuid";
+
+const Sidebar = ({ showSideBar }) => {
   const sidebarItems = [
     {
       icon: circle,
@@ -55,13 +57,19 @@ const Sidebar = () => {
     },
   ];
 
+  let fadeSidebar = "";
+
+  if (showSideBar) {
+    fadeSidebar = "fadeSidebar";
+  }
+
   return (
-    <div className={styles.containerSidebar}>
-      {sidebarItems.map((item, id) => (
+    <div className={`${styles.containerSidebar} ${styles[fadeSidebar]}`}>
+      {sidebarItems.map((item) => (
         <SidebarItem
           icon={item.icon}
           text={item.name}
-          key={id}
+          key={uuidv4()}
           options={item.options}
         />
       ))}

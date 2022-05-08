@@ -8,7 +8,7 @@ import uparrow from "../../assets/upArrow.svg";
 import walleticon from "../../assets/mywalleticon.svg";
 
 import styles from "./Navbar.module.css";
-const Navbar = () => {
+const Navbar = ({ setShowSideBar }) => {
   return (
     <div className={styles.navbar}>
       <img src={logo} alt="logo" />
@@ -32,7 +32,7 @@ const Navbar = () => {
           number={"Minha Carteira"}
         />
 
-        <HamburguerMenu />
+        <HamburguerMenu onClick={setShowSideBar} />
       </div>
     </div>
   );

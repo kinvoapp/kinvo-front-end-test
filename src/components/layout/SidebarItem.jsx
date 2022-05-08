@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { v4 as uuidv4 } from "uuid";
+
 import styles from "./SidebarItem.module.css";
 
 import arrow from "../../assets/darkgrayarrow.svg";
@@ -39,7 +41,10 @@ const SidebarItem = ({ icon, text, options }) => {
       {showViews && (
         <>
           {options.map((option) => (
-            <div className={`${styles.containerItem} ${styles.customHeight}`}>
+            <div
+              className={`${styles.containerItem} ${styles.customHeight}`}
+              key={uuidv4()}
+            >
               <div>
                 <div className={styles.bullet}></div>
                 <p>{option}</p>
