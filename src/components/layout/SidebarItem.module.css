@@ -6,21 +6,71 @@
   height: 67px;
   color: #707b81;
   border-bottom: 1px solid #cccfd1;
+  transition: 0.2s;
+}
+
+.containerItem:hover {
+  cursor: pointer;
+  background-color: #f8fafb;
 }
 
 .containerItem div {
+  display: flex;
+  align-items: center;
   margin-left: 15px;
 }
 
 .containerItem div p {
-  display: flex;
   font-size: 13px;
   font-weight: 500;
   width: 73px;
   margin-left: 15px;
 }
 
+.options {
+  width: 300px;
+  background-color: black;
+}
+
 .arrow {
   margin-right: 15px;
   transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.bullet {
+  height: 6px;
+  width: 6px;
+  background-color: #4c309b;
+  border-radius: 50%;
+}
+
+.customHeight {
+  height: 47px;
+  animation: fadeIn 0.3s;
+}
+
+.customHeight div p {
+  width: 10em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    height: 0px;
+    z-index: -10;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.selected {
+  background-color: #f8fafb;
+}
+
+.rotadedArrow {
+  transform: rotate(0deg);
 }
