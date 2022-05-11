@@ -1,0 +1,30 @@
+.containerfixedincome {
+  box-shadow: 0px 2px 6px #0000000a;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.fidexincomeheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  border-bottom: 1px solid #eef2f4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #ffffff;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #627179;
+  font-weight: 500;
+}
+
+.containerfilters {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 415px;
+}

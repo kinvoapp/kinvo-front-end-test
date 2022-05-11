@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
-.App div {
+.navbar {
+  display: flex;
+}
+
+.content {
   display: flex;
 }

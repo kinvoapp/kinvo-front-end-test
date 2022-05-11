@@ -1,0 +1,21 @@
+.containerinput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 235px;
+  height: 32px;
+  border: 1px solid #d6d9dd;
+  border-radius: 10px;
+  cursor: text;
+}
+
+.input {
+  width: 200px;
+  margin-left: 5px;
+  border: none;
+  padding: 5px 0;
+  outline: none;
+  color: #707b81;
+  font-size: 14px;
+  font-weight: 500;
+}

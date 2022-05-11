@@ -1,0 +1,17 @@
+select {
+  -webkit-appearance: none;
+  background: url("../../assets/darkgrayarrow.svg") no-repeat center right;
+  background-position-x: 130px;
+  text-indent: 10px;
+}
+
+.select {
+  width: 155px;
+  height: 32px;
+  border: 1px solid #d6d9dd;
+  border-radius: 10px;
+  outline: none;
+  color: #707b81;
+  font-size: 14px;
+  font-weight: 500;
+}

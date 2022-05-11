@@ -11,10 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="navbar">
         <Navbar setShowSideBar={() => setShowSideBar(!showSideBar)} />
       </div>
-      <div>
+      <div className="content">
         <Sidebar showSideBar={showSideBar} />
         <FixedIncome />
       </div>

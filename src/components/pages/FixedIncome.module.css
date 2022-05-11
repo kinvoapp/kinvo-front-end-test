@@ -1,23 +1,36 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .containerFixedIncome {
   background-color: #eef2f4;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
-.containerFixedIncome div {
+.fixedIncomeContent {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  height: 300px;
+  padding: 0;
+  height: 100%;
   width: 79vw;
+}
+
+.containerFixedIncomeContentData {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 100%;
 }
 
 .title {
   color: #4c309b;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 25px;
+}
+
+.staticchart {
+  margin-top: 25px;
+}
+
+.staticchart img {
+  width: 100%;
 }

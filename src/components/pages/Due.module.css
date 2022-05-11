@@ -1,0 +1,42 @@
+.containerdue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 198px;
+  height: 77px;
+  border: 1px solid #dae0e3;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 5px 0 0 5px;
+}
+
+.title p {
+  letter-spacing: 0.45px;
+  color: #4e5b61;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.containerdueinfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px 5px 5px;
+  letter-spacing: 0.45px;
+  color: #4e5b61;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.number {
+  font-size: 16px;
+  color: #008dcb;
+  text-transform: uppercase;
+}

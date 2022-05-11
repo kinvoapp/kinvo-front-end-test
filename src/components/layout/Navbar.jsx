@@ -12,7 +12,7 @@ const Navbar = ({ setShowSideBar }) => {
   return (
     <div className={styles.navbar}>
       <img src={logo} alt="logo" />
-      <div>
+      <div className={styles.navbarItems}>
         <WalletInfo
           icon={medal}
           text={"Saldo bruto"}
