@@ -1,0 +1,33 @@
+.containerpagination {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #eef2f4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ffffff;
+}
+
+.containerbuttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  margin-top: 12px;
+}
+
+.containerarrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0px 0px 10px #00000008;
+  border: 1px solid #edeef0;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.leftarrow {
+  transform: rotate(180deg);
+}

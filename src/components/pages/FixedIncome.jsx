@@ -4,13 +4,14 @@ import styles from "./FixedIncome.module.css";
 
 import FixedIncomeInfo from "./FixedIncomeInfo";
 import MyFixedIncome from "./MyFixedIncome";
+import Pagination from "./Pagination";
 
 import mychart from "../../assets/staticchart.svg";
 
 const FixedIncome = () => {
   const [infoData, setInfoData] = useState();
   const [myFixedIncomeData, setFixedIncomeData] = useState();
-  // const donutChartData = use;
+  const [currentPage, setCurrentPage] = useState(1);
 
   const fixedIncomeData =
     "https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData";
@@ -66,7 +67,15 @@ const FixedIncome = () => {
           <img src={mychart} alt="gráfico" />
         </div>
 
-        <MyFixedIncome fixedIncomeData={myFixedIncomeData} />
+        <MyFixedIncome
+          fixedIncomeData={myFixedIncomeData}
+          currentPage={currentPage}
+        />
+        <Pagination
+          fixedIncomeData={myFixedIncomeData}
+          setCurrentPage={(e) => setCurrentPage(e)}
+          currentPage={currentPage}
+        />
       </div>
     </div>
   );
