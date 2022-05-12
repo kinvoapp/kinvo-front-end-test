@@ -4,7 +4,7 @@ import search from "../../assets/search.svg";
 
 import styles from "./Input.module.css";
 
-const Input = () => {
+const Input = ({ text }) => {
   const inputEl = useRef(null);
 
   function focusInput() {
@@ -14,7 +14,12 @@ const Input = () => {
   return (
     <div className={styles.containerinput} onClick={focusInput}>
       <img src={search} alt="Digite no input para filtrar sua busca" />
-      <input ref={inputEl} className={styles.input} type="text" />
+      <input
+        ref={inputEl}
+        className={styles.input}
+        type="text"
+        onChange={(e) => text(e.target.value)}
+      />
     </div>
   );
 };

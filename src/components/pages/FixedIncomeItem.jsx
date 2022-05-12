@@ -12,8 +12,6 @@ const FixedIncomeItem = ({
   position,
   backgroudLightGray,
 }) => {
-  console.log(due);
-
   let bacgroundLightGray = "";
   if (backgroudLightGray) {
     bacgroundLightGray = "backgroundlightgray";
