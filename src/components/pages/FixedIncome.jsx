@@ -66,16 +66,21 @@ const FixedIncome = () => {
         <div className={styles.staticchart}>
           <img src={mychart} alt="gráfico" />
         </div>
-
-        <MyFixedIncome
-          fixedIncomeData={myFixedIncomeData}
-          currentPage={currentPage}
-        />
-        <Pagination
-          fixedIncomeData={myFixedIncomeData}
-          setCurrentPage={(e) => setCurrentPage(e)}
-          currentPage={currentPage}
-        />
+        {myFixedIncomeData ? (
+          <>
+            <MyFixedIncome
+              fixedIncomeData={myFixedIncomeData}
+              currentPage={currentPage}
+            />
+            <Pagination
+              fixedIncomeData={myFixedIncomeData}
+              setCurrentPage={(e) => setCurrentPage(e)}
+              currentPage={currentPage}
+            />
+          </>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
