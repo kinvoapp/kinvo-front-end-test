@@ -1,0 +1,30 @@
+.containerPieChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 48%;
+  height: 450px;
+  margin-top: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.piechart {
+  height: 380px;
+}
+
+.containertitle {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #eef2f4;
+}
+
+.title {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+  color: #627179;
+  font-size: 18px;
+  font-weight: 500;
+}

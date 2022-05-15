@@ -34,3 +34,8 @@
 .staticchart img {
   width: 100%;
 }
+
+.containercharts {
+  display: flex;
+  justify-content: space-between;
+}

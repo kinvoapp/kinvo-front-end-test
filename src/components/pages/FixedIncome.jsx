@@ -7,10 +7,12 @@ import MyFixedIncome from "./MyFixedIncome";
 import Pagination from "./Pagination";
 
 import mychart from "../../assets/staticchart.svg";
+import ChartContainer from "./ChartContainer";
 
 const FixedIncome = () => {
   const [infoData, setInfoData] = useState();
   const [myFixedIncomeData, setFixedIncomeData] = useState();
+  const [chartData, setChartData] = useState();
   const [currentPage, setCurrentPage] = useState(1);
 
   const fixedIncomeData =
@@ -24,10 +26,64 @@ const FixedIncome = () => {
   }, []);
 
   function setData(data) {
-    // console.log(data);
     setInfoData(data.snapshotByPortfolio);
     setFixedIncomeData(data.snapshotByProduct);
-    // console.log(data.snapshotByProduct);
+    setChartData(data.dailyEquityByPortfolioChartData);
+  }
+
+  const pieChartOptions = {
+    pieHole: 0.6,
+    legend: { position: "bottom" },
+    pieSliceText: "none",
+    width: "500px",
+    chartArea: { top: 30, width: "100%", height: "70%" },
+  };
+
+  const dataPerTitle = [["title", "title value"]];
+  const dataPerType = [["type", "type value"]];
+
+  console.log(chartData);
+
+  function prepareChartData() {
+    let acc = 0;
+
+    function filterChartDataTitle(title) {
+      acc = 0;
+      for (let i = 0; i < chartData.length; i++) {
+        // Uses the title to filter the array and accumulate the value
+        if (chartData[i].productName.indexOf(title) > -1) {
+          acc += chartData[i].correctedQuota;
+        }
+        if (i == chartData.length - 1) {
+          dataPerTitle.push([title, Number(acc.toFixed(2))]);
+        }
+      }
+    }
+
+    filterChartDataTitle("CDB Pré XP INVESTIMENTOS CCTVM (9,5% a.a.)");
+    filterChartDataTitle("Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)");
+    filterChartDataTitle("LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)");
+
+    function filterChartDataType(type) {
+      acc = 0;
+      for (let i = 0; i < chartData.length; i++) {
+        // Uses the type to filter the array and accumulate the value
+        if (chartData[i].productName.indexOf(type) > -1) {
+          acc += chartData[i].correctedQuota;
+        }
+        if (i == chartData.length - 1) {
+          dataPerType.push([type, Number(acc.toFixed(2))]);
+        }
+      }
+    }
+
+    filterChartDataType("CDB");
+    filterChartDataType("CDI");
+    filterChartDataType("Tesouro IPCA+");
+  }
+
+  if (chartData) {
+    prepareChartData();
   }
 
   return (
@@ -77,6 +133,26 @@ const FixedIncome = () => {
               setCurrentPage={(e) => setCurrentPage(e)}
               currentPage={currentPage}
             />
+            <div className={styles.containercharts}>
+              {chartData && (
+                <>
+                  <ChartContainer
+                    chartData={dataPerType}
+                    chartType="PieChart"
+                    chartOptions={pieChartOptions}
+                    customStyle="containerPieChart"
+                    title="Divisão de Carteira por Tipos"
+                  />
+                  <ChartContainer
+                    chartData={dataPerTitle}
+                    chartType="PieChart"
+                    chartOptions={pieChartOptions}
+                    customStyle="containerPieChart"
+                    title="Divisão de Carteira por Titulos"
+                  />
+                </>
+              )}
+            </div>
           </>
         ) : (
           ""
