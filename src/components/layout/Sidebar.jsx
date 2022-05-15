@@ -33,7 +33,7 @@ const Sidebar = ({ showSideBar }) => {
     {
       icon: puzzle,
       name: "Classe de Ativos",
-      options: ["Ação", "Fundo", "Fundo Imobiliário", "FUndo Renda Fixa"],
+      options: ["Ação", "Fundo", "Fundo Imobiliário", "Fundo Renda Fixa"],
     },
     {
       icon: diamond,

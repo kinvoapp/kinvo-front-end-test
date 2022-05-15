@@ -9,7 +9,6 @@ const Position = ({
   profitability,
   valueApplied,
 }) => {
-  //   valueApplied.toFixed(2);
   return (
     <div className={styles.containerposition}>
       <div className={styles.title}>
