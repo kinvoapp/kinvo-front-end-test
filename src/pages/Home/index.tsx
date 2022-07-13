@@ -4,6 +4,7 @@ import { Error } from "../../components/Error";
 import { FixedIncomeSection } from "../../components/FixedIncomeSection";
 import { Header } from "../../components/Header";
 import { Loading } from "../../components/Loading";
+import { MainChart } from "../../components/MainChart";
 import { Sidebar } from "../../components/Sidebar";
 import { SmallInfoSection } from "../../components/SmallInfoSection";
 import { IncomeContext } from "../../contexts/income";
@@ -23,6 +24,7 @@ export function Home() {
       <div className="content">
         <Sidebar />
         <main>
+          <MainChart />
           <h3 className="title">Renda Fixa</h3>
           <SmallInfoSection />
           <FixedIncomeSection />

@@ -21,8 +21,15 @@ export type dataType = {
     indexerValue: string;
     percentageOverIndexer: string;
   }
-  dailyEquityByPortfolioChartData: [];
+  dailyEquityByPortfolioChartData: dailyEquityByPortfolioChartData[];
   snapshotByProduct: snapshotByProduct[]
+}
+
+type dailyEquityByPortfolioChartData = {
+  correctedQuota: number;
+  productName: string;
+  dailyReferenceDate: number;
+  portfolioProductId: number;
 }
 
 export type snapshotByProduct = {
