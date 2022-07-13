@@ -1,6 +1,11 @@
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = styled.div`
+interface CardProps {
+  expanded?: boolean;
+}
+
+export const Container = styled.div<CardProps>`
   background: ${props => props.theme.colors.snow};
   border-radius: 10px;
+  flex: ${props => props.expanded ? 1 : 'unset'};
 `

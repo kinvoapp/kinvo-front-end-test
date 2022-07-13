@@ -15,13 +15,15 @@ export function CardInfoSmall({ title, description, type }: CardInfoSmallProps) 
       <Container>
         <span className="divider" />
 
-        <span className="title">{title}</span>
-        <span className="description">
-          {type === 'currency' ?
-            format(description) :
-            `${description}%`
-          }
-        </span>
+        <div className="content">
+          <span className="title">{title}</span>
+          <span className="description">
+            {type === 'currency' ?
+              format(description) :
+              `${description}%`
+            }
+          </span>
+        </div>
       </Container>
     </Card>
   )

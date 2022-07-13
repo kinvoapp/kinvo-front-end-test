@@ -1,19 +1,33 @@
 import { useContext } from "react"
-import { CardInfoSmall } from "../../components/CardInfoSmall";
+import { Error } from "../../components/Error";
+
+import { FixedIncomeSection } from "../../components/FixedIncomeSection";
 import { Header } from "../../components/Header";
-import { IncomeContext } from "../../contexts/income"
+import { Loading } from "../../components/Loading";
+import { Sidebar } from "../../components/Sidebar";
+import { SmallInfoSection } from "../../components/SmallInfoSection";
+import { IncomeContext } from "../../contexts/income";
+
+import { Container } from "./styles";
 
 export function Home() {
   const { loadingData, requestError } = useContext(IncomeContext);
 
-  if(loadingData) return <h1>Loading</h1>
-  if(requestError) return <h1>Error in request</h1>
+  if (loadingData) return <Loading />
+  if (requestError) return <Error />
 
   return (
-    <>
+    <Container>
       <Header />
 
-      <CardInfoSmall  title="TEST"  description={200} type="currency"/>
-    </>
+      <div className="content">
+        <Sidebar />
+        <main>
+          <h3 className="title">Renda Fixa</h3>
+          <SmallInfoSection />
+          <FixedIncomeSection />
+        </main>
+      </div>
+    </Container>
   )
 }
