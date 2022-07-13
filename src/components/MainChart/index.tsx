@@ -1,4 +1,4 @@
-import Highcharts, { chart } from 'highcharts'
+import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import { useContext } from 'react';
 import { IncomeContext } from '../../contexts/income';
@@ -12,7 +12,7 @@ export function MainChart() {
     if (!obj[productName]) obj[productName] = [];
     obj[productName].push(detail.correctedQuota);
     return obj;
-  }, {});
+  }, {} as any);
 
   const formattedData = Object.keys(reducedData).map(item => {
     return {
