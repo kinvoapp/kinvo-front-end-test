@@ -10,18 +10,19 @@ export default createGlobalStyle`
 
 @media(max-width: 1080px) {
    html {
-    font-size: 93.75 %;
+    font-size: 93.75%;
   }
 }
 @media(max-width: 720px) {
    html {
-    font-size: 87.5 %;
+    font-size: 87.5%;
   }
 }
  
 body {
   background-color: ${defaultTheme.colors.background};
-  color: ${defaultTheme.colors.gray[500]};
+  color: ${defaultTheme.colors.gray[200]};
+  -webkit-font-smoothing: antialiased;
 }
 
 body,

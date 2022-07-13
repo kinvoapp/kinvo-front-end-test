@@ -6,10 +6,14 @@ declare module 'styled-components' {
     colors: {
       snow: string
       gray: {
-        '500': string
+        '200': string
+        '250': string
       }
       background: string
       primary: string
+    }
+    shadows: {
+      hard: string
     }
   }
 }
