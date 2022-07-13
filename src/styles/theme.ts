@@ -19,6 +19,7 @@ export const defaultTheme: DefaultTheme = {
   },
   shadows: {
     hard: '0px 2px 20px 0px rgba(112,123,129,0.1)',
-    medium: '0px 2px 20px 0px rgba(0,0,0,0.05)'
+    medium: '0px 2px 20px 0px rgba(0,0,0,0.05)',
+    soft: '0px 2px 6px 0px rgba(0,0,0,0.05)'
   }
 }

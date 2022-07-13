@@ -22,6 +22,7 @@ declare module 'styled-components' {
     shadows: {
       hard: string
       medium: string
+      soft: string
     }
   }
 }

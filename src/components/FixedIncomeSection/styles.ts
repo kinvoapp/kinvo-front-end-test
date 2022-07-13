@@ -27,7 +27,40 @@ export const Container = styled.div`
     padding: 0.5rem;
     border-radius: 0.625rem;
     width: 240px;
+}
 
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.paginationBttns a {
+  padding: 7px 14px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid ${props => props.theme.colors.gray[250]};
+  color: ${props => props.theme.colors.gray[250]};
+  cursor: pointer;
+  box-shadow: ${props => props.theme.shadows.soft};
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: ${props => props.theme.colors.green};
+}
+
+.paginationActive a {
+  color: ${props => props.theme.colors.snow};
+  background-color: ${props => props.theme.colors.gray[250]};
+}
+
+.paginationDisabled a {
+  color: ${props => props.theme.colors.gray[100]};
+  background-color: ${props => props.theme.colors.gray[50]};
 }
 `
 

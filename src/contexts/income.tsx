@@ -97,7 +97,7 @@ export const IncomeProvider = ({ children }: IncomeProviderProps) => {
 
   function filterMyIncomesBy(query: string) {
     const newState = [...fullData.snapshotByProduct];
-    if(query === "") return setFilteredSearch(newState);
+    if (query === "") return setFilteredSearch(newState);
     const filtered = newState.filter((item) =>
       item.fixedIncome.name.toLowerCase().indexOf(query.toLowerCase()) > -1
     )

@@ -4,18 +4,19 @@ import { Container, Input, Row, Select } from "./styles";
 import searchIcon from '../../assets/search.svg';
 import { IncomeContext } from "../../contexts/income";
 import { FixedIncomeCard } from "../FixedIncomeCard";
+import ReactPaginate from "react-paginate";
 
 export function FixedIncomeSection() {
-  const { 
-    fullData: { snapshotByProduct }, 
+  const {
+    fullData: { snapshotByProduct },
     orderMyFixedIncomesBy,
     filterMyIncomesBy,
     filteredSearch
   } = useContext(IncomeContext)
 
   const options = [
-    {value: "1", text: "Rentabilidade", type: "rent"},
-    {value: "2", text: "Total Aplicado", type: "totalApplied"},
+    { value: "1", text: "Rentabilidade", type: "rent" },
+    { value: "2", text: "Total Aplicado", type: "totalApplied" },
   ]
 
   const [selected, setSelected] = useState();
@@ -26,9 +27,34 @@ export function FixedIncomeSection() {
     setSelected(event.target.value)
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     filterMyIncomesBy(searchInputFixedIncome)
+    setUsers(filteredSearch)
   }, [searchInputFixedIncome])
+
+  const [users, setUsers] = useState(filteredSearch);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 5;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const displayUsers = users
+    .slice(pagesVisited, pagesVisited + usersPerPage)
+    .map((item, index) => {
+      return (
+        <Row key={index}>
+          <FixedIncomeCard type="title" snapshot={item} />
+          <FixedIncomeCard type="results" snapshot={item} />
+          <FixedIncomeCard type="due" snapshot={item} />
+        </Row>
+      );
+    });
+
+  const pageCount = Math.ceil(users.length / usersPerPage);
+
+  const changePage = ({ selected }: any) => {
+    setPageNumber(selected);
+  };
 
   return (
     <Card>
@@ -38,10 +64,10 @@ export function FixedIncomeSection() {
             Minhas Rendas Fixas
           </h3>
           <div className="search-area">
-            <Select 
-              value={selected} 
-              onChange={handleChange} 
-              // onClick={()=>{orderMyFixedIncomesBy("rent")}}
+            <Select
+              value={selected}
+              onChange={handleChange}
+            // onClick={()=>{orderMyFixedIncomesBy("rent")}}
             >
               <option value="0" hidden>
                 Ordenar por
@@ -56,22 +82,26 @@ export function FixedIncomeSection() {
               <img src={searchIcon} alt="Search Icon" />
               <Input
                 value={searchInputFixedIncome}
-                onChange={(e)=> setSearchInputFixedIncome(e.target.value)}
+                onChange={(e) => setSearchInputFixedIncome(e.target.value)}
               />
             </div>
           </div>
         </header>
 
         <div>
-          {filteredSearch.map((item,index) => {
-            return (
-              <Row key={index}>
-                <FixedIncomeCard type="title" snapshot={item} />
-                <FixedIncomeCard type="results" snapshot={item} />
-                <FixedIncomeCard type="due" snapshot={item} />
-              </Row>
-            )
-          })}
+          {displayUsers}
+
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBttns"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
         </div>
 
       </Container>
