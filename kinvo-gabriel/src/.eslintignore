@@ -1,0 +1,8 @@
+/node_modules
+/build
+/config
+/public
+/scripts
+
+.scannerwork
+sonarqube-scanner.js
