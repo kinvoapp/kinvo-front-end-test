@@ -17,7 +17,7 @@ export const ApplicationShell: React.FC = () => {
         flex={1}
         container
         direction='row'
-        bgcolor='grey.50'
+        bgcolor='rgba(218, 224, 227, .3)'
       >
         <Grid
           item

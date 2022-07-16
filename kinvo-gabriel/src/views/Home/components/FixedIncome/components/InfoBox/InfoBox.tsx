@@ -9,7 +9,7 @@ export interface InfoBoxProps {
 
 export const InfoBox: React.FC<InfoBoxProps> = ({ label, value, isPercentageValue }) => {
   return (
-    <Card elevation={1} sx={{ padding: 2, borderRadius: 3, maxHeight: '100px' }}>
+    <Card elevation={2} sx={{ padding: 2, borderRadius: 3, maxHeight: '100px' }}>
       <Stack height='100%' direction='row' alignItems='center'>
         <Divider
           orientation='vertical'

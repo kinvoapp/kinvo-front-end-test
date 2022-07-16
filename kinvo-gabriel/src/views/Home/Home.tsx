@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material'
 import { useEffect } from 'react'
 import { useApiDataStore } from '../../store/apiData'
-import { FixedIncome, FixedIncomeDetailed } from './components'
+import { FixedIncome, FixedIncomeDetailed, FixedIncomeGraphic } from './components'
 
 export const Home: React.FC = () => {
   const { operations: { updateCurrentApiData } } = useApiDataStore()
@@ -19,10 +19,11 @@ export const Home: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
-
+ 
   return (
     <Stack>
       <FixedIncome />
+      <FixedIncomeGraphic />
       <FixedIncomeDetailed />
            
     </Stack>
