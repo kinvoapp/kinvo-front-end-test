@@ -43,4 +43,7 @@ export interface ApiData {
   snapshotByPortfolio: SnapshotByPortfolioProps
   snapshotByProduct: Array<SnapshotByProductProps>
   dailyEquityByPortfolioChartData: Array<DailyEquityByPortfolioChartDataProps>
+
+  filteredSnapshotByProduct: SnapshotByProductProps[] | []
+  orderedSnapshotByProduct:  SnapshotByProductProps[] | []
 }

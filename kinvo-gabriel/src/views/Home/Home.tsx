@@ -24,7 +24,7 @@ export const Home: React.FC = () => {
     <Stack>
       <FixedIncome />
       <FixedIncomeDetailed />
-        
+           
     </Stack>
   )
 }
