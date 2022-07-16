@@ -1,25 +1,71 @@
-import logo from './logo.svg';
+import styled from  'styled-components'
 import './App.css';
+import logo from  './assets/logoPremium.png'
+import HeaderCard from './components/HeaderCard';
+import DehazeIcon from '@mui/icons-material/Dehaze';
+import NorthIcon from '@mui/icons-material/North';
+import NorthEastIcon from '@mui/icons-material/NorthEast';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Header>
+      
+        <Logo />
+        <CardWrapper>
+          <HeaderCard title={'saldo bruto'} subtitle={'130.521.230,02'} icon={<AttachMoneyIcon />}/>
+          <HeaderCard title={'valor aplicado'} subtitle={'521.230,02'} icon={<NorthIcon />}/>
+          <HeaderCard title={'rentabilidade'} subtitle={'2,34%'} icon={<NorthEastIcon />}/>
+          <HeaderCard title={'carteira'} color={'#5D41AC'} subtitle={'Minha Carteira'} icon={<ExpandMoreIcon />}/>
+          <ButtonWrapper>
+            <DehazeIcon style={{color: '#FFF'}}/>
+          </ButtonWrapper>
+        </CardWrapper>
+        
+      </Header>
+   
   );
 }
+
+
+
+const Header = styled.div`
+width: 100%;
+height: 130px;
+display: flex;
+background-color: #fff;
+align-items: center;
+`
+
+const Logo = styled.image`
+background-position: center;
+background-image: url(${logo});
+background-repeat: no-repeat;
+object-fit: contain;
+height: 100%;
+width: 400px;
+display: table;
+float: left;
+`
+
+const CardWrapper = styled.div`
+display: flex;
+justify-content: end;
+width: 100%;
+`
+
+const ButtonWrapper = styled.div`
+background-color: #5D41AC;
+border-radius: 50%;
+width: 35px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 7px;
+margin-right: 100px;
+`
 
 export default App;
