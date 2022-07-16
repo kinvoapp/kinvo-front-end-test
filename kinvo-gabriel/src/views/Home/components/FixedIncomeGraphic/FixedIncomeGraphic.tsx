@@ -41,7 +41,8 @@ export const FixedIncomeGraphic: React.FC = () => {
       data: DATA,
       radius: 0,
       pointBackgroundColor: 'white',
-    }]
+      tension: .3
+    }],
   }
 
   const GRAPHIC_CONFIG: ChartOptions<'line'> = {
@@ -71,7 +72,7 @@ export const FixedIncomeGraphic: React.FC = () => {
           usePointStyle: true
         },
       }
-    }
+    },
   }
 
   return (

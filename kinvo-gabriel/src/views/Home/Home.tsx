@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material'
 import { useEffect } from 'react'
 import { useApiDataStore } from '../../store/apiData'
-import { FixedIncome, FixedIncomeDetailed, FixedIncomeGraphic } from './components'
+import { FixedIncome, FixedIncomeDetailed, FixedIncomeGraphic, WalletGraphic } from './components'
 
 export const Home: React.FC = () => {
   const { operations: { updateCurrentApiData } } = useApiDataStore()
@@ -25,7 +25,8 @@ export const Home: React.FC = () => {
       <FixedIncome />
       <FixedIncomeGraphic />
       <FixedIncomeDetailed />
-           
+      <WalletGraphic />
+      
     </Stack>
   )
 }
