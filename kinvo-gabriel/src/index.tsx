@@ -1,7 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
+import { store } from './store'
+import { Provider } from 'react-redux'
+import ReactDOM from 'react-dom/client'
+import './assets/TTCommons/FontFace.css'
+import { kinvoTheme } from './utils/theme'
+import { ThemeProvider } from '@mui/material'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(
@@ -9,7 +14,11 @@ const root = ReactDOM.createRoot(
 )
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ThemeProvider theme={kinvoTheme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 )
 

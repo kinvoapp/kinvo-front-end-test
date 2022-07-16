@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'TTCommons';
+  src: url(./ttcommons-regular-webfont.woff) format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url(./ttcommons-bold-webfont.woff) format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url(./ttcommons-demibold-webfont.woff) format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url(./ttcommons-medium-webfont.woff) format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url(./ttcommons-light-webfont.woff) format('woff');
+  font-weight: 200;
+}
