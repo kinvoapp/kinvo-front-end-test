@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
           alignItems: 'center',
           height: { xs: 65, lg: 85 },
           justifyContent: 'space-between',
-          // backgroundColor: 'primary.main',
+          backgroundColor: 'common.white',
         }}
       >
         <Stack height='40%'>

@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material'
 import MovingIcon from '@mui/icons-material/Moving'
+import { formatToRealStr } from '../../../../utils/format'
 import { useApiDataStore } from '../../../../store/apiData'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
@@ -8,21 +9,25 @@ export const HeaderInfos: React.FC = () => {
 
   const { storeState: { currentData } } = useApiDataStore()
 
+  if(!currentData){
+    return <div>loading</div>
+  }
+
   const INFOS = [
     {
       label: 'SALDO BRUTO',
-      icon: <AttachMoneyIcon color='primary' />,
-      value: currentData?.snapshotByPortfolio.equity
+      icon: <AttachMoneyIcon sx={{ color: 'common.white' }} />,
+      value: currentData.snapshotByPortfolio.equity
     },
     {
       label: 'VALOR APLICADO',
-      icon: <ArrowUpwardIcon color='primary' />,
-      value: currentData?.snapshotByPortfolio.valueApplied
+      icon: <ArrowUpwardIcon sx={{ color: 'common.white' }} />,
+      value: currentData.snapshotByPortfolio.valueApplied
     },
     {
       label: 'RENTABILIDADE',
-      icon: <MovingIcon color='primary' />,
-      value: `${currentData?.snapshotByPortfolio.percentageProfit}%`
+      icon: <MovingIcon sx={{ color: 'common.white' }} />,
+      value: `${currentData.snapshotByPortfolio.percentageProfit}%`
     },
   ]
 
@@ -44,6 +49,7 @@ export const HeaderInfos: React.FC = () => {
           <Stack>
             <Typography color='grey.100' variant='text8'>{item.label}</Typography>
             <Box sx={{ fontWeight: 700 }} component='span' color='grey.100'>{item.value}</Box>
+            {/* <Box sx={{ fontWeight: 700 }} component='span' color='grey.100'>{formatToRealStr(Number(item.value))}</Box> */}
           </Stack>
         </Stack>
       ))}

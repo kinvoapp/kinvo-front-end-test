@@ -13,9 +13,9 @@ export const MenuOptions: React.FC = () => {
         borderRadius: '50%',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'secondary.main',
+        bgcolor: 'primary.main',
       }}>
-        <ExpandMoreIcon color='primary' />
+        <ExpandMoreIcon sx={{ color: 'common.white' }} />
       </Stack>
       <Stack>
         <Typography color='grey.100' variant='text8'>CARTEIRA</Typography>
@@ -28,9 +28,9 @@ export const MenuOptions: React.FC = () => {
         borderRadius: '50%',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'secondary.main',
+        bgcolor: 'primary.main',
       }}>
-        <MenuIcon color='primary' />
+        <MenuIcon sx={{ color: 'common.white' }} />
       </Stack>
     </Stack>
   )

@@ -9,7 +9,7 @@ export interface DailyEquityByPortfolioChartDataProps {
 
 export interface SnapshotByProductProps {
   due: {
-    date: Date
+    date: string
     daysUntilExpiration: number
   }
   fixedIncome: {

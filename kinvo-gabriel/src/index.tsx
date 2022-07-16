@@ -1,4 +1,5 @@
 import React from 'react'
+import 'swiper/css'
 import './index.css'
 import App from './App'
 import { store } from './store'

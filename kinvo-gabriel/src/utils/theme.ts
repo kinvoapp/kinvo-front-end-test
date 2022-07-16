@@ -79,11 +79,11 @@ export const kinvoTheme = createTheme({
       white: '#FFFFFF'
     },
     primary: {
-      main: '#FFF',
+      main: '#5D41AC',
       light: 'rgba(72, 76, 255, 0.1)'
     },
     secondary: {
-      main: '#5D41AC',
+      main: '#008DCB',
       light: 'rgba(14, 201, 81, 0.1)'
     },
     error: {
@@ -91,7 +91,7 @@ export const kinvoTheme = createTheme({
       light: '#FDECEB'
     },
     success: {
-      main: '#0EC951',
+      main: '#00c29f',
       light: '#E7FAEE'
     },
     warning: {
@@ -106,6 +106,7 @@ export const kinvoTheme = createTheme({
       50: '#DAE0E3',
       100: '#627179',
       200: '#707B81',
+      300: '#4E5B61'
     },
   },
   shadows: customShadows,
@@ -159,20 +160,20 @@ export const kinvoTheme = createTheme({
       lineHeight: '150%'
     },
     text3: {
-      fontFamily: 'Inter',
-      fontSize: '18px',
-      fontWeight: 400,
-      lineHeight: '150%'
+      fontFamily: 'Montserrat',
+      fontSize: '12px',
+      fontWeight: 600,
+      // lineHeight: '150%'
     },
     text4: {
-      fontFamily: 'Inter',
-      fontSize: '16px',
-      fontWeight: 600,
+      fontFamily: 'Montserrat',
+      fontSize: '9px',
+      fontWeight: 'bolder',
       lineHeight: '150%'
     },
     text5: {
-      fontFamily: 'Inter',
-      fontSize: '16px',
+      fontFamily: 'Montserrat',
+      fontSize: '14px',
       fontWeight: 500,
       lineHeight: '150%'
     },

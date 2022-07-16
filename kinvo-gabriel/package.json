@@ -14,6 +14,7 @@
     "@types/react-dom": "^18.0.6",
     "chart.js": "^3.8.0",
     "lint": "^0.7.0",
+    "numeral": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^7.2.4",
@@ -21,6 +22,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
+    "swiper": "^8.3.1",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -50,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/numeral": "^2.0.2",
     "@types/react-router-dom": "^5.3.3",
     "@types/redux-logger": "^3.0.9",
     "@typescript-eslint/eslint-plugin": "^5.30.6",

@@ -23,7 +23,7 @@ export const ApplicationShell: React.FC = () => {
           item
           xs={2}
           padding={2}
-          bgcolor='primary.main'
+          bgcolor='common.white'
         >
           <div>sidebar</div>
         </Grid>
