@@ -1,12 +1,13 @@
 import './App.css'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { ApplicationShell } from './components/ApplicationShell'
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path='*'>
-          <div>Hello kinvo</div>
+          <ApplicationShell />
         </Route>
       </Switch>
     </BrowserRouter>
