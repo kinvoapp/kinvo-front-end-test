@@ -4,51 +4,58 @@ import { useApiDataStore } from '../../../../../../store/apiData'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import { orderByOptions } from '../../../../../../utils/options'
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined'
+import { useState } from 'react'
 
 export const Header: React.FC = () => {
-
+  const [selected, setSelected] = useState<number>(1)
   const { storeState: { currentData }, operations: { updateCurrentApiData } } = useApiDataStore()
-
-  if (!currentData) {
-    return <div>loading</div>
-  }
 
   const filterByName = (name: string) => {
     const lowCaseName = name.toLowerCase()
 
-    const filteredItems = currentData.snapshotByProduct.filter(
+    const filteredItems = currentData!.snapshotByProduct.filter(
       item => item.fixedIncome.name.toLowerCase().includes(lowCaseName)
     )
 
     updateCurrentApiData({
-      ...currentData, filteredSnapshotByProduct: filteredItems
+      ...currentData!, filteredSnapshotByProduct: filteredItems
     })
   }
 
   const clearFilteredItemsByName = () => {
-    updateCurrentApiData({ ...currentData, filteredSnapshotByProduct: [] })
+    updateCurrentApiData({ ...currentData!, filteredSnapshotByProduct: [] })
   }
 
-  const orderByInvestedAmount = () => {
+  const orderByInvestedAmount = (value: number) => {
 
     clearFilteredItemsByName()
 
-    const orderedItems = currentData.snapshotByProduct
+    const orderedItems = [...currentData!.snapshotByProduct]
 
-    orderedItems.sort((prev, curr) => {
-      if (prev.position.valueApplied > curr.position.valueApplied) return 1
-      if (prev.position.valueApplied < curr.position.valueApplied) return -1
-      return 0
-    })
+    if (value === 2) {
+      orderedItems.sort((prev, curr) => {
+        if (prev.position.valueApplied > curr.position.valueApplied) return -1
+        if (prev.position.valueApplied < curr.position.valueApplied) return 1
+        return 0
+      })
+    }
+    if (value === 3) {
+      orderedItems.sort((prev, curr) => {
+        if (prev.position.valueApplied > curr.position.valueApplied) return 1
+        if (prev.position.valueApplied < curr.position.valueApplied) return -1
+        return 0
+      })
+    }
 
     updateCurrentApiData({
-      ...currentData, filteredSnapshotByProduct: orderedItems
+      ...currentData!, filteredSnapshotByProduct: orderedItems
     })
   }
 
   const handleSelectChange = (value: number) => {
-    if (value === 2) {
-      orderByInvestedAmount()
+    setSelected(value)
+    if (value > 1) {
+      orderByInvestedAmount(value)
     }
   }
 
@@ -58,8 +65,8 @@ export const Header: React.FC = () => {
       <Stack alignItems='center' sx={{ color: 'gray.50' }} direction='row' spacing={2}>
         <Stack>
           <Select
+            value={selected}
             IconComponent={() => <ExpandMoreOutlinedIcon sx={{ color: '#DAE0E3' }} />}
-            value={1}
             onChange={(e) => handleSelectChange(e.target.value as number)}
             sx={{
               '&.MuiOutlinedInput-root > div': {
@@ -71,7 +78,7 @@ export const Header: React.FC = () => {
             }}
           >
             {orderByOptions.map(item => (
-              <MenuItem value={item.value}>{item.label}</MenuItem>
+              <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
             ))}
           </Select>
         </Stack>
@@ -88,8 +95,8 @@ export const Header: React.FC = () => {
             onKeyDown={(e) => e.keyCode === 13 ? filterByName(e.target.value) : e.target.value}
           />
           {
-            currentData.filteredSnapshotByProduct
-            && currentData.filteredSnapshotByProduct.length > 0
+            currentData!.filteredSnapshotByProduct
+            && currentData!.filteredSnapshotByProduct.length > 0
             && (
               <Stack sx={{ cursor: 'pointer' }} onClick={() => clearFilteredItemsByName()}>
                 <CloseOutlinedIcon sx={{ color: '#DAE0E3' }} />

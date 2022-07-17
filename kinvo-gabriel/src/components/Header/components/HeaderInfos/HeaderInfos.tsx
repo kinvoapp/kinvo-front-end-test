@@ -17,12 +17,12 @@ export const HeaderInfos: React.FC = () => {
     {
       label: 'SALDO BRUTO',
       icon: <AttachMoneyIcon sx={{ color: 'common.white' }} />,
-      value: currentData.snapshotByPortfolio.equity
+      value: formatToRealStr(currentData.snapshotByPortfolio.equity)
     },
     {
       label: 'VALOR APLICADO',
       icon: <ArrowUpwardIcon sx={{ color: 'common.white' }} />,
-      value: currentData.snapshotByPortfolio.valueApplied
+      value: formatToRealStr(currentData.snapshotByPortfolio.valueApplied)
     },
     {
       label: 'RENTABILIDADE',
@@ -49,7 +49,6 @@ export const HeaderInfos: React.FC = () => {
           <Stack>
             <Typography color='grey.100' variant='text8'>{item.label}</Typography>
             <Box sx={{ fontWeight: 700 }} component='span' color='grey.100'>{item.value}</Box>
-            {/* <Box sx={{ fontWeight: 700 }} component='span' color='grey.100'>{formatToRealStr(Number(item.value))}</Box> */}
           </Stack>
         </Stack>
       ))}
