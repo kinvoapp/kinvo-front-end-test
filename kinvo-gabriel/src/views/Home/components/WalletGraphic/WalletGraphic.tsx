@@ -38,11 +38,11 @@ export const WalletGraphic: React.FC = () => {
   }
 
   return (
-    <Stack mt={2} direction='row' width='100%' justifyContent='space-between'>
-      <Stack width='49%'>
+    <Stack my={2} direction='row' width='99%' justifyContent='space-between'>
+      <Stack width='48%'>
         <GraphicByType GRAPHIC_CONFIG={GRAPHIC_CONFIG} />
       </Stack>
-      <Stack width='49%'>
+      <Stack width='48%'>
         <GraphicByTitle GRAPHIC_CONFIG={GRAPHIC_CONFIG} />
       </Stack>
     </Stack>

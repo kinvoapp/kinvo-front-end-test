@@ -14,7 +14,7 @@ export const FixedIncome: React.FC = () => {
   }
 
   return (
-    <Stack paddingX={2} paddingY={4}>
+    <Stack mt={3}>
       <Typography variant='h3' color='primary.main'>Renda Fixa</Typography>
       <Stack spacing={2} mt={3}>
         <Swiper

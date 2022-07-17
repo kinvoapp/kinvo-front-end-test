@@ -26,7 +26,13 @@ export const FixedIncomeDetailed: React.FC = () => {
       <Stack>
         <Header />
         {currentItems().map((item, index) => (
-          <Stack key={index} bgcolor={index % 2 === 0 ? 'rgba(218, 224, 227, .2)' : 'unset'} width='100%' direction='row' spacing={1} p={2}>
+          <Stack
+            p={2}
+            key={index}
+            spacing={1}
+            direction='row'
+            bgcolor={index % 2 === 0 ? 'unset' : 'rgba(218, 224, 227, .2)'}
+          >
             <Stack justifyContent='space-between' width='30%' border='1px solid #DAE0E3' padding={1} borderRadius={3}>
               <Stack alignItems='center' direction='row'>
                 <Typography color='grey.300' variant='text3'>TÍTULO</Typography>
@@ -104,7 +110,6 @@ export const FixedIncomeDetailed: React.FC = () => {
             </Stack>
           </Stack>
         ))}
-
       </Stack>
     </Card>
   )
