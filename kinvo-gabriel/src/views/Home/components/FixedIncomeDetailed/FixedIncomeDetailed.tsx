@@ -1,29 +1,35 @@
-import { Header } from './components'
+import { useState } from 'react'
+import { Footer, Header } from './components'
 import { formatToRealStr } from '../../../../utils/format'
 import { useApiDataStore } from '../../../../store/apiData'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
 import { Stack, Card, Typography, Tooltip, IconButton } from '@mui/material'
 
 export const FixedIncomeDetailed: React.FC = () => {
+  const [amountOfItems, setAmountOfItems] = useState<number>(5)
   const { storeState: { currentData } } = useApiDataStore()
 
-  if (!currentData) {
-    return <div>loading</div>
+  const sliceItems = (items: any[]) => {
+    return amountOfItems <= 5 ?
+      items.splice(0, 5) : items.splice(5)
   }
 
   const currentItems = () => {
-    if (currentData.orderedSnapshotByProduct && currentData.orderedSnapshotByProduct.length > 0) {
-      return currentData.orderedSnapshotByProduct
+    if (currentData!.orderedSnapshotByProduct && currentData!.orderedSnapshotByProduct.length > 0) {
+      return sliceItems(currentData!.orderedSnapshotByProduct)
     }
-    if (currentData.filteredSnapshotByProduct && currentData.filteredSnapshotByProduct.length > 0) {
-      return currentData.filteredSnapshotByProduct
+    if (currentData!.filteredSnapshotByProduct && currentData!.filteredSnapshotByProduct.length > 0) {
+      return sliceItems(currentData!.filteredSnapshotByProduct)
     }
-    return currentData.snapshotByProduct
+    if (amountOfItems <= 5) {
+      return currentData!.snapshotByProduct.slice(0, 5)
+    }
+    return currentData!.snapshotByProduct.slice(5)
   }
 
   return (
-    <Card sx={{ borderRadius: 3 }}>
-      <Stack>
+    <Card sx={{ borderRadius: 3, }}>
+      <Stack justifyContent='space-between'>
         <Header />
         {currentItems().map((item, index) => (
           <Stack
@@ -110,6 +116,7 @@ export const FixedIncomeDetailed: React.FC = () => {
             </Stack>
           </Stack>
         ))}
+        <Footer amountOfItems={amountOfItems} setAmountOfItems={setAmountOfItems} />
       </Stack>
     </Card>
   )

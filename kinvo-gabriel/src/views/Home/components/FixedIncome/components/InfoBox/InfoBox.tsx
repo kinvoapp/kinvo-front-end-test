@@ -9,7 +9,16 @@ export interface InfoBoxProps {
 
 export const InfoBox: React.FC<InfoBoxProps> = ({ label, value, isPercentageValue }) => {
   return (
-    <Card elevation={2} sx={{ padding: 2, borderRadius: 3, maxHeight: '100px' }}>
+    <Card
+      elevation={2}
+      sx={{
+        padding: 2,
+        borderRadius: 3,
+        cursor: 'pointer',
+        maxHeight: '100px',
+        '&:hover': { boxShadow: 3 }
+      }}
+    >
       <Stack height='100%' direction='row' alignItems='center'>
         <Divider
           orientation='vertical'
@@ -21,7 +30,7 @@ export const InfoBox: React.FC<InfoBoxProps> = ({ label, value, isPercentageValu
           }}
         />
         <Stack>
-          <Typography variant='text3' color='grey.200'>{label}</Typography>
+          <Typography mb={1} variant='text3' color='grey.200'>{label}</Typography>
           {isPercentageValue ? (
             <Box sx={{ fontWeight: 700 }} component='span' color='primary.main'>{value}%</Box>
           ) : (
