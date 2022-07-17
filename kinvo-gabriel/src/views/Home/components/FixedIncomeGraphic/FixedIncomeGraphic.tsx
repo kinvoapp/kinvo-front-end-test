@@ -76,26 +76,24 @@ export const FixedIncomeGraphic: React.FC = () => {
   }
 
   return (
-    <Stack width='100%'>
-      <Stack width='100%' alignItems='center'>
-        <Card
-          elevation={2}
-          sx={{
-            marginY: 4,
-            paddingX: 4,
-            width: '96%',
-            height: '50vh',
-            borderRadius: 3,
-            justifyContent: 'center',
-            paddingY: { xs: 2, lg: 4 },
-          }}
-        >
-          <Stack direction='row' justifyContent='space-between' alignItems='center'>
-            <Typography variant='h4' color='grey.200'>Rentabilidade dos títulos</Typography>
-          </Stack>
-          <Line data={GRAPHIC_DATA_CONFIG} options={GRAPHIC_CONFIG} height='80%' />
-        </Card>
-      </Stack>
+    <Stack>
+      <Card
+        elevation={2}
+        sx={{
+          p: 2,
+          mb: 2,
+          width: '97.9%',
+          height: '50vh',
+          borderRadius: 3,
+          justifyContent: 'center',
+          paddingY: { xs: 2, lg: 4 },
+        }}
+      >
+        <Stack direction='row' justifyContent='space-between' alignItems='center'>
+          <Typography variant='h4' color='grey.200'>Rentabilidade dos títulos</Typography>
+        </Stack>
+        <Line data={GRAPHIC_DATA_CONFIG} options={GRAPHIC_CONFIG} height='80%' />
+      </Card>
     </Stack>
   )
 }

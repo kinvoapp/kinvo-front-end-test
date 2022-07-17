@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  
+   
  
   return (
     <Stack>
@@ -26,7 +26,7 @@ export const Home: React.FC = () => {
       <FixedIncomeGraphic />
       <FixedIncomeDetailed />
       <WalletGraphic />
-      
+          
     </Stack>
   )
 }

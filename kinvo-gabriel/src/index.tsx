@@ -14,13 +14,13 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={kinvoTheme}>
-        <App />
-      </ThemeProvider>
-    </Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
+    <ThemeProvider theme={kinvoTheme}>
+      <App />
+    </ThemeProvider>
+  </Provider>
+  // </React.StrictMode>
 )
 
 reportWebVitals()
