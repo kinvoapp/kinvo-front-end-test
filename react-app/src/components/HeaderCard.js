@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const HeaderCard = (props) => {
   return (
     <div>
       <Card>
         <CardIconWrapper
-          style={{ backgroundColor: props.color, color: 'white' }}
+          style={{ backgroundColor: props.color, color: "white" }}
         >
           {props.icon}
         </CardIconWrapper>
@@ -20,38 +20,36 @@ const HeaderCard = (props) => {
 };
 
 const Card = styled.div`
-background-color: #fff;
-width: 175px;
-height: 50px;
-margin-inline: 30px;
-display: flex;
-align-items: center;
-justify-content: center;
+  background-color: #fff;
+  width: 175px;
+  height: 50px;
+  margin-inline: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CardIconWrapper = styled.div`
-background-color: #dae0e3;
-border-radius: 50%;
-width: 50px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 10px;
+  background-color: #dae0e3;
+  border-radius: 50%;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 `;
 const CardInfo = styled.div`
-width: 100%;
+  width: 100%;
 `;
 const CardTitle = styled.div`
-font-size: 10px;
-font-weight: lighter;
-text-transform: uppercase;
-
+  font-size: 10px;
+  color: #9b9b9b;
+  text-transform: uppercase;
 `;
 const CardSubtitle = styled.div`
-font-size: 18px;
-font-weight: normal;
-
+  font-size: 18px;
+  font-weight: normal;
 `;
 
 export default HeaderCard;

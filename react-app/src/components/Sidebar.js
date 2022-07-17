@@ -20,7 +20,7 @@ const Sidebar = () => {
 
 const SidebarNav = styled.nav`
   background: white;
-  width: 250px;
+  width: 300px;
   height: 100vh;
   display: flex;
   justify-content: center;

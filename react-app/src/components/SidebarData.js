@@ -25,12 +25,9 @@ export const SidebarData = [
   {
     title: "Classe de Ativos",
     icon: <BiIcons.BiDumbbell />,
-    iconClosed: (
-      <RiIcons.RiArrowDownSFill
-        style={{ color: "#a0a8ab" }}
-      />
-    ),
+    iconClosed: <RiIcons.RiArrowDownSFill style={{ color: "#a0a8ab" }} />,
     iconOpened: <RiIcons.RiArrowRightSFill style={{ color: "#a0a8ab" }} />,
+    activeClass: "#5D41AC",
     subNav: [
       {
         title: "Ação",
