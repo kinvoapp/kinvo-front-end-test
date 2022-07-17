@@ -11,11 +11,9 @@ const SubMenu = ({ item }) => {
   console.log(item);
   return (
     <div>
-      <SidebarLink onClick={item.subNav && showSubNav}>
+      <SidebarLink active={subNav} onClick={item.subNav && showSubNav}>
         <IconContainer>
-          <IconWrapper activeClass={item.activeClass} active={subNav}>
-            {item.icon}
-          </IconWrapper>
+          <IconWrapper active={subNav}>{item.icon}</IconWrapper>
 
           <SidebarLabel>{item.title}</SidebarLabel>
         </IconContainer>
@@ -42,7 +40,7 @@ const SubMenu = ({ item }) => {
 
 const SidebarLink = styled.a`
   display: flex;
-  background: white;
+
   color: #707b81;
   justify-content: space-between;
   align-items: center;
@@ -58,6 +56,12 @@ const SidebarLink = styled.a`
     background: #f8fafb;
     cursor: pointer;
   }
+
+  ${({ active }) =>
+    active &&
+    `
+    background-color: #f8fafb;
+  `}
 `;
 
 const IconContainer = styled.div`

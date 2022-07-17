@@ -27,7 +27,7 @@ export const SidebarData = [
     icon: <BiIcons.BiDumbbell />,
     iconClosed: <RiIcons.RiArrowDownSFill style={{ color: "#a0a8ab" }} />,
     iconOpened: <RiIcons.RiArrowRightSFill style={{ color: "#a0a8ab" }} />,
-    activeClass: "#5D41AC",
+    bgColor: "#5D41AC",
     subNav: [
       {
         title: "Ação",
