@@ -10,7 +10,9 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import Sidebar from "./components/Sidebar";
 import RendaFixaCardsWrapper from "./components/RendaFixaCardsWrapper";
 import AreaChart from "./components/AreaChart";
-
+import LsitsWrapper from "./components/RendaFixaList";
+import RendaFixaList from "./components/RendaFixaList";
+import PieChartsWrapper from "./components/PieChartsWrapper";
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
         <ContentWrapper>
           <RendaFixaCardsWrapper />
           <AreaChart />
+          <RendaFixaList />
+          <PieChartsWrapper />
         </ContentWrapper>
       </Wrapper>
     </div>
@@ -101,6 +105,8 @@ const Wrapper = styled.section`
 
 const ContentWrapper = styled.section`
   padding: 38px;
+  width: 1090px;
+  margin-left: 5vw;
 `;
 
 export default App;

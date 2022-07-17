@@ -11,7 +11,7 @@ const AreaChart = () => {
 };
 
 const Container = styled.div`
-  width: 98%;
+  width: 100%;
   height: 350px;
   background: white;
   border-radius: 8px;

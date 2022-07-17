@@ -17,7 +17,7 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 225px;
+  min-width: 156px;
   height: 70px;
   background: white;
   border-radius: 8px;
@@ -33,13 +33,15 @@ const Border = styled.div`
 const InnerContainer = styled.div``;
 
 const CardTitle = styled.div`
-  color: #9b9b9b;
+  color: #4e5b61;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 9px;
+  letter-spacing: 0.45px;
 `;
 
 const CardSubtitle = styled.div`
-  color: #5d41ac;
+  color: #4C309B;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 `;

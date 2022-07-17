@@ -6,7 +6,7 @@ import SubMenu from "./SubMenu";
 
 const Sidebar = () => {
   return (
-    <IconContext.Provider value={{ size: "28px", color: "white" }}>
+    <IconContext.Provider value={{ size: "18px", color: "white" }}>
       <SidebarNav>
         <SidebarWrapper>
           {SidebarData.map((item, index) => {
@@ -20,8 +20,8 @@ const Sidebar = () => {
 
 const SidebarNav = styled.nav`
   background: white;
-  width: 300px;
-  height: 100vh;
+  width: 227px;
+  height: 1727px;
   display: flex;
   justify-content: center;
 `;

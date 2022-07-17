@@ -24,12 +24,12 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  margin-top: 42px;
+  margin-top: 22px;
 `;
 
 const H1 = styled.div`
-  font-size: 32px;
-  color: #5d41ac;
+  font-size: 24px;
+  color: #4C309B;
   font-weight: bold;
 `;
 

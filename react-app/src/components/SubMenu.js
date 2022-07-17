@@ -43,19 +43,19 @@ const SubMenu = ({ item }) => {
 const SidebarLink = styled.a`
   display: flex;
   background: white;
-  color: #a0a8ab;
+  color: #707b81;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   list-style: none;
   height: 40px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 13px;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 
   &:hover {
-    background: rgba(0, 0, 0, 0.04);
+    background: #f8fafb;
     cursor: pointer;
   }
 `;
@@ -69,8 +69,8 @@ const IconContainer = styled.div`
 const IconWrapper = styled.div`
   background-color: #dae0e3;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@ const IconWrapper = styled.div`
   ${({ active }) =>
     active &&
     `
-    background-color: #5D41AC;
+    background-color: #4C309B;
   `}
 `;
 

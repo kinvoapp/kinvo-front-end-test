@@ -21,8 +21,8 @@ const HeaderCard = (props) => {
 
 const Card = styled.div`
   background-color: #fff;
-  width: 175px;
-  height: 50px;
+  width: 172px;
+  height: 60px;
   margin-inline: 30px;
   display: flex;
   align-items: center;
@@ -43,12 +43,13 @@ const CardInfo = styled.div`
   width: 100%;
 `;
 const CardTitle = styled.div`
-  font-size: 10px;
+  font-size: 9px;
   color: #9b9b9b;
   text-transform: uppercase;
+  letter-spacing: 0.45px;
 `;
 const CardSubtitle = styled.div`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
 `;
 
