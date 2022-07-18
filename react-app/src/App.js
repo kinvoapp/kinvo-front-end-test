@@ -31,7 +31,7 @@ function App() {
 
 const Header = styled.div`
   width: 100%;
-  height: 130px;
+  height: 90px;
   display: flex;
   background-color: #fff;
   align-items: center;
