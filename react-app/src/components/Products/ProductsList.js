@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import SelectInput from "../SelectInput";
 import TextInput from "../TextInput";
 import ProductsListCard from "./ProductsListCards";
 
@@ -34,9 +33,6 @@ const ProductsList = () => {
   return (
     <Container>
       <H1>Minhas Rendas Fixas</H1>
-      <InputWrapper>
-        <SelectInput data={data} searchValue={searchValue} />
-      </InputWrapper>
       <InputWrapper>
         <TextInput
           searchValue={searchValue}
