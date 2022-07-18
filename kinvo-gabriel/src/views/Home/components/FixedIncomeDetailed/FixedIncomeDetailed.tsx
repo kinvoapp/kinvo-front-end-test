@@ -10,8 +10,9 @@ export const FixedIncomeDetailed: React.FC = () => {
   const { storeState: { currentData } } = useApiDataStore()
 
   const sliceItems = (items: any[]) => {
+    const itemsToSplice = [...items]
     return amountOfItems <= 5 ?
-      items.splice(0, 5) : items.splice(5)
+      itemsToSplice.splice(0, 5) : itemsToSplice.splice(5)
   }
 
   const currentItems = () => {
@@ -22,9 +23,9 @@ export const FixedIncomeDetailed: React.FC = () => {
       return sliceItems(currentData!.filteredSnapshotByProduct)
     }
     if (amountOfItems <= 5) {
-      return currentData!.snapshotByProduct.slice(0, 5)
+      return [...currentData!.snapshotByProduct.slice(0, 5)]
     }
-    return currentData!.snapshotByProduct.slice(5)
+    return [...currentData!.snapshotByProduct.slice(5)]
   }
 
   return (

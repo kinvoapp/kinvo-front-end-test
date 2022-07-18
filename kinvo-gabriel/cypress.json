@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "coverage": false
+  },
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "requestTimeout": 10000,
+  "responseTimeout": 10000,
+  "videos": false,
+  "videoRecording": false,
+  "videoUploadOnPasses": false
+}

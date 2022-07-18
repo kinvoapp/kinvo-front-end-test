@@ -3,17 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/instrument-cra": "^1.4.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.0.0",
     "@mui/styles": "^5.9.0",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^26.0.23",
     "@types/node": "^16.11.44",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "chart.js": "^3.8.0",
+    "cypress": "^9.1.1",
+    "istanbul-lib-coverage": "^3.2.0",
     "lint": "^0.7.0",
     "numeral": "^2.0.6",
     "react": "^18.2.0",
@@ -30,11 +38,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint-fix": "eslint --fix"
+    "lint-fix": "eslint --fix",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +70,8 @@
     "@types/redux-logger": "^3.0.9",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^8.19.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-typescript": "^3.2.6",
@@ -67,6 +79,29 @@
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "report-dir": "cypress-coverage",
+    "sourceMap": true,
+    "instrument": true,
+    "exclude": [
+      "build/*"
+    ],
+    "extensions": [
+      ".ts",
+      ".tsx",
+      ".js"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "istanbul"
+    ]
   }
 }
