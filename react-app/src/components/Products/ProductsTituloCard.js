@@ -1,19 +1,21 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const RendaFixaTituloCard = () => {
-  return (
-    <Container>
-      <CardInfoWrapper>
-        <Title>TÍTULO</Title>
-        <Subtitle>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</Subtitle>
-      </CardInfoWrapper>
-      <CardDescripWrapper>
-        <Classe>CLASSE</Classe>
-        <Tipo>Tesouro Direto</Tipo>
-      </CardDescripWrapper>
-    </Container>
-  );
+const ProductsTituloCard = ({ data }) => {
+  
+    return (
+      <Container>
+        <CardInfoWrapper>
+          <Title>TÍTULO</Title>
+          <Subtitle>{data.name}</Subtitle>
+        </CardInfoWrapper>
+        <CardDescripWrapper>
+          <Class>CLASSE</Class>
+          <Tipo>{data.bondType}</Tipo>
+        </CardDescripWrapper>
+      </Container>
+    );
+  
 };
 
 const Container = styled.div`
@@ -44,15 +46,15 @@ const CardDescripWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 `;
-const Classe = styled.div`
-  font-size: 13px;
+const Class = styled.div`
+  font-size: 9px;
   color: #9b9b9b;
 `;
 const Tipo = styled.div`
   font-size: 14px;
   font-weight: bold;
-  color: #4C309B;
+  color: #4c309b;
   margin-bottom: 4px;
 `;
 
-export default RendaFixaTituloCard;
+export default ProductsTituloCard;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const HeaderCard = (props) => {
+const NavCards = (props) => {
   return (
     <div>
       <Card>
@@ -53,4 +53,4 @@ const CardSubtitle = styled.div`
   font-weight: normal;
 `;
 
-export default HeaderCard;
+export default NavCards;

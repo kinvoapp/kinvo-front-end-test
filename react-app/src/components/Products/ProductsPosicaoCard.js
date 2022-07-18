@@ -1,34 +1,34 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const RendaFixaPosicaoCard = () => {
+const ProductsPosicaoCard = ({ data }) => {
   return (
     <Container>
       <Title>MINHA POSIÇÃO</Title>
       <Wrapper>
         <div>
           <Subtitle>VALOR INVES.</Subtitle>
-          <P>1.003,00</P>
+          <P>{data.valueApplied}</P>
         </div>
         <div>
           <Subtitle>SALDO BRUTO</Subtitle>
-          <P>1.124,00</P>
+          <P>{data.equity}</P>
         </div>
         <div>
           <Subtitle>RENT.</Subtitle>
-          <P>48,55%</P>
+          <P>{data.profitability + "%"}</P>
         </div>
         <div>
           <Subtitle>% DA CART</Subtitle>
-          <P>5,33%</P>
+          <P>{data.portfolioPercentage + "%"}</P>
         </div>
         <div>
           <Subtitle>CDI</Subtitle>
-          <P>1,24</P>
+          <P>{data.indexerValue}</P>
         </div>
         <div>
           <Subtitle>SOBRE CDI</Subtitle>
-          <P>118</P>
+          <P>{data.percentageOverIndexer}</P>
         </div>
       </Wrapper>
     </Container>
@@ -67,4 +67,4 @@ const P = styled.div`
   margin-bottom: 4px;
 `;
 
-export default RendaFixaPosicaoCard;
+export default ProductsPosicaoCard;

@@ -1,3 +1,4 @@
+import { Icon } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -13,8 +14,7 @@ const SubMenu = ({ item }) => {
     <div>
       <SidebarLink active={subNav} onClick={item.subNav && showSubNav}>
         <IconContainer>
-          <IconWrapper active={subNav}>{item.icon}</IconWrapper>
-
+          <img alt="" src={item.icon} />
           <SidebarLabel>{item.title}</SidebarLabel>
         </IconContainer>
         <div>
@@ -70,14 +70,9 @@ const IconContainer = styled.div`
   align-items: center;
 `;
 
-const IconWrapper = styled.div`
-  background-color: #dae0e3;
-  border-radius: 50%;
+const IconWrapp = styled(Icon)`
   width: 34px;
   height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 10px;
   ${({ active }) =>
     active &&

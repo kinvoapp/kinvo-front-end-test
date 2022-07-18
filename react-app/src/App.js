@@ -1,55 +1,25 @@
 import styled from "styled-components";
 import "./App.css";
 import logo from "./assets/logoPremium.png";
-import HeaderCard from "./components/HeaderCard";
-import DehazeIcon from "@mui/icons-material/Dehaze";
-import NorthIcon from "@mui/icons-material/North";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import Sidebar from "./components/Sidebar";
-import RendaFixaCardsWrapper from "./components/RendaFixaCardsWrapper";
+import HeaderCardsWrapper from "./components/Header/HeaderCardsWrapper";
 import AreaChart from "./components/AreaChart";
-import LsitsWrapper from "./components/RendaFixaList";
-import RendaFixaList from "./components/RendaFixaList";
+import RendaFixaList from "./components/Products/ProductsList";
 import PieChartsWrapper from "./components/PieChartsWrapper";
+
+import NavCardsWrapper from "./components/Navbar/NavCardsWrapper";
 
 function App() {
   return (
     <div>
       <Header>
         <Logo />
-        <CardWrapper>
-          <HeaderCard
-            title={"saldo bruto"}
-            subtitle={"130.521.230,02"}
-            icon={<AttachMoneyIcon />}
-          />
-          <HeaderCard
-            title={"valor aplicado"}
-            subtitle={"521.230,02"}
-            icon={<NorthIcon />}
-          />
-          <HeaderCard
-            title={"rentabilidade"}
-            subtitle={"2,34%"}
-            icon={<NorthEastIcon />}
-          />
-          <HeaderCard
-            title={"carteira"}
-            color={"#5D41AC"}
-            subtitle={"Minha Carteira"}
-            icon={<ExpandMoreIcon />}
-          />
-          <ButtonWrapper>
-            <DehazeIcon style={{ color: "#FFF" }} />
-          </ButtonWrapper>
-        </CardWrapper>
+        <NavCardsWrapper />
       </Header>
       <Wrapper>
         <Sidebar />
         <ContentWrapper>
-          <RendaFixaCardsWrapper />
+          <HeaderCardsWrapper />
           <AreaChart />
           <RendaFixaList />
           <PieChartsWrapper />
@@ -79,24 +49,6 @@ const Logo = styled.image`
   width: 400px;
   display: table;
   float: left;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  justify-content: end;
-  width: 100%;
-`;
-
-const ButtonWrapper = styled.div`
-  background-color: #5d41ac;
-  border-radius: 50%;
-  width: 35px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 7px;
-  margin-right: 100px;
 `;
 
 const Wrapper = styled.section`

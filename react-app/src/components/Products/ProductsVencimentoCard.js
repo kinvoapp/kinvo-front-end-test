@@ -1,18 +1,18 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const RendaFixaVencimentoCard = () => {
+const ProductsVencimentoCard = ({ data }) => {
   return (
     <Container>
       <Title>VENCIMENTO</Title>
       <Wrapper>
         <div>
           <Subtitle>DATA VENC.</Subtitle>
-          <P>15.05.2024</P>
+          <P>{data.date}</P>
         </div>
         <div>
           <Subtitle>DIAS ATÉ VENC.</Subtitle>
-          <P>5762</P>
+          <P>{data.daysUntilExpiration}</P>
         </div>
       </Wrapper>
     </Container>
@@ -51,4 +51,4 @@ const P = styled.div`
   margin-bottom: 4px;
 `;
 
-export default RendaFixaVencimentoCard;
+export default ProductsVencimentoCard;

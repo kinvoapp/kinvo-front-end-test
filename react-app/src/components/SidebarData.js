@@ -1,33 +1,33 @@
 import React from "react";
-import * as SiIcons from "react-icons/si";
-import * as AiIcons from "react-icons/ai";
-import * as BiIcons from "react-icons/bi";
-import * as GiIcons from "react-icons/gi";
-import * as TbIcons from "react-icons/tb";
-import * as FiIcons from "react-icons/fi";
+import circleIcon from "../assets/iconCircle.svg";
+import pieIcon from "../assets/iconPie.svg";
+import moneyIcon from "../assets/iconMoney.svg";
+import dummbellIcon from "../assets/iconDummbell.svg";
+import diamondIcon from "../assets/iconDiamond.svg";
+import tvIcon from "../assets/iconTv.svg";
+import targetIcon from "../assets/icontarget.svg";
+import lockerIcon from "../assets/iconLocker.svg";
 import * as RiIcons from "react-icons/ri";
-
 import * as BsIcons from "react-icons/bs";
 
 export const SidebarData = [
   {
     title: "Resumo da Carteira",
-    icon: <SiIcons.SiCircle />,
+    icon: circleIcon,
   },
   {
     title: "Meus Produtos",
-    icon: <AiIcons.AiOutlinePieChart />,
+    icon: pieIcon,
   },
   {
     title: "Meus Proventos",
-    icon: <AiIcons.AiOutlineDollar />,
+    icon: moneyIcon,
   },
   {
     title: "Classe de Ativos",
-    icon: <BiIcons.BiDumbbell />,
+    icon: dummbellIcon,
     iconClosed: <RiIcons.RiArrowDownSFill style={{ color: "#a0a8ab" }} />,
     iconOpened: <RiIcons.RiArrowRightSFill style={{ color: "#a0a8ab" }} />,
-    bgColor: "#5D41AC",
     subNav: [
       {
         title: "Ação",
@@ -49,18 +49,18 @@ export const SidebarData = [
   },
   {
     title: "Rentabilidade Real",
-    icon: <GiIcons.GiCutDiamond />,
+    icon: diamondIcon,
   },
   {
     title: "Projeção da Carteira",
-    icon: <GiIcons.GiChart />,
+    icon: tvIcon,
   },
   {
     title: "Risco x Retorno",
-    icon: <TbIcons.TbTarget />,
+    icon: targetIcon,
   },
   {
     title: "Cobertura do FGC",
-    icon: <FiIcons.FiLock />,
+    icon: lockerIcon,
   },
 ];

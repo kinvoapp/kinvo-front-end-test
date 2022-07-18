@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const RendaFixaCards = (props) => {
+const HeaderCards = (props) => {
   return (
     <Container>
       <Border />
@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Border = styled.div`
-  border-left: 4px solid #dae0e3;
+  border-left: 2px solid #dae0e3;
   height: 40px;
   margin: 10px;
 `;
@@ -46,4 +46,4 @@ const CardSubtitle = styled.div`
   text-transform: uppercase;
 `;
 
-export default RendaFixaCards;
+export default HeaderCards;
