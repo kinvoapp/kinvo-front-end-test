@@ -12,7 +12,7 @@ export const LoadingPage: React.FC = () => {
         justifyContent: 'center',
       }}
     >
-      <Typography variant='h2' >Olá, dev avaliador :)</Typography>
+      <Typography variant='h2' >Olá, avaliador :)</Typography>
       <Stack mt={5}>
         <CircularProgress color='success' sx={{ borderRadius: 2, height: '8px' }} />
       </Stack>

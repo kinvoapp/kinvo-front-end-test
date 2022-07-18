@@ -8,6 +8,7 @@ import { ApplicationShell } from './components/ApplicationShell'
 
 function App() {
   const [isFetching, setIsFetching] = useState<boolean>(true)
+  const [isError, setIsError] = useState<boolean>(false)
   const { operations: { updateCurrentApiData } } = useApiDataStore()
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
         updateCurrentApiData(json.data)
         setIsFetching(false)
       })
+      .catch(()=>setIsError(true))
     /*
       Normalmente usaria react-query. Mas, como há somente 1 requisição
       e o tempo é curto, optei por usar a api de fetch nativa 
@@ -36,6 +38,17 @@ function App() {
         <LoadingPage />
       </Stack>
     )
+  }
+
+  if(isError) {
+    <Stack
+      width='100vw'
+      height='100vh'
+      alignItems='center'
+      justifyContent='center'
+    >
+      <div>Erro</div>
+    </Stack>
   }
 
   return (

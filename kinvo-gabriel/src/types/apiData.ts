@@ -39,11 +39,15 @@ export interface SnapshotByPortfolioProps {
   percentageOverIndexer: number
 }
 
-export interface ApiData {
+export interface FilteredApiData {
+  filteredSnapshotByProduct: SnapshotByProductProps[] | []
+  orderedSnapshotByProduct:  SnapshotByProductProps[] | []
+}
+export interface ApiData extends FilteredApiData {
   snapshotByPortfolio: SnapshotByPortfolioProps
   snapshotByProduct: Array<SnapshotByProductProps>
   dailyEquityByPortfolioChartData: Array<DailyEquityByPortfolioChartDataProps>
 
-  filteredSnapshotByProduct: SnapshotByProductProps[] | []
-  orderedSnapshotByProduct:  SnapshotByProductProps[] | []
 }
+
+

@@ -21,7 +21,7 @@ export const FixedIncomeGraphic: React.FC = () => {
     return gradient
   }
 
-  const DATA = currentData?.dailyEquityByPortfolioChartData.map(item => item.value)
+  const DATA = currentData?.dailyEquityByPortfolioChartData.map(item => item.correctedQuota)
 
   const GRAPHIC_DATA_CONFIG = {
     labels: ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'],
