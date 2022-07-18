@@ -1,12 +1,12 @@
 import React from "react";
-import circleIcon from "../assets/iconCircle.svg";
-import pieIcon from "../assets/iconPie.svg";
-import moneyIcon from "../assets/iconMoney.svg";
-import dummbellIcon from "../assets/iconDummbell.svg";
-import diamondIcon from "../assets/iconDiamond.svg";
-import tvIcon from "../assets/iconTv.svg";
-import targetIcon from "../assets/icontarget.svg";
-import lockerIcon from "../assets/iconLocker.svg";
+import circleIcon from "../../assets/iconCircle.svg";
+import pieIcon from "../../assets/iconPie.svg";
+import moneyIcon from "../../assets/iconMoney.svg";
+import dummbellIcon from "../../assets/iconDummbell.svg";
+import diamondIcon from "../../assets/iconDiamond.svg";
+import tvIcon from "../../assets/iconTv.svg";
+import targetIcon from "../../assets/icontarget.svg";
+import lockerIcon from "../../assets/iconLocker.svg";
 import * as RiIcons from "react-icons/ri";
 import * as BsIcons from "react-icons/bs";
 

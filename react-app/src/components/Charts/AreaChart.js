@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import chart from "../assets/areaChart.svg";
+import chart from "../../assets/areaChart.svg";
 
 const AreaChart = () => {
   return (

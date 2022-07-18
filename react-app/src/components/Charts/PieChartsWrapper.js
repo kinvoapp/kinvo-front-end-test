@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import pieChart1 from "../assets/pieChart1.png";
-import pieChart2 from "../assets/pieChart2.png";
+import pieChart1 from "../../assets/pieChart1.png";
+import pieChart2 from "../../assets/pieChart2.png";
 
 const PieChartsWrapper = () => {
   return (

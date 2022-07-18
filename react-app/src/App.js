@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import "./App.css";
 import logo from "./assets/logoPremium.png";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import HeaderCardsWrapper from "./components/Header/HeaderCardsWrapper";
-import AreaChart from "./components/AreaChart";
-import RendaFixaList from "./components/Products/ProductsList";
-import PieChartsWrapper from "./components/PieChartsWrapper";
+import AreaChart from "./components/Charts/AreaChart";
+import ProductsList from "./components/Products/ProductsList";
+import PieChartsWrapper from "./components/Charts/PieChartsWrapper";
 
 import NavCardsWrapper from "./components/Navbar/NavCardsWrapper";
 
@@ -21,7 +21,7 @@ function App() {
         <ContentWrapper>
           <HeaderCardsWrapper />
           <AreaChart />
-          <RendaFixaList />
+          <ProductsList />
           <PieChartsWrapper />
         </ContentWrapper>
       </Wrapper>
