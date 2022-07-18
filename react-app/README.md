@@ -1,6 +1,6 @@
 # Desafio Front-end Web Kinvo
 
-Projeto feito para a vaga de Desenvolvedor Front-end Pleno da Kinvo.
+Projeto feito para a vaga de Desenvolvedor Front-end Pleno do Kinvo.
 
 ## Installing / Getting started
 
