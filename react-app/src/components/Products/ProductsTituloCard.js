@@ -2,20 +2,18 @@ import styled from "@emotion/styled";
 import React from "react";
 
 const ProductsTituloCard = ({ data }) => {
-  
-    return (
-      <Container>
-        <CardInfoWrapper>
-          <Title>TÍTULO</Title>
-          <Subtitle>{data.name}</Subtitle>
-        </CardInfoWrapper>
-        <CardDescripWrapper>
-          <Class>CLASSE</Class>
-          <Tipo>{data.bondType}</Tipo>
-        </CardDescripWrapper>
-      </Container>
-    );
-  
+  return (
+    <Container>
+      <CardInfoWrapper>
+        <Title>TÍTULO</Title>
+        <Subtitle>{data.name}</Subtitle>
+      </CardInfoWrapper>
+      <CardDescripWrapper>
+        <Class>CLASSE</Class>
+        <Tipo>{data.bondType}</Tipo>
+      </CardDescripWrapper>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -39,12 +37,14 @@ const Title = styled.div`
 const Subtitle = styled.div`
   font-size: 11px;
   color: #9b9b9b;
-  width: 60%;
 `;
 const CardDescripWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-end;
+  width: 250px;
+  margin-right: 20px;
 `;
 const Class = styled.div`
   font-size: 9px;
@@ -52,7 +52,6 @@ const Class = styled.div`
 `;
 const Tipo = styled.div`
   font-size: 14px;
-  font-weight: bold;
   color: #4c309b;
   margin-bottom: 4px;
 `;
