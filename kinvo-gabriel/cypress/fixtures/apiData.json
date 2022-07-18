@@ -1,0 +1,278 @@
+{
+  "snapshotByPortfolio": {
+    "equity": 207653.1,
+    "valueApplied": 170025.64,
+    "equityProfit": 37638.46,
+    "percentageProfit": 25.08,
+    "indexerValue": 23.68,
+    "percentageOverIndexer": 321
+  },
+  "dailyEquityByPortfolioChartData": [
+    {
+      "correctedQuota": 100,
+      "dailyReferenceDate": 1491782400,
+      "movementTypeId": 1,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 24500.6
+    },
+    {
+      "correctedQuota": 100.33,
+      "dailyReferenceDate": 1491868800,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 100.66,
+      "dailyReferenceDate": 1491955200,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 100.99,
+      "dailyReferenceDate": 1492041600,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 101.32,
+      "dailyReferenceDate": 1492387200,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 264.26,
+      "dailyReferenceDate": 1531094400,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 105.36,
+      "dailyReferenceDate": 1532995200,
+      "movementTypeId": 0,
+      "portfolioProductId": 3217092,
+      "productName": "CDB Pré XP INVESTIMENTOS CCTVM (9,5% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 106.05,
+      "dailyReferenceDate": 1535068800,
+      "movementTypeId": 0,
+      "portfolioProductId": 3217092,
+      "productName": "CDB Pré XP INVESTIMENTOS CCTVM (9,5% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 117.91,
+      "dailyReferenceDate": 1594598400,
+      "movementTypeId": 0,
+      "portfolioProductId": 2068820,
+      "productName": "Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 1348.93,
+      "dailyReferenceDate": 1598486400,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    },
+    {
+      "correctedQuota": 1867.35,
+      "dailyReferenceDate": 1612742400,
+      "movementTypeId": 0,
+      "portfolioProductId": 7268590,
+      "productName": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+      "value": 0
+    }
+  ],
+  "snapshotByProduct": [
+    {
+      "due": {
+        "date": "14/08/2024",
+        "daysUntilExpiration": 1276
+      },
+      "fixedIncome": {
+        "bondType": "Tesouro Direto",
+        "name": "Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+        "portfolioProductId": 2068820
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 63894.24,
+        "indexerLabel": "CDI",
+        "indexerValue": 14.06,
+        "percentageOverIndexer": 141.05,
+        "portfolioPercentage": 12.05,
+        "profitability": 19.83,
+        "valueApplied": 69970.57
+      },
+      "productHasQuotation": 1
+    },
+    {
+      "due": {
+        "date": "14/08/2024",
+        "daysUntilExpiration": 1276
+      },
+      "fixedIncome": {
+        "bondType": "Renda Fixa Pré",
+        "name": "CDB Pré XP INVESTIMENTOS CCTVM (9,5% a.a.)",
+        "portfolioProductId": 3217092
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 8936.01,
+        "indexerLabel": "CDI",
+        "indexerValue": 16.1,
+        "percentageOverIndexer": 201.19,
+        "portfolioPercentage": 1.64,
+        "profitability": 32.39,
+        "valueApplied": 6750
+      },
+      "productHasQuotation": 1
+    },
+    {
+      "due": {
+        "date": "10/04/2021",
+        "daysUntilExpiration": 54
+      },
+      "fixedIncome": {
+        "bondType": "Renda Fixa Pós",
+        "name": "LC XP INVESTIMENTOS CCTVM (CDI + 104% a.a.)",
+        "portfolioProductId": 7268590
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 457511.14,
+        "indexerLabel": "CDI",
+        "indexerValue": 23.59,
+        "percentageOverIndexer": 7492.81,
+        "portfolioPercentage": 84.12,
+        "profitability": 1767.35,
+        "valueApplied": 24500.6
+      },
+      "productHasQuotation": 1
+    },
+    {
+      "due": {
+        "date": "10/12/2025",
+        "daysUntilExpiration": 1759
+      },
+      "fixedIncome": {
+        "bondType": "Renda Fixa Pós",
+        "name": "CDB Banco C6 (102% do CDI)",
+        "portfolioProductId": 16554471
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 5015.26,
+        "indexerLabel": "CDI",
+        "indexerValue": 0.31,
+        "percentageOverIndexer": 99.51,
+        "portfolioPercentage": 0.92,
+        "profitability": 0.31,
+        "valueApplied": 5000
+      },
+      "productHasQuotation": 1
+    },
+    {
+      "due": {
+        "date": "07/12/2025",
+        "daysUntilExpiration": 1756
+      },
+      "fixedIncome": {
+        "bondType": "Renda Fixa Pós",
+        "name": "CDB BANCO SANTANDER (99% do CDI)",
+        "portfolioProductId": 16554472
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 7022.29,
+        "indexerLabel": "CDI",
+        "indexerValue": 0.33,
+        "percentageOverIndexer": 96.74,
+        "portfolioPercentage": 1.29,
+        "profitability": 0.32,
+        "valueApplied": 7000
+      },
+      "productHasQuotation": 1
+    },
+    {
+      "due": {
+        "date": "21/11/2026",
+        "daysUntilExpiration": 2105
+      },
+      "fixedIncome": {
+        "bondType": "Renda Fixa Pré",
+        "name": "CDB Pré BANCO SOFISA (7,05% a.a.)",
+        "portfolioProductId": 16554473
+      },
+      "hasBalance": 1,
+      "position": {
+        "equity": 1521.65,
+        "indexerLabel": "CDI",
+        "indexerValue": 0.4,
+        "percentageOverIndexer": 357.1,
+        "portfolioPercentage": 0.28,
+        "profitability": 1.44,
+        "valueApplied": 1500
+      },
+      "productHasQuotation": 1
+    }
+  ],
+  "filteredSnapshotByProduct": [{
+    "due": {
+      "date": "14/08/2024",
+      "daysUntilExpiration": 1276
+    },
+    "fixedIncome": {
+      "bondType": "Tesouro Direto",
+      "name": "Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+      "portfolioProductId": 2068820
+    },
+    "hasBalance": 1,
+    "position": {
+      "equity": 63894.24,
+      "indexerLabel": "CDI",
+      "indexerValue": 14.06,
+      "percentageOverIndexer": 141.05,
+      "portfolioPercentage": 12.05,
+      "profitability": 19.83,
+      "valueApplied": 69970.57
+    },
+    "productHasQuotation": 1
+  }],
+  "orderedSnapshotByProduct":  [{
+    "due": {
+      "date": "14/08/2024",
+      "daysUntilExpiration": 1276
+    },
+    "fixedIncome": {
+      "bondType": "Tesouro Direto",
+      "name": "Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)",
+      "portfolioProductId": 2068820
+    },
+    "hasBalance": 1,
+    "position": {
+      "equity": 63894.24,
+      "indexerLabel": "CDI",
+      "indexerValue": 14.06,
+      "percentageOverIndexer": 141.05,
+      "portfolioPercentage": 12.05,
+      "profitability": 19.83,
+      "valueApplied": 69970.57
+    },
+    "productHasQuotation": 1
+  }]
+}
