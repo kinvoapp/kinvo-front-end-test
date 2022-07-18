@@ -28,12 +28,16 @@ const ProductsList = () => {
           .toLowerCase()
           .includes(searchValue.toLowerCase());
       })
-    : data;
+    :  data;
+
+    //.sort((a, b) => a.due.daysUntilExpiration - b.due.daysUntilExpiration)
 
   return (
     <Container>
       <H1>Minhas Rendas Fixas</H1>
+      
       <InputWrapper>
+    
         <TextInput
           searchValue={searchValue}
           data={filteredData}
