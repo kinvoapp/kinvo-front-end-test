@@ -40,6 +40,7 @@ const Input = styled.input`
   padding: 5px 10px;
   border: none;
   outline: none;
+  
 `;
 
 export default TextInput;

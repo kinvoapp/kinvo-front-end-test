@@ -1,23 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const SelectInput = ({ searchValue, handleChange, data }) => {
+const SelectInput = ({ handleSort }) => {
   return (
     <Container>
-      <Input
-        onChange={handleChange}
-        value={searchValue}
-        type="select"
-        placeholder="Classe"
-      >
-        {data.map((item) => {
-          return (
-            <option value={item.fixedIncome.bondType}>
-              {item.fixedIncome.bondType}
-            </option>
-          );
-        })}
-      </Input>
+      <Border>
+        <Input onChange={handleSort} type="select">
+          <option disabled selected>Ordenar por</option>
+          <option>Vencimento</option>
+        </Input>
+      </Border>
     </Container>
   );
 };
@@ -28,11 +20,22 @@ const Container = styled.div`
   margin-right: 20px;
 `;
 
+const Border = styled.div`
+  display: flex;
+  align-items: center;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 8px;
+`;
+
 const Input = styled.select`
   border-radius: 10px;
-  width: 240px;
   height: 32px;
-  font-size: 10px;
+  border: none;
+  font-size: 12px;
+  color: #627179;
+  font-weight: bold;
+  background-color: white;
   padding: 5px 10px;
 `;
 

@@ -2,10 +2,12 @@ import styled from "@emotion/styled";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TextInput from "../TextInput";
+import SelectInput from "../SelectInput";
 import ProductsListCard from "./ProductsListCards";
 
 const ProductsList = () => {
   const [data, setData] = useState([]);
+  const [sort, setSort] = useState(true);
   const [searchValue, setSearchValue] = useState("");
 
   const URL =
@@ -22,31 +24,43 @@ const ProductsList = () => {
     setSearchValue(value);
   };
 
+  const handleSort = () => {
+    setSort(!sort);
+  };
+
   const filteredData = searchValue
     ? data.filter((data) => {
         return data.fixedIncome.name
           .toLowerCase()
           .includes(searchValue.toLowerCase());
       })
-    :  data;
+    : data;
 
-    //.sort((a, b) => a.due.daysUntilExpiration - b.due.daysUntilExpiration)
-
+  //.sort((a, b) => a.due.daysUntilExpiration - b.due.daysUntilExpiration)
+  console.log("o valor de sort: ", sort);
   return (
     <Container>
       <H1>Minhas Rendas Fixas</H1>
-      
+
       <InputWrapper>
-    
+        <SelectInput handleSort={handleSort} />
         <TextInput
           searchValue={searchValue}
           data={filteredData}
           handleChange={handleChange}
         />
       </InputWrapper>
-      {filteredData.map((item) => {
-        return <ProductsListCard data={item} />;
-      })}
+      {sort
+        ? filteredData.map((item) => {
+            return <ProductsListCard data={item} />;
+          })
+        : filteredData
+            .sort(
+              (a, b) => a.due.daysUntilExpiration - b.due.daysUntilExpiration
+            )
+            .map((item) => {
+              return <ProductsListCard data={item} />;
+            })}
     </Container>
   );
 };
@@ -67,6 +81,8 @@ const H1 = styled.div`
 
 const InputWrapper = styled.div`
   margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export default ProductsList;
