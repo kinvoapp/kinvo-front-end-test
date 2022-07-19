@@ -2,7 +2,7 @@ import React from "react";
 import HeaderCardsWrapper from "../components/Header/HeaderCardsWrapper";
 import AreaChart from "../components/Charts/AreaChart";
 import ProductsList from "../components/Products/ProductsList";
-import PieChartsWrapper from "../components/Charts/PieChartsWrapper";
+import DoughnutChartsWrapper from "../components/Charts/DoughnutChartsWrapper";
 import styled from "styled-components";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <HeaderCardsWrapper />
       <AreaChart />
       <ProductsList />
-      <PieChartsWrapper />
+      <DoughnutChartsWrapper />
     </Container>
   );
 };

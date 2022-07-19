@@ -12,4 +12,4 @@ Projeto feito para a vaga de Desenvolvedor Front-end Pleno do Kinvo.
     
 ## Built With
 
-ReactJS | Styled Components 
+ReactJS | Styled Components | React-charts.js-2

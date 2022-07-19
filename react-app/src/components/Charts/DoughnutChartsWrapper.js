@@ -1,16 +1,16 @@
 import styled from "@emotion/styled";
 import React from "react";
-import pieChart1 from "../../assets/pieChart1.png";
-import pieChart2 from "../../assets/pieChart2.png";
+import DoughnutChartTitle from "./DoughnutChartTitle";
+import DoughnutChartType from "./DoughnutChartType";
 
 const PieChartsWrapper = () => {
   return (
     <Container>
       <PieChartWrapper>
-        <PieChart1 />
+        <DoughnutChartType />
       </PieChartWrapper>
       <PieChartWrapper>
-        <PieChart2 />
+        <DoughnutChartTitle />
       </PieChartWrapper>
     </Container>
   );
@@ -27,22 +27,10 @@ const Container = styled.div`
 const PieChartWrapper = styled.div`
   background: white;
   width: 540px;
-  height: 450px;
+  height: 550px;
 
   border-radius: 8px;
 `;
 
-const PieChart1 = styled.image`
-  background-position-x: center;
-  background-image: url(${pieChart1});
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  display: table;
-`;
-
-const PieChart2 = styled(PieChart1)`
-  background-image: url(${pieChart2});
-`;
 
 export default PieChartsWrapper;

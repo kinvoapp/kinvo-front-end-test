@@ -14,7 +14,6 @@ const NavCardsWrapper = () => {
   const URL =
     "https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData";
 
-  console.log(data);
 
   useEffect(() => {
     axios.get(URL).then((response) => {

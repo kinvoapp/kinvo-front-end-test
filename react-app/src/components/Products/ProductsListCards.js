@@ -5,13 +5,12 @@ import RendaFixaTituloCard from "./ProductsTituloCard";
 import RendaFixaVencimentoCard from "./ProductsVencimentoCard";
 
 const ProductsListCards = ({ data }) => {
-  console.log("a data em Lists é: ", data);
   if (data.fixedIncome && data.due && data.position) {
     return (
       <Container>
         <RendaFixaTituloCard data={data.fixedIncome} />
         <RendaFixaPosicaoCard data={data.position} />
-        <RendaFixaVencimentoCard data={data.due}/>
+        <RendaFixaVencimentoCard data={data.due} />
       </Container>
     );
   }

@@ -9,7 +9,6 @@ const SubMenu = ({ item }) => {
     setSubNav(!subNav);
   };
 
-  console.log(item);
   return (
     <div>
       <SidebarLink active={subNav} onClick={item.subNav && showSubNav}>
