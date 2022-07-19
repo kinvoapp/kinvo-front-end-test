@@ -21,7 +21,7 @@ const Sidebar = () => {
 const SidebarNav = styled.nav`
   background: white;
   width: 227px;
-  height: 1727px;
+  min-height: 1900px;
   display: flex;
   justify-content: center;
 `;

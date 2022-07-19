@@ -2,12 +2,9 @@ import styled from "styled-components";
 import "./App.css";
 import logo from "./assets/logoPremium.png";
 import Sidebar from "./components/Sidebar/Sidebar";
-import HeaderCardsWrapper from "./components/Header/HeaderCardsWrapper";
-import AreaChart from "./components/Charts/AreaChart";
-import ProductsList from "./components/Products/ProductsList";
-import PieChartsWrapper from "./components/Charts/PieChartsWrapper";
 
 import NavCardsWrapper from "./components/Navbar/NavCardsWrapper";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -16,15 +13,10 @@ function App() {
         <Logo />
         <NavCardsWrapper />
       </Header>
-      <Wrapper>
+      <Main>
         <Sidebar />
-        <ContentWrapper>
-          <HeaderCardsWrapper />
-          <AreaChart />
-          <ProductsList />
-          <PieChartsWrapper />
-        </ContentWrapper>
-      </Wrapper>
+        <Home />
+      </Main>
     </div>
   );
 }
@@ -51,14 +43,8 @@ const Logo = styled.image`
   float: left;
 `;
 
-const Wrapper = styled.section`
+const Main = styled.section`
   display: flex;
-`;
-
-const ContentWrapper = styled.section`
-  padding: 38px;
-  width: 1090px;
-  margin-left: 5vw;
 `;
 
 export default App;
