@@ -8,6 +8,10 @@ import { useFeatch } from '../src/hooks/useFeatch';
 import MyLace from '../src/components/Siderbar/myLace';
 import Graphic from '../src/components/Siderbar/graphic';
 
+import { useQuery } from 'react-query'
+import axios from 'axios';
+import GraphicBol from '../src/components/Siderbar/graphicBol';
+
 
 
 interface snapshotByPortfolioProps {
@@ -22,9 +26,13 @@ interface snapshotByPortfolioProps {
 
 const Home: NextPage = () => {
 
-  const { value } = useFeatch<snapshotByPortfolioProps[]>('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
-  console.log("🚀 ~ value", value)
 
+  const { data } = useQuery<snapshotByPortfolioProps>('list', async () => {
+    const response = await axios.get('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
+
+    return response
+  })
+  const value = data?.data.data.snapshotByPortfolio
 
   return (
 
@@ -56,16 +64,17 @@ const Home: NextPage = () => {
             </Box>
 
             <Flex w='100%' justifyContent='space-between' paddingRight='1rem'>
-              <Card title={'saldo bruto'} money={value?.snapshotByPortfolio.equity} />
-              <Card title={'valor aplicado'} money={value?.snapshotByPortfolio.equityProfit} />
-              <Card title={'resultado'} money={value?.snapshotByPortfolio.indexerValue} />
-              <Card title={'Rentabilidade'} money={value?.snapshotByPortfolio.percentageOverIndexer} />
-              <Card title={'CDI'} money={value?.snapshotByPortfolio.valueApplied} />
-              <Card title={'% sobre CDI'} money={value?.snapshotByPortfolio.percentageProfit} />
+              <Card title={'saldo bruto'} money={value?.equity} />
+              <Card title={'valor aplicado'} money={value?.equityProfit} />
+              <Card title={'resultado'} money={value?.indexerValue} />
+              <Card title={'Rentabilidade'} money={value?.percentageOverIndexer} />
+              <Card title={'CDI'} money={value?.valueApplied} />
+              <Card title={'% sobre CDI'} money={value?.percentageProfit} />
 
             </Flex>
             <Graphic />
             <MyLace />
+            <GraphicBol />
           </GridItem>
         </Grid>
       </Flex>

@@ -1,37 +1,64 @@
-import { Box, Flex, Icon, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Text } from "@chakra-ui/react";
 import { FiSearch } from 'react-icons/fi';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
-import { useFeatch } from "../../hooks/useFeatch";
+import CardTab from "../CardTab/cardTab";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useQuery } from "react-query";
+import CardInvest from "../CardTab/CardInvest";
+import CardDate from "../CardTab/CardDate";
 
 interface snapshotByProductProps {
-    snapshotByProduct:{
-        due: {
-            date: string
-            daysUntilExpiration: number
-        },
-        fixedIncome: {
-            bondType: string
-            name: string
-            portfolioProductId: number
-        },
-        position: {
-            equity: number
-            indexerLabel: string
-            indexerValue: number
-            percentageOverIndexer: number
-            portfolioPercentage: number
-            profitability: number
-            valueApplied: number
+    data: {
+        data: {
+            snapshotByProduct: {
+                due: {
+                    date: string
+                    daysUntilExpiration: number
+                },
+                fixedIncome: {
+                    bondType: string
+                    name: string
+                    portfolioProductId: number
+                },
+                position: {
+                    equity: number
+                    indexerLabel: string
+                    indexerValue: number
+                    percentageOverIndexer: number
+                    portfolioPercentage: number
+                    profitability: number
+                    valueApplied: number
+                }
+            }
         }
     }
-    
+
+
 }
 
 export default function MyLace() {
+    const [repos,setRepos] = useState([])
+    const [searchFilter,setSeachFilter] = useState([])
+    const [search,setSeach] = useState('')
 
-  const { value } = useFeatch<snapshotByProductProps[]>('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
-  console.log("🚀 ~ value", value?.snapshotByProduct)
-  
+
+    useEffect(() => {
+        fetch('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
+        .then(response => response.json())
+        .then(data => setRepos(data))
+        
+    }, []);
+
+    const { data } = useQuery('Mylace', async () => {
+        const response = await axios.get('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
+
+        return response
+    })
+    const value = data?.data.data.snapshotByProduct
+   
+
+    const index = [0,1,2,3,4,5,6]
 
 
     return (
@@ -45,9 +72,8 @@ export default function MyLace() {
                     <Flex paddingRight={5} gap={4}>
 
                         <Select placeholder='Ordenar por'>
-                            <option value='option1'>Option 1</option>
-                            <option value='option2'>Option 2</option>
-                            <option value='option3'>Option 3</option>
+                            <option value='option1'>Descrecente</option>
+                            <option value='option2'>Crecente</option>
                         </Select>
 
                         <Stack spacing={4}>
@@ -57,87 +83,94 @@ export default function MyLace() {
                                     // eslint-disable-next-line react/no-children-prop
                                     children={<FiSearch color='gray.300' />}
                                 />
-                                <Input type='search' />
+                                <Input type='search' value={repos} onChange={(e:any) => setRepos(e.target.value)}/>
                             </InputGroup>
                         </Stack>
                     </Flex>
 
                 </Flex>
-                <Flex p={5} justifyContent='space-between' gap={2}>
-                    <Flex border='solid 1px #DAE0E3' borderRadius='1rem' p={4}>
-                        <Box >
-                            <Flex gap={2} alignItems='center' paddingBottom={5}>
-                                <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Title</Text>
-                                <AiOutlineInfoCircle />
-                            </Flex>
-                            <Flex justifyContent='space-between' gap={10} w='100%'>
-                                <Box>
-                                    <Text fontSize={12} w='12rem' fontWeight='lighter'>Tesouro IPCA+ com Juros Semestrais 2024 (NTNB)</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Classe</Text>
-                                    <Text fontSize={12} w='6rem' fontWeight='lighter' textColor='#8A51BA'>Tesouro Direto</Text>
-                                </Box>
-                            </Flex>
-                        </Box>
-                    </Flex>
+                <Box p={5} justifyContent='space-between' gap={2} display='flex' flexDirection='column'>
+                    
+                            {search.length > 0 ? (
+                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
+                                {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
+                                    return (
+                                        <CardTab key={fixe} description={fixe.name
+                                        } name={fixe.bondType} />
+                                    )
+                                })}
 
-                    <Flex border='solid 1px #DAE0E3' borderRadius='1rem' p={4} >
-                        <Box>
-                            <Flex gap={2} alignItems='center' paddingBottom={5}>
-                                <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>MINHA POSIÇÃO</Text>
-                                <AiOutlineInfoCircle />
-                            </Flex>
-                            <Flex justifyContent='space-between' gap={5} w='100%'>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Valor inves.</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Saldo bruto</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Rent.</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>% da cart.</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>CDI</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Sobre CDI</Text>
-                                    <Text fontWeight='lighter' textColor='#38BFA0'>1.300,00</Text>
-                                </Box>
-                            </Flex>
-                        </Box>
-                    </Flex>
+                                {value?.map((items: any) => items.position).map((position: any) => {
+                                    return (
+                                        <CardInvest
+                                            key={position}
+                                            equity={position.equity}
+                                            indexerValue={position.indexerValue}
+                                            percentageOverIndexer={position.percentageOverIndexer}
+                                            portfolioPercentage={position.portfolioPercentage}
+                                            profitability={position.profitability}
+                                            valueApplied={position.valueApplied}
+                                        />
+                                    )
+                                })}
+                                <CardInvest
+                                    equity={0}
+                                    indexerValue={0}
+                                    percentageOverIndexer={0}
+                                    portfolioPercentage={0}
+                                    profitability={0}
+                                    valueApplied={0}
+                                />
 
-                    <Flex border='solid 1px #DAE0E3' borderRadius='1rem' p={4}>
-                        <Box >
-                            <Flex gap={2} alignItems='center' paddingBottom={5}>
-                                <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>MINHA POSIÇÃO</Text>
-                                <AiOutlineInfoCircle />
-                            </Flex>
-                            <Flex justifyContent='space-between' gap={5}>
-                                <Box>
-                                    <Text fontSize={12} w='7rem' fontWeight='lighter' textTransform='uppercase'>Data venc.</Text>
-                                    <Text fontWeight='lighter' textColor='#008DCB'>07/08/2022</Text>
-                                </Box>
-                                <Box>
-                                    <Text fontSize={12} w='8rem' fontWeight='lighter' textTransform='uppercase'>Dias até venc.</Text>
-                                    <Text fontWeight='lighter' textColor='#008DCB'>6548</Text>
-                                </Box>
+                                {value?.map((items: any) => items.due).map((date: any) => {
+                                    return (
 
-                            </Flex>
-                        </Box>
-                    </Flex>
+                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
+                                    )
+                                })}
 
-                </Flex>
+                            </Grid>
+                            ): (
+                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
+                                {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
+                                    return (
+                                        <CardTab key={fixe} description={fixe.name
+                                        } name={fixe.bondType} />
+                                    )
+                                })}
+
+                                {value?.map((items: any) => items.position).map((position: any) => {
+                                    return (
+                                        <CardInvest
+                                            key={position}
+                                            equity={position.equity}
+                                            indexerValue={position.indexerValue}
+                                            percentageOverIndexer={position.percentageOverIndexer}
+                                            portfolioPercentage={position.portfolioPercentage}
+                                            profitability={position.profitability}
+                                            valueApplied={position.valueApplied}
+                                        />
+                                    )
+                                })}
+                                <CardInvest
+                                    equity={0}
+                                    indexerValue={0}
+                                    percentageOverIndexer={0}
+                                    portfolioPercentage={0}
+                                    profitability={0}
+                                    valueApplied={0}
+                                />
+
+                                {value?.map((items: any) => items.due).map((date: any) => {
+                                    return (
+
+                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
+                                    )
+                                })}
+
+                            </Grid>
+                            )}
+                </Box>
 
             </Box>
 
