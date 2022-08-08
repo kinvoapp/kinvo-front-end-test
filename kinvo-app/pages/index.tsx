@@ -64,12 +64,12 @@ const Home: NextPage = () => {
             </Box>
 
             <Flex w='100%' justifyContent='space-between' paddingRight='1rem'>
-              <Card title={'saldo bruto'} money={value?.equity} />
-              <Card title={'valor aplicado'} money={value?.equityProfit} />
-              <Card title={'resultado'} money={value?.indexerValue} />
-              <Card title={'Rentabilidade'} money={value?.percentageOverIndexer} />
-              <Card title={'CDI'} money={value?.valueApplied} />
-              <Card title={'% sobre CDI'} money={value?.percentageProfit} />
+              <Card title={'saldo bruto'} money={`R$${value?.equity}`} />
+              <Card title={'valor aplicado'} money={`R$${value?.equityProfit}`} />
+              <Card title={'resultado'} money={`R$${value?.indexerValue}`} />
+              <Card title={'Rentabilidade'} money={`${value?.percentageOverIndexer}%`} />
+              <Card title={'CDI'} money={`${value?.valueApplied}%`} />
+              <Card title={'% sobre CDI'} money={`${value?.percentageProfit}%`} />
 
             </Flex>
             <Graphic />

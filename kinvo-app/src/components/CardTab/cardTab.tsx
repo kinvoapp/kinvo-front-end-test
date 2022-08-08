@@ -20,12 +20,12 @@ export default function CardTab({ name, description }: Props) {
         <Flex border='solid 1px #DAE0E3' borderRadius='1rem' p={4}>
             <Box >
                 <Flex gap={2} alignItems='center' paddingBottom={5}>
-                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>MINHA POSIÇÃO</Text>
+                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>TÍTULO</Text>
                     <AiOutlineInfoCircle />
                 </Flex>
                 <Flex justifyContent='space-between' gap={5}>
                     <Box>
-                        <Text fontSize={12} fontWeight='lighter' >{description}</Text>
+                        <Text fontSize={10} fontWeight='lighter' >{description}</Text>
                     </Box>
                     <Box display='flex' flexDirection='column' justifyContent='start'>
                         <Text fontSize={12} w='8rem' fontWeight='lighter' textTransform='uppercase'>CLASSE</Text>

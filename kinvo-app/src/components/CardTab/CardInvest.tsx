@@ -25,11 +25,11 @@ export default function CardInvest({ equity,
                 </Flex>
                 <Flex justifyContent='space-between' gap={5} w='100%'>
                     <Box>
-                        <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Valor inves.</Text>
+                        <Text fontSize={12}  w='5rem' fontWeight='lighter' textTransform='uppercase'>Valor inves.</Text>
                         <Text fontWeight='lighter' textColor='#38BFA0'>{equity}</Text>
                     </Box>
                     <Box>
-                        <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Saldo bruto</Text>
+                        <Text fontSize={12} w='5rem' fontWeight='lighter' textTransform='uppercase'>Saldo bruto</Text>
                         <Text fontWeight='lighter' textColor='#38BFA0'>{valueApplied}</Text>
                     </Box>
                     <Box>
@@ -37,7 +37,7 @@ export default function CardInvest({ equity,
                         <Text fontWeight='lighter' textColor='#38BFA0'>{indexerValue}</Text>
                     </Box>
                     <Box>
-                        <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>% da cart.</Text>
+                        <Text fontSize={12} w='5rem' fontWeight='lighter' textTransform='uppercase'>% da cart.</Text>
                         <Text fontWeight='lighter' textColor='#38BFA0'>{percentageOverIndexer}</Text>
                     </Box>
                     <Box>
@@ -45,7 +45,7 @@ export default function CardInvest({ equity,
                         <Text fontWeight='lighter' textColor='#38BFA0'>{portfolioPercentage}</Text>
                     </Box>
                     <Box>
-                        <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>Sobre CDI</Text>
+                        <Text fontSize={12} w='5rem' fontWeight='lighter' textTransform='uppercase'>Sobre CDI</Text>
                         <Text fontWeight='lighter' textColor='#38BFA0'>{profitability}</Text>
                     </Box>
                 </Flex>

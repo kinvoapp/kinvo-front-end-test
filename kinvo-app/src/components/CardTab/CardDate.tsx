@@ -11,7 +11,7 @@ export default function CardDate({dateVenc,dateDay}: Props) {
         <Flex border='solid 1px #DAE0E3' borderRadius='1rem' p={4}>
             <Box >
                 <Flex gap={2} alignItems='center' paddingBottom={5}>
-                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>MINHA POSIÇÃO</Text>
+                    <Text fontSize={12} fontWeight='lighter' textTransform='uppercase'>VENCIMENTO</Text>
                     <AiOutlineInfoCircle />
                 </Flex>
                 <Flex justifyContent='space-between' gap={5}>

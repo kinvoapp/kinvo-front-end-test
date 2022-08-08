@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import CardInvest from "../CardTab/CardInvest";
 import CardDate from "../CardTab/CardDate";
+import { PaginationItem } from "../pagination/pagination";
+import { Paginations } from "../pagination";
 
 interface snapshotByProductProps {
     data: {
@@ -40,6 +42,7 @@ export default function MyLace() {
     const [repos,setRepos] = useState([])
     const [searchFilter,setSeachFilter] = useState([])
     const [search,setSeach] = useState('')
+    const [ page, setPage] = useState(1)
 
 
     useEffect(() => {
@@ -126,69 +129,12 @@ export default function MyLace() {
                             </tr>
                         </thead>
                     </table>
+
+                    <Paginations 
+                    totalCountOfRegisters={value} 
+                    currentPage={page} 
+                    onPageChange={setPage}/>
                     
-                            {/* {search.length > 0 ? (
-                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
-                                
-
-                                
-                                <CardInvest
-                                    equity={0}
-                                    indexerValue={0}
-                                    percentageOverIndexer={0}
-                                    portfolioPercentage={0}
-                                    profitability={0}
-                                    valueApplied={0}
-                                />
-
-                                {value?.map((items: any) => items.due).map((date: any) => {
-                                    return (
-
-                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
-                                    )
-                                })}
-
-                            </Grid>
-                            ): (
-                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
-                                {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
-                                    return (
-                                        <CardTab key={fixe} description={fixe.name
-                                        } name={fixe.bondType} />
-                                    )
-                                })}
-
-                                {value?.map((items: any) => items.position).map((position: any) => {
-                                    return (
-                                        <CardInvest
-                                            key={position}
-                                            equity={position.equity}
-                                            indexerValue={position.indexerValue}
-                                            percentageOverIndexer={position.percentageOverIndexer}
-                                            portfolioPercentage={position.portfolioPercentage}
-                                            profitability={position.profitability}
-                                            valueApplied={position.valueApplied}
-                                        />
-                                    )
-                                })}
-                                <CardInvest
-                                    equity={0}
-                                    indexerValue={0}
-                                    percentageOverIndexer={0}
-                                    portfolioPercentage={0}
-                                    profitability={0}
-                                    valueApplied={0}
-                                />
-
-                                {value?.map((items: any) => items.due).map((date: any) => {
-                                    return (
-
-                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
-                                    )
-                                })}
-
-                            </Grid>
-                            )} */}
                 </Box>
 
             </Box>
