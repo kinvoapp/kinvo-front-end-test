@@ -1,6 +1,5 @@
 import { Box, Flex, Grid, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Text } from "@chakra-ui/react";
 import { FiSearch } from 'react-icons/fi';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
 import CardTab from "../CardTab/cardTab";
 import axios from "axios";
 import { useState, useEffect } from "react";
