@@ -89,16 +89,18 @@ export default function MyLace() {
 
                 </Flex>
                 <Box p={5} justifyContent='space-between' gap={2} display='flex' flexDirection='column'>
-                    
-                            {search.length > 0 ? (
-                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
                                 {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
                                     return (
                                         <CardTab key={fixe} description={fixe.name
                                         } name={fixe.bondType} />
                                     )
                                 })}
-
+                                </th>
+                                <th>
                                 {value?.map((items: any) => items.position).map((position: any) => {
                                     return (
                                         <CardInvest
@@ -112,6 +114,24 @@ export default function MyLace() {
                                         />
                                     )
                                 })}
+                                </th>
+                                <th>
+                                {value?.map((items: any) => items.due).map((date: any) => {
+                                    return (
+
+                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
+                                    )
+                                })}
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    
+                            {/* {search.length > 0 ? (
+                                <Grid templateColumns='repeat(3, 1fr)' gap={2}>
+                                
+
+                                
                                 <CardInvest
                                     equity={0}
                                     indexerValue={0}
@@ -168,7 +188,7 @@ export default function MyLace() {
                                 })}
 
                             </Grid>
-                            )}
+                            )} */}
                 </Box>
 
             </Box>
