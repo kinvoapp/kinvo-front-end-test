@@ -1,7 +1,12 @@
-import axios from "axios";
-
-const api = axios.create({
-    baseURL: process.env.API_MOCKAPI
-})
-
-export default api
+class RendaFixasService {
+    async getRendaFixas() {
+      const response = await fetch(
+        `https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData`
+      );
+        const responsejson = response.json();
+      return responsejson;
+  
+    }
+  }
+  
+  export default new RendaFixasService();

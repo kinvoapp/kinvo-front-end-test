@@ -2,7 +2,7 @@ import { Box, Flex, Grid, Input, InputGroup, InputLeftElement, InputRightElement
 import { FiSearch } from 'react-icons/fi';
 import CardTab from "../CardTab/cardTab";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "react-query";
 import CardInvest from "../CardTab/CardInvest";
 import CardDate from "../CardTab/CardDate";
@@ -39,29 +39,39 @@ interface snapshotByProductProps {
 }
 
 export default function MyLace() {
-    const [repos,setRepos] = useState([])
-    const [searchFilter,setSeachFilter] = useState([])
-    const [search,setSeach] = useState('')
-    const [ page, setPage] = useState(1)
+    const [value, setValue] = useState([])
+    console.log("🚀 ~ value", value)
+    const [filter, setFilter] = useState([])
+    const [search, setSearch] = useState('')
+    const [orderBy, setOrderBy] = useState('');
 
+    const [page, setPage] = useState(1)
+
+    async function loadRendaFixas() {
+        axios.get('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
+            .then(response => setValue(response.data.data.snapshotByProduct));
+    }
+
+    const filteredProducts = useMemo(() => {
+
+        if (!filter)
+            return value.sort((a, b) => b.position[orderBy] - a.position[orderBy]);
+
+        return value
+            .sort((a, b) => b.position[orderBy] - a.position[orderBy])
+            .filter((rendaFixa) =>
+                rendaFixa.fixedIncome.name.toLowerCase().includes(filter)
+            );
+    }, [filter, value, orderBy]);
 
     useEffect(() => {
-        fetch('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
-        .then(response => response.json())
-        .then(data => setRepos(data))
-        
+        loadRendaFixas()
+
     }, []);
 
-    const { data } = useQuery('Mylace', async () => {
-        const response = await axios.get('https://6270328d6a36d4d62c16327c.mockapi.io/getFixedIncomeClassData')
-
-        return response
-    })
-    const value = data?.data.data.snapshotByProduct
-   
-
-    const index = [0,1,2,3,4,5,6]
-
+    useEffect(() => {
+        setFilter(value?.filter(value => value.fixedIncome.name.toLowerCase().includes(search.toLowerCase())))
+    }, [search]);
 
     return (
         <>
@@ -73,68 +83,97 @@ export default function MyLace() {
 
                     <Flex paddingRight={5} gap={4}>
 
-                        <Select placeholder='Ordenar por'>
-                            <option value='option1'>Descrecente</option>
-                            <option value='option2'>Crecente</option>
+                        <Select
+                            value={orderBy}
+                            onChange={(e) => setOrderBy(e.target.value)}
+                        >
+                            <option value="" disabled hidden>
+                                Ordernar por
+                            </option>
+                            <option value="valueApplied">Valor Investido</option>
+                            <option value="equity">Saldo Bruto</option>
+                            <option value="profitability">Rentabilidade</option>
+                            <option value="portfolioPercentage">% da Carteira</option>
                         </Select>
 
                         <Stack spacing={4}>
-                            <InputGroup>
-                                <InputLeftElement
-                                    pointerEvents='none'
-                                    // eslint-disable-next-line react/no-children-prop
-                                    children={<FiSearch color='gray.300' />}
-                                />
-                                <Input type='search' value={repos} onChange={(e:any) => setRepos(e.target.value)}/>
-                            </InputGroup>
+                            <Input
+                                placeholder='Basic usage'
+                                value={search}
+                                onChange={e => setSearch(e.target.value)}
+                            />
                         </Stack>
                     </Flex>
 
                 </Flex>
                 <Box p={5} justifyContent='space-between' gap={2} display='flex' flexDirection='column'>
                     <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
+                        {search.length > 0 ? (
+                            <thead>
+                                {filter?.map(item => {
                                     return (
-                                        <CardTab key={fixe} description={fixe.name
-                                        } name={fixe.bondType} />
-                                    )
-                                })}
-                                </th>
-                                <th>
-                                {value?.map((items: any) => items.position).map((position: any) => {
-                                    return (
-                                        <CardInvest
-                                            key={position}
-                                            equity={position.equity}
-                                            indexerValue={position.indexerValue}
-                                            percentageOverIndexer={position.percentageOverIndexer}
-                                            portfolioPercentage={position.portfolioPercentage}
-                                            profitability={position.profitability}
-                                            valueApplied={position.valueApplied}
-                                        />
-                                    )
-                                })}
-                                </th>
-                                <th>
-                                {value?.map((items: any) => items.due).map((date: any) => {
-                                    return (
+                                        <>
+                                            <tr key={item}>
+                                                <th>
+                                                    <CardTab description={item.fixedIncome.name} name={item.fixedIncome.bondType} />
+                                                </th>
+                                                <th>
+                                                    <CardInvest
 
-                                        <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
+                                                        equity={item.position.equity}
+                                                        indexerValue={item.position.indexerValue}
+                                                        percentageOverIndexer={item.position.percentageOverIndexer}
+                                                        portfolioPercentage={item.position.portfolioPercentage}
+                                                        profitability={item.position.profitability}
+                                                        valueApplied={item.position.valueApplied}
+                                                    />
+                                                </th>
+                                                <th>
+                                                    <CardDate dateVenc={item.due.date} dateDay={item.due.daysUntilExpiration} />
+                                                </th>
+                                            </tr>
+                                        </>
                                     )
                                 })}
-                                </th>
-                            </tr>
-                        </thead>
+
+                            </thead>
+                        ) : (
+                            <thead>
+                                {value?.map(item => {
+                                    return (
+                                        <>
+                                            <tr key={item}>
+                                                <th>
+                                                    <CardTab description={item.fixedIncome.name} name={item.fixedIncome.bondType} />
+                                                </th>
+                                                <th>
+                                                    <CardInvest
+
+                                                        equity={item.position.equity}
+                                                        indexerValue={item.position.indexerValue}
+                                                        percentageOverIndexer={item.position.percentageOverIndexer}
+                                                        portfolioPercentage={item.position.portfolioPercentage}
+                                                        profitability={item.position.profitability}
+                                                        valueApplied={item.position.valueApplied}
+                                                    />
+                                                </th>
+                                                <th>
+                                                    <CardDate dateVenc={item.due.date} dateDay={item.due.daysUntilExpiration} />
+                                                </th>
+                                            </tr>
+                                        </>
+                                    )
+                                })}
+
+                            </thead>
+                        )}
                     </table>
 
-                    <Paginations 
-                    totalCountOfRegisters={value} 
-                    currentPage={page} 
-                    onPageChange={setPage}/>
-                    
+                    <Paginations
+                        totalCountOfRegisters={value}
+                        currentPage={page}
+                        onPageChange={setPage} />
+
                 </Box>
 
             </Box>
@@ -144,3 +183,42 @@ export default function MyLace() {
 
     )
 }
+
+
+{/* <table>
+<thead>
+    <tr>
+        <th>
+            {value?.map((items: any) => items.fixedIncome).map((fixe: any) => {
+                return (
+                    <CardTab key={fixe} description={fixe.name
+                    } name={fixe.bondType} />
+                )
+            })}
+        </th>
+        <th>
+            {value?.map((items: any) => items.position).map((position: any) => {
+                return (
+                    <CardInvest
+                        key={position}
+                        equity={position.equity}
+                        indexerValue={position.indexerValue}
+                        percentageOverIndexer={position.percentageOverIndexer}
+                        portfolioPercentage={position.portfolioPercentage}
+                        profitability={position.profitability}
+                        valueApplied={position.valueApplied}
+                    />
+                )
+            })}
+        </th>
+        <th>
+            {value?.map((items: any) => items.due).map((date: any) => {
+                return (
+
+                    <CardDate key={date} dateVenc={date.date} dateDay={date.daysUntilExpiration} />
+                )
+            })}
+        </th>
+    </tr>
+</thead>
+</table> */}
