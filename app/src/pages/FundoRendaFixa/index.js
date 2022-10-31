@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderCards from './components/headerCards';
 import ProfitabilityChart from './components/profitabilityChart';
+import FixedIncome from './components/fixedIncome';
 
 export default function RendaFixa() {
   return (
@@ -11,9 +12,12 @@ export default function RendaFixa() {
         <HeaderCards />
       </Header>
       <Charts>
-        <h1>Rentabilidade dos titulos</h1>
+        <h3>Rentabilidade dos Titulos</h3>
         <ProfitabilityChart />
       </Charts>
+      <MyFixedIncome>
+        <FixedIncome />
+      </MyFixedIncome>
     </Container>
   );
 }
@@ -27,18 +31,24 @@ const Container = styled.main`
   }
 `;
 
-const Header = styled.div`
+const Header = styled.section`
   display: flex;
   margin: 20px 0;
 `;
 
-const Charts = styled.div`
+const Charts = styled.section`
   background: #fff;
   padding: 15px;
   border-radius: 10px;
 
-  h1 {
+  h3 {
     color: #707b81;
     margin-bottom: 15px;
   }
+`;
+
+const MyFixedIncome = styled.section`
+  background: #fff;
+  margin: 10px 0;
+  border-radius: 10px;
 `;
