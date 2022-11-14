@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderCards from './components/headerCards';
-import ProfitabilityChart from './components/profitabilityChart';
-import FixedIncome from './components/fixedIncome';
+import HeaderCards from './components/headerCards/headerCards';
+import ProfitabilityChart from './components/charts/profitabilityChart';
+import FixedIncome from './components/fixedIncome/fixedIncome';
 
 export default function RendaFixa() {
   return (

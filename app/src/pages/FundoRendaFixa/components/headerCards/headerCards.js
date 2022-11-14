@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import axios from '../../../services/axios';
+import axios from '../../../../services/axios';
 import CardsWrapper from './headerCardsWrapper';
 
 export default function HeaderCards() {

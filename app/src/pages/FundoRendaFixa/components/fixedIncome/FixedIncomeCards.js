@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
 
-export default function FixedIncomeWrapper(props) {
+export default function FixedIncomeCards(data) {
   return (
     <>
       <Titulo>
@@ -12,9 +12,9 @@ export default function FixedIncomeWrapper(props) {
           TÍTULO <IconInformation size={20} />
         </Title>
         <div>
-          <h6>{props.title}</h6>
+          <h6>{data.data.fixedIncome.name}</h6>
           <p>
-            CLASSE <span>{props.class}</span>
+            CLASSE <span>{data.data.fixedIncome.bondType}</span>
           </p>
         </div>
       </Titulo>
@@ -24,22 +24,22 @@ export default function FixedIncomeWrapper(props) {
         </Title>
         <div>
           <p>
-            VALOR INVES. <span>{props.valorInves}</span>
+            VALOR INVES. <span>{data.data.position.valueApplied}</span>
           </p>
           <p>
-            SALDO BRUTO <span>{props.saldoBruto}</span>
+            SALDO BRUTO <span>{data.data.position.equity}</span>
           </p>
           <p>
-            RENT. <span>{props.rentabilidade}</span>
+            RENT. <span>{data.data.position.profitability}</span>
           </p>
           <p>
-            % DA CART. <span>{props.porcCart}</span>
+            % DA CART. <span>{data.data.position.portfolioPercentage}</span>
           </p>
           <p>
-            CDI <span>{props.cdi}</span>
+            CDI <span>{data.data.position.indexerValue}</span>
           </p>
           <p>
-            SOBRE CDI <span>{props.sobreCdi}</span>
+            SOBRE CDI <span>{data.data.position.percentageOverIndexer}</span>
           </p>
         </div>
       </Resultado>
@@ -49,10 +49,10 @@ export default function FixedIncomeWrapper(props) {
         </Title>
         <div>
           <p>
-            VENCIMENTO <span>{props.dataVenc}</span>
+            VENCIMENTO <span>{data.data.due.date}</span>
           </p>
           <p>
-            DIAS ATÉ VENC. <span>{props.dataAteVenc}</span>
+            DIAS ATÉ VENC. <span>{data.data.due.daysUntilExpiration}</span>
           </p>
         </div>
       </Vencimento>
