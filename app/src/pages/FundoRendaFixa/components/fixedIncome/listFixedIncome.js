@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import FixedIncomeCards from './FixedIncomeCards';
+import Pagination from './pagination';
 
 export default function ListFixedIncome({ data, searchText, searchSort }) {
   // realiza busca por texto
@@ -15,40 +16,66 @@ export default function ListFixedIncome({ data, searchText, searchSort }) {
       })
     : data;
 
+  // variaveis de páginação
+  const [currentPage, setCurrentPage] = useState(0);
+  const dataPerPage = 5;
+  const pages = Math.ceil(dataFiltered.length / dataPerPage);
+  const startIndex = currentPage * dataPerPage;
+  const endIndex = startIndex + dataPerPage;
+  const currentData = dataFiltered.slice(startIndex, endIndex);
+
   return (
-    <ul>
-      {searchSort && searchSort.target.value === 'rentabilidade'
-        ? // ordena lista por rentabilidade
-          dataFiltered
-            .sort((a, b) => b.position.profitability - a.position.profitability)
-            .map((item, i) => {
+    <>
+      <List>
+        {searchSort && searchSort.target.value === 'rentabilidade'
+          ? // ordena lista por rentabilidade
+            currentData
+              .sort(
+                (a, b) => b.position.profitability - a.position.profitability
+              )
+              .map((item, i) => {
+                return (
+                  <Card item={item} key={i}>
+                    <FixedIncomeCards data={item} />
+                  </Card>
+                );
+              })
+          : searchSort && searchSort.target.value === 'valorInves'
+          ? // ordena lista por valor investido
+            currentData
+              .sort((a, b) => b.position.valueApplied - a.position.valueApplied)
+              .map((item, i) => {
+                return (
+                  <Card item={item} key={i}>
+                    <FixedIncomeCards data={item} />
+                  </Card>
+                );
+              })
+          : currentData.map((item, i) => {
               return (
                 <Card item={item} key={i}>
                   <FixedIncomeCards data={item} />
                 </Card>
               );
-            })
-        : searchSort && searchSort.target.value === 'valorInves'
-        ? // ordena lista por valor investido
-          dataFiltered
-            .sort((a, b) => b.position.valueApplied - a.position.valueApplied)
-            .map((item, i) => {
-              return (
-                <Card item={item} key={i}>
-                  <FixedIncomeCards data={item} />
-                </Card>
-              );
-            })
-        : dataFiltered.map((item, i) => {
-            return (
-              <Card item={item} key={i}>
-                <FixedIncomeCards data={item} />
-              </Card>
-            );
-          })}
-    </ul>
+            })}
+      </List>
+      <Pagination
+        pages={pages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
+    </>
   );
 }
+
+const List = styled.ul`
+  li:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  li:nth-child(even) {
+    background-color: #f8fafb;
+  }
+`;
 
 const Card = styled.li`
   width: 100%;
