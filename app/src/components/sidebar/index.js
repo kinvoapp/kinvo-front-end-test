@@ -20,7 +20,6 @@ export default function Sidebar() {
 
 const Nav = styled.nav`
   width: 200px;
-  height: 100vh;
   min-width: 200px;
   background-color: #fff;
 `;
