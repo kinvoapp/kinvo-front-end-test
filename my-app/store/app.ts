@@ -1,22 +1,21 @@
 import { defineStore } from 'pinia'
 
-interface Notification {
+interface INotification {
   show: boolean
   message: string
   type: 'success' | 'error' | 'warning' | 'info'
 }
 
 export const useAppStore = defineStore('main', {
-  state: () => ({
+  state: (): App => ({
     app: 'gaqno development',
     darkMode: false,
     loading: false,
     notification: {
-      show: false,
       message: '',
-      type: 'success'
-    } as Notification,
-
+      show: false,
+      type: 'info'
+    },
   }),
   // optional getters
   getters: {
@@ -26,8 +25,12 @@ export const useAppStore = defineStore('main', {
   },
   // optional actions
   actions: {
-    setNotification(payload: Notification) {
-      this.notification = payload
+    setNotification(payload: INotification) {
+      this.notification = {
+        show: payload.show,
+        message: payload.message,
+        type: payload.type
+      }
     }
   },
 })

@@ -15,11 +15,74 @@ export default defineNuxtConfig({
     ]
   },
   i18n: {
-    locales: [
-      { code: "en", name: "English" },
-      { code: "pt", name: "Português" },
-      { code: "es", name: "Español" }
-    ]
+    locales: ['pt', 'en', 'es'],
+    defaultLocale: 'pt',
+    vueI18n: {
+      legacy: false,
+      locale: 'pt',
+      messages: {
+        pt: {
+          fixed_income: 'Renda Fixa',
+          bruct_salary: 'Salário Bruto',
+          value_applied: 'Valor Aplicado',
+          result: 'Resultado',
+          rentability: 'Rentabilidade',
+          invested_amount: 'Valor Investido',
+          about_cdi: 'Sobre o CDI',
+          title_rentability: 'Rentabilidade dos Títulos',
+          mine_fixed_income: 'Minhas Rendas Fixas',
+          title: 'Título',
+          order_by: 'Ordenar por',
+          mounth: 'Mês',
+          my_wallet: 'Minha Carteira',
+          wallet_resume: 'Resumo da Carteira',
+          my_products: 'Meus Produtos',
+          my_provents: 'Meus Proventos',
+          active_classes: 'Classes de Ativos',
+          action: 'Ação',
+          fund: 'Fundo',
+          reits: 'Fundo Imobiliário',
+          fixed_income_funds: 'Fundo de Renda Fixa',
+          real_rentability: 'Rentabilidade Real',
+          carrer_projection: 'Projeção de Carreira',
+          return_risk: 'Retorno x Risco',
+          FGC_protection: 'Cobertura do FGC',
+          wallets_by_types: 'Divisão de Carteira por Tipos',
+          wallets_by_title: 'Divisão de Carteira por Títulos',
+          type: 'Tipo'
+        },
+        en: {
+          fixed_income: 'Fixed Income',
+          bruct_salary: 'Bruct Salary',
+          value_applied: 'Value Applied',
+          result: 'Result',
+          rentability: 'Rentability',
+          invested_amount: 'Invested Amount',
+          about_cdi: 'About CDI',
+          title_rentability: 'Title Rentability',
+          mine_fixed_income: 'My Fixed Income',
+          title: 'Title',
+          order_by: 'Order by',
+          mounth: 'Mounth',
+          my_wallet: 'My Wallet',
+          wallet_resume: 'Wallet Resume',
+          my_products: 'My Products',
+          my_provents: 'My Provents',
+          active_classes: 'Active Classes',
+          action: 'Action',
+          fund: 'Fund',
+          reits: 'REITs',
+          fixed_income_funds: 'Fixed Income Funds',
+          real_rentability: 'Real Rentability',
+          carrer_projection: 'Carrer Projection',
+          return_risk: 'Return x Risk',
+          FGC_protection: 'FGC Protection',
+          wallets_by_types: 'Wallets by Types',
+          wallets_by_title: 'Wallets by Title',
+          type: 'Type'
+        },
+      }
+    }
   },
   loading: {
     color: "#fff"
