@@ -1,25 +1,16 @@
 export default defineNuxtConfig({
-  app: {
-    head: {
-      script: [
-        {
-          src: "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.min.es.js",
-        },
-      ],
-    }
-  },
-  css: ["~/assets/main.css"],
+  css: ['~/assets/main.css'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   modules: [
-    "nuxt-icon",
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/device",
+    'nuxt-icon',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/device',
     '@nuxtjs/i18n',
     '@nuxtjs/google-fonts',
-    '@pinia/nuxt',
+    '@pinia/nuxt'
   ],
   pinia: {
     autoImports: [
@@ -78,6 +69,7 @@ export default defineNuxtConfig({
           action: 'Ação',
           fund: 'Fundo',
           reits: 'Fundo Imobiliário',
+          fund_fixed_income: 'Fundo de Renda Fixa',
           fixed_income_funds: 'Fundo de Renda Fixa',
           real_rentability: 'Rentabilidade Real',
           carrer_projection: 'Projeção de Carreira',
@@ -96,7 +88,7 @@ export default defineNuxtConfig({
           short_percentage_wallet: '% Cart.',
           short_about_cdi: 'Sobre CDI',
           short_due_date: 'Data Venc.',
-          short_days_until_due_date: 'Dias até Venc.',
+          short_days_until_due_date: 'Dias até Venc.'
         },
         en: {
           fixed_income: 'Fixed Income',
@@ -130,8 +122,8 @@ export default defineNuxtConfig({
           wallets_by_types: 'Wallets by Types',
           wallets_by_title: 'Wallets by Title',
           type: 'Type'
-        },
+        }
       }
     }
-  },
+  }
 })
