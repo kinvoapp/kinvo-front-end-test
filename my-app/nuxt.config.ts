@@ -88,7 +88,8 @@ export default defineNuxtConfig({
           short_percentage_wallet: '% Cart.',
           short_about_cdi: 'Sobre CDI',
           short_due_date: 'Data Venc.',
-          short_days_until_due_date: 'Dias até Venc.'
+          short_days_until_due_date: 'Dias até Venc.',
+          search: 'Escreva e aperte ENTER para pesquisar'
         },
         en: {
           fixed_income: 'Fixed Income',

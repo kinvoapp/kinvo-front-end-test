@@ -145,8 +145,15 @@
         </section>
 
         <section id="titles">
-          <div class="rounded-2xl shadow-md bg-white w-full h-[30vh] mt-8 p-6">
+          <div class="rounded-2xl shadow-md bg-white w-full mt-8 p-6">
             {{ $t('title_rentability') }}
+            <iframe
+              class="w-full"
+              height="450"
+              src="https://lookerstudio.google.com/embed/reporting/2669d026-d4f7-4b5a-b706-bd1395773243/page/Jl6MD"
+              frameborder="0"
+              style="border:0"
+            ></iframe>
           </div>
         </section>
 
@@ -171,6 +178,7 @@
                   <input
                     v-model="query"
                     type="text"
+                    :placeholder="$t('search')"
                     class="border-0"
                     @keydown.enter="handleUpdate('query', query)"
                   >
@@ -310,11 +318,27 @@
 
         <section id="graphs">
           <div class="grid grid-cols-2 gap-4 m-8">
-            <div class="rounded-2xl shadow-md text-lg bg-white w-full h-[30vh] mt-8 p-6 border-gray-200">
+            <div class="rounded-2xl shadow-md text-lg bg-white w-full mt-8 p-6 border-gray-200">
               {{ $t('wallets_by_types') }}
+              <iframe
+                width="600"
+                height="600"
+                src="https://lookerstudio.google.com/embed/reporting/4578bf43-21f9-4b6e-ba7b-eafb8923d4cb/page/pp6MD"
+                frameborder="0"
+                style="border:0"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="rounded-2xl shadow-md text-lg bg-white w-full h-[30vh] mt-8 p-6 ">
+            <div class="rounded-2xl shadow-md text-lg bg-white w-full mt-8 p-6 ">
               {{ $t('wallets_by_title') }}
+              <iframe
+                width="600"
+                height="600"
+                src="https://lookerstudio.google.com/embed/reporting/4578bf43-21f9-4b6e-ba7b-eafb8923d4cb/page/pp6MD"
+                frameborder="0"
+                style="border:0"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </section>
@@ -330,7 +354,13 @@ const { formatMask } = useFormatMask()
 const app = useAppStore()
 const query = ref('')
 const filter = ref('')
-
+const chartData = {
+  labels: ['January', 'February', 'March'],
+  datasets: [{ data: [40, 20, 12] }]
+}
+const chartOptions = {
+  responsive: true
+}
 const dailyEquityByPortfolioChartData = ref([])
 const currentPage = ref(0)
 const paginationArr = ref([{} as any])

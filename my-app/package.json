@@ -38,11 +38,13 @@
     "@pinia/nuxt": "^0.4.8",
     "@tailwindcss/typography": "^0.5.8",
     "axios": "^1.1.3",
+    "chart.js": "^4.2.1",
     "dotenv": "^16.0.3",
     "moment": "^2.29.4",
     "nuxt-i18n": "^6.28.1",
     "pinia": "^2.0.23",
     "theme-change": "^2.2.0",
+    "vue-chartjs": "^5.2.0",
     "vue-tel-input": "^6.0.5",
     "vue-xlsx": "^0.2.1"
   }
