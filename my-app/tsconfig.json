@@ -1,0 +1,33 @@
+// https://nuxt.com/docs/guide/concepts/typescript
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "noImplicitAny": false,
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+    },
+    "esModuleInterop": true,
+    "allowJs": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strict": true,
+    "baseUrl": ".",
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@pinia/nuxt"
+    ],
+  },
+  "extends": "./.nuxt/tsconfig.json",
+  "exclude": [
+    "node_modules"
+  ]
+}
