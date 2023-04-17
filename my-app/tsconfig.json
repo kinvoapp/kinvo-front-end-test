@@ -11,12 +11,9 @@
       "DOM"
     ],
     "paths": {
-      "*": [
-        "src/*"
+      "@/*": [
+        "./*"
       ],
-      "@types/*": [
-        "typings/*"
-      ]
     },
     "esModuleInterop": true,
     "allowJs": true,
