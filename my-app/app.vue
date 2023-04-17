@@ -1,8 +1,9 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <!-- <LoadingComponent v-if="app.isLoading" /> -->
+    <ModalComponent v-if="app.modal.show" />
     <NotificationComponent v-if="app.isNotification" />
+    <!-- <LoadingComponent v-if="app.isLoading" /> -->
   </NuxtLayout>
 </template>
 

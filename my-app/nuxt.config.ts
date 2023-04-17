@@ -90,7 +90,9 @@ export default defineNuxtConfig({
           short_due_date: 'Data Venc.',
           short_days_until_due_date: 'Dias até Venc.',
           search: 'Escreva e aperte ENTER',
-          settings: 'Configurações'
+          settings: 'Configurações',
+          change_language: 'Mudar idioma',
+          logout: 'Sair'
         },
         en: {
           fixed_income: 'Fixed Income',
@@ -137,7 +139,9 @@ export default defineNuxtConfig({
           short_due_date: 'Due Date',
           short_days_until_due_date: 'Days until Due Date',
           search: 'Write and press ENTER',
-          settings: 'Settings'
+          settings: 'Settings',
+          change_language: 'Change language',
+          logout: 'Logout'
         },
         es: {
           fixed_income: 'Renta Fija',
@@ -184,7 +188,9 @@ export default defineNuxtConfig({
           short_due_date: 'Fecha Venc.',
           short_days_until_due_date: 'Días hasta Venc.',
           search: 'Escriba y presione ENTER',
-          settings: 'Configuración'
+          settings: 'Configuración',
+          change_language: 'Cambiar idioma',
+          logout: 'Salir'
         }
       }
     }

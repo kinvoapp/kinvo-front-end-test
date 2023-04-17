@@ -75,18 +75,34 @@
               <div v-if="viewOptions" class="fixed bg-white shadow-lg top-10 right-10 rounded border p-2" @mouseleave="viewOptions = !viewOptions">
                 <ul class="flex flex-col">
                   <li class="flex flex-row items-center hover:bg-slate-100">
-                    <Icon name="carbon:settings" size="1.5em" class="p-1 bg-gray-200 text-white mt-2 mr-2 m-2 rounded-full" />
+                    <Icon name="carbon:settings" size="1.5em" class="p-1 bg-gray-200 text-black mt-2 mr-2 m-2 rounded-full" />
                     <span class="text-sm">
                       {{ $t('settings') }}
                     </span>
                   </li>
                   <li class="flex flex-row items-center hover:bg-slate-100">
-                    <Icon name="carbon:logout" size="1.5em" class="p-1 bg-gray-200 text-white mt-2 mr-2 m-2 rounded-full" />
+                    <button @click.prevent="handleModal('change_language')">
+                      <Icon name="carbon:earth-southeast-asia" size="1.5em" class="p-1 bg-gray-200 text-black mt-2 mr-2 m-2 rounded-full" />
+                      <span class="text-sm">
+                        {{ $t('change_language') }}
+                      </span>
+                    </button>
+                  </li>
+                  <li class="flex flex-row items-center hover:bg-slate-100">
+                    <Icon name="carbon:logout" size="1.5em" class="p-1 bg-gray-200 text-black mt-2 mr-2 m-2 rounded-full" />
                     <span class="text-sm">
                       {{ $t('logout') }}
                     </span>
                   </li>
                 </ul>
+                <div class="mt-4 flex justify-center gap-x-4">
+                  <NuxtLink :to="switchLocalePath('pt')" class="btn btn-ghost normal-case text-base">
+                    <Icon name="game-icons:brazil" size="1.5em" />
+                  </NuxtLink>
+                  <NuxtLink :to="switchLocalePath('en')" class="btn btn-ghost normal-case text-base">
+                    <Icon name="icon-park-outline:english" size="1.5em" />
+                  </NuxtLink>
+                </div>
               </div>
             </transition>
           </span>
@@ -369,7 +385,6 @@
 
 <script setup lang="ts">
 import { useAppStore } from '@/store/app'
-
 const { formatMask } = useFormatMask()
 const app = useAppStore()
 const query = ref('')
@@ -433,6 +448,16 @@ const handleUpdate = (action, value?) => {
   }
 }
 
+const handleModal = (action) => {
+  if (action === 'change_language') {
+    app.setModal({
+      show: true,
+      title: 'Mudar idioma',
+      template: 'change_language',
+      data: {}
+    })
+  }
+}
 const fetchData = () => {
   snapshotByProduct.value = []
   useFetch()
@@ -467,6 +492,7 @@ const fetchData = () => {
       app.setNotification({
         show: true,
         type: 'success',
+        icon: 'line-md:thumbs-up',
         message: 'Dados carregados com sucesso'
       })
     })
@@ -474,6 +500,7 @@ const fetchData = () => {
       app.setNotification({
         show: true,
         type: 'error',
+        icon: 'mdi:alert-circle',
         message: err.message
       })
     })
