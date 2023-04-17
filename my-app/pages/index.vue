@@ -97,10 +97,10 @@
                 </ul>
                 <div class="mt-4 flex justify-center gap-x-4">
                   <NuxtLink :to="switchLocalePath('pt')" class="btn btn-ghost normal-case text-base">
-                    <Icon name="game-icons:brazil" size="1.5em" />
+                    <Icon name="game-icons:brazil" size="2em" />
                   </NuxtLink>
                   <NuxtLink :to="switchLocalePath('en')" class="btn btn-ghost normal-case text-base">
-                    <Icon name="icon-park-outline:english" size="1.5em" />
+                    <Icon name="icon-park-outline:english" size="2em" />
                   </NuxtLink>
                 </div>
               </div>
@@ -386,6 +386,7 @@
 <script setup lang="ts">
 import { useAppStore } from '@/store/app'
 const { formatMask } = useFormatMask()
+const switchLocalePath = useSwitchLocalePath()
 const app = useAppStore()
 const query = ref('')
 const filter = ref('')
