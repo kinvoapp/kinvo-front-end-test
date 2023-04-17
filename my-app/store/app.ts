@@ -21,7 +21,7 @@ export const useAppStore = defineStore('main', {
   getters: {
     isLoading: (state) => state.loading,
     isDarkMode: (state) => state.darkMode,
-    notification: (state) => state.notification,
+    getNotification: (state) => state.notification,
   },
   // optional actions
   actions: {

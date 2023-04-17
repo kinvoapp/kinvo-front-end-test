@@ -1,18 +1,51 @@
 export default defineNuxtConfig({
-  head: {
-    title: "gaqno development",
-    htmlAttrs: {
-      lang: "pt-BR"
-    },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" }
-    ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/assets/favicon.png" }
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.min.es.js",
+        },
+      ],
+    }
+  },
+  css: ["~/assets/main.css"],
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  modules: [
+    "nuxt-icon",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/device",
+    '@nuxtjs/i18n',
+    '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+  ],
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+      ['defineStore', 'definePiniaStore'] // import { defineStore as definePiniaStore } from 'pinia'
     ]
+  },
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  runtimeConfig: {
+    // The private keys which are only available server-side
+    // Its only an example, not hardcode values here, consider use Envs
+    // Keys within public are also exposed client-side
+    public: {
+      apiBase: process.env.API_BASE
+    }
+  },
+  googleFonts: {
+    download: true,
+    families: {
+      Poppins: [400, 500, 600, 700]
+    }
+  },
+  tailwindcss: {
+    cssPath: '~/assets/main.css',
+    configPath: 'tailwind.config'
   },
   i18n: {
     locales: ['pt', 'en', 'es'],
@@ -28,16 +61,19 @@ export default defineNuxtConfig({
           result: 'Resultado',
           rentability: 'Rentabilidade',
           invested_amount: 'Valor Investido',
+          class: 'Classe',
           about_cdi: 'Sobre o CDI',
           title_rentability: 'Rentabilidade dos Títulos',
           mine_fixed_income: 'Minhas Rendas Fixas',
           title: 'Título',
           order_by: 'Ordenar por',
           mounth: 'Mês',
+          wallet: 'Carteira',
           my_wallet: 'Minha Carteira',
           wallet_resume: 'Resumo da Carteira',
           my_products: 'Meus Produtos',
           my_provents: 'Meus Proventos',
+          my_position: 'Minha Posição',
           active_classes: 'Classes de Ativos',
           action: 'Ação',
           fund: 'Fundo',
@@ -49,7 +85,18 @@ export default defineNuxtConfig({
           FGC_protection: 'Cobertura do FGC',
           wallets_by_types: 'Divisão de Carteira por Tipos',
           wallets_by_title: 'Divisão de Carteira por Títulos',
-          type: 'Tipo'
+          type: 'Tipo',
+          due_date: 'Vencimento',
+          title_tooltip: 'Titulos que você possui',
+          position_tooltip: 'Posição atual de seus investimentos',
+          due_date_tooltip: 'Data de vencimento do titulo',
+          short_invested_amount: 'Valor Inves.',
+          short_bruct_salary: 'Saldo Bruto',
+          short_rentability: 'Rent.',
+          short_percentage_wallet: '% Cart.',
+          short_about_cdi: 'Sobre CDI',
+          short_due_date: 'Data Venc.',
+          short_days_until_due_date: 'Dias até Venc.',
         },
         en: {
           fixed_income: 'Fixed Income',
@@ -58,16 +105,19 @@ export default defineNuxtConfig({
           result: 'Result',
           rentability: 'Rentability',
           invested_amount: 'Invested Amount',
+          class: 'Class',
           about_cdi: 'About CDI',
           title_rentability: 'Title Rentability',
           mine_fixed_income: 'My Fixed Income',
           title: 'Title',
           order_by: 'Order by',
           mounth: 'Mounth',
+          wallet: 'Wallet',
           my_wallet: 'My Wallet',
           wallet_resume: 'Wallet Resume',
           my_products: 'My Products',
           my_provents: 'My Provents',
+          my_position: 'My Position',
           active_classes: 'Active Classes',
           action: 'Action',
           fund: 'Fund',
@@ -84,45 +134,4 @@ export default defineNuxtConfig({
       }
     }
   },
-  loading: {
-    color: "#fff"
-  },
-  transpile: ["@vuepic/vue-datepicker"],
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/main.css"],
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    ["@pinia/nuxt", {
-      autoImports: [
-        // automatically imports `defineStore`
-        "defineStore", // import { defineStore } from 'pinia'
-        // automatically imports `defineStore` as `definePiniaStore`
-        ["defineStore", "definePiniaStore"] // import { defineStore as definePiniaStore } from 'pinia'
-      ]
-    }
-    ],
-    "@nuxt/typescript-build",
-    "@nuxtjs/tailwindcss"
-  ],
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  typescript: {
-    strict: true
-  },
-  runtimeConfig: {
-    // The private keys which are only available server-side
-    // Its only an example, not hardcode values here, consider use Envs
-    // Keys within public are also exposed client-side
-    public: {
-      apiBase: process.env.API_BASE
-    }
-  },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/device",
-    "nuxt-icon",
-    "@pinia/nuxt"
-  ]
-});
+})
