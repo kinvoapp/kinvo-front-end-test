@@ -14,7 +14,7 @@ watchEffect(() => {
   if (app.isNotification === true) {
     setTimeout(() => {
       app.closeNotification()
-    }, 3000)
+    }, 4000)
   }
 })
 </script>

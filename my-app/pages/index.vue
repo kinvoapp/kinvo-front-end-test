@@ -55,7 +55,7 @@
               <Icon
                 name="carbon:chevron-down"
                 size="2em"
-                class="p-1 bg-indigo-700 text-white mt-2 mr-2 m-2 rounded-full"
+                class="p-1 bg-[#5d41ac] text-white mt-2 mr-2 m-2 rounded-full"
               />
               <span class="mt-2">
                 <p class="text-xs text-gray-500 uppercase">
@@ -68,9 +68,27 @@
             </div>
           </span>
           <span class="flex items-end justify-between bg-white p-2">
-            <div class="py-2 pl-2 flex flex-row ">
-              <Icon name="carbon:menu" size="2em" class="p-2 bg-indigo-700 text-white mt-2 mr-2 m-2 rounded-full" />
-            </div>
+            <button class="py-2 pl-2 flex flex-row " @click.prevent="viewOptions = !viewOptions">
+              <Icon name="carbon:menu" size="2em" class="p-2 bg-[#5d41ac] text-white mt-2 mr-2 m-2 rounded-full" />
+            </button>
+            <transition name="fade">
+              <div v-if="viewOptions" class="fixed bg-white shadow-lg top-10 right-10 rounded border p-2" @mouseleave="viewOptions = !viewOptions">
+                <ul class="flex flex-col">
+                  <li class="flex flex-row items-center hover:bg-slate-100">
+                    <Icon name="carbon:settings" size="1.5em" class="p-1 bg-gray-200 text-white mt-2 mr-2 m-2 rounded-full" />
+                    <span class="text-sm">
+                      {{ $t('settings') }}
+                    </span>
+                  </li>
+                  <li class="flex flex-row items-center hover:bg-slate-100">
+                    <Icon name="carbon:logout" size="1.5em" class="p-1 bg-gray-200 text-white mt-2 mr-2 m-2 rounded-full" />
+                    <span class="text-sm">
+                      {{ $t('logout') }}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </transition>
           </span>
         </div>
       </template>
@@ -78,7 +96,7 @@
     <div class="grid grid-cols-6">
       <AsideComponent class="col-span-1" />
       <div class="col-span-5 px-8 bg-gray-100 overflow-y-scroll">
-        <h2 class="text-indigo-700 text-2xl font-bold my-4">
+        <h2 class="text-[#5d41ac] text-2xl font-bold my-4">
           Renda Fixa
         </h2>
         <section id="stats" class="grid grid-cols-1 md:grid-cols-6 gap-4">
@@ -160,7 +178,9 @@
         <section id="fixed_income">
           <div class="rounded-2xl shadow-md bg-white w-full mt-8 p-6">
             <span class="flex border-b pb-2">
-              {{ $t('mine_fixed_income') }}
+              <span class="text-[#5d41ac]">
+                {{ $t('mine_fixed_income') }}
+              </span>
               <div class="ml-auto flex gap-x-4">
                 <select v-model="filter" :placeholder="$t('order_by')" class="border-gray-200 rounded-md">
                   <option value="">
@@ -354,13 +374,7 @@ const { formatMask } = useFormatMask()
 const app = useAppStore()
 const query = ref('')
 const filter = ref('')
-const chartData = {
-  labels: ['January', 'February', 'March'],
-  datasets: [{ data: [40, 20, 12] }]
-}
-const chartOptions = {
-  responsive: true
-}
+const viewOptions = ref(false)
 const dailyEquityByPortfolioChartData = ref([])
 const currentPage = ref(0)
 const paginationArr = ref([{} as any])
