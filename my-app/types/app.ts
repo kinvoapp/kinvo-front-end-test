@@ -1,4 +1,4 @@
-interface App {
+export interface IApp {
   app: string
   darkMode: boolean
   loading: boolean

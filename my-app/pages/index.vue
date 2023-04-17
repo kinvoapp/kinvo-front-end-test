@@ -88,7 +88,7 @@
                 {{ $t('bruct_salary') }}
               </p>
               <p class="text-base font-bold text-indigo-900">
-                R${{ snapshotByPortfolio.equity }}
+                R${{ formatMask('int', snapshotByPortfolio.equity) }}
               </p>
             </div>
           </span>
@@ -98,7 +98,7 @@
                 {{ $t('value_applied') }}
               </p>
               <p class="text-base font-bold text-indigo-900">
-                R${{ snapshotByPortfolio.valueApplied }}
+                R${{ formatMask('int', snapshotByPortfolio.valueApplied) }}
               </p>
             </div>
           </span>
@@ -108,7 +108,7 @@
                 {{ $t('result') }}
               </p>
               <p class="text-base font-bold text-indigo-900">
-                R${{ snapshotByPortfolio.equityProfit }}
+                R${{ formatMask('int', snapshotByPortfolio.equityProfit) }}
               </p>
             </div>
           </span>
@@ -155,30 +155,32 @@
             <span class="flex border-b pb-2">
               {{ $t('mine_fixed_income') }}
               <div class="ml-auto flex gap-x-4">
-                <select :placeholder="$t('order_by')" class="border-gray-200 rounded-md">
+                <select v-model="filter" :placeholder="$t('order_by')" class="border-gray-200 rounded-md">
                   <option value="">
                     Sem ordem
                   </option>
-                  <option value="1">
-                    1
+                  <option value="date-asc">
+                    + {{ $t('short_due_date') }}
                   </option>
-                  <option value="2">
-                    2
-                  </option>
-                  <option value="3">
-                    3
+                  <option value="date-desc">
+                    - {{ $t('short_due_date') }}
                   </option>
                 </select>
                 <div class="ml-auto rounded-md border px-2">
                   <Icon name="mdi:magnify" size="1.5em" class="text-gray-400" />
-                  <input type="text" class="border-0">
+                  <input
+                    v-model="query"
+                    type="text"
+                    class="border-0"
+                    @keydown.enter="handleUpdate('query', query)"
+                  >
                 </div>
               </div>
             </span>
             <div>
               <div class="flex flex-col">
                 <div
-                  v-for="product, ind in snapshotByProduct"
+                  v-for="product, ind in paginationArr[currentPage]"
                   :key="`product_${ind}`"
                   class="grid grid-cols-12 mt-4 gap-x-4"
                 >
@@ -214,7 +216,7 @@
                           {{ $t('short_invested_amount') }}
                         </p>
                         <p class="font-semibold text-base text-green-500 tracking-wide">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }}
                         </p>
                       </span>
                       <span class="flex flex-col text-sm">
@@ -222,7 +224,7 @@
                           {{ $t('short_bruct_salary') }}
                         </p>
                         <p class="font-semibold text-base text-green-500">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }}
                         </p>
                       </span>
                       <span class="flex flex-col text-sm">
@@ -230,7 +232,7 @@
                           {{ $t('short_rentability') }}
                         </p>
                         <p class="font-semibold text-base text-green-500">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }} %
                         </p>
                       </span>
                       <span class="flex flex-col text-sm">
@@ -238,7 +240,7 @@
                           {{ $t('short_percentage_wallet') }}
                         </p>
                         <p class="font-semibold text-base text-green-500">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }} %
                         </p>
                       </span>
                       <span class="flex flex-col text-sm">
@@ -246,7 +248,7 @@
                           CDI
                         </p>
                         <p class="font-semibold text-base text-green-500">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }}
                         </p>
                       </span>
                       <span class="flex flex-col text-sm">
@@ -254,7 +256,7 @@
                           {{ $t('short_about_cdi') }}
                         </p>
                         <p class="font-semibold text-base text-green-500">
-                          {{ product.position.equity }}
+                          {{ formatMask('int', product.position.equity) }}
                         </p>
                       </span>
                     </div>
@@ -286,16 +288,17 @@
                 </div>
                 <div class="flex justify-center mt-4">
                   <div>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+                    <button v-if="currentPage >= 1" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l" @click="handleUpdate('prev')">
                       <Icon name="mdi:chevron-left" size="1.5em" class="text-gray-400" />
                     </button>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4">
-                      1
+                    <button
+                      v-for="item, ind in paginationArr"
+                      :key="`pag_${ind}`"
+                      class="bg-gray-200 rounded mx-1 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4"
+                    >
+                      {{ ind + 1 }}
                     </button>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4">
-                      2
-                    </button>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+                    <button v-if="currentPage + 1 !== paginationArr.length" class="bg-gray-200 rounded ml-4 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l" @click="handleUpdate('next')">
                       <Icon name="mdi:chevron-right" size="1.5em" class="text-gray-400" />
                     </button>
                   </div>
@@ -305,7 +308,7 @@
           </div>
         </section>
 
-        <section id="titles">
+        <section id="graphs">
           <div class="grid grid-cols-2 gap-4 m-8">
             <div class="rounded-2xl shadow-md text-lg bg-white w-full h-[30vh] mt-8 p-6 border-gray-200">
               {{ $t('wallets_by_types') }}
@@ -320,11 +323,17 @@
   </div>
 </template>
 
-<script setup>
-import { useAppStore } from '~/store/app'
+<script setup lang="ts">
+import { useAppStore } from '@/store/app'
 
+const { formatMask } = useFormatMask()
 const app = useAppStore()
+const query = ref('')
+const filter = ref('')
+
 const dailyEquityByPortfolioChartData = ref([])
+const currentPage = ref(0)
+const paginationArr = ref([{} as any])
 const snapshotByPortfolio = ref({
   equity: 0,
   equityProfit: 0,
@@ -333,12 +342,6 @@ const snapshotByPortfolio = ref({
   percentageProfit: 0,
   valueApplied: 0
 })
-// const pagination = ref({
-//   page: 1,
-//   perPage: 10,
-//   total: 0,
-//   totalPage: 0
-// })
 
 const snapshotByProduct = ref([{
   due: {
@@ -360,31 +363,36 @@ const snapshotByProduct = ref([{
     valueApplied: 0
   }
 }])
-const data = ref({})
 
-// TODO: Refactor this to a list of objects
-// const stats = ref([
-//   { label: 'equity', value: 0 },
-//   { label: 'valueApplied', value: 0 },
-//   { label: 'equityProfit', value: 0 },
-//   { label: 'percentageProfit', value: 0 },
-//   { label: 'indexerValue', value: 0 },
-//   { label: 'percentageOverIndexer', value: 0 }
-// ])
-const formatMask = (template) => {
-  if (template === 'int') {
-    const str = '132.521.230,01'
-    const regex = /^\d{1,3}(\.\d{3})*,\d{2}$/
-    const isMatch = regex.test(str)
-    console.log(isMatch) // true
+const filteredItems = computed(() =>
+  query.value === ''
+    ? []
+    : snapshotByProduct.value.filter((item) => {
+      return item.fixedIncome.name.toLowerCase().includes(query.value.toLowerCase())
+    })
+)
+
+const handleUpdate = (action, value?) => {
+  if (action === 'query') {
+    snapshotByProduct.value = snapshotByProduct.value.filter((item) => {
+      return item.fixedIncome.name.toLowerCase().includes(value.toLowerCase())
+    })
+  }
+  if (value === '') {
+    fetchData()
+  }
+  if (action === 'next') {
+    currentPage.value = currentPage.value + 1
+  }
+  if (action === 'prev') {
+    currentPage.value = currentPage.value - 1
   }
 }
 
-onMounted(() => {
+const fetchData = () => {
+  snapshotByProduct.value = []
   useFetch()
-    .then((res) => {
-      data.value = res
-      console.log('snapshotByProduct', res.data.data.snapshotByPortfolio)
+    .then((res: any) => {
       snapshotByPortfolio.value = res.data.data.snapshotByPortfolio
       dailyEquityByPortfolioChartData.value = res.data.data.dailyEquityByPortfolioChartData.map(i => ({
         ...i.data
@@ -412,11 +420,11 @@ onMounted(() => {
         }
       }))
 
-      // app.setNotification({
-      //   show: true,
-      //   type: 'success',
-      //   message: 'Dados carregados com sucesso',
-      // })
+      app.setNotification({
+        show: true,
+        type: 'success',
+        message: 'Dados carregados com sucesso'
+      })
     })
     .catch((err) => {
       app.setNotification({
@@ -425,5 +433,25 @@ onMounted(() => {
         message: err.message
       })
     })
+}
+watchEffect(() => {
+  if (snapshotByProduct.value.length >= 5) {
+    paginationArr.value = []
+    for (let i = 0; i < snapshotByProduct.value.length; i += 5) {
+      paginationArr.value.push(snapshotByProduct.value.slice(i, i + 5))
+    }
+  }
+})
+
+watchEffect(() => {
+  if (filteredItems.value.length !== 0) {
+    paginationArr.value = []
+    for (let i = 0; i < filteredItems.value.length; i += 5) {
+      paginationArr.value.push(filteredItems.value.slice(i, i + 5))
+    }
+  }
+})
+onMounted(() => {
+  fetchData()
 })
 </script>
