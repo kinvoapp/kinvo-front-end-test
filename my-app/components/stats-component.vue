@@ -4,8 +4,12 @@
       <div class="mt-1 flex gap-1 text-green-600">
         <Icon :name="item.icon" />
         <p class="flex gap-2 text-xs">
-          <span class="text-gray-500"> {{ item.title }} </span>
-          <span class="font-medium"> {{ item.value }} % </span>
+          <span class="text-gray-500">
+            {{ item.title }}
+          </span>
+          <span class="font-medium">
+            {{ item.value }} %
+          </span>
         </p>
       </div>
     </article>
@@ -16,7 +20,7 @@
 const props = defineProps({
   options: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 })
 </script>

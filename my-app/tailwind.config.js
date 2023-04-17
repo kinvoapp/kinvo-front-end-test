@@ -1,12 +1,12 @@
 module.exports = {
   mode: 'jit',
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue'
   ],
   plugins: [
     require('tailwind-scrollbar'),
@@ -14,7 +14,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['Poppins', 'sans-serif']
